@@ -1,0 +1,110 @@
+{
+  "schema_version": "hh06_single_slice_interface_contract_v1",
+  "contract_id": "HH06_CASE1_SINGLE_SLICE_INTERFACE_V1",
+  "status": "READY_FOR_DRY_RUN",
+  "displacement_type": "absolute",
+  "mapping_mode": "single_slice_resultant_force",
+  "fluid_surface_faces": "external_only",
+  "participants": {
+    "fluid": "Fluid_0000",
+    "structure": "Structure_0000"
+  },
+  "data_directions": {
+    "fluid_provides": ["Force"],
+    "fluid_receives": ["Displacement"],
+    "structure_provides": ["Displacement"],
+    "structure_receives": ["Force"]
+  },
+  "meshes": {
+    "fluid_interface": {
+      "name": "Fluid-Mesh",
+      "representation": "200 OpenFOAM cylinder-wall face-center vertices",
+      "vertex_count": 200
+    },
+    "structure_coupling": {
+      "name": "Structure-Mesh",
+      "representation": "one structural section sample at s=2.97 m",
+      "vertex_count": 1,
+      "ancf_state_vertices": 33,
+      "ancf_state_dofs": 198
+    }
+  },
+  "force_pipeline": [
+    "OpenFOAM wall integration over the 200 cylinder faces",
+    "strip resultant force for the DeltaL=1.98 m single slice",
+    "preCICE Force on Fluid_0000/Fluid-Mesh",
+    "ANCF generalized-load assembly inside Structure_0000"
+  ],
+  "displacement_pipeline": [
+    "ANCF participant evaluates section displacement at s=2.97 m",
+    "Structure_0000 provides Displacement on Structure-Mesh",
+    "preCICE consistent mapping sends displacement to the 200 fluid vertices",
+    "OpenFOAM ALE applies the mapped wall displacement"
+  ],
+  "mapping_rules": {
+    "force_mapping": "preCICE conservative mapping from 200 fluid vertices to one structural coupling vertex",
+    "displacement_mapping": "preCICE consistent mapping from one structural coupling vertex to 200 fluid vertices",
+    "direct_face_to_ancf_state_vertex_mapping": false,
+    "legacy_604_vertex_participant": false,
+    "generalized_load_assembly": "ANCF shape-function/virtual-work assembly; not CFD face-index assignment"
+  },
+  "structure_0000_entrypoint_audit": {
+    "status": "WRAPPER_PRESENT_RUNTIME_CAPABILITY_BLOCKED",
+    "compatible_hh06_wrapper_found": true,
+    "participant_entrypoint": "D:/研二文件/开题准备/CFD_ANCF_VIV/tools/hh06_single_slice_structure_0000_participant_v1/structure_0000_participant.py",
+    "repository": "D:/CFD/CFD_ANCF_VIV_source",
+    "repository_remote": "https://github.com/machao-fat/CFD_ANCF_VIV.git",
+    "repository_head": "8443209c4db39572f5099bec5d66a093eec7cdc3",
+    "candidate_files": [
+      {
+        "path": "tools/precice_ancf_adapter_v1/ancf_structure_participant_v1.py",
+        "finding": "fixture uses Participant name Structure, hard-coded 604 circular vertices, not Structure_0000/one-point HH06"
+      },
+      {
+        "path": "tools/precice_ancf_adapter_v1/ancf_cpp_worker_single_slice_participant_v1.py",
+        "finding": "bounded generic worker fixture uses Participant name Structure and requires 604 force vertices"
+      },
+      {
+        "path": "tools/precice_ancf_adapter_v1/ancf_generic_participant_v1.py",
+        "finding": "generic injected-backend orchestration class; no live preCICE Structure_0000 entrypoint"
+      },
+      {
+        "path": "tools/three_slice_force_contract_smoke_v1/structure_participant.py",
+        "finding": "three-slice smoke participant; not the HH06 one-slice 200-face/one-point contract"
+      }
+    ],
+    "existing_structure_0000_wrappers_excluded": [
+      {
+        "path": "tools/cfd_current_dynamic_nonzero_bridge_v1/run_bridge.py",
+        "finding": "prescribed-motion bridge, 40 circular vertices, explicitly contains_ancf=false"
+      },
+      {
+        "path": "tools/cfd_current_dynamic_nonzero_bridge_v2/run_bridge_v2.py",
+        "finding": "prescribed-motion bridge, 40 circular vertices, explicitly contains_ancf=false"
+      },
+      {
+        "path": "tools/cfd_current_fixed_zero_bridge_v1/run_fixed_zero_bridge.py",
+        "finding": "fixed/zero-motion bridge fixture, 40 circular vertices, not ANCF"
+      },
+      {
+        "path": "tools/shiels_s5_k988_single_slice_free_fsi_long_development_v1/sdof_precice_continuation_participant.py",
+        "finding": "validated SDOF participant with Structure_0000, but legacy Re=100 SDOF rather than HH06 ANCF"
+      }
+    ],
+    "sdof_structure_0000_scripts_excluded": "Some SDOF scripts use Structure_0000 but are not ANCF and cannot satisfy the HH06 33-node/198-DOF contract",
+    "decision": "HH06 Structure_0000 wrapper is present; keep READY_FOR_DRY_RUN because the current checked-out Python wire protocol lacks the SHM1 wet-mass extension required by the target P1 worker."
+  },
+  "units": {
+    "fluid_raw_force": "N for the current CFD extrusion span 0.028 m",
+    "strip_force": "N after f_2D=F_raw/0.028 m and F_slice=f_2D*1.98 m",
+    "displacement": "m"
+  },
+  "launch_boundary": {
+    "dry_run_allowed": true,
+    "handshake_allowed_only_after_entrypoint": true,
+    "openfoam_solve_allowed": false,
+    "precice_run_allowed": false,
+    "ancf_time_integration_allowed": false,
+    "new_time_directory_allowed": false
+  }
+}

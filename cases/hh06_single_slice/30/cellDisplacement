@@ -1,0 +1,27 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  Zero cell displacement at the fixed-flow to dynamic-mesh transition.
+  The displacementLaplacian solver computes subsequent cell motion.
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    location    "30";
+    object      cellDisplacement;
+}
+
+dimensions      [0 1 0 0 0 0 0];
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    front    { type empty; }
+    back     { type empty; }
+    inlet    { type zeroGradient; }
+    outlet   { type zeroGradient; }
+    upper    { type symmetryPlane; }
+    lower    { type symmetryPlane; }
+    cylinder { type fixedValue; value uniform (0 0 0); }
+}
+
+// ************************************************************************* //

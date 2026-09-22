@@ -1,0 +1,32 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         |
+  \*---------------------------------------------------------------------------*/
+/*
+ * Dynamic-mesh transition field for the forced SDOF run.
+ * The structure participant writes zero initial displacement; keep the
+ * fluid-side cylinder boundary consistent with that initial state.
+ */
+FoamFile
+{
+    format      ascii;
+    class       pointVectorField;
+    location    "30";
+    object      pointDisplacement;
+}
+
+dimensions      [0 1 0 0 0 0 0];
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    front    { type empty; }
+    back     { type empty; }
+    inlet    { type fixedValue; value uniform (0 0 0); }
+    outlet   { type fixedValue; value uniform (0 0 0); }
+    upper    { type symmetryPlane; }
+    lower    { type symmetryPlane; }
+    cylinder { type fixedValue; value uniform (0 0 0); }
+}
+
+// ************************************************************************* //

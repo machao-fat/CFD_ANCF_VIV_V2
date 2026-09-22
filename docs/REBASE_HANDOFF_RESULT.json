@@ -1,0 +1,23 @@
+{
+  "handoff_id": "PROJECT_REBASE_CLEAN_REPOSITORY_HANDOFF_V1",
+  "date": "2026-09-23",
+  "repository": "/home/machao/projects/CFD_ANCF_VIV_V2",
+  "legacy_repository": "D:/研二文件/开题准备/CFD_ANCF_VIV",
+  "authoritative_ancf_commit": "355640e11925b9feddd1a52bb3d93596e5ee8251",
+  "hh06_history_commit": "ea7909748da5d6be399abedaa405a0df549360d5",
+  "openfoam_started": false,
+  "precice_started": false,
+  "ancf_physical_time_advanced": false,
+  "new_cfd_time_directory_created": false,
+  "python_compile": "PASS",
+  "cmake_configure": "PASS",
+  "cmake_build": "PASS",
+  "offline_selftests": "PASS",
+  "ctest_registered_tests": 0,
+  "pytest": "NOT_RUN_PYTEST_NOT_INSTALLED",
+  "hh06_bounded_multiwindow_status": "DO_NOT_PASS",
+  "hh06_primary_blocker": "LATE_WINDOW_ALE_FLOW_TURBULENCE_RUNAWAY",
+  "worker_lineage_repair_status": "PASS_ISOLATED_ONLY_NOT_DEPLOYED",
+  "github_cli": "NOT_INSTALLED_OR_AUTHENTICATED",
+  "remote_status": "LOCAL_REPOSITORY_READY_REMOTE_PENDING"
+}

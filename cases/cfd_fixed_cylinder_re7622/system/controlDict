@@ -1,0 +1,75 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  Singh U*=5 two-DOF continuation from the last accepted parent state.
+  This file belongs only to the independent resume case; the parent
+  160->180 s runtime is intentionally left unchanged.
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+
+application     pimpleFoam;       // Production-family incompressible solver.
+startFrom       latestTime;
+startTime       0;
+stopAt          endTime;
+endTime        	30;        
+deltaT          2e-4;                       // Coupling window and OpenFOAM step are identical.
+
+writeControl    adjustableRunTime; // Full fields are written at physical intervals.
+writeInterval   0.5;              // About 0.1 s; does not alter deltaT.
+purgeWrite      100;
+writeFormat     binary;
+writePrecision  10;
+writeCompression off;
+timeFormat      general;
+timePrecision   10;
+runTimeModifiable true;
+
+functions
+{
+    cylinderForces
+    {
+        type            forces;       // Integrated pressure + viscous force.
+        libs            ("libforces.so");
+        writeControl    timeStep;
+        writeInterval   5;             // Keep force history at every CFD step.
+        log             yes;
+        patches         (cylinder);
+        rho             rhoInf;
+        rhoInf          1000;
+        CofR            (0 0 0);
+    }
+
+    cylinderForceCoeffs
+    {
+        type            forceCoeffs;  
+        libs            ("libforces.so");
+        writeControl    timeStep;
+        writeInterval   5;
+        log             yes;
+        patches         (cylinder);
+        rho             rhoInf;
+        rhoInf          1000;
+        liftDir         (0 1 0);
+        dragDir         (1 0 0);
+        pitchAxis       (0 0 1);
+        CofR            (0 0 0);
+        magUInf         0.31;
+        lRef            0.028;
+        Aref            0.000784;
+    }
+
+    yPlus
+    {
+        type            yPlus;
+        libs            ("libfieldFunctionObjects.so");
+
+        executeControl  writeTime;
+        writeControl    writeTime;
+    }
+}
+
+// ************************************************************************* //

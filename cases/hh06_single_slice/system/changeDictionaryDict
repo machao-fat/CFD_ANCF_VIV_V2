@@ -1,0 +1,45 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  Patch types   | OpenFOAM: The CFD Toolbox
+\*---------------------------------------------------------------------------*/
+// Boundary-type guard for a single-span 2-D mesh.  It is optional setup
+// metadata; the imported polyMesh already carries these final patch types.
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      changeDictionaryDict;
+}
+
+boundary
+{
+    front
+    {
+        type empty;
+    }
+    back
+    {
+        type empty;
+    }
+    lower
+    {
+        type symmetryPlane;
+    }
+    upper
+    {
+        type symmetryPlane;
+    }
+    inlet
+    {
+        type patch;
+    }
+    outlet
+    {
+        type patch;
+    }
+    cylinder
+    {
+        type wall;
+    }
+}

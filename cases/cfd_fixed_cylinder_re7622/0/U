@@ -1,0 +1,52 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  Initial velocity for the structured O-grid fixed-cylinder setup.
+  Change the inlet value only for a separately approved physical case; it
+  changes Re when nu and D are held fixed.  The internal field is uniform to
+  provide a clean, reproducible startup on the new 3200-cell mesh.
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+
+dimensions      [0 1 -1 0 0 0 0];
+internalField   uniform (1 0 0);       // U_inf = 1 m/s in +x.
+
+boundaryField
+{
+    front
+    {
+        type            empty;          // 2-D single-span plane.
+    }
+    back
+    {
+        type            empty;          // 2-D single-span plane.
+    }
+    lower
+    {
+        type            symmetryPlane;  // Slip/symmetry outer boundary.
+    }
+    upper
+    {
+        type            symmetryPlane;  // Slip/symmetry outer boundary.
+    }
+    inlet
+    {
+        type            fixedValue;
+        value           uniform (0.31 0 0);
+    }
+    outlet
+    {
+        type            zeroGradient;
+    }
+    cylinder
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);         // Fixed cylinder wall.
+    }
+}
+
+// ************************************************************************* //

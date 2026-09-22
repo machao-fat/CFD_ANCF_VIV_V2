@@ -1,0 +1,18 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  Physical     | OpenFOAM: The CFD Toolbox
+\*---------------------------------------------------------------------------*/
+// High-Re field contract: U_inf=0.31 m/s, D=0.028 m, nu=1.1388087116e-6 m2/s,
+// hence Re=U_inf*D/nu ~= 7622.  Do not replace this with the old Re=100 field.
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      physicalProperties;
+}
+
+// Re = 0.31*0.028/1.1388087116e-6 ~= 7622.
+viscosityModel  constant;
+
+nu              [0 2 -1 0 0 0 0] 1.1388087116e-06;

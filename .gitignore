@@ -1,0 +1,48 @@
+# Build outputs
+build/
+cmake-build-*/
+**/__pycache__/
+*.pyc
+*.o
+*.obj
+*.so
+*.a
+*.dll
+*.dylib
+
+# OpenFOAM runtime outputs
+processor*/
+postProcessing/
+log.*
+*.log
+core
+core.*
+*.foam.lock
+precice-sockets/
+precice-profiling/
+socket*
+*.sock
+
+# Runtime checkpoints and temporary reports
+runtime/
+**/runtime/
+tmp/
+_tmp_*/
+
+# Archived qualification reports may preserve a historical directory named
+# runtime; they are evidence, not live runtime output.
+!evidence/
+!evidence/**
+!evidence/**/runtime/
+!evidence/**/runtime/**
+
+# IDE and OS metadata
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Keep OpenFOAM initial fields and case setup in Git; do not ignore numeric
+# directories globally. The HH06 restart field is intentionally tracked under
+# cases/hh06_single_slice/30/.

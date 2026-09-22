@@ -1,0 +1,174 @@
+{
+  "schema_version": "ancf_single_slice_highre_preparation_v1",
+  "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+  "status": "READY_FOR_DRY_RUN",
+  "purpose": "HH06 Case 1 高 Re 单切片 ANCF-FSI 合同准备；本文件只定义合同身份，不替代结构 participant，也不授权求解。",
+  "contract_documents": {
+    "structure_contract": "structure_contract.json",
+    "mapping_contract": "mapping_contract.json",
+    "interface_contract": "interface_contract.json"
+  },
+  "p1_artifact": {
+    "status": "FOUND",
+    "root": "D:/CFD/CFD_ANCF_VIV_reentry_runtime/HH06_P1_WET_MODAL_STRUCTURAL_GATE",
+    "parameter_contract": "source_parameter_contract.json",
+    "result": "HH06_P1_RESULT.json",
+    "static_equilibrium": "ancf_static_equilibrium.json",
+    "state_and_matrices": "ancf_static.raw",
+    "sha256_manifest": "HH06_P1_SHA256_MANIFEST.txt",
+    "selected_case": "REF_NE32",
+    "provenance": "PASS_HH06_P1_WET_MODAL_STRUCTURAL_GATE"
+  },
+  "structure_contract": {
+    "file": "structure_contract.json",
+    "status": "READY_FOR_DRY_RUN",
+    "geometry": "P1 HH06: L=13.12 m, D=0.028 m, Ne=32",
+    "initial_tension_N": null,
+    "benchmark_top_tension_N": 1175.0,
+    "equilibrium_reaction_tension_N": 1188.28,
+    "numeric_section_properties": "loaded from the verified P1 artifact; see structure_contract.json",
+    "tension_contract_status": "DISTINCT_QUANTITIES; benchmark input is 1175 N, P1 static-equilibrium reaction is 1188.28 N; active runtime input remains null until the participant contract explicitly selects the benchmark value"
+  },
+  "mapping_contract": {
+    "file": "mapping_contract.json",
+    "status": "READY_FOR_DRY_RUN",
+    "slice_center_s_m": 2.97,
+    "deltaL_m": 1.98,
+    "force_rule": "F_slice=(F_raw/0.028)*1.98, exactly once"
+  },
+  "initial_state": {
+    "openfoam_global_time_s": 30.0,
+    "field_directory": "30",
+    "policy": "reuse_the_existing_30s_high_re_fixed_cylinder_field",
+    "uniform_flow_restart": false,
+    "structure_state": "q0 = P1 REF_NE32 static equilibrium from ancf_static.raw; no serialized 30 s FSI checkpoint",
+    "q0_artifact": "D:/CFD/CFD_ANCF_VIV_reentry_runtime/HH06_P1_WET_MODAL_STRUCTURAL_GATE/ancf_static.raw (CASE REF_NE32, Q record)",
+    "q0_artifact_wsl_path": "/mnt/d/CFD/CFD_ANCF_VIV_reentry_runtime/HH06_P1_WET_MODAL_STRUCTURAL_GATE/ancf_static.raw",
+    "initial_force": "not part of q0 dry-run contract; if time integration is later authorized, read the 30 s CFD force at release",
+    "initial_acceleration_required": false,
+    "initial_acceleration": "not required by this contract",
+    "Fx0_total_N": null,
+    "Fy0_total_N": null,
+    "ax0_m_s2": null,
+    "ay0_m_s2": null
+  },
+  "flow": {
+    "Re": 7622.00000016227,
+    "rho_kg_m3": 1000.0,
+    "U_m_s": 0.31,
+    "D_m": 0.028,
+    "nu_m2_s": 1.1388087116e-6,
+    "Lz_m": 0.028,
+    "model": "OpenFOAM10 high-Re RAS kOmegaSST as currently configured"
+  },
+  "geometry": {
+    "mesh_source": "existing slice0000/polyMesh",
+    "cylinder_interface_faces": 200,
+    "single_slice_structural_length_m": 1.98,
+    "single_slice_center_s_m": 2.97,
+    "single_slice_length_status": "CONFIRMED_BY_USER",
+    "mapping_rule": "F_slice = (F_raw / cfd_extrusion_span) * DeltaL; apply once"
+  },
+  "structure": {
+    "model": "ANCF",
+    "Mx_kg": null,
+    "My_kg": null,
+    "Kx_N_m": null,
+    "Ky_N_m": null,
+    "Cx_N_s_m": null,
+    "Cy_N_s_m": null,
+    "distributed_contract": {
+      "structural_line_mass_kg_per_m": 1.845,
+      "added_mass_per_length_kg_per_m_xy": 0.616,
+      "EA_N": 7470000.0,
+      "EI_Nm2": 29.88,
+      "rayleigh_alpha_1_s": 0.0,
+      "rayleigh_beta_s": 0.0,
+      "source": "HH06_P1_WET_MODAL_STRUCTURAL_GATE/source_parameter_contract.json"
+    },
+    "interface_vertex_count": 1,
+    "participant_entrypoint": "D:/研二文件/开题准备/CFD_ANCF_VIV/tools/hh06_single_slice_structure_0000_participant_v1/structure_0000_participant.py",
+    "worker_abi_sha256": "7B246C53F2040CE9DCBA3100700E1D5DEF905E84D8452F560B6D1B29E88D8473",
+    "initial_x_m": 0.0,
+    "initial_y_m": 0.0,
+    "initial_vx_m_s": 0.0,
+    "initial_vy_m_s": 0.0,
+    "contract_status": "READY_FOR_DRY_RUN; tension quantities are semantically separated (benchmark input 1175 N, equilibrium reaction 1188.28 N); active runtime tension remains unselected until a compatible participant contract is supplied"
+  },
+  "coupling": {
+    "fluid_participant": "Fluid_0000",
+    "structure_participant": "Structure_0000",
+    "scheme": "parallel-implicit",
+    "dt_s": 0.0002,
+    "time_window_s": 0.0002,
+    "duration_s": 0.2,
+    "accepted_window_limit": 1000,
+    "min_iterations": 2,
+      "max_iterations": 8,
+    "mapping": {
+      "force": "Fluid-Mesh -> Structure-Mesh conservative mapping (200 face centers to one structural section coupling point)",
+      "displacement": "Structure-Mesh -> Fluid-Mesh consistent mapping (one section coupling point to 200 face centers)",
+      "forbidden": "CFD face index to ANCF state vertex index",
+      "force_pipeline": "CFD wall integration -> strip resultant force -> preCICE Force -> ANCF generalized load"
+    }
+  },
+  "interface_contract": {
+    "fluid_participant": "Fluid_0000",
+    "structure_participant": "Structure_0000",
+    "fluid_provides": ["Force"],
+    "fluid_receives": ["Displacement"],
+    "structure_provides": ["Displacement"],
+    "structure_receives": ["Force"],
+    "fluid_mesh_vertices": 200,
+    "structure_coupling_mesh_vertices": 1,
+    "ancf_state_vertices": 33,
+    "legacy_604_vertex_participant": false,
+    "participant_entrypoint": "D:/研二文件/开题准备/CFD_ANCF_VIV/tools/hh06_single_slice_structure_0000_participant_v1/structure_0000_participant.py",
+    "participant_entrypoint_wsl": "/mnt/d/研二文件/开题准备/CFD_ANCF_VIV/tools/hh06_single_slice_structure_0000_participant_v1/structure_0000_participant.py",
+    "entrypoint_status": "PRESENT; offline contract audit available; live run remains blocked until SHM1-capable Python wire protocol is selected",
+    "force_pipeline": [
+      "OpenFOAM cylinder-wall integration over 200 faces",
+      "strip resultant force over DeltaL=1.98 m",
+      "preCICE Force on Fluid_0000",
+      "ANCF generalized load assembly inside Structure_0000"
+    ],
+    "direct_face_to_ancf_vertex_mapping": false,
+    "generalized_load_assembly": "ANCF shape-function/virtual-work assembly inside Structure_0000"
+  },
+  "entrypoint_audit": {
+    "status": "FOUND_COMPATIBLE_WRAPPER_RUNTIME_CAPABILITY_BLOCKED",
+    "compatible_hh06_wrapper_found": true,
+    "wrapper_path": "D:/研二文件/开题准备/CFD_ANCF_VIV/tools/hh06_single_slice_structure_0000_participant_v1/structure_0000_participant.py",
+    "repository": "D:/CFD/CFD_ANCF_VIV_source",
+    "repository_remote": "https://github.com/machao-fat/CFD_ANCF_VIV.git",
+    "repository_head": "8443209c4db39572f5099bec5d66a093eec7cdc3",
+    "search_contract": "participant, precice, initialize, advance, writeData/write_data, readData/read_data, checkpoint",
+    "candidate_files": [
+      "tools/precice_ancf_adapter_v1/ancf_structure_participant_v1.py",
+      "tools/precice_ancf_adapter_v1/ancf_cpp_worker_single_slice_participant_v1.py",
+      "tools/precice_ancf_adapter_v1/ancf_generic_participant_v1.py",
+      "tools/three_slice_force_contract_smoke_v1/structure_participant.py"
+    ],
+    "existing_structure_0000_wrappers_excluded": [
+      "tools/cfd_current_dynamic_nonzero_bridge_v1/run_bridge.py (prescribed bridge; contains_ancf=false)",
+      "tools/cfd_current_dynamic_nonzero_bridge_v2/run_bridge_v2.py (prescribed bridge; contains_ancf=false)",
+      "tools/cfd_current_fixed_zero_bridge_v1/run_fixed_zero_bridge.py (fixed/zero-motion fixture)",
+      "tools/shiels_s5_k988_single_slice_free_fsi_long_development_v1/sdof_precice_continuation_participant.py (SDOF, legacy Re=100)"
+    ],
+    "reason": "HH06 wrapper is present and passes offline contract parsing; the checked-out Python wire protocol lacks the P1 SHM1 hydrodynamic-region extension, so live coupling remains blocked."
+  },
+  "boundary": {
+    "no_openfoam_run": true,
+    "no_precice_run": true,
+    "no_ancf_run": true,
+    "no_new_time_directory": true
+  },
+  "required_before_launch": [
+    "retain the P1 section-property, damping, matrix, and q0 artifacts; do not substitute legacy Re=100 values",
+    "if launch is later authorized, select benchmark_top_tension_N=1175.0 N as the HH06 input; never substitute equilibrium_reaction_tension_N=1188.28 N",
+    "provide a participant entry point compatible with Fluid_0000/Structure_0000 and the one-point structural coupling mesh",
+    "perform XML parse and participant handshake dry-run before any time integration",
+    "if integration is later authorized, read the initial 30 s CFD force; initial acceleration is not a dry-run prerequisite",
+    "change status to READY only after the participant and P1 numerical artifacts are confirmed"
+  ]
+}

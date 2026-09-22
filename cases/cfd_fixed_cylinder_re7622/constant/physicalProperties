@@ -1,0 +1,18 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  Physical     | OpenFOAM: The CFD Toolbox
+\*---------------------------------------------------------------------------*/
+// Re = U_inf*D/nu = 1*1/0.01 = 100.  The viscosity is the primary physical
+// knob here; changing it changes Re and must be recorded as a new case.
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      physicalProperties;
+}
+
+// Re = U_inf*D/nu = 1*1/0.01 = 100.
+viscosityModel  constant;
+
+nu              [0 2 -1 0 0 0 0] 1.1388087116e-06;

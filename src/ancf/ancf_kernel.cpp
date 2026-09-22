@@ -1,0 +1,1554 @@
+#include "ancf_kernel.hpp"
+
+#include <algorithm>
+#include <array>
+#include <chrono>
+#include <cmath>
+#include <cstring>
+#include <limits>
+#include <stdexcept>
+
+namespace cfd_ancf {
+namespace {
+using Vec3 = std::array<double, 3>;
+using Vec4 = std::array<double, 4>;
+using Mat3 = std::array<double, 9>;
+constexpr double EPS = 1.0e-24;
+constexpr double PI = 3.141592653589793238462643383279502884;
+constexpr char CANONICAL_BOUNDARY_CONTRACT_ID[] = "ancf_v1_bottom_top_xy_zero";
+
+Vec3 add(Vec3 a, const Vec3& b) { for (int i=0;i<3;++i) a[i] += b[i]; return a; }
+Vec3 scale(Vec3 a, double s) { for (double& x : a) x *= s; return a; }
+double dot(const Vec3& a, const Vec3& b) {
+  // Match the MATLAB short-vector reduction order used by the golden
+  // diagnostic.  The parenthesized tail is intentional: changing this to a
+  // left-associated sum changes the bending force by several ulps.
+  return a[0] * b[0] + (a[1] * b[1] + a[2] * b[2]);
+}
+Vec3 cross(const Vec3& a, const Vec3& b) { return {a[1]*b[2]-a[2]*b[1], a[2]*b[0]-a[0]*b[2], a[0]*b[1]-a[1]*b[0]}; }
+Mat3 zero3() { return {0,0,0,0,0,0,0,0,0}; }
+Mat3 eye3() { return {1,0,0,0,1,0,0,0,1}; }
+Mat3 transpose3(const Mat3& a) { return {a[0],a[3],a[6],a[1],a[4],a[7],a[2],a[5],a[8]}; }
+Mat3 add3(const Mat3& a, const Mat3& b) { Mat3 c{}; for(int i=0;i<9;++i)c[i]=a[i]+b[i]; return c; }
+Mat3 scale3(const Mat3& a, double s) { Mat3 c{}; for(int i=0;i<9;++i)c[i]=a[i]*s; return c; }
+Mat3 mul3(const Mat3& a, const Mat3& b) { Mat3 c=zero3(); for(int i=0;i<3;++i)for(int j=0;j<3;++j)for(int k=0;k<3;++k)c[3*i+j]+=a[3*i+k]*b[3*k+j]; return c; }
+Vec3 mul3(const Mat3& a, const Vec3& b) { return {a[0]*b[0]+a[1]*b[1]+a[2]*b[2], a[3]*b[0]+a[4]*b[1]+a[5]*b[2], a[6]*b[0]+a[7]*b[1]+a[8]*b[2]}; }
+Mat3 outer3(const Vec3& a, const Vec3& b) { Mat3 c{}; for(int i=0;i<3;++i)for(int j=0;j<3;++j)c[3*i+j]=a[i]*b[j]; return c; }
+Mat3 cross_matrix(const Vec3& a) { return {0,-a[2],a[1],a[2],0,-a[0],-a[1],a[0],0}; }
+Matrix matrix_from_mat3(const Mat3& value) {
+  Matrix result(3, 3);
+  for (std::size_t row = 0; row < 3; ++row)
+    for (std::size_t col = 0; col < 3; ++col)
+      result(row, col) = value[3 * row + col];
+  return result;
+}
+
+bool finite_vector(const std::vector<double>& values) {
+  return !values.empty() && std::all_of(values.begin(), values.end(),
+                                        [](double value) { return std::isfinite(value); });
+}
+
+bool finite_matrix(const Matrix& value) {
+  if (value.rows == 0 || value.cols == 0 ||
+      value.rows > (std::numeric_limits<std::size_t>::max)() / value.cols)
+    return false;
+  return
+         value.data.size() == value.rows * value.cols &&
+         std::all_of(value.data.begin(), value.data.end(),
+                     [](double item) { return std::isfinite(item); });
+}
+
+std::pair<std::vector<std::size_t>, std::vector<double>> canonical_boundary(const Model& model) {
+  return {{0u, 1u, 2u, 6u * model.elements, 6u * model.elements + 1u},
+          {0.0, 0.0, 0.0, 0.0, 0.0}};
+}
+
+Vec4 shape(double x, double L, int derivative) {
+  const double xi = x / L;
+  // Match MATLAB ancf_shape.m's scalar-power contract literally.  The
+  // previous multiplication expansion is algebraically equivalent but can
+  // round differently at non-binary Gauss abscissae before the nonlinear
+  // bending derivatives amplify the perturbation.
+  const double xi2 = std::pow(xi, 2.0);
+  const double xi3 = std::pow(xi, 3.0);
+  const double L2 = std::pow(L, 2.0);
+  if (derivative == 0) return {1-3*xi2+2*xi3, L*(xi-2*xi2+xi3), 3*xi2-2*xi3, L*(-xi2+xi3)};
+  if (derivative == 1) return {(6*xi2-6*xi)/L, 1-4*xi+3*xi2, (-6*xi2+6*xi)/L, -2*xi+3*xi2};
+  if (derivative == 2) return {(12*xi-6)/L2, (-4+6*xi)/L, (6-12*xi)/L2, (-2+6*xi)/L};
+  throw std::invalid_argument("ANCF derivative order");
+}
+
+Matrix block_matrix(const Vec4& s) {
+  Matrix out(3, 12);
+  for (int block=0;block<4;++block) for (int i=0;i<3;++i) out(i,3*block+i)=s[block];
+  return out;
+}
+
+std::pair<std::vector<double>, std::vector<double>> gauss(std::size_t n) {
+  if (n == 3) return {{-std::sqrt(3.0/5.0),0,std::sqrt(3.0/5.0)}, {5.0/9.0,8.0/9.0,5.0/9.0}};
+  if (n == 5) { const double a=std::sqrt(5+2*std::sqrt(10.0/7.0))/3; const double b=std::sqrt(5-2*std::sqrt(10.0/7.0))/3; return {{-a,-b,0,b,a},{(322-13*std::sqrt(70.0))/900,(322+13*std::sqrt(70.0))/900,128.0/225,(322+13*std::sqrt(70.0))/900,(322-13*std::sqrt(70.0))/900}}; }
+  throw std::invalid_argument("ANCF gauss order");
+}
+
+[[maybe_unused]] void add_block(Matrix& target, std::size_t row, std::size_t col, const Matrix& block, double factor) {
+  for (std::size_t i=0;i<block.rows;++i) for (std::size_t j=0;j<block.cols;++j) target(row+i,col+j) += factor*block(i,j);
+}
+
+Matrix transpose(const Matrix& a) { Matrix out(a.cols,a.rows); for(std::size_t i=0;i<a.rows;++i)for(std::size_t j=0;j<a.cols;++j)out(j,i)=a(i,j); return out; }
+Matrix multiply(const Matrix& a, const Matrix& b) { Matrix out(a.rows,b.cols); for(std::size_t i=0;i<a.rows;++i)for(std::size_t k=0;k<a.cols;++k)for(std::size_t j=0;j<b.cols;++j)out(i,j)+=a(i,k)*b(k,j); return out; }
+[[maybe_unused]] std::vector<double> multiply(const Matrix& a, const std::vector<double>& x) { if(a.cols!=x.size())throw std::invalid_argument("matrix vector dimensions"); std::vector<double> y(a.rows); for(std::size_t i=0;i<a.rows;++i)for(std::size_t j=0;j<a.cols;++j)y[i]+=a(i,j)*x[j]; return y; }
+std::vector<double> solve(Matrix a, std::vector<double> b) {
+  if(a.rows!=a.cols || b.size()!=a.rows)throw std::invalid_argument("linear solve dimensions");
+  if (!finite_matrix(a) || !finite_vector(b))
+    throw std::runtime_error("linear solve input contains NaN/Inf");
+  const std::size_t n=a.rows;
+#ifdef CFD_ANCF_USE_DOUBLE_SOLVE
+  std::vector<double> aa = a.data, bb = std::move(b);
+  for(std::size_t k=0;k<n;++k){ std::size_t pivot=k; for(std::size_t i=k+1;i<n;++i)if(std::abs(aa[i*n+k])>std::abs(aa[pivot*n+k]))pivot=i; if(std::abs(aa[pivot*n+k])<1e-24)throw std::runtime_error("singular ANCF tangent"); if(pivot!=k){for(std::size_t j=0;j<n;++j)std::swap(aa[k*n+j],aa[pivot*n+j]);std::swap(bb[k],bb[pivot]);} for(std::size_t i=k+1;i<n;++i){double f=aa[i*n+k]/aa[k*n+k];aa[i*n+k]=0;for(std::size_t j=k+1;j<n;++j)aa[i*n+j]-=f*aa[k*n+j];bb[i]-=f*bb[k];}}
+  std::vector<double> xx(n); for(std::size_t ii=0;ii<n;++ii){std::size_t i=n-1-ii;double s=bb[i];for(std::size_t j=i+1;j<n;++j)s-=aa[i*n+j]*xx[j];xx[i]=s/aa[i*n+i];}
+  if (!finite_vector(xx)) throw std::runtime_error("linear solve output contains NaN/Inf");
+  return xx;
+#else
+  std::vector<long double> aa(n*n), bb(n);
+  for(std::size_t i=0;i<n;++i){bb[i]=static_cast<long double>(b[i]);for(std::size_t j=0;j<n;++j)aa[i*n+j]=static_cast<long double>(a(i,j));}
+  for(std::size_t k=0;k<n;++k){ std::size_t pivot=k; for(std::size_t i=k+1;i<n;++i)if(std::abs(aa[i*n+k])>std::abs(aa[pivot*n+k]))pivot=i; if(std::abs(aa[pivot*n+k])<1e-24L)throw std::runtime_error("singular ANCF tangent"); if(pivot!=k){for(std::size_t j=0;j<n;++j)std::swap(aa[k*n+j],aa[pivot*n+j]);std::swap(bb[k],bb[pivot]);} for(std::size_t i=k+1;i<n;++i){long double f=aa[i*n+k]/aa[k*n+k];aa[i*n+k]=0;for(std::size_t j=k+1;j<n;++j)aa[i*n+j]-=f*aa[k*n+j];bb[i]-=f*bb[k];}}
+  std::vector<long double> xx(n); for(std::size_t ii=0;ii<n;++ii){std::size_t i=n-1-ii;long double s=bb[i];for(std::size_t j=i+1;j<n;++j)s-=aa[i*n+j]*xx[j];xx[i]=s/aa[i*n+i];}
+  std::vector<double>x(n); for(std::size_t i=0;i<n;++i)x[i]=static_cast<double>(xx[i]);
+  if (!finite_vector(x)) throw std::runtime_error("linear solve output contains NaN/Inf");
+  return x;
+#endif
+}
+
+double minimum_symmetric_eigenvalue(Matrix matrix) {
+  if (matrix.rows != matrix.cols || !finite_matrix(matrix))
+    throw std::invalid_argument("symmetric eigenvalue matrix is invalid");
+  const std::size_t n = matrix.rows;
+  if (n == 0) return 0.0;
+  const std::size_t max_iterations = std::max<std::size_t>(32u, 16u * n * n);
+  for (std::size_t iteration = 0; iteration < max_iterations; ++iteration) {
+    std::size_t p = 0, q = 0;
+    double largest = 0.0;
+    for (std::size_t row = 0; row < n; ++row) {
+      for (std::size_t col = row + 1; col < n; ++col) {
+        const double value = std::abs(matrix(row, col));
+        if (value > largest) { largest = value; p = row; q = col; }
+      }
+    }
+    double diagonal_scale = 1.0;
+    for (std::size_t index = 0; index < n; ++index)
+      diagonal_scale = std::max(diagonal_scale, std::abs(matrix(index, index)));
+    if (largest <= 1.0e-14 * diagonal_scale) break;
+    const double app = matrix(p, p), aqq = matrix(q, q), apq = matrix(p, q);
+    const double tau = (aqq - app) / (2.0 * apq);
+    const double sign = tau >= 0.0 ? 1.0 : -1.0;
+    const double t = sign / (std::abs(tau) + std::sqrt(1.0 + tau * tau));
+    const double c = 1.0 / std::sqrt(1.0 + t * t);
+    const double s = t * c;
+    for (std::size_t k = 0; k < n; ++k) {
+      if (k == p || k == q) continue;
+      const double akp = matrix(k, p), akq = matrix(k, q);
+      matrix(k, p) = matrix(p, k) = c * akp - s * akq;
+      matrix(k, q) = matrix(q, k) = s * akp + c * akq;
+    }
+    matrix(p, p) = c * c * app - 2.0 * s * c * apq + s * s * aqq;
+    matrix(q, q) = s * s * app + 2.0 * s * c * apq + c * c * aqq;
+    matrix(p, q) = matrix(q, p) = 0.0;
+  }
+  double minimum = matrix(0, 0);
+  for (std::size_t index = 1; index < n; ++index) minimum = std::min(minimum, matrix(index, index));
+  if (!std::isfinite(minimum)) throw std::runtime_error("symmetric eigenvalue is NaN/Inf");
+  return minimum;
+}
+
+void element_force_tangent(const std::vector<double>& qe, double Le, double EA, double EI, std::size_t ngauss,
+                           std::size_t element_id, std::vector<double>& fe, Matrix& Ke,
+                           AssemblyTrace* trace) {
+  fe.assign(12,0.0); Ke=Matrix(12,12);
+  const auto [xi,w]=gauss(ngauss);
+  for(std::size_t k=0;k<xi.size();++k){double x=0.5*(xi[k]+1)*Le; Matrix B=block_matrix(shape(x,Le,1));Matrix C=block_matrix(shape(x,Le,2));Vec3 a{},b{};for(int i=0;i<3;++i){for(int j=0;j<12;++j){a[i]+=B(i,j)*qe[j];b[i]+=C(i,j)*qe[j];}}double a2=dot(a,a);if(a2<EPS)throw std::runtime_error("degenerate ANCF tangent");Vec3 v=cross(a,b);double v2=dot(v,v);Mat3 Xa=cross_matrix(a),Xb=cross_matrix(b),Xv=cross_matrix(v);
+    // Match MATLAB's literal a2^(-n) scalar-power expressions.
+    const double inv_a2_3 = std::pow(a2, -3.0);
+    const double inv_a2_4 = std::pow(a2, -4.0);
+    const double inv_a2_5 = std::pow(a2, -5.0);
+    Vec3 ga_b=add(scale(mul3(Xb,v),inv_a2_3),scale(a,-3*v2*inv_a2_4));Vec3 gb_b=scale(mul3(Xa,v),-inv_a2_3);Mat3 Haa_b=add3(add3(add3(add3(scale3(mul3(Xb,Xb),-inv_a2_3),scale3(outer3(mul3(Xb,v),a),-6*inv_a2_4)),scale3(outer3(a,mul3(Xb,v)),-6*inv_a2_4)),scale3(outer3(a,a),24*v2*inv_a2_5)),scale3(eye3(),-3*v2*inv_a2_4));Mat3 Hab=add3(scale3(add3(scale3(Xv,-1),mul3(Xb,Xa)),inv_a2_3),scale3(outer3(a,mul3(Xa,v)),6*inv_a2_4));Mat3 Hbb=scale3(mul3(Xa,Xa),-inv_a2_3);double eps=0.5*(a2-1);Vec3 ga=add(scale(a,EA*eps),scale(ga_b,EI));Vec3 gb=scale(gb_b,EI);Mat3 Haa=add3(scale3(add3(outer3(a,a),scale3(eye3(),eps)),EA),scale3(Haa_b,EI));Mat3 HabS=scale3(Hab,EI),HbbS=scale3(Hbb,EI);
+    // Keep the force assembly in the same staged order as MATLAB:
+    // compute B.'*ga and C.'*gb independently, add them, then apply the
+    // quadrature weight.  Folding the weight and both products into one
+    // accumulation changes low-magnitude components by several ulps after
+    // cancellation, which is material to the strict dual-run contract.
+     ForensicPoint point;
+     if (trace != nullptr) {
+       point.element = element_id;
+       point.gauss_index = k;
+       point.xi = xi[k];
+       point.x = x;
+       point.a = a;
+       point.b = b;
+       point.v = v;
+       point.a2 = a2;
+       point.v2 = v2;
+       point.eps = eps;
+       point.ga_b = ga_b;
+       point.gb_b = gb_b;
+       point.ga = ga;
+       point.gb = gb;
+     }
+     std::array<double, 12> bga{};
+    std::array<double, 12> cgb{};
+    for (int i = 0; i < 12; ++i) {
+       for (int c = 0; c < 3; ++c) {
+         bga[static_cast<std::size_t>(i)] += B(c, i) * ga[c];
+         cgb[static_cast<std::size_t>(i)] += C(c, i) * gb[c];
+      }
+      // MATLAB evaluates this as term * w(k) * Le / 2; preserve the same
+      // left-to-right rounding points instead of precomputing the weight.
+      double term = bga[static_cast<std::size_t>(i)] +
+                    cgb[static_cast<std::size_t>(i)];
+      term *= w[k];
+       term *= Le;
+       term /= 2.0;
+       fe[static_cast<std::size_t>(i)] += term;
+       if (trace != nullptr) {
+         point.bga[static_cast<std::size_t>(i)] = bga[static_cast<std::size_t>(i)];
+         point.cgb[static_cast<std::size_t>(i)] = cgb[static_cast<std::size_t>(i)];
+         point.contribution[static_cast<std::size_t>(i)] = term;
+       }
+      // MATLAB evaluates each product as an independent matrix multiplication
+      // and only then adds the four 12x12 terms.  The previous scalar
+      // r/s reduction interleaved all four products, changing the rounding
+      // path of the effective Newton tangent by several ulps.
+      const Matrix B_t = transpose(B);
+      const Matrix C_t = transpose(C);
+      const Matrix term_bhaa_b = multiply(multiply(B_t, matrix_from_mat3(Haa)), B);
+      const Matrix term_bhab_c = multiply(multiply(B_t, matrix_from_mat3(HabS)), C);
+      const Matrix term_chab_b = multiply(multiply(C_t, matrix_from_mat3(transpose3(HabS))), B);
+      const Matrix term_chbb_c = multiply(multiply(C_t, matrix_from_mat3(HbbS)), C);
+      for (int j = 0; j < 12; ++j) {
+        double value = term_bhaa_b(i, j);
+        value += term_bhab_c(i, j);
+        value += term_chab_b(i, j);
+        value += term_chbb_c(i, j);
+        double weighted = value;
+        weighted *= w[k];
+         weighted *= Le;
+         weighted /= 2.0;
+         Ke(i, j) += weighted;
+         if (trace != nullptr) point.tangent_contribution[static_cast<std::size_t>(i) * 12u + static_cast<std::size_t>(j)] = weighted;
+       }
+     }
+     if (trace != nullptr) trace->points.push_back(point);
+   }
+}
+
+Matrix assemble_spanwise_region_matrix(
+    const Model& model, const std::vector<SpanwiseHydrodynamicRegion>& regions,
+    bool added_mass) {
+  const std::size_t n = model.ndof();
+  Matrix result(n, n);
+  const double element_length = model.length_m / static_cast<double>(model.elements);
+  const auto [points, weights] = gauss(5);
+  for (std::size_t element = 0; element < model.elements; ++element) {
+    const double element_start = static_cast<double>(element) * element_length;
+    const double element_end = element_start + element_length;
+    for (const auto& region : regions) {
+      const std::array<double, 3>& coefficients =
+          added_mass ? region.added_mass_per_length_kg_m
+                     : region.linear_damping_per_length_Ns_m2;
+      if (coefficients[0] == 0.0 && coefficients[1] == 0.0 && coefficients[2] == 0.0)
+        continue;
+      const double left = std::max(element_start, region.s_min_m);
+      const double right = std::min(element_end, region.s_max_m);
+      if (right <= left) continue;
+      for (std::size_t row = 0; row < 12; ++row) {
+        for (std::size_t col = row; col < 12; ++col) {
+          double entry = 0.0;
+          for (std::size_t point = 0; point < points.size(); ++point) {
+            const double s = 0.5 * (left + right) + 0.5 * (right - left) * points[point];
+            const Matrix N = block_matrix(shape(s - element_start, element_length, 0));
+            double integrand = 0.0;
+            for (std::size_t component = 0; component < 3; ++component) {
+              integrand += coefficients[component] * N(component, row) * N(component, col);
+            }
+            entry += weights[point] * integrand;
+          }
+          entry *= 0.5 * (right - left);
+          const std::size_t global_row = 6 * element + row;
+          const std::size_t global_col = 6 * element + col;
+          result(global_row, global_col) += entry;
+          if (global_row != global_col) result(global_col, global_row) += entry;
+        }
+      }
+    }
+  }
+  if (!finite_matrix(result))
+    throw std::runtime_error("spanwise hydrodynamic matrix contains NaN/Inf");
+  return result;
+}
+}
+
+double Model::area() const { return PI*(diameter_m*diameter_m-inner_diameter_m*inner_diameter_m)/4.0; }
+double Model::displaced_area() const {
+  if (section_property_mode == SectionPropertyMode::ExplicitSectionProperties)
+    return explicit_displaced_area_m2;
+  return PI*diameter_m*diameter_m/4.0;
+}
+double Model::EA() const {
+  if (section_property_mode == SectionPropertyMode::ExplicitSectionProperties)
+    return explicit_EA_N;
+  return youngs_modulus_Pa*area();
+}
+// Match the scalar multiplication path used by the MATLAB material fixture.
+// The shape-function power path is handled explicitly above; retaining the
+// original product order here is an independent A/B variable for the
+// MATLAB/C++ forensic comparison.
+double Model::EI() const {
+  if (section_property_mode == SectionPropertyMode::ExplicitSectionProperties)
+    return explicit_EI_Nm2;
+  const double diameter_squared = diameter_m * diameter_m;
+  const double inner_squared = inner_diameter_m * inner_diameter_m;
+  const double diameter_fourth = diameter_squared * diameter_squared;
+  const double inner_fourth = inner_squared * inner_squared;
+  return youngs_modulus_Pa * PI * (diameter_fourth - inner_fourth) / 64.0;
+}
+
+double Model::mass_per_length() const {
+  if (section_property_mode == SectionPropertyMode::ExplicitSectionProperties)
+    return explicit_mass_per_length_kg_m;
+  return material_density * area();
+}
+
+namespace {
+
+void validate_spanwise_hydrodynamic_regions_contract(
+    const Model& model, const std::vector<SpanwiseHydrodynamicRegion>& regions) {
+  double previous_start = 0.0;
+  double previous_end = 0.0;
+  bool have_previous = false;
+  for (const auto& region : regions) {
+    if (!std::isfinite(region.s_min_m) || !std::isfinite(region.s_max_m) ||
+        region.s_min_m < 0.0 || region.s_min_m >= region.s_max_m ||
+        region.s_max_m > model.length_m) {
+      throw std::invalid_argument("spanwise hydrodynamic region interval is invalid");
+    }
+    for (double value : region.added_mass_per_length_kg_m) {
+      if (!std::isfinite(value) || value < 0.0)
+        throw std::invalid_argument("spanwise hydrodynamic added-mass coefficient is invalid");
+    }
+    for (double value : region.linear_damping_per_length_Ns_m2) {
+      if (!std::isfinite(value) || value < 0.0)
+        throw std::invalid_argument("spanwise hydrodynamic damping coefficient is invalid");
+    }
+    // Regions are ordered by start. Exact touching endpoints are valid;
+    // only a positive-measure overlap is rejected, without a geometric epsilon.
+    if (have_previous && (region.s_min_m < previous_start || region.s_min_m < previous_end)) {
+      throw std::invalid_argument("spanwise hydrodynamic regions are unsorted or overlap");
+    }
+    previous_start = region.s_min_m;
+    previous_end = region.s_max_m;
+    have_previous = true;
+  }
+}
+
+}  // namespace
+
+void validate_model(const Model& model) {
+  const auto finite = [](double value) { return std::isfinite(value); };
+  const bool legacy_section =
+      model.section_property_mode == SectionPropertyMode::LegacyPhysicalSection;
+  const bool explicit_section =
+      model.section_property_mode == SectionPropertyMode::ExplicitSectionProperties;
+  if (model.elements < 1 || model.elements > 10000 || model.slices < 1 || model.slices > 1000 || model.ndof() > MAX_NDOF ||
+      model.length_m <= 0.0 ||
+      (legacy_section && (model.diameter_m <= model.inner_diameter_m ||
+                          model.inner_diameter_m < 0.0)) ||
+      (!legacy_section && !explicit_section) || model.dt_s <= 0.0 || model.beta <= 0.0 ||
+      model.gamma <= 0.0 || model.max_newton == 0 || model.max_newton > MAX_NEWTON ||
+       (model.gauss_order != 3 && model.gauss_order != 5) ||
+       (model.mass_gauss_order != 3 && model.mass_gauss_order != 5) ||
+       !model.include_gravity || !model.include_buoyancy ||
+       model.damping_alpha < 0.0 || model.damping_beta < 0.0) {
+    throw std::invalid_argument("invalid ANCF model dimensions or numerical contract");
+  }
+  for (double value : {model.length_m, model.top_tension_N, model.fluid_density, model.gravity,
+                       model.dt_s, model.beta, model.gamma, model.newton_tolerance,
+                       model.damping_alpha, model.damping_beta}) {
+    if (!finite(value)) throw std::invalid_argument("ANCF model contains NaN/Inf");
+  }
+  if (legacy_section) {
+    for (double value : {model.diameter_m, model.inner_diameter_m,
+                         model.youngs_modulus_Pa, model.material_density}) {
+      if (!finite(value)) throw std::invalid_argument("ANCF model contains NaN/Inf");
+    }
+  } else {
+    for (double value : {model.explicit_EA_N, model.explicit_EI_Nm2,
+                         model.explicit_mass_per_length_kg_m,
+                         model.explicit_displaced_area_m2}) {
+      if (!finite(value) || value <= 0.0)
+        throw std::invalid_argument("ANCF explicit section properties must be finite and positive");
+    }
+  }
+  if (model.newton_tolerance <= 0.0) {
+    throw std::invalid_argument("ANCF Newton tolerance must be positive");
+  }
+  validate_spanwise_hydrodynamic_regions_contract(model, model.hydrodynamic_regions);
+  if (model.boundary_contract_id.empty()) {
+    throw std::invalid_argument("ANCF boundary contract identity is missing");
+  }
+  if (model.fixed_dof.empty() != model.prescribed_values.empty()) {
+    throw std::invalid_argument("ANCF boundary fields must be provided together");
+  }
+  if (!model.fixed_dof.empty()) {
+    if (model.fixed_dof.size() != model.prescribed_values.size() || model.fixed_dof.empty()) {
+      throw std::invalid_argument("ANCF boundary field dimensions are invalid");
+    }
+    for (std::size_t i = 0; i < model.fixed_dof.size(); ++i) {
+      if (model.fixed_dof[i] >= model.ndof() ||
+          (i > 0 && model.fixed_dof[i] <= model.fixed_dof[i - 1]) ||
+          !finite(model.prescribed_values[i])) {
+        throw std::invalid_argument("ANCF boundary fields are invalid");
+      }
+    }
+  }
+  if (model.boundary_contract_id == CANONICAL_BOUNDARY_CONTRACT_ID) {
+    const auto canonical = canonical_boundary(model);
+    const auto& fixed = model.fixed_dof.empty() ? canonical.first : model.fixed_dof;
+    const auto& prescribed = model.prescribed_values.empty() ? canonical.second : model.prescribed_values;
+    if (fixed != canonical.first || prescribed != canonical.second) {
+      throw std::invalid_argument("canonical boundary contract does not match fixed DOF or prescribed values");
+    }
+  }
+  if (!model.slice_positions_m.empty()) {
+    if (model.slice_positions_m.size() != model.slices) {
+      throw std::invalid_argument("ANCF slice position count mismatch");
+    }
+    for (std::size_t index = 0; index < model.slice_positions_m.size(); ++index) {
+      const double position = model.slice_positions_m[index];
+      if (!finite(position) || position < 0.0 || position > model.length_m ||
+          (index > 0 && position <= model.slice_positions_m[index - 1])) {
+        throw std::invalid_argument("ANCF slice positions are invalid");
+      }
+    }
+  }
+  if (model.spanwise_load_reconstruction ==
+      SpanwiseLoadReconstruction::PiecewiseLinearDistributed) {
+    if (model.spanwise_endpoint_policy != SpanwiseEndpointPolicy::NearestConstant ||
+        model.slice_positions_m.size() != model.slices || model.slices < 2 ||
+        !finite(model.spanwise_active_s_min_m) || !finite(model.spanwise_active_s_max_m) ||
+        model.spanwise_active_s_min_m < 0.0 ||
+        model.spanwise_active_s_max_m > model.length_m ||
+        model.spanwise_active_s_min_m > model.spanwise_active_s_max_m ||
+        model.spanwise_active_s_min_m > model.slice_positions_m.front() ||
+        model.slice_positions_m.back() > model.spanwise_active_s_max_m) {
+      throw std::invalid_argument("ANCF distributed-load model contract is invalid");
+    }
+  } else if (model.spanwise_load_reconstruction !=
+             SpanwiseLoadReconstruction::LegacyPointLumped) {
+    throw std::invalid_argument("ANCF spanwise-load reconstruction mode is unknown");
+  }
+}
+
+Matrix mapping_H3(const Model& model) {
+  validate_model(model);
+  Matrix H(3*model.slices,model.ndof()); const double Le=model.length_m/model.elements;
+  for(std::size_t k=0;k<model.slices;++k){
+    const double s = model.slice_positions_m.size()==model.slices ? model.slice_positions_m[k] :
+      (model.slices==1 ? 0.0 : model.length_m*static_cast<double>(k)/(model.slices-1));
+    if (s < 0.0 || s > model.length_m) throw std::invalid_argument("slice position outside case length");
+    const std::size_t ie=s==model.length_m?model.elements-1:std::min(model.elements-1,static_cast<std::size_t>(std::floor(s/Le)));
+    const double x=s-ie*Le;Matrix N=block_matrix(shape(x,Le,0));for(int i=0;i<3;++i)for(int j=0;j<12;++j)H(3*k+i,6*ie+j)=N(i,j);
+  }return H;
+}
+
+std::vector<double> static_base_load(const Model& model) {
+  validate_model(model);
+  const std::size_t n = model.ndof();
+  std::vector<double> load(n, 0.0);
+  const double line_force_z =
+      -model.mass_per_length() * model.gravity +
+      model.fluid_density * model.displaced_area() * model.gravity;
+  const double Le = model.length_m / static_cast<double>(model.elements);
+  const auto [xi, weights] = gauss(model.mass_gauss_order);
+  for (std::size_t element = 0; element < model.elements; ++element) {
+    std::vector<double> element_load(12, 0.0);
+    for (std::size_t k = 0; k < xi.size(); ++k) {
+      const double x = 0.5 * (xi[k] + 1.0) * Le;
+      const Matrix N = block_matrix(shape(x, Le, 0));
+      for (std::size_t column = 0; column < 12; ++column) {
+        // Only the z component of the distributed line load is non-zero.
+        double contribution = N(2, column) * line_force_z;
+        contribution *= weights[k];
+        contribution *= Le;
+        contribution /= 2.0;
+        element_load[column] += contribution;
+      }
+    }
+    for (std::size_t local = 0; local < 12; ++local)
+      load[6 * element + local] += element_load[local];
+  }
+  // The canonical boundary contract leaves the top z translation free and
+  // applies the prescribed axial top tension there, matching ancf_base_load.
+  load[6 * model.elements + 2] += model.top_tension_N;
+  if (!finite_vector(load)) throw std::runtime_error("static base load contains NaN/Inf");
+  return load;
+}
+
+std::vector<double> external_force(const Model& model, const std::vector<double>& slice_force) {
+  validate_model(model);
+  if (slice_force.size() != 3 * model.slices ||
+      !std::all_of(slice_force.begin(), slice_force.end(),
+                   [](double value) { return std::isfinite(value); })) {
+    throw std::invalid_argument("slice force dimensions or values are invalid");
+  }
+  Matrix H = mapping_H3(model);
+  std::vector<double> out(model.ndof());
+  for (std::size_t j = 0; j < model.ndof(); ++j)
+    for (std::size_t i = 0; i < 3 * model.slices; ++i)
+      out[j] += H(i, j) * slice_force[i];
+  if (!std::all_of(out.begin(), out.end(),
+                  [](double value) { return std::isfinite(value); })) {
+    throw std::runtime_error("mapped external force contains NaN/Inf");
+  }
+  return out;
+}
+
+std::vector<double> external_force(const Model& model, const SpanwiseLoadInput& load) {
+  validate_model(model);
+  if (load.mode != SpanwiseLoadReconstruction::PiecewiseLinearDistributed ||
+      load.endpoint_policy != SpanwiseEndpointPolicy::NearestConstant ||
+      load.samples.size() < 2) {
+    throw std::invalid_argument("ANCF distributed-load input contract is invalid");
+  }
+  const double s_min = load.active_region.s_min_m;
+  const double s_max = load.active_region.s_max_m;
+  if (!std::isfinite(s_min) || !std::isfinite(s_max) || s_min < 0.0 ||
+      s_max > model.length_m || s_min > s_max) {
+    throw std::invalid_argument("ANCF distributed-load active region is invalid");
+  }
+  for (std::size_t index = 0; index < load.samples.size(); ++index) {
+    const auto& sample = load.samples[index];
+    if (!std::isfinite(sample.s_m) || sample.s_m < 0.0 || sample.s_m > model.length_m ||
+        (index > 0 && sample.s_m <= load.samples[index - 1].s_m) ||
+        !std::all_of(sample.line_force_Npm.begin(), sample.line_force_Npm.end(),
+                     [](double value) { return std::isfinite(value); })) {
+      throw std::invalid_argument("ANCF distributed-load samples are invalid");
+    }
+  }
+  if (s_min > load.samples.front().s_m || load.samples.back().s_m > s_max) {
+    throw std::invalid_argument("ANCF distributed-load samples do not cover the active region");
+  }
+
+  const auto reconstructed_force = [&](double s) {
+    std::array<double, 3> value{};
+    if (s < s_min || s > s_max) return value;
+    if (s <= load.samples.front().s_m) return load.samples.front().line_force_Npm;
+    if (s >= load.samples.back().s_m) return load.samples.back().line_force_Npm;
+    std::size_t upper = 1;
+    while (upper < load.samples.size() && s > load.samples[upper].s_m) ++upper;
+    if (upper >= load.samples.size()) return load.samples.back().line_force_Npm;
+    const auto& left_sample = load.samples[upper - 1];
+    const auto& right_sample = load.samples[upper];
+    const double fraction = (s - left_sample.s_m) /
+                            (right_sample.s_m - left_sample.s_m);
+    for (std::size_t component = 0; component < value.size(); ++component) {
+      value[component] = left_sample.line_force_Npm[component] +
+          fraction * (right_sample.line_force_Npm[component] -
+                      left_sample.line_force_Npm[component]);
+    }
+    return value;
+  };
+
+  std::vector<double> out(model.ndof(), 0.0);
+  const double element_length = model.length_m / static_cast<double>(model.elements);
+  const auto [xi, weights] = gauss(3);
+  for (std::size_t element = 0; element < model.elements; ++element) {
+    const double element_start = element_length * static_cast<double>(element);
+    const double element_end = element_start + element_length;
+    const double overlap_start = (std::max)(element_start, s_min);
+    const double overlap_end = (std::min)(element_end, s_max);
+    if (overlap_end <= overlap_start) continue;
+    std::vector<double> breakpoints{overlap_start, overlap_end};
+    for (const auto& sample : load.samples) {
+      if (sample.s_m > overlap_start && sample.s_m < overlap_end)
+        breakpoints.push_back(sample.s_m);
+    }
+    std::sort(breakpoints.begin(), breakpoints.end());
+    breakpoints.erase(std::unique(breakpoints.begin(), breakpoints.end(),
+                                   [](double left, double right) {
+                                     return left == right;
+                                   }),
+                       breakpoints.end());
+    for (std::size_t interval = 0; interval + 1 < breakpoints.size(); ++interval) {
+      const double left = breakpoints[interval];
+      const double right = breakpoints[interval + 1];
+      if (right <= left) continue;
+      for (std::size_t quadrature = 0; quadrature < xi.size(); ++quadrature) {
+        const double s = 0.5 * (left + right) + 0.5 * (right - left) * xi[quadrature];
+        const auto force = reconstructed_force(s);
+        const Matrix N = block_matrix(shape(s - element_start, element_length, 0));
+        const double weight = 0.5 * (right - left) * weights[quadrature];
+        for (std::size_t column = 0; column < 12; ++column) {
+          double contribution = 0.0;
+          for (std::size_t component = 0; component < 3; ++component)
+            contribution += N(component, column) * force[component];
+          out[6 * element + column] += weight * contribution;
+        }
+      }
+    }
+  }
+  if (!finite_vector(out))
+    throw std::runtime_error("mapped distributed external force contains NaN/Inf");
+  return out;
+}
+
+void internal_force_tangent(const std::vector<double>& q, const Model& model, std::vector<double>& force, Matrix& tangent) {
+  internal_force_tangent(q, model, force, tangent, nullptr);
+}
+
+void internal_force_tangent(const std::vector<double>& q, const Model& model, std::vector<double>& force,
+                            Matrix& tangent, AssemblyTrace* trace) {
+  validate_model(model);
+  if(q.size()!=model.ndof() || !finite_vector(q))
+    throw std::invalid_argument("q dimensions or values are invalid");
+  force.assign(model.ndof(),0);tangent=Matrix(model.ndof(),model.ndof());
+  double Le=model.length_m/model.elements;
+  for(std::size_t e=0;e<model.elements;++e){
+    std::vector<double> qe(q.begin()+6*e,q.begin()+6*e+12),fe;Matrix Ke;
+    element_force_tangent(qe,Le,model.EA(),model.EI(),model.gauss_order,e,fe,Ke,trace);
+    if (!finite_vector(fe) || !finite_matrix(Ke))
+      throw std::runtime_error("ANCF internal force or tangent contains NaN/Inf");
+    for(int i=0;i<12;++i){force[6*e+i]+=fe[i];for(int j=0;j<12;++j)tangent(6*e+i,6*e+j)+=Ke(i,j);}
+    if (trace != nullptr) {
+      trace->element_force.push_back(fe);
+      trace->element_tangent.push_back(Ke);
+      trace->global_force_after_element.push_back(force);
+      trace->global_tangent_after_element.push_back(tangent);
+    }
+  }
+  for(std::size_t i=0;i<model.ndof();++i)for(std::size_t j=i+1;j<model.ndof();++j){double v=0.5*(tangent(i,j)+tangent(j,i));tangent(i,j)=tangent(j,i)=v;}
+  if (!finite_vector(force) || !finite_matrix(tangent))
+    throw std::runtime_error("ANCF assembled force or tangent contains NaN/Inf");
+}
+
+Matrix resolve_rayleigh_damping(const Model& model, const Matrix& mass,
+                                const std::vector<double>& q_ref,
+                                bool require_free_tangent_positive_semidefinite) {
+  validate_model(model);
+  const std::size_t n = model.ndof();
+  if (mass.rows != n || mass.cols != n || mass.data.size() != n * n ||
+      !finite_matrix(mass) || q_ref.size() != n || !finite_vector(q_ref)) {
+    throw std::invalid_argument("Rayleigh damping state dimensions or values are invalid");
+  }
+  for (std::size_t row = 0; row < n; ++row) {
+    for (std::size_t col = row + 1; col < n; ++col) {
+      if (mass(row, col) != mass(col, row))
+        throw std::invalid_argument("Rayleigh damping mass matrix must be symmetric");
+    }
+  }
+  if (model.damping_alpha == 0.0 && model.damping_beta == 0.0)
+    return Matrix(n, n);
+
+  Matrix tangent(n, n);
+  std::vector<double> tangent_force;
+  if (model.damping_beta != 0.0) {
+    internal_force_tangent(q_ref, model, tangent_force, tangent);
+    if (require_free_tangent_positive_semidefinite) {
+      std::vector<bool> fixed(n, false);
+      const auto canonical = canonical_boundary(model).first;
+      const auto& fixed_indices = model.fixed_dof.empty() ? canonical : model.fixed_dof;
+      for (std::size_t index : fixed_indices) {
+        if (index >= n) throw std::invalid_argument("Rayleigh fixed DOF is outside the model");
+        fixed[index] = true;
+      }
+      std::vector<std::size_t> free_indices;
+      for (std::size_t index = 0; index < n; ++index) if (!fixed[index]) free_indices.push_back(index);
+      Matrix free_tangent(free_indices.size(), free_indices.size());
+      double scale = 1.0;
+      for (std::size_t row = 0; row < free_indices.size(); ++row) {
+        for (std::size_t col = 0; col < free_indices.size(); ++col) {
+          free_tangent(row, col) = tangent(free_indices[row], free_indices[col]);
+          scale = std::max(scale, std::abs(free_tangent(row, col)));
+        }
+      }
+      const double tolerance = std::max(1.0e-12, 1.0e-10 * scale);
+      if (minimum_symmetric_eigenvalue(free_tangent) < -tolerance)
+        throw std::invalid_argument("DAMPING_REFERENCE_TANGENT_NOT_PSD");
+    }
+  }
+  Matrix result(n, n);
+  for (std::size_t row = 0; row < n; ++row) {
+    for (std::size_t col = 0; col < n; ++col) {
+      result(row, col) = model.damping_alpha * mass(row, col) +
+                         model.damping_beta * tangent(row, col);
+    }
+  }
+  for (std::size_t row = 0; row < n; ++row) {
+    for (std::size_t col = row + 1; col < n; ++col) {
+      const double value = 0.5 * (result(row, col) + result(col, row));
+      result(row, col) = result(col, row) = value;
+    }
+  }
+  if (!finite_matrix(result)) throw std::runtime_error("Rayleigh damping contains NaN/Inf");
+  return result;
+}
+
+struct StrainEnergyComponents {
+  double axial = 0.0;
+  double bending = 0.0;
+  double total() const { return axial + bending; }
+};
+
+StrainEnergyComponents strain_energy_components(const std::vector<double>& q,
+                                                const Model& model) {
+  validate_model(model);
+  if (q.size() != model.ndof() || !finite_vector(q))
+    throw std::invalid_argument("q dimensions or values are invalid");
+  StrainEnergyComponents energy;
+  const double Le = model.length_m / static_cast<double>(model.elements);
+  const auto [xi, weights] = gauss(model.gauss_order);
+  for (std::size_t element = 0; element < model.elements; ++element) {
+    const std::vector<double> qe(q.begin() + 6 * element,
+                                 q.begin() + 6 * element + 12);
+    for (std::size_t k = 0; k < xi.size(); ++k) {
+      const double x = 0.5 * (xi[k] + 1.0) * Le;
+      const Matrix B = block_matrix(shape(x, Le, 1));
+      const Matrix C = block_matrix(shape(x, Le, 2));
+      Vec3 a{}, b{};
+      for (int component = 0; component < 3; ++component) {
+        for (int column = 0; column < 12; ++column) {
+          a[component] += B(component, column) * qe[static_cast<std::size_t>(column)];
+          b[component] += C(component, column) * qe[static_cast<std::size_t>(column)];
+        }
+      }
+      const double a2 = dot(a, a);
+      if (a2 < EPS) throw std::runtime_error("degenerate ANCF strain energy");
+      const double eps = 0.5 * (a2 - 1.0);
+      const Vec3 cross_ab = cross(a, b);
+      const double kappa2 = dot(cross_ab, cross_ab) * std::pow(a2, -3.0);
+      double axial_density = 0.5 * model.EA() * eps * eps;
+      double bending_density = 0.5 * model.EI() * kappa2;
+      axial_density *= weights[k];
+      axial_density *= Le;
+      axial_density /= 2.0;
+      bending_density *= weights[k];
+      bending_density *= Le;
+      bending_density /= 2.0;
+      energy.axial += axial_density;
+      energy.bending += bending_density;
+    }
+  }
+  if (!std::isfinite(energy.axial) || !std::isfinite(energy.bending))
+    throw std::runtime_error("ANCF strain energy contains NaN/Inf");
+  return energy;
+}
+
+ForensicResult internal_force_forensic(const std::vector<double>& q, const Model& model) {
+  validate_model(model);
+  if (q.size() != model.ndof() || !finite_vector(q))
+    throw std::invalid_argument("q dimensions or values are invalid");
+  ForensicResult result;
+  result.force.assign(model.ndof(), 0.0);
+  result.tangent = Matrix(model.ndof(), model.ndof());
+  AssemblyTrace trace;
+  internal_force_tangent(q, model, result.force, result.tangent, &trace);
+  result.points = std::move(trace.points);
+  result.element_force = std::move(trace.element_force);
+  result.element_tangent = std::move(trace.element_tangent);
+  result.global_force_after_element = std::move(trace.global_force_after_element);
+  result.global_tangent_after_element = std::move(trace.global_tangent_after_element);
+  return result;
+}
+
+void validate_spanwise_hydrodynamic_regions(
+    const Model& model, const std::vector<SpanwiseHydrodynamicRegion>& regions) {
+  validate_model(model);
+  validate_spanwise_hydrodynamic_regions_contract(model, regions);
+}
+
+Matrix assemble_spanwise_added_mass(
+    const Model& model, const std::vector<SpanwiseHydrodynamicRegion>& regions) {
+  validate_spanwise_hydrodynamic_regions(model, regions);
+  return assemble_spanwise_region_matrix(model, regions, true);
+}
+
+Matrix assemble_spanwise_linear_damping(
+    const Model& model, const std::vector<SpanwiseHydrodynamicRegion>& regions) {
+  validate_spanwise_hydrodynamic_regions(model, regions);
+  return assemble_spanwise_region_matrix(model, regions, false);
+}
+
+namespace {
+
+void validate_symmetric_dynamic_matrix(const Matrix& matrix, std::size_t n,
+                                       const char* name) {
+  if (matrix.rows != n || matrix.cols != n || matrix.data.size() != n * n ||
+      !finite_matrix(matrix)) {
+    throw std::invalid_argument(std::string(name) + " dimensions or values are invalid");
+  }
+  for (std::size_t row = 0; row < n; ++row) {
+    for (std::size_t col = row + 1; col < n; ++col) {
+      if (matrix(row, col) != matrix(col, row))
+        throw std::invalid_argument(std::string(name) + " must be symmetric");
+    }
+  }
+}
+
+Matrix add_dynamic_matrices(const Matrix& left, const Matrix& right,
+                            const char* name) {
+  if (left.rows != right.rows || left.cols != right.cols)
+    throw std::invalid_argument(std::string(name) + " dimensions are inconsistent");
+  Matrix total(left.rows, left.cols);
+  for (std::size_t index = 0; index < total.data.size(); ++index)
+    total.data[index] = left.data[index] + right.data[index];
+  if (!finite_matrix(total))
+    throw std::runtime_error(std::string(name) + " contains NaN/Inf");
+  return total;
+}
+
+}  // namespace
+
+Matrix resolve_total_mass(const Model& model, const Matrix& base_mass) {
+  validate_model(model);
+  const std::size_t n = model.ndof();
+  validate_symmetric_dynamic_matrix(base_mass, n, "base mass matrix");
+  if (model.hydrodynamic_regions.empty()) return base_mass;
+  const Matrix hydro_mass =
+      assemble_spanwise_added_mass(model, model.hydrodynamic_regions);
+  const Matrix total = add_dynamic_matrices(base_mass, hydro_mass, "total mass matrix");
+  validate_symmetric_dynamic_matrix(total, n, "total mass matrix");
+  return total;
+}
+
+Matrix resolve_total_damping(const Model& model, const Matrix& total_mass,
+                             const std::vector<double>& q_ref,
+                             bool require_free_tangent_positive_semidefinite) {
+  validate_model(model);
+  const std::size_t n = model.ndof();
+  validate_symmetric_dynamic_matrix(total_mass, n, "total mass matrix");
+  const Matrix rayleigh = resolve_rayleigh_damping(
+      model, total_mass, q_ref, require_free_tangent_positive_semidefinite);
+  if (model.hydrodynamic_regions.empty()) return rayleigh;
+  const Matrix hydro_damping =
+      assemble_spanwise_linear_damping(model, model.hydrodynamic_regions);
+  const Matrix total = add_dynamic_matrices(rayleigh, hydro_damping,
+                                            "total damping matrix");
+  validate_symmetric_dynamic_matrix(total, n, "total damping matrix");
+  return total;
+}
+
+State make_reference_state(const Model& model) {
+  validate_model(model);
+  State state;
+  state.q.assign(model.ndof(), 0.0);
+  state.qdot.assign(model.ndof(), 0.0);
+  state.qddot.assign(model.ndof(), 0.0);
+  const double Le = model.length_m / model.elements;
+  for (std::size_t node = 0; node <= model.elements; ++node) {
+    const std::size_t base = 6 * node;
+    const double s = node * Le;
+    state.q[base + 2] = s;
+    state.q[base + 5] = 1.0;
+  }
+  Matrix structural_mass(model.ndof(), model.ndof());
+  // MATLAB ancf_mass_matrix.m deliberately uses a fixed five-point rule,
+  // independent of the internal-force quadrature order.  Keep the mass
+  // contract separate so a valid gauss_order=3 request cannot silently
+  // change inertia while the MATLAB baseline remains unchanged.
+  const auto [xi, w] = gauss(model.mass_gauss_order);
+  const double rhoA = model.mass_per_length();
+  for (std::size_t e = 0; e < model.elements; ++e) {
+    Matrix Me(12, 12);
+    for (std::size_t k = 0; k < xi.size(); ++k) {
+      const double x = 0.5 * (xi[k] + 1.0) * Le;
+      const Matrix N = block_matrix(shape(x, Le, 0));
+      const Matrix local = multiply(transpose(N), N);
+      for (std::size_t i = 0; i < 12; ++i)
+        for (std::size_t j = 0; j < 12; ++j)
+          Me(i, j) += w[k] * local(i, j) * Le / 2.0 * rhoA;
+    }
+    for (std::size_t i = 0; i < 12; ++i)
+      for (std::size_t j = 0; j < 12; ++j)
+        structural_mass(6 * e + i, 6 * e + j) += Me(i, j);
+  }
+  // SHM1 added mass is inertia only. It neither changes static_base_load nor
+  // enters static_equilibrium, which does not consume State::mass.
+  state.mass = resolve_total_mass(model, structural_mass);
+  // Ch is available for direct structural users even without DMP1. The worker
+  // replaces this with resolve_total_damping when Rayleigh reference data is
+  // present, preventing any double addition of Ch.
+  state.damping = model.hydrodynamic_regions.empty()
+      ? Matrix(model.ndof(), model.ndof())
+      : assemble_spanwise_linear_damping(model, model.hydrodynamic_regions);
+  state.base_load.assign(model.ndof(), 0.0);
+  return state;
+}
+
+void symmetrize_mass(State& state) {
+  if (state.mass.rows != state.mass.cols ||
+      state.mass.data.size() != state.mass.rows * state.mass.cols) {
+    throw std::invalid_argument("mass matrix dimensions are invalid");
+  }
+  if (!std::all_of(state.mass.data.begin(), state.mass.data.end(),
+                   [](double value) { return std::isfinite(value); })) {
+    throw std::invalid_argument("mass matrix contains NaN/Inf");
+  }
+  for (std::size_t i = 0; i < state.mass.rows; ++i) {
+    for (std::size_t j = i + 1; j < state.mass.cols; ++j) {
+      const double value = 0.5 * (state.mass(i, j) + state.mass(j, i));
+      state.mass(i, j) = value;
+      state.mass(j, i) = value;
+    }
+  }
+}
+
+template <typename ExternalLoadResolver>
+StepDiagnostics advance_impl(State& state, const Model& model,
+                             ExternalLoadResolver&& resolve_external_load,
+                             std::vector<NewtonIterationTrace>* trace) {
+  validate_model(model);
+  using Clock = std::chrono::steady_clock;
+  const auto total_start = Clock::now();
+  const std::size_t n = model.ndof();
+  const auto valid_matrix = [n](const Matrix& value) {
+    return value.rows == n && value.cols == n && value.data.size() == n * n &&
+           std::all_of(value.data.begin(), value.data.end(),
+                       [](double item) { return std::isfinite(item); });
+  };
+  const auto valid_vector = [](const std::vector<double>& values) {
+    return std::all_of(values.begin(), values.end(),
+                       [](double item) { return std::isfinite(item); });
+  };
+  if (state.q.size() != n || state.qdot.size() != n || state.qddot.size() != n ||
+      state.base_load.size() != n || !valid_matrix(state.mass) || !valid_matrix(state.damping) ||
+      !std::isfinite(state.time_s) || state.time_s < 0.0 ||
+      !valid_vector(state.q) || !valid_vector(state.qdot) ||
+      !valid_vector(state.qddot) || !valid_vector(state.base_load)) {
+    throw std::invalid_argument("state dimensions or values are invalid");
+  }
+  if (state.step == (std::numeric_limits<std::size_t>::max)() ||
+      !std::isfinite(state.time_s + model.dt_s)) {
+    throw std::invalid_argument("state time or step would overflow");
+  }
+  std::vector<double> Qext = state.base_load;
+  auto external_start = Clock::now();
+  std::vector<double> qext = resolve_external_load();
+  const auto external_end = Clock::now();
+  for (std::size_t i = 0; i < Qext.size(); ++i) Qext[i] += qext[i];
+  if (!finite_vector(Qext))
+    throw std::runtime_error("ANCF total external load contains NaN/Inf");
+  std::vector<char> fixed(model.ndof(), 0);
+  std::vector<double> prescribed(model.ndof(), 0.0);
+  const auto boundary = model.fixed_dof.empty() ? canonical_boundary(model) :
+                        std::make_pair(model.fixed_dof, model.prescribed_values);
+  for (std::size_t i = 0; i < boundary.first.size(); ++i) {
+    fixed[boundary.first[i]] = 1;
+    prescribed[boundary.first[i]] = boundary.second[i];
+  }
+  const auto predictor_start = Clock::now();
+  // Keep the Newmark scalar products as named temporaries. MATLAB evaluates
+  // dt^2 once for both prediction and correction; recomputing a left-associative
+  // beta*dt*dt expression at the output can move qddot by several ulps.
+  // MATLAB's dt^2 uses the scalar power operation. Keep the same operation
+  // in the Newton predictor; a one-ulp predictor change is amplified by the
+  // high-stiffness ANCF internal force.
+  const double dt2 = std::pow(model.dt_s, 2.0);
+  const double beta_dt2 = model.beta * dt2;
+  const double gamma_dt = model.gamma * model.dt_s;
+  std::vector<double> qpred = state.q, qdpred = state.qdot;
+  for (std::size_t i = 0; i < model.ndof(); ++i) {
+    // Force the same two rounded vector additions MATLAB performs.  Keeping
+    // the intermediates volatile prevents MSVC from contracting the three
+    // terms into an FMA under optimized builds.
+    volatile double position = qpred[i];
+    volatile double velocity_term = model.dt_s * state.qdot[i];
+    volatile double acceleration_term = dt2 * (0.5 - model.beta) * state.qddot[i];
+    position += velocity_term;
+    position += acceleration_term;
+    qpred[i] = position;
+    volatile double velocity = qdpred[i];
+    volatile double acceleration_velocity = model.dt_s * (1 - model.gamma) * state.qddot[i];
+    velocity += acceleration_velocity;
+    qdpred[i] = velocity;
+  }
+  const auto predictor_end = Clock::now();
+  std::vector<double> q = qpred;
+  for (std::size_t i = 0; i < model.ndof(); ++i) if (fixed[i]) q[i] = prescribed[i];
+  StepDiagnostics d;
+  // MATLAB evaluates max(1,norm(Qext(free),inf)); prescribed-DOF reactions
+  // must not loosen the convergence threshold for free coordinates.
+  double scale_value = 1.0;
+  for (std::size_t i = 0; i < Qext.size(); ++i)
+    if (!fixed[i]) scale_value = std::max(scale_value, std::abs(Qext[i]));
+  d.residual_scale = scale_value;
+  for (std::size_t iter = 1; iter <= model.max_newton; ++iter) {
+    std::vector<double> qdd(model.ndof()), qd(model.ndof());
+    for (std::size_t i = 0; i < model.ndof(); ++i) {
+      qdd[i] = (q[i] - qpred[i]) / beta_dt2;
+      qd[i] = qdpred[i] + gamma_dt * qdd[i];
+    }
+    std::vector<double> qi;
+    Matrix K;
+    const auto assembly_start = Clock::now();
+    internal_force_tangent(q, model, qi, K);
+    if (!finite_vector(qi) || !finite_matrix(K))
+      throw std::runtime_error("ANCF Newton assembly contains NaN/Inf");
+    const auto assembly_end = Clock::now();
+    d.matrix_assembly_s += std::chrono::duration<double>(assembly_end - assembly_start).count();
+    // Keep the residual stages separate, matching MATLAB's
+    // M*qdd + C*qd + Qint - Qext expression.  Combining the two matrix-vector
+    // products and subtracting Qext inside the same accumulation changes
+    // cancellation order and can perturb a later Newton increment.
+    std::vector<double> inertia(model.ndof());
+    std::vector<double> damping_force(model.ndof());
+    for (std::size_t i = 0; i < model.ndof(); ++i) {
+      for (std::size_t j = 0; j < model.ndof(); ++j) {
+        inertia[i] += state.mass(i, j) * qdd[j];
+        damping_force[i] += state.damping(i, j) * qd[j];
+      }
+    }
+    std::vector<double> R(model.ndof());
+    for (std::size_t i = 0; i < model.ndof(); ++i) {
+      R[i] = inertia[i] + damping_force[i];
+      R[i] += qi[i];
+      R[i] -= Qext[i];
+      if (fixed[i]) R[i] = 0.0;
+    }
+    if (!finite_vector(R)) throw std::runtime_error("ANCF residual contains NaN/Inf");
+    double norm = 0.0;
+    for (std::size_t i = 0; i < R.size(); ++i) if (!fixed[i]) norm = std::max(norm, std::abs(R[i]));
+    if (iter == 1) d.initial_residual = norm;
+    d.residual = norm;
+    d.iterations = iter;
+    NewtonIterationTrace iteration_trace;
+    if (trace != nullptr) {
+      iteration_trace.iteration = iter;
+      iteration_trace.q = q;
+      iteration_trace.qdot = qd;
+      iteration_trace.qddot = qdd;
+      iteration_trace.internal_force = qi;
+      iteration_trace.residual = R;
+      iteration_trace.tangent = K;
+      iteration_trace.residual_norm = norm;
+    }
+    if (norm <= model.newton_tolerance * scale_value) {
+      d.converged = true;
+      if (trace != nullptr) {
+        iteration_trace.converged = true;
+        trace->push_back(std::move(iteration_trace));
+      }
+      state.qddot = qdd;
+      state.qdot = qd;
+      break;
+    }
+    // Preserve MATLAB's expression and addition order exactly:
+    // M/(beta*dt^2) + C*gamma/(beta*dt) + Kint.  Starting from Kint and
+    // adding the inertial terms changes the last bits of Keff, which changes
+    // the Newton increment and is amplified by the high-stiffness internal
+    // force in the strict MATLAB/C++ dual run.
+    Matrix Keff(model.ndof(), model.ndof());
+    const double inv_beta_dt2 = 1.0 / beta_dt2;
+    const double inv_beta_dt = 1.0 / (model.beta * model.dt_s);
+    for (std::size_t i = 0; i < model.ndof(); ++i)
+      for (std::size_t j = 0; j < model.ndof(); ++j) {
+        const double mass_term = state.mass(i, j) * inv_beta_dt2;
+        const double damping_term = state.damping(i, j) * model.gamma * inv_beta_dt;
+        Keff(i, j) = mass_term + damping_term;
+        Keff(i, j) += K(i, j);
+      }
+    if (!finite_matrix(Keff)) throw std::runtime_error("ANCF effective tangent contains NaN/Inf");
+    std::vector<std::size_t> free;
+    for (std::size_t i = 0; i < model.ndof(); ++i) if (!fixed[i]) free.push_back(i);
+    Matrix Kff(free.size(), free.size());
+    std::vector<double> Rf(free.size());
+    for (std::size_t i = 0; i < free.size(); ++i) {
+      Rf[i] = R[free[i]];
+      for (std::size_t j = 0; j < free.size(); ++j) Kff(i, j) = Keff(free[i], free[j]);
+    }
+    const auto solve_start = Clock::now();
+    auto dq = solve(Kff, Rf);
+    if (!finite_vector(dq)) throw std::runtime_error("ANCF Newton increment contains NaN/Inf");
+    if (trace != nullptr) {
+      iteration_trace.increment.assign(model.ndof(), 0.0);
+      for (std::size_t i = 0; i < free.size(); ++i)
+        iteration_trace.increment[free[i]] = -dq[i];
+      trace->push_back(std::move(iteration_trace));
+    }
+    const auto solve_end = Clock::now();
+    d.linear_solve_s += std::chrono::duration<double>(solve_end - solve_start).count();
+    for (std::size_t i = 0; i < free.size(); ++i) q[free[i]] -= dq[i];
+    for (std::size_t i = 0; i < model.ndof(); ++i) if (fixed[i]) q[i] = prescribed[i];
+  }
+  if (!d.converged) throw std::runtime_error("ANCF Newton did not converge");
+  // MATLAB recomputes the accepted acceleration and velocity after Newton
+  // exits. Do the same from the final q, rather than retaining the values
+  // calculated before the convergence check.
+  std::vector<double> final_qdd(model.ndof()), final_qd(model.ndof());
+  for (std::size_t i = 0; i < model.ndof(); ++i) {
+    final_qdd[i] = (q[i] - qpred[i]) / beta_dt2;
+    final_qd[i] = qdpred[i] + gamma_dt * final_qdd[i];
+  }
+  const auto update_start = Clock::now();
+  state.q = q;
+  state.qddot = std::move(final_qdd);
+  state.qdot = std::move(final_qd);
+  state.time_s += model.dt_s;
+  ++state.step;
+  state.residual = d.residual;
+  state.iterations = d.iterations;
+  const auto update_end = Clock::now();
+  d.state_update_s = std::chrono::duration<double>(update_end - update_start).count();
+  d.predictor_s = std::chrono::duration<double>(predictor_end - predictor_start).count();
+  d.external_mapping_s = std::chrono::duration<double>(external_end - external_start).count();
+  (void)total_start;
+  return d;
+}
+
+StepDiagnostics advance(State& state, const Model& model, const std::vector<double>& slice_force,
+                        std::vector<NewtonIterationTrace>* trace) {
+  return advance_impl(state, model,
+                      [&model, &slice_force]() {
+                        return external_force(model, slice_force);
+                      }, trace);
+}
+
+StepDiagnostics advance(State& state, const Model& model, const SpanwiseLoadInput& load,
+                        std::vector<NewtonIterationTrace>* trace) {
+  return advance_impl(state, model,
+                      [&model, &load]() {
+                        return external_force(model, load);
+                      }, trace);
+}
+
+namespace {
+
+StepDiagnostics static_equilibrium_impl(State& state, const Model& model,
+                                        const std::vector<double>& base_load,
+                                        std::size_t load_steps, double relaxation,
+                                        StaticSolverMode mode,
+                                        bool fixed_conservative_load_contract) {
+  validate_model(model);
+  const std::size_t n = model.ndof();
+  if (base_load.size() != n || !finite_vector(base_load) || load_steps == 0 ||
+      (mode == StaticSolverMode::LegacyFixedRelaxation &&
+       (!std::isfinite(relaxation) || relaxation <= 0.0 || relaxation > 1.0)) ||
+      (mode != StaticSolverMode::LegacyFixedRelaxation &&
+       mode != StaticSolverMode::BacktrackingNewton &&
+       mode != StaticSolverMode::PotentialBacktrackingNewton) ||
+      (mode == StaticSolverMode::PotentialBacktrackingNewton &&
+       !fixed_conservative_load_contract)) {
+    throw std::invalid_argument("static equilibrium contract is invalid");
+  }
+  if (state.q.size() != n || state.mass.rows != n || state.mass.cols != n ||
+      state.mass.data.size() != n * n) {
+    throw std::invalid_argument("static equilibrium state dimensions are invalid");
+  }
+  const auto boundary = model.fixed_dof.empty() ? canonical_boundary(model) :
+                        std::make_pair(model.fixed_dof, model.prescribed_values);
+  std::vector<char> fixed(n, 0);
+  std::vector<double> prescribed(n, 0.0);
+  for (std::size_t i = 0; i < boundary.first.size(); ++i) {
+    fixed[boundary.first[i]] = 1;
+    prescribed[boundary.first[i]] = boundary.second[i];
+  }
+  std::vector<std::size_t> free;
+  for (std::size_t i = 0; i < n; ++i) if (!fixed[i]) free.push_back(i);
+  double scale_value = 1.0;
+  for (std::size_t i : free) scale_value = (std::max)(scale_value, std::abs(base_load[i]));
+  StepDiagnostics diagnostics;
+  diagnostics.residual_scale = scale_value;
+  std::vector<double> q = state.q;
+  auto capture_terminal = [&diagnostics, n](const std::vector<double>& terminal_q,
+                                            const std::vector<double>& terminal_residual) {
+    if (terminal_q.size() != n || terminal_residual.size() != n ||
+        !finite_vector(terminal_q) || !finite_vector(terminal_residual)) {
+      diagnostics.terminal_state_available = false;
+      diagnostics.terminal_q.clear();
+      diagnostics.terminal_residual_vector_available = false;
+      diagnostics.terminal_residual.clear();
+      return;
+    }
+    diagnostics.terminal_q = terminal_q;
+    diagnostics.terminal_state_available = true;
+    diagnostics.terminal_residual = terminal_residual;
+    diagnostics.terminal_residual_vector_available = true;
+  };
+  std::vector<double> residual(n, 0.0);
+  for (std::size_t load_step = 1; load_step <= load_steps; ++load_step) {
+    const double factor = static_cast<double>(load_step) / static_cast<double>(load_steps);
+    bool converged = false;
+    for (std::size_t iteration = 1; iteration <= model.max_newton; ++iteration) {
+      std::vector<double> internal;
+      Matrix tangent;
+      internal_force_tangent(q, model, internal, tangent);
+      std::fill(residual.begin(), residual.end(), 0.0);
+      const double load_factor = factor;
+      double norm = 0.0;
+      for (std::size_t i = 0; i < n; ++i) {
+        residual[i] = internal[i] - load_factor * base_load[i];
+        if (fixed[i]) residual[i] = 0.0;
+        else norm = (std::max)(norm, std::abs(residual[i]));
+      }
+      if (!std::isfinite(norm)) throw std::runtime_error("static residual contains NaN/Inf");
+      if (load_step == 1 && iteration == 1) diagnostics.initial_residual = norm;
+      diagnostics.residual = norm;
+      diagnostics.iterations += 1;
+      if (norm <= model.newton_tolerance * scale_value) {
+        converged = true;
+        if (mode == StaticSolverMode::BacktrackingNewton ||
+            mode == StaticSolverMode::PotentialBacktrackingNewton) {
+          StaticNewtonIterationDiagnostic iteration_diagnostic;
+          iteration_diagnostic.load_step = load_step;
+          iteration_diagnostic.iteration = iteration;
+          iteration_diagnostic.residual_before_step = norm;
+          iteration_diagnostic.residual_normalized_before_step = norm / scale_value;
+          iteration_diagnostic.residual_after_accepted_trial = norm;
+          iteration_diagnostic.residual_normalized_after_accepted_trial = norm / scale_value;
+          iteration_diagnostic.finite = true;
+          if (mode == StaticSolverMode::PotentialBacktrackingNewton) {
+            iteration_diagnostic.internal_energy_before =
+                strain_energy_components(q, model).total();
+          }
+          diagnostics.static_newton_trace.push_back(std::move(iteration_diagnostic));
+        }
+        break;
+      }
+      Matrix tangent_free(free.size(), free.size());
+      std::vector<double> residual_free(free.size());
+      for (std::size_t row = 0; row < free.size(); ++row) {
+        residual_free[row] = residual[free[row]];
+        for (std::size_t col = 0; col < free.size(); ++col)
+          tangent_free(row, col) = tangent(free[row], free[col]);
+      }
+      const auto increment = solve(tangent_free, residual_free);
+      if (mode == StaticSolverMode::LegacyFixedRelaxation) {
+        for (std::size_t index = 0; index < free.size(); ++index)
+          q[free[index]] -= relaxation * increment[index];
+        for (std::size_t i = 0; i < n; ++i) if (fixed[i]) q[i] = prescribed[i];
+        continue;
+      }
+
+      if (mode == StaticSolverMode::PotentialBacktrackingNewton) {
+        const auto inf_norm = [](const std::vector<double>& values) {
+          double result = 0.0;
+          for (double value : values) result = (std::max)(result, std::abs(value));
+          return result;
+        };
+        const std::vector<double> iteration_start_q = q;
+        const StrainEnergyComponents current_energy = strain_energy_components(iteration_start_q, model);
+        double r_dot_p = 0.0;
+        for (std::size_t index = 0; index < residual_free.size(); ++index)
+          r_dot_p -= residual_free[index] * increment[index];
+        StaticNewtonIterationDiagnostic iteration_diagnostic;
+        iteration_diagnostic.load_step = load_step;
+        iteration_diagnostic.iteration = iteration;
+        iteration_diagnostic.residual_before_step = norm;
+        iteration_diagnostic.residual_normalized_before_step = norm / scale_value;
+        iteration_diagnostic.full_newton_direction_norm = inf_norm(increment);
+        iteration_diagnostic.r_dot_p = r_dot_p;
+        iteration_diagnostic.internal_energy_before = current_energy.total();
+        iteration_diagnostic.finite = std::isfinite(r_dot_p) &&
+                                      std::isfinite(current_energy.total());
+        if (!iteration_diagnostic.finite || r_dot_p >= 0.0) {
+          diagnostics.failure_reason = "STATIC_POTENTIAL_NON_DESCENT_DIRECTION";
+          diagnostics.converged = false;
+          diagnostics.static_newton_trace.push_back(std::move(iteration_diagnostic));
+          capture_terminal(q, residual);
+          return diagnostics;
+        }
+
+        bool accepted = false;
+        constexpr std::array<double, 8> gl8_nodes = {
+            -0.960289856497536231683560868569,
+            -0.796666477413626739591553936475,
+            -0.525532409916328985817739049189,
+            -0.183434642495649804939476142360,
+             0.183434642495649804939476142360,
+             0.525532409916328985817739049189,
+             0.796666477413626739591553936475,
+             0.960289856497536231683560868569};
+        constexpr std::array<double, 8> gl8_weights = {
+            0.101228536290376259152531354310,
+            0.222381034453374470544355994426,
+            0.313706645877887287337962201987,
+            0.362683783378361982965150449277,
+            0.362683783378361982965150449277,
+            0.313706645877887287337962201987,
+            0.222381034453374470544355994426,
+            0.101228536290376259152531354310};
+        for (std::size_t backtrack = 0; backtrack <= 12; ++backtrack) {
+          const double beta = std::ldexp(1.0, -static_cast<int>(backtrack));
+          StaticNewtonTrialDiagnostic trial_diagnostic;
+          std::vector<double> trial_residual(n, 0.0);
+          trial_diagnostic.beta = beta;
+          trial_diagnostic.r_dot_p = r_dot_p;
+          trial_diagnostic.armijo_rhs = 1.0e-4 * beta * r_dot_p;
+          std::vector<double> trial_q = iteration_start_q;
+          for (std::size_t index = 0; index < free.size(); ++index)
+            trial_q[free[index]] -= beta * increment[index];
+          for (std::size_t i = 0; i < n; ++i) if (fixed[i]) trial_q[i] = prescribed[i];
+          for (std::size_t index : free) {
+            if (std::memcmp(&trial_q[index], &iteration_start_q[index], sizeof(double)) != 0)
+              ++trial_diagnostic.changed_free_dof_count;
+          }
+          trial_diagnostic.trial_state_unchanged =
+              trial_diagnostic.changed_free_dof_count == 0;
+
+          double trial_norm = 0.0;
+          try {
+            std::vector<double> trial_internal;
+            Matrix trial_tangent;
+            internal_force_tangent(trial_q, model, trial_internal, trial_tangent);
+            if (!finite_vector(trial_internal) || !finite_matrix(trial_tangent))
+              throw std::runtime_error("static potential trial contains NaN/Inf");
+            for (std::size_t i = 0; i < n; ++i) {
+              trial_residual[i] = trial_internal[i] - factor * base_load[i];
+              if (fixed[i]) trial_residual[i] = 0.0;
+              else trial_norm = (std::max)(trial_norm, std::abs(trial_residual[i]));
+            }
+            const StrainEnergyComponents trial_energy = strain_energy_components(trial_q, model);
+            double line_integral_sum = 0.0;
+            for (std::size_t quadrature = 0; quadrature < gl8_nodes.size(); ++quadrature) {
+              const double t = 0.5 * beta * (1.0 + gl8_nodes[quadrature]);
+              std::vector<double> quadrature_q = iteration_start_q;
+              for (std::size_t index = 0; index < free.size(); ++index)
+                quadrature_q[free[index]] -= t * increment[index];
+              for (std::size_t i = 0; i < n; ++i) if (fixed[i]) quadrature_q[i] = prescribed[i];
+              std::vector<double> quadrature_internal;
+              Matrix quadrature_tangent;
+              internal_force_tangent(quadrature_q, model, quadrature_internal,
+                                     quadrature_tangent);
+              if (!finite_vector(quadrature_internal) || !finite_matrix(quadrature_tangent))
+                throw std::runtime_error("static potential quadrature state contains NaN/Inf");
+              double integrand = 0.0;
+              for (std::size_t index = 0; index < free.size(); ++index) {
+                const double quadrature_residual =
+                    quadrature_internal[free[index]] - factor * base_load[free[index]];
+                integrand -= quadrature_residual * increment[index];
+              }
+              if (!std::isfinite(integrand))
+                throw std::runtime_error("static potential quadrature integrand contains NaN/Inf");
+              line_integral_sum += gl8_weights[quadrature] * integrand;
+              if (!std::isfinite(line_integral_sum))
+                throw std::runtime_error("static potential line integral contains NaN/Inf");
+            }
+            const double delta_potential = 0.5 * beta * line_integral_sum;
+            trial_diagnostic.internal_energy = trial_energy.total();
+            trial_diagnostic.delta_potential = delta_potential;
+            trial_diagnostic.residual = trial_norm;
+            trial_diagnostic.finite = std::isfinite(trial_norm) &&
+                                      std::isfinite(delta_potential) &&
+                                      std::isfinite(trial_diagnostic.internal_energy);
+            if (trial_diagnostic.finite) {
+              trial_diagnostic.convergence_pass =
+                  trial_norm <= model.newton_tolerance * scale_value;
+              trial_diagnostic.sufficient_decrease =
+                  delta_potential <= trial_diagnostic.armijo_rhs;
+            }
+          } catch (const std::exception&) {
+            trial_diagnostic.residual = (std::numeric_limits<double>::infinity)();
+            trial_diagnostic.internal_energy = (std::numeric_limits<double>::infinity)();
+            trial_diagnostic.delta_potential = (std::numeric_limits<double>::infinity)();
+            trial_diagnostic.finite = false;
+          }
+          const bool trial_accepted = trial_diagnostic.finite &&
+                                      !trial_diagnostic.trial_state_unchanged &&
+                                      (trial_diagnostic.convergence_pass ||
+                                       trial_diagnostic.sufficient_decrease);
+          iteration_diagnostic.trials.push_back(trial_diagnostic);
+          if (trial_accepted) {
+            q = std::move(trial_q);
+            residual = std::move(trial_residual);
+            diagnostics.residual = trial_norm;
+            converged = trial_diagnostic.convergence_pass;
+            iteration_diagnostic.beta_accepted = beta;
+            iteration_diagnostic.backtrack_count = backtrack;
+            iteration_diagnostic.delta_potential_accepted =
+                trial_diagnostic.delta_potential;
+            iteration_diagnostic.residual_after_accepted_trial = trial_norm;
+            iteration_diagnostic.residual_normalized_after_accepted_trial =
+                trial_norm / scale_value;
+            accepted = true;
+            break;
+          }
+        }
+        if (!accepted) {
+          iteration_diagnostic.line_search_failed = true;
+          diagnostics.static_newton_trace.push_back(std::move(iteration_diagnostic));
+          diagnostics.failure_reason = "STATIC_POTENTIAL_LINE_SEARCH_FAILED";
+          diagnostics.converged = false;
+          capture_terminal(q, residual);
+          return diagnostics;
+        }
+        diagnostics.static_newton_trace.push_back(std::move(iteration_diagnostic));
+        continue;
+      }
+
+      const auto inf_norm = [](const std::vector<double>& values) {
+        double result = 0.0;
+        for (double value : values) result = (std::max)(result, std::abs(value));
+        return result;
+      };
+      const auto merit = [&free](const std::vector<double>& values) {
+        long double sum = 0.0L;
+        for (std::size_t index : free) {
+          const long double value = static_cast<long double>(values[index]);
+          sum += 0.5L * value * value;
+          if (!std::isfinite(sum)) return (std::numeric_limits<double>::infinity)();
+        }
+        const double result = static_cast<double>(sum);
+        return std::isfinite(result) ? result :
+               (std::numeric_limits<double>::infinity)();
+      };
+
+      StaticNewtonIterationDiagnostic iteration_diagnostic;
+      iteration_diagnostic.load_step = load_step;
+      iteration_diagnostic.iteration = iteration;
+      iteration_diagnostic.residual_before_step = norm;
+      iteration_diagnostic.full_newton_direction_norm = inf_norm(increment);
+      iteration_diagnostic.finite = true;
+      const double current_merit = merit(residual);
+      bool accepted = false;
+      for (std::size_t backtrack = 0; backtrack <= 12; ++backtrack) {
+        const double beta = std::ldexp(1.0, -static_cast<int>(backtrack));
+        StaticNewtonTrialDiagnostic trial_diagnostic;
+        trial_diagnostic.beta = beta;
+        std::vector<double> trial_q = q;
+        for (std::size_t index = 0; index < free.size(); ++index)
+          trial_q[free[index]] -= beta * increment[index];
+        for (std::size_t i = 0; i < n; ++i) if (fixed[i]) trial_q[i] = prescribed[i];
+
+        double trial_norm = 0.0;
+        double trial_merit = (std::numeric_limits<double>::infinity)();
+        std::vector<double> trial_residual(n, 0.0);
+        try {
+          std::vector<double> trial_internal;
+          Matrix trial_tangent;
+          internal_force_tangent(trial_q, model, trial_internal, trial_tangent);
+          if (!finite_vector(trial_internal) || !finite_matrix(trial_tangent))
+            throw std::runtime_error("static trial contains NaN/Inf");
+          for (std::size_t i = 0; i < n; ++i) {
+            trial_residual[i] = trial_internal[i] - factor * base_load[i];
+            if (fixed[i]) trial_residual[i] = 0.0;
+            else trial_norm = (std::max)(trial_norm, std::abs(trial_residual[i]));
+          }
+          trial_merit = merit(trial_residual);
+        } catch (const std::exception&) {
+          trial_diagnostic.residual = (std::numeric_limits<double>::infinity)();
+          trial_diagnostic.merit = (std::numeric_limits<double>::infinity)();
+          trial_diagnostic.finite = false;
+          iteration_diagnostic.trials.push_back(std::move(trial_diagnostic));
+          continue;
+        }
+        trial_diagnostic.residual = trial_norm;
+        trial_diagnostic.merit = trial_merit;
+        trial_diagnostic.finite = std::isfinite(trial_norm) && std::isfinite(trial_merit);
+        if (trial_diagnostic.finite) {
+          trial_diagnostic.convergence_pass =
+              trial_norm <= model.newton_tolerance * scale_value;
+          trial_diagnostic.sufficient_decrease =
+              trial_merit <= (1.0 - 1.0e-4 * beta) * current_merit;
+        }
+        const bool trial_accepted = trial_diagnostic.finite &&
+                                    (trial_diagnostic.convergence_pass ||
+                                     trial_diagnostic.sufficient_decrease);
+        iteration_diagnostic.trials.push_back(trial_diagnostic);
+        if (trial_accepted) {
+          q = std::move(trial_q);
+          residual = std::move(trial_residual);
+          diagnostics.residual = trial_norm;
+          converged = trial_diagnostic.convergence_pass;
+          iteration_diagnostic.beta_accepted = beta;
+          iteration_diagnostic.backtrack_count = backtrack;
+          iteration_diagnostic.residual_after_accepted_trial = trial_norm;
+          accepted = true;
+          break;
+        }
+      }
+      if (!accepted) {
+        iteration_diagnostic.line_search_failed = true;
+        diagnostics.static_newton_trace.push_back(std::move(iteration_diagnostic));
+        diagnostics.failure_reason = "STATIC_LINE_SEARCH_FAILED";
+        diagnostics.converged = false;
+        capture_terminal(q, residual);
+        return diagnostics;
+      }
+      diagnostics.static_newton_trace.push_back(std::move(iteration_diagnostic));
+    }
+    if (!converged) {
+      if (mode == StaticSolverMode::BacktrackingNewton ||
+          mode == StaticSolverMode::PotentialBacktrackingNewton) {
+        diagnostics.failure_reason = "STATIC_NEWTON_DID_NOT_CONVERGE";
+        diagnostics.converged = false;
+        capture_terminal(q, residual);
+        return diagnostics;
+      }
+      throw std::runtime_error("static equilibrium did not converge at load step " +
+                               std::to_string(load_step));
+    }
+  }
+  state.q = std::move(q);
+  state.qdot.assign(n, 0.0);
+  state.qddot.assign(n, 0.0);
+  state.base_load = base_load;
+  state.time_s = 0.0;
+  state.step = 0;
+  diagnostics.converged = true;
+  capture_terminal(state.q, residual);
+  return diagnostics;
+}
+
+}  // namespace
+
+StepDiagnostics static_equilibrium(State& state, const Model& model,
+                                   const std::vector<double>& base_load,
+                                   std::size_t load_steps, double relaxation) {
+  return static_equilibrium_impl(state, model, base_load, load_steps, relaxation,
+                                 StaticSolverMode::LegacyFixedRelaxation, false);
+}
+
+StepDiagnostics static_equilibrium(State& state, const Model& model,
+                                   const std::vector<double>& base_load,
+                                   std::size_t load_steps, StaticSolverMode mode) {
+  if (mode == StaticSolverMode::LegacyFixedRelaxation)
+    throw std::invalid_argument(
+        "LegacyFixedRelaxation requires an explicit relaxation argument");
+  if (mode == StaticSolverMode::PotentialBacktrackingNewton)
+    throw std::invalid_argument(
+        "PotentialBacktrackingNewton requires an explicit fixed conservative load contract");
+  return static_equilibrium_impl(state, model, base_load, load_steps, 1.0, mode, false);
+}
+
+StepDiagnostics static_equilibrium(State& state, const Model& model,
+                                   const std::vector<double>& base_load,
+                                   std::size_t load_steps, double relaxation,
+                                   StaticSolverMode mode) {
+  return static_equilibrium_impl(state, model, base_load, load_steps, relaxation, mode, false);
+}
+
+StepDiagnostics static_equilibrium(State& state, const Model& model,
+                                   const std::vector<double>& base_load,
+                                   std::size_t load_steps, StaticSolverMode mode,
+                                   StaticLoadContract load_contract) {
+  if (mode != StaticSolverMode::PotentialBacktrackingNewton ||
+      load_contract != StaticLoadContract::FixedConservativeGeneralizedLoad) {
+    throw std::invalid_argument(
+        "fixed conservative load contract is only valid for PotentialBacktrackingNewton");
+  }
+  return static_equilibrium_impl(state, model, base_load, load_steps, 1.0, mode, true);
+}
+
+bool finite(const State& state) {
+  const auto ok = [](const std::vector<double>& values) {
+    return std::all_of(values.begin(), values.end(),
+                       [](double value) { return std::isfinite(value); });
+  };
+  const auto matrix_ok = [](const Matrix& value) {
+    return value.rows == value.cols && value.data.size() == value.rows * value.cols &&
+           std::all_of(value.data.begin(), value.data.end(),
+                       [](double item) { return std::isfinite(item); });
+  };
+  return ok(state.q) && ok(state.qdot) && ok(state.qddot) && ok(state.base_load) &&
+         matrix_ok(state.mass) && matrix_ok(state.damping) && std::isfinite(state.time_s) &&
+         std::isfinite(state.residual);
+}
+
+}  // namespace cfd_ancf

@@ -1,0 +1,118 @@
+{
+  "schema_version": "hh06_single_slice_ancf_structure_contract_v1",
+  "contract_id": "HH06_CASE1_SINGLE_SLICE_STRUCTURE_V1",
+  "status": "READY_FOR_DRY_RUN",
+  "model_source": {
+    "model": "P1 validated ANCF wet structural model",
+    "source_reference": "D:/CFD/CFD_ANCF_VIV_reentry_runtime/HH06_P1_WET_MODAL_STRUCTURAL_GATE/source_parameter_contract.json and HH06_P1_RESULT.json",
+    "source_artifact_sha256_manifest": "D:/CFD/CFD_ANCF_VIV_reentry_runtime/HH06_P1_WET_MODAL_STRUCTURAL_GATE/HH06_P1_SHA256_MANIFEST.txt",
+    "source_status": "P1_ARTIFACT_FOUND; no Re=100/50 m or legacy 604-vertex contract is used"
+  },
+  "geometry": {
+    "length_m": 13.12,
+    "diameter_m": 0.028,
+    "element_count": 32,
+    "state_node_count": 33,
+    "state_dof_count": 198,
+    "coordinate_convention": "s measured from bottom to top; x=inline, y=crossflow, z=spanwise/reference-axis direction"
+  },
+  "pretension": {
+    "initial_tension_N": null,
+    "benchmark_top_tension_N": 1175.0,
+    "equilibrium_reaction_tension_N": 1188.28,
+    "source_status": "DISTINCT_QUANTITIES; BENCHMARK_INPUT_SEPARATED_FROM_EQUILIBRIUM_REACTION",
+    "contract_note": "1175 N is the HH06 Case 1 benchmark top-tension input. 1188.28 N is the reaction returned by the P1 static-equilibrium solve. It must not be written as the HH06 benchmark input."
+  },
+  "mass": {
+    "model": "P1 wet structural mass matrix; include the P1 wet mass definition exactly once",
+    "mass_per_length_kg_m": 1.845,
+    "global_dry_mass_kg": 24.2064,
+    "added_mass_per_length_kg_m": [0.616, 0.616, 0.0],
+    "global_added_mass_xy_kg": 8.08192,
+    "global_wet_transverse_mass_kg": 32.28832,
+    "displaced_fluid_mass_included": "not_separate; P1 added-mass field is included exactly once",
+    "source_status": "EXPLICIT_PRIMARY_AND_DERIVED_FROM_P1_ARTIFACT",
+    "source_derivation": "1.845 kg/m structural line mass; 0.616 kg/m added mass in x/y; totals multiply by L=13.12 m"
+  },
+  "stiffness": {
+    "model": "P1 ANCF internal elastic stiffness plus prescribed initial pretension",
+    "EA_N": 7470000.0,
+    "EI_Nm2": 29.88,
+    "global_linear_stiffness_matrix": "MASS/TANGENT records for selector REF_NE32 in ancf_static.raw; assembled by the P1 ANCF kernel, not replaced by a 1DOF spring",
+    "source_status": "EXPLICIT_PRIMARY_EI; EA_IS_P1_CORE_CONSISTENT_REFERENCE",
+    "source_note": "EA=7.47e6 N is explicitly classified by P1 as a derived core-consistent reference, not source-reported."
+  },
+  "damping": {
+    "model": "P1 wet structural damping contract",
+    "rayleigh_alpha_1_s": 0.0,
+    "rayleigh_beta_s": 0.0,
+    "modal_or_other_damping": "zero damping in P1 eigenproblem and TD2/TD4; hydro damping per length [0,0,0]",
+    "source_status": "EXPLICIT_P1_ZERO_DAMPING",
+    "source_note": "Do not import alpha=0.0194776 1/s from the unrelated 50 m EB/ANCF online plan."
+  },
+  "static_initial_state": {
+    "q0_definition": "static equilibrium of the P1 ANCF model before FSI release",
+    "included_loads": ["self weight", "initial pretension", "wet mass/buoyancy terms exactly as defined by P1"],
+    "initial_velocity": "zero",
+    "initial_acceleration_required": false,
+    "initial_acceleration": "not required by this dry-run contract; do not invent a force-free acceleration",
+    "checkpoint_policy": "do not fabricate or reuse a 30 s FSI structure checkpoint; 30 s is Fluid restart only",
+    "serialized_q0": {
+      "artifact": "D:/CFD/CFD_ANCF_VIV_reentry_runtime/HH06_P1_WET_MODAL_STRUCTURAL_GATE/ancf_static.raw",
+      "artifact_wsl_path": "/mnt/d/CFD/CFD_ANCF_VIV_reentry_runtime/HH06_P1_WET_MODAL_STRUCTURAL_GATE/ancf_static.raw",
+      "selector": "CASE REF_NE32",
+      "record": "Q",
+      "static_solver": "PotentialBacktrackingNewton",
+      "static_tolerance": 5e-09,
+      "static_residual_inf": 1.066932648896568e-07,
+      "static_iterations": 120,
+      "status": "AVAILABLE_IN_P1_ARTIFACT; participant adapter must load/convert the full ANCF state before time integration"
+    },
+    "source_status": "P1_STATIC_EQUILIBRIUM_ARTIFACT_AVAILABLE"
+  },
+  "ancf_mesh": {
+    "elements": 32,
+    "nodes": 33,
+    "state_dofs": 198,
+    "element_interpolation": "P1 ANCF element",
+    "interface_representation": "separate structural coupling mesh; not CFD-face-to-ANCF-node identity mapping"
+  },
+  "participant_interface": {
+    "fluid_participant": "Fluid_0000",
+    "structure_participant": "Structure_0000",
+    "structure_state_mesh_vertices": 1,
+    "structure_state_mesh_vertex_definition": "one section sample at s=2.97 m; full 33-node ANCF state remains internal to the participant",
+    "fluid_interface_vertices": 200,
+    "fluid_interface_definition": "cylinder face centers from the current P2 CFD mesh",
+    "force_data": "Force",
+    "displacement_data": "Displacement",
+    "force_mapping": "Fluid-Mesh -> Structure-Mesh conservative mapping",
+    "displacement_mapping": "Structure-Mesh -> Fluid-Mesh consistent mapping",
+    "legacy_604_vertex_participant": false,
+    "force_pipeline": [
+      "CFD wall integration",
+      "strip resultant force",
+      "preCICE Force",
+      "ANCF generalized load assembly"
+    ],
+    "direct_face_to_ancf_vertex_mapping": false,
+    "generalized_load_assembly": "ANCF shape-function/virtual-work assembly inside Structure_0000"
+  },
+  "units": {
+    "mass": "kg",
+    "mass_per_length": "kg/m",
+    "EA": "N",
+    "EI": "N m^2",
+    "damping_alpha": "1/s",
+    "damping_beta": "s",
+    "displacement": "m",
+    "force": "N"
+  },
+  "launch_boundary": {
+    "dry_run_allowed": true,
+    "openfoam_solve_allowed": false,
+    "ancf_time_integration_allowed": false,
+    "30s_fsi_checkpoint_used": false,
+    "initial_acceleration_required": false
+  }
+}

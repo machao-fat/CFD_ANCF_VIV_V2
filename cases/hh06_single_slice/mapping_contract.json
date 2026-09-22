@@ -1,0 +1,49 @@
+{
+  "schema_version": "hh06_single_slice_spatial_mapping_contract_v1",
+  "contract_id": "HH06_CASE1_SINGLE_SLICE_MAPPING_S2P97_V1",
+  "status": "READY_FOR_DRY_RUN",
+  "structural_reference": {
+    "full_length_m": 13.12,
+    "slice_center_s_m": 2.97,
+    "slice_start_s_m": 1.98,
+    "slice_end_s_m": 3.96,
+    "deltaL_m": 1.98,
+    "source_status": "CONFIRMED_BY_USER"
+  },
+  "fluid_interface": {
+    "mesh": "Fluid-Mesh",
+    "location": "cylinder face centers",
+    "face_count": 200,
+    "cfd_extrusion_span_m": 0.028,
+    "raw_force_unit": "N for the current OpenFOAM extruded mesh"
+  },
+  "force_conversion": {
+    "line_force_definition": "f_2D_N_per_m = F_raw_N / cfd_extrusion_span_m",
+    "structural_force_definition": "F_slice_N = f_2D_N_per_m * deltaL_m",
+    "combined_factor_if_raw_force_is_used": "F_slice_N = F_raw_N * (deltaL_m / cfd_extrusion_span_m)",
+    "combined_factor_value": 70.71428571428571,
+    "apply_deltaL_once": true,
+    "apply_cfd_span_division_once": true,
+    "double_counting_forbidden": true,
+    "unit_audit": "N -> N/m -> N"
+  },
+  "mapping_semantics": {
+    "fluid_to_structure": "preCICE conservative mapping from 200 fluid face-center values to the one-point structural coupling mesh; the ANCF participant then assembles the generalized load internally",
+    "structure_to_fluid": "preCICE consistent mapping from the structural section displacement to the 200 CFD face-center locations",
+    "forbidden_mapping": "CFD face index matched directly to ANCF state vertex index",
+    "legacy_604_vertex_contract": false,
+    "force_pipeline": [
+      "OpenFOAM cylinder-wall integration over the 200 CFD faces",
+      "strip resultant force for the DeltaL=1.98 m structural slice",
+      "preCICE Force on the Fluid_0000 interface mesh",
+      "ANCF generalized-load assembly inside Structure_0000"
+    ],
+    "direct_face_to_ancf_vertex_mapping": false,
+    "generalized_load_assembly": "ANCF shape-function/virtual-work assembly inside Structure_0000; CFD faces are not ANCF state vertices"
+  },
+  "participants": {
+    "fluid": "Fluid_0000",
+    "structure": "Structure_0000",
+    "data": {"fluid_provides": "Force", "structure_receives": "Force", "structure_provides": "Displacement", "fluid_receives": "Displacement"}
+  }
+}

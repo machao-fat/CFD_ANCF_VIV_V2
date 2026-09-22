@@ -1,0 +1,95 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  Solution      | OpenFOAM: The CFD Toolbox
+\*---------------------------------------------------------------------------*/
+// Linear solvers and PIMPLE settings copied from production.  Tolerances,
+// correctPhi and correctMeshPhi affect convergence/flux correction; change
+// only under a separately documented numerical study.
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+
+solvers
+{
+     "pcorr.*"
+    {
+        solver          GAMG;
+        tolerance       1e-8;
+        relTol          0;
+        smoother        GaussSeidel;
+    }
+
+    p
+    {
+        solver          GAMG;
+        smoother        GaussSeidel;
+        
+        tolerance       1e-8;
+        relTol          0.1;
+    }
+    pFinal
+    {
+        $p;
+        relTol          0;
+    }
+   
+    "(U|k|omega)"
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-7;
+        relTol          0.1;
+    }
+
+    "(U|k|omega)Final"
+    {
+        //solver          smoothSolver;
+        //smoother        symGaussSeidel;
+      	$U;
+        relTol          0;
+    }
+    
+    cellDisplacement
+    {
+    solver          GAMG;
+    tolerance       1e-5;
+    relTol          0;
+    smoother        GaussSeidel;
+    }
+
+    cellDisplacementFinal
+    {
+    $cellDisplacement;
+    relTol          0;
+    }
+   
+}
+
+PIMPLE
+{
+    momentumPredictor           yes;
+    
+    nOuterCorrectors            3;
+    nCorrectors                 2;
+    nNonOrthogonalCorrectors    0;
+}
+
+relaxationFactors
+{ 
+    fields
+    {
+        p           0.3;
+    }
+
+    equations
+    {
+        U       0.5;
+        k       0.2;
+        omega   0.2;
+    "(U|k|omega)Final"  1.0;
+    }
+}

@@ -1,0 +1,24 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  Momentum      | OpenFOAM: The CFD Toolbox
+\*---------------------------------------------------------------------------*/
+// Existing high-Re RAS fluid model retained for this preparation.
+// Changing simulationType changes the physical/numerical model and requires
+// a new validation contract; this preparation does not tune it.
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      momentumTransport;
+}
+
+simulationType  RAS;
+
+RAS
+{
+    model               kOmegaSST;
+
+    turbulence          on;
+    printCoeffs         on;
+}
