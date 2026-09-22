@@ -260,7 +260,6 @@ int process_step(const std::vector<char>& payload, std::vector<char>& response,
                  std::int32_t& expected_n, std::int32_t& expected_elements,
                  std::int32_t& expected_slices,
                  std::array<unsigned char, 32>& expected_model_digest,
-                 int& lineage_mode,
                  std::array<unsigned char, 32>& expected_full_contract_digest,
                  const std::array<unsigned char, 32>* external_contract_digest,
                  const bool allow_implicit_retry,
@@ -549,41 +548,14 @@ int process_step(const std::vector<char>& payload, std::vector<char>& response,
     expected_tick = integer_tick;
     expected_time_s = time_s;
     expected_dt_s = dt_s;
-  } else if (lineage_mode == 0 && expected_sequence == 2) {
-    if (global_step == expected_global_step && bridge_step == expected_bridge_step &&
-        integer_tick == expected_tick && std::abs(time_s - expected_time_s) <= 1.0e-12 &&
-        std::abs(dt_s - expected_dt_s) <= 1.0e-15) {
-      lineage_mode = 2;
-    } else {
-      std::uint64_t expected_next_tick = 0;
-      if (global_step == expected_global_step + 1 && bridge_step == expected_bridge_step + 1 &&
-          next_tick(expected_tick, expected_dt_s, expected_next_tick) &&
-          integer_tick == expected_next_tick &&
-           canonical_time_tick(time_s, request_tick) && integer_tick == request_tick &&
-          std::abs(time_s - (expected_time_s + expected_dt_s)) <= 1.0e-12 &&
-          std::abs(dt_s - expected_dt_s) <= 1.0e-15) {
-        lineage_mode = 1;
-      } else {
-        return 16;
-      }
-    }
-  } else if (lineage_mode == 2 && expected_sequence % 2 == 0) {
-    if (global_step != expected_global_step || bridge_step != expected_bridge_step ||
-        integer_tick != expected_tick || std::abs(time_s - expected_time_s) > 1.0e-12 ||
-        std::abs(dt_s - expected_dt_s) > 1.0e-15) return 16;
-  } else if (allow_implicit_retry && lineage_mode == 2 && expected_sequence % 2 == 1) {
-    // A parallel-implicit retry restores the physical window state but must
-    // issue fresh binary request/transaction IDs.  After an accepted retry
-    // correction, however, the next odd wire sequence is the prediction for
-    // the *next* physical window, not another retry.  Both states are legal,
-    // but only with their exact, distinct physical identities.
+  } else {
     const bool same_window_retry =
         global_step == expected_global_step && bridge_step == expected_bridge_step &&
         integer_tick == expected_tick &&
         std::abs(time_s - expected_time_s) <= 1.0e-12 &&
         std::abs(dt_s - expected_dt_s) <= 1.0e-15;
     std::uint64_t expected_next_tick = 0;
-    const bool next_window_prediction =
+    const bool next_window_request =
         global_step == expected_global_step + 1 &&
         bridge_step == expected_bridge_step + 1 &&
         next_tick(expected_tick, expected_dt_s, expected_next_tick) &&
@@ -591,20 +563,12 @@ int process_step(const std::vector<char>& payload, std::vector<char>& response,
         canonical_time_tick(time_s, request_tick) && integer_tick == request_tick &&
         std::abs(time_s - (expected_time_s + expected_dt_s)) <= 1.0e-12 &&
         std::abs(dt_s - expected_dt_s) <= 1.0e-15;
-    if (!same_window_retry && !next_window_prediction) {
-      std::cerr << "worker implicit retry-or-next-window identity mismatch at sequence "
+    const bool physical_identity_valid = allow_implicit_retry
+        ? (same_window_retry || next_window_request)
+        : next_window_request;
+    if (!physical_identity_valid) {
+      std::cerr << "worker physical identity continuity mismatch at sequence "
                 << sequence << '\n';
-      return 16;
-    }
-  } else {
-    std::uint64_t expected_next_tick = 0;
-    if (global_step != expected_global_step + 1 || bridge_step != expected_bridge_step + 1 ||
-        !next_tick(expected_tick, expected_dt_s, expected_next_tick) ||
-        integer_tick != expected_next_tick ||
-         !canonical_time_tick(time_s, request_tick) || integer_tick != request_tick ||
-        std::abs(time_s - (expected_time_s + expected_dt_s)) > 1.0e-12 ||
-        std::abs(dt_s - expected_dt_s) > 1.0e-15) {
-      std::cerr << "worker identity continuity mismatch at sequence " << sequence << '\n';
       return 16;
     }
   }
@@ -813,7 +777,6 @@ int main() {
   std::uint64_t expected_tick = 0;
   double expected_time_s = 0.0, expected_dt_s = 0.0;
   std::int32_t expected_n = 0, expected_elements = 0, expected_slices = 0;
-  int lineage_mode = 0;
   std::array<unsigned char, 32> expected_model_digest{};
   std::array<unsigned char, 32> expected_full_contract_digest{};
   std::array<unsigned char, 32> expected_contract_digest{};
@@ -886,7 +849,7 @@ int main() {
       result = process_step(payload, response, last_sequence + 1, expected_run, expected_case,
                             expected_global_step, expected_bridge_step, expected_tick,
                             expected_time_s, expected_dt_s, expected_n, expected_elements,
-                            expected_slices, expected_model_digest, lineage_mode,
+                            expected_slices, expected_model_digest,
                             expected_full_contract_digest,
                             has_expected_contract ? &expected_contract_digest : nullptr,
                             allow_implicit_retry,
