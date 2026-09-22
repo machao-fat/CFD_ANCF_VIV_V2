@@ -6,7 +6,7 @@ candidate workers are not copied as production alternatives.
 | component | new path | original lineage | original commit | status |
 |---|---|---|---|---|
 | ANCF kernel | `src/ancf/ancf_kernel.cpp/.hpp` | `machao-fat/CFD_ANCF_VIV`, `feature/ancf-spanwise-hydro-matrix-v1` | `355640e11925b9feddd1a52bb3d93596e5ee8251` | QUALIFIED capability baseline |
-| persistent worker | `src/ancf/ancf_worker_main.cpp` | same as above | `355640e11925b9feddd1a52bb3d93596e5ee8251` | QUALIFIED capability baseline |
+| persistent worker | `src/ancf/ancf_worker_main.cpp` | same as above, with Phase 1A.5 repair | `355640e11925b9feddd1a52bb3d93596e5ee8251` | source repair committed; offline lineage qualification PASS; HH06 runtime deployment not qualified |
 | Python wire protocol | `src/ancf/kernel_protocol.py`, `protocol.py` | same as above | `355640e11925b9feddd1a52bb3d93596e5ee8251` | SHM1/DMP1 capability baseline |
 | checkpoint | `src/coupling/checkpoint/atomic_checkpoint.py` | same as above | `355640e11925b9feddd1a52bb3d93596e5ee8251` | QUALIFIED offline semantics |
 | SHM1 | `src/ancf/kernel_protocol.py` + C++ kernel | same as above | `355640e11925b9feddd1a52bb3d93596e5ee8251` | QUALIFIED protocol capability |
@@ -18,7 +18,7 @@ candidate workers are not copied as production alternatives.
 
 ## Known source hashes
 
-The case `SOURCE_MANIFEST.md` recorded these hashes for the ANCF source snapshot:
+The case `SOURCE_MANIFEST.md` recorded these hashes for the original ANCF source snapshot:
 
 ```text
 ancf_kernel.cpp       6DDE195A8EA27F253A21D4A859BF41A620697963AB0A834BB9D982B51863AC06
@@ -26,10 +26,31 @@ ancf_kernel.hpp       C1182AB921D5517C2A5282F8B5FE51C3AB298BEC8B6015BFDCDBCA733C
 ancf_worker_main.cpp  83F2D643F855894C8E74AAA11D0C76684E74886FFA0CCFA044B9FB368367DEB9
 ```
 
-The qualified historical worker binary hash is retained in evidence only and is not
-copied into this repository. A future build must generate a new manifest from the
-source actually compiled; source and binary lineage must not be inferred from a
-filename.
+These are handoff-era source snapshot hashes, not the current repaired worker
+hash. The qualified historical worker binary hash is retained in evidence only
+and is not copied into this repository. Source and binary lineage must not be
+inferred from a filename.
+
+## Phase 1A.5 current worker lineage
+
+```text
+repair commit = 0383920
+commit message = fix: replace worker sequence parity with physical identity checks
+source = src/ancf/ancf_worker_main.cpp
+source SHA-256 = c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e
+build target = cfd_ancf_ancf_kernel_worker
+CMake = 3.22.1, Release, Unix Makefiles
+compiler = GNU C++ 11.4.0, gnu++17
+offline worker binary SHA-256 = 3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596
+offline lineage qualification = PASS
+HH06 runtime deployment/qualification = NOT DONE
+```
+
+The source repair removes transport-sequence parity from physical window
+classification. Same-window retry and next-window continuity are classified
+from `(global_step, bridge_step, integer_tick, time_s, dt_s)`. See
+`PHASE1A5_PARITY_REPAIR_QUALIFICATION_REPORT.md` for the bounded offline
+qualification and its limitations.
 
 ## V2 copied-file hashes
 

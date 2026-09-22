@@ -13,14 +13,18 @@ This is a hypothesis, not a proven root cause. The new repository records it for
 future targeted preCICE 3.4.1 semantic audit. Do not silently “fix” it during a
 benchmark run.
 
-## Worker lineage parity defect
+## Worker lineage parity repair — offline qualified, runtime deployment pending
 
-An old worker classified same-window retry versus next-window request using sequence
-parity. That is invalid. Physical window identity must use
-`(global_step, bridge_step, integer_tick, time_s, dt_s)`; transport IDs
-`sequence/request_id/transaction_id` must remain session-monotonic and never be
-restored from a physical checkpoint. The isolated repair passed 2 windows x 5
-requests with 8 rollbacks, but it was not deployed and re-qualified in `slice0000`.
+The authoritative V2 worker source no longer uses sequence parity to classify
+same-window retries versus next-window requests. Commit `0383920` classifies
+physical identity using `(global_step, bridge_step, integer_tick, time_s,
+dt_s)` and preserves independent monotonic transport identities. The current
+source-built worker passed the bounded offline 2-window x 5-request test,
+including acceptance of sequence 6 as the next physical window and physical
+rollback without transport-ID rollback.
+
+The repair has not been deployed or runtime-qualified in the HH06 slice.
+Production runtime qualification remains pending.
 
 ## ALE/flow runaway
 
