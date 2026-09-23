@@ -1,0 +1,631 @@
+{
+  "classification": "PASS_READ_TIME_CONTRACT",
+  "scope": "two fake pyprecice participants only; no OpenFOAM, HH06, or ANCF worker",
+  "preCICE_header": "/usr/include/precice/Participant.hpp",
+  "python_identity": "{\"python\": \"/usr/bin/python3.10\", \"python_version\": \"3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]\", \"pyprecice\": \"3.4.0\", \"module\": \"/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py\"}",
+  "python_identity_exit_code": 0,
+  "runs": [
+    {
+      "mode": "zero",
+      "read_offset_s": 0.0,
+      "configuration_sha256": "b82e3efc63515ebbc01a94a9d26351ff165c6b53ef625e68dfead885055bf4fa",
+      "configuration_validation": {
+        "return_code": 0,
+        "stdout": "Checking /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074627Z-pid112440/read-zero/precice-config.xml for syntax and basic setup issues...\n\u001b[1m\u001b[38;2;000;128;000mNo major issues detected\n\u001b[0m",
+        "stderr": ""
+      },
+      "participant_exit_codes": {
+        "Structure": 0,
+        "Fluid": 0
+      },
+      "participants": {
+        "Structure": {
+          "read_mode": "zero",
+          "records": [
+            {
+              "attempt": 1,
+              "checkpoint_requested": true,
+              "committed_fake_state_after_advance": [
+                0.0,
+                0.0
+              ],
+              "force_after_advance_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_after_advance_relative_dt": [
+                [
+                  101.0,
+                  -203.0
+                ]
+              ],
+              "force_at_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_at_relative_dt": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_selected_for_fake_solve": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "read_offset_s": 0.0,
+              "rollback_requested": true,
+              "trial_displacement_written": [
+                1.0,
+                -1.0
+              ]
+            },
+            {
+              "attempt": 2,
+              "checkpoint_requested": false,
+              "committed_fake_state_after_advance": [
+                0.0,
+                0.0
+              ],
+              "force_after_advance_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_after_advance_relative_dt": [
+                [
+                  102.0,
+                  -206.0
+                ]
+              ],
+              "force_at_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_at_relative_dt": [
+                [
+                  101.0,
+                  -203.0
+                ]
+              ],
+              "force_selected_for_fake_solve": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "read_offset_s": 0.0,
+              "rollback_requested": true,
+              "trial_displacement_written": [
+                2.0,
+                -2.0
+              ]
+            },
+            {
+              "attempt": 3,
+              "checkpoint_requested": false,
+              "committed_fake_state_after_advance": [
+                0.0,
+                0.0
+              ],
+              "force_after_advance_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_after_advance_relative_dt": [
+                [
+                  103.0,
+                  -209.0
+                ]
+              ],
+              "force_at_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_at_relative_dt": [
+                [
+                  102.0,
+                  -206.0
+                ]
+              ],
+              "force_selected_for_fake_solve": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "read_offset_s": 0.0,
+              "rollback_requested": true,
+              "trial_displacement_written": [
+                3.0,
+                -3.0
+              ]
+            },
+            {
+              "attempt": 4,
+              "checkpoint_requested": false,
+              "committed_fake_state_after_advance": [
+                4.0,
+                -4.0
+              ],
+              "force_after_advance_relative_0": [
+                [
+                  104.0,
+                  -212.0
+                ]
+              ],
+              "force_after_advance_relative_dt": null,
+              "force_at_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_at_relative_dt": [
+                [
+                  103.0,
+                  -209.0
+                ]
+              ],
+              "force_selected_for_fake_solve": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "read_offset_s": 0.0,
+              "rollback_requested": false,
+              "trial_displacement_written": [
+                4.0,
+                -4.0
+              ]
+            }
+          ],
+          "role": "Structure"
+        },
+        "Fluid": {
+          "records": [
+            {
+              "attempt": 1,
+              "checkpoint_requested": true,
+              "force_written_before_advance": [
+                101.0,
+                -203.0
+              ],
+              "rollback_requested": true
+            },
+            {
+              "attempt": 2,
+              "checkpoint_requested": false,
+              "force_written_before_advance": [
+                102.0,
+                -206.0
+              ],
+              "rollback_requested": true
+            },
+            {
+              "attempt": 3,
+              "checkpoint_requested": false,
+              "force_written_before_advance": [
+                103.0,
+                -209.0
+              ],
+              "rollback_requested": true
+            },
+            {
+              "attempt": 4,
+              "checkpoint_requested": false,
+              "force_written_before_advance": [
+                104.0,
+                -212.0
+              ],
+              "rollback_requested": false
+            }
+          ],
+          "role": "Fluid"
+        }
+      },
+      "participant_logs": {
+        "Structure": {
+          "stdout": "(0) 15:46:28 [impl::ParticipantImpl]:185 in configure: \u001b[0mThis is preCICE version 3.4.1\n(0) 15:46:28 [impl::ParticipantImpl]:186 in configure: \u001b[0mRevision info: no-info [git failed to run]\n(0) 15:46:28 [impl::ParticipantImpl]:205 in configure: \u001b[0mBuild type: Release (without debug log)\n(0) 15:46:28 [impl::ParticipantImpl]:207 in configure: \u001b[0mWorking directory \"/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074627Z-pid112440/read-zero\"\n(0) 15:46:28 [impl::ParticipantImpl]:211 in configure: \u001b[0mConfiguring preCICE with configuration \"/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074627Z-pid112440/read-zero/precice-config.xml\"\n(0) 15:46:28 [impl::ParticipantImpl]:212 in configure: \u001b[0mI am participant \"Structure\"\n(0) 15:46:28 [impl::ParticipantImpl]:335 in setupCommunication: \u001b[0mSetting up primary communication to coupling partner/s\n(0) 15:46:28 [impl::ParticipantImpl]:351 in setupCommunication: \u001b[0mPrimary ranks are connected\n(0) 15:46:28 [impl::ParticipantImpl]:357 in setupCommunication: \u001b[0mSetting up preliminary secondary communication to coupling partner/s\n(0) 15:46:28 [partition::ProvidedPartition]:120 in prepare: \u001b[0mPrepare partition for mesh Structure-Mesh\n(0) 15:46:28 [partition::ProvidedPartition]:87 in communicate: \u001b[0mGather mesh Structure-Mesh\n(0) 15:46:28 [partition::ProvidedPartition]:104 in communicate: \u001b[0mSend global mesh Structure-Mesh\n(0) 15:46:28 [impl::ParticipantImpl]:366 in setupCommunication: \u001b[0mSetting up secondary communication to coupling partner/s\n(0) 15:46:28 [impl::ParticipantImpl]:373 in setupCommunication: \u001b[0mSecondary ranks are connected\n(0) 15:46:28 [impl::ParticipantImpl]:298 in initialize: \u001b[0mit 1 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:28 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 2 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:28 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 3 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:28 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 4 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:28 [cplscheme::BaseCouplingScheme]:391 in secondExchange: \u001b[0mTime window completed\n(0) 15:46:28 [impl::ParticipantImpl]:457 in advance: \u001b[0mReached end at: final time-window: 1, final time: 0.1\n(0) 15:46:28 [impl::ParticipantImpl]:1832 in closeCommunicationChannels: \u001b[0mClose communication channels\n{\"read_mode\": \"zero\", \"records\": [{\"attempt\": 1, \"checkpoint_requested\": true, \"committed_fake_state_after_advance\": [0.0, 0.0], \"force_after_advance_relative_0\": [[10.0, -10.0]], \"force_after_advance_relative_dt\": [[101.0, -203.0]], \"force_at_relative_0\": [[10.0, -10.0]], \"force_at_relative_dt\": [[10.0, -10.0]], \"force_selected_for_fake_solve\": [[10.0, -10.0]], \"read_offset_s\": 0.0, \"rollback_requested\": true, \"trial_displacement_written\": [1.0, -1.0]}, {\"attempt\": 2, \"checkpoint_requested\": false, \"committed_fake_state_after_advance\": [0.0, 0.0], \"force_after_advance_relative_0\": [[10.0, -10.0]], \"force_after_advance_relative_dt\": [[102.0, -206.0]], \"force_at_relative_0\": [[10.0, -10.0]], \"force_at_relative_dt\": [[101.0, -203.0]], \"force_selected_for_fake_solve\": [[10.0, -10.0]], \"read_offset_s\": 0.0, \"rollback_requested\": true, \"trial_displacement_written\": [2.0, -2.0]}, {\"attempt\": 3, \"checkpoint_requested\": false, \"committed_fake_state_after_advance\": [0.0, 0.0], \"force_after_advance_relative_0\": [[10.0, -10.0]], \"force_after_advance_relative_dt\": [[103.0, -209.0]], \"force_at_relative_0\": [[10.0, -10.0]], \"force_at_relative_dt\": [[102.0, -206.0]], \"force_selected_for_fake_solve\": [[10.0, -10.0]], \"read_offset_s\": 0.0, \"rollback_requested\": true, \"trial_displacement_written\": [3.0, -3.0]}, {\"attempt\": 4, \"checkpoint_requested\": false, \"committed_fake_state_after_advance\": [4.0, -4.0], \"force_after_advance_relative_0\": [[104.0, -212.0]], \"force_after_advance_relative_dt\": null, \"force_at_relative_0\": [[10.0, -10.0]], \"force_at_relative_dt\": [[103.0, -209.0]], \"force_selected_for_fake_solve\": [[10.0, -10.0]], \"read_offset_s\": 0.0, \"rollback_requested\": false, \"trial_displacement_written\": [4.0, -4.0]}], \"role\": \"Structure\"}\n",
+          "stderr": ""
+        },
+        "Fluid": {
+          "stdout": "(0) 15:46:28 [impl::ParticipantImpl]:185 in configure: \u001b[0mThis is preCICE version 3.4.1\n(0) 15:46:28 [impl::ParticipantImpl]:186 in configure: \u001b[0mRevision info: no-info [git failed to run]\n(0) 15:46:28 [impl::ParticipantImpl]:205 in configure: \u001b[0mBuild type: Release (without debug log)\n(0) 15:46:28 [impl::ParticipantImpl]:207 in configure: \u001b[0mWorking directory \"/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074627Z-pid112440/read-zero\"\n(0) 15:46:28 [impl::ParticipantImpl]:211 in configure: \u001b[0mConfiguring preCICE with configuration \"/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074627Z-pid112440/read-zero/precice-config.xml\"\n(0) 15:46:28 [impl::ParticipantImpl]:212 in configure: \u001b[0mI am participant \"Fluid\"\n(0) 15:46:28 [impl::ParticipantImpl]:335 in setupCommunication: \u001b[0mSetting up primary communication to coupling partner/s\n(0) 15:46:28 [impl::ParticipantImpl]:351 in setupCommunication: \u001b[0mPrimary ranks are connected\n(0) 15:46:28 [impl::ParticipantImpl]:357 in setupCommunication: \u001b[0mSetting up preliminary secondary communication to coupling partner/s\n(0) 15:46:28 [partition::ProvidedPartition]:120 in prepare: \u001b[0mPrepare partition for mesh Fluid-Mesh\n(0) 15:46:28 [partition::ReceivedPartition]:69 in communicate: \u001b[0mReceive global mesh Structure-Mesh\n(0) 15:46:28 [impl::ParticipantImpl]:366 in setupCommunication: \u001b[0mSetting up secondary communication to coupling partner/s\n(0) 15:46:28 [impl::ParticipantImpl]:373 in setupCommunication: \u001b[0mSecondary ranks are connected\n(0) 15:46:28 [impl::ParticipantImpl]:1633 in computeMappings: \u001b[0mComputing \"nearest-neighbor\" mapping from mesh \"Fluid-Mesh\" to mesh \"Structure-Mesh\" in \"write\" direction.\n(0) 15:46:28 [mapping::NearestNeighborMapping]:80 in computeMapping: \u001b[0mMapping distance min:0 max:0 avg: 0 var: 0 cnt: 1\n(0) 15:46:28 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Force\" for t=0 from \"Fluid-Mesh\" to \"Structure-Mesh\"\n(0) 15:46:28 [impl::ParticipantImpl]:1633 in computeMappings: \u001b[0mComputing \"nearest-neighbor\" mapping from mesh \"Structure-Mesh\" to mesh \"Fluid-Mesh\" in \"read\" direction.\n(0) 15:46:28 [mapping::NearestNeighborMapping]:80 in computeMapping: \u001b[0mMapping distance min:0 max:0 avg: 0 var: 0 cnt: 1\n(0) 15:46:28 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Displacement\" for t=0 from \"Structure-Mesh\" to \"Fluid-Mesh\" (skipped zero sample)\n(0) 15:46:28 [impl::ParticipantImpl]:298 in initialize: \u001b[0mit 1 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:28 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Force\" for t=0.1 from \"Fluid-Mesh\" to \"Structure-Mesh\"\n(0) 15:46:28 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: \u001b[0mabsolute convergence measure: two-norm diff of data \"Force\" = 2.13e+02, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data \"Force\" = 9.41e-01, limit = 1.00e-12, normalization = 2.27e+02, conv = false\n(0) 15:46:28 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Displacement\" for t=0.1 from \"Structure-Mesh\" to \"Fluid-Mesh\"\n(0) 15:46:28 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 2 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:28 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Force\" for t=0.1 from \"Fluid-Mesh\" to \"Structure-Mesh\"\n(0) 15:46:28 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: \u001b[0mabsolute convergence measure: two-norm diff of data \"Force\" = 3.16e+00, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data \"Force\" = 1.38e-02, limit = 1.00e-12, normalization = 2.30e+02, conv = false\n(0) 15:46:28 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Displacement\" for t=0.1 from \"Structure-Mesh\" to \"Fluid-Mesh\"\n(0) 15:46:28 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 3 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:28 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Force\" for t=0.1 from \"Fluid-Mesh\" to \"Structure-Mesh\"\n(0) 15:46:28 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: \u001b[0mabsolute convergence measure: two-norm diff of data \"Force\" = 3.16e+00, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data \"Force\" = 1.36e-02, limit = 1.00e-12, normalization = 2.33e+02, conv = false\n(0) 15:46:28 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Displacement\" for t=0.1 from \"Structure-Mesh\" to \"Fluid-Mesh\"\n(0) 15:46:28 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 4 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:28 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Force\" for t=0.1 from \"Fluid-Mesh\" to \"Structure-Mesh\"\n(0) 15:46:28 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: \u001b[0mabsolute convergence measure: two-norm diff of data \"Force\" = 3.16e+00, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data \"Force\" = 1.34e-02, limit = 1.00e-12, normalization = 2.36e+02, conv = false\n(0) 15:46:28 [cplscheme::BaseCouplingScheme]:391 in secondExchange: \u001b[0mTime window completed\n(0) 15:46:28 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Displacement\" for t=0.1 from \"Structure-Mesh\" to \"Fluid-Mesh\"\n(0) 15:46:28 [impl::ParticipantImpl]:457 in advance: \u001b[0mReached end at: final time-window: 1, final time: 0.1\n(0) 15:46:28 [impl::ParticipantImpl]:1832 in closeCommunicationChannels: \u001b[0mClose communication channels\n{\"records\": [{\"attempt\": 1, \"checkpoint_requested\": true, \"force_written_before_advance\": [101.0, -203.0], \"rollback_requested\": true}, {\"attempt\": 2, \"checkpoint_requested\": false, \"force_written_before_advance\": [102.0, -206.0], \"rollback_requested\": true}, {\"attempt\": 3, \"checkpoint_requested\": false, \"force_written_before_advance\": [103.0, -209.0], \"rollback_requested\": true}, {\"attempt\": 4, \"checkpoint_requested\": false, \"force_written_before_advance\": [104.0, -212.0], \"rollback_requested\": false}], \"role\": \"Fluid\"}\n",
+          "stderr": ""
+        }
+      },
+      "timed_out": false
+    },
+    {
+      "mode": "dt",
+      "read_offset_s": 0.1,
+      "configuration_sha256": "fdc21c81c7a09a11fc75ae91905de9742738168933b14b6dda1427211af98835",
+      "configuration_validation": {
+        "return_code": 0,
+        "stdout": "Checking /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074627Z-pid112440/read-dt/precice-config.xml for syntax and basic setup issues...\n\u001b[1m\u001b[38;2;000;128;000mNo major issues detected\n\u001b[0m",
+        "stderr": ""
+      },
+      "participant_exit_codes": {
+        "Structure": 0,
+        "Fluid": 0
+      },
+      "participants": {
+        "Structure": {
+          "read_mode": "dt",
+          "records": [
+            {
+              "attempt": 1,
+              "checkpoint_requested": true,
+              "committed_fake_state_after_advance": [
+                0.0,
+                0.0
+              ],
+              "force_after_advance_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_after_advance_relative_dt": [
+                [
+                  101.0,
+                  -203.0
+                ]
+              ],
+              "force_at_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_at_relative_dt": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_selected_for_fake_solve": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "read_offset_s": 0.1,
+              "rollback_requested": true,
+              "trial_displacement_written": [
+                1.0,
+                -1.0
+              ]
+            },
+            {
+              "attempt": 2,
+              "checkpoint_requested": false,
+              "committed_fake_state_after_advance": [
+                0.0,
+                0.0
+              ],
+              "force_after_advance_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_after_advance_relative_dt": [
+                [
+                  102.0,
+                  -206.0
+                ]
+              ],
+              "force_at_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_at_relative_dt": [
+                [
+                  101.0,
+                  -203.0
+                ]
+              ],
+              "force_selected_for_fake_solve": [
+                [
+                  101.0,
+                  -203.0
+                ]
+              ],
+              "read_offset_s": 0.1,
+              "rollback_requested": true,
+              "trial_displacement_written": [
+                2.0,
+                -2.0
+              ]
+            },
+            {
+              "attempt": 3,
+              "checkpoint_requested": false,
+              "committed_fake_state_after_advance": [
+                0.0,
+                0.0
+              ],
+              "force_after_advance_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_after_advance_relative_dt": [
+                [
+                  103.0,
+                  -209.0
+                ]
+              ],
+              "force_at_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_at_relative_dt": [
+                [
+                  102.0,
+                  -206.0
+                ]
+              ],
+              "force_selected_for_fake_solve": [
+                [
+                  102.0,
+                  -206.0
+                ]
+              ],
+              "read_offset_s": 0.1,
+              "rollback_requested": true,
+              "trial_displacement_written": [
+                3.0,
+                -3.0
+              ]
+            },
+            {
+              "attempt": 4,
+              "checkpoint_requested": false,
+              "committed_fake_state_after_advance": [
+                4.0,
+                -4.0
+              ],
+              "force_after_advance_relative_0": [
+                [
+                  104.0,
+                  -212.0
+                ]
+              ],
+              "force_after_advance_relative_dt": null,
+              "force_at_relative_0": [
+                [
+                  10.0,
+                  -10.0
+                ]
+              ],
+              "force_at_relative_dt": [
+                [
+                  103.0,
+                  -209.0
+                ]
+              ],
+              "force_selected_for_fake_solve": [
+                [
+                  103.0,
+                  -209.0
+                ]
+              ],
+              "read_offset_s": 0.1,
+              "rollback_requested": false,
+              "trial_displacement_written": [
+                4.0,
+                -4.0
+              ]
+            }
+          ],
+          "role": "Structure"
+        },
+        "Fluid": {
+          "records": [
+            {
+              "attempt": 1,
+              "checkpoint_requested": true,
+              "force_written_before_advance": [
+                101.0,
+                -203.0
+              ],
+              "rollback_requested": true
+            },
+            {
+              "attempt": 2,
+              "checkpoint_requested": false,
+              "force_written_before_advance": [
+                102.0,
+                -206.0
+              ],
+              "rollback_requested": true
+            },
+            {
+              "attempt": 3,
+              "checkpoint_requested": false,
+              "force_written_before_advance": [
+                103.0,
+                -209.0
+              ],
+              "rollback_requested": true
+            },
+            {
+              "attempt": 4,
+              "checkpoint_requested": false,
+              "force_written_before_advance": [
+                104.0,
+                -212.0
+              ],
+              "rollback_requested": false
+            }
+          ],
+          "role": "Fluid"
+        }
+      },
+      "participant_logs": {
+        "Structure": {
+          "stdout": "(0) 15:46:29 [impl::ParticipantImpl]:185 in configure: \u001b[0mThis is preCICE version 3.4.1\n(0) 15:46:29 [impl::ParticipantImpl]:186 in configure: \u001b[0mRevision info: no-info [git failed to run]\n(0) 15:46:29 [impl::ParticipantImpl]:205 in configure: \u001b[0mBuild type: Release (without debug log)\n(0) 15:46:29 [impl::ParticipantImpl]:207 in configure: \u001b[0mWorking directory \"/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074627Z-pid112440/read-dt\"\n(0) 15:46:29 [impl::ParticipantImpl]:211 in configure: \u001b[0mConfiguring preCICE with configuration \"/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074627Z-pid112440/read-dt/precice-config.xml\"\n(0) 15:46:29 [impl::ParticipantImpl]:212 in configure: \u001b[0mI am participant \"Structure\"\n(0) 15:46:29 [impl::ParticipantImpl]:335 in setupCommunication: \u001b[0mSetting up primary communication to coupling partner/s\n(0) 15:46:29 [impl::ParticipantImpl]:351 in setupCommunication: \u001b[0mPrimary ranks are connected\n(0) 15:46:29 [impl::ParticipantImpl]:357 in setupCommunication: \u001b[0mSetting up preliminary secondary communication to coupling partner/s\n(0) 15:46:29 [partition::ProvidedPartition]:120 in prepare: \u001b[0mPrepare partition for mesh Structure-Mesh\n(0) 15:46:29 [partition::ProvidedPartition]:87 in communicate: \u001b[0mGather mesh Structure-Mesh\n(0) 15:46:29 [partition::ProvidedPartition]:104 in communicate: \u001b[0mSend global mesh Structure-Mesh\n(0) 15:46:29 [impl::ParticipantImpl]:366 in setupCommunication: \u001b[0mSetting up secondary communication to coupling partner/s\n(0) 15:46:29 [impl::ParticipantImpl]:373 in setupCommunication: \u001b[0mSecondary ranks are connected\n(0) 15:46:29 [impl::ParticipantImpl]:298 in initialize: \u001b[0mit 1 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:29 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 2 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:29 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 3 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:29 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 4 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:29 [cplscheme::BaseCouplingScheme]:391 in secondExchange: \u001b[0mTime window completed\n(0) 15:46:29 [impl::ParticipantImpl]:457 in advance: \u001b[0mReached end at: final time-window: 1, final time: 0.1\n(0) 15:46:29 [impl::ParticipantImpl]:1832 in closeCommunicationChannels: \u001b[0mClose communication channels\n{\"read_mode\": \"dt\", \"records\": [{\"attempt\": 1, \"checkpoint_requested\": true, \"committed_fake_state_after_advance\": [0.0, 0.0], \"force_after_advance_relative_0\": [[10.0, -10.0]], \"force_after_advance_relative_dt\": [[101.0, -203.0]], \"force_at_relative_0\": [[10.0, -10.0]], \"force_at_relative_dt\": [[10.0, -10.0]], \"force_selected_for_fake_solve\": [[10.0, -10.0]], \"read_offset_s\": 0.1, \"rollback_requested\": true, \"trial_displacement_written\": [1.0, -1.0]}, {\"attempt\": 2, \"checkpoint_requested\": false, \"committed_fake_state_after_advance\": [0.0, 0.0], \"force_after_advance_relative_0\": [[10.0, -10.0]], \"force_after_advance_relative_dt\": [[102.0, -206.0]], \"force_at_relative_0\": [[10.0, -10.0]], \"force_at_relative_dt\": [[101.0, -203.0]], \"force_selected_for_fake_solve\": [[101.0, -203.0]], \"read_offset_s\": 0.1, \"rollback_requested\": true, \"trial_displacement_written\": [2.0, -2.0]}, {\"attempt\": 3, \"checkpoint_requested\": false, \"committed_fake_state_after_advance\": [0.0, 0.0], \"force_after_advance_relative_0\": [[10.0, -10.0]], \"force_after_advance_relative_dt\": [[103.0, -209.0]], \"force_at_relative_0\": [[10.0, -10.0]], \"force_at_relative_dt\": [[102.0, -206.0]], \"force_selected_for_fake_solve\": [[102.0, -206.0]], \"read_offset_s\": 0.1, \"rollback_requested\": true, \"trial_displacement_written\": [3.0, -3.0]}, {\"attempt\": 4, \"checkpoint_requested\": false, \"committed_fake_state_after_advance\": [4.0, -4.0], \"force_after_advance_relative_0\": [[104.0, -212.0]], \"force_after_advance_relative_dt\": null, \"force_at_relative_0\": [[10.0, -10.0]], \"force_at_relative_dt\": [[103.0, -209.0]], \"force_selected_for_fake_solve\": [[103.0, -209.0]], \"read_offset_s\": 0.1, \"rollback_requested\": false, \"trial_displacement_written\": [4.0, -4.0]}], \"role\": \"Structure\"}\n",
+          "stderr": ""
+        },
+        "Fluid": {
+          "stdout": "(0) 15:46:29 [impl::ParticipantImpl]:185 in configure: \u001b[0mThis is preCICE version 3.4.1\n(0) 15:46:29 [impl::ParticipantImpl]:186 in configure: \u001b[0mRevision info: no-info [git failed to run]\n(0) 15:46:29 [impl::ParticipantImpl]:205 in configure: \u001b[0mBuild type: Release (without debug log)\n(0) 15:46:29 [impl::ParticipantImpl]:207 in configure: \u001b[0mWorking directory \"/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074627Z-pid112440/read-dt\"\n(0) 15:46:29 [impl::ParticipantImpl]:211 in configure: \u001b[0mConfiguring preCICE with configuration \"/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074627Z-pid112440/read-dt/precice-config.xml\"\n(0) 15:46:29 [impl::ParticipantImpl]:212 in configure: \u001b[0mI am participant \"Fluid\"\n(0) 15:46:29 [impl::ParticipantImpl]:335 in setupCommunication: \u001b[0mSetting up primary communication to coupling partner/s\n(0) 15:46:29 [impl::ParticipantImpl]:351 in setupCommunication: \u001b[0mPrimary ranks are connected\n(0) 15:46:29 [impl::ParticipantImpl]:357 in setupCommunication: \u001b[0mSetting up preliminary secondary communication to coupling partner/s\n(0) 15:46:29 [partition::ProvidedPartition]:120 in prepare: \u001b[0mPrepare partition for mesh Fluid-Mesh\n(0) 15:46:29 [partition::ReceivedPartition]:69 in communicate: \u001b[0mReceive global mesh Structure-Mesh\n(0) 15:46:29 [impl::ParticipantImpl]:366 in setupCommunication: \u001b[0mSetting up secondary communication to coupling partner/s\n(0) 15:46:29 [impl::ParticipantImpl]:373 in setupCommunication: \u001b[0mSecondary ranks are connected\n(0) 15:46:29 [impl::ParticipantImpl]:1633 in computeMappings: \u001b[0mComputing \"nearest-neighbor\" mapping from mesh \"Fluid-Mesh\" to mesh \"Structure-Mesh\" in \"write\" direction.\n(0) 15:46:29 [mapping::NearestNeighborMapping]:80 in computeMapping: \u001b[0mMapping distance min:0 max:0 avg: 0 var: 0 cnt: 1\n(0) 15:46:29 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Force\" for t=0 from \"Fluid-Mesh\" to \"Structure-Mesh\"\n(0) 15:46:29 [impl::ParticipantImpl]:1633 in computeMappings: \u001b[0mComputing \"nearest-neighbor\" mapping from mesh \"Structure-Mesh\" to mesh \"Fluid-Mesh\" in \"read\" direction.\n(0) 15:46:29 [mapping::NearestNeighborMapping]:80 in computeMapping: \u001b[0mMapping distance min:0 max:0 avg: 0 var: 0 cnt: 1\n(0) 15:46:29 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Displacement\" for t=0 from \"Structure-Mesh\" to \"Fluid-Mesh\" (skipped zero sample)\n(0) 15:46:29 [impl::ParticipantImpl]:298 in initialize: \u001b[0mit 1 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:29 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Force\" for t=0.1 from \"Fluid-Mesh\" to \"Structure-Mesh\"\n(0) 15:46:29 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: \u001b[0mabsolute convergence measure: two-norm diff of data \"Force\" = 2.13e+02, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data \"Force\" = 9.41e-01, limit = 1.00e-12, normalization = 2.27e+02, conv = false\n(0) 15:46:29 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Displacement\" for t=0.1 from \"Structure-Mesh\" to \"Fluid-Mesh\"\n(0) 15:46:29 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 2 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:29 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Force\" for t=0.1 from \"Fluid-Mesh\" to \"Structure-Mesh\"\n(0) 15:46:29 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: \u001b[0mabsolute convergence measure: two-norm diff of data \"Force\" = 3.16e+00, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data \"Force\" = 1.38e-02, limit = 1.00e-12, normalization = 2.30e+02, conv = false\n(0) 15:46:29 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Displacement\" for t=0.1 from \"Structure-Mesh\" to \"Fluid-Mesh\"\n(0) 15:46:29 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 3 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:29 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Force\" for t=0.1 from \"Fluid-Mesh\" to \"Structure-Mesh\"\n(0) 15:46:29 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: \u001b[0mabsolute convergence measure: two-norm diff of data \"Force\" = 3.16e+00, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data \"Force\" = 1.36e-02, limit = 1.00e-12, normalization = 2.33e+02, conv = false\n(0) 15:46:29 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Displacement\" for t=0.1 from \"Structure-Mesh\" to \"Fluid-Mesh\"\n(0) 15:46:29 [impl::ParticipantImpl]:457 in advance: \u001b[0mit 4 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1\n(0) 15:46:29 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Force\" for t=0.1 from \"Fluid-Mesh\" to \"Structure-Mesh\"\n(0) 15:46:29 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: \u001b[0mabsolute convergence measure: two-norm diff of data \"Force\" = 3.16e+00, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data \"Force\" = 1.34e-02, limit = 1.00e-12, normalization = 2.36e+02, conv = false\n(0) 15:46:29 [cplscheme::BaseCouplingScheme]:391 in secondExchange: \u001b[0mTime window completed\n(0) 15:46:29 [impl::DataContext]:155 in mapData: \u001b[0mMapping \"Displacement\" for t=0.1 from \"Structure-Mesh\" to \"Fluid-Mesh\"\n(0) 15:46:29 [impl::ParticipantImpl]:457 in advance: \u001b[0mReached end at: final time-window: 1, final time: 0.1\n(0) 15:46:29 [impl::ParticipantImpl]:1832 in closeCommunicationChannels: \u001b[0mClose communication channels\n{\"records\": [{\"attempt\": 1, \"checkpoint_requested\": true, \"force_written_before_advance\": [101.0, -203.0], \"rollback_requested\": true}, {\"attempt\": 2, \"checkpoint_requested\": false, \"force_written_before_advance\": [102.0, -206.0], \"rollback_requested\": true}, {\"attempt\": 3, \"checkpoint_requested\": false, \"force_written_before_advance\": [103.0, -209.0], \"rollback_requested\": true}, {\"attempt\": 4, \"checkpoint_requested\": false, \"force_written_before_advance\": [104.0, -212.0], \"rollback_requested\": false}], \"role\": \"Fluid\"}\n",
+          "stderr": ""
+        }
+      },
+      "timed_out": false
+    }
+  ],
+  "semantic_checks": {
+    "zero": {
+      "all_participants_exit_zero": true,
+      "configuration_valid": true,
+      "four_structure_attempts": true,
+      "four_distinct_fluid_force_writes": true,
+      "rollback_then_accept_sequence": true,
+      "observed_force_sequence": [
+        [
+          [
+            10.0,
+            -10.0
+          ]
+        ],
+        [
+          [
+            10.0,
+            -10.0
+          ]
+        ],
+        [
+          [
+            10.0,
+            -10.0
+          ]
+        ],
+        [
+          [
+            10.0,
+            -10.0
+          ]
+        ]
+      ],
+      "expected_force_sequence": [
+        [
+          [
+            10.0,
+            -10.0
+          ]
+        ],
+        [
+          [
+            10.0,
+            -10.0
+          ]
+        ],
+        [
+          [
+            10.0,
+            -10.0
+          ]
+        ],
+        [
+          [
+            10.0,
+            -10.0
+          ]
+        ]
+      ],
+      "force_sequence_matches": true,
+      "post_advance_retry_relative_0_is_window_start_force": true,
+      "post_advance_accepted_relative_0_is_final_force": true,
+      "post_advance_retry_relative_dt_is_same_attempt_fluid_force": true,
+      "post_advance_accepted_attempt_relative_dt_not_read": true,
+      "pass": true
+    },
+    "dt": {
+      "all_participants_exit_zero": true,
+      "configuration_valid": true,
+      "four_structure_attempts": true,
+      "four_distinct_fluid_force_writes": true,
+      "rollback_then_accept_sequence": true,
+      "observed_force_sequence": [
+        [
+          [
+            10.0,
+            -10.0
+          ]
+        ],
+        [
+          [
+            101.0,
+            -203.0
+          ]
+        ],
+        [
+          [
+            102.0,
+            -206.0
+          ]
+        ],
+        [
+          [
+            103.0,
+            -209.0
+          ]
+        ]
+      ],
+      "expected_force_sequence": [
+        [
+          [
+            10.0,
+            -10.0
+          ]
+        ],
+        [
+          [
+            101.0,
+            -203.0
+          ]
+        ],
+        [
+          [
+            102.0,
+            -206.0
+          ]
+        ],
+        [
+          [
+            103.0,
+            -209.0
+          ]
+        ]
+      ],
+      "force_sequence_matches": true,
+      "post_advance_retry_relative_0_is_window_start_force": true,
+      "post_advance_accepted_relative_0_is_final_force": true,
+      "post_advance_retry_relative_dt_is_same_attempt_fluid_force": true,
+      "post_advance_accepted_attempt_relative_dt_not_read": true,
+      "pass": true
+    }
+  }
+}

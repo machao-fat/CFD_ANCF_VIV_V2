@@ -1,0 +1,72 @@
+{
+  "classification": "RELEASE_FORCE_RECOVERED_REPRODUCIBLY",
+  "F0_PHYSICAL_VALUE_RESOLVED": "YES",
+  "FLUID_INITIALIZATION_PATH_RESOLVED": "NO",
+  "global_time_s": 30.0,
+  "restart_case": "cases/hh06_single_slice/30/",
+  "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+  "patch": "cylinder",
+  "coordinate_convention": "x=streamwise/drag, y=transverse/lift, z=spanwise",
+  "force_definition": "dimensional patch-integrated pressure + viscous force; porous term is zero",
+  "force_components_N": {
+    "pressure": [0.063811823767, 0.058106728512, -2.753291492e-21],
+    "viscous": [0.0017152168874, 0.00062314562354, 3.0908797634e-22],
+    "porous": [0.0, 0.0, 0.0]
+  },
+  "Fx_raw_N": 0.0655270406544,
+  "Fy_raw_N": 0.05872987413554,
+  "Fz_raw_N": -2.44420351566e-21,
+  "Fx_section_Npm": 2.340251451942857,
+  "Fy_section_Npm": 2.0974955048407145,
+  "Fz_section_Npm": -8.729298270214285e-20,
+  "Fx_strip_N": 4.633697874846857,
+  "Fy_strip_N": 4.153041099584614,
+  "Fz_strip_N": -1.7284010575024286e-19,
+  "Lz_m": 0.028,
+  "DeltaL_m": 1.98,
+  "force_conversion": "F_section = F_raw/Lz; F_strip = F_section*DeltaL; applied once",
+  "openfoam_version": "OpenFOAM-10, Build 10-c4cf895ad8fa, package 20230119",
+  "source_field_hashes": {
+    "U": "a71a708e7bc12280ce60d0ad141c826ccd39e2100a0e98322cd0a7f53de3668a",
+    "p": "c33098b9634bf39ed09b184f5314aca388cce63063d9cc6c064b280167a78e05",
+    "k": "eab8f52cc20f5a3aa6832cb6471df18a8119804827d532d72f44930377f37d3e",
+    "omega": "cda71b08942c289ef7ae5b73aeb0e8390c5f5c2606706632d9d69d2b31d60c58",
+    "nut": "52a9ecad93f73cf84856eea748fa81884797b90d5628121a255b2e557704ef21",
+    "phi": "aedd09592bca8e7e7a0f5ba193dd3e236779bf48bfea393bf744ac8df7b5fcb2",
+    "cellDisplacement": "93c2b1d13d8f56efe43fc8c8d865e97ec4fabdad9dca4032c32c2813818b6f9d",
+    "pointDisplacement": "c39b4977c62592e42661d17ed7a3bc9d13ebdbec9b9966d8f195b501b1ba534a",
+    "uniform/time": "44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109"
+  },
+  "source_output": {
+    "scratch_output_path": "/tmp/phase1c7a_release_force.AH2Uqd/replay1/postProcessing/cylinderForces/30/forces.dat",
+    "preserved_output_path": "evidence/phase1c7a_release_force/force_time30_run1.dat",
+    "exact_record_line_number": 4,
+    "record_line": "30                \t((6.3811823767e-02 5.8106728512e-02 -2.7532914920e-21) (1.7152168874e-03 6.2314562354e-04 3.0908797634e-22)) ((-8.1349419916e-04 8.9336553274e-04 9.8414882096e-17) (-8.7240387295e-06 2.4013036424e-05 -2.4005460070e-06))",
+    "output_sha256": "bafd3b57b2d0f236ef726a321f08562de92f288e2f43e00494529030c728cfdb"
+  },
+  "internal_consistency": {
+    "total_is_component_sum": true,
+    "components_summed": ["pressure", "viscous", "porous"],
+    "absolute_closure_error_N": [0.0, 0.0, 0.0],
+    "porous_contribution_N": [0.0, 0.0, 0.0]
+  },
+  "reproducibility": {
+    "reproducible": true,
+    "run_count": 2,
+    "run1_return_code": 0,
+    "run2_return_code": 0,
+    "run1_force_output_sha256": "bafd3b57b2d0f236ef726a321f08562de92f288e2f43e00494529030c728cfdb",
+    "run2_force_output_sha256": "bafd3b57b2d0f236ef726a321f08562de92f288e2f43e00494529030c728cfdb",
+    "run1_equals_run2": true
+  },
+  "later_sample_comparison_only": {
+    "global_time_s": 30.0002,
+    "source": "evidence/legacy_qualification/hh06_single_slice_coupling_history_v1/evidence/runtime/hh06_bounded_multiwindow_ale_qualification_v1/HH06_SINGLE_SLICE_FORCE_UNIT_CHAIN_AUDIT.md and artifacts/run_analysis.json",
+    "Fx_raw_N": 0.06440713207168003,
+    "Fy_raw_N": 0.05908675094604829,
+    "Fz_raw_N": 0.0,
+    "delta_later_minus_release_N": [-0.0011199085827199723, 0.00035687681050829145],
+    "percent_change_relative_to_release": [-1.7090785293151687, 0.607658054373949],
+    "note": "Diagnostic comparison only; this 30.0002 s sample was not used to determine F0."
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "classification": "FAIL_REAL_IMPLICIT_CONTRACT",
+  "run_id": "run-20260923T065444Z-02d9a1f1",
+  "launcher_run_directory": "evidence/phase1e_bounded_2window/run-20260923T065618Z-pid106532",
+  "git": {
+    "branch": "repair/worker-lineage-implicit-contract-v1",
+    "head": "02d9a1f180082e83bcc9f7acdcb090502262b2d1",
+    "source_and_configuration_modified": false
+  },
+  "execution": {
+    "preflight": "PASS_PREFLIGHT_ONLY",
+    "authorized_max_windows": 2,
+    "completed_physical_windows": 2,
+    "third_window_attempt_observed": false,
+    "dt_s": 0.0002,
+    "precice_max_iterations": 20,
+    "runtime_attempts": 1,
+    "runtime_exit_codes": {"launcher": 0, "Fluid": 0, "Structure": 0}
+  },
+  "window_results": [
+    {
+      "window_index": 1,
+      "physical_identity": {"global_step": 1, "bridge_step": 1, "integer_tick": 200000, "time_s": 0.0002, "dt_s": 0.0002},
+      "attempts": 13,
+      "rollbacks": 12,
+      "accepted_attempt": 13,
+      "acceptance": "accepted_by_precice_before_iteration_limit",
+      "trial_xy_unique_count": 1,
+      "force_input_xy_unique_count": 1,
+      "D_trial_xy_m": [1.0633832158899472e-7, 9.530777187937023e-8],
+      "F_input_first_xy_raw_N": [0.06552704065480554, 0.058729874135090385],
+      "F_returned_first_xy_raw_N": [0.06552704065480554, 0.058729874135090385],
+      "F_input_last_xy_raw_N": [0.06552704065480554, 0.058729874135090385],
+      "F_returned_accepted_xy_raw_N": [0.06440713207168003, 0.05908675094604829],
+      "precice_final_displacement_residual_m": 9.81e-9,
+      "precice_final_force_residual_N": 8.08e-5
+    },
+    {
+      "window_index": 2,
+      "physical_identity": {"global_step": 2, "bridge_step": 2, "integer_tick": 400000, "time_s": 0.0004, "dt_s": 0.0002},
+      "attempts": 20,
+      "rollbacks": 19,
+      "accepted_attempt": 20,
+      "acceptance": "ACCEPTED_AT_ITERATION_LIMIT",
+      "trial_xy_unique_count": 1,
+      "force_input_xy_unique_count": 1,
+      "D_previous_committed_xy_m": [1.0633832158899472e-7, 9.530777187937023e-8],
+      "D_trial_xy_m": [5.284494079940451e-7, 4.7584100517167833e-7],
+      "F_input_first_xy_raw_N": [0.06440713207168003, 0.05908675094604829],
+      "F_returned_first_xy_raw_N": [0.06440713207168003, 0.05908675094604829],
+      "F_input_last_xy_raw_N": [0.06440713207168003, 0.05908675094604829],
+      "F_returned_accepted_xy_raw_N": [0.06578561843803757, 0.05916235813290415],
+      "precice_final_displacement_residual_m": 8.19e-9,
+      "precice_final_force_residual_N": 5.24e-4,
+      "precice_log_all_converged_at_attempt_20": true,
+      "reported_acceptance_remains_at_iteration_limit": true
+    }
+  ],
+  "initial_force": {
+    "source_global_time_s": 30.0,
+    "first_window_target_global_time_s": 30.0002,
+    "expected_raw_N": [0.0655270406544, 0.05872987413554, -2.44420351566e-21],
+    "observed_structure_input_raw_N": [0.06552704065480554, 0.058729874135090385, 0.0],
+    "absolute_xy_error_N": [4.0553671531995406e-13, 4.4961256939757277e-13],
+    "qualified_tolerance_N": 5e-13,
+    "within_tolerance": true,
+    "unit_conversion_applied_once": true,
+    "section_xy_N_per_m": [2.340251451942857, 2.097495504840714],
+    "strip_xy_N": [4.633697874846857, 4.153041099584613]
+  },
+  "ancf_solution_metrics": {
+    "attempts_with_newton_data": 33,
+    "newton_iteration_count_min": 3,
+    "newton_iteration_count_max": 3,
+    "nonlinear_residual_min": 7.826941494926132e-8,
+    "nonlinear_residual_max": 9.32296835287616e-8
+  },
+  "implicit_contract_checks": {
+    "attempt_trace_count": 33,
+    "D_written_equals_D_trial_interface_xy_all_attempts": true,
+    "physical_checkpoint_created_at_window_start": true,
+    "physical_state_hashes_constant_across_retries_within_each_window": true,
+    "transport_sequence_range": [1, 33],
+    "request_id_range": [910001, 910033],
+    "transaction_id_range": [1910001, 1910033],
+    "transport_ids_monotonic_and_unique": true,
+    "physical_identity_constant_within_window_and_advances_once": true,
+    "all_trace_numeric_values_finite": true,
+    "structure_force_iterate_feedback_observed": false,
+    "participant_force_residual_zero_on_nonaccepted_retries": true,
+    "trial_displacement_changes_within_each_window": false,
+    "force_source_timestamp_advances_even_when_read_value_is_unchanged": true
+  },
+  "preCICE_internal_convergence": {
+    "window_1": {"displacement_first_m": 1.43e-7, "displacement_last_m": 9.81e-9, "force_first_N": 1.18e-3, "force_last_N": 8.08e-5},
+    "window_2": {"displacement_first_m": 5.68e-7, "displacement_last_m": 8.19e-9, "force_first_N": 2.5e-3, "force_last_N": 5.24e-4}
+  },
+  "fluid_metrics": "fluid_metrics.json",
+  "process_cleanup": "process_cleanup.json",
+  "evidence": {
+    "runtime_identity": "runtime_identity.json",
+    "structure_trace_raw": "structure_trace.jsonl",
+    "structure_trace_with_run_id": "structure_trace_with_run_id.jsonl",
+    "structure_audit": "structure_audit.json",
+    "fluid_log": "fluid.log",
+    "structure_log": "structure.log",
+    "preCICE_profiling_directory": "precice-profiling/",
+    "OpenFOAM_postProcessing_directory": "openfoam_postProcessing/",
+    "launcher_output_directory": "launcher_output/"
+  },
+  "diagnosis": {
+    "responsible_layer": "Structure preCICE backend read-time selection",
+    "source_location": "src/coupling/arbitrary_n_live_orchestration_v1/precice_backend.py:98-102",
+    "observed_read_time_argument": 0.0,
+    "installed_precice_3_4_1_header": "/usr/include/precice/Participant.hpp:846-849",
+    "summary": "On implicit retries, Structure repeatedly consumes the start-of-step Force sample instead of the changing end-of-step iterate. The preCICE convergence log changes while the Structure force input and ANCF trial remain constant. The source-time annotation also advances despite the stale numeric sample."
+  },
+  "stability_claim": "NOT_ASSESSED_BY_TWO_WINDOWS; no HH06 validation or long-run stability claim",
+  "real_runtime_rerun_authorized_or_performed": false
+}

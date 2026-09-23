@@ -1,0 +1,27 @@
+{
+  "run_id": "run-20260923T065444Z-02d9a1f1",
+  "launcher_pid": 106532,
+  "processes": {
+    "Structure": {"pid": 106932, "exit_code": 0},
+    "Fluid": {"pid": 106933, "exit_code": 0},
+    "ANCF_worker": {
+      "pid": 106934,
+      "executable": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+      "shutdown_requested_by_structure": true,
+      "absent_after_run": true,
+      "independent_exit_code": null,
+      "exit_code_note": "The participant close path waits for the worker, but its returned status is not persisted in the participant audit or launcher summary."
+    },
+    "launcher": {"exit_code": 0, "classification": "BOUNDED_RUNTIME_COMPLETED"}
+  },
+  "cleanup_checks": {
+    "no_orphan_pimpleFoam": true,
+    "no_orphan_structure_participant": true,
+    "no_orphan_worker": true,
+    "no_active_bounded_launcher": true,
+    "precice_socket_files_remaining": 0,
+    "launcher_lock_held_after_run": false
+  },
+  "forced_termination": false,
+  "runtime_attempts": 1
+}

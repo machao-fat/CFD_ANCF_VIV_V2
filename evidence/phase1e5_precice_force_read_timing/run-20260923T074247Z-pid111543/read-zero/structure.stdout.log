@@ -1,0 +1,22 @@
+(0) 15:42:48 [impl::ParticipantImpl]:185 in configure: [0mThis is preCICE version 3.4.1
+(0) 15:42:48 [impl::ParticipantImpl]:186 in configure: [0mRevision info: no-info [git failed to run]
+(0) 15:42:48 [impl::ParticipantImpl]:205 in configure: [0mBuild type: Release (without debug log)
+(0) 15:42:48 [impl::ParticipantImpl]:207 in configure: [0mWorking directory "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074247Z-pid111543/read-zero"
+(0) 15:42:48 [impl::ParticipantImpl]:211 in configure: [0mConfiguring preCICE with configuration "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074247Z-pid111543/read-zero/precice-config.xml"
+(0) 15:42:48 [impl::ParticipantImpl]:212 in configure: [0mI am participant "Structure"
+(0) 15:42:48 [impl::ParticipantImpl]:335 in setupCommunication: [0mSetting up primary communication to coupling partner/s
+(0) 15:42:48 [impl::ParticipantImpl]:351 in setupCommunication: [0mPrimary ranks are connected
+(0) 15:42:48 [impl::ParticipantImpl]:357 in setupCommunication: [0mSetting up preliminary secondary communication to coupling partner/s
+(0) 15:42:48 [partition::ProvidedPartition]:120 in prepare: [0mPrepare partition for mesh Structure-Mesh
+(0) 15:42:48 [partition::ProvidedPartition]:87 in communicate: [0mGather mesh Structure-Mesh
+(0) 15:42:48 [partition::ProvidedPartition]:104 in communicate: [0mSend global mesh Structure-Mesh
+(0) 15:42:48 [impl::ParticipantImpl]:366 in setupCommunication: [0mSetting up secondary communication to coupling partner/s
+(0) 15:42:48 [impl::ParticipantImpl]:373 in setupCommunication: [0mSecondary ranks are connected
+(0) 15:42:48 [impl::ParticipantImpl]:298 in initialize: [0mit 1 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1
+(0) 15:42:48 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1
+(0) 15:42:48 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1
+(0) 15:42:48 [impl::ParticipantImpl]:457 in advance: [0mit 4 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1
+(0) 15:42:48 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 15:42:48 [impl::ParticipantImpl]:457 in advance: [0mReached end at: final time-window: 1, final time: 0.1
+(0) 15:42:48 [impl::ParticipantImpl]:1832 in closeCommunicationChannels: [0mClose communication channels
+{"read_mode": "zero", "records": [{"attempt": 1, "checkpoint_requested": true, "committed_fake_state_after_advance": [0.0, 0.0], "force_at_relative_0": [[10.0, -10.0]], "force_at_relative_dt": [[10.0, -10.0]], "force_selected_for_fake_solve": [[10.0, -10.0]], "read_offset_s": 0.0, "rollback_requested": true, "trial_displacement_written": [1.0, -1.0]}, {"attempt": 2, "checkpoint_requested": false, "committed_fake_state_after_advance": [0.0, 0.0], "force_at_relative_0": [[10.0, -10.0]], "force_at_relative_dt": [[101.0, -203.0]], "force_selected_for_fake_solve": [[10.0, -10.0]], "read_offset_s": 0.0, "rollback_requested": true, "trial_displacement_written": [2.0, -2.0]}, {"attempt": 3, "checkpoint_requested": false, "committed_fake_state_after_advance": [0.0, 0.0], "force_at_relative_0": [[10.0, -10.0]], "force_at_relative_dt": [[102.0, -206.0]], "force_selected_for_fake_solve": [[10.0, -10.0]], "read_offset_s": 0.0, "rollback_requested": true, "trial_displacement_written": [3.0, -3.0]}, {"attempt": 4, "checkpoint_requested": false, "committed_fake_state_after_advance": [4.0, -4.0], "force_at_relative_0": [[10.0, -10.0]], "force_at_relative_dt": [[103.0, -209.0]], "force_selected_for_fake_solve": [[10.0, -10.0]], "read_offset_s": 0.0, "rollback_requested": false, "trial_displacement_written": [4.0, -4.0]}], "role": "Structure"}

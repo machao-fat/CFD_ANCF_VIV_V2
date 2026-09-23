@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074435Z-pid112016/read-zero/structure_fake.py", line 33, in <module>
+    force_immediately_after_advance_at_end = p.read_data("Structure-Mesh", "Force", ids, dt).tolist()
+  File "cyprecice/cyprecice.pyx", line 928, in cyprecice.Participant.read_data
+RuntimeError: readData(...) cannot sample data outside of current time window.

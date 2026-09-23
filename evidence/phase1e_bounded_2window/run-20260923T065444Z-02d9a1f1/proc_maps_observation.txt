@@ -1,0 +1,33 @@
+Runtime map snapshot excerpts observed while the single bounded run was active.
+Observation time is approximate UTC 2026-09-23 06:56:26.
+
+PID 106932 — Structure
+Executable: /usr/bin/python3.10
+780652e00000-780652e34000 r--p 00000000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+780652e34000-780653162000 r-xp 00034000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+780653162000-7806531ec000 r--p 00362000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7806531ec000-7806531ed000 ---p 003ec000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7806531ed000-7806531f8000 r--p 003ec000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7806531f8000-7806531fa000 rw-p 003f7000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+
+PID 106933 — Fluid
+Executable: /opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam
+7ad94c200000-7ad94c234000 r--p 00000000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7ad94c234000-7ad94c562000 r-xp 00034000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7ad94c562000-7ad94c5ec000 r--p 00362000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7ad94c5ec000-7ad94c5ed000 ---p 003ec000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7ad94c5ed000-7ad94c5f8000 r--p 003ec000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7ad94c5f8000-7ad94c5fa000 rw-p 003f7000 08:30 319498 /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7ad94c6a1000-7ad94c6ed000 r--p 00000000 08:30 41326 /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7ad94c6ed000-7ad94c7bc000 r-xp 0004c000 08:30 41326 /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7ad94c7bc000-7ad94c7f8000 r--p 0011b000 08:30 41326 /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7ad94c7f8000-7ad94c7f9000 ---p 00157000 08:30 41326 /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7ad94c7f9000-7ad94c7fd000 r--p 00157000 08:30 41326 /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7ad94c7fd000-7ad94c800000 rw-p 0015b000 08:30 41326 /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+
+PID 106934 — ANCF worker
+Executable: /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker
+
+The mapped preCICE library path SHA256 is recorded in runtime_identity.json.
+The mapped adapter path was hashed before and after the run and matched the
+qualified SHA256 recorded in runtime_identity.json.

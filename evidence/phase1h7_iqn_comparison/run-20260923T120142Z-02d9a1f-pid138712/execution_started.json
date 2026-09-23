@@ -1,0 +1,11 @@
+{
+  "started_utc": "2026-09-23T12:02:21.117047+00:00",
+  "git_head": "02d9a1f180082e83bcc9f7acdcb090502262b2d1",
+  "exact_runs": [
+    "baseline",
+    "iqn_ils"
+  ],
+  "max_windows_each": 5,
+  "dt_s": 0.0002,
+  "max_iterations": 20
+}

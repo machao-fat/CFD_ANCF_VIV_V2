@@ -1,0 +1,33 @@
+{
+  "archive_created_utc_date": "2026-09-23",
+  "purpose": "Preserve complete Phase 1H runtime trees outside Git while keeping curated logs, traces, summaries, identities, and candidate XMLs in the repository.",
+  "archive_root": "/home/machao/projects/CFD_ANCF_VIV_V2_phase1h_scratch_archive",
+  "file_manifest": {
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2_phase1h_scratch_archive/phase1h_runtime_archive.SHA256SUMS",
+    "repository_copy": "evidence/phase1h_external_archive/phase1h_runtime_archive.SHA256SUMS",
+    "sha256": "fe4afffdd173491234dccef9b49fd7656e57beef2018d2d295314d646e9ecba7",
+    "covered_file_count": 515
+  },
+  "archives": [
+    {
+      "phase": "1H.7",
+      "run_id": "run-20260923T120142Z-02d9a1f-pid138712",
+      "original_repository_path": "evidence/phase1h7_iqn_comparison",
+      "complete_archive_path": "/home/machao/projects/CFD_ANCF_VIV_V2_phase1h_scratch_archive/phase1h7_iqn_comparison",
+      "covered_file_count": 138,
+      "scratch_case_tree_count": 2,
+      "curated_repository_file_count": 28
+    },
+    {
+      "phase": "1H.8",
+      "run_id": "run-20260923T123908Z-02d9a1f-pid143932",
+      "original_repository_path": "evidence/phase1h8_iqn_history",
+      "complete_archive_path": "/home/machao/projects/CFD_ANCF_VIV_V2_phase1h_scratch_archive/phase1h8_iqn_history",
+      "covered_file_count": 377,
+      "scratch_case_tree_count": 6,
+      "curated_repository_file_count": 71,
+      "includes_superseded_preparation_only_run": "run-20260923T123746Z-02d9a1f-pid143216; PREPARATION_SUPERSEDED_NO_RUNTIME; no participants or worker were started"
+    }
+  ],
+  "curation_rule": "All files under each original tree are present in the external archive and listed in the SHA256SUMS file. Repository copies omit only nested scratch directories named case/; their restart fields and meshes remain intact in the complete external archives."
+}

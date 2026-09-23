@@ -1,0 +1,49 @@
+{
+  "started_utc": "2026-09-23T12:04:06.910399+00:00",
+  "finished_utc": "2026-09-23T12:04:34.517319+00:00",
+  "wall_s_launcher_start_to_all_participants_exit": 24.649155858,
+  "preflight_included_in_wall_time": true,
+  "preflight_s": 0.586455565,
+  "participant_pids_and_exit_codes": {
+    "Structure": {
+      "pid": 139701,
+      "exit_code": 0
+    },
+    "Fluid": {
+      "pid": 139702,
+      "exit_code": 0
+    }
+  },
+  "worker_processes_observed": [
+    {
+      "pid": 139703,
+      "ppid": 139701,
+      "loaded_libraries": {}
+    }
+  ],
+  "worker_processes_remaining": [],
+  "loaded_runtime_samples": {
+    "Structure": {
+      "pid": 139701,
+      "loaded_libraries": {
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1": {
+          "sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7"
+        }
+      }
+    },
+    "Fluid": {
+      "pid": 139702,
+      "loaded_libraries": {
+        "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so": {
+          "sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572"
+        },
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1": {
+          "sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7"
+        }
+      }
+    }
+  },
+  "all_owned_processes_exited": true,
+  "worker_absent_after_shutdown": true,
+  "failure": null
+}

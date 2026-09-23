@@ -1,0 +1,11 @@
+{
+  "ansi_escape_sequences_removed": true,
+  "warning_error_lines": [
+    "fluid.stdout: --> FOAM Warning : ",
+    "fluid.stdout:     Warning in the preCICE adapter: ",
+    "fluid.stdout: (0) 20:39:56 [acceleration::BaseQNAcceleration]:277 in updateDifferenceMatrices: WARNING: ]The coupling residual equals almost zero. There is maybe something wrong in your adapter. Maybe you always write the same data or you call advance without providing new data first or you do not use available read data. Or you just converge much further than actually necessary."
+  ],
+  "iqn_primary_unknown_ill_conditioning_warnings": [],
+  "adapter_runtime_modifiable_warning_present": true,
+  "fatal_or_error_lines": []
+}

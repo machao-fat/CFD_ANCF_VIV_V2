@@ -1,0 +1,39 @@
+(0) 15:41:39 [impl::ParticipantImpl]:185 in configure: [0mThis is preCICE version 3.4.1
+(0) 15:41:39 [impl::ParticipantImpl]:186 in configure: [0mRevision info: no-info [git failed to run]
+(0) 15:41:39 [impl::ParticipantImpl]:205 in configure: [0mBuild type: Release (without debug log)
+(0) 15:41:39 [impl::ParticipantImpl]:207 in configure: [0mWorking directory "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074137Z-pid111293/read-dt"
+(0) 15:41:39 [impl::ParticipantImpl]:211 in configure: [0mConfiguring preCICE with configuration "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074137Z-pid111293/read-dt/precice-config.xml"
+(0) 15:41:39 [impl::ParticipantImpl]:212 in configure: [0mI am participant "Fluid"
+(0) 15:41:39 [impl::ParticipantImpl]:335 in setupCommunication: [0mSetting up primary communication to coupling partner/s
+(0) 15:41:39 [impl::ParticipantImpl]:351 in setupCommunication: [0mPrimary ranks are connected
+(0) 15:41:39 [impl::ParticipantImpl]:357 in setupCommunication: [0mSetting up preliminary secondary communication to coupling partner/s
+(0) 15:41:39 [partition::ProvidedPartition]:120 in prepare: [0mPrepare partition for mesh Fluid-Mesh
+(0) 15:41:39 [partition::ReceivedPartition]:69 in communicate: [0mReceive global mesh Structure-Mesh
+(0) 15:41:39 [impl::ParticipantImpl]:366 in setupCommunication: [0mSetting up secondary communication to coupling partner/s
+(0) 15:41:39 [impl::ParticipantImpl]:373 in setupCommunication: [0mSecondary ranks are connected
+(0) 15:41:39 [impl::ParticipantImpl]:1633 in computeMappings: [0mComputing "nearest-neighbor" mapping from mesh "Fluid-Mesh" to mesh "Structure-Mesh" in "write" direction.
+(0) 15:41:39 [mapping::NearestNeighborMapping]:80 in computeMapping: [0mMapping distance min:0 max:0 avg: 0 var: 0 cnt: 1
+(0) 15:41:39 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 15:41:39 [impl::ParticipantImpl]:1633 in computeMappings: [0mComputing "nearest-neighbor" mapping from mesh "Structure-Mesh" to mesh "Fluid-Mesh" in "read" direction.
+(0) 15:41:39 [mapping::NearestNeighborMapping]:80 in computeMapping: [0mMapping distance min:0 max:0 avg: 0 var: 0 cnt: 1
+(0) 15:41:39 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0 from "Structure-Mesh" to "Fluid-Mesh" (skipped zero sample)
+(0) 15:41:39 [impl::ParticipantImpl]:298 in initialize: [0mit 1 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1
+(0) 15:41:39 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.1 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 15:41:39 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 2.13e+02, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data "Force" = 9.41e-01, limit = 1.00e-12, normalization = 2.27e+02, conv = false
+(0) 15:41:39 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.1 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 15:41:39 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1
+(0) 15:41:39 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.1 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 15:41:39 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 3.16e+00, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data "Force" = 1.38e-02, limit = 1.00e-12, normalization = 2.30e+02, conv = false
+(0) 15:41:39 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.1 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 15:41:39 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1
+(0) 15:41:39 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.1 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 15:41:39 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 3.16e+00, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data "Force" = 1.36e-02, limit = 1.00e-12, normalization = 2.33e+02, conv = false
+(0) 15:41:39 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.1 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 15:41:39 [impl::ParticipantImpl]:457 in advance: [0mit 4 (min: 2, max: 4), time-window 1 (max: 1), t 0, Dt 0.1, max-dt 0.1
+(0) 15:41:39 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.1 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 15:41:39 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 3.16e+00, limit = 1.00e-12, relative convergence measure: relative two-norm diff of data "Force" = 1.34e-02, limit = 1.00e-12, normalization = 2.36e+02, conv = false
+(0) 15:41:39 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 15:41:39 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.1 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 15:41:39 [impl::ParticipantImpl]:457 in advance: [0mReached end at: final time-window: 1, final time: 0.1
+(0) 15:41:39 [impl::ParticipantImpl]:1832 in closeCommunicationChannels: [0mClose communication channels
+{"records": [{"attempt": 1, "checkpoint_requested": true, "force_written_before_advance": [101.0, -203.0], "rollback_requested": true}, {"attempt": 2, "checkpoint_requested": false, "force_written_before_advance": [102.0, -206.0], "rollback_requested": true}, {"attempt": 3, "checkpoint_requested": false, "force_written_before_advance": [103.0, -209.0], "rollback_requested": true}, {"attempt": 4, "checkpoint_requested": false, "force_written_before_advance": [104.0, -212.0], "rollback_requested": false}], "role": "Fluid"}

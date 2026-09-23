@@ -1,0 +1,88 @@
+{
+  "run_id": "run-20260923T103144Z-pid128756",
+  "git": {
+    "branch": "repair/worker-lineage-implicit-contract-v1",
+    "head": "02d9a1f180082e83bcc9f7acdcb090502262b2d1",
+    "worktree_clean": false,
+    "note": "Existing accepted Phase 1E.6 work and the scoped Phase 1F five-window profile changes were present; no source/config edits were made during runtime."
+  },
+  "authorization": {
+    "mode": "BOUNDED_COUPLING_QUALIFICATION",
+    "max_windows": 5,
+    "completed_windows": 5,
+    "dt_s": 0.0002,
+    "max_iterations": 20,
+    "preflight": "PASS_PREFLIGHT_ONLY"
+  },
+  "restart": {
+    "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+    "path": "cases/hh06_single_slice/30/",
+    "global_time_s": 30.0,
+    "time_index": 150000,
+    "F0_raw_N": [0.0655270406544, 0.05872987413554, -2.44420351566e-21],
+    "release_force_result_json_sha256": "6b272f695ebefe28daa176723483f611c42f8d25dbae8d83de928f3790811b8a",
+    "fields_sha256": {
+      "uniform/time": "44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109",
+      "p": "c33098b9634bf39ed09b184f5314aca388cce63063d9cc6c064b280167a78e05",
+      "U": "a71a708e7bc12280ce60d0ad141c826ccd39e2100a0e98322cd0a7f53de3668a",
+      "k": "eab8f52cc20f5a3aa6832cb6471df18a8119804827d532d72f44930377f37d3e",
+      "omega": "cda71b08942c289ef7ae5b73aeb0e8390c5f5c2606706632d9d69d2b31d60c58",
+      "nut": "52a9ecad93f73cf84856eea748fa81884797b90d5628121a255b2e557704ef21"
+    },
+    "mesh_sha256": {
+      "points": "41d2d570fb801c4bab9e40cc1c0644150cbaddaa5903e682e9e78b333e3b93bf",
+      "faces": "d2a7dfeefed80fc08af488a83e9bf26d9e570c7db22a3392faa918b21a332242",
+      "owner": "b433a77644b807eec43cd32e739e927cff1c4f1fca2d0cf6edf0cc93de5283bc",
+      "neighbour": "79cc5e86396555ab0cdbac498cd5042f2cbdbfbc229e527ae5597afb69af94a7",
+      "boundary": "aa930c4252198b6e129e384302dfe1737b50cb9d7f40b08c9252ed6b52f83bf2"
+    },
+    "post_run_hashes_match_preflight": true
+  },
+  "worker": {
+    "source": "src/ancf/ancf_worker_main.cpp",
+    "source_sha256": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+    "binary": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+    "binary_sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596"
+  },
+  "fluid_adapter": {
+    "path": "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so",
+    "sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572",
+    "build_id": "e76f7d6491a2f32cf9d6d5712c79b1ce55cd862b",
+    "source_provenance_resolved": false,
+    "live_loaded_path_observed": true
+  },
+  "openfoam": {
+    "version": "10",
+    "build": "10-c4cf895ad8fa",
+    "executable": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam"
+  },
+  "precice": {
+    "version": "3.4.1",
+    "loaded_library": "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+    "library_sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7"
+  },
+  "python": {
+    "executable": "/usr/bin/python3.10",
+    "version": "3.10.12",
+    "pyprecice_metadata_version": "3.4.0",
+    "precice_module_path": "/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py",
+    "extension_path": "/home/machao/.local/lib/python3.10/site-packages/cyprecice.cpython-310-x86_64-linux-gnu.so"
+  },
+  "processes": {
+    "launcher": {"pid": 128756, "exit_code": 0},
+    "structure": {"pid": 129148, "exit_code": 0},
+    "fluid": {"pid": 129149, "exit_code": 0},
+    "worker": {"pid": 129150, "absent_after_shutdown": true, "independent_exit_code_exposed": false}
+  },
+  "preflight_checks": {
+    "adapter_sha": true,
+    "worker_source_and_binary_sha": true,
+    "python_precice_runtime": true,
+    "F0_provenance": true,
+    "restart_identity": true,
+    "max_windows_exactly_5": true,
+    "max_iterations_20": true,
+    "dt_0p0002": true,
+    "socket_no_active_user_or_stale_files": true
+  }
+}

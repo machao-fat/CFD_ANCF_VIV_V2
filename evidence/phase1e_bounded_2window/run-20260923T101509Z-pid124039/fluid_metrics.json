@@ -1,0 +1,19 @@
+{
+  "fluid_courant_samples": 34,
+  "mean_courant_min": 0.01601185442,
+  "mean_courant_max": 0.01601199855,
+  "max_courant_min": 0.4181024227,
+  "max_courant_max": 0.4182184878,
+  "max_fluid_co": 0.4182184878,
+  "mesh_courant": null,
+  "mesh_velocity_max": null,
+  "Umax": null,
+  "kmax": null,
+  "omega_max": null,
+  "nut_max": null,
+  "minimum_cell_volume": null,
+  "metrics_unavailable_reason": "The current case log did not emit these quantities. No solver or configuration changes and no additional mesh-quality pass were performed.",
+  "fatal_error": false,
+  "nan_or_infinity_observed": false,
+  "existing_adapter_warning": "controlDict runTimeModifiable warning; no timestep/configuration change was attempted"
+}

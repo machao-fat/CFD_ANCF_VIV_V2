@@ -1,0 +1,11 @@
+{
+  "finished_utc": "2026-09-23T12:40:17.017337+00:00",
+  "candidates_completed": [
+    "max-used-iterations-1",
+    "max-used-iterations-2",
+    "max-used-iterations-3"
+  ],
+  "classification": "IQN_HISTORY_DEGRADES",
+  "classification_before_ansi_warning_audit": "IQN_HISTORY_NO_BENEFIT",
+  "warning_audit_completed": true
+}

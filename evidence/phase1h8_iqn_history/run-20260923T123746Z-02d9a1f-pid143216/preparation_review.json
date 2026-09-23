@@ -1,0 +1,7 @@
+{
+  "classification": "PREPARATION_SUPERSEDED_NO_RUNTIME",
+  "note": "The three XML candidates and offline preflights were preserved, but inspection found that the prepared settings object did not match the Phase 1H.7 run helper's nested acceleration schema. This directory was never passed to --execute and no Fluid, Structure, or worker process was started from it.",
+  "runtime_started": false,
+  "superseded_by_runner_schema_version": 1,
+  "do_not_execute": true
+}

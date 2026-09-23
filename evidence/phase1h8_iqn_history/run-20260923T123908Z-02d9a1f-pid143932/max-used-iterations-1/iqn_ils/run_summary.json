@@ -1,0 +1,620 @@
+{
+  "variant": "iqn_ils",
+  "classification": "RUN_COMPLETED",
+  "runtime_identity": {
+    "git": {
+      "branch": "repair/worker-lineage-implicit-contract-v1",
+      "head": "02d9a1f180082e83bcc9f7acdcb090502262b2d1",
+      "worktree_clean": false,
+      "status_porcelain": [
+        "M cases/hh06_single_slice/bounded_qualification.py",
+        " M cases/hh06_single_slice/contract.json",
+        " M cases/hh06_single_slice/interface_contract.json",
+        " M cases/hh06_single_slice/launch.sh",
+        " M cases/hh06_single_slice/precice-config.xml",
+        " M cases/hh06_single_slice/structure_contract.json",
+        " M src/coupling/arbitrary_n_live_orchestration_v1/precice_backend.py",
+        " M src/coupling/hh06_structure_0000/structure_0000_participant.py",
+        " M tests/coupling/test_bounded_qualification_launcher.py",
+        " M tests/coupling/test_implicit_iteration_trace.py",
+        "?? docs/PHASE1E5_PRECICE_FORCE_READ_TIME_DESIGN.md",
+        "?? docs/PHASE1E6_FORCE_READ_TIME_REPAIR_REPORT.md",
+        "?? docs/PHASE1ER_REAL_2WINDOW_REQUALIFICATION.md",
+        "?? docs/PHASE1E_REAL_2WINDOW_STRATEGY_C_QUALIFICATION.md",
+        "?? docs/PHASE1F_REAL_5WINDOW_QUALIFICATION.md",
+        "?? docs/PHASE1G_IMPLICIT_CONVERGENCE_EFFICIENCY_AUDIT.md",
+        "?? docs/PHASE1H5_IQN_ILS_CONTROLLED_EXPERIMENT_DESIGN.md",
+        "?? docs/PHASE1H6_IQN_ILS_CANDIDATE_PREPARATION.md",
+        "?? docs/PHASE1H7_IQN_ILS_FIVE_WINDOW_COMPARISON.md",
+        "?? docs/PHASE1H_COUPLING_ACCELERATION_BASELINE_AUDIT.md",
+        "?? evidence/phase1e5_precice_force_read_timing/",
+        "?? evidence/phase1e6_offline_force_read_time/",
+        "?? evidence/phase1e_bounded_2window/",
+        "?? evidence/phase1f_bounded_5window/",
+        "?? evidence/phase1h6_iqn_ils_candidate/",
+        "?? evidence/phase1h7_iqn_comparison/",
+        "?? evidence/phase1h8_iqn_history/",
+        "?? scripts/phase1h7_iqn_ab.py",
+        "?? scripts/phase1h8_iqn_history.py"
+      ]
+    },
+    "worker": {
+      "path": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+      "source_path": "/home/machao/projects/CFD_ANCF_VIV_V2/src/ancf/ancf_worker_main.cpp",
+      "source_sha256": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+      "binary_sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596"
+    },
+    "adapter": {
+      "path": "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so",
+      "sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572",
+      "source_provenance_resolved": false,
+      "build_id": "e76f7d6491a2f32cf9d6d5712c79b1ce55cd862b"
+    },
+    "precice": {
+      "version_information": "3.4.1;no-info [git failed to run];PRECICE_FEATURE_MPI_COMMUNICATION=Y;PRECICE_FEATURE_PETSC_MAPPING=Y;PRECICE_FEATURE_GINKGO_MAPPING=N;PRECICE_FEATURE_PYTHON_ACTIONS=Y;PRECICE_BINDINGS_C=Y;PRECICE_BINDINGS_FORTRAN=Y;CXX=GNU;CXXFLAGS= -O3 -DNDEBUG;LDFLAGS="
+    },
+    "python_precice_binding": {
+      "classification": "PYTHON_PRECICE_BINDING_RUNTIME_CONFIRMED",
+      "runtime_identity": {
+        "python_executable": "/usr/bin/python3.10",
+        "python_version": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+        "pyprecice_metadata_version": "3.4.0",
+        "precice_module_path": "/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py",
+        "precice_module_sha256": "a110a4ab07722a6f21d727a7c179b9295db961a74a595f12b01ad07d7cf1f751",
+        "cyprecice_extension_path": "/home/machao/.local/lib/python3.10/site-packages/cyprecice.cpython-310-x86_64-linux-gnu.so",
+        "cyprecice_extension_sha256": "184b94ac58397ee2de696b10b3ccb11955033f9d4563146368f5b097f0c1684c",
+        "libprecice_loaded_path": "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "libprecice_sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7",
+        "libprecice_runtime_version": "3.4.1",
+        "libprecice_version_information": "3.4.1;no-info [git failed to run];PRECICE_FEATURE_MPI_COMMUNICATION=Y;PRECICE_FEATURE_PETSC_MAPPING=Y;PRECICE_FEATURE_GINKGO_MAPPING=N;PRECICE_FEATURE_PYTHON_ACTIONS=Y;PRECICE_BINDINGS_C=Y;PRECICE_BINDINGS_FORTRAN=Y;CXX=GNU;CXXFLAGS= -O3 -DNDEBUG;LDFLAGS="
+      },
+      "participant_exit_codes": {
+        "Structure": 0,
+        "Fluid": 0
+      },
+      "configuration_sha256": "17e3e366cf78afc67b01ce554896282e1b82fa4f34d2beef1c2eaa4660093c58"
+    },
+    "openfoam": {
+      "version": "10",
+      "pimpleFoam": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam"
+    },
+    "source_sha256": {
+      "worker_source": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+      "participant": "a330f9461e91b182b7c479f7fd614f683c91f43c4eb77e99d2e3298d1d46749d",
+      "precice_backend": "e5f37644e1b31391aed48c47473e336733e0c492191b166ed6354b2a3eb07cf6",
+      "coordinator": "e612d5bfdffb54db07a7a325934cbb9d1cff65ec22b48639ad085b79cb0a90a3",
+      "bounded_qualification": "51c6073b442c973ab9e0459be239db3f3f0571543361d13f8badccbaa543846f"
+    },
+    "run_id": "max-used-iterations-1",
+    "variant": "iqn_ils",
+    "restart_global_time_s": 30.0,
+    "restart_field_hashes": {
+      "U": "a71a708e7bc12280ce60d0ad141c826ccd39e2100a0e98322cd0a7f53de3668a",
+      "U_0": "ff1b0c321cd008e260115fd926e621c8f940acb7e2f120072ab094da68e86ae0",
+      "cellDisplacement": "93c2b1d13d8f56efe43fc8c8d865e97ec4fabdad9dca4032c32c2813818b6f9d",
+      "k": "eab8f52cc20f5a3aa6832cb6471df18a8119804827d532d72f44930377f37d3e",
+      "k_0": "4df41aae9007b3a95e481e0d84d03d4704f46082ac512c07a9684ca96554ef4c",
+      "nut": "52a9ecad93f73cf84856eea748fa81884797b90d5628121a255b2e557704ef21",
+      "omega": "cda71b08942c289ef7ae5b73aeb0e8390c5f5c2606706632d9d69d2b31d60c58",
+      "omega_0": "db87be853b7d82f35ce20ed51760da027307df10d793336e367fa6f21d8c5e73",
+      "p": "c33098b9634bf39ed09b184f5314aca388cce63063d9cc6c064b280167a78e05",
+      "phi": "aedd09592bca8e7e7a0f5ba193dd3e236779bf48bfea393bf744ac8df7b5fcb2",
+      "phi_0": "d4a821b80b3fb5156b4431d334c8249eeb8a0b878fb44e354124122a89461a93",
+      "pointDisplacement": "c39b4977c62592e42661d17ed7a3bc9d13ebdbec9b9966d8f195b501b1ba534a",
+      "uniform/time": "44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109",
+      "yPlus": "74bb07313d7a86fccbf335792fc39abf3faf9ea4f76bf763f995ff94bf0f657a"
+    },
+    "mesh_hashes": {
+      "boundary": "aa930c4252198b6e129e384302dfe1737b50cb9d7f40b08c9252ed6b52f83bf2",
+      "cellZones": "5dda898dd3e65c76ed3ac78d1346dc74b5d55cd1020b59863d07510f078bde47",
+      "faceZones": "ea550fd99f1ed807268426d518b3272e528773db364d8969211eb8e9bbb59254",
+      "faces": "d2a7dfeefed80fc08af488a83e9bf26d9e570c7db22a3392faa918b21a332242",
+      "neighbour": "79cc5e86396555ab0cdbac498cd5042f2cbdbfbc229e527ae5597afb69af94a7",
+      "owner": "b433a77644b807eec43cd32e739e927cff1c4f1fca2d0cf6edf0cc93de5283bc",
+      "pointZones": "890d1eeae9c0391662acd0a8a27c24bc3a39b693251444af90e16ecc5cc7c0dd",
+      "points": "41d2d570fb801c4bab9e40cc1c0644150cbaddaa5903e682e9e78b333e3b93bf",
+      "sets/fluid": "489032940729201429f127a15516c73cf69b43c5e94b2e89dec530a7febb31d9",
+      "sets/twoInternalFacesCells": "b7b7e4d283cfcb1b6fed86dcf3502248bfbc0a3dd94dd120161a45ce820525e8"
+    },
+    "release_force": {
+      "raw_N": [
+        0.0655270406544,
+        0.05872987413554,
+        -2.44420351566e-21
+      ],
+      "source_global_time_s": 30.0,
+      "result_json_sha256": "6b272f695ebefe28daa176723483f611c42f8d25dbae8d83de928f3790811b8a"
+    },
+    "configuration": {
+      "path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h8_iqn_history/run-20260923T123908Z-02d9a1f-pid143932/max-used-iterations-1/iqn_ils/case/precice-config.xml",
+      "sha256": "b5ddf80b6e642f2e6b051442ab83a95a0b1116b1311201f056a36e94709e8d3e",
+      "acceleration": {
+        "type": "IQN-ILS",
+        "max_used_iterations": 1,
+        "initial_relaxation": 0.2,
+        "enforce": true,
+        "time_windows_reused": 1,
+        "primary_data": [
+          "Displacement",
+          "Force"
+        ],
+        "preconditioner": "residual-sum",
+        "filter": {
+          "type": "QR3",
+          "limit": "1e-2"
+        },
+        "reduced_time_grid": true
+      }
+    },
+    "case_contract_sha256": "f4f2a6c062b1ba1a8bdae90b50b556ae4c2269e9250420a39a268b4240cbfd4e",
+    "preflight_status": "PASS_PREFLIGHT_ONLY"
+  },
+  "timing": {
+    "launcher_start_to_all_participants_exit_s": 9.99385686,
+    "average_s_per_coupling_attempt": 1.2492321075,
+    "preflight_included": true
+  },
+  "process_cleanup": {
+    "started_utc": "2026-09-23T12:39:43.916484+00:00",
+    "finished_utc": "2026-09-23T12:39:56.896475+00:00",
+    "wall_s_launcher_start_to_all_participants_exit": 9.99385686,
+    "preflight_included_in_wall_time": true,
+    "preflight_s": 0.570053939,
+    "participant_pids_and_exit_codes": {
+      "Structure": {
+        "pid": 144791,
+        "exit_code": 0
+      },
+      "Fluid": {
+        "pid": 144792,
+        "exit_code": 0
+      }
+    },
+    "worker_processes_observed": [
+      {
+        "pid": 144793,
+        "ppid": 144791,
+        "loaded_libraries": {}
+      }
+    ],
+    "worker_processes_remaining": [],
+    "loaded_runtime_samples": {
+      "Structure": {
+        "pid": 144791,
+        "loaded_libraries": {
+          "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1": {
+            "sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7"
+          }
+        }
+      },
+      "Fluid": {
+        "pid": 144792,
+        "loaded_libraries": {
+          "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so": {
+            "sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572"
+          },
+          "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1": {
+            "sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7"
+          }
+        }
+      }
+    },
+    "all_owned_processes_exited": true,
+    "worker_absent_after_shutdown": true,
+    "failure": null
+  },
+  "restart_inputs_unchanged_after_run": true,
+  "iterations_per_window": {
+    "1": 3,
+    "2": 5
+  },
+  "total_coupling_attempts": 8,
+  "total_cfd_advance_calls": 8,
+  "rollback_count": 6,
+  "per_window": {
+    "1": {
+      "attempt_count": 3,
+      "rollback_count": 2,
+      "preCICE_converged": true,
+      "acceptance": "CONVERGED_BEFORE_CAP",
+      "participant_final_status": "accepted_by_precice_before_iteration_limit",
+      "preCICE_final_residuals": {
+        "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+        "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+      },
+      "preCICE_residual_history": [
+        {
+          "TimeWindow": 1,
+          "Iteration": 1.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 2.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 3.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        }
+      ],
+      "force_input_sequence_raw_N": [
+        [
+          0.06552704065480554,
+          0.058729874135090385,
+          0.0
+        ],
+        [
+          0.06530305893818045,
+          0.05880124949728197,
+          0.0
+        ],
+        [
+          0.06440713207168003,
+          0.05908675094604829,
+          0.0
+        ]
+      ],
+      "force_returned_sequence_raw_N": [
+        [
+          0.06530305893818045,
+          0.05880124949728197,
+          0.0
+        ],
+        [
+          0.06440713207168003,
+          0.05908675094604829,
+          0.0
+        ],
+        [
+          0.06440713207168003,
+          0.05908675094604829,
+          0.0
+        ]
+      ],
+      "force_read_offsets_input_s": [
+        0.0,
+        0.0002,
+        0.0002
+      ],
+      "force_read_offsets_returned_s": [
+        0.0002,
+        0.0002,
+        0.0
+      ],
+      "D_trial_sequence_m": [
+        [
+          1.0633832158899472e-07,
+          9.530777187937023e-08
+        ],
+        [
+          1.059748405043233e-07,
+          9.542360094997115e-08
+        ],
+        [
+          1.0452091616563741e-07,
+          9.588691723237472e-08
+        ]
+      ],
+      "D_written_sequence_m": [
+        [
+          1.0633832158899472e-07,
+          9.530777187937023e-08
+        ],
+        [
+          1.059748405043233e-07,
+          9.542360094997115e-08
+        ],
+        [
+          1.0452091616563741e-07,
+          9.588691723237472e-08
+        ]
+      ],
+      "D_written_equals_D_trial_all_attempts": true,
+      "force_residual_raw_N": [
+        0.00023507924559667696,
+        0.0009403169823867501,
+        0.0
+      ],
+      "force_residual_applied_N": [
+        0.016623460938622155,
+        0.0664938437544916,
+        0.0
+      ],
+      "trial_displacement_residual_m": [
+        1.4279849445626007e-07,
+        3.81490330821358e-10,
+        1.5259613232855683e-09
+      ],
+      "ancf_newton_iterations": [
+        3,
+        3,
+        3
+      ],
+      "ancf_nonlinear_residual": [
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08
+      ],
+      "qn_diagnostics": {
+        "QNColumns": 1,
+        "DeletedQNColumns": 0,
+        "DroppedQNColumns": 1
+      }
+    },
+    "2": {
+      "attempt_count": 5,
+      "rollback_count": 4,
+      "preCICE_converged": true,
+      "acceptance": "CONVERGED_BEFORE_CAP",
+      "participant_final_status": "accepted_by_precice_before_iteration_limit",
+      "preCICE_final_residuals": {
+        "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+        "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+      },
+      "preCICE_residual_history": [
+        {
+          "TimeWindow": 2,
+          "Iteration": 1.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 2.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 3.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 4.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 5.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        }
+      ],
+      "force_input_sequence_raw_N": [
+        [
+          0.06440713207168003,
+          0.05908675094604829,
+          0.0
+        ],
+        [
+          0.044058287691421484,
+          0.0401583495090182,
+          0.0
+        ],
+        [
+          0.048069928441983635,
+          0.04289071857243977,
+          0.0
+        ],
+        [
+          0.0657855247642749,
+          0.05916241674191073,
+          0.0
+        ],
+        [
+          0.0657855247642749,
+          0.05916241674191073,
+          0.0
+        ]
+      ],
+      "force_returned_sequence_raw_N": [
+        [
+          0.044058287691421484,
+          0.0401583495090182,
+          0.0
+        ],
+        [
+          0.048069928441983635,
+          0.04289071857243977,
+          0.0
+        ],
+        [
+          0.0657855247642749,
+          0.05916241674191073,
+          0.0
+        ],
+        [
+          0.0657855247642749,
+          0.05916241674191073,
+          0.0
+        ],
+        [
+          0.0657855247642749,
+          0.05916241674191073,
+          0.0
+        ]
+      ],
+      "force_read_offsets_input_s": [
+        0.0,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002
+      ],
+      "force_read_offsets_returned_s": [
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0
+      ],
+      "D_trial_sequence_m": [
+        [
+          5.21204137158057e-07,
+          4.781498267930066e-07
+        ],
+        [
+          4.881817095323321e-07,
+          4.4743251652000957e-07
+        ],
+        [
+          4.946918638129047e-07,
+          4.5186664840274405e-07
+        ],
+        [
+          5.234410146967068e-07,
+          4.782726184474148e-07
+        ],
+        [
+          5.234410146967068e-07,
+          4.782726184474148e-07
+        ]
+      ],
+      "D_written_sequence_m": [
+        [
+          5.21204137158057e-07,
+          4.781498267930066e-07
+        ],
+        [
+          4.881817095323321e-07,
+          4.4743251652000957e-07
+        ],
+        [
+          4.946918638129047e-07,
+          4.5186664840274405e-07
+        ],
+        [
+          5.234410146967068e-07,
+          4.782726184474148e-07
+        ],
+        [
+          5.234410146967068e-07,
+          4.782726184474148e-07
+        ]
+      ],
+      "D_written_equals_D_trial_all_attempts": true,
+      "force_residual_raw_N": [
+        0.027791362841237968,
+        0.004853771956974713,
+        0.024054324234381322,
+        0.0,
+        0.0
+      ],
+      "force_residual_applied_N": [
+        1.9652463723446847,
+        0.3432310169574975,
+        1.7009843565741076,
+        0.0,
+        0.0
+      ],
+      "trial_displacement_residual_m": [
+        5.654642682631479e-07,
+        4.510026470769111e-08,
+        7.876778168156095e-09,
+        3.9035739144272196e-08,
+        0.0
+      ],
+      "ancf_newton_iterations": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "ancf_nonlinear_residual": [
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08
+      ],
+      "qn_diagnostics": {
+        "QNColumns": 1,
+        "DeletedQNColumns": 0,
+        "DroppedQNColumns": 5
+      }
+    }
+  },
+  "precice_iterations_log_headers": [
+    "TimeWindow",
+    "TotalIterations",
+    "Iterations",
+    "Convergence",
+    "QNColumns",
+    "DeletedQNColumns",
+    "DroppedQNColumns"
+  ],
+  "precice_convergence_log_headers": [
+    "TimeWindow",
+    "Iteration",
+    "ResAbsOrRel(Structure-Mesh:Displacement)",
+    "ResAbsOrRel(Structure-Mesh:Force)"
+  ],
+  "iqn_diagnostics": {
+    "iterations_log_rows": [
+      {
+        "TimeWindow": 1,
+        "TotalIterations": 3,
+        "Iterations": 3,
+        "Convergence": 1,
+        "QNColumns": 1,
+        "DeletedQNColumns": 0,
+        "DroppedQNColumns": 1
+      },
+      {
+        "TimeWindow": 2,
+        "TotalIterations": 8,
+        "Iterations": 5,
+        "Convergence": 1,
+        "QNColumns": 1,
+        "DeletedQNColumns": 0,
+        "DroppedQNColumns": 5
+      }
+    ],
+    "acceleration_info_log_present": false,
+    "acceleration_info_log": null,
+    "preconditioner_configured": "residual-sum",
+    "runtime_preconditioner_status": "not separately exposed by stock runtime log",
+    "warning_and_error_lines": [
+      "fluid.stdout: --> FOAM Warning : ",
+      "fluid.stdout:     Warning in the preCICE adapter: ",
+      "fluid.stdout: (0) 20:39:56 [acceleration::BaseQNAcceleration]:277 in updateDifferenceMatrices: WARNING: ]The coupling residual equals almost zero. There is maybe something wrong in your adapter. Maybe you always write the same data or you call advance without providing new data first or you do not use available read data. Or you just converge much further than actually necessary."
+    ],
+    "profiling_files": [
+      "precice-profiling/Fluid_0000-0-1.txt",
+      "precice-profiling/Structure_0000-0-1.txt"
+    ],
+    "pre_ansi_warning_scan_lines": [
+      "fluid.stdout: --> FOAM Warning : "
+    ],
+    "ansi_stripped_warning_scan": true,
+    "iqn_primary_unknown_ill_conditioning_warning_count": 0,
+    "adapter_runtime_modifiable_warning_present": true
+  },
+  "files": {
+    "structure_trace": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h8_iqn_history/run-20260923T123908Z-02d9a1f-pid143932/max-used-iterations-1/iqn_ils/structure_trace.jsonl",
+    "structure_audit": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h8_iqn_history/run-20260923T123908Z-02d9a1f-pid143932/max-used-iterations-1/iqn_ils/structure_audit.json",
+    "fluid_stdout": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h8_iqn_history/run-20260923T123908Z-02d9a1f-pid143932/max-used-iterations-1/iqn_ils/fluid.stdout",
+    "fluid_stderr": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h8_iqn_history/run-20260923T123908Z-02d9a1f-pid143932/max-used-iterations-1/iqn_ils/fluid.stderr",
+    "structure_stdout": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h8_iqn_history/run-20260923T123908Z-02d9a1f-pid143932/max-used-iterations-1/iqn_ils/structure.stdout",
+    "structure_stderr": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h8_iqn_history/run-20260923T123908Z-02d9a1f-pid143932/max-used-iterations-1/iqn_ils/structure.stderr",
+    "case_precice_logs": [
+      "precice-Fluid_0000-convergence.log",
+      "precice-Fluid_0000-iterations.log",
+      "precice-Structure_0000-iterations.log",
+      "precice-config.xml"
+    ],
+    "case_precice_profiling": [
+      "precice-profiling/Fluid_0000-0-1.txt",
+      "precice-profiling/Structure_0000-0-1.txt"
+    ]
+  }
+}

@@ -1,0 +1,1125 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 10-c4cf895ad8fa
+Exec   : /opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam -case /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/iqn_ils/case
+Date   : Sep 23 2026
+Time   : 20:04:07
+Host   : "DESKTOP-NR4V0NP"
+PID    : 139702
+I/O    : uncollated
+Case   : /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/iqn_ils/case
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 30
+
+Selecting fvMeshMover motionSolver
+Selecting motion solver: displacementLaplacian
+Selecting motion diffusion: quadratic
+Selecting motion diffusion: inverseDistance
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: No corrector convergence criteria found
+        Calculations will do 3 corrections
+
+
+PIMPLE: Operating solver in transient mode with 3 outer correctors
+
+
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting viscosity model constant
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST
+Selecting patchDistMethod meshWave
+RAS
+{
+    model           kOmegaSST;
+    turbulence      on;
+    printCoeffs     on;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.5555555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+}
+
+No MRF models present
+
+No fvModels present
+No fvConstraints present
+Constructing face velocity Uf
+
+Courant Number mean: 0.01601199855 max: 0.4182184878
+
+Starting time loop
+
+forces cylinderForces:
+    Not including porosity effects
+forces cylinderForceCoeffs:
+    Not including porosity effects
+forceCoeffs cylinderForceCoeffs:
+    Not including porosity effects
+---[preciceAdapter] Loaded the OpenFOAM-preCICE adapter - v1.3.0.
+---[preciceAdapter] Reading preciceDict...
+(0) 20:04:08 [impl::ParticipantImpl]:185 in configure: [0mThis is preCICE version 3.4.1
+(0) 20:04:08 [impl::ParticipantImpl]:186 in configure: [0mRevision info: no-info [git failed to run]
+(0) 20:04:08 [impl::ParticipantImpl]:205 in configure: [0mBuild type: Release (without debug log)
+(0) 20:04:08 [impl::ParticipantImpl]:207 in configure: [0mWorking directory "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/iqn_ils/case"
+(0) 20:04:08 [impl::ParticipantImpl]:211 in configure: [0mConfiguring preCICE with configuration "precice-config.xml"
+(0) 20:04:08 [impl::ParticipantImpl]:212 in configure: [0mI am participant "Fluid_0000"
+(0) 20:04:08 [impl::ParticipantImpl]:335 in setupCommunication: [0mSetting up primary communication to coupling partner/s
+(0) 20:04:08 [impl::ParticipantImpl]:351 in setupCommunication: [0mPrimary ranks are connected
+(0) 20:04:08 [impl::ParticipantImpl]:357 in setupCommunication: [0mSetting up preliminary secondary communication to coupling partner/s
+(0) 20:04:08 [partition::ProvidedPartition]:120 in prepare: [0mPrepare partition for mesh Fluid-Mesh
+(0) 20:04:08 [partition::ReceivedPartition]:69 in communicate: [0mReceive global mesh Structure-Mesh
+(0) 20:04:08 [impl::ParticipantImpl]:366 in setupCommunication: [0mSetting up secondary communication to coupling partner/s
+(0) 20:04:08 [impl::ParticipantImpl]:373 in setupCommunication: [0mSecondary ranks are connected
+(0) 20:04:08 [impl::ParticipantImpl]:1633 in computeMappings: [0mComputing "nearest-neighbor" mapping from mesh "Fluid-Mesh" to mesh "Structure-Mesh" in "write" direction.
+(0) 20:04:08 [mapping::NearestNeighborMapping]:80 in computeMapping: [0mMapping distance min:0.0139983 max:0.0139983 avg: 0.0139983 var: -8.13152e-20 cnt: 200
+(0) 20:04:08 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:08 [impl::ParticipantImpl]:1633 in computeMappings: [0mComputing "nearest-neighbor" mapping from mesh "Structure-Mesh" to mesh "Fluid-Mesh" in "read" direction.
+(0) 20:04:08 [mapping::NearestNeighborMapping]:80 in computeMapping: [0mMapping distance min:0.0139983 max:0.0139983 avg: 0.0139983 var: -8.13152e-20 cnt: 200
+(0) 20:04:08 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0 from "Structure-Mesh" to "Fluid-Mesh" (skipped zero sample)
+(0) 20:04:08 [impl::ParticipantImpl]:298 in initialize: [0mit 1 (min: 2, max: 20), time-window 1 (max: 5), t 0, Dt 0.0002, max-dt 0.0002
+---[preciceAdapter] preCICE was configured and initialized
+--> FOAM Warning : 
+    From function void adapterInfo(std::string, std::string)
+    in file Utilities.C at line 17
+    [36mWarning in the preCICE adapter: [0m
+You have enabled 'runTimeModifiable' in the controlDict. The preciceAdapter does not yet fully support this functionality when 'adjustableTimestep' is not enabled. If you modify the 'deltaT' in the controlDict during the simulation, it will not be updated.
+
+---[preciceAdapter] Setting the solver's endTime to infinity to prevent early exits. Only preCICE will control the simulation's endTime. Any functionObject's end() method will be triggered by the adapter. You may disable this behavior in the adapter's configuration.
+forces cylinderForces write:
+    sum of forces:
+        pressure : (0.06381182377 0.05810672851 -2.753291492e-21)
+        viscous  : (0.001715216887 0.0006231456235 3.090879763e-22)
+        porous   : (0 0 0)
+    sum of moments:
+        pressure : (-0.0008134941992 0.0008933655327 9.84148821e-17)
+        viscous  : (-8.72403873e-06 2.401303642e-05 -2.400546007e-06)
+        porous   : (0 0 0)
+
+forceCoeffs cylinderForceCoeffs write:
+    Cm    = -0.002275844304
+    Cd    = 1.739446597
+    Cl    = 1.559012565
+    Cl(f) = 0.7772304381
+    Cl(r) = 0.7817821268
+
+Courant Number mean: 0.01601199855 max: 0.4182184878
+Time = 30.0002s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.188304052e-09, No Iterations 108
+time step continuity errors : sum local = 1.806055003e-15, global = -3.3180674e-16, cumulative = -3.3180674e-16
+smoothSolver:  Solving for Ux, Initial residual = 9.228596013e-05, Final residual = 1.238671823e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003464193159, Final residual = 3.608816333e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.4013646906, Final residual = 0.01860554392, No Iterations 2
+time step continuity errors : sum local = 8.145416056e-09, global = -1.80747064e-10, cumulative = -1.807473958e-10
+GAMG:  Solving for p, Initial residual = 0.2648004477, Final residual = 8.927883839e-09, No Iterations 91
+time step continuity errors : sum local = 4.262963848e-15, global = 8.693022219e-16, cumulative = -1.807465265e-10
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.67837182e-05, Final residual = 6.717754586e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001761568536, Final residual = 1.97300474e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.2506119387, Final residual = 0.01083432614, No Iterations 2
+time step continuity errors : sum local = 5.079029518e-09, global = -1.305157637e-10, cumulative = -3.112622902e-10
+GAMG:  Solving for p, Initial residual = 0.1677102885, Final residual = 9.781184731e-09, No Iterations 86
+time step continuity errors : sum local = 4.870555966e-15, global = -7.846455825e-16, cumulative = -3.112630748e-10
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.835251388e-05, Final residual = 3.239929878e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000181586967, Final residual = 9.820529443e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.03071999423, Final residual = 0.00181699524, No Iterations 2
+time step continuity errors : sum local = 1.512710258e-09, global = 1.797870805e-11, cumulative = -2.932843668e-10
+GAMG:  Solving for p, Initial residual = 0.02191357379, Final residual = 9.363449585e-09, No Iterations 91
+time step continuity errors : sum local = 7.757620611e-15, global = -1.570752899e-15, cumulative = -2.932859375e-10
+smoothSolver:  Solving for omega, Initial residual = 3.456080451e-06, Final residual = 7.301264705e-09, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002253987097, Final residual = 1.537989072e-09, No Iterations 2
+ExecutionTime = 1.176844 s  ClockTime = 2 s
+
+(0) 20:04:09 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0002 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:09 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 1.43e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 1.00e+00, limit = 1.00e-05, normalization = 1.43e-07, conv = false
+(0) 20:04:09 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 1.18e-03, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 1.34e-02, limit = 1.00e-05, normalization = 8.74e-02, conv = false
+(0) 20:04:09 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0002 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:09 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 20), time-window 1 (max: 5), t 0, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 0, Final residual = 0, No Iterations 0
+Courant Number mean: 0.01601199855 max: 0.4182184878
+Time = 30.0002s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.188304052e-09, No Iterations 108
+time step continuity errors : sum local = 1.806055003e-15, global = -3.3180674e-16, cumulative = -2.932862693e-10
+smoothSolver:  Solving for Ux, Initial residual = 9.228596013e-05, Final residual = 1.238671823e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003464193159, Final residual = 3.608816333e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.4013646906, Final residual = 0.01860554392, No Iterations 2
+time step continuity errors : sum local = 8.145416056e-09, global = -1.80747064e-10, cumulative = -4.740333333e-10
+GAMG:  Solving for p, Initial residual = 0.2648004477, Final residual = 8.927883839e-09, No Iterations 91
+time step continuity errors : sum local = 4.262963848e-15, global = 8.693022219e-16, cumulative = -4.74032464e-10
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.67837182e-05, Final residual = 6.717754586e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001761568536, Final residual = 1.97300474e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.2506119387, Final residual = 0.01083432614, No Iterations 2
+time step continuity errors : sum local = 5.079029518e-09, global = -1.305157637e-10, cumulative = -6.045482277e-10
+GAMG:  Solving for p, Initial residual = 0.1677102885, Final residual = 9.781184731e-09, No Iterations 86
+time step continuity errors : sum local = 4.870555966e-15, global = -7.846455825e-16, cumulative = -6.045490124e-10
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.835251388e-05, Final residual = 3.239929878e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000181586967, Final residual = 9.820529443e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.03071999423, Final residual = 0.00181699524, No Iterations 2
+time step continuity errors : sum local = 1.512710258e-09, global = 1.797870805e-11, cumulative = -5.865703043e-10
+GAMG:  Solving for p, Initial residual = 0.02191357379, Final residual = 9.363449585e-09, No Iterations 91
+time step continuity errors : sum local = 7.757620611e-15, global = -1.570752899e-15, cumulative = -5.865718751e-10
+smoothSolver:  Solving for omega, Initial residual = 3.456080451e-06, Final residual = 7.301264705e-09, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002253987097, Final residual = 1.537989072e-09, No Iterations 2
+ExecutionTime = 2.164208 s  ClockTime = 2 s
+
+(0) 20:04:09 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0002 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:09 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 1.14e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 8.00e-01, limit = 1.00e-05, normalization = 1.43e-07, conv = false
+(0) 20:04:09 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 9.40e-04, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 1.08e-02, limit = 1.00e-05, normalization = 8.74e-02, conv = true
+(0) 20:04:09 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0002 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:09 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 20), time-window 1 (max: 5), t 0, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 0, Final residual = 0, No Iterations 0
+Courant Number mean: 0.01601199855 max: 0.4182184878
+Time = 30.0002s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 0, Final residual = 0, No Iterations 0
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.188304052e-09, No Iterations 108
+time step continuity errors : sum local = 1.806055003e-15, global = -3.3180674e-16, cumulative = -5.865722069e-10
+smoothSolver:  Solving for Ux, Initial residual = 9.228596013e-05, Final residual = 1.238671823e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003464193159, Final residual = 3.608816333e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.4013646906, Final residual = 0.01860554392, No Iterations 2
+time step continuity errors : sum local = 8.145416056e-09, global = -1.80747064e-10, cumulative = -7.673192708e-10
+GAMG:  Solving for p, Initial residual = 0.2648004477, Final residual = 8.927883839e-09, No Iterations 91
+time step continuity errors : sum local = 4.262963848e-15, global = 8.693022219e-16, cumulative = -7.673184015e-10
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.67837182e-05, Final residual = 6.717754586e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001761568536, Final residual = 1.97300474e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.2506119387, Final residual = 0.01083432614, No Iterations 2
+time step continuity errors : sum local = 5.079029518e-09, global = -1.305157637e-10, cumulative = -8.978341652e-10
+GAMG:  Solving for p, Initial residual = 0.1677102885, Final residual = 9.781184731e-09, No Iterations 86
+time step continuity errors : sum local = 4.870555966e-15, global = -7.846455825e-16, cumulative = -8.978349499e-10
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.835251388e-05, Final residual = 3.239929878e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000181586967, Final residual = 9.820529443e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.03071999423, Final residual = 0.00181699524, No Iterations 2
+time step continuity errors : sum local = 1.512710258e-09, global = 1.797870805e-11, cumulative = -8.798562418e-10
+GAMG:  Solving for p, Initial residual = 0.02191357379, Final residual = 9.363449585e-09, No Iterations 91
+time step continuity errors : sum local = 7.757620611e-15, global = -1.570752899e-15, cumulative = -8.798578126e-10
+smoothSolver:  Solving for omega, Initial residual = 3.456080451e-06, Final residual = 7.301264705e-09, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002253987097, Final residual = 1.537989072e-09, No Iterations 2
+ExecutionTime = 3.138695 s  ClockTime = 3 s
+
+(0) 20:04:10 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0002 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:10 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 6.59e-12, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 4.65e-05, limit = 1.00e-05, normalization = 1.42e-07, conv = true
+(0) 20:04:10 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-05, normalization = 8.74e-02, conv = true
+(0) 20:04:10 [cplscheme::BaseCouplingScheme]:743 in measureConvergence: [0mAll converged
+(0) 20:04:10 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 20:04:10 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0002 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:10 [impl::ParticipantImpl]:457 in advance: [0mit 1 (min: 2, max: 20), time-window 2 (max: 5), t 0.0002, Dt 0.0002, max-dt 0.0002
+Courant Number mean: 0.01601185442 max: 0.4181024227
+Time = 30.0004s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 1, Final residual = 3.587046917e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 1, Final residual = 4.89666917e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.864576915e-09, No Iterations 205
+time step continuity errors : sum local = 1.668153016e-16, global = -3.285144803e-17, cumulative = -8.798578454e-10
+smoothSolver:  Solving for Ux, Initial residual = 9.248282627e-05, Final residual = 1.231042711e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003478843535, Final residual = 3.55368743e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1987334578, Final residual = 0.01856337045, No Iterations 10
+time step continuity errors : sum local = 7.3140306e-09, global = 1.747209559e-09, cumulative = 8.673517139e-10
+GAMG:  Solving for p, Initial residual = 0.1476217502, Final residual = 8.981453777e-09, No Iterations 166
+time step continuity errors : sum local = 3.456876265e-15, global = 6.649181969e-16, cumulative = 8.673523788e-10
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.795113659e-05, Final residual = 8.874060968e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001780392309, Final residual = 1.83808893e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1747638803, Final residual = 0.01699187265, No Iterations 7
+time step continuity errors : sum local = 6.541368838e-09, global = -1.178709181e-09, cumulative = -3.113568026e-10
+GAMG:  Solving for p, Initial residual = 0.127278064, Final residual = 8.700297517e-09, No Iterations 161
+time step continuity errors : sum local = 3.321425713e-15, global = 6.401526497e-16, cumulative = -3.113561624e-10
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 5.818439309e-05, Final residual = 5.7851286e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001978257614, Final residual = 9.26655509e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.2848664912, Final residual = 0.01461281752, No Iterations 2
+time step continuity errors : sum local = 1.042827309e-08, global = 1.956913375e-10, cumulative = -1.156648249e-10
+GAMG:  Solving for p, Initial residual = 0.2160497884, Final residual = 9.524036373e-09, No Iterations 131
+time step continuity errors : sum local = 6.368906804e-15, global = -1.274941811e-15, cumulative = -1.156660999e-10
+smoothSolver:  Solving for omega, Initial residual = 3.629240976e-06, Final residual = 8.181129464e-09, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002259668148, Final residual = 1.570383993e-09, No Iterations 2
+ExecutionTime = 4.417462 s  ClockTime = 5 s
+
+(0) 20:04:12 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0004 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:12 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 5.65e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 7.99e-01, limit = 1.00e-05, normalization = 7.07e-07, conv = false
+(0) 20:04:12 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 1.39e-01, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 2.70e+00, limit = 1.00e-05, normalization = 5.16e-02, conv = false
+(0) 20:04:12 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0004 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:12 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 20), time-window 2 (max: 5), t 0.0002, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 5.268220918e-09, Final residual = 5.268220918e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 3.500018854e-09, Final residual = 3.500018854e-09, No Iterations 0
+Courant Number mean: 0.01601185442 max: 0.4181024227
+Time = 30.0004s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 1, Final residual = 3.587046917e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 1, Final residual = 4.89666917e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.098402987e-09, No Iterations 209
+time step continuity errors : sum local = 1.237503047e-18, global = 4.648864843e-20, cumulative = -1.156660998e-10
+smoothSolver:  Solving for Ux, Initial residual = 9.248178474e-05, Final residual = 1.230787959e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003478502692, Final residual = 3.547537132e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1635784266, Final residual = 0.01114427922, No Iterations 2
+time step continuity errors : sum local = 4.213435373e-09, global = 4.965071977e-12, cumulative = -1.107010279e-10
+GAMG:  Solving for p, Initial residual = 0.1207810066, Final residual = 8.872934139e-09, No Iterations 124
+time step continuity errors : sum local = 3.240035988e-15, global = -6.439699642e-16, cumulative = -1.107016718e-10
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.689963467e-05, Final residual = 6.715256514e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001763455142, Final residual = 1.965217605e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1561008569, Final residual = 0.01117438196, No Iterations 2
+time step continuity errors : sum local = 4.047087351e-09, global = 1.220640041e-11, cumulative = -9.849527142e-11
+GAMG:  Solving for p, Initial residual = 0.1168390012, Final residual = 9.416419394e-09, No Iterations 122
+time step continuity errors : sum local = 3.311988244e-15, global = -6.568153454e-16, cumulative = -9.849592824e-11
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.861282012e-05, Final residual = 3.267334318e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001807564938, Final residual = 9.965815111e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.3013946553, Final residual = 0.01239779809, No Iterations 2
+time step continuity errors : sum local = 8.267455336e-09, global = 1.938316119e-10, cumulative = 9.533568365e-11
+GAMG:  Solving for p, Initial residual = 0.2304876257, Final residual = 8.946919317e-09, No Iterations 117
+time step continuity errors : sum local = 5.560502744e-15, global = -1.063988983e-15, cumulative = 9.533461966e-11
+smoothSolver:  Solving for omega, Initial residual = 4.165148921e-06, Final residual = 9.266882318e-09, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.000225929332, Final residual = 1.562387727e-09, No Iterations 2
+ExecutionTime = 5.659208 s  ClockTime = 6 s
+
+(0) 20:04:13 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0004 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:13 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 4.07e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 6.15e-01, limit = 1.00e-05, normalization = 6.62e-07, conv = false
+(0) 20:04:13 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 2.89e-02, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 3.26e-01, limit = 1.00e-05, normalization = 8.85e-02, conv = false
+(0) 20:04:13 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0004 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:13 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 20), time-window 2 (max: 5), t 0.0002, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 5.267954811e-09, Final residual = 5.267954811e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 3.499903551e-09, Final residual = 3.499903551e-09, No Iterations 0
+Courant Number mean: 0.01601185442 max: 0.4181024227
+Time = 30.0004s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 1, Final residual = 3.587046917e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 1, Final residual = 4.89666917e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.098402987e-09, No Iterations 209
+time step continuity errors : sum local = 1.237503047e-18, global = 4.648864843e-20, cumulative = 9.533461971e-11
+smoothSolver:  Solving for Ux, Initial residual = 9.248178474e-05, Final residual = 1.230787959e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003478502692, Final residual = 3.547537132e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1635784266, Final residual = 0.01114427922, No Iterations 2
+time step continuity errors : sum local = 4.213435373e-09, global = 4.965071977e-12, cumulative = 1.002996917e-10
+GAMG:  Solving for p, Initial residual = 0.1207810066, Final residual = 8.872934139e-09, No Iterations 124
+time step continuity errors : sum local = 3.240035988e-15, global = -6.439699642e-16, cumulative = 1.002990477e-10
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.689963467e-05, Final residual = 6.715256514e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001763455142, Final residual = 1.965217605e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1561008569, Final residual = 0.01117438196, No Iterations 2
+time step continuity errors : sum local = 4.047087351e-09, global = 1.220640041e-11, cumulative = 1.125054481e-10
+GAMG:  Solving for p, Initial residual = 0.1168390012, Final residual = 9.416419394e-09, No Iterations 122
+time step continuity errors : sum local = 3.311988244e-15, global = -6.568153454e-16, cumulative = 1.125047913e-10
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.861282012e-05, Final residual = 3.267334318e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001807564938, Final residual = 9.965815111e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.3013946553, Final residual = 0.01239779809, No Iterations 2
+time step continuity errors : sum local = 8.267455336e-09, global = 1.938316119e-10, cumulative = 3.063364032e-10
+GAMG:  Solving for p, Initial residual = 0.2304876257, Final residual = 8.946919317e-09, No Iterations 117
+time step continuity errors : sum local = 5.560502744e-15, global = -1.063988983e-15, cumulative = 3.063353392e-10
+smoothSolver:  Solving for omega, Initial residual = 4.165148921e-06, Final residual = 9.266882318e-09, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.000225929332, Final residual = 1.562387727e-09, No Iterations 2
+ExecutionTime = 6.917166 s  ClockTime = 7 s
+
+(0) 20:04:14 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0004 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:14 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 1.19e-09, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 1.77e-03, limit = 1.00e-05, normalization = 6.70e-07, conv = true
+(0) 20:04:14 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 2.41e-02, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 2.72e-01, limit = 1.00e-05, normalization = 8.85e-02, conv = false
+(0) 20:04:14 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0004 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:14 [impl::ParticipantImpl]:457 in advance: [0mit 4 (min: 2, max: 20), time-window 2 (max: 5), t 0.0002, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 5.267954811e-09, Final residual = 5.267954811e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 3.499903551e-09, Final residual = 3.499903551e-09, No Iterations 0
+Courant Number mean: 0.01601185442 max: 0.4181024227
+Time = 30.0004s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 1, Final residual = 3.587046917e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 1, Final residual = 4.89666917e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.098402987e-09, No Iterations 209
+time step continuity errors : sum local = 1.237503047e-18, global = 4.648864843e-20, cumulative = 3.063353393e-10
+smoothSolver:  Solving for Ux, Initial residual = 9.248178474e-05, Final residual = 1.230787959e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003478502692, Final residual = 3.547537132e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1635784266, Final residual = 0.01114427922, No Iterations 2
+time step continuity errors : sum local = 4.213435373e-09, global = 4.965071977e-12, cumulative = 3.113004112e-10
+GAMG:  Solving for p, Initial residual = 0.1207810066, Final residual = 8.872934139e-09, No Iterations 124
+time step continuity errors : sum local = 3.240035988e-15, global = -6.439699642e-16, cumulative = 3.112997673e-10
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.689963467e-05, Final residual = 6.715256514e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001763455142, Final residual = 1.965217605e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1561008569, Final residual = 0.01117438196, No Iterations 2
+time step continuity errors : sum local = 4.047087351e-09, global = 1.220640041e-11, cumulative = 3.235061677e-10
+GAMG:  Solving for p, Initial residual = 0.1168390012, Final residual = 9.416419394e-09, No Iterations 122
+time step continuity errors : sum local = 3.311988244e-15, global = -6.568153454e-16, cumulative = 3.235055109e-10
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.861282012e-05, Final residual = 3.267334318e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001807564938, Final residual = 9.965815111e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.3013946553, Final residual = 0.01239779809, No Iterations 2
+time step continuity errors : sum local = 8.267455336e-09, global = 1.938316119e-10, cumulative = 5.173371228e-10
+GAMG:  Solving for p, Initial residual = 0.2304876257, Final residual = 8.946919317e-09, No Iterations 117
+time step continuity errors : sum local = 5.560502744e-15, global = -1.063988983e-15, cumulative = 5.173360588e-10
+smoothSolver:  Solving for omega, Initial residual = 4.165148921e-06, Final residual = 9.266882318e-09, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.000225929332, Final residual = 1.562387727e-09, No Iterations 2
+ExecutionTime = 8.22852 s  ClockTime = 8 s
+
+(0) 20:04:15 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0004 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:15 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 1.37e-08, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 1.93e-02, limit = 1.00e-05, normalization = 7.09e-07, conv = false
+(0) 20:04:15 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-05, normalization = 8.85e-02, conv = true
+(0) 20:04:15 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0004 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:15 [impl::ParticipantImpl]:457 in advance: [0mit 5 (min: 2, max: 20), time-window 2 (max: 5), t 0.0002, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 5.267954811e-09, Final residual = 5.267954811e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 3.499903551e-09, Final residual = 3.499903551e-09, No Iterations 0
+Courant Number mean: 0.01601185442 max: 0.4181024227
+Time = 30.0004s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 1, Final residual = 3.587046917e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 1, Final residual = 4.89666917e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.098402987e-09, No Iterations 209
+time step continuity errors : sum local = 1.237503047e-18, global = 4.648864843e-20, cumulative = 5.173360588e-10
+smoothSolver:  Solving for Ux, Initial residual = 9.248178474e-05, Final residual = 1.230787959e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003478502692, Final residual = 3.547537132e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1635784266, Final residual = 0.01114427922, No Iterations 2
+time step continuity errors : sum local = 4.213435373e-09, global = 4.965071977e-12, cumulative = 5.223011308e-10
+GAMG:  Solving for p, Initial residual = 0.1207810066, Final residual = 8.872934139e-09, No Iterations 124
+time step continuity errors : sum local = 3.240035988e-15, global = -6.439699642e-16, cumulative = 5.223004868e-10
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.689963467e-05, Final residual = 6.715256514e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001763455142, Final residual = 1.965217605e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1561008569, Final residual = 0.01117438196, No Iterations 2
+time step continuity errors : sum local = 4.047087351e-09, global = 1.220640041e-11, cumulative = 5.345068872e-10
+GAMG:  Solving for p, Initial residual = 0.1168390012, Final residual = 9.416419394e-09, No Iterations 122
+time step continuity errors : sum local = 3.311988244e-15, global = -6.568153454e-16, cumulative = 5.345062304e-10
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.861282012e-05, Final residual = 3.267334318e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001807564938, Final residual = 9.965815111e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.3013946553, Final residual = 0.01239779809, No Iterations 2
+time step continuity errors : sum local = 8.267455336e-09, global = 1.938316119e-10, cumulative = 7.283378423e-10
+GAMG:  Solving for p, Initial residual = 0.2304876257, Final residual = 8.946919317e-09, No Iterations 117
+time step continuity errors : sum local = 5.560502744e-15, global = -1.063988983e-15, cumulative = 7.283367783e-10
+smoothSolver:  Solving for omega, Initial residual = 4.165148921e-06, Final residual = 9.266882318e-09, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.000225929332, Final residual = 1.562387727e-09, No Iterations 2
+ExecutionTime = 9.478723 s  ClockTime = 9 s
+
+(0) 20:04:16 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0004 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:16 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 5.18e-20, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 7.30e-14, limit = 1.00e-05, normalization = 7.09e-07, conv = true
+(0) 20:04:16 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-05, normalization = 8.85e-02, conv = true
+(0) 20:04:16 [cplscheme::BaseCouplingScheme]:743 in measureConvergence: [0mAll converged
+(0) 20:04:16 [acceleration::BaseQNAcceleration]:277 in updateDifferenceMatrices: [36mWARNING: ][0mThe coupling residual equals almost zero. There is maybe something wrong in your adapter. Maybe you always write the same data or you call advance without providing new data first or you do not use available read data. Or you just converge much further than actually necessary.
+(0) 20:04:16 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 20:04:16 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0004 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:16 [impl::ParticipantImpl]:457 in advance: [0mit 1 (min: 2, max: 20), time-window 3 (max: 5), t 0.0004, Dt 0.0002, max-dt 0.0002
+Courant Number mean: 0.01597619206 max: 0.4184192211
+Time = 30.0006s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9831047053, Final residual = 2.405779945e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.9656102715, Final residual = 3.698513393e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.397035608e-09, No Iterations 173
+time step continuity errors : sum local = 7.941771337e-16, global = 1.535775308e-16, cumulative = 7.283369319e-10
+smoothSolver:  Solving for Ux, Initial residual = 9.311501409e-05, Final residual = 1.252051348e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003454701536, Final residual = 3.610002833e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.2846003158, Final residual = 0.02610356864, No Iterations 12
+time step continuity errors : sum local = 1.138012974e-08, global = 2.427166844e-09, cumulative = 3.155503776e-09
+GAMG:  Solving for p, Initial residual = 0.1929488715, Final residual = 8.500234536e-09, No Iterations 152
+time step continuity errors : sum local = 4.127479558e-15, global = 8.040408125e-16, cumulative = 3.15550458e-09
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 8.023958092e-05, Final residual = 2.085336309e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0002411871231, Final residual = 3.517949999e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1777292145, Final residual = 0.01710805284, No Iterations 9
+time step continuity errors : sum local = 8.333900715e-09, global = 1.598242855e-09, cumulative = 4.753747436e-09
+GAMG:  Solving for p, Initial residual = 0.1292338777, Final residual = 9.595283751e-09, No Iterations 144
+time step continuity errors : sum local = 4.932318109e-15, global = 9.603490095e-16, cumulative = 4.753748396e-09
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 0.0001301673634, Final residual = 4.297769629e-09, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0003465919335, Final residual = 6.678706726e-09, No Iterations 2
+GAMG:  Solving for p, Initial residual = 0.1555966554, Final residual = 0.01276521285, No Iterations 3
+time step continuity errors : sum local = 1.152742751e-08, global = 1.000578058e-09, cumulative = 5.754326454e-09
+GAMG:  Solving for p, Initial residual = 0.1096188497, Final residual = 8.959185632e-09, No Iterations 124
+time step continuity errors : sum local = 7.88827462e-15, global = -1.52922938e-15, cumulative = 5.754324925e-09
+smoothSolver:  Solving for omega, Initial residual = 4.227327945e-06, Final residual = 9.066929356e-09, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002251299498, Final residual = 1.603091842e-09, No Iterations 2
+ExecutionTime = 10.637473 s  ClockTime = 10 s
+
+(0) 20:04:17 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0006000000000000001 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:17 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 1.13e-06, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 6.15e-01, limit = 1.00e-05, normalization = 1.84e-06, conv = false
+(0) 20:04:17 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 6.99e-01, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 1.15e+00, limit = 1.00e-05, normalization = 6.10e-01, conv = false
+(0) 20:04:17 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0006000000000000001 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:17 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 20), time-window 3 (max: 5), t 0.0004, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 4.109836895e-09, Final residual = 4.109836895e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 2.441002158e-09, Final residual = 2.441002158e-09, No Iterations 0
+Courant Number mean: 0.01597619206 max: 0.4184192211
+Time = 30.0006s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9831047053, Final residual = 1.958358617e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.9656102715, Final residual = 3.438010224e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.716360829e-09, No Iterations 148
+time step continuity errors : sum local = 1.760275753e-18, global = 1.774909734e-19, cumulative = 5.754324925e-09
+smoothSolver:  Solving for Ux, Initial residual = 9.314240529e-05, Final residual = 1.250300884e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003452356798, Final residual = 3.581141778e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1127106407, Final residual = 0.004675348418, No Iterations 2
+time step continuity errors : sum local = 1.650639415e-09, global = -3.62883215e-11, cumulative = 5.718036603e-09
+GAMG:  Solving for p, Initial residual = 0.07829352901, Final residual = 9.27279744e-09, No Iterations 75
+time step continuity errors : sum local = 3.336826873e-15, global = 5.876514582e-16, cumulative = 5.718037191e-09
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.730243757e-05, Final residual = 6.813265156e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001750719935, Final residual = 1.976803442e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.08028329016, Final residual = 0.003639209948, No Iterations 2
+time step continuity errors : sum local = 1.310868283e-09, global = -3.867733345e-11, cumulative = 5.679359858e-09
+GAMG:  Solving for p, Initial residual = 0.05594495788, Final residual = 9.88397392e-09, No Iterations 71
+time step continuity errors : sum local = 3.609236495e-15, global = 6.074637996e-16, cumulative = 5.679360465e-09
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.832706799e-05, Final residual = 3.30001652e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001793380398, Final residual = 9.928925211e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1840341898, Final residual = 0.01504704692, No Iterations 1
+time step continuity errors : sum local = 9.46830558e-09, global = 8.276483308e-12, cumulative = 5.687636948e-09
+GAMG:  Solving for p, Initial residual = 0.1344221956, Final residual = 9.176485431e-09, No Iterations 75
+time step continuity errors : sum local = 5.544007897e-15, global = 1.235691993e-15, cumulative = 5.687638184e-09
+smoothSolver:  Solving for omega, Initial residual = 5.990890196e-06, Final residual = 1.337082559e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002248984709, Final residual = 1.563999418e-09, No Iterations 2
+ExecutionTime = 11.701161 s  ClockTime = 11 s
+
+(0) 20:04:18 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0006000000000000001 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:18 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 6.78e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 4.20e-01, limit = 1.00e-05, normalization = 1.61e-06, conv = false
+(0) 20:04:18 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 1.40e-01, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 1.58e+00, limit = 1.00e-05, normalization = 8.86e-02, conv = false
+(0) 20:04:18 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0006000000000000001 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:18 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 20), time-window 3 (max: 5), t 0.0004, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 4.975586288e-09, Final residual = 4.975586288e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 2.510473736e-09, Final residual = 2.510473736e-09, No Iterations 0
+Courant Number mean: 0.01597619206 max: 0.4184192211
+Time = 30.0006s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9831047053, Final residual = 2.405779945e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.9656102715, Final residual = 3.698513393e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.774352586e-09, No Iterations 175
+time step continuity errors : sum local = 1.837380791e-18, global = 1.945966108e-19, cumulative = 5.687638184e-09
+smoothSolver:  Solving for Ux, Initial residual = 9.315701767e-05, Final residual = 1.250315792e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003453080041, Final residual = 3.581285125e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1127127676, Final residual = 0.004643057728, No Iterations 2
+time step continuity errors : sum local = 1.639238764e-09, global = -2.654758229e-12, cumulative = 5.684983426e-09
+GAMG:  Solving for p, Initial residual = 0.07846121968, Final residual = 9.202817028e-09, No Iterations 86
+time step continuity errors : sum local = 3.310110271e-15, global = 5.824115243e-16, cumulative = 5.684984009e-09
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.730971896e-05, Final residual = 6.813518174e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001751089027, Final residual = 1.976902307e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.08028176364, Final residual = 0.003477641925, No Iterations 2
+time step continuity errors : sum local = 1.252669775e-09, global = -6.263295864e-13, cumulative = 5.684357679e-09
+GAMG:  Solving for p, Initial residual = 0.05604986598, Final residual = 8.999383303e-09, No Iterations 84
+time step continuity errors : sum local = 3.284551104e-15, global = 5.738605077e-16, cumulative = 5.684358253e-09
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.833456194e-05, Final residual = 3.300305694e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001793764711, Final residual = 9.929564642e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.184016646, Final residual = 0.01759226969, No Iterations 1
+time step continuity errors : sum local = 1.106967829e-08, global = 1.490118375e-10, cumulative = 5.83337009e-09
+GAMG:  Solving for p, Initial residual = 0.1349697472, Final residual = 9.6812691e-09, No Iterations 90
+time step continuity errors : sum local = 5.8470758e-15, global = 1.247728148e-15, cumulative = 5.833371338e-09
+smoothSolver:  Solving for omega, Initial residual = 5.991154921e-06, Final residual = 1.337085439e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002249447619, Final residual = 1.564000985e-09, No Iterations 2
+ExecutionTime = 12.822665 s  ClockTime = 12 s
+
+(0) 20:04:19 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0006000000000000001 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:19 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 2.78e-08, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 1.66e-02, limit = 1.00e-05, normalization = 1.67e-06, conv = false
+(0) 20:04:19 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 1.02e-01, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 1.15e+00, limit = 1.00e-05, normalization = 8.86e-02, conv = false
+(0) 20:04:19 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0006000000000000001 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:19 [impl::ParticipantImpl]:457 in advance: [0mit 4 (min: 2, max: 20), time-window 3 (max: 5), t 0.0004, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 4.112489467e-09, Final residual = 4.112489467e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 2.441859796e-09, Final residual = 2.441859796e-09, No Iterations 0
+Courant Number mean: 0.01597619206 max: 0.4184192211
+Time = 30.0006s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9831047053, Final residual = 1.958358617e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.9656102715, Final residual = 3.438010224e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.716360829e-09, No Iterations 148
+time step continuity errors : sum local = 1.760275753e-18, global = 1.774909734e-19, cumulative = 5.833371338e-09
+smoothSolver:  Solving for Ux, Initial residual = 9.314240529e-05, Final residual = 1.250300884e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003452356798, Final residual = 3.581141778e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1127106407, Final residual = 0.004675348418, No Iterations 2
+time step continuity errors : sum local = 1.650639415e-09, global = -3.62883215e-11, cumulative = 5.797083017e-09
+GAMG:  Solving for p, Initial residual = 0.07829352901, Final residual = 9.27279744e-09, No Iterations 75
+time step continuity errors : sum local = 3.336826873e-15, global = 5.876514582e-16, cumulative = 5.797083604e-09
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.730243757e-05, Final residual = 6.813265156e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001750719935, Final residual = 1.976803442e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.08028329016, Final residual = 0.003639209948, No Iterations 2
+time step continuity errors : sum local = 1.310868283e-09, global = -3.867733345e-11, cumulative = 5.758406271e-09
+GAMG:  Solving for p, Initial residual = 0.05594495788, Final residual = 9.88397392e-09, No Iterations 71
+time step continuity errors : sum local = 3.609236495e-15, global = 6.074637996e-16, cumulative = 5.758406878e-09
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.832706799e-05, Final residual = 3.30001652e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001793380398, Final residual = 9.928925211e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1840341898, Final residual = 0.01504704692, No Iterations 1
+time step continuity errors : sum local = 9.46830558e-09, global = 8.276483308e-12, cumulative = 5.766683362e-09
+GAMG:  Solving for p, Initial residual = 0.1344221956, Final residual = 9.176485431e-09, No Iterations 75
+time step continuity errors : sum local = 5.544007897e-15, global = 1.235691993e-15, cumulative = 5.766684597e-09
+smoothSolver:  Solving for omega, Initial residual = 5.990890196e-06, Final residual = 1.337082559e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002248984709, Final residual = 1.563999418e-09, No Iterations 2
+ExecutionTime = 13.803299 s  ClockTime = 13 s
+
+(0) 20:04:20 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0006000000000000001 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:20 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 1.52e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 8.24e-02, limit = 1.00e-05, normalization = 1.84e-06, conv = false
+(0) 20:04:20 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 1.74e-06, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 1.97e-05, limit = 1.00e-05, normalization = 8.86e-02, conv = true
+(0) 20:04:20 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0006000000000000001 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:20 [impl::ParticipantImpl]:457 in advance: [0mit 5 (min: 2, max: 20), time-window 3 (max: 5), t 0.0004, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 4.975586288e-09, Final residual = 4.975586288e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 2.510473736e-09, Final residual = 2.510473736e-09, No Iterations 0
+Courant Number mean: 0.01597619206 max: 0.4184192211
+Time = 30.0006s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9831047053, Final residual = 2.405779945e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.9656102715, Final residual = 3.698513393e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.774352586e-09, No Iterations 175
+time step continuity errors : sum local = 1.837380791e-18, global = 1.945966108e-19, cumulative = 5.766684598e-09
+smoothSolver:  Solving for Ux, Initial residual = 9.315701767e-05, Final residual = 1.250315792e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003453080041, Final residual = 3.581285125e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1127127676, Final residual = 0.004643057728, No Iterations 2
+time step continuity errors : sum local = 1.639238764e-09, global = -2.654758229e-12, cumulative = 5.764029839e-09
+GAMG:  Solving for p, Initial residual = 0.07846121968, Final residual = 9.202817028e-09, No Iterations 86
+time step continuity errors : sum local = 3.310110271e-15, global = 5.824115243e-16, cumulative = 5.764030422e-09
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.730971896e-05, Final residual = 6.813518174e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001751089027, Final residual = 1.976902307e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.08028176364, Final residual = 0.003477641925, No Iterations 2
+time step continuity errors : sum local = 1.252669775e-09, global = -6.263295864e-13, cumulative = 5.763404092e-09
+GAMG:  Solving for p, Initial residual = 0.05604986598, Final residual = 8.999383303e-09, No Iterations 84
+time step continuity errors : sum local = 3.284551104e-15, global = 5.738605077e-16, cumulative = 5.763404666e-09
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.833456194e-05, Final residual = 3.300305694e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001793764711, Final residual = 9.929564642e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.184016646, Final residual = 0.01759226969, No Iterations 1
+time step continuity errors : sum local = 1.106967829e-08, global = 1.490118375e-10, cumulative = 5.912416504e-09
+GAMG:  Solving for p, Initial residual = 0.1349697472, Final residual = 9.6812691e-09, No Iterations 90
+time step continuity errors : sum local = 5.8470758e-15, global = 1.247728148e-15, cumulative = 5.912417751e-09
+smoothSolver:  Solving for omega, Initial residual = 5.991154921e-06, Final residual = 1.337085439e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002249447619, Final residual = 1.564000985e-09, No Iterations 2
+ExecutionTime = 14.86292 s  ClockTime = 14 s
+
+(0) 20:04:21 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0006000000000000001 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:21 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 8.25e-13, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 4.49e-07, limit = 1.00e-05, normalization = 1.84e-06, conv = true
+(0) 20:04:21 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 1.41e-06, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 1.59e-05, limit = 1.00e-05, normalization = 8.86e-02, conv = true
+(0) 20:04:21 [cplscheme::BaseCouplingScheme]:743 in measureConvergence: [0mAll converged
+(0) 20:04:21 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 20:04:21 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0006000000000000001 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:21 [impl::ParticipantImpl]:457 in advance: [0mit 1 (min: 2, max: 20), time-window 4 (max: 5), t 0.0006000000000000001, Dt 0.0002, max-dt 0.0002
+Courant Number mean: 0.01588498621 max: 0.4194843502
+Time = 30.0008s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9708234845, Final residual = 2.903311919e-11, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.9258227013, Final residual = 1.578910661e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.956276794e-09, No Iterations 164
+time step continuity errors : sum local = 2.182767248e-15, global = -4.192880316e-16, cumulative = 5.912417332e-09
+smoothSolver:  Solving for Ux, Initial residual = 9.24900469e-05, Final residual = 1.274279888e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000342281667, Final residual = 3.64711987e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.4474221522, Final residual = 0.04423356044, No Iterations 15
+time step continuity errors : sum local = 2.521833225e-08, global = 3.799300396e-09, cumulative = 9.711717728e-09
+GAMG:  Solving for p, Initial residual = 0.2862077953, Final residual = 8.930517803e-09, No Iterations 148
+time step continuity errors : sum local = 6.262625004e-15, global = 1.113996062e-15, cumulative = 9.711718842e-09
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0001508963331, Final residual = 4.578192844e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000386190579, Final residual = 8.968380777e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.2586863104, Final residual = 0.02534480228, No Iterations 13
+time step continuity errors : sum local = 1.78172682e-08, global = 2.751790092e-09, cumulative = 1.246350893e-08
+GAMG:  Solving for p, Initial residual = 0.1807871802, Final residual = 9.532150762e-09, No Iterations 141
+time step continuity errors : sum local = 7.485765752e-15, global = -1.484471679e-15, cumulative = 1.246350745e-08
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 0.0002862687875, Final residual = 1.062018065e-08, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.0006656259295, Final residual = 2.029408845e-08, No Iterations 2
+GAMG:  Solving for p, Initial residual = 0.1401369222, Final residual = 0.008758381084, No Iterations 4
+time step continuity errors : sum local = 1.192645527e-08, global = -2.083122823e-09, cumulative = 1.038038463e-08
+GAMG:  Solving for p, Initial residual = 0.09521912325, Final residual = 9.073957962e-09, No Iterations 120
+time step continuity errors : sum local = 1.232690108e-14, global = -2.264698323e-15, cumulative = 1.038038236e-08
+smoothSolver:  Solving for omega, Initial residual = 6.960070624e-06, Final residual = 1.384733895e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002236444451, Final residual = 1.660593361e-09, No Iterations 2
+ExecutionTime = 16.055752 s  ClockTime = 15 s
+
+(0) 20:04:22 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0008 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:22 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 1.68e-06, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 4.78e-01, limit = 1.00e-05, normalization = 3.52e-06, conv = false
+(0) 20:04:22 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 1.81e+00, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 1.05e+00, limit = 1.00e-05, normalization = 1.72e+00, conv = false
+(0) 20:04:22 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0008 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:22 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 20), time-window 4 (max: 5), t 0.0006000000000000001, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 1.009833318e-09, Final residual = 1.009833318e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 1.005049559e-09, Final residual = 1.005049559e-09, No Iterations 0
+Courant Number mean: 0.01588498621 max: 0.4194843502
+Time = 30.0008s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9708234845, Final residual = 1.861135898e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.9258227013, Final residual = 3.357469579e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 8.801099827e-09, No Iterations 154
+time step continuity errors : sum local = 2.384403592e-18, global = 3.155128401e-19, cumulative = 1.038038236e-08
+smoothSolver:  Solving for Ux, Initial residual = 9.282001658e-05, Final residual = 1.267242751e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003419361785, Final residual = 3.570187715e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1024606448, Final residual = 0.003766918868, No Iterations 2
+time step continuity errors : sum local = 1.331111255e-09, global = 2.106783196e-11, cumulative = 1.040145019e-08
+GAMG:  Solving for p, Initial residual = 0.07003044357, Final residual = 8.762579644e-09, No Iterations 90
+time step continuity errors : sum local = 3.160275294e-15, global = 5.837595569e-16, cumulative = 1.040145078e-08
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.711591722e-05, Final residual = 6.904773152e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001734977294, Final residual = 1.967294295e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.07211928256, Final residual = 0.002898722089, No Iterations 2
+time step continuity errors : sum local = 1.046963103e-09, global = 1.593342672e-11, cumulative = 1.041738421e-08
+GAMG:  Solving for p, Initial residual = 0.04992678727, Final residual = 9.138048982e-09, No Iterations 78
+time step continuity errors : sum local = 3.352186353e-15, global = 6.559341872e-16, cumulative = 1.041738486e-08
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.814344137e-05, Final residual = 3.341511197e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001780240494, Final residual = 9.851425091e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1805752642, Final residual = 0.01473902818, No Iterations 1
+time step continuity errors : sum local = 9.279847374e-09, global = 8.144638359e-11, cumulative = 1.049883124e-08
+GAMG:  Solving for p, Initial residual = 0.1314695487, Final residual = 9.316098014e-09, No Iterations 90
+time step continuity errors : sum local = 5.632932178e-15, global = -1.041637786e-15, cumulative = 1.04988302e-08
+smoothSolver:  Solving for omega, Initial residual = 8.256402378e-06, Final residual = 1.940519884e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002232353721, Final residual = 1.558644576e-09, No Iterations 2
+ExecutionTime = 17.070392 s  ClockTime = 16 s
+
+(0) 20:04:23 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0008 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:23 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 7.57e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 2.58e-01, limit = 1.00e-05, normalization = 2.93e-06, conv = false
+(0) 20:04:23 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 3.63e-01, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 4.09e+00, limit = 1.00e-05, normalization = 8.86e-02, conv = false
+(0) 20:04:23 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0008 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:23 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 20), time-window 4 (max: 5), t 0.0006000000000000001, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 3.91206103e-09, Final residual = 3.91206103e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 1.964247362e-09, Final residual = 1.964247362e-09, No Iterations 0
+Courant Number mean: 0.01588498621 max: 0.4194843502
+Time = 30.0008s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9708234845, Final residual = 1.861135898e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.9258227013, Final residual = 3.357469579e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 8.801099827e-09, No Iterations 154
+time step continuity errors : sum local = 2.384403592e-18, global = 3.155128401e-19, cumulative = 1.04988302e-08
+smoothSolver:  Solving for Ux, Initial residual = 9.282001658e-05, Final residual = 1.267242751e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003419361785, Final residual = 3.570187715e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1024606448, Final residual = 0.003766918868, No Iterations 2
+time step continuity errors : sum local = 1.331111255e-09, global = 2.106783196e-11, cumulative = 1.051989804e-08
+GAMG:  Solving for p, Initial residual = 0.07003044357, Final residual = 8.762579644e-09, No Iterations 90
+time step continuity errors : sum local = 3.160275294e-15, global = 5.837595569e-16, cumulative = 1.051989862e-08
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.711591722e-05, Final residual = 6.904773152e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001734977294, Final residual = 1.967294295e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.07211928256, Final residual = 0.002898722089, No Iterations 2
+time step continuity errors : sum local = 1.046963103e-09, global = 1.593342672e-11, cumulative = 1.053583205e-08
+GAMG:  Solving for p, Initial residual = 0.04992678727, Final residual = 9.138048982e-09, No Iterations 78
+time step continuity errors : sum local = 3.352186353e-15, global = 6.559341872e-16, cumulative = 1.05358327e-08
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.814344137e-05, Final residual = 3.341511197e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001780240494, Final residual = 9.851425091e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1805752642, Final residual = 0.01473902818, No Iterations 1
+time step continuity errors : sum local = 9.279847374e-09, global = 8.144638359e-11, cumulative = 1.061727909e-08
+GAMG:  Solving for p, Initial residual = 0.1314695487, Final residual = 9.316098014e-09, No Iterations 90
+time step continuity errors : sum local = 5.632932178e-15, global = -1.041637786e-15, cumulative = 1.061727804e-08
+smoothSolver:  Solving for omega, Initial residual = 8.256402378e-06, Final residual = 1.940519884e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002232353721, Final residual = 1.558644576e-09, No Iterations 2
+ExecutionTime = 18.091389 s  ClockTime = 17 s
+
+(0) 20:04:24 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0008 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:24 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 1.38e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 4.40e-02, limit = 1.00e-05, normalization = 3.15e-06, conv = false
+(0) 20:04:24 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 2.31e-01, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 2.61e+00, limit = 1.00e-05, normalization = 8.86e-02, conv = false
+(0) 20:04:24 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0008 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:24 [impl::ParticipantImpl]:457 in advance: [0mit 4 (min: 2, max: 20), time-window 4 (max: 5), t 0.0006000000000000001, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 3.91206103e-09, Final residual = 3.91206103e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 1.964247362e-09, Final residual = 1.964247362e-09, No Iterations 0
+Courant Number mean: 0.01588498621 max: 0.4194843502
+Time = 30.0008s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9708234845, Final residual = 1.861135898e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.9258227013, Final residual = 3.357469579e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 8.801099827e-09, No Iterations 154
+time step continuity errors : sum local = 2.384403592e-18, global = 3.155128401e-19, cumulative = 1.061727804e-08
+smoothSolver:  Solving for Ux, Initial residual = 9.282001658e-05, Final residual = 1.267242751e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003419361785, Final residual = 3.570187715e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1024606448, Final residual = 0.003766918868, No Iterations 2
+time step continuity errors : sum local = 1.331111255e-09, global = 2.106783196e-11, cumulative = 1.063834588e-08
+GAMG:  Solving for p, Initial residual = 0.07003044357, Final residual = 8.762579644e-09, No Iterations 90
+time step continuity errors : sum local = 3.160275294e-15, global = 5.837595569e-16, cumulative = 1.063834646e-08
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.711591722e-05, Final residual = 6.904773152e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001734977294, Final residual = 1.967294295e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.07211928256, Final residual = 0.002898722089, No Iterations 2
+time step continuity errors : sum local = 1.046963103e-09, global = 1.593342672e-11, cumulative = 1.065427989e-08
+GAMG:  Solving for p, Initial residual = 0.04992678727, Final residual = 9.138048982e-09, No Iterations 78
+time step continuity errors : sum local = 3.352186353e-15, global = 6.559341872e-16, cumulative = 1.065428054e-08
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.814344137e-05, Final residual = 3.341511197e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001780240494, Final residual = 9.851425091e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1805752642, Final residual = 0.01473902818, No Iterations 1
+time step continuity errors : sum local = 9.279847374e-09, global = 8.144638359e-11, cumulative = 1.073572693e-08
+GAMG:  Solving for p, Initial residual = 0.1314695487, Final residual = 9.316098014e-09, No Iterations 90
+time step continuity errors : sum local = 5.632932178e-15, global = -1.041637786e-15, cumulative = 1.073572588e-08
+smoothSolver:  Solving for omega, Initial residual = 8.256402378e-06, Final residual = 1.940519884e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002232353721, Final residual = 1.558644576e-09, No Iterations 2
+ExecutionTime = 19.101776 s  ClockTime = 18 s
+
+(0) 20:04:25 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0008 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:25 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 2.73e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 7.76e-02, limit = 1.00e-05, normalization = 3.52e-06, conv = false
+(0) 20:04:25 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-05, normalization = 8.86e-02, conv = true
+(0) 20:04:25 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0008 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:25 [impl::ParticipantImpl]:457 in advance: [0mit 5 (min: 2, max: 20), time-window 4 (max: 5), t 0.0006000000000000001, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 3.91206103e-09, Final residual = 3.91206103e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 1.964247362e-09, Final residual = 1.964247362e-09, No Iterations 0
+Courant Number mean: 0.01588498621 max: 0.4194843502
+Time = 30.0008s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9708234845, Final residual = 1.861135898e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.9258227013, Final residual = 3.357469579e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 8.801099827e-09, No Iterations 154
+time step continuity errors : sum local = 2.384403592e-18, global = 3.155128401e-19, cumulative = 1.073572588e-08
+smoothSolver:  Solving for Ux, Initial residual = 9.282001658e-05, Final residual = 1.267242751e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003419361785, Final residual = 3.570187715e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1024606448, Final residual = 0.003766918868, No Iterations 2
+time step continuity errors : sum local = 1.331111255e-09, global = 2.106783196e-11, cumulative = 1.075679372e-08
+GAMG:  Solving for p, Initial residual = 0.07003044357, Final residual = 8.762579644e-09, No Iterations 90
+time step continuity errors : sum local = 3.160275294e-15, global = 5.837595569e-16, cumulative = 1.07567943e-08
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.711591722e-05, Final residual = 6.904773152e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001734977294, Final residual = 1.967294295e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.07211928256, Final residual = 0.002898722089, No Iterations 2
+time step continuity errors : sum local = 1.046963103e-09, global = 1.593342672e-11, cumulative = 1.077272773e-08
+GAMG:  Solving for p, Initial residual = 0.04992678727, Final residual = 9.138048982e-09, No Iterations 78
+time step continuity errors : sum local = 3.352186353e-15, global = 6.559341872e-16, cumulative = 1.077272838e-08
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.814344137e-05, Final residual = 3.341511197e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001780240494, Final residual = 9.851425091e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1805752642, Final residual = 0.01473902818, No Iterations 1
+time step continuity errors : sum local = 9.279847374e-09, global = 8.144638359e-11, cumulative = 1.085417477e-08
+GAMG:  Solving for p, Initial residual = 0.1314695487, Final residual = 9.316098014e-09, No Iterations 90
+time step continuity errors : sum local = 5.632932178e-15, global = -1.041637786e-15, cumulative = 1.085417373e-08
+smoothSolver:  Solving for omega, Initial residual = 8.256402378e-06, Final residual = 1.940519884e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002232353721, Final residual = 1.558644576e-09, No Iterations 2
+ExecutionTime = 20.118589 s  ClockTime = 19 s
+
+(0) 20:04:26 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.0008 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:26 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 1.03e-18, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 2.94e-13, limit = 1.00e-05, normalization = 3.52e-06, conv = true
+(0) 20:04:26 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-05, normalization = 8.86e-02, conv = true
+(0) 20:04:26 [cplscheme::BaseCouplingScheme]:743 in measureConvergence: [0mAll converged
+(0) 20:04:26 [acceleration::BaseQNAcceleration]:277 in updateDifferenceMatrices: [36mWARNING: ][0mThe coupling residual equals almost zero. There is maybe something wrong in your adapter. Maybe you always write the same data or you call advance without providing new data first or you do not use available read data. Or you just converge much further than actually necessary.
+(0) 20:04:26 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 20:04:26 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.0008 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:26 [impl::ParticipantImpl]:457 in advance: [0mit 1 (min: 2, max: 20), time-window 5 (max: 5), t 0.0008, Dt 0.0002, max-dt 0.0002
+Courant Number mean: 0.0157888275 max: 0.4207895528
+Time = 30.001s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9679225066, Final residual = 2.436313727e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.8875740735, Final residual = 3.834964129e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.230850849e-09, No Iterations 155
+time step continuity errors : sum local = 3.873040078e-15, global = 6.724307916e-16, cumulative = 1.08541744e-08
+smoothSolver:  Solving for Ux, Initial residual = 9.217931633e-05, Final residual = 1.306195166e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0003405251407, Final residual = 3.711822736e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.5913571928, Final residual = 0.05586204912, No Iterations 13
+time step continuity errors : sum local = 4.313156229e-08, global = 6.066589626e-09, cumulative = 1.692076402e-08
+GAMG:  Solving for p, Initial residual = 0.3492576598, Final residual = 9.022695809e-09, No Iterations 146
+time step continuity errors : sum local = 9.391012953e-15, global = 1.630038519e-15, cumulative = 1.692076565e-08
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 0.0002609408484, Final residual = 8.390543184e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0006109594891, Final residual = 1.711478658e-07, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.3172399152, Final residual = 0.03048538964, No Iterations 11
+time step continuity errors : sum local = 3.154117692e-08, global = 4.04701536e-09, cumulative = 2.096778101e-08
+GAMG:  Solving for p, Initial residual = 0.2127104844, Final residual = 9.511277063e-09, No Iterations 139
+time step continuity errors : sum local = 1.147876736e-14, global = -2.283181001e-15, cumulative = 2.096777873e-08
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 0.0005235916453, Final residual = 2.017029943e-08, No Iterations 2
+smoothSolver:  Solving for Uy, Initial residual = 0.001152014627, Final residual = 4.033315592e-08, No Iterations 2
+GAMG:  Solving for p, Initial residual = 0.132376303, Final residual = 0.01095782841, No Iterations 4
+time step continuity errors : sum local = 2.263240641e-08, global = -3.802212569e-09, cumulative = 1.716556616e-08
+GAMG:  Solving for p, Initial residual = 0.0890181624, Final residual = 9.13256288e-09, No Iterations 120
+time step continuity errors : sum local = 1.90079378e-14, global = -3.307117762e-15, cumulative = 1.716556286e-08
+smoothSolver:  Solving for omega, Initial residual = 1.260913306e-05, Final residual = 2.79837305e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002225757742, Final residual = 1.754982625e-09, No Iterations 2
+ExecutionTime = 21.232156 s  ClockTime = 20 s
+
+forces cylinderForces write:
+    sum of forces:
+        pressure : (-2.503066526 -2.274147594 -1.65200267e-20)
+        viscous  : (-0.0001458833933 -0.001060442976 4.293331344e-17)
+        porous   : (0 0 0)
+    sum of moments:
+        pressure : (0.03183806631 -0.03504293136 -7.503290105e-09)
+        viscous  : (1.484620166e-05 -2.042367506e-06 -2.366734861e-06)
+        porous   : (0 0 0)
+
+forceCoeffs cylinderForceCoeffs write:
+    Cm    = -0.002250903069
+    Cd    = -66.44896922
+    Cl    = -60.39648423
+    Cl(f) = -30.20049302
+    Cl(r) = -30.19599121
+
+(0) 20:04:27 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.001 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:27 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 2.21e-06, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 3.86e-01, limit = 1.00e-05, normalization = 5.73e-06, conv = false
+(0) 20:04:27 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 3.47e+00, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 1.03e+00, limit = 1.00e-05, normalization = 3.38e+00, conv = false
+(0) 20:04:27 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.001 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:27 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 20), time-window 5 (max: 5), t 0.0008, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 4.065649115e-09, Final residual = 4.065649115e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 1.751135586e-09, Final residual = 1.751135586e-09, No Iterations 0
+Courant Number mean: 0.0157888275 max: 0.4207895528
+Time = 30.001s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9679225066, Final residual = 2.436313727e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.8875740735, Final residual = 3.834964129e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.124436868e-09, No Iterations 159
+time step continuity errors : sum local = 3.229003692e-18, global = 4.510350519e-19, cumulative = 1.716556286e-08
+smoothSolver:  Solving for Ux, Initial residual = 9.273686965e-05, Final residual = 1.282529648e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000339519465, Final residual = 3.549170865e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1037593096, Final residual = 0.004570630296, No Iterations 2
+time step continuity errors : sum local = 1.625306744e-09, global = 6.252713965e-11, cumulative = 1.722809e-08
+GAMG:  Solving for p, Initial residual = 0.07106957079, Final residual = 9.708501638e-09, No Iterations 93
+time step continuity errors : sum local = 3.529065229e-15, global = -6.906455873e-16, cumulative = 1.72280893e-08
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.703665489e-05, Final residual = 6.987226198e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001723924205, Final residual = 1.952702926e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.07450758754, Final residual = 0.003505976674, No Iterations 2
+time step continuity errors : sum local = 1.275437901e-09, global = 4.400906e-11, cumulative = 1.727209836e-08
+GAMG:  Solving for p, Initial residual = 0.05200268074, Final residual = 9.485722169e-09, No Iterations 81
+time step continuity errors : sum local = 3.508173739e-15, global = -6.890447547e-16, cumulative = 1.727209768e-08
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.806968082e-05, Final residual = 3.380437435e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001769897084, Final residual = 9.764772678e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1796183625, Final residual = 0.01728980338, No Iterations 1
+time step continuity errors : sum local = 1.094710155e-08, global = 1.57085911e-10, cumulative = 1.742918359e-08
+GAMG:  Solving for p, Initial residual = 0.1313084427, Final residual = 9.474755618e-09, No Iterations 95
+time step continuity errors : sum local = 5.762728558e-15, global = 1.133800105e-15, cumulative = 1.742918472e-08
+smoothSolver:  Solving for omega, Initial residual = 1.025287002e-05, Final residual = 2.560611504e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002216237121, Final residual = 1.552986259e-09, No Iterations 2
+ExecutionTime = 22.29221 s  ClockTime = 24 s
+
+forces cylinderForces write:
+    sum of forces:
+        pressure : (0.06410087515 0.05857466767 -2.7995465e-21)
+        viscous  : (0.001724842592 0.0006253083844 3.257273294e-22)
+        porous   : (0 0 0)
+    sum of moments:
+        pressure : (-0.0008200453474 0.0008974122521 9.43201627e-17)
+        viscous  : (-8.754317381e-06 2.414779629e-05 -2.304881615e-06)
+        porous   : (0 0 0)
+
+forceCoeffs cylinderForceCoeffs write:
+    Cm    = -0.002185149412
+    Cd    = 1.747375123
+    Cl    = 1.571491645
+    Cl(f) = 0.7835606731
+    Cl(r) = 0.7879309719
+
+(0) 20:04:31 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.001 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:31 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 6.41e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 1.39e-01, limit = 1.00e-05, normalization = 4.60e-06, conv = false
+(0) 20:04:31 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 6.94e-01, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 7.84e+00, limit = 1.00e-05, normalization = 8.85e-02, conv = false
+(0) 20:04:31 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.001 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:31 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 20), time-window 5 (max: 5), t 0.0008, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 4.031957751e-09, Final residual = 4.031957751e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 1.736570598e-09, Final residual = 1.736570598e-09, No Iterations 0
+Courant Number mean: 0.0157888275 max: 0.4207895528
+Time = 30.001s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9679225066, Final residual = 2.436313727e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.8875740735, Final residual = 3.834964129e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.124436868e-09, No Iterations 159
+time step continuity errors : sum local = 3.229003692e-18, global = 4.510350519e-19, cumulative = 1.742918472e-08
+smoothSolver:  Solving for Ux, Initial residual = 9.273686965e-05, Final residual = 1.282529648e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000339519465, Final residual = 3.549170865e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1037593096, Final residual = 0.004570630296, No Iterations 2
+time step continuity errors : sum local = 1.625306744e-09, global = 6.252713965e-11, cumulative = 1.749171186e-08
+GAMG:  Solving for p, Initial residual = 0.07106957079, Final residual = 9.708501638e-09, No Iterations 93
+time step continuity errors : sum local = 3.529065229e-15, global = -6.906455873e-16, cumulative = 1.749171117e-08
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.703665489e-05, Final residual = 6.987226198e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001723924205, Final residual = 1.952702926e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.07450758754, Final residual = 0.003505976674, No Iterations 2
+time step continuity errors : sum local = 1.275437901e-09, global = 4.400906e-11, cumulative = 1.753572023e-08
+GAMG:  Solving for p, Initial residual = 0.05200268074, Final residual = 9.485722169e-09, No Iterations 81
+time step continuity errors : sum local = 3.508173739e-15, global = -6.890447547e-16, cumulative = 1.753571954e-08
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.806968082e-05, Final residual = 3.380437435e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001769897084, Final residual = 9.764772678e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1796183625, Final residual = 0.01728980338, No Iterations 1
+time step continuity errors : sum local = 1.094710155e-08, global = 1.57085911e-10, cumulative = 1.769280545e-08
+GAMG:  Solving for p, Initial residual = 0.1313084427, Final residual = 9.474755618e-09, No Iterations 95
+time step continuity errors : sum local = 5.762728558e-15, global = 1.133800105e-15, cumulative = 1.769280659e-08
+smoothSolver:  Solving for omega, Initial residual = 1.025287002e-05, Final residual = 2.560611504e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002216237121, Final residual = 1.552986259e-09, No Iterations 2
+ExecutionTime = 23.322856 s  ClockTime = 25 s
+
+forces cylinderForces write:
+    sum of forces:
+        pressure : (0.06410087515 0.05857466767 -2.7995465e-21)
+        viscous  : (0.001724842592 0.0006253083844 3.257273294e-22)
+        porous   : (0 0 0)
+    sum of moments:
+        pressure : (-0.0008200453474 0.0008974122521 9.43201627e-17)
+        viscous  : (-8.754317381e-06 2.414779629e-05 -2.304881615e-06)
+        porous   : (0 0 0)
+
+forceCoeffs cylinderForceCoeffs write:
+    Cm    = -0.002185149412
+    Cd    = 1.747375123
+    Cl    = 1.571491645
+    Cl(f) = 0.7835606731
+    Cl(r) = 0.7879309719
+
+(0) 20:04:32 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.001 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:32 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 5.54e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 1.05e-01, limit = 1.00e-05, normalization = 5.25e-06, conv = false
+(0) 20:04:32 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 2.94e-01, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 3.32e+00, limit = 1.00e-05, normalization = 8.85e-02, conv = false
+(0) 20:04:32 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.001 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:32 [impl::ParticipantImpl]:457 in advance: [0mit 4 (min: 2, max: 20), time-window 5 (max: 5), t 0.0008, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 4.031957751e-09, Final residual = 4.031957751e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 1.736570598e-09, Final residual = 1.736570598e-09, No Iterations 0
+Courant Number mean: 0.0157888275 max: 0.4207895528
+Time = 30.001s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9679225066, Final residual = 2.436313727e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.8875740735, Final residual = 3.834964129e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.124436868e-09, No Iterations 159
+time step continuity errors : sum local = 3.229003692e-18, global = 4.510350519e-19, cumulative = 1.769280659e-08
+smoothSolver:  Solving for Ux, Initial residual = 9.273686965e-05, Final residual = 1.282529648e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000339519465, Final residual = 3.549170865e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1037593096, Final residual = 0.004570630296, No Iterations 2
+time step continuity errors : sum local = 1.625306744e-09, global = 6.252713965e-11, cumulative = 1.775533373e-08
+GAMG:  Solving for p, Initial residual = 0.07106957079, Final residual = 9.708501638e-09, No Iterations 93
+time step continuity errors : sum local = 3.529065229e-15, global = -6.906455873e-16, cumulative = 1.775533303e-08
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.703665489e-05, Final residual = 6.987226198e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001723924205, Final residual = 1.952702926e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.07450758754, Final residual = 0.003505976674, No Iterations 2
+time step continuity errors : sum local = 1.275437901e-09, global = 4.400906e-11, cumulative = 1.779934209e-08
+GAMG:  Solving for p, Initial residual = 0.05200268074, Final residual = 9.485722169e-09, No Iterations 81
+time step continuity errors : sum local = 3.508173739e-15, global = -6.890447547e-16, cumulative = 1.779934141e-08
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.806968082e-05, Final residual = 3.380437435e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001769897084, Final residual = 9.764772678e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1796183625, Final residual = 0.01728980338, No Iterations 1
+time step continuity errors : sum local = 1.094710155e-08, global = 1.57085911e-10, cumulative = 1.795642732e-08
+GAMG:  Solving for p, Initial residual = 0.1313084427, Final residual = 9.474755618e-09, No Iterations 95
+time step continuity errors : sum local = 5.762728558e-15, global = 1.133800105e-15, cumulative = 1.795642845e-08
+smoothSolver:  Solving for omega, Initial residual = 1.025287002e-05, Final residual = 2.560611504e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002216237121, Final residual = 1.552986259e-09, No Iterations 2
+ExecutionTime = 24.399603 s  ClockTime = 26 s
+
+forces cylinderForces write:
+    sum of forces:
+        pressure : (0.06410087515 0.05857466767 -2.7995465e-21)
+        viscous  : (0.001724842592 0.0006253083844 3.257273294e-22)
+        porous   : (0 0 0)
+    sum of moments:
+        pressure : (-0.0008200453474 0.0008974122521 9.43201627e-17)
+        viscous  : (-8.754317381e-06 2.414779629e-05 -2.304881615e-06)
+        porous   : (0 0 0)
+
+forceCoeffs cylinderForceCoeffs write:
+    Cm    = -0.002185149412
+    Cd    = 1.747375123
+    Cl    = 1.571491645
+    Cl(f) = 0.7835606731
+    Cl(r) = 0.7879309719
+
+(0) 20:04:33 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.001 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:33 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 1.92e-07, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 3.35e-02, limit = 1.00e-05, normalization = 5.73e-06, conv = false
+(0) 20:04:33 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-05, normalization = 8.85e-02, conv = true
+(0) 20:04:33 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.001 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:33 [impl::ParticipantImpl]:457 in advance: [0mit 5 (min: 2, max: 20), time-window 5 (max: 5), t 0.0008, Dt 0.0002, max-dt 0.0002
+GAMG:  Solving for cellDisplacementx, Initial residual = 4.031957751e-09, Final residual = 4.031957751e-09, No Iterations 0
+GAMG:  Solving for cellDisplacementy, Initial residual = 1.736570598e-09, Final residual = 1.736570598e-09, No Iterations 0
+Courant Number mean: 0.0157888275 max: 0.4207895528
+Time = 30.001s
+
+PIMPLE: Iteration 1
+GAMG:  Solving for cellDisplacementx, Initial residual = 0.9679225066, Final residual = 2.436313727e-10, No Iterations 1
+GAMG:  Solving for cellDisplacementy, Initial residual = 0.8875740735, Final residual = 3.834964129e-10, No Iterations 1
+GAMG:  Solving for pcorr, Initial residual = 1, Final residual = 9.124436868e-09, No Iterations 159
+time step continuity errors : sum local = 3.229003692e-18, global = 4.510350519e-19, cumulative = 1.795642845e-08
+smoothSolver:  Solving for Ux, Initial residual = 9.273686965e-05, Final residual = 1.282529648e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.000339519465, Final residual = 3.549170865e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1037593096, Final residual = 0.004570630296, No Iterations 2
+time step continuity errors : sum local = 1.625306744e-09, global = 6.252713965e-11, cumulative = 1.801895559e-08
+GAMG:  Solving for p, Initial residual = 0.07106957079, Final residual = 9.708501638e-09, No Iterations 93
+time step continuity errors : sum local = 3.529065229e-15, global = -6.906455873e-16, cumulative = 1.80189549e-08
+PIMPLE: Iteration 2
+smoothSolver:  Solving for Ux, Initial residual = 4.703665489e-05, Final residual = 6.987226198e-09, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001723924205, Final residual = 1.952702926e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.07450758754, Final residual = 0.003505976674, No Iterations 2
+time step continuity errors : sum local = 1.275437901e-09, global = 4.400906e-11, cumulative = 1.806296396e-08
+GAMG:  Solving for p, Initial residual = 0.05200268074, Final residual = 9.485722169e-09, No Iterations 81
+time step continuity errors : sum local = 3.508173739e-15, global = -6.890447547e-16, cumulative = 1.806296327e-08
+PIMPLE: Iteration 3
+smoothSolver:  Solving for Ux, Initial residual = 4.806968082e-05, Final residual = 3.380437435e-08, No Iterations 1
+smoothSolver:  Solving for Uy, Initial residual = 0.0001769897084, Final residual = 9.764772678e-08, No Iterations 1
+GAMG:  Solving for p, Initial residual = 0.1796183625, Final residual = 0.01728980338, No Iterations 1
+time step continuity errors : sum local = 1.094710155e-08, global = 1.57085911e-10, cumulative = 1.822004918e-08
+GAMG:  Solving for p, Initial residual = 0.1313084427, Final residual = 9.474755618e-09, No Iterations 95
+time step continuity errors : sum local = 5.762728558e-15, global = 1.133800105e-15, cumulative = 1.822005032e-08
+smoothSolver:  Solving for omega, Initial residual = 1.025287002e-05, Final residual = 2.560611504e-08, No Iterations 1
+smoothSolver:  Solving for k, Initial residual = 0.0002216237121, Final residual = 1.552986259e-09, No Iterations 2
+ExecutionTime = 25.436809 s  ClockTime = 27 s
+
+forces cylinderForces write:
+    sum of forces:
+        pressure : (0.06410087515 0.05857466767 -2.7995465e-21)
+        viscous  : (0.001724842592 0.0006253083844 3.257273294e-22)
+        porous   : (0 0 0)
+    sum of moments:
+        pressure : (-0.0008200453474 0.0008974122521 9.43201627e-17)
+        viscous  : (-8.754317381e-06 2.414779629e-05 -2.304881615e-06)
+        porous   : (0 0 0)
+
+forceCoeffs cylinderForceCoeffs write:
+    Cm    = -0.002185149412
+    Cd    = 1.747375123
+    Cl    = 1.571491645
+    Cl(f) = 0.7835606731
+    Cl(r) = 0.7879309719
+
+(0) 20:04:34 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0.001 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 20:04:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Displacement" = 3.17e-18, limit = 1.00e-08, relative convergence measure: relative two-norm diff of data "Displacement" = 5.53e-13, limit = 1.00e-05, normalization = 5.73e-06, conv = true
+(0) 20:04:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mabsolute convergence measure: two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-03, relative convergence measure: relative two-norm diff of data "Force" = 0.00e+00, limit = 1.00e-05, normalization = 8.85e-02, conv = true
+(0) 20:04:34 [cplscheme::BaseCouplingScheme]:743 in measureConvergence: [0mAll converged
+(0) 20:04:34 [acceleration::BaseQNAcceleration]:277 in updateDifferenceMatrices: [36mWARNING: ][0mThe coupling residual equals almost zero. There is maybe something wrong in your adapter. Maybe you always write the same data or you call advance without providing new data first or you do not use available read data. Or you just converge much further than actually necessary.
+(0) 20:04:34 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 20:04:34 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0.001 from "Structure-Mesh" to "Fluid-Mesh"
+(0) 20:04:34 [impl::ParticipantImpl]:457 in advance: [0mReached end at: final time-window: 5, final time: 0.001
+---[preciceAdapter] The coupling completed.
+(0) 20:04:34 [impl::ParticipantImpl]:1832 in closeCommunicationChannels: [0mClose communication channels
+---[preciceAdapter] The simulation was ended by preCICE. Calling the end() methods of any functionObject explicitly.
+---[preciceAdapter] Great that you are using the OpenFOAM-preCICE adapter! Next to the preCICE library and any other components, please also cite this adapter. Find how on https://precice.org/adapter-openfoam-overview.html.
+End
+
+I/O    : uncollated

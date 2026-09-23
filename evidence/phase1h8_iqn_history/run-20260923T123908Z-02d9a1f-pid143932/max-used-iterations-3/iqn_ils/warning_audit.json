@@ -1,0 +1,19 @@
+{
+  "ansi_escape_sequences_removed": true,
+  "warning_error_lines": [
+    "fluid.stdout: --> FOAM Warning : ",
+    "fluid.stdout:     Warning in the preCICE adapter: ",
+    "fluid.stdout: (0) 20:40:13 [acceleration::BaseQNAcceleration]:294 in updateDifferenceMatrices: WARNING: ]The number of columns in the least squares system exceeded half the number of primary unknowns at the interface. The system will probably become bad or ill-conditioned and the quasi-Newton acceleration may not converge. Maybe the number of allowed columns (\"max-used-iterations\") should be limited.",
+    "fluid.stdout: (0) 20:40:14 [acceleration::BaseQNAcceleration]:294 in updateDifferenceMatrices: WARNING: ]The number of columns in the least squares system exceeded half the number of primary unknowns at the interface. The system will probably become bad or ill-conditioned and the quasi-Newton acceleration may not converge. Maybe the number of allowed columns (\"max-used-iterations\") should be limited.",
+    "fluid.stdout: (0) 20:40:15 [acceleration::BaseQNAcceleration]:294 in updateDifferenceMatrices: WARNING: ]The number of columns in the least squares system exceeded half the number of primary unknowns at the interface. The system will probably become bad or ill-conditioned and the quasi-Newton acceleration may not converge. Maybe the number of allowed columns (\"max-used-iterations\") should be limited.",
+    "fluid.stdout: (0) 20:40:16 [acceleration::BaseQNAcceleration]:294 in updateDifferenceMatrices: WARNING: ]The number of columns in the least squares system exceeded half the number of primary unknowns at the interface. The system will probably become bad or ill-conditioned and the quasi-Newton acceleration may not converge. Maybe the number of allowed columns (\"max-used-iterations\") should be limited."
+  ],
+  "iqn_primary_unknown_ill_conditioning_warnings": [
+    "fluid.stdout: (0) 20:40:13 [acceleration::BaseQNAcceleration]:294 in updateDifferenceMatrices: WARNING: ]The number of columns in the least squares system exceeded half the number of primary unknowns at the interface. The system will probably become bad or ill-conditioned and the quasi-Newton acceleration may not converge. Maybe the number of allowed columns (\"max-used-iterations\") should be limited.",
+    "fluid.stdout: (0) 20:40:14 [acceleration::BaseQNAcceleration]:294 in updateDifferenceMatrices: WARNING: ]The number of columns in the least squares system exceeded half the number of primary unknowns at the interface. The system will probably become bad or ill-conditioned and the quasi-Newton acceleration may not converge. Maybe the number of allowed columns (\"max-used-iterations\") should be limited.",
+    "fluid.stdout: (0) 20:40:15 [acceleration::BaseQNAcceleration]:294 in updateDifferenceMatrices: WARNING: ]The number of columns in the least squares system exceeded half the number of primary unknowns at the interface. The system will probably become bad or ill-conditioned and the quasi-Newton acceleration may not converge. Maybe the number of allowed columns (\"max-used-iterations\") should be limited.",
+    "fluid.stdout: (0) 20:40:16 [acceleration::BaseQNAcceleration]:294 in updateDifferenceMatrices: WARNING: ]The number of columns in the least squares system exceeded half the number of primary unknowns at the interface. The system will probably become bad or ill-conditioned and the quasi-Newton acceleration may not converge. Maybe the number of allowed columns (\"max-used-iterations\") should be limited."
+  ],
+  "adapter_runtime_modifiable_warning_present": true,
+  "fatal_or_error_lines": []
+}

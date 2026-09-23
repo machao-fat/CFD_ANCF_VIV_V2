@@ -1,0 +1,38 @@
+{
+  "classification": "BOUNDED_RUNTIME_COMPLETED",
+  "max_windows": 2,
+  "exit_codes": {
+    "Structure": 0,
+    "Fluid": 0
+  },
+  "commands": {
+    "Fluid": [
+      "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+      "-case",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/cases/hh06_single_slice"
+    ],
+    "Structure": [
+      "/usr/bin/python3.10",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/src/coupling/hh06_structure_0000/structure_0000_participant.py",
+      "--case",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/cases/hh06_single_slice",
+      "--run",
+      "--worker",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+      "--max-windows",
+      "2",
+      "--audit-output",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e_bounded_2window/run-20260923T065618Z-pid106532/structure_audit.json",
+      "--trace-output",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e_bounded_2window/run-20260923T065618Z-pid106532/structure_trace.jsonl"
+    ]
+  },
+  "logs": {
+    "fluid_stdout": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e_bounded_2window/run-20260923T065618Z-pid106532/fluid.stdout",
+    "fluid_stderr": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e_bounded_2window/run-20260923T065618Z-pid106532/fluid.stderr",
+    "structure_stdout": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e_bounded_2window/run-20260923T065618Z-pid106532/structure.stdout",
+    "structure_stderr": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e_bounded_2window/run-20260923T065618Z-pid106532/structure.stderr"
+  },
+  "runtime_started": true,
+  "science_validation_claim": false
+}

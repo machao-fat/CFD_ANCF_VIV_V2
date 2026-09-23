@@ -1,0 +1,22 @@
+{
+  "launcher": {"pid": 124039, "exit_code": 0, "lock_released_on_exit": true},
+  "participants": {
+    "Structure": {"pid": 124432, "exit_code": 0, "present_after_run": false},
+    "Fluid": {"pid": 124433, "exit_code": 0, "present_after_run": false}
+  },
+  "worker": {
+    "pid": 124434,
+    "present_after_structure_shutdown": false,
+    "independent_exit_code_exposed": false
+  },
+  "post_run_process_scan": {
+    "bounded_launcher": false,
+    "pimpleFoam": false,
+    "structure_participant": false,
+    "worker": false
+  },
+  "socket_directory": "/home/machao/OpenFOAM/coupling/singal_slice/slice0000/precice-sockets",
+  "socket_files_or_sockets_after_run": [],
+  "socket_active_users_after_run": [],
+  "remaining_socket_tree": "Only the empty precice-run directory remained."
+}

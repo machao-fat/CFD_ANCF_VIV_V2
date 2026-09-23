@@ -1,0 +1,38 @@
+{
+  "run_id": "run-20260923T065444Z-02d9a1f1",
+  "source": "fluid.log; existing OpenFOAM output only; no post-run quality pass or solver changes",
+  "fluid_courant_number": {
+    "samples": 34,
+    "mean_min": 0.01601185442,
+    "mean_max": 0.01601199855,
+    "max_over_all_samples": 0.4182184878
+  },
+  "mesh_courant_number": {"status": "NOT_CAPTURED", "value": null},
+  "mesh_velocity_max_m_s": {"status": "NOT_CAPTURED", "value": null},
+  "max_abs_U_m_s": {"status": "NOT_CAPTURED", "value": null},
+  "max_k": {"status": "NOT_CAPTURED", "value": null},
+  "max_omega": {"status": "NOT_CAPTURED", "value": null},
+  "max_nut": {"status": "NOT_CAPTURED", "value": null},
+  "minimum_cell_volume": {
+    "status": "NOT_CAPTURED",
+    "value": null,
+    "positive_volume_verified": false,
+    "note": "No runtime cell-volume metric was emitted; no extra mesh-quality pass was run. No negative-volume/fatal condition appeared in the solver log, but positivity was not independently measured."
+  },
+  "mesh_nonorthogonality_or_skew": {"status": "NOT_CAPTURED", "value": null},
+  "fsi_power": {"status": "NOT_CAPTURED", "value": null},
+  "raw_cylinder_force_output": {
+    "status": "INITIAL_RELEASE_SAMPLE_ONLY",
+    "file": "openfoam_postProcessing/cylinderForces/30/forces.dat",
+    "time_s": 30.0,
+    "pressure_N": [0.063811823767, 0.058106728512, -2.753291492e-21],
+    "viscous_N": [0.0017152168874, 0.00062314562354, 3.0908797634e-22],
+    "total_N": [0.0655270406544, 0.05872987413554, -2.44420351566e-21],
+    "note": "The function-object output file contains only the release-time row; per-attempt force values are represented in the raw Structure trace."
+  },
+  "solver_log_checks": {
+    "floating_point_or_nan_inf_failure_observed": false,
+    "fatal_error_observed": false,
+    "runtimeModifiable_warning_observed": true
+  }
+}

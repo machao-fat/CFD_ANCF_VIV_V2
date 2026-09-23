@@ -1,0 +1,35 @@
+{
+  "classification": "SCRATCH_READ_TIME_TEST_FAILED",
+  "scope": "two fake pyprecice participants only; no OpenFOAM, HH06, or ANCF worker",
+  "preCICE_header": "/usr/include/precice/Participant.hpp",
+  "python_identity": "{\"python\": \"/usr/bin/python3.10\", \"python_version\": \"3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]\", \"pyprecice\": \"3.4.0\", \"module\": \"/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py\"}",
+  "python_identity_exit_code": 0,
+  "runs": [
+    {
+      "mode": "zero",
+      "read_offset_s": 0.0,
+      "configuration_sha256": "292d735eece5d8cef91af6ccfabcbeb29fe26396ec75677767a6260b14b53f84",
+      "configuration_validation": {
+        "return_code": 2,
+        "stdout": "Checking /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074111Z-pid111151/read-zero/precice-config.xml for syntax and basic setup issues...\n\u001b[31mERROR: \u001b[0mAbsolute convergence limit has to be greater than zero. Please check the <absolute-or-relative-convergence-measure abs-limit=\"1e-20\" rel-limit=\"1e-20\" data=\"Force\" mesh=\"Structure-Mesh\" /> subtag in your <coupling-scheme ... /> in the preCICE configuration file.\n",
+        "stderr": ""
+      },
+      "participant_exit_codes": {},
+      "participants": {},
+      "participant_logs": {}
+    },
+    {
+      "mode": "dt",
+      "read_offset_s": 0.1,
+      "configuration_sha256": "fe4f3babd368788c0ce867c01aaca8dc95db70c06128b12e899eba403d8f9c5d",
+      "configuration_validation": {
+        "return_code": 2,
+        "stdout": "Checking /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1e5_precice_force_read_timing/run-20260923T074111Z-pid111151/read-dt/precice-config.xml for syntax and basic setup issues...\n\u001b[31mERROR: \u001b[0mAbsolute convergence limit has to be greater than zero. Please check the <absolute-or-relative-convergence-measure abs-limit=\"1e-20\" rel-limit=\"1e-20\" data=\"Force\" mesh=\"Structure-Mesh\" /> subtag in your <coupling-scheme ... /> in the preCICE configuration file.\n",
+        "stderr": ""
+      },
+      "participant_exit_codes": {},
+      "participants": {},
+      "participant_logs": {}
+    }
+  ]
+}

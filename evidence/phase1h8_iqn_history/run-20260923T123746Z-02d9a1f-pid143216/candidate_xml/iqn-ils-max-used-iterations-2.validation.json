@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/precice-config-validate",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h8_iqn_history/run-20260923T123746Z-02d9a1f-pid143216/candidate_xml/iqn-ils-max-used-iterations-2.xml"
+  ],
+  "preCICE_version": "3.4.1",
+  "return_code": 0,
+  "stdout": "Checking /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h8_iqn_history/run-20260923T123746Z-02d9a1f-pid143216/candidate_xml/iqn-ils-max-used-iterations-2.xml for syntax and basic setup issues...\n\u001b[1m\u001b[38;2;000;128;000mNo major issues detected\n\u001b[0m",
+  "stderr": "",
+  "warnings": [],
+  "passed": true
+}

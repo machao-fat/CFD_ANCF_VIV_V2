@@ -1,0 +1,8 @@
+{
+  "finished_utc": "2026-09-23T12:04:34.538046+00:00",
+  "runs_completed": [
+    "baseline",
+    "iqn_ils"
+  ],
+  "classification": "IQN_IMPROVES_SINGLE_SLICE_EFFICIENCY"
+}

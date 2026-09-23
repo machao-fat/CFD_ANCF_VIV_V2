@@ -1,0 +1,3424 @@
+{
+  "audit": "HH06_STRUCTURE_0000_WRAPPER_CONTRACT_AUDIT_V1",
+  "status": "PASS",
+  "blocking_checks": [],
+  "checks": {
+    "status_is_dry_run": true,
+    "participants": true,
+    "parallel_implicit": true,
+    "hh06_geometry": true,
+    "q0_dimension_and_finite": true,
+    "one_structure_point": true,
+    "no_legacy_604_vertex": true,
+    "single_slice_mapping": true,
+    "absolute_displacement_declared": true,
+    "resultant_mapping_declared": true,
+    "tension_quantities_distinct": true,
+    "precice_xml_parse": true,
+    "physical_release_force_provenance": true,
+    "precice_max_iterations_present": true,
+    "force_initial_data_exchange": true,
+    "hydrodynamic_wire_extension": true
+  },
+  "case_dir": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/iqn_ils/case",
+  "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+  "participants": {
+    "fluid": "Fluid_0000",
+    "structure": "Structure_0000"
+  },
+  "model": {
+    "length_m": 13.12,
+    "diameter_m": 0.028,
+    "elements": 32,
+    "nodes": 33,
+    "dof": 198
+  },
+  "mapping": {
+    "mode": "single_slice_resultant_force",
+    "structure_points": 1,
+    "s_ref_m": 2.97,
+    "deltaL_m": 1.98,
+    "fluid_faces_external_only": true
+  },
+  "tension": {
+    "benchmark_top_tension_N": 1175.0,
+    "equilibrium_reaction_tension_N": 1188.28
+  },
+  "q0": {
+    "artifact": "/mnt/d/CFD/CFD_ANCF_VIV_reentry_runtime/HH06_P1_WET_MODAL_STRUCTURAL_GATE/ancf_static.raw",
+    "sha256": "b298979244f67e23d02a63566e718ccb1f8897570c12b0aab98f7cbbf6577091",
+    "count": 198,
+    "q_sha256": "e1ba7fc759244d8e0ef884f256980c6bd815c64932b0318fd021395815b1a9f0",
+    "velocity_zero": true
+  },
+  "wire_capability": {
+    "SHM1_hydrodynamic_regions": true,
+    "note": "Current checked-out protocol must expose SHM1 before a wet-mass runtime is authorized."
+  },
+  "iteration_cap": {
+    "contract_json": 20,
+    "precice_xml": 20,
+    "values_match": true
+  },
+  "release_force": {
+    "Fx0_raw_N": 0.0655270406544,
+    "Fy0_raw_N": 0.05872987413554,
+    "source_global_time_s": 30.0,
+    "provenance": {
+      "classification": "RELEASE_FORCE_RECOVERED_REPRODUCIBLY",
+      "restart_case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "restart_source_path": "cases/hh06_single_slice/30/",
+      "restart_time_directory": "30",
+      "restart_global_time_s": 30.0,
+      "restart_time_index": 150000,
+      "patch": "cylinder",
+      "component_semantics": "raw dimensional patch-integrated pressure plus viscous force",
+      "raw_force_units": "N",
+      "Fz0_measured_N": -2.44420351566e-21,
+      "result_json": "../../evidence/phase1c7a_release_force/release_force_result.json",
+      "result_json_sha256": "6b272f695ebefe28daa176723483f611c42f8d25dbae8d83de928f3790811b8a",
+      "provenance_json": "../../evidence/phase1c7a_release_force/provenance.json",
+      "provenance_json_sha256": "1df1d2ca0876372874b1e6ac0eca2296e2f3ab8f8900e0b3903b53f2566e72d2",
+      "recovery_report": "../../docs/PHASE1C7A_RELEASE_FORCE_RECOVERY_REPORT.md",
+      "recovery_report_sha256": "6737908b9b29f4ff8550ba4353ff88ad90ad5cfc1355a57a885d655f7d3d7b3b",
+      "initial_data_comparison_tolerance_N": 5e-13,
+      "force_unit_conversion": "applied once by ForceSample: F_strip=(F_raw/0.028)*1.98"
+    }
+  },
+  "no_runtime_started": true
+}
+(0) 20:04:08 [impl::ParticipantImpl]:185 in configure: [0mThis is preCICE version 3.4.1
+(0) 20:04:08 [impl::ParticipantImpl]:186 in configure: [0mRevision info: no-info [git failed to run]
+(0) 20:04:08 [impl::ParticipantImpl]:205 in configure: [0mBuild type: Release (without debug log)
+(0) 20:04:08 [impl::ParticipantImpl]:207 in configure: [0mWorking directory "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/iqn_ils/case"
+(0) 20:04:08 [impl::ParticipantImpl]:211 in configure: [0mConfiguring preCICE with configuration "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/iqn_ils/case/precice-config.xml"
+(0) 20:04:08 [impl::ParticipantImpl]:212 in configure: [0mI am participant "Structure_0000"
+(0) 20:04:08 [impl::ParticipantImpl]:335 in setupCommunication: [0mSetting up primary communication to coupling partner/s
+(0) 20:04:08 [impl::ParticipantImpl]:351 in setupCommunication: [0mPrimary ranks are connected
+(0) 20:04:08 [impl::ParticipantImpl]:357 in setupCommunication: [0mSetting up preliminary secondary communication to coupling partner/s
+(0) 20:04:08 [partition::ProvidedPartition]:120 in prepare: [0mPrepare partition for mesh Structure-Mesh
+(0) 20:04:08 [partition::ProvidedPartition]:87 in communicate: [0mGather mesh Structure-Mesh
+(0) 20:04:08 [partition::ProvidedPartition]:104 in communicate: [0mSend global mesh Structure-Mesh
+(0) 20:04:08 [impl::ParticipantImpl]:366 in setupCommunication: [0mSetting up secondary communication to coupling partner/s
+(0) 20:04:08 [impl::ParticipantImpl]:373 in setupCommunication: [0mSecondary ranks are connected
+(0) 20:04:08 [impl::ParticipantImpl]:298 in initialize: [0mit 1 (min: 2, max: 20), time-window 1 (max: 5), t 0, Dt 0.0002, max-dt 0.0002
+(0) 20:04:09 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 20), time-window 1 (max: 5), t 0, Dt 0.0002, max-dt 0.0002
+(0) 20:04:09 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 20), time-window 1 (max: 5), t 0, Dt 0.0002, max-dt 0.0002
+(0) 20:04:10 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 20:04:10 [impl::ParticipantImpl]:457 in advance: [0mit 1 (min: 2, max: 20), time-window 2 (max: 5), t 0.0002, Dt 0.0002, max-dt 0.0002
+(0) 20:04:12 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 20), time-window 2 (max: 5), t 0.0002, Dt 0.0002, max-dt 0.0002
+(0) 20:04:13 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 20), time-window 2 (max: 5), t 0.0002, Dt 0.0002, max-dt 0.0002
+(0) 20:04:14 [impl::ParticipantImpl]:457 in advance: [0mit 4 (min: 2, max: 20), time-window 2 (max: 5), t 0.0002, Dt 0.0002, max-dt 0.0002
+(0) 20:04:15 [impl::ParticipantImpl]:457 in advance: [0mit 5 (min: 2, max: 20), time-window 2 (max: 5), t 0.0002, Dt 0.0002, max-dt 0.0002
+(0) 20:04:16 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 20:04:16 [impl::ParticipantImpl]:457 in advance: [0mit 1 (min: 2, max: 20), time-window 3 (max: 5), t 0.0004, Dt 0.0002, max-dt 0.0002
+(0) 20:04:17 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 20), time-window 3 (max: 5), t 0.0004, Dt 0.0002, max-dt 0.0002
+(0) 20:04:18 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 20), time-window 3 (max: 5), t 0.0004, Dt 0.0002, max-dt 0.0002
+(0) 20:04:19 [impl::ParticipantImpl]:457 in advance: [0mit 4 (min: 2, max: 20), time-window 3 (max: 5), t 0.0004, Dt 0.0002, max-dt 0.0002
+(0) 20:04:20 [impl::ParticipantImpl]:457 in advance: [0mit 5 (min: 2, max: 20), time-window 3 (max: 5), t 0.0004, Dt 0.0002, max-dt 0.0002
+(0) 20:04:21 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 20:04:21 [impl::ParticipantImpl]:457 in advance: [0mit 1 (min: 2, max: 20), time-window 4 (max: 5), t 0.0006000000000000001, Dt 0.0002, max-dt 0.0002
+(0) 20:04:22 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 20), time-window 4 (max: 5), t 0.0006000000000000001, Dt 0.0002, max-dt 0.0002
+(0) 20:04:23 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 20), time-window 4 (max: 5), t 0.0006000000000000001, Dt 0.0002, max-dt 0.0002
+(0) 20:04:24 [impl::ParticipantImpl]:457 in advance: [0mit 4 (min: 2, max: 20), time-window 4 (max: 5), t 0.0006000000000000001, Dt 0.0002, max-dt 0.0002
+(0) 20:04:25 [impl::ParticipantImpl]:457 in advance: [0mit 5 (min: 2, max: 20), time-window 4 (max: 5), t 0.0006000000000000001, Dt 0.0002, max-dt 0.0002
+(0) 20:04:26 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 20:04:26 [impl::ParticipantImpl]:457 in advance: [0mit 1 (min: 2, max: 20), time-window 5 (max: 5), t 0.0008, Dt 0.0002, max-dt 0.0002
+(0) 20:04:27 [impl::ParticipantImpl]:457 in advance: [0mit 2 (min: 2, max: 20), time-window 5 (max: 5), t 0.0008, Dt 0.0002, max-dt 0.0002
+(0) 20:04:31 [impl::ParticipantImpl]:457 in advance: [0mit 3 (min: 2, max: 20), time-window 5 (max: 5), t 0.0008, Dt 0.0002, max-dt 0.0002
+(0) 20:04:32 [impl::ParticipantImpl]:457 in advance: [0mit 4 (min: 2, max: 20), time-window 5 (max: 5), t 0.0008, Dt 0.0002, max-dt 0.0002
+(0) 20:04:33 [impl::ParticipantImpl]:457 in advance: [0mit 5 (min: 2, max: 20), time-window 5 (max: 5), t 0.0008, Dt 0.0002, max-dt 0.0002
+(0) 20:04:34 [cplscheme::BaseCouplingScheme]:391 in secondExchange: [0mTime window completed
+(0) 20:04:34 [impl::ParticipantImpl]:457 in advance: [0mReached end at: final time-window: 5, final time: 0.001
+(0) 20:04:34 [impl::ParticipantImpl]:1832 in closeCommunicationChannels: [0mClose communication channels
+{
+  "status": "PASS",
+  "accepted_windows": 5,
+  "records": [
+    {
+      "accepted_window": 1,
+      "time_s": 30.0002,
+      "force_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "returned_force_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "motion_m": [
+        1.0452091616563741e-07,
+        9.588691723237472e-08,
+        0.0004163871573314992
+      ],
+      "written_motion_m": [
+        1.0452091616563741e-07,
+        9.588691723237472e-08
+      ],
+      "convergence_status": "accepted_by_precice_before_iteration_limit",
+      "iterations": 3,
+      "residual": 7.826941494926132e-08,
+      "q_sha256": "9d4fd911862d03947560fa83e6c707f6ad1204dd3250c757703ca9ec2824c8ed",
+      "qdot_sha256": "c81a4004bdda3604df296460613d10d76e3ba583a7a2ba44ee92e94cfcf600cb",
+      "qddot_sha256": "6fcd2987308c1e6c1804611a8d74ad9fa5f75a7eed78b24335088572f19cf917",
+      "sequence": 3,
+      "request_id": 910003,
+      "transaction_id": 1910003,
+      "physical_identity": {
+        "global_step": 1,
+        "bridge_step": 1,
+        "integer_tick": 200000,
+        "time_s": 0.0002,
+        "dt_s": 0.0002
+      }
+    },
+    {
+      "accepted_window": 2,
+      "time_s": 30.0004,
+      "force_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "returned_force_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "motion_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07,
+        0.0004163880479186588
+      ],
+      "written_motion_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07
+      ],
+      "convergence_status": "accepted_by_precice_before_iteration_limit",
+      "iterations": 3,
+      "residual": 9.32296835287616e-08,
+      "q_sha256": "3a39e9e527d42b1093b6b17161b5872a9e484d9d83739f2a2406d6f7f2896bf6",
+      "qdot_sha256": "db6892d1f0f16c43a54746ac078d912e8f0997447194dc35c3279d036d52be21",
+      "qddot_sha256": "95ac8b9468a29d358084d2520b186c6ecb141af8e5e07db37a2740110f1aba71",
+      "sequence": 8,
+      "request_id": 910008,
+      "transaction_id": 1910008,
+      "physical_identity": {
+        "global_step": 2,
+        "bridge_step": 2,
+        "integer_tick": 400000,
+        "time_s": 0.0004,
+        "dt_s": 0.0002
+      }
+    },
+    {
+      "accepted_window": 3,
+      "time_s": 30.0006,
+      "force_N": [
+        0.06598029033436487,
+        0.05919244796898713,
+        0.0
+      ],
+      "returned_force_N": [
+        0.06597957355437735,
+        0.05919123519820491,
+        0.0
+      ],
+      "motion_m": [
+        1.360484611471294e-06,
+        1.2382392346728036e-06,
+        0.0004163898290121537
+      ],
+      "written_motion_m": [
+        1.360484611471294e-06,
+        1.2382392346728036e-06
+      ],
+      "convergence_status": "accepted_by_precice_before_iteration_limit",
+      "iterations": 3,
+      "residual": 9.540127887674998e-08,
+      "q_sha256": "e63412f847130120ab158c496ede9a520463a4dbea98da830abf6f4dcfc52981",
+      "qdot_sha256": "30cc17fa74cf89466834d80780314bdbb600a0ef2561eddf2ce7b0f63693e968",
+      "qddot_sha256": "543cfd5b7173ff03f4440153fe982a2e7e477476aebcd782f293362fdcdec522",
+      "sequence": 13,
+      "request_id": 910013,
+      "transaction_id": 1910013,
+      "physical_identity": {
+        "global_step": 3,
+        "bridge_step": 3,
+        "integer_tick": 600000,
+        "time_s": 0.0006000000000000001,
+        "dt_s": 0.0002
+      }
+    },
+    {
+      "accepted_window": 4,
+      "time_s": 30.0008,
+      "force_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "returned_force_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "motion_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06,
+        0.00041639250011060724
+      ],
+      "written_motion_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06
+      ],
+      "convergence_status": "accepted_by_precice_before_iteration_limit",
+      "iterations": 3,
+      "residual": 1.3914492402733458e-07,
+      "q_sha256": "7f4ae9c23e1c72d3e7d9c7b1ca450c34c5879a03616c94c182c25977137eb354",
+      "qdot_sha256": "b9b5a7c7c0a800c0b81cb769ceb06646ba0e734c787c16ef57f00eb589654122",
+      "qddot_sha256": "354861e0562dfe54900cad77bf5685247d0f51e4cfe60f940674a1ed28687f83",
+      "sequence": 18,
+      "request_id": 910018,
+      "transaction_id": 1910018,
+      "physical_identity": {
+        "global_step": 4,
+        "bridge_step": 4,
+        "integer_tick": 800000,
+        "time_s": 0.0008,
+        "dt_s": 0.0002
+      }
+    },
+    {
+      "accepted_window": 5,
+      "time_s": 30.001,
+      "force_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "returned_force_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "motion_m": [
+        4.247956219344625e-06,
+        3.846735816409563e-06,
+        0.0004163960586138771
+      ],
+      "written_motion_m": [
+        4.247956219344625e-06,
+        3.846735816409563e-06
+      ],
+      "convergence_status": "accepted_by_precice_before_iteration_limit",
+      "iterations": 3,
+      "residual": 1.4457204944307023e-07,
+      "q_sha256": "150fb620636d00f4a240073c44dafbb9d8bd86f7a8eb46ef86ba90c764d9bae5",
+      "qdot_sha256": "6f89da936d4c563d05969d9f14fb3966d9ef1f046113bbb62cea1baae2e6c503",
+      "qddot_sha256": "711cd56a18de7327e21085785cee0f6aba04bf7113ba0a82c1140ced626830d9",
+      "sequence": 23,
+      "request_id": 910023,
+      "transaction_id": 1910023,
+      "physical_identity": {
+        "global_step": 5,
+        "bridge_step": 5,
+        "integer_tick": 1000000,
+        "time_s": 0.001,
+        "dt_s": 0.0002
+      }
+    }
+  ],
+  "attempt_trace": [
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 1,
+      "iteration_index": 1,
+      "sequence": 1,
+      "request_id": 910001,
+      "transaction_id": 1910001,
+      "transport_ids": {
+        "sequence": 1,
+        "request_id": 910001,
+        "transaction_id": 1910001
+      },
+      "physical_identity": {
+        "global_step": 1,
+        "bridge_step": 1,
+        "integer_tick": 200000,
+        "time_s": 0.0002,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0002,
+      "case_local_time_s": 0.0002,
+      "force_source_global_time_s": 30.0,
+      "force_source_kind": "HH06_PHYSICAL_RELEASE_FORCE",
+      "force_input_source_global_time_s": 30.0,
+      "force_input_read_offset_s": 0.0,
+      "force_input_source_kind": "HH06_PHYSICAL_RELEASE_FORCE",
+      "force_input_vector_raw_N": [
+        0.06552704065480554,
+        0.058729874135090385,
+        0.0
+      ],
+      "force_input_window_index": 1,
+      "force_input_iteration_index": 1,
+      "returned_force_source_global_time_s": 30.0002,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0002,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0002,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.06530305893818045,
+        0.05880124949728197,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06530305893818045,
+        0.05880124949728197,
+        0.0
+      ],
+      "force_read_window_index": 1,
+      "force_read_iteration_index": 1,
+      "window_target_global_time_s": 30.0002,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        0.0,
+        0.0,
+        0.00041638693468337706
+      ],
+      "D_trial_from_ancf_m": [
+        1.0633832158899472e-07,
+        9.530777187937023e-08,
+        0.0004163871573314992
+      ],
+      "D_trial_interface_m": [
+        1.0633832158899472e-07,
+        9.530777187937023e-08
+      ],
+      "D_written_to_precice_m": [
+        1.0633832158899472e-07,
+        9.530777187937023e-08
+      ],
+      "written_motion_vector_m": [
+        [
+          1.0633832158899472e-07,
+          9.530777187937023e-08
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06552704065480554,
+        0.058729874135090385,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.633697874875534,
+        4.15304109955282,
+        0.0
+      ],
+      "Fx_raw_N": 0.06552704065480554,
+      "Fy_raw_N": 0.058729874135090385,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.3402514519573407,
+      "Fy_section_Npm": 2.0974955048246566,
+      "Fx_applied_N": 4.633697874875534,
+      "Fy_applied_N": 4.15304109955282,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06530305893818045,
+        0.05880124949728197,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.617859167771331,
+        4.158088357307796,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06530305893818045,
+      "Fy_returned_raw_N": 0.05880124949728197,
+      "force_residual_raw_N": 0.00023507924559667696,
+      "force_residual_applied_N": 0.016623460938622155,
+      "trial_displacement_residual_m": 1.4279849445626007e-07,
+      "written_motion_delta_m": null,
+      "checkpoint_request": true,
+      "checkpoint_created": true,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "physical_checkpoint_created",
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 7.826941494926132e-08,
+      "q_state_hash": "d35c52d0ab3a3bf2739d730471f06749f83f36dcc7c25e3abb843b5086a45e9b",
+      "qdot_state_hash": "19ccb15a7034dc03a057172882dbd09680e872761d544dfc8149324b8e1f0179",
+      "qddot_state_hash": "01edb00c566cc9f356f1b55704e7ab8c6ffba2fed79c338332bfc6c0eceba6cc"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 1,
+      "iteration_index": 2,
+      "sequence": 2,
+      "request_id": 910002,
+      "transaction_id": 1910002,
+      "transport_ids": {
+        "sequence": 2,
+        "request_id": 910002,
+        "transaction_id": 1910002
+      },
+      "physical_identity": {
+        "global_step": 1,
+        "bridge_step": 1,
+        "integer_tick": 200000,
+        "time_s": 0.0002,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0002,
+      "case_local_time_s": 0.0002,
+      "force_source_global_time_s": 30.0002,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0002,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.06530305893818045,
+        0.05880124949728197,
+        0.0
+      ],
+      "force_input_window_index": 1,
+      "force_input_iteration_index": 2,
+      "returned_force_source_global_time_s": 30.0002,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0002,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0002,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "force_read_window_index": 1,
+      "force_read_iteration_index": 2,
+      "window_target_global_time_s": 30.0002,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        0.0,
+        0.0,
+        0.00041638693468337706
+      ],
+      "D_trial_from_ancf_m": [
+        1.059748405043233e-07,
+        9.542360094997115e-08,
+        0.0004163871573314992
+      ],
+      "D_trial_interface_m": [
+        1.059748405043233e-07,
+        9.542360094997115e-08
+      ],
+      "D_written_to_precice_m": [
+        1.059748405043233e-07,
+        9.542360094997115e-08
+      ],
+      "written_motion_vector_m": [
+        [
+          1.059748405043233e-07,
+          9.542360094997115e-08
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06530305893818045,
+        0.05880124949728197,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.617859167771331,
+        4.158088357307797,
+        0.0
+      ],
+      "Fx_raw_N": 0.06530305893818045,
+      "Fy_raw_N": 0.05880124949728197,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.332252104935016,
+      "Fy_section_Npm": 2.1000446249029276,
+      "Fx_applied_N": 4.617859167771331,
+      "Fy_applied_N": 4.158088357307797,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.554504339354516,
+        4.1782773883277,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06440713207168003,
+      "Fy_returned_raw_N": 0.05908675094604829,
+      "force_residual_raw_N": 0.0009403169823867501,
+      "force_residual_applied_N": 0.0664938437544916,
+      "trial_displacement_residual_m": 3.81490330821358e-10,
+      "written_motion_delta_m": 3.81490330821358e-10,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 7.826941494926132e-08,
+      "q_state_hash": "6c17f343084d967f76d228440d3101cace0daac08668be2e52d7023bbcf77462",
+      "qdot_state_hash": "82e24d918551927677016bcbe7ee3a0d7b2b489b0d12b5b25c0f008942c7b2b4",
+      "qddot_state_hash": "cae8ca16dbb9f396f8e9728ec4094f235d28316c492344cb522f37a97837be21"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 1,
+      "iteration_index": 3,
+      "sequence": 3,
+      "request_id": 910003,
+      "transaction_id": 1910003,
+      "transport_ids": {
+        "sequence": 3,
+        "request_id": 910003,
+        "transaction_id": 1910003
+      },
+      "physical_identity": {
+        "global_step": 1,
+        "bridge_step": 1,
+        "integer_tick": 200000,
+        "time_s": 0.0002,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0002,
+      "case_local_time_s": 0.0002,
+      "force_source_global_time_s": 30.0002,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0002,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "force_input_window_index": 1,
+      "force_input_iteration_index": 3,
+      "returned_force_source_global_time_s": 30.0002,
+      "returned_force_source_kind": "ACCEPTED_WINDOW_BOUNDARY_FORCE",
+      "force_source_time_global_s": 30.0002,
+      "force_read_time_s": 0.0,
+      "force_read_offset_s": 0.0,
+      "force_read_source_global_time_s": 30.0002,
+      "force_read_source_kind": "ACCEPTED_WINDOW_BOUNDARY_FORCE",
+      "force_source_vector_raw_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "force_read_window_index": 1,
+      "force_read_iteration_index": 3,
+      "window_target_global_time_s": 30.0002,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        0.0,
+        0.0,
+        0.00041638693468337706
+      ],
+      "D_trial_from_ancf_m": [
+        1.0452091616563741e-07,
+        9.588691723237472e-08,
+        0.0004163871573314992
+      ],
+      "D_trial_interface_m": [
+        1.0452091616563741e-07,
+        9.588691723237472e-08
+      ],
+      "D_written_to_precice_m": [
+        1.0452091616563741e-07,
+        9.588691723237472e-08
+      ],
+      "written_motion_vector_m": [
+        [
+          1.0452091616563741e-07,
+          9.588691723237472e-08
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.554504339354517,
+        4.1782773883277,
+        0.0
+      ],
+      "Fx_raw_N": 0.06440713207168003,
+      "Fy_raw_N": 0.05908675094604829,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.3002547168457155,
+      "Fy_section_Npm": 2.1102411052160104,
+      "Fx_applied_N": 4.554504339354517,
+      "Fy_applied_N": 4.1782773883277,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.554504339354516,
+        4.1782773883277,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06440713207168003,
+      "Fy_returned_raw_N": 0.05908675094604829,
+      "force_residual_raw_N": 0.0,
+      "force_residual_applied_N": 0.0,
+      "trial_displacement_residual_m": 1.5259613232855683e-09,
+      "written_motion_delta_m": 1.5259613232855683e-09,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": false,
+      "commit_status": "committed",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_false",
+        "force_read_at_accepted_window_start_zero",
+        "accepted_trial_committed"
+      ],
+      "time_window_complete": true,
+      "convergence_status": "accepted_by_precice_before_iteration_limit",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 7.826941494926132e-08,
+      "q_state_hash": "9d4fd911862d03947560fa83e6c707f6ad1204dd3250c757703ca9ec2824c8ed",
+      "qdot_state_hash": "c81a4004bdda3604df296460613d10d76e3ba583a7a2ba44ee92e94cfcf600cb",
+      "qddot_state_hash": "6fcd2987308c1e6c1804611a8d74ad9fa5f75a7eed78b24335088572f19cf917"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 2,
+      "iteration_index": 1,
+      "sequence": 4,
+      "request_id": 910004,
+      "transaction_id": 1910004,
+      "transport_ids": {
+        "sequence": 4,
+        "request_id": 910004,
+        "transaction_id": 1910004
+      },
+      "physical_identity": {
+        "global_step": 2,
+        "bridge_step": 2,
+        "integer_tick": 400000,
+        "time_s": 0.0004,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0004,
+      "case_local_time_s": 0.0004,
+      "force_source_global_time_s": 30.0002,
+      "force_source_kind": "PRECEDING_ACCEPTED_PRECICE_EXCHANGE",
+      "force_input_source_global_time_s": 30.0002,
+      "force_input_read_offset_s": 0.0,
+      "force_input_source_kind": "PRECEDING_ACCEPTED_PRECICE_EXCHANGE",
+      "force_input_vector_raw_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "force_input_window_index": 2,
+      "force_input_iteration_index": 1,
+      "returned_force_source_global_time_s": 30.0004,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0004,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0004,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.044058287691421484,
+        0.0401583495090182,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.044058287691421484,
+        0.0401583495090182,
+        0.0
+      ],
+      "force_read_window_index": 2,
+      "force_read_iteration_index": 1,
+      "window_target_global_time_s": 30.0004,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        1.0452091616563741e-07,
+        9.588691723237472e-08,
+        0.0004163871573314992
+      ],
+      "D_trial_from_ancf_m": [
+        5.21204137158057e-07,
+        4.781498267930066e-07,
+        0.0004163880479182147
+      ],
+      "D_trial_interface_m": [
+        5.21204137158057e-07,
+        4.781498267930066e-07
+      ],
+      "D_written_to_precice_m": [
+        5.21204137158057e-07,
+        4.781498267930066e-07
+      ],
+      "written_motion_vector_m": [
+        [
+          5.21204137158057e-07,
+          4.781498267930066e-07
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06440713207168003,
+        0.05908675094604829,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.554504339354517,
+        4.1782773883277,
+        0.0
+      ],
+      "Fx_raw_N": 0.06440713207168003,
+      "Fy_raw_N": 0.05908675094604829,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.3002547168457155,
+      "Fy_section_Npm": 2.1102411052160104,
+      "Fx_applied_N": 4.554504339354517,
+      "Fy_applied_N": 4.1782773883277,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.044058287691421484,
+        0.0401583495090182,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        3.1155503438933763,
+        2.839769000994858,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.044058287691421484,
+      "Fy_returned_raw_N": 0.0401583495090182,
+      "force_residual_raw_N": 0.027791362841237968,
+      "force_residual_applied_N": 1.9652463723446847,
+      "trial_displacement_residual_m": 5.654642682631479e-07,
+      "written_motion_delta_m": null,
+      "checkpoint_request": true,
+      "checkpoint_created": true,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "physical_checkpoint_created",
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 9.32296835287616e-08,
+      "q_state_hash": "be9275f14739acbfea1d60a805c1b09d68d5ee0d7261725264692975c702ffed",
+      "qdot_state_hash": "b46415451e614495907c871be3d5476df87a945fa7cfa4f0c568fa2921115d03",
+      "qddot_state_hash": "4dfb4993561fa8fcb58d287a67780ef9f7fdeb00a5d6bb9459eeaa234035a698"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 2,
+      "iteration_index": 2,
+      "sequence": 5,
+      "request_id": 910005,
+      "transaction_id": 1910005,
+      "transport_ids": {
+        "sequence": 5,
+        "request_id": 910005,
+        "transaction_id": 1910005
+      },
+      "physical_identity": {
+        "global_step": 2,
+        "bridge_step": 2,
+        "integer_tick": 400000,
+        "time_s": 0.0004,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0004,
+      "case_local_time_s": 0.0004,
+      "force_source_global_time_s": 30.0004,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0004,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.044058287691421484,
+        0.0401583495090182,
+        0.0
+      ],
+      "force_input_window_index": 2,
+      "force_input_iteration_index": 2,
+      "returned_force_source_global_time_s": 30.0004,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0004,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0004,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.048069928441983635,
+        0.04289071857243977,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.048069928441983635,
+        0.04289071857243977,
+        0.0
+      ],
+      "force_read_window_index": 2,
+      "force_read_iteration_index": 2,
+      "window_target_global_time_s": 30.0004,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        1.0452091616563741e-07,
+        9.588691723237472e-08,
+        0.0004163871573314992
+      ],
+      "D_trial_from_ancf_m": [
+        4.881817095323321e-07,
+        4.4743251652000957e-07,
+        0.0004163880479191029
+      ],
+      "D_trial_interface_m": [
+        4.881817095323321e-07,
+        4.4743251652000957e-07
+      ],
+      "D_written_to_precice_m": [
+        4.881817095323321e-07,
+        4.4743251652000957e-07
+      ],
+      "written_motion_vector_m": [
+        [
+          4.881817095323321e-07,
+          4.4743251652000957e-07
+        ]
+      ],
+      "force_input_raw_N": [
+        0.044058287691421484,
+        0.0401583495090182,
+        0.0
+      ],
+      "force_input_applied_N": [
+        3.1155503438933763,
+        2.8397690009948584,
+        0.0
+      ],
+      "Fx_raw_N": 0.044058287691421484,
+      "Fy_raw_N": 0.0401583495090182,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 1.5735102746936245,
+      "Fy_section_Npm": 1.4342267681792213,
+      "Fx_applied_N": 3.1155503438933763,
+      "Fy_applied_N": 2.8397690009948584,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.048069928441983635,
+        0.04289071857243977,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        3.3992306541116997,
+        3.0329865276225263,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.048069928441983635,
+      "Fy_returned_raw_N": 0.04289071857243977,
+      "force_residual_raw_N": 0.004853771956974713,
+      "force_residual_applied_N": 0.3432310169574975,
+      "trial_displacement_residual_m": 4.510026470769111e-08,
+      "written_motion_delta_m": 4.510026470769111e-08,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 9.32296835287616e-08,
+      "q_state_hash": "6c55aef657799096dd72d3276e71c23161159bee71ca21bc4ebc9969abe8521b",
+      "qdot_state_hash": "5eaf0bc8ff1f984a9f278549e183e6cbede40b4d577cf4487ae1ddb3f8fc1bae",
+      "qddot_state_hash": "783fa86e3d94c4ee9c4011145d4c0da0af60db771e2feb5edbceb8e3989be0a3"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 2,
+      "iteration_index": 3,
+      "sequence": 6,
+      "request_id": 910006,
+      "transaction_id": 1910006,
+      "transport_ids": {
+        "sequence": 6,
+        "request_id": 910006,
+        "transaction_id": 1910006
+      },
+      "physical_identity": {
+        "global_step": 2,
+        "bridge_step": 2,
+        "integer_tick": 400000,
+        "time_s": 0.0004,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0004,
+      "case_local_time_s": 0.0004,
+      "force_source_global_time_s": 30.0004,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0004,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.048069928441983635,
+        0.04289071857243977,
+        0.0
+      ],
+      "force_input_window_index": 2,
+      "force_input_iteration_index": 3,
+      "returned_force_source_global_time_s": 30.0004,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0004,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0004,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_read_window_index": 2,
+      "force_read_iteration_index": 3,
+      "window_target_global_time_s": 30.0004,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        1.0452091616563741e-07,
+        9.588691723237472e-08,
+        0.0004163871573314992
+      ],
+      "D_trial_from_ancf_m": [
+        4.946918638129047e-07,
+        4.5186664840274405e-07,
+        0.0004163880479186588
+      ],
+      "D_trial_interface_m": [
+        4.946918638129047e-07,
+        4.5186664840274405e-07
+      ],
+      "D_written_to_precice_m": [
+        4.946918638129047e-07,
+        4.5186664840274405e-07
+      ],
+      "written_motion_vector_m": [
+        [
+          4.946918638129047e-07,
+          4.5186664840274405e-07
+        ]
+      ],
+      "force_input_raw_N": [
+        0.048069928441983635,
+        0.04289071857243977,
+        0.0
+      ],
+      "force_input_applied_N": [
+        3.3992306541116997,
+        3.0329865276225267,
+        0.0
+      ],
+      "Fx_raw_N": 0.048069928441983635,
+      "Fy_raw_N": 0.04289071857243977,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 1.7167831586422726,
+      "Fy_section_Npm": 1.5318113775871347,
+      "Fx_applied_N": 3.3992306541116997,
+      "Fy_applied_N": 3.0329865276225267,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.651976394045153,
+        4.183628041035115,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.0657855247642749,
+      "Fy_returned_raw_N": 0.05916241674191073,
+      "force_residual_raw_N": 0.024054324234381322,
+      "force_residual_applied_N": 1.7009843565741076,
+      "trial_displacement_residual_m": 7.876778168156095e-09,
+      "written_motion_delta_m": 7.876778168156095e-09,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 9.32296835287616e-08,
+      "q_state_hash": "4f01b9a11260cfda8121adc4390ce7731f2b6d33185ab730f4bb6434d14d1c6e",
+      "qdot_state_hash": "bc48460902dc099ae2ea493ce3b4d036df50ffb3a24beed82a49eed578e5d1b6",
+      "qddot_state_hash": "cce0652f5df1b6d71cc4ff846bc13aceb7f72bafa5bce19ebbfbf50c36b32313"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 2,
+      "iteration_index": 4,
+      "sequence": 7,
+      "request_id": 910007,
+      "transaction_id": 1910007,
+      "transport_ids": {
+        "sequence": 7,
+        "request_id": 910007,
+        "transaction_id": 1910007
+      },
+      "physical_identity": {
+        "global_step": 2,
+        "bridge_step": 2,
+        "integer_tick": 400000,
+        "time_s": 0.0004,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0004,
+      "case_local_time_s": 0.0004,
+      "force_source_global_time_s": 30.0004,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0004,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_input_window_index": 2,
+      "force_input_iteration_index": 4,
+      "returned_force_source_global_time_s": 30.0004,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0004,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0004,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_read_window_index": 2,
+      "force_read_iteration_index": 4,
+      "window_target_global_time_s": 30.0004,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        1.0452091616563741e-07,
+        9.588691723237472e-08,
+        0.0004163871573314992
+      ],
+      "D_trial_from_ancf_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07,
+        0.0004163880479186588
+      ],
+      "D_trial_interface_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07
+      ],
+      "D_written_to_precice_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07
+      ],
+      "written_motion_vector_m": [
+        [
+          5.234410146967068e-07,
+          4.782726184474148e-07
+        ]
+      ],
+      "force_input_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.651976394045154,
+        4.183628041035116,
+        0.0
+      ],
+      "Fx_raw_N": 0.0657855247642749,
+      "Fy_raw_N": 0.05916241674191073,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.3494830272955323,
+      "Fy_section_Npm": 2.1129434550682404,
+      "Fx_applied_N": 4.651976394045154,
+      "Fy_applied_N": 4.183628041035116,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.651976394045153,
+        4.183628041035115,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.0657855247642749,
+      "Fy_returned_raw_N": 0.05916241674191073,
+      "force_residual_raw_N": 0.0,
+      "force_residual_applied_N": 0.0,
+      "trial_displacement_residual_m": 3.9035739144272196e-08,
+      "written_motion_delta_m": 3.9035739144272196e-08,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 9.32296835287616e-08,
+      "q_state_hash": "3a39e9e527d42b1093b6b17161b5872a9e484d9d83739f2a2406d6f7f2896bf6",
+      "qdot_state_hash": "db6892d1f0f16c43a54746ac078d912e8f0997447194dc35c3279d036d52be21",
+      "qddot_state_hash": "95ac8b9468a29d358084d2520b186c6ecb141af8e5e07db37a2740110f1aba71"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 2,
+      "iteration_index": 5,
+      "sequence": 8,
+      "request_id": 910008,
+      "transaction_id": 1910008,
+      "transport_ids": {
+        "sequence": 8,
+        "request_id": 910008,
+        "transaction_id": 1910008
+      },
+      "physical_identity": {
+        "global_step": 2,
+        "bridge_step": 2,
+        "integer_tick": 400000,
+        "time_s": 0.0004,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0004,
+      "case_local_time_s": 0.0004,
+      "force_source_global_time_s": 30.0004,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0004,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_input_window_index": 2,
+      "force_input_iteration_index": 5,
+      "returned_force_source_global_time_s": 30.0004,
+      "returned_force_source_kind": "ACCEPTED_WINDOW_BOUNDARY_FORCE",
+      "force_source_time_global_s": 30.0004,
+      "force_read_time_s": 0.0,
+      "force_read_offset_s": 0.0,
+      "force_read_source_global_time_s": 30.0004,
+      "force_read_source_kind": "ACCEPTED_WINDOW_BOUNDARY_FORCE",
+      "force_source_vector_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_read_window_index": 2,
+      "force_read_iteration_index": 5,
+      "window_target_global_time_s": 30.0004,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        1.0452091616563741e-07,
+        9.588691723237472e-08,
+        0.0004163871573314992
+      ],
+      "D_trial_from_ancf_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07,
+        0.0004163880479186588
+      ],
+      "D_trial_interface_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07
+      ],
+      "D_written_to_precice_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07
+      ],
+      "written_motion_vector_m": [
+        [
+          5.234410146967068e-07,
+          4.782726184474148e-07
+        ]
+      ],
+      "force_input_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.651976394045154,
+        4.183628041035116,
+        0.0
+      ],
+      "Fx_raw_N": 0.0657855247642749,
+      "Fy_raw_N": 0.05916241674191073,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.3494830272955323,
+      "Fy_section_Npm": 2.1129434550682404,
+      "Fx_applied_N": 4.651976394045154,
+      "Fy_applied_N": 4.183628041035116,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.651976394045153,
+        4.183628041035115,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.0657855247642749,
+      "Fy_returned_raw_N": 0.05916241674191073,
+      "force_residual_raw_N": 0.0,
+      "force_residual_applied_N": 0.0,
+      "trial_displacement_residual_m": 0.0,
+      "written_motion_delta_m": 0.0,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": false,
+      "commit_status": "committed",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_false",
+        "force_read_at_accepted_window_start_zero",
+        "accepted_trial_committed"
+      ],
+      "time_window_complete": true,
+      "convergence_status": "accepted_by_precice_before_iteration_limit",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 9.32296835287616e-08,
+      "q_state_hash": "3a39e9e527d42b1093b6b17161b5872a9e484d9d83739f2a2406d6f7f2896bf6",
+      "qdot_state_hash": "db6892d1f0f16c43a54746ac078d912e8f0997447194dc35c3279d036d52be21",
+      "qddot_state_hash": "95ac8b9468a29d358084d2520b186c6ecb141af8e5e07db37a2740110f1aba71"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 3,
+      "iteration_index": 1,
+      "sequence": 9,
+      "request_id": 910009,
+      "transaction_id": 1910009,
+      "transport_ids": {
+        "sequence": 9,
+        "request_id": 910009,
+        "transaction_id": 1910009
+      },
+      "physical_identity": {
+        "global_step": 3,
+        "bridge_step": 3,
+        "integer_tick": 600000,
+        "time_s": 0.0006000000000000001,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0006,
+      "case_local_time_s": 0.0006000000000000001,
+      "force_source_global_time_s": 30.0004,
+      "force_source_kind": "PRECEDING_ACCEPTED_PRECICE_EXCHANGE",
+      "force_input_source_global_time_s": 30.0004,
+      "force_input_read_offset_s": 0.0,
+      "force_input_source_kind": "PRECEDING_ACCEPTED_PRECICE_EXCHANGE",
+      "force_input_vector_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_input_window_index": 3,
+      "force_input_iteration_index": 1,
+      "returned_force_source_global_time_s": 30.0006,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0006,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0006,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        -0.03728096427601839,
+        -0.03516369601083903,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        -0.03728096427601839,
+        -0.03516369601083903,
+        0.0
+      ],
+      "force_read_window_index": 3,
+      "force_read_iteration_index": 1,
+      "window_target_global_time_s": 30.0006,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07,
+        0.0004163880479186588
+      ],
+      "D_trial_from_ancf_m": [
+        1.3601685428130184e-06,
+        1.2381904995209187e-06,
+        0.0004163898290125978
+      ],
+      "D_trial_interface_m": [
+        1.3601685428130184e-06,
+        1.2381904995209187e-06
+      ],
+      "D_written_to_precice_m": [
+        1.3601685428130184e-06,
+        1.2381904995209187e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          1.3601685428130184e-06,
+          1.2381904995209187e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        0.0657855247642749,
+        0.05916241674191073,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.651976394045154,
+        4.183628041035116,
+        0.0
+      ],
+      "Fx_raw_N": 0.0657855247642749,
+      "Fy_raw_N": 0.05916241674191073,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.3494830272955323,
+      "Fy_section_Npm": 2.1129434550682404,
+      "Fx_applied_N": 4.651976394045154,
+      "Fy_applied_N": 4.183628041035116,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        -0.03728096427601839,
+        -0.03516369601083903,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        -2.636296759518443,
+        -2.48657564648076,
+        0.0
+      ],
+      "Fx_returned_raw_N": -0.03728096427601839,
+      "Fy_returned_raw_N": -0.03516369601083903,
+      "force_residual_raw_N": 0.1397144112471486,
+      "force_residual_applied_N": 9.879804795334078,
+      "trial_displacement_residual_m": 1.130304446723482e-06,
+      "written_motion_delta_m": null,
+      "checkpoint_request": true,
+      "checkpoint_created": true,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "physical_checkpoint_created",
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 9.540127887674998e-08,
+      "q_state_hash": "4d8682302a5bafcebfb56468a0a825fbe231efb1657ac4197ece7577d296835c",
+      "qdot_state_hash": "bcfa1fbc4e2e9d6c9a3d72bf68cc2766fc0b369f13f4e868710968919f044794",
+      "qddot_state_hash": "53badd38f5f6e04a1f9f69f81592b9e75a1ba8ad3c934096240251cf13a925a7"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 3,
+      "iteration_index": 2,
+      "sequence": 10,
+      "request_id": 910010,
+      "transaction_id": 1910010,
+      "transport_ids": {
+        "sequence": 10,
+        "request_id": 910010,
+        "transaction_id": 1910010
+      },
+      "physical_identity": {
+        "global_step": 3,
+        "bridge_step": 3,
+        "integer_tick": 600000,
+        "time_s": 0.0006000000000000001,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0006,
+      "case_local_time_s": 0.0006000000000000001,
+      "force_source_global_time_s": 30.0006,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0006,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        -0.03728096427601839,
+        -0.03516369601083903,
+        0.0
+      ],
+      "force_input_window_index": 3,
+      "force_input_iteration_index": 2,
+      "returned_force_source_global_time_s": 30.0006,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0006,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0006,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        -0.009497633744607048,
+        -0.009863000201198548,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        -0.009497633744607048,
+        -0.009863000201198548,
+        0.0
+      ],
+      "force_read_window_index": 3,
+      "force_read_iteration_index": 2,
+      "window_target_global_time_s": 30.0006,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07,
+        0.0004163880479186588
+      ],
+      "D_trial_from_ancf_m": [
+        1.192910608633545e-06,
+        1.0851165866988882e-06,
+        0.00041638982901925914
+      ],
+      "D_trial_interface_m": [
+        1.192910608633545e-06,
+        1.0851165866988882e-06
+      ],
+      "D_written_to_precice_m": [
+        1.192910608633545e-06,
+        1.0851165866988882e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          1.192910608633545e-06,
+          1.0851165866988882e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        -0.03728096427601839,
+        -0.03516369601083903,
+        0.0
+      ],
+      "force_input_applied_N": [
+        -2.636296759518443,
+        -2.48657564648076,
+        0.0
+      ],
+      "Fx_raw_N": -0.03728096427601839,
+      "Fy_raw_N": -0.03516369601083903,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": -1.3314630098577995,
+      "Fy_section_Npm": -1.255846286101394,
+      "Fx_applied_N": -2.636296759518443,
+      "Fy_applied_N": -2.48657564648076,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        -0.009497633744607048,
+        -0.009863000201198548,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        -0.6716183862257841,
+        -0.6974550142276115,
+        0.0
+      ],
+      "Fx_returned_raw_N": -0.009497633744607048,
+      "Fy_returned_raw_N": -0.009863000201198548,
+      "force_residual_raw_N": 0.03757710292012428,
+      "force_residual_applied_N": 2.6572379922087883,
+      "trial_displacement_residual_m": 2.2673076397487754e-07,
+      "written_motion_delta_m": 2.2673076397487754e-07,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 9.540127887674998e-08,
+      "q_state_hash": "c71b32e4274c585d4306d9341bee4a7b69aae0528c0a38cdde4bfd1ca9341470",
+      "qdot_state_hash": "a789822ff2fb3d7910ad1fcf3198d39640af8c1ac8ea83ae5f3a38d9cadc7f43",
+      "qddot_state_hash": "a3766744979bf9f47ece65967ace224c3283c7a957dcbaaf09eb17772fc09fee"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 3,
+      "iteration_index": 3,
+      "sequence": 11,
+      "request_id": 910011,
+      "transaction_id": 1910011,
+      "transport_ids": {
+        "sequence": 11,
+        "request_id": 910011,
+        "transaction_id": 1910011
+      },
+      "physical_identity": {
+        "global_step": 3,
+        "bridge_step": 3,
+        "integer_tick": 600000,
+        "time_s": 0.0006000000000000001,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0006,
+      "case_local_time_s": 0.0006000000000000001,
+      "force_source_global_time_s": 30.0006,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0006,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        -0.009497633744607048,
+        -0.009863000201198548,
+        0.0
+      ],
+      "force_input_window_index": 3,
+      "force_input_iteration_index": 3,
+      "returned_force_source_global_time_s": 30.0006,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0006,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0006,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.06597940314434222,
+        0.05919094686940779,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06597940314434222,
+        0.05919094686940779,
+        0.0
+      ],
+      "force_read_window_index": 3,
+      "force_read_iteration_index": 3,
+      "window_target_global_time_s": 30.0006,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07,
+        0.0004163880479186588
+      ],
+      "D_trial_from_ancf_m": [
+        1.2379978383698246e-06,
+        1.1261749574067327e-06,
+        0.00041638982901792687
+      ],
+      "D_trial_interface_m": [
+        1.2379978383698246e-06,
+        1.1261749574067327e-06
+      ],
+      "D_written_to_precice_m": [
+        1.2379978383698246e-06,
+        1.1261749574067327e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          1.2379978383698246e-06,
+          1.1261749574067327e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        -0.009497633744607048,
+        -0.009863000201198548,
+        0.0
+      ],
+      "force_input_applied_N": [
+        -0.6716183862257842,
+        -0.6974550142276116,
+        0.0
+      ],
+      "Fx_raw_N": -0.009497633744607048,
+      "Fy_raw_N": -0.009863000201198548,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": -0.33920120516453744,
+      "Fy_section_Npm": -0.3522500071856624,
+      "Fx_applied_N": -0.6716183862257842,
+      "Fy_applied_N": -0.6974550142276116,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06597940314434222,
+        0.05919094686940779,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.665686365207057,
+        4.185645528622407,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06597940314434222,
+      "Fy_returned_raw_N": 0.05919094686940779,
+      "force_residual_raw_N": 0.10229971018319607,
+      "force_residual_applied_N": 7.23405093438315,
+      "trial_displacement_residual_m": 6.098071900588609e-08,
+      "written_motion_delta_m": 6.098071900588609e-08,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 9.540127887674998e-08,
+      "q_state_hash": "83415705950753125fb43a02bd10cd11900e251f644cb38591f8568a8daf47d3",
+      "qdot_state_hash": "6a8bc4eb22c1a7b972a3d8c46c4a9135e9eb086e394c606d1dc5d730edf2a4b2",
+      "qddot_state_hash": "05969bdecb0f16fc760970dd0a6a825e1e0a9c1b4f3895dd5a48e2cbca5c63b1"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 3,
+      "iteration_index": 4,
+      "sequence": 12,
+      "request_id": 910012,
+      "transaction_id": 1910012,
+      "transport_ids": {
+        "sequence": 12,
+        "request_id": 910012,
+        "transaction_id": 1910012
+      },
+      "physical_identity": {
+        "global_step": 3,
+        "bridge_step": 3,
+        "integer_tick": 600000,
+        "time_s": 0.0006000000000000001,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0006,
+      "case_local_time_s": 0.0006000000000000001,
+      "force_source_global_time_s": 30.0006,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0006,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.06597940314434222,
+        0.05919094686940779,
+        0.0
+      ],
+      "force_input_window_index": 3,
+      "force_input_iteration_index": 4,
+      "returned_force_source_global_time_s": 30.0006,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0006,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0006,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.06598029033436487,
+        0.05919244796898713,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06598029033436487,
+        0.05919244796898713,
+        0.0
+      ],
+      "force_read_window_index": 3,
+      "force_read_iteration_index": 4,
+      "window_target_global_time_s": 30.0006,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07,
+        0.0004163880479186588
+      ],
+      "D_trial_from_ancf_m": [
+        1.360483171725245e-06,
+        1.2382367986645824e-06,
+        0.0004163898290121537
+      ],
+      "D_trial_interface_m": [
+        1.360483171725245e-06,
+        1.2382367986645824e-06
+      ],
+      "D_written_to_precice_m": [
+        1.360483171725245e-06,
+        1.2382367986645824e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          1.360483171725245e-06,
+          1.2382367986645824e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06597940314434222,
+        0.05919094686940779,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.665686365207057,
+        4.185645528622408,
+        0.0
+      ],
+      "Fx_raw_N": 0.06597940314434222,
+      "Fy_raw_N": 0.05919094686940779,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.356407255155079,
+      "Fy_section_Npm": 2.1139623881931353,
+      "Fx_applied_N": 4.665686365207057,
+      "Fy_applied_N": 4.185645528622408,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06598029033436487,
+        0.05919244796898713,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.665749102215801,
+        4.185751677806946,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06598029033436487,
+      "Fy_returned_raw_N": 0.05919244796898713,
+      "force_residual_raw_N": 1.743676025919302e-06,
+      "force_residual_applied_N": 0.0001233028046900078,
+      "trial_displacement_residual_m": 1.6601359327864684e-07,
+      "written_motion_delta_m": 1.6601359327864684e-07,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 9.540127887674998e-08,
+      "q_state_hash": "fd45a82d9d5d92991c37bd16e82fdda58c1e6ae6c4482673856942dfa7355a61",
+      "qdot_state_hash": "da6796bafe512798ae6ad7010bbf3d97043785eb1b56ce02e4cbf31c6827937f",
+      "qddot_state_hash": "a48aa508fdc1deef2d37c5774179de5a18bb8be106dc69de21e6f70d9cfe4c45"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 3,
+      "iteration_index": 5,
+      "sequence": 13,
+      "request_id": 910013,
+      "transaction_id": 1910013,
+      "transport_ids": {
+        "sequence": 13,
+        "request_id": 910013,
+        "transaction_id": 1910013
+      },
+      "physical_identity": {
+        "global_step": 3,
+        "bridge_step": 3,
+        "integer_tick": 600000,
+        "time_s": 0.0006000000000000001,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0006,
+      "case_local_time_s": 0.0006000000000000001,
+      "force_source_global_time_s": 30.0006,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0006,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.06598029033436487,
+        0.05919244796898713,
+        0.0
+      ],
+      "force_input_window_index": 3,
+      "force_input_iteration_index": 5,
+      "returned_force_source_global_time_s": 30.0006,
+      "returned_force_source_kind": "ACCEPTED_WINDOW_BOUNDARY_FORCE",
+      "force_source_time_global_s": 30.0006,
+      "force_read_time_s": 0.0,
+      "force_read_offset_s": 0.0,
+      "force_read_source_global_time_s": 30.0006,
+      "force_read_source_kind": "ACCEPTED_WINDOW_BOUNDARY_FORCE",
+      "force_source_vector_raw_N": [
+        0.06597957355437735,
+        0.05919123519820491,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06597957355437735,
+        0.05919123519820491,
+        0.0
+      ],
+      "force_read_window_index": 3,
+      "force_read_iteration_index": 5,
+      "window_target_global_time_s": 30.0006,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        5.234410146967068e-07,
+        4.782726184474148e-07,
+        0.0004163880479186588
+      ],
+      "D_trial_from_ancf_m": [
+        1.360484611471294e-06,
+        1.2382392346728036e-06,
+        0.0004163898290121537
+      ],
+      "D_trial_interface_m": [
+        1.360484611471294e-06,
+        1.2382392346728036e-06
+      ],
+      "D_written_to_precice_m": [
+        1.360484611471294e-06,
+        1.2382392346728036e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          1.360484611471294e-06,
+          1.2382392346728036e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06598029033436487,
+        0.05919244796898713,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.665749102215801,
+        4.185751677806947,
+        0.0
+      ],
+      "Fx_raw_N": 0.06598029033436487,
+      "Fy_raw_N": 0.05919244796898713,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.356438940513031,
+      "Fy_section_Npm": 2.1140159988923974,
+      "Fx_applied_N": 4.665749102215801,
+      "Fy_applied_N": 4.185751677806947,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06597957355437735,
+        0.05919123519820491,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.6656984156309695,
+        4.185665917587347,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06597957355437735,
+      "Fy_returned_raw_N": 0.05919123519820491,
+      "force_residual_raw_N": 1.408753534406251e-06,
+      "force_residual_applied_N": 9.961899993301345e-05,
+      "trial_displacement_residual_m": 2.8296651284543826e-12,
+      "written_motion_delta_m": 2.8296651284543826e-12,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": false,
+      "commit_status": "committed",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_false",
+        "force_read_at_accepted_window_start_zero",
+        "accepted_trial_committed"
+      ],
+      "time_window_complete": true,
+      "convergence_status": "accepted_by_precice_before_iteration_limit",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 9.540127887674998e-08,
+      "q_state_hash": "e63412f847130120ab158c496ede9a520463a4dbea98da830abf6f4dcfc52981",
+      "qdot_state_hash": "30cc17fa74cf89466834d80780314bdbb600a0ef2561eddf2ce7b0f63693e968",
+      "qddot_state_hash": "543cfd5b7173ff03f4440153fe982a2e7e477476aebcd782f293362fdcdec522"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 4,
+      "iteration_index": 1,
+      "sequence": 14,
+      "request_id": 910014,
+      "transaction_id": 1910014,
+      "transport_ids": {
+        "sequence": 14,
+        "request_id": 910014,
+        "transaction_id": 1910014
+      },
+      "physical_identity": {
+        "global_step": 4,
+        "bridge_step": 4,
+        "integer_tick": 800000,
+        "time_s": 0.0008,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0008,
+      "case_local_time_s": 0.0008,
+      "force_source_global_time_s": 30.0006,
+      "force_source_kind": "PRECEDING_ACCEPTED_PRECICE_EXCHANGE",
+      "force_input_source_global_time_s": 30.0006,
+      "force_input_read_offset_s": 0.0,
+      "force_input_source_kind": "PRECEDING_ACCEPTED_PRECICE_EXCHANGE",
+      "force_input_vector_raw_N": [
+        0.06597957355437735,
+        0.05919123519820491,
+        0.0
+      ],
+      "force_input_window_index": 4,
+      "force_input_iteration_index": 1,
+      "returned_force_source_global_time_s": 30.0008,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0008,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0008,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        -0.20197640075287787,
+        -0.18507098576480457,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        -0.20197640075287787,
+        -0.18507098576480457,
+        0.0
+      ],
+      "force_read_window_index": 4,
+      "force_read_iteration_index": 1,
+      "window_target_global_time_s": 30.0008,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        1.360484611471294e-06,
+        1.2382392346728036e-06,
+        0.0004163898290121537
+      ],
+      "D_trial_from_ancf_m": [
+        2.60746306487353e-06,
+        2.3659676895904848e-06,
+        0.00041639250011016316
+      ],
+      "D_trial_interface_m": [
+        2.60746306487353e-06,
+        2.3659676895904848e-06
+      ],
+      "D_written_to_precice_m": [
+        2.60746306487353e-06,
+        2.3659676895904848e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          2.60746306487353e-06,
+          2.3659676895904848e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06597957355437735,
+        0.05919123519820491,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.6656984156309695,
+        4.185665917587347,
+        0.0
+      ],
+      "Fx_raw_N": 0.06597957355437735,
+      "Fy_raw_N": 0.05919123519820491,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.3564133412277624,
+      "Fy_section_Npm": 2.1139726856501753,
+      "Fx_applied_N": 4.6656984156309695,
+      "Fy_applied_N": 4.185665917587347,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        -0.20197640075287787,
+        -0.18507098576480457,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        -14.282616910382076,
+        -13.087162564796893,
+        0.0
+      ],
+      "Fx_returned_raw_N": -0.20197640075287787,
+      "Fy_returned_raw_N": -0.18507098576480457,
+      "force_residual_raw_N": 0.36258024871293315,
+      "force_residual_applied_N": 25.639603301843128,
+      "trial_displacement_residual_m": 1.6812872245040267e-06,
+      "written_motion_delta_m": null,
+      "checkpoint_request": true,
+      "checkpoint_created": true,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "physical_checkpoint_created",
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 1.3914492402733458e-07,
+      "q_state_hash": "bef9f63a2c2c9f5a8bbdec9c69c8b0fadecc6703035521eb71d1890295a47939",
+      "qdot_state_hash": "5dee82d18f431304af5126a31e96ac36ce138a4e13db7aefc45051aad98737aa",
+      "qddot_state_hash": "128bca888105418fe6b800f2682e77f7451e38f2b556bd6de8eec9ad83799f59"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 4,
+      "iteration_index": 2,
+      "sequence": 15,
+      "request_id": 910015,
+      "transaction_id": 1910015,
+      "transport_ids": {
+        "sequence": 15,
+        "request_id": 910015,
+        "transaction_id": 1910015
+      },
+      "physical_identity": {
+        "global_step": 4,
+        "bridge_step": 4,
+        "integer_tick": 800000,
+        "time_s": 0.0008,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0008,
+      "case_local_time_s": 0.0008,
+      "force_source_global_time_s": 30.0008,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0008,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        -0.20197640075287787,
+        -0.18507098576480457,
+        0.0
+      ],
+      "force_input_window_index": 4,
+      "force_input_iteration_index": 2,
+      "returned_force_source_global_time_s": 30.0008,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0008,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0008,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        -0.10478015988898907,
+        -0.09645235385823317,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        -0.10478015988898907,
+        -0.09645235385823317,
+        0.0
+      ],
+      "force_read_window_index": 4,
+      "force_read_iteration_index": 2,
+      "window_target_global_time_s": 30.0008,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        1.360484611471294e-06,
+        1.2382392346728036e-06,
+        0.0004163898290121537
+      ],
+      "D_trial_from_ancf_m": [
+        2.1726198573999754e-06,
+        1.9695750810538894e-06,
+        0.0004163925001487989
+      ],
+      "D_trial_interface_m": [
+        2.1726198573999754e-06,
+        1.9695750810538894e-06
+      ],
+      "D_written_to_precice_m": [
+        2.1726198573999754e-06,
+        1.9695750810538894e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          2.1726198573999754e-06,
+          1.9695750810538894e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        -0.20197640075287787,
+        -0.18507098576480457,
+        0.0
+      ],
+      "force_input_applied_N": [
+        -14.282616910382078,
+        -13.087162564796895,
+        0.0
+      ],
+      "Fx_raw_N": -0.20197640075287787,
+      "Fy_raw_N": -0.18507098576480457,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": -7.213442884031353,
+      "Fy_section_Npm": -6.609678063028735,
+      "Fx_applied_N": -14.282616910382078,
+      "Fy_applied_N": -13.087162564796895,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        -0.10478015988898907,
+        -0.09645235385823317,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        -7.409454163578513,
+        -6.820559308546488,
+        0.0
+      ],
+      "Fx_returned_raw_N": -0.10478015988898907,
+      "Fy_returned_raw_N": -0.09645235385823317,
+      "force_residual_raw_N": 0.13153087530714405,
+      "force_residual_applied_N": 9.30111189671947,
+      "trial_displacement_residual_m": 5.884009816344085e-07,
+      "written_motion_delta_m": 5.884009816344085e-07,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 1.3914492402733458e-07,
+      "q_state_hash": "558bc61a6bcc89847d5f45981ec1a46191d160a7f36e7a2fd0e3e8df288b9785",
+      "qdot_state_hash": "690d0bd8cec7b55735e8572fc6b3af464f3922d034ed6df86317e81be6733ec5",
+      "qddot_state_hash": "8bea50d7de33231de3e0eab295bfa6bdb8d3b532eb7c24782b30656f5232ee91"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 4,
+      "iteration_index": 3,
+      "sequence": 16,
+      "request_id": 910016,
+      "transaction_id": 1910016,
+      "transport_ids": {
+        "sequence": 16,
+        "request_id": 910016,
+        "transaction_id": 1910016
+      },
+      "physical_identity": {
+        "global_step": 4,
+        "bridge_step": 4,
+        "integer_tick": 800000,
+        "time_s": 0.0008,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0008,
+      "case_local_time_s": 0.0008,
+      "force_source_global_time_s": 30.0008,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0008,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        -0.10478015988898907,
+        -0.09645235385823317,
+        0.0
+      ],
+      "force_input_window_index": 4,
+      "force_input_iteration_index": 3,
+      "returned_force_source_global_time_s": 30.0008,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0008,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0008,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_read_window_index": 4,
+      "force_read_iteration_index": 3,
+      "window_target_global_time_s": 30.0008,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        1.360484611471294e-06,
+        1.2382392346728036e-06,
+        0.0004163898290121537
+      ],
+      "D_trial_from_ancf_m": [
+        2.330351459567151e-06,
+        2.1133868032800452e-06,
+        0.00041639250013547624
+      ],
+      "D_trial_interface_m": [
+        2.330351459567151e-06,
+        2.1133868032800452e-06
+      ],
+      "D_written_to_precice_m": [
+        2.330351459567151e-06,
+        2.1133868032800452e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          2.330351459567151e-06,
+          2.1133868032800452e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        -0.10478015988898907,
+        -0.09645235385823317,
+        0.0
+      ],
+      "force_input_applied_N": [
+        -7.409454163578513,
+        -6.820559308546488,
+        0.0
+      ],
+      "Fx_raw_N": -0.10478015988898907,
+      "Fy_raw_N": -0.09645235385823317,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": -3.7421485674638952,
+      "Fy_section_Npm": -3.4447269235083273,
+      "Fx_applied_N": -7.409454163578513,
+      "Fy_applied_N": -6.820559308546488,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.6626870614586196,
+        4.1842885379240204,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06593698874789967,
+      "Fy_returned_raw_N": 0.05917175710195585,
+      "force_residual_raw_N": 0.2310047807965428,
+      "force_residual_applied_N": 16.335338070612668,
+      "trial_displacement_residual_m": 2.13450391828821e-07,
+      "written_motion_delta_m": 2.13450391828821e-07,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 1.3914492402733458e-07,
+      "q_state_hash": "fbd438ce608e2032cbedc87618124fbb5a2ac2b975643a3d27fac1cdb52e62ef",
+      "qdot_state_hash": "c423fe92e2c3b7576af6c9f6a9dcea19767be74f5a5292c2a382b82ef24527d1",
+      "qddot_state_hash": "8dea58b0590221ca3bee9d845c73746737a6f2ea2a8b864736e68e88a89c5d21"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 4,
+      "iteration_index": 4,
+      "sequence": 17,
+      "request_id": 910017,
+      "transaction_id": 1910017,
+      "transport_ids": {
+        "sequence": 17,
+        "request_id": 910017,
+        "transaction_id": 1910017
+      },
+      "physical_identity": {
+        "global_step": 4,
+        "bridge_step": 4,
+        "integer_tick": 800000,
+        "time_s": 0.0008,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0008,
+      "case_local_time_s": 0.0008,
+      "force_source_global_time_s": 30.0008,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0008,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_input_window_index": 4,
+      "force_input_iteration_index": 4,
+      "returned_force_source_global_time_s": 30.0008,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.0008,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.0008,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_read_window_index": 4,
+      "force_read_iteration_index": 4,
+      "window_target_global_time_s": 30.0008,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        1.360484611471294e-06,
+        1.2382392346728036e-06,
+        0.0004163898290121537
+      ],
+      "D_trial_from_ancf_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06,
+        0.00041639250011060724
+      ],
+      "D_trial_interface_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06
+      ],
+      "D_written_to_precice_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          2.6073939575737765e-06,
+          2.365936080226808e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.6626870614586196,
+        4.1842885379240204,
+        0.0
+      ],
+      "Fx_raw_N": 0.06593698874789967,
+      "Fy_raw_N": 0.05917175710195585,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.354892455282131,
+      "Fy_section_Npm": 2.113277039355566,
+      "Fx_applied_N": 4.6626870614586196,
+      "Fy_applied_N": 4.1842885379240204,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.6626870614586196,
+        4.1842885379240204,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06593698874789967,
+      "Fy_returned_raw_N": 0.05917175710195585,
+      "force_residual_raw_N": 0.0,
+      "force_residual_applied_N": 0.0,
+      "trial_displacement_residual_m": 3.7487822421165474e-07,
+      "written_motion_delta_m": 3.7487822421165474e-07,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 1.3914492402733458e-07,
+      "q_state_hash": "7f4ae9c23e1c72d3e7d9c7b1ca450c34c5879a03616c94c182c25977137eb354",
+      "qdot_state_hash": "b9b5a7c7c0a800c0b81cb769ceb06646ba0e734c787c16ef57f00eb589654122",
+      "qddot_state_hash": "354861e0562dfe54900cad77bf5685247d0f51e4cfe60f940674a1ed28687f83"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 4,
+      "iteration_index": 5,
+      "sequence": 18,
+      "request_id": 910018,
+      "transaction_id": 1910018,
+      "transport_ids": {
+        "sequence": 18,
+        "request_id": 910018,
+        "transaction_id": 1910018
+      },
+      "physical_identity": {
+        "global_step": 4,
+        "bridge_step": 4,
+        "integer_tick": 800000,
+        "time_s": 0.0008,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.0008,
+      "case_local_time_s": 0.0008,
+      "force_source_global_time_s": 30.0008,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.0008,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_input_window_index": 4,
+      "force_input_iteration_index": 5,
+      "returned_force_source_global_time_s": 30.0008,
+      "returned_force_source_kind": "ACCEPTED_WINDOW_BOUNDARY_FORCE",
+      "force_source_time_global_s": 30.0008,
+      "force_read_time_s": 0.0,
+      "force_read_offset_s": 0.0,
+      "force_read_source_global_time_s": 30.0008,
+      "force_read_source_kind": "ACCEPTED_WINDOW_BOUNDARY_FORCE",
+      "force_source_vector_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_read_window_index": 4,
+      "force_read_iteration_index": 5,
+      "window_target_global_time_s": 30.0008,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        1.360484611471294e-06,
+        1.2382392346728036e-06,
+        0.0004163898290121537
+      ],
+      "D_trial_from_ancf_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06,
+        0.00041639250011060724
+      ],
+      "D_trial_interface_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06
+      ],
+      "D_written_to_precice_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          2.6073939575737765e-06,
+          2.365936080226808e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.6626870614586196,
+        4.1842885379240204,
+        0.0
+      ],
+      "Fx_raw_N": 0.06593698874789967,
+      "Fy_raw_N": 0.05917175710195585,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.354892455282131,
+      "Fy_section_Npm": 2.113277039355566,
+      "Fx_applied_N": 4.6626870614586196,
+      "Fy_applied_N": 4.1842885379240204,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.6626870614586196,
+        4.1842885379240204,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06593698874789967,
+      "Fy_returned_raw_N": 0.05917175710195585,
+      "force_residual_raw_N": 0.0,
+      "force_residual_applied_N": 0.0,
+      "trial_displacement_residual_m": 0.0,
+      "written_motion_delta_m": 0.0,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": false,
+      "commit_status": "committed",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_false",
+        "force_read_at_accepted_window_start_zero",
+        "accepted_trial_committed"
+      ],
+      "time_window_complete": true,
+      "convergence_status": "accepted_by_precice_before_iteration_limit",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 1.3914492402733458e-07,
+      "q_state_hash": "7f4ae9c23e1c72d3e7d9c7b1ca450c34c5879a03616c94c182c25977137eb354",
+      "qdot_state_hash": "b9b5a7c7c0a800c0b81cb769ceb06646ba0e734c787c16ef57f00eb589654122",
+      "qddot_state_hash": "354861e0562dfe54900cad77bf5685247d0f51e4cfe60f940674a1ed28687f83"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 5,
+      "iteration_index": 1,
+      "sequence": 19,
+      "request_id": 910019,
+      "transaction_id": 1910019,
+      "transport_ids": {
+        "sequence": 19,
+        "request_id": 910019,
+        "transaction_id": 1910019
+      },
+      "physical_identity": {
+        "global_step": 5,
+        "bridge_step": 5,
+        "integer_tick": 1000000,
+        "time_s": 0.001,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.001,
+      "case_local_time_s": 0.001,
+      "force_source_global_time_s": 30.0008,
+      "force_source_kind": "PRECEDING_ACCEPTED_PRECICE_EXCHANGE",
+      "force_input_source_global_time_s": 30.0008,
+      "force_input_read_offset_s": 0.0,
+      "force_input_source_kind": "PRECEDING_ACCEPTED_PRECICE_EXCHANGE",
+      "force_input_vector_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_input_window_index": 5,
+      "force_input_iteration_index": 1,
+      "returned_force_source_global_time_s": 30.001,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.001,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.001,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        -0.4478928908621893,
+        -0.4077042016857087,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        -0.4478928908621893,
+        -0.4077042016857087,
+        0.0
+      ],
+      "force_read_window_index": 5,
+      "force_read_iteration_index": 1,
+      "window_target_global_time_s": 30.001,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06,
+        0.00041639250011060724
+      ],
+      "D_trial_from_ancf_m": [
+        4.248136791694688e-06,
+        3.846690022241351e-06,
+        0.00041639605861432116
+      ],
+      "D_trial_interface_m": [
+        4.248136791694688e-06,
+        3.846690022241351e-06
+      ],
+      "D_written_to_precice_m": [
+        4.248136791694688e-06,
+        3.846690022241351e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          4.248136791694688e-06,
+          3.846690022241351e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06593698874789967,
+        0.05917175710195585,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.6626870614586196,
+        4.1842885379240204,
+        0.0
+      ],
+      "Fx_raw_N": 0.06593698874789967,
+      "Fy_raw_N": 0.05917175710195585,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.354892455282131,
+      "Fy_section_Npm": 2.113277039355566,
+      "Fx_applied_N": 4.6626870614586196,
+      "Fy_applied_N": 4.1842885379240204,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        -0.4478928908621893,
+        -0.4077042016857087,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        -31.67242585382624,
+        -28.83051140491797,
+        0.0
+      ],
+      "Fx_returned_raw_N": -0.4478928908621893,
+      "Fy_returned_raw_N": -0.4077042016857087,
+      "force_residual_raw_N": 0.6942580975934092,
+      "force_residual_applied_N": 49.093965472676786,
+      "trial_displacement_residual_m": 2.2101287936477214e-06,
+      "written_motion_delta_m": null,
+      "checkpoint_request": true,
+      "checkpoint_created": true,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "physical_checkpoint_created",
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 1.4457204944307023e-07,
+      "q_state_hash": "8af8ac7f79fbfef89bf4a17b522e7bcc8e23c6d0310ed594bc5c0d60a65a4d86",
+      "qdot_state_hash": "c63902b8b4ea212a59b51049b2da65dbb709ef97d3cbd6888d7a64589bfa845a",
+      "qddot_state_hash": "6843d929d977c309e53d853f56c6c35aeb4fb73a9ac9fedb55a82db1be3a511e"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 5,
+      "iteration_index": 2,
+      "sequence": 20,
+      "request_id": 910020,
+      "transaction_id": 1910020,
+      "transport_ids": {
+        "sequence": 20,
+        "request_id": 910020,
+        "transaction_id": 1910020
+      },
+      "physical_identity": {
+        "global_step": 5,
+        "bridge_step": 5,
+        "integer_tick": 1000000,
+        "time_s": 0.001,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.001,
+      "case_local_time_s": 0.001,
+      "force_source_global_time_s": 30.001,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.001,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        -0.4478928908621893,
+        -0.4077042016857087,
+        0.0
+      ],
+      "force_input_window_index": 5,
+      "force_input_iteration_index": 2,
+      "returned_force_source_global_time_s": 30.001,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.001,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.001,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        -0.15170463068098297,
+        -0.13846333733087243,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        -0.15170463068098297,
+        -0.13846333733087243,
+        0.0
+      ],
+      "force_read_window_index": 5,
+      "force_read_iteration_index": 2,
+      "window_target_global_time_s": 30.001,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06,
+        0.00041639250011060724
+      ],
+      "D_trial_from_ancf_m": [
+        3.4142855101688618e-06,
+        3.089036308433767e-06,
+        0.0004163960587395543
+      ],
+      "D_trial_interface_m": [
+        3.4142855101688618e-06,
+        3.089036308433767e-06
+      ],
+      "D_written_to_precice_m": [
+        3.4142855101688618e-06,
+        3.089036308433767e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          3.4142855101688618e-06,
+          3.089036308433767e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        -0.4478928908621893,
+        -0.4077042016857087,
+        0.0
+      ],
+      "force_input_applied_N": [
+        -31.672425853826244,
+        -28.83051140491797,
+        0.0
+      ],
+      "Fx_raw_N": -0.4478928908621893,
+      "Fy_raw_N": -0.4077042016857087,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": -15.996174673649618,
+      "Fy_section_Npm": -14.560864345918167,
+      "Fx_applied_N": -31.672425853826244,
+      "Fy_applied_N": -28.83051140491797,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        -0.15170463068098297,
+        -0.13846333733087243,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        -10.727684598155223,
+        -9.791335996968835,
+        0.0
+      ],
+      "Fx_returned_raw_N": -0.15170463068098297,
+      "Fy_returned_raw_N": -0.13846333733087243,
+      "force_residual_raw_N": 0.4002725677681514,
+      "force_residual_applied_N": 28.304988720747847,
+      "trial_displacement_residual_m": 1.1266530565123803e-06,
+      "written_motion_delta_m": 1.1266530565123803e-06,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 1.4457204944307023e-07,
+      "q_state_hash": "77f4580cb104fb4232308faeae3a537e4e9d07f08786136fb086c3e3ae538b0e",
+      "qdot_state_hash": "5a6f1e2620dc47e31c91c4d18c62ecdfd208a02a900c12548fc788997466116a",
+      "qddot_state_hash": "ff6932dc8cb69c8b7e983482a1c18b6b3ea640c1906ac7f94682dde13082b2eb"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 5,
+      "iteration_index": 3,
+      "sequence": 21,
+      "request_id": 910021,
+      "transaction_id": 1910021,
+      "transport_ids": {
+        "sequence": 21,
+        "request_id": 910021,
+        "transaction_id": 1910021
+      },
+      "physical_identity": {
+        "global_step": 5,
+        "bridge_step": 5,
+        "integer_tick": 1000000,
+        "time_s": 0.001,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.001,
+      "case_local_time_s": 0.001,
+      "force_source_global_time_s": 30.001,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.001,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        -0.15170463068098297,
+        -0.13846333733087243,
+        0.0
+      ],
+      "force_input_window_index": 5,
+      "force_input_iteration_index": 3,
+      "returned_force_source_global_time_s": 30.001,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.001,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.001,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "force_read_window_index": 5,
+      "force_read_iteration_index": 3,
+      "window_target_global_time_s": 30.001,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06,
+        0.00041639250011060724
+      ],
+      "D_trial_from_ancf_m": [
+        3.894944518527314e-06,
+        3.5259646552639444e-06,
+        0.0004163960586702764
+      ],
+      "D_trial_interface_m": [
+        3.894944518527314e-06,
+        3.5259646552639444e-06
+      ],
+      "D_written_to_precice_m": [
+        3.894944518527314e-06,
+        3.5259646552639444e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          3.894944518527314e-06,
+          3.5259646552639444e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        -0.15170463068098297,
+        -0.13846333733087243,
+        0.0
+      ],
+      "force_input_applied_N": [
+        -10.727684598155223,
+        -9.791335996968835,
+        0.0
+      ],
+      "Fx_raw_N": -0.15170463068098297,
+      "Fy_raw_N": -0.13846333733087243,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": -5.41802252432082,
+      "Fy_section_Npm": -4.945119190388301,
+      "Fx_applied_N": -10.727684598155223,
+      "Fy_applied_N": -9.791335996968835,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.654818611929178,
+        4.186284021171774,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06582571774445303,
+      "Fy_returned_raw_N": 0.059199976056974586,
+      "force_residual_raw_N": 0.29392216307307245,
+      "force_residual_applied_N": 20.784495817310123,
+      "trial_displacement_residual_m": 6.495686742599913e-07,
+      "written_motion_delta_m": 6.495686742599913e-07,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 1.4457204944307023e-07,
+      "q_state_hash": "3f4e1e36809d6526657cb27bcf54fa9a3b6d9e120b9e13b50fec92fd092c4fb5",
+      "qdot_state_hash": "a78e77ee512badb1114842dd51628e8097c13e06c7753ead9d513e64f1e4dff3",
+      "qddot_state_hash": "3450c91e2945d2a7ce5307325889f1272eac58ff750a40535c912657f06a2224"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 5,
+      "iteration_index": 4,
+      "sequence": 22,
+      "request_id": 910022,
+      "transaction_id": 1910022,
+      "transport_ids": {
+        "sequence": 22,
+        "request_id": 910022,
+        "transaction_id": 1910022
+      },
+      "physical_identity": {
+        "global_step": 5,
+        "bridge_step": 5,
+        "integer_tick": 1000000,
+        "time_s": 0.001,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.001,
+      "case_local_time_s": 0.001,
+      "force_source_global_time_s": 30.001,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.001,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "force_input_window_index": 5,
+      "force_input_iteration_index": 4,
+      "returned_force_source_global_time_s": 30.001,
+      "returned_force_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_time_global_s": 30.001,
+      "force_read_time_s": 0.0002,
+      "force_read_offset_s": 0.0002,
+      "force_read_source_global_time_s": 30.001,
+      "force_read_source_kind": "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE",
+      "force_source_vector_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "force_read_window_index": 5,
+      "force_read_iteration_index": 4,
+      "window_target_global_time_s": 30.001,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06,
+        0.00041639250011060724
+      ],
+      "D_trial_from_ancf_m": [
+        4.247956219344625e-06,
+        3.846735816409563e-06,
+        0.0004163960586138771
+      ],
+      "D_trial_interface_m": [
+        4.247956219344625e-06,
+        3.846735816409563e-06
+      ],
+      "D_written_to_precice_m": [
+        4.247956219344625e-06,
+        3.846735816409563e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          4.247956219344625e-06,
+          3.846735816409563e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.654818611929178,
+        4.186284021171774,
+        0.0
+      ],
+      "Fx_raw_N": 0.06582571774445303,
+      "Fy_raw_N": 0.059199976056974586,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.3509184908733225,
+      "Fy_section_Npm": 2.1142848591776637,
+      "Fx_applied_N": 4.654818611929178,
+      "Fy_applied_N": 4.186284021171774,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.654818611929178,
+        4.186284021171774,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06582571774445303,
+      "Fy_returned_raw_N": 0.059199976056974586,
+      "force_residual_raw_N": 0.0,
+      "force_residual_applied_N": 0.0,
+      "trial_displacement_residual_m": 4.769815496815772e-07,
+      "written_motion_delta_m": 4.769815496815772e-07,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": true,
+      "commit_status": "rolled_back",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_true",
+        "force_read_at_retry_endpoint_dt",
+        "physical_state_rolled_back_trial_retained_as_history"
+      ],
+      "time_window_complete": false,
+      "convergence_status": "retry_required",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 1.4457204944307023e-07,
+      "q_state_hash": "150fb620636d00f4a240073c44dafbb9d8bd86f7a8eb46ef86ba90c764d9bae5",
+      "qdot_state_hash": "6f89da936d4c563d05969d9f14fb3966d9ef1f046113bbb62cea1baae2e6c503",
+      "qddot_state_hash": "711cd56a18de7327e21085785cee0f6aba04bf7113ba0a82c1140ced626830d9"
+    },
+    {
+      "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "window_index": 5,
+      "iteration_index": 5,
+      "sequence": 23,
+      "request_id": 910023,
+      "transaction_id": 1910023,
+      "transport_ids": {
+        "sequence": 23,
+        "request_id": 910023,
+        "transaction_id": 1910023
+      },
+      "physical_identity": {
+        "global_step": 5,
+        "bridge_step": 5,
+        "integer_tick": 1000000,
+        "time_s": 0.001,
+        "dt_s": 0.0002
+      },
+      "physical_time_s": 30.001,
+      "case_local_time_s": 0.001,
+      "force_source_global_time_s": 30.001,
+      "force_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_source_global_time_s": 30.001,
+      "force_input_read_offset_s": 0.0002,
+      "force_input_source_kind": "PRECEDING_PRECICE_ADVANCE_ITERATE",
+      "force_input_vector_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "force_input_window_index": 5,
+      "force_input_iteration_index": 5,
+      "returned_force_source_global_time_s": 30.001,
+      "returned_force_source_kind": "ACCEPTED_WINDOW_BOUNDARY_FORCE",
+      "force_source_time_global_s": 30.001,
+      "force_read_time_s": 0.0,
+      "force_read_offset_s": 0.0,
+      "force_read_source_global_time_s": 30.001,
+      "force_read_source_kind": "ACCEPTED_WINDOW_BOUNDARY_FORCE",
+      "force_source_vector_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "force_read_vector_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "force_read_window_index": 5,
+      "force_read_iteration_index": 5,
+      "window_target_global_time_s": 30.001,
+      "dt_s": 0.0002,
+      "D_previous_committed_m": [
+        2.6073939575737765e-06,
+        2.365936080226808e-06,
+        0.00041639250011060724
+      ],
+      "D_trial_from_ancf_m": [
+        4.247956219344625e-06,
+        3.846735816409563e-06,
+        0.0004163960586138771
+      ],
+      "D_trial_interface_m": [
+        4.247956219344625e-06,
+        3.846735816409563e-06
+      ],
+      "D_written_to_precice_m": [
+        4.247956219344625e-06,
+        3.846735816409563e-06
+      ],
+      "written_motion_vector_m": [
+        [
+          4.247956219344625e-06,
+          3.846735816409563e-06
+        ]
+      ],
+      "force_input_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "force_input_applied_N": [
+        4.654818611929178,
+        4.186284021171774,
+        0.0
+      ],
+      "Fx_raw_N": 0.06582571774445303,
+      "Fy_raw_N": 0.059199976056974586,
+      "Fz_raw_N": 0.0,
+      "Fx_section_Npm": 2.3509184908733225,
+      "Fy_section_Npm": 2.1142848591776637,
+      "Fx_applied_N": 4.654818611929178,
+      "Fy_applied_N": 4.186284021171774,
+      "Fz_applied_N": 0.0,
+      "returned_force_raw_N": [
+        0.06582571774445303,
+        0.059199976056974586,
+        0.0
+      ],
+      "returned_force_applied_N": [
+        4.654818611929178,
+        4.186284021171774,
+        0.0
+      ],
+      "Fx_returned_raw_N": 0.06582571774445303,
+      "Fy_returned_raw_N": 0.059199976056974586,
+      "force_residual_raw_N": 0.0,
+      "force_residual_applied_N": 0.0,
+      "trial_displacement_residual_m": 0.0,
+      "written_motion_delta_m": 0.0,
+      "checkpoint_request": false,
+      "checkpoint_created": false,
+      "rollback_request": false,
+      "commit_status": "committed",
+      "iteration_events": [
+        "force_iterate_submitted_to_ancf",
+        "ancf_trial_solved_and_scattered",
+        "trial_displacement_written_to_precice",
+        "precice_advance_completed",
+        "requires_reading_checkpoint_false",
+        "force_read_at_accepted_window_start_zero",
+        "accepted_trial_committed"
+      ],
+      "time_window_complete": true,
+      "convergence_status": "accepted_by_precice_before_iteration_limit",
+      "precice_max_iterations": 20,
+      "ancf_newton_iterations": 3,
+      "ancf_residual": 1.4457204944307023e-07,
+      "q_state_hash": "150fb620636d00f4a240073c44dafbb9d8bd86f7a8eb46ef86ba90c764d9bae5",
+      "qdot_state_hash": "6f89da936d4c563d05969d9f14fb3966d9ef1f046113bbb62cea1baae2e6c503",
+      "qddot_state_hash": "711cd56a18de7327e21085785cee0f6aba04bf7113ba0a82c1140ced626830d9"
+    }
+  ],
+  "manifest_sha256": "ff922b0bff8ab2e342d8048ff53207d15cfe92f96c1ee5d2972b4341d385e1b5"
+}

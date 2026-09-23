@@ -1,0 +1,90 @@
+{
+  "classification": "PASS_REAL_5WINDOW_STRATEGY_C",
+  "run_id": "run-20260923T103144Z-pid128756",
+  "git_head": "02d9a1f180082e83bcc9f7acdcb090502262b2d1",
+  "runtime_classification": "BOUNDED_RUNTIME_COMPLETED",
+  "max_windows": 5,
+  "completed_windows": 5,
+  "dt_s": 0.0002,
+  "max_iterations": 20,
+  "total_attempts": 93,
+  "attempts_per_window": {"1": 13, "2": 20, "3": 20, "4": 20, "5": 20},
+  "rollbacks_total": 88,
+  "acceptance_per_window": {
+    "1": "accepted_by_precice_before_iteration_limit",
+    "2": "ACCEPTED_AT_ITERATION_LIMIT",
+    "3": "ACCEPTED_AT_ITERATION_LIMIT",
+    "4": "ACCEPTED_AT_ITERATION_LIMIT",
+    "5": "ACCEPTED_AT_ITERATION_LIMIT"
+  },
+  "window_residuals": {
+    "1": {"force_raw_N_min_max_final": [2.0193153436117644e-05, 2.3507924559667696e-04, 8.077261374451293e-05], "displacement_m_min_max_final": [3.2769769892353885e-11, 1.4279849445626007e-07, 3.2769769892353885e-11]},
+    "2": {"force_raw_N_min_max_final": [1.3005980546772713e-04, 2.7804076758779057e-02, 5.20239221870838e-04], "displacement_m_min_max_final": [2.110631165486097e-10, 5.656588762418716e-07, 2.110631165486097e-10]},
+    "3": {"force_raw_N_min_max_final": [6.292861968632934e-04, 1.395994949408698e-01, 2.5184917834025116e-03], "displacement_m_min_max_final": [1.0212156276071738e-09, 1.1280419719700445e-06, 1.0212156276071738e-09]},
+    "4": {"force_raw_N_min_max_final": [1.6266445780603433e-03, 3.6123398150310755e-01, 6.506578312241351e-03], "displacement_m_min_max_final": [2.6397446350159293e-09, 1.6660155520789101e-06, 2.6397446350159293e-09]},
+    "5": {"force_raw_N_min_max_final": [3.0974338873954385e-03, 6.878334225834449e-01, 1.2389735549581726e-02], "displacement_m_min_max_final": [5.026564856259985e-09, 2.159526477927772e-06, 5.026564856259985e-09]}
+  },
+  "checks": {
+    "initial_F0_xy_within_5e-13_N": true,
+    "all_attempts_D_written_equals_D_trial": true,
+    "retry_force_input_equals_previous_advance_return": true,
+    "accepted_motion_handed_to_next_window": true,
+    "physical_identity_constant_within_window_and_advances_once": true,
+    "sequence_request_transaction_unique_monotonic": true,
+    "all_trace_values_finite": true,
+    "unexpected_sixth_window": false
+  },
+  "transport_ids": {
+    "sequence": [1, 93],
+    "request_id": [910001, 910093],
+    "transaction_id": [1910001, 1910093]
+  },
+  "f0_observed_raw_N": [0.06552704065480554, 0.058729874135090385, 0.0],
+  "f0_expected_raw_N": [0.0655270406544, 0.05872987413554, -2.44420351566e-21],
+  "f0_xy_abs_error_N": [4.0553671531995406e-13, 4.4961256939757277e-13],
+  "accepted_interface_motion_m": {
+    "1": [1.0464580731534774e-07, 9.584711866676218e-08],
+    "2": [5.233030201487327e-07, 4.775586147561392e-07],
+    "3": [1.3559201304109314e-06, 1.2329548107240614e-06],
+    "4": [2.5839820397579254e-06, 2.3429779835165526e-06],
+    "5": [4.1724859715605904e-06, 3.7759195536635434e-06]
+  },
+  "ancf": {
+    "newton_iterations_per_attempt": 3,
+    "nonlinear_residual_range": [7.826941494926132e-08, 1.4457204944307023e-07]
+  },
+  "fluid_diagnostics": {
+    "fluid_co_samples": 94,
+    "fluid_co_mean_range": [0.01579549796, 0.01601199855],
+    "fluid_co_max": 0.420761851,
+    "mesh_co_max": null,
+    "mesh_velocity_max": null,
+    "Umax": null,
+    "kmax": null,
+    "omega_max": null,
+    "nut_max": null,
+    "minimum_cell_volume": null,
+    "mesh_quality_extrema": null,
+    "unavailable_reason": "Not emitted by existing runtime logs; no extra diagnostics/quality pass or physics change was made."
+  },
+  "runaway_observed_by_five_windows": false,
+  "convergence_claim": false,
+  "convergence_limitation": "Windows 2-5 were accepted at the 20-iteration cap; windows 3-5 final raw force residuals exceed the configured 1e-3 N absolute criterion.",
+  "long_run_stability_or_historical_25_window_runaway_resolved": false,
+  "process_exit_codes": {"launcher": 0, "fluid": 0, "structure": 0, "worker_independent_code": null},
+  "evidence_files": {
+    "structure_trace.jsonl": {"sha256": "8291e66c79e4f182f1ba67db78137411365df46d27de04f794ddfddeb9b2fd2a", "records": 93},
+    "fluid.stdout": {"sha256": "4a74fbec2d1fcf5a21039447945dd533f7123b18e5636794f6770b0e1777389a"},
+    "structure.stdout": {"sha256": "0b53bd73cff04ee6476d6d66a536d8a746edcf526b6fb132c43547ce9f642eba"},
+    "fluid.stderr": {"sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "empty": true},
+    "structure.stderr": {"sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "empty": true},
+    "structure_audit.json": {"sha256": "03592d20db676b723129f7979a051f2667be1d0a79c0ebd9c2511020b7ca699b"},
+    "launch_summary.json": {"sha256": "af9b07381660662f91c7df34dc16c139dfad40509a66a9d6e3e48f68b70a8291"},
+    "cylinder_forces.dat": {"path": "cases/hh06_single_slice/postProcessing/cylinderForces/30/forces.dat", "sha256": "c9d07e97b1323849cb62cfdd1008635fd3567b51f98efcc54f77cb911dd85413", "last_global_time_s": 30.001}
+  },
+  "historical_comparison": {
+    "phase1e_failure_trace_sha256_unchanged": "2d96f0d2f6fb0cc73290203a379b14336bc25b24951d13598f1d983208f96b74",
+    "phase1er_pass_trace_sha256_unchanged": "33266a748588efc115d14121645cc67f660afc734243d214c00042a1dc3fe14c",
+    "interpretation": "The prior runaway was not observed within the five-window/1 ms interval in the available diagnostics; this does not prove it is fixed, delayed, or absent at longer horizons."
+  }
+}

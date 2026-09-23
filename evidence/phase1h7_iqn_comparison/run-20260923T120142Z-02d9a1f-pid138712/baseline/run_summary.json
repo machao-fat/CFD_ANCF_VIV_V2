@@ -1,0 +1,3336 @@
+{
+  "variant": "baseline",
+  "classification": "RUN_COMPLETED",
+  "runtime_identity": {
+    "git": {
+      "branch": "repair/worker-lineage-implicit-contract-v1",
+      "head": "02d9a1f180082e83bcc9f7acdcb090502262b2d1",
+      "worktree_clean": false,
+      "status_porcelain": [
+        "M cases/hh06_single_slice/bounded_qualification.py",
+        " M cases/hh06_single_slice/contract.json",
+        " M cases/hh06_single_slice/interface_contract.json",
+        " M cases/hh06_single_slice/launch.sh",
+        " M cases/hh06_single_slice/precice-config.xml",
+        " M cases/hh06_single_slice/structure_contract.json",
+        " M src/coupling/arbitrary_n_live_orchestration_v1/precice_backend.py",
+        " M src/coupling/hh06_structure_0000/structure_0000_participant.py",
+        " M tests/coupling/test_bounded_qualification_launcher.py",
+        " M tests/coupling/test_implicit_iteration_trace.py",
+        "?? docs/PHASE1E5_PRECICE_FORCE_READ_TIME_DESIGN.md",
+        "?? docs/PHASE1E6_FORCE_READ_TIME_REPAIR_REPORT.md",
+        "?? docs/PHASE1ER_REAL_2WINDOW_REQUALIFICATION.md",
+        "?? docs/PHASE1E_REAL_2WINDOW_STRATEGY_C_QUALIFICATION.md",
+        "?? docs/PHASE1F_REAL_5WINDOW_QUALIFICATION.md",
+        "?? docs/PHASE1G_IMPLICIT_CONVERGENCE_EFFICIENCY_AUDIT.md",
+        "?? docs/PHASE1H5_IQN_ILS_CONTROLLED_EXPERIMENT_DESIGN.md",
+        "?? docs/PHASE1H6_IQN_ILS_CANDIDATE_PREPARATION.md",
+        "?? docs/PHASE1H_COUPLING_ACCELERATION_BASELINE_AUDIT.md",
+        "?? evidence/phase1e5_precice_force_read_timing/",
+        "?? evidence/phase1e6_offline_force_read_time/",
+        "?? evidence/phase1e_bounded_2window/",
+        "?? evidence/phase1f_bounded_5window/",
+        "?? evidence/phase1h6_iqn_ils_candidate/",
+        "?? evidence/phase1h7_iqn_comparison/",
+        "?? scripts/phase1h7_iqn_ab.py"
+      ]
+    },
+    "worker": {
+      "path": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+      "source_path": "/home/machao/projects/CFD_ANCF_VIV_V2/src/ancf/ancf_worker_main.cpp",
+      "source_sha256": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+      "binary_sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596"
+    },
+    "adapter": {
+      "path": "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so",
+      "sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572",
+      "source_provenance_resolved": false,
+      "build_id": "e76f7d6491a2f32cf9d6d5712c79b1ce55cd862b"
+    },
+    "precice": {
+      "version_information": "3.4.1;no-info [git failed to run];PRECICE_FEATURE_MPI_COMMUNICATION=Y;PRECICE_FEATURE_PETSC_MAPPING=Y;PRECICE_FEATURE_GINKGO_MAPPING=N;PRECICE_FEATURE_PYTHON_ACTIONS=Y;PRECICE_BINDINGS_C=Y;PRECICE_BINDINGS_FORTRAN=Y;CXX=GNU;CXXFLAGS= -O3 -DNDEBUG;LDFLAGS="
+    },
+    "python_precice_binding": {
+      "classification": "PYTHON_PRECICE_BINDING_RUNTIME_CONFIRMED",
+      "runtime_identity": {
+        "python_executable": "/usr/bin/python3.10",
+        "python_version": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+        "pyprecice_metadata_version": "3.4.0",
+        "precice_module_path": "/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py",
+        "precice_module_sha256": "a110a4ab07722a6f21d727a7c179b9295db961a74a595f12b01ad07d7cf1f751",
+        "cyprecice_extension_path": "/home/machao/.local/lib/python3.10/site-packages/cyprecice.cpython-310-x86_64-linux-gnu.so",
+        "cyprecice_extension_sha256": "184b94ac58397ee2de696b10b3ccb11955033f9d4563146368f5b097f0c1684c",
+        "libprecice_loaded_path": "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "libprecice_sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7",
+        "libprecice_runtime_version": "3.4.1",
+        "libprecice_version_information": "3.4.1;no-info [git failed to run];PRECICE_FEATURE_MPI_COMMUNICATION=Y;PRECICE_FEATURE_PETSC_MAPPING=Y;PRECICE_FEATURE_GINKGO_MAPPING=N;PRECICE_FEATURE_PYTHON_ACTIONS=Y;PRECICE_BINDINGS_C=Y;PRECICE_BINDINGS_FORTRAN=Y;CXX=GNU;CXXFLAGS= -O3 -DNDEBUG;LDFLAGS="
+      },
+      "participant_exit_codes": {
+        "Structure": 0,
+        "Fluid": 0
+      },
+      "configuration_sha256": "17e3e366cf78afc67b01ce554896282e1b82fa4f34d2beef1c2eaa4660093c58"
+    },
+    "openfoam": {
+      "version": "10",
+      "pimpleFoam": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam"
+    },
+    "source_sha256": {
+      "worker_source": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+      "participant": "a330f9461e91b182b7c479f7fd614f683c91f43c4eb77e99d2e3298d1d46749d",
+      "precice_backend": "e5f37644e1b31391aed48c47473e336733e0c492191b166ed6354b2a3eb07cf6",
+      "coordinator": "e612d5bfdffb54db07a7a325934cbb9d1cff65ec22b48639ad085b79cb0a90a3",
+      "bounded_qualification": "51c6073b442c973ab9e0459be239db3f3f0571543361d13f8badccbaa543846f"
+    },
+    "run_id": "run-20260923T120142Z-02d9a1f-pid138712",
+    "variant": "baseline",
+    "restart_global_time_s": 30.0,
+    "restart_field_hashes": {
+      "U": "a71a708e7bc12280ce60d0ad141c826ccd39e2100a0e98322cd0a7f53de3668a",
+      "U_0": "ff1b0c321cd008e260115fd926e621c8f940acb7e2f120072ab094da68e86ae0",
+      "cellDisplacement": "93c2b1d13d8f56efe43fc8c8d865e97ec4fabdad9dca4032c32c2813818b6f9d",
+      "k": "eab8f52cc20f5a3aa6832cb6471df18a8119804827d532d72f44930377f37d3e",
+      "k_0": "4df41aae9007b3a95e481e0d84d03d4704f46082ac512c07a9684ca96554ef4c",
+      "nut": "52a9ecad93f73cf84856eea748fa81884797b90d5628121a255b2e557704ef21",
+      "omega": "cda71b08942c289ef7ae5b73aeb0e8390c5f5c2606706632d9d69d2b31d60c58",
+      "omega_0": "db87be853b7d82f35ce20ed51760da027307df10d793336e367fa6f21d8c5e73",
+      "p": "c33098b9634bf39ed09b184f5314aca388cce63063d9cc6c064b280167a78e05",
+      "phi": "aedd09592bca8e7e7a0f5ba193dd3e236779bf48bfea393bf744ac8df7b5fcb2",
+      "phi_0": "d4a821b80b3fb5156b4431d334c8249eeb8a0b878fb44e354124122a89461a93",
+      "pointDisplacement": "c39b4977c62592e42661d17ed7a3bc9d13ebdbec9b9966d8f195b501b1ba534a",
+      "uniform/time": "44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109",
+      "yPlus": "74bb07313d7a86fccbf335792fc39abf3faf9ea4f76bf763f995ff94bf0f657a"
+    },
+    "mesh_hashes": {
+      "boundary": "aa930c4252198b6e129e384302dfe1737b50cb9d7f40b08c9252ed6b52f83bf2",
+      "cellZones": "5dda898dd3e65c76ed3ac78d1346dc74b5d55cd1020b59863d07510f078bde47",
+      "faceZones": "ea550fd99f1ed807268426d518b3272e528773db364d8969211eb8e9bbb59254",
+      "faces": "d2a7dfeefed80fc08af488a83e9bf26d9e570c7db22a3392faa918b21a332242",
+      "neighbour": "79cc5e86396555ab0cdbac498cd5042f2cbdbfbc229e527ae5597afb69af94a7",
+      "owner": "b433a77644b807eec43cd32e739e927cff1c4f1fca2d0cf6edf0cc93de5283bc",
+      "pointZones": "890d1eeae9c0391662acd0a8a27c24bc3a39b693251444af90e16ecc5cc7c0dd",
+      "points": "41d2d570fb801c4bab9e40cc1c0644150cbaddaa5903e682e9e78b333e3b93bf",
+      "sets/fluid": "489032940729201429f127a15516c73cf69b43c5e94b2e89dec530a7febb31d9",
+      "sets/twoInternalFacesCells": "b7b7e4d283cfcb1b6fed86dcf3502248bfbc0a3dd94dd120161a45ce820525e8"
+    },
+    "release_force": {
+      "raw_N": [
+        0.0655270406544,
+        0.05872987413554,
+        -2.44420351566e-21
+      ],
+      "source_global_time_s": 30.0,
+      "result_json_sha256": "6b272f695ebefe28daa176723483f611c42f8d25dbae8d83de928f3790811b8a"
+    },
+    "configuration": {
+      "path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/baseline/case/precice-config.xml",
+      "sha256": "2cc3e3e0e7fa420a8f56973e100ed9ba7f45ad36a5f966ff99e482e1307bd05d",
+      "acceleration": {
+        "type": "constant",
+        "relaxation": 0.2
+      }
+    },
+    "case_contract_sha256": "f4f2a6c062b1ba1a8bdae90b50b556ae4c2269e9250420a39a268b4240cbfd4e",
+    "preflight_status": "PASS_PREFLIGHT_ONLY"
+  },
+  "timing": {
+    "launcher_start_to_all_participants_exit_s": 96.905161509,
+    "average_s_per_coupling_attempt": 1.041990983967742,
+    "preflight_included": true
+  },
+  "process_cleanup": {
+    "started_utc": "2026-09-23T12:02:21.117145+00:00",
+    "finished_utc": "2026-09-23T12:04:06.868111+00:00",
+    "wall_s_launcher_start_to_all_participants_exit": 96.905161509,
+    "preflight_included_in_wall_time": true,
+    "preflight_s": 0.583310058,
+    "participant_pids_and_exit_codes": {
+      "Structure": {
+        "pid": 139533,
+        "exit_code": 0
+      },
+      "Fluid": {
+        "pid": 139534,
+        "exit_code": 0
+      }
+    },
+    "worker_processes_observed": [
+      {
+        "pid": 139535,
+        "ppid": 139533,
+        "loaded_libraries": {}
+      }
+    ],
+    "worker_processes_remaining": [],
+    "loaded_runtime_samples": {
+      "Structure": {
+        "pid": 139533,
+        "loaded_libraries": {
+          "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1": {
+            "sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7"
+          }
+        }
+      },
+      "Fluid": {
+        "pid": 139534,
+        "loaded_libraries": {
+          "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so": {
+            "sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572"
+          },
+          "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1": {
+            "sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7"
+          }
+        }
+      }
+    },
+    "all_owned_processes_exited": true,
+    "worker_absent_after_shutdown": true,
+    "failure": null
+  },
+  "restart_inputs_unchanged_after_run": true,
+  "iterations_per_window": {
+    "1": 13,
+    "2": 20,
+    "3": 20,
+    "4": 20,
+    "5": 20
+  },
+  "total_coupling_attempts": 93,
+  "total_cfd_advance_calls": 93,
+  "rollback_count": 88,
+  "per_window": {
+    "1": {
+      "attempt_count": 13,
+      "rollback_count": 12,
+      "acceptance": "converged_before_cap",
+      "preCICE_converged": true,
+      "preCICE_final_residuals": {
+        "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+        "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+      },
+      "preCICE_residual_history": [
+        {
+          "TimeWindow": 1,
+          "Iteration": 1.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 2.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 3.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 4.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 5.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 6.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 7.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 8.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 9.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 10.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 11.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 12.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 1,
+          "Iteration": 13.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        }
+      ],
+      "structure_force_input_sequence_raw_N": [
+        [
+          0.06552704065480554,
+          0.058729874135090385,
+          0.0
+        ],
+        [
+          0.06530305893818045,
+          0.05880124949728197,
+          0.0
+        ],
+        [
+          0.06512387356488036,
+          0.05885834978703524,
+          0.0
+        ],
+        [
+          0.0649805252662403,
+          0.05890403001883785,
+          0.0
+        ],
+        [
+          0.06486584662732825,
+          0.05894057420427994,
+          0.0
+        ],
+        [
+          0.06477410371619861,
+          0.05896980955263362,
+          0.0
+        ],
+        [
+          0.0647007093872949,
+          0.058993197831316554,
+          0.0
+        ],
+        [
+          0.06464199392417193,
+          0.05901190845426291,
+          0.0
+        ],
+        [
+          0.06459502155367355,
+          0.05902687695261999,
+          0.0
+        ],
+        [
+          0.06455744365727485,
+          0.05903885175130565,
+          0.0
+        ],
+        [
+          0.0645273813401559,
+          0.059048431590254184,
+          0.0
+        ],
+        [
+          0.06450333148646073,
+          0.05905609546141301,
+          0.0
+        ],
+        [
+          0.0644840916035046,
+          0.05906222655834007,
+          0.0
+        ]
+      ],
+      "structure_force_returned_sequence_raw_N": [
+        [
+          0.06530305893818045,
+          0.05880124949728197,
+          0.0
+        ],
+        [
+          0.06512387356488036,
+          0.05885834978703524,
+          0.0
+        ],
+        [
+          0.0649805252662403,
+          0.05890403001883785,
+          0.0
+        ],
+        [
+          0.06486584662732825,
+          0.05894057420427994,
+          0.0
+        ],
+        [
+          0.06477410371619861,
+          0.05896980955263362,
+          0.0
+        ],
+        [
+          0.0647007093872949,
+          0.058993197831316554,
+          0.0
+        ],
+        [
+          0.06464199392417193,
+          0.05901190845426291,
+          0.0
+        ],
+        [
+          0.06459502155367355,
+          0.05902687695261999,
+          0.0
+        ],
+        [
+          0.06455744365727485,
+          0.05903885175130565,
+          0.0
+        ],
+        [
+          0.0645273813401559,
+          0.059048431590254184,
+          0.0
+        ],
+        [
+          0.06450333148646073,
+          0.05905609546141301,
+          0.0
+        ],
+        [
+          0.0644840916035046,
+          0.05906222655834007,
+          0.0
+        ],
+        [
+          0.06440713207168003,
+          0.05908675094604829,
+          0.0
+        ]
+      ],
+      "force_read_offsets_input_s": [
+        0.0,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002
+      ],
+      "force_read_offsets_returned_s": [
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0
+      ],
+      "D_trial_sequence_m": [
+        [
+          1.0633832158899472e-07,
+          9.530777187937023e-08
+        ],
+        [
+          1.059748405043233e-07,
+          9.542360094997115e-08
+        ],
+        [
+          1.0568405563658613e-07,
+          9.551626420645184e-08
+        ],
+        [
+          1.0545142774239637e-07,
+          9.559039481163639e-08
+        ],
+        [
+          1.0526532542704459e-07,
+          9.564969929578408e-08
+        ],
+        [
+          1.0511644357476317e-07,
+          9.569714288310219e-08
+        ],
+        [
+          1.0499733809293804e-07,
+          9.573509775295675e-08
+        ],
+        [
+          1.0490205370747792e-07,
+          9.576546164884033e-08
+        ],
+        [
+          1.048258261991098e-07,
+          9.57897527655472e-08
+        ],
+        [
+          1.047648441924153e-07,
+          9.580918565891272e-08
+        ],
+        [
+          1.0471605858705978e-07,
+          9.582473197360511e-08
+        ],
+        [
+          1.046770301027753e-07,
+          9.583716902535905e-08
+        ],
+        [
+          1.0464580731534774e-07,
+          9.584711866676218e-08
+        ]
+      ],
+      "D_written_sequence_m": [
+        [
+          1.0633832158899472e-07,
+          9.530777187937023e-08
+        ],
+        [
+          1.059748405043233e-07,
+          9.542360094997115e-08
+        ],
+        [
+          1.0568405563658613e-07,
+          9.551626420645184e-08
+        ],
+        [
+          1.0545142774239637e-07,
+          9.559039481163639e-08
+        ],
+        [
+          1.0526532542704459e-07,
+          9.564969929578408e-08
+        ],
+        [
+          1.0511644357476317e-07,
+          9.569714288310219e-08
+        ],
+        [
+          1.0499733809293804e-07,
+          9.573509775295675e-08
+        ],
+        [
+          1.0490205370747792e-07,
+          9.576546164884033e-08
+        ],
+        [
+          1.048258261991098e-07,
+          9.57897527655472e-08
+        ],
+        [
+          1.047648441924153e-07,
+          9.580918565891272e-08
+        ],
+        [
+          1.0471605858705978e-07,
+          9.582473197360511e-08
+        ],
+        [
+          1.046770301027753e-07,
+          9.583716902535905e-08
+        ],
+        [
+          1.0464580731534774e-07,
+          9.584711866676218e-08
+        ]
+      ],
+      "D_written_equals_D_trial_all_attempts": true,
+      "force_residual_raw_N": [
+        0.00023507924559667696,
+        0.0001880633964773513,
+        0.00015045071718187226,
+        0.0001203605737455066,
+        9.628845899639776e-05,
+        7.703076719712266e-05,
+        6.162461375769897e-05,
+        4.929969100615653e-05,
+        3.9439752804927444e-05,
+        3.155180224393403e-05,
+        2.5241441795152085e-05,
+        2.0193153436117644e-05,
+        8.077261374451293e-05
+      ],
+      "force_residual_applied_N": [
+        0.016623460938622155,
+        0.013298768750898412,
+        0.01063901500071811,
+        0.008511212000575108,
+        0.006808969600459555,
+        0.005447175680367958,
+        0.004357740544294426,
+        0.003486192435435354,
+        0.0027889539483484404,
+        0.0022311631586781917,
+        0.0017849305269428972,
+        0.0014279444215540332,
+        0.005711777686219128
+      ],
+      "trial_displacement_residual_m": [
+        1.4279849445626007e-07,
+        3.81490330821358e-10,
+        3.0519226465709726e-10,
+        2.441538117256996e-10,
+        1.9532304938055225e-10,
+        1.5625843950441977e-10,
+        1.2500675160356245e-10,
+        1.0000540128283421e-10,
+        8.000432102629076e-11,
+        6.400345682104913e-11,
+        5.120276545675973e-11,
+        4.096221236546214e-11,
+        3.2769769892353885e-11
+      ],
+      "ancf_newton_iterations": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "ancf_nonlinear_residual": [
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08,
+        7.826941494926132e-08
+      ]
+    },
+    "2": {
+      "attempt_count": 20,
+      "rollback_count": 19,
+      "acceptance": "ACCEPTED_AT_ITERATION_LIMIT",
+      "preCICE_converged": false,
+      "preCICE_final_residuals": {
+        "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+        "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+      },
+      "preCICE_residual_history": [
+        {
+          "TimeWindow": 2,
+          "Iteration": 1.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 2.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 3.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 4.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 5.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 6.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 7.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 8.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 9.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 10.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 11.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 12.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 13.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 14.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 15.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 16.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 17.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 18.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 19.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 2,
+          "Iteration": 20.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        }
+      ],
+      "structure_force_input_sequence_raw_N": [
+        [
+          0.06440713207168003,
+          0.05908675094604829,
+          0.0
+        ],
+        [
+          0.04403362971200148,
+          0.04016620428353744,
+          0.0
+        ],
+        [
+          0.048384010009922,
+          0.04396544596969654,
+          0.0
+        ],
+        [
+          0.051864314248258415,
+          0.047004839318623814,
+          0.0
+        ],
+        [
+          0.05464855763892755,
+          0.049436353997765636,
+          0.0
+        ],
+        [
+          0.05687595235146286,
+          0.0513815657410791,
+          0.0
+        ],
+        [
+          0.058657868121491104,
+          0.052937735135729864,
+          0.0
+        ],
+        [
+          0.0600834007375137,
+          0.05418267065145048,
+          0.0
+        ],
+        [
+          0.06122382683033178,
+          0.05517861906402697,
+          0.0
+        ],
+        [
+          0.062136167704586236,
+          0.05597537779408816,
+          0.0
+        ],
+        [
+          0.0628660404039898,
+          0.05661278477813712,
+          0.0
+        ],
+        [
+          0.06344993856351266,
+          0.05712271036537628,
+          0.0
+        ],
+        [
+          0.06391705709113095,
+          0.05753065083516761,
+          0.0
+        ],
+        [
+          0.06429075191322559,
+          0.05785700321100067,
+          0.0
+        ],
+        [
+          0.06458970777090128,
+          0.05811808511166713,
+          0.0
+        ],
+        [
+          0.06482887245704184,
+          0.05832695063220029,
+          0.0
+        ],
+        [
+          0.0650202042059543,
+          0.05849404304862681,
+          0.0
+        ],
+        [
+          0.06517326960508425,
+          0.05862771698176804,
+          0.0
+        ],
+        [
+          0.06529572192438822,
+          0.058734656128281014,
+          0.0
+        ],
+        [
+          0.0653936837798314,
+          0.0588202074454914,
+          0.0
+        ]
+      ],
+      "structure_force_returned_sequence_raw_N": [
+        [
+          0.04403362971200148,
+          0.04016620428353744,
+          0.0
+        ],
+        [
+          0.048384010009922,
+          0.04396544596969654,
+          0.0
+        ],
+        [
+          0.051864314248258415,
+          0.047004839318623814,
+          0.0
+        ],
+        [
+          0.05464855763892755,
+          0.049436353997765636,
+          0.0
+        ],
+        [
+          0.05687595235146286,
+          0.0513815657410791,
+          0.0
+        ],
+        [
+          0.058657868121491104,
+          0.052937735135729864,
+          0.0
+        ],
+        [
+          0.0600834007375137,
+          0.05418267065145048,
+          0.0
+        ],
+        [
+          0.06122382683033178,
+          0.05517861906402697,
+          0.0
+        ],
+        [
+          0.062136167704586236,
+          0.05597537779408816,
+          0.0
+        ],
+        [
+          0.0628660404039898,
+          0.05661278477813712,
+          0.0
+        ],
+        [
+          0.06344993856351266,
+          0.05712271036537628,
+          0.0
+        ],
+        [
+          0.06391705709113095,
+          0.05753065083516761,
+          0.0
+        ],
+        [
+          0.06429075191322559,
+          0.05785700321100067,
+          0.0
+        ],
+        [
+          0.06458970777090128,
+          0.05811808511166713,
+          0.0
+        ],
+        [
+          0.06482887245704184,
+          0.05832695063220029,
+          0.0
+        ],
+        [
+          0.0650202042059543,
+          0.05849404304862681,
+          0.0
+        ],
+        [
+          0.06517326960508425,
+          0.05862771698176804,
+          0.0
+        ],
+        [
+          0.06529572192438822,
+          0.058734656128281014,
+          0.0
+        ],
+        [
+          0.0653936837798314,
+          0.0588202074454914,
+          0.0
+        ],
+        [
+          0.06578553120160406,
+          0.05916241271433292,
+          0.0
+        ]
+      ],
+      "force_read_offsets_input_s": [
+        0.0,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002
+      ],
+      "force_read_offsets_returned_s": [
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0
+      ],
+      "D_trial_sequence_m": [
+        [
+          5.217020283787171e-07,
+          4.779911657793124e-07
+        ],
+        [
+          4.886395853926331e-07,
+          4.4728660235907345e-07
+        ],
+        [
+          4.956994515869211e-07,
+          4.534520720668181e-07
+        ],
+        [
+          5.013473445423444e-07,
+          4.5838444783300766e-07
+        ],
+        [
+          5.05865658906678e-07,
+          4.623303484459551e-07
+        ],
+        [
+          5.094803103981408e-07,
+          4.6548706893630903e-07
+        ],
+        [
+          5.123720315913096e-07,
+          4.680124453285912e-07
+        ],
+        [
+          5.146854085458444e-07,
+          4.700327464424168e-07
+        ],
+        [
+          5.165361101094692e-07,
+          4.716489873334742e-07
+        ],
+        [
+          5.18016671360371e-07,
+          4.72941980046322e-07
+        ],
+        [
+          5.192011203610898e-07,
+          4.7397637421659807e-07
+        ],
+        [
+          5.201486795616647e-07,
+          4.7480388955281877e-07
+        ],
+        [
+          5.209067269221256e-07,
+          4.7546590182179615e-07
+        ],
+        [
+          5.215131648104943e-07,
+          4.7599551163697793e-07
+        ],
+        [
+          5.219983151211884e-07,
+          4.7641919948912254e-07
+        ],
+        [
+          5.223864353697439e-07,
+          4.7675814977083857e-07
+        ],
+        [
+          5.226969315685887e-07,
+          4.770293099962117e-07
+        ],
+        [
+          5.229453285276638e-07,
+          4.772462381765096e-07
+        ],
+        [
+          5.231440460949244e-07,
+          4.774197807207482e-07
+        ],
+        [
+          5.233030201487327e-07,
+          4.775586147561392e-07
+        ]
+      ],
+      "D_written_sequence_m": [
+        [
+          5.217020283787171e-07,
+          4.779911657793124e-07
+        ],
+        [
+          4.886395853926331e-07,
+          4.4728660235907345e-07
+        ],
+        [
+          4.956994515869211e-07,
+          4.534520720668181e-07
+        ],
+        [
+          5.013473445423444e-07,
+          4.5838444783300766e-07
+        ],
+        [
+          5.05865658906678e-07,
+          4.623303484459551e-07
+        ],
+        [
+          5.094803103981408e-07,
+          4.6548706893630903e-07
+        ],
+        [
+          5.123720315913096e-07,
+          4.680124453285912e-07
+        ],
+        [
+          5.146854085458444e-07,
+          4.700327464424168e-07
+        ],
+        [
+          5.165361101094692e-07,
+          4.716489873334742e-07
+        ],
+        [
+          5.18016671360371e-07,
+          4.72941980046322e-07
+        ],
+        [
+          5.192011203610898e-07,
+          4.7397637421659807e-07
+        ],
+        [
+          5.201486795616647e-07,
+          4.7480388955281877e-07
+        ],
+        [
+          5.209067269221256e-07,
+          4.7546590182179615e-07
+        ],
+        [
+          5.215131648104943e-07,
+          4.7599551163697793e-07
+        ],
+        [
+          5.219983151211884e-07,
+          4.7641919948912254e-07
+        ],
+        [
+          5.223864353697439e-07,
+          4.7675814977083857e-07
+        ],
+        [
+          5.226969315685887e-07,
+          4.770293099962117e-07
+        ],
+        [
+          5.229453285276638e-07,
+          4.772462381765096e-07
+        ],
+        [
+          5.231440460949244e-07,
+          4.774197807207482e-07
+        ],
+        [
+          5.233030201487327e-07,
+          4.775586147561392e-07
+        ]
+      ],
+      "D_written_equals_D_trial_all_attempts": true,
+      "force_residual_raw_N": [
+        0.027804076758779057,
+        0.005775815624341207,
+        0.004620652499472969,
+        0.003696521999578376,
+        0.0029572175996627047,
+        0.0023657740797301597,
+        0.0018926192637841277,
+        0.0015140954110273044,
+        0.0012112763288218403,
+        0.0009690210630574681,
+        0.0007752168504459861,
+        0.0006201734803567854,
+        0.000496138784285431,
+        0.00039691102742834004,
+        0.0003175288219426723,
+        0.000254023057554136,
+        0.00020321844604331154,
+        0.00016257475683464651,
+        0.00013005980546772713,
+        0.000520239221870838
+      ],
+      "force_residual_applied_N": [
+        1.9661454279422332,
+        0.40843267629269964,
+        0.32674614103415994,
+        0.261396912827328,
+        0.20911753026186267,
+        0.16729402420948986,
+        0.13383521936759188,
+        0.10706817549407366,
+        0.0856545403952587,
+        0.06852363231620667,
+        0.05481890585296616,
+        0.043855124682372675,
+        0.03508409974589833,
+        0.02806727979671833,
+        0.022453823837374685,
+        0.017963059069899617,
+        0.014370447255919886,
+        0.011496357804735716,
+        0.009197086243789275,
+        0.03678834497515211
+      ],
+      "trial_displacement_residual_m": [
+        5.656588762418716e-07,
+        4.5120897054862815e-08,
+        9.37308526571519e-09,
+        7.498468212562742e-09,
+        5.998774570043648e-09,
+        4.7990196560292485e-09,
+        3.8392157248215955e-09,
+        3.0713725798570084e-09,
+        2.457098063881384e-09,
+        1.9656784511077087e-09,
+        1.5725427608828142e-09,
+        1.2580342087060033e-09,
+        1.0064273669661204e-09,
+        8.05141893572772e-10,
+        6.441135148570273e-10,
+        5.152908118860203e-10,
+        4.1223264950939194e-10,
+        3.2978611960647564e-10,
+        2.6382889568575227e-10,
+        2.110631165486097e-10
+      ],
+      "ancf_newton_iterations": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "ancf_nonlinear_residual": [
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08,
+        9.32296835287616e-08
+      ]
+    },
+    "3": {
+      "attempt_count": 20,
+      "rollback_count": 19,
+      "acceptance": "ACCEPTED_AT_ITERATION_LIMIT",
+      "preCICE_converged": false,
+      "preCICE_final_residuals": {
+        "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+        "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+      },
+      "preCICE_residual_history": [
+        {
+          "TimeWindow": 3,
+          "Iteration": 1.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 2.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 3.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 4.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 5.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 6.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 7.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 8.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 9.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 10.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 11.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 12.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 13.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 14.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 15.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 16.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 17.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 18.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 19.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 3,
+          "Iteration": 20.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        }
+      ],
+      "structure_force_input_sequence_raw_N": [
+        [
+          0.06578553120160406,
+          0.05916241271433292,
+          0.0
+        ],
+        [
+          -0.03725396868946759,
+          -0.03502293885343326,
+          0.0
+        ],
+        [
+          -0.016607118251688886,
+          -0.01617985101589672,
+          0.0
+        ],
+        [
+          -8.97812479290546e-05,
+          -0.0011056233159383467,
+          0.0
+        ],
+        [
+          0.013124231701541946,
+          0.010954001414099211,
+          0.0
+        ],
+        [
+          0.02369529871465561,
+          0.0206014586280584,
+          0.0
+        ],
+        [
+          0.03215229567160968,
+          0.02831966696929661,
+          0.0
+        ],
+        [
+          0.0389177498907098,
+          0.03449399107221632,
+          0.0
+        ],
+        [
+          0.04433025661245303,
+          0.03943369292462294,
+          0.0
+        ],
+        [
+          0.04866011864338448,
+          0.04338521183647739,
+          0.0
+        ],
+        [
+          0.05212415161459277,
+          0.0465466695360318,
+          0.0
+        ],
+        [
+          0.054895234645096276,
+          0.04907559312560447,
+          0.0
+        ],
+        [
+          0.057112244415962216,
+          0.05109897456733347,
+          0.0
+        ],
+        [
+          0.05888570888619183,
+          0.052717437150645814,
+          0.0
+        ],
+        [
+          0.06030462380883866,
+          0.054012449787366544,
+          0.0
+        ],
+        [
+          0.061439612400492984,
+          0.05504821732667227,
+          0.0
+        ],
+        [
+          0.06234774662027958,
+          0.05587707392818771,
+          0.0
+        ],
+        [
+          0.06307411064964573,
+          0.0565399166393292,
+          0.0
+        ],
+        [
+          0.06365534521960178,
+          0.05707043337831325,
+          0.0
+        ],
+        [
+          0.06412018952910349,
+          0.05749460419942964,
+          0.0
+        ]
+      ],
+      "structure_force_returned_sequence_raw_N": [
+        [
+          -0.03725396868946759,
+          -0.03502293885343326,
+          0.0
+        ],
+        [
+          -0.016607118251688886,
+          -0.01617985101589672,
+          0.0
+        ],
+        [
+          -8.97812479290546e-05,
+          -0.0011056233159383467,
+          0.0
+        ],
+        [
+          0.013124231701541946,
+          0.010954001414099211,
+          0.0
+        ],
+        [
+          0.02369529871465561,
+          0.0206014586280584,
+          0.0
+        ],
+        [
+          0.03215229567160968,
+          0.02831966696929661,
+          0.0
+        ],
+        [
+          0.0389177498907098,
+          0.03449399107221632,
+          0.0
+        ],
+        [
+          0.04433025661245303,
+          0.03943369292462294,
+          0.0
+        ],
+        [
+          0.04866011864338448,
+          0.04338521183647739,
+          0.0
+        ],
+        [
+          0.05212415161459277,
+          0.0465466695360318,
+          0.0
+        ],
+        [
+          0.054895234645096276,
+          0.04907559312560447,
+          0.0
+        ],
+        [
+          0.057112244415962216,
+          0.05109897456733347,
+          0.0
+        ],
+        [
+          0.05888570888619183,
+          0.052717437150645814,
+          0.0
+        ],
+        [
+          0.06030462380883866,
+          0.054012449787366544,
+          0.0
+        ],
+        [
+          0.061439612400492984,
+          0.05504821732667227,
+          0.0
+        ],
+        [
+          0.06234774662027958,
+          0.05587707392818771,
+          0.0
+        ],
+        [
+          0.06307411064964573,
+          0.0565399166393292,
+          0.0
+        ],
+        [
+          0.06365534521960178,
+          0.05707043337831325,
+          0.0
+        ],
+        [
+          0.06412018952910349,
+          0.05749460419942964,
+          0.0
+        ],
+        [
+          0.06598028349942595,
+          0.059192500334249436,
+          0.0
+        ]
+      ],
+      "force_read_offsets_input_s": [
+        0.0,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002
+      ],
+      "force_read_offsets_returned_s": [
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0
+      ],
+      "D_trial_sequence_m": [
+        [
+          1.358622673307491e-06,
+          1.2356613568516936e-06
+        ],
+        [
+          1.1914085375475235e-06,
+          1.082815873514506e-06
+        ],
+        [
+          1.2249145741247384e-06,
+          1.1133947355165038e-06
+        ],
+        [
+          1.2517191707611553e-06,
+          1.1378574314711411e-06
+        ],
+        [
+          1.2731630806949167e-06,
+          1.1574279818811496e-06
+        ],
+        [
+          1.2903179760168252e-06,
+          1.1730840285624268e-06
+        ],
+        [
+          1.3040421248991446e-06,
+          1.185609259553897e-06
+        ],
+        [
+          1.315021211380006e-06,
+          1.195629050700441e-06
+        ],
+        [
+          1.3238047131895615e-06,
+          1.2036452772641921e-06
+        ],
+        [
+          1.3308312820122557e-06,
+          1.2100578648686006e-06
+        ],
+        [
+          1.3364527696953064e-06,
+          1.2151883285986702e-06
+        ],
+        [
+          1.34094972721682e-06,
+          1.219292305936154e-06
+        ],
+        [
+          1.3445475258589335e-06,
+          1.2225758814526904e-06
+        ],
+        [
+          1.3474255321477053e-06,
+          1.2252023482193559e-06
+        ],
+        [
+          1.3497281698036356e-06,
+          1.227303915279246e-06
+        ],
+        [
+          1.3515700473034601e-06,
+          1.2289847752805942e-06
+        ],
+        [
+          1.3530437819282337e-06,
+          1.2303298569282312e-06
+        ],
+        [
+          1.3542225370031387e-06,
+          1.2314055285997822e-06
+        ],
+        [
+          1.3551657736879756e-06,
+          1.2322664595835812e-06
+        ],
+        [
+          1.3559201304109314e-06,
+          1.2329548107240614e-06
+        ]
+      ],
+      "D_written_sequence_m": [
+        [
+          1.358622673307491e-06,
+          1.2356613568516936e-06
+        ],
+        [
+          1.1914085375475235e-06,
+          1.082815873514506e-06
+        ],
+        [
+          1.2249145741247384e-06,
+          1.1133947355165038e-06
+        ],
+        [
+          1.2517191707611553e-06,
+          1.1378574314711411e-06
+        ],
+        [
+          1.2731630806949167e-06,
+          1.1574279818811496e-06
+        ],
+        [
+          1.2903179760168252e-06,
+          1.1730840285624268e-06
+        ],
+        [
+          1.3040421248991446e-06,
+          1.185609259553897e-06
+        ],
+        [
+          1.315021211380006e-06,
+          1.195629050700441e-06
+        ],
+        [
+          1.3238047131895615e-06,
+          1.2036452772641921e-06
+        ],
+        [
+          1.3308312820122557e-06,
+          1.2100578648686006e-06
+        ],
+        [
+          1.3364527696953064e-06,
+          1.2151883285986702e-06
+        ],
+        [
+          1.34094972721682e-06,
+          1.219292305936154e-06
+        ],
+        [
+          1.3445475258589335e-06,
+          1.2225758814526904e-06
+        ],
+        [
+          1.3474255321477053e-06,
+          1.2252023482193559e-06
+        ],
+        [
+          1.3497281698036356e-06,
+          1.227303915279246e-06
+        ],
+        [
+          1.3515700473034601e-06,
+          1.2289847752805942e-06
+        ],
+        [
+          1.3530437819282337e-06,
+          1.2303298569282312e-06
+        ],
+        [
+          1.3542225370031387e-06,
+          1.2314055285997822e-06
+        ],
+        [
+          1.3551657736879756e-06,
+          1.2322664595835812e-06
+        ],
+        [
+          1.3559201304109314e-06,
+          1.2329548107240614e-06
+        ]
+      ],
+      "D_written_equals_D_trial_all_attempts": true,
+      "force_residual_raw_N": [
+        0.13959949494086957,
+        0.02795271708176363,
+        0.022361904266988673,
+        0.017889792812051254,
+        0.01431156485122829,
+        0.011449521279454854,
+        0.009159347625166044,
+        0.007327747498623645,
+        0.005861928600524333,
+        0.004689812278939323,
+        0.003751580424813201,
+        0.003001533738415806,
+        0.0024009575924511606,
+        0.001921035472597065,
+        0.0015365589798848945,
+        0.0012295165826547974,
+        0.00098334386806978,
+        0.000786944493375657,
+        0.0006292861968632934,
+        0.0025184917834025116
+      ],
+      "force_residual_applied_N": [
+        9.871678570818633,
+        1.976656422210428,
+        1.5813060874513418,
+        1.2650639202807672,
+        1.012032085908286,
+        0.8096447190471646,
+        0.6476967249224559,
+        0.5181764302598149,
+        0.4145220938942207,
+        0.33163672543928063,
+        0.26529033004036207,
+        0.21225131435940342,
+        0.16978200118047493,
+        0.13584465127650672,
+        0.10865667072043182,
+        0.08694438691630352,
+        0.06953645924207728,
+        0.05564821774585003,
+        0.044499523921047175,
+        0.17809334754060616
+      ],
+      "trial_displacement_residual_m": [
+        1.1280419719700445e-06,
+        2.2654427596946993e-07,
+        4.5362112918722086e-08,
+        3.628925315034803e-08,
+        2.9031839703986258e-08,
+        2.32250345789187e-08,
+        1.8580464847084805e-08,
+        1.4863934693565928e-08,
+        1.1891584938932911e-08,
+        9.512830767141388e-09,
+        7.61070179787974e-09,
+        6.088124254388824e-09,
+        4.870936587761294e-09,
+        3.896312086397619e-09,
+        3.117486853496515e-09,
+        2.4935522991291114e-09,
+        1.995279023862633e-09,
+        1.5957860356550834e-09,
+        1.2770660133631057e-09,
+        1.0212156276071738e-09
+      ],
+      "ancf_newton_iterations": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "ancf_nonlinear_residual": [
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08,
+        9.540127887674998e-08
+      ]
+    },
+    "4": {
+      "attempt_count": 20,
+      "rollback_count": 19,
+      "acceptance": "ACCEPTED_AT_ITERATION_LIMIT",
+      "preCICE_converged": false,
+      "preCICE_final_residuals": {
+        "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+        "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+      },
+      "preCICE_residual_history": [
+        {
+          "TimeWindow": 4,
+          "Iteration": 1.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 2.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 3.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 4.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 5.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 6.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 7.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 8.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 9.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 10.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 11.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 12.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 13.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 14.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 15.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 16.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 17.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 18.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 19.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 4,
+          "Iteration": 20.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        }
+      ],
+      "structure_force_input_sequence_raw_N": [
+        [
+          0.06598028349942595,
+          0.059192500334249436,
+          0.0
+        ],
+        [
+          -0.20115137546286832,
+          -0.1839754791467808,
+          0.0
+        ],
+        [
+          -0.14773382470863614,
+          -0.13534600156769952,
+          0.0
+        ],
+        [
+          -0.10499978410525038,
+          -0.0964424195044345,
+          0.0
+        ],
+        [
+          -0.07081255162254177,
+          -0.06531955385382249,
+          0.0
+        ],
+        [
+          -0.04346276563637489,
+          -0.04042126133333287,
+          0.0
+        ],
+        [
+          -0.021582936847441392,
+          -0.02050262731694117,
+          0.0
+        ],
+        [
+          -0.004079073816294588,
+          -0.00456772010382781,
+          0.0
+        ],
+        [
+          0.009924016608622856,
+          0.008180205666662877,
+          0.0
+        ],
+        [
+          0.021126488948556812,
+          0.01837854628305543,
+          0.0
+        ],
+        [
+          0.03008846682050398,
+          0.02653721877616947,
+          0.0
+        ],
+        [
+          0.03725804911806171,
+          0.033064156770660706,
+          0.0
+        ],
+        [
+          0.0429937149561079,
+          0.038285707166253694,
+          0.0
+        ],
+        [
+          0.047582247626544845,
+          0.04246294748272808,
+          0.0
+        ],
+        [
+          0.051253073762894404,
+          0.045804739735907596,
+          0.0
+        ],
+        [
+          0.05418973467197405,
+          0.04847817353845121,
+          0.0
+        ],
+        [
+          0.05653906339923777,
+          0.05061692058048609,
+          0.0
+        ],
+        [
+          0.05841852638104874,
+          0.052327918214114005,
+          0.0
+        ],
+        [
+          0.05992209676649752,
+          0.05369671632101634,
+          0.0
+        ],
+        [
+          0.06112495307485654,
+          0.0547917548065382,
+          0.0
+        ]
+      ],
+      "structure_force_returned_sequence_raw_N": [
+        [
+          -0.20115137546286832,
+          -0.1839754791467808,
+          0.0
+        ],
+        [
+          -0.14773382470863614,
+          -0.13534600156769952,
+          0.0
+        ],
+        [
+          -0.10499978410525038,
+          -0.0964424195044345,
+          0.0
+        ],
+        [
+          -0.07081255162254177,
+          -0.06531955385382249,
+          0.0
+        ],
+        [
+          -0.04346276563637489,
+          -0.04042126133333287,
+          0.0
+        ],
+        [
+          -0.021582936847441392,
+          -0.02050262731694117,
+          0.0
+        ],
+        [
+          -0.004079073816294588,
+          -0.00456772010382781,
+          0.0
+        ],
+        [
+          0.009924016608622856,
+          0.008180205666662877,
+          0.0
+        ],
+        [
+          0.021126488948556812,
+          0.01837854628305543,
+          0.0
+        ],
+        [
+          0.03008846682050398,
+          0.02653721877616947,
+          0.0
+        ],
+        [
+          0.03725804911806171,
+          0.033064156770660706,
+          0.0
+        ],
+        [
+          0.0429937149561079,
+          0.038285707166253694,
+          0.0
+        ],
+        [
+          0.047582247626544845,
+          0.04246294748272808,
+          0.0
+        ],
+        [
+          0.051253073762894404,
+          0.045804739735907596,
+          0.0
+        ],
+        [
+          0.05418973467197405,
+          0.04847817353845121,
+          0.0
+        ],
+        [
+          0.05653906339923777,
+          0.05061692058048609,
+          0.0
+        ],
+        [
+          0.05841852638104874,
+          0.052327918214114005,
+          0.0
+        ],
+        [
+          0.05992209676649752,
+          0.05369671632101634,
+          0.0
+        ],
+        [
+          0.06112495307485654,
+          0.0547917548065382,
+          0.0
+        ],
+        [
+          0.06593637830829263,
+          0.05917190874862562,
+          0.0
+        ]
+      ],
+      "force_read_offsets_input_s": [
+        0.0,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002
+      ],
+      "force_read_offsets_returned_s": [
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0
+      ],
+      "D_trial_sequence_m": [
+        [
+          2.5918613470216482e-06,
+          2.350119583195704e-06
+        ],
+        [
+          2.1583558515645763e-06,
+          1.9555027270952726e-06
+        ],
+        [
+          2.2450427006632505e-06,
+          2.0344194150590176e-06
+        ],
+        [
+          2.3143921799368535e-06,
+          2.0975527654251636e-06
+        ],
+        [
+          2.369871763352213e-06,
+          2.1480594457148776e-06
+        ],
+        [
+          2.414255430082186e-06,
+          2.1884647899445454e-06
+        ],
+        [
+          2.449762363464656e-06,
+          2.220789065326908e-06
+        ],
+        [
+          2.4781679101696545e-06,
+          2.2466484856319097e-06
+        ],
+        [
+          2.5008923475330145e-06,
+          2.2673360218753306e-06
+        ],
+        [
+          2.519071897423294e-06,
+          2.283886050869695e-06
+        ],
+        [
+          2.533615537335255e-06,
+          2.2971260740649483e-06
+        ],
+        [
+          2.5452504492646543e-06,
+          2.307718092620997e-06
+        ],
+        [
+          2.5545583788080598e-06,
+          2.3161917074657326e-06
+        ],
+        [
+          2.562004722442719e-06,
+          2.322970599341461e-06
+        ],
+        [
+          2.567961797350398e-06,
+          2.3283937128420004e-06
+        ],
+        [
+          2.5727274572765147e-06,
+          2.332732203642408e-06
+        ],
+        [
+          2.5765399852173892e-06,
+          2.336202996282716e-06
+        ],
+        [
+          2.5795900075700766e-06,
+          2.338979630394952e-06
+        ],
+        [
+          2.5820300254522148e-06,
+          2.3412009376847305e-06
+        ],
+        [
+          2.5839820397579254e-06,
+          2.3429779835165526e-06
+        ]
+      ],
+      "D_written_sequence_m": [
+        [
+          2.5918613470216482e-06,
+          2.350119583195704e-06
+        ],
+        [
+          2.1583558515645763e-06,
+          1.9555027270952726e-06
+        ],
+        [
+          2.2450427006632505e-06,
+          2.0344194150590176e-06
+        ],
+        [
+          2.3143921799368535e-06,
+          2.0975527654251636e-06
+        ],
+        [
+          2.369871763352213e-06,
+          2.1480594457148776e-06
+        ],
+        [
+          2.414255430082186e-06,
+          2.1884647899445454e-06
+        ],
+        [
+          2.449762363464656e-06,
+          2.220789065326908e-06
+        ],
+        [
+          2.4781679101696545e-06,
+          2.2466484856319097e-06
+        ],
+        [
+          2.5008923475330145e-06,
+          2.2673360218753306e-06
+        ],
+        [
+          2.519071897423294e-06,
+          2.283886050869695e-06
+        ],
+        [
+          2.533615537335255e-06,
+          2.2971260740649483e-06
+        ],
+        [
+          2.5452504492646543e-06,
+          2.307718092620997e-06
+        ],
+        [
+          2.5545583788080598e-06,
+          2.3161917074657326e-06
+        ],
+        [
+          2.562004722442719e-06,
+          2.322970599341461e-06
+        ],
+        [
+          2.567961797350398e-06,
+          2.3283937128420004e-06
+        ],
+        [
+          2.5727274572765147e-06,
+          2.332732203642408e-06
+        ],
+        [
+          2.5765399852173892e-06,
+          2.336202996282716e-06
+        ],
+        [
+          2.5795900075700766e-06,
+          2.338979630394952e-06
+        ],
+        [
+          2.5820300254522148e-06,
+          2.3412009376847305e-06
+        ],
+        [
+          2.5839820397579254e-06,
+          2.3429779835165526e-06
+        ]
+      ],
+      "D_written_equals_D_trial_all_attempts": true,
+      "force_residual_raw_N": [
+        0.36123398160310755,
+        0.07223753053777061,
+        0.05779002443021649,
+        0.046232019544173185,
+        0.03698561563533855,
+        0.02958849250827084,
+        0.023670794006616674,
+        0.01893663520529334,
+        0.015149308164234675,
+        0.012119446531387742,
+        0.009695557225110191,
+        0.007756445780088156,
+        0.006205156624070522,
+        0.004964125299256421,
+        0.003971300239405134,
+        0.0031770401915241077,
+        0.002541632153219286,
+        0.002033305722575432,
+        0.0016266445780603433,
+        0.006506578312241351
+      ],
+      "force_residual_applied_N": [
+        25.544402984791173,
+        5.10822537374235,
+        4.08658029899388,
+        3.2692642391951034,
+        2.615411391356083,
+        2.0923291130848662,
+        1.6738632904678932,
+        1.3390906323743148,
+        1.0712725058994519,
+        0.8570180047195617,
+        0.6856144037756492,
+        0.5484915230205196,
+        0.43879321841641544,
+        0.3510345747331326,
+        0.2808276597865059,
+        0.22466212782920475,
+        0.1797297022633638,
+        0.14378376181069125,
+        0.11502700944855283,
+        0.4601080377942098
+      ],
+      "trial_displacement_residual_m": [
+        1.6660155520789101e-06,
+        5.862162380129624e-07,
+        1.1722821096401422e-07,
+        9.378256876400029e-08,
+        7.502605500643895e-08,
+        6.002084400202386e-08,
+        4.801667519958027e-08,
+        3.841334015834294e-08,
+        3.073067212581149e-08,
+        2.4584537700096487e-08,
+        1.966763015972251e-08,
+        1.5734104127549243e-08,
+        1.2587283301885401e-08,
+        1.0069826641419492e-08,
+        8.055861313071106e-09,
+        6.444689050421013e-09,
+        5.155751240310537e-09,
+        4.124600992232505e-09,
+        3.2996807937704037e-09,
+        2.6397446350159293e-09
+      ],
+      "ancf_newton_iterations": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "ancf_nonlinear_residual": [
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07,
+        1.3914492402733458e-07
+      ]
+    },
+    "5": {
+      "attempt_count": 20,
+      "rollback_count": 19,
+      "acceptance": "ACCEPTED_AT_ITERATION_LIMIT",
+      "preCICE_converged": false,
+      "preCICE_final_residuals": {
+        "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+        "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+      },
+      "preCICE_residual_history": [
+        {
+          "TimeWindow": 5,
+          "Iteration": 1.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 2.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 3.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 4.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 5.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 6.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 7.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 8.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 9.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 10.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 11.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 12.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 13.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 14.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 15.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 16.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 17.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 18.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 19.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        },
+        {
+          "TimeWindow": 5,
+          "Iteration": 20.0,
+          "ResAbsOrRel(Structure-Mesh:Displacement)": 0.0,
+          "ResAbsOrRel(Structure-Mesh:Force)": 0.0
+        }
+      ],
+      "structure_force_input_sequence_raw_N": [
+        [
+          0.06593637830829263,
+          0.05917190874862562,
+          0.0
+        ],
+        [
+          -0.44332971494629725,
+          -0.4031730528158574,
+          0.0
+        ],
+        [
+          -0.3414988884692836,
+          -0.31069871977258906,
+          0.0
+        ],
+        [
+          -0.2600342272876727,
+          -0.23671925333797436,
+          0.0
+        ],
+        [
+          -0.194862498342384,
+          -0.1775356801902826,
+          0.0
+        ],
+        [
+          -0.14272511518615302,
+          -0.13018882167212917,
+          0.0
+        ],
+        [
+          -0.10101520866116823,
+          -0.09231133485760645,
+          0.0
+        ],
+        [
+          -0.06764728344118039,
+          -0.06200934540598827,
+          0.0
+        ],
+        [
+          -0.04095294326519012,
+          -0.037767753844693726,
+          0.0
+        ],
+        [
+          -0.0195974711243979,
+          -0.018374480595658084,
+          0.0
+        ],
+        [
+          -0.0025130934117641255,
+          -0.0028598619964295725,
+          0.0
+        ],
+        [
+          0.011154408758342895,
+          0.009551832882953236,
+          0.0
+        ],
+        [
+          0.02208841049442851,
+          0.019481188786459484,
+          0.0
+        ],
+        [
+          0.030835611883297004,
+          0.02742467350926448,
+          0.0
+        ],
+        [
+          0.0378333729943918,
+          0.03377946128750848,
+          0.0
+        ],
+        [
+          0.043431581883267636,
+          0.03886329151010368,
+          0.0
+        ],
+        [
+          0.0479101489943683,
+          0.04293035568817984,
+          0.0
+        ],
+        [
+          0.051493002683248836,
+          0.046184007030640774,
+          0.0
+        ],
+        [
+          0.054359285634353265,
+          0.048786928104609516,
+          0.0
+        ],
+        [
+          0.056652311995236806,
+          0.050869264963784515,
+          0.0
+        ]
+      ],
+      "structure_force_returned_sequence_raw_N": [
+        [
+          -0.44332971494629725,
+          -0.4031730528158574,
+          0.0
+        ],
+        [
+          -0.3414988884692836,
+          -0.31069871977258906,
+          0.0
+        ],
+        [
+          -0.2600342272876727,
+          -0.23671925333797436,
+          0.0
+        ],
+        [
+          -0.194862498342384,
+          -0.1775356801902826,
+          0.0
+        ],
+        [
+          -0.14272511518615302,
+          -0.13018882167212917,
+          0.0
+        ],
+        [
+          -0.10101520866116823,
+          -0.09231133485760645,
+          0.0
+        ],
+        [
+          -0.06764728344118039,
+          -0.06200934540598827,
+          0.0
+        ],
+        [
+          -0.04095294326519012,
+          -0.037767753844693726,
+          0.0
+        ],
+        [
+          -0.0195974711243979,
+          -0.018374480595658084,
+          0.0
+        ],
+        [
+          -0.0025130934117641255,
+          -0.0028598619964295725,
+          0.0
+        ],
+        [
+          0.011154408758342895,
+          0.009551832882953236,
+          0.0
+        ],
+        [
+          0.02208841049442851,
+          0.019481188786459484,
+          0.0
+        ],
+        [
+          0.030835611883297004,
+          0.02742467350926448,
+          0.0
+        ],
+        [
+          0.0378333729943918,
+          0.03377946128750848,
+          0.0
+        ],
+        [
+          0.043431581883267636,
+          0.03886329151010368,
+          0.0
+        ],
+        [
+          0.0479101489943683,
+          0.04293035568817984,
+          0.0
+        ],
+        [
+          0.051493002683248836,
+          0.046184007030640774,
+          0.0
+        ],
+        [
+          0.054359285634353265,
+          0.048786928104609516,
+          0.0
+        ],
+        [
+          0.056652311995236806,
+          0.050869264963784515,
+          0.0
+        ],
+        [
+          0.06582441743877097,
+          0.05919861240048447,
+          0.0
+        ]
+      ],
+      "force_read_offsets_input_s": [
+        0.0,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002
+      ],
+      "force_read_offsets_returned_s": [
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0002,
+        0.0
+      ],
+      "D_trial_sequence_m": [
+        [
+          4.187552301674069e-06,
+          3.789393215726626e-06
+        ],
+        [
+          3.3611072049852427e-06,
+          3.039092476039234e-06
+        ],
+        [
+          3.5263598860358737e-06,
+          3.189161291078561e-06
+        ],
+        [
+          3.6585620308462474e-06,
+          3.3092163430826993e-06
+        ],
+        [
+          3.7643237466745e-06,
+          3.4052603846678297e-06
+        ],
+        [
+          3.848933119323884e-06,
+          3.482095617923948e-06
+        ],
+        [
+          3.916620617434744e-06,
+          3.543563804520997e-06
+        ],
+        [
+          3.970770615917786e-06,
+          3.5927383537935166e-06
+        ],
+        [
+          4.014090614700573e-06,
+          3.6320779932082253e-06
+        ],
+        [
+          4.048746613724427e-06,
+          3.663549704737838e-06
+        ],
+        [
+          4.076471412941979e-06,
+          3.68872707396014e-06
+        ],
+        [
+          4.0986512523150344e-06,
+          3.7088689693370854e-06
+        ],
+        [
+          4.116395123812837e-06,
+          3.7249824856380604e-06
+        ],
+        [
+          4.1305902210106835e-06,
+          3.737873298678482e-06
+        ],
+        [
+          4.141946298768689e-06,
+          3.7481859491105722e-06
+        ],
+        [
+          4.151031160974929e-06,
+          3.7564360694560968e-06
+        ],
+        [
+          4.158299050739808e-06,
+          3.7630361657324116e-06
+        ],
+        [
+          4.16411336255165e-06,
+          3.7683162427534094e-06
+        ],
+        [
+          4.1687648120010745e-06,
+          3.772540304370163e-06
+        ],
+        [
+          4.1724859715605904e-06,
+          3.7759195536635434e-06
+        ]
+      ],
+      "D_written_sequence_m": [
+        [
+          4.187552301674069e-06,
+          3.789393215726626e-06
+        ],
+        [
+          3.3611072049852427e-06,
+          3.039092476039234e-06
+        ],
+        [
+          3.5263598860358737e-06,
+          3.189161291078561e-06
+        ],
+        [
+          3.6585620308462474e-06,
+          3.3092163430826993e-06
+        ],
+        [
+          3.7643237466745e-06,
+          3.4052603846678297e-06
+        ],
+        [
+          3.848933119323884e-06,
+          3.482095617923948e-06
+        ],
+        [
+          3.916620617434744e-06,
+          3.543563804520997e-06
+        ],
+        [
+          3.970770615917786e-06,
+          3.5927383537935166e-06
+        ],
+        [
+          4.014090614700573e-06,
+          3.6320779932082253e-06
+        ],
+        [
+          4.048746613724427e-06,
+          3.663549704737838e-06
+        ],
+        [
+          4.076471412941979e-06,
+          3.68872707396014e-06
+        ],
+        [
+          4.0986512523150344e-06,
+          3.7088689693370854e-06
+        ],
+        [
+          4.116395123812837e-06,
+          3.7249824856380604e-06
+        ],
+        [
+          4.1305902210106835e-06,
+          3.737873298678482e-06
+        ],
+        [
+          4.141946298768689e-06,
+          3.7481859491105722e-06
+        ],
+        [
+          4.151031160974929e-06,
+          3.7564360694560968e-06
+        ],
+        [
+          4.158299050739808e-06,
+          3.7630361657324116e-06
+        ],
+        [
+          4.16411336255165e-06,
+          3.7683162427534094e-06
+        ],
+        [
+          4.1687648120010745e-06,
+          3.772540304370163e-06
+        ],
+        [
+          4.1724859715605904e-06,
+          3.7759195536635434e-06
+        ]
+      ],
+      "D_written_equals_D_trial_all_attempts": true,
+      "force_residual_raw_N": [
+        0.6878334225834449,
+        0.1375536967616246,
+        0.11004295740929967,
+        0.08803436592743975,
+        0.07042749274195181,
+        0.056341994193561444,
+        0.04507359535484916,
+        0.036058876283879326,
+        0.02884710102710347,
+        0.023077680821682774,
+        0.01846214465734622,
+        0.014769715725876976,
+        0.01181577258070158,
+        0.009452618064561267,
+        0.007562094451649014,
+        0.006049675561319208,
+        0.004839740449055369,
+        0.003871792359244295,
+        0.0030974338873954385,
+        0.012389735549581726
+      ],
+      "force_residual_applied_N": [
+        48.639649168400744,
+        9.727011413857738,
+        7.78160913108619,
+        6.225287304868954,
+        4.980229843895163,
+        3.9841838751161305,
+        3.1873471000929046,
+        2.5498776800743235,
+        2.0399021440594596,
+        1.6319217152475674,
+        1.3055373721980539,
+        1.0444298977584432,
+        0.8355439182067544,
+        0.6684351345654038,
+        0.5347481076523231,
+        0.4277984861218583,
+        0.34223878889748677,
+        0.2737910311179894,
+        0.21903282489439171,
+        0.8761312995775649
+      ],
+      "trial_displacement_residual_m": [
+        2.159526477927772e-06,
+        1.116226992065884e-06,
+        2.2322432179699716e-07,
+        1.7857945739692296e-07,
+        1.4286356589047574e-07,
+        1.1429085269453754e-07,
+        9.143268214395406e-08,
+        7.314614570754098e-08,
+        5.851691656111064e-08,
+        4.6813533245681726e-08,
+        3.7450826594478606e-08,
+        2.9960661274249946e-08,
+        2.3968529018534093e-08,
+        1.9174823214293758e-08,
+        1.5339858571067867e-08,
+        1.2271886856633014e-08,
+        9.817509485152447e-09,
+        7.854007588040296e-09,
+        6.283206070365847e-09,
+        5.026564856259985e-09
+      ],
+      "ancf_newton_iterations": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "ancf_nonlinear_residual": [
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07,
+        1.4457204944307023e-07
+      ]
+    }
+  },
+  "precice_iterations_log_headers": [
+    "TimeWindow",
+    "TotalIterations",
+    "Iterations",
+    "Convergence"
+  ],
+  "precice_convergence_log_headers": [
+    "TimeWindow",
+    "Iteration",
+    "ResAbsOrRel(Structure-Mesh:Displacement)",
+    "ResAbsOrRel(Structure-Mesh:Force)"
+  ],
+  "iqn_diagnostics": {
+    "iterations_log_rows": [
+      {
+        "TimeWindow": 1,
+        "TotalIterations": 13,
+        "Iterations": 13,
+        "Convergence": 1
+      },
+      {
+        "TimeWindow": 2,
+        "TotalIterations": 33,
+        "Iterations": 20,
+        "Convergence": 0
+      },
+      {
+        "TimeWindow": 3,
+        "TotalIterations": 53,
+        "Iterations": 20,
+        "Convergence": 0
+      },
+      {
+        "TimeWindow": 4,
+        "TotalIterations": 73,
+        "Iterations": 20,
+        "Convergence": 0
+      },
+      {
+        "TimeWindow": 5,
+        "TotalIterations": 93,
+        "Iterations": 20,
+        "Convergence": 0
+      }
+    ],
+    "acceleration_info_log_present": false,
+    "acceleration_info_log": null,
+    "preconditioner_configured": null,
+    "runtime_preconditioner_status": "not separately exposed by stock runtime log",
+    "warning_and_error_lines": [
+      "fluid.stdout: --> FOAM Warning : "
+    ],
+    "profiling_files": [
+      "precice-profiling/Fluid_0000-0-1.txt",
+      "precice-profiling/Structure_0000-0-1.txt"
+    ]
+  },
+  "files": {
+    "structure_trace": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/baseline/structure_trace.jsonl",
+    "structure_audit": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/baseline/structure_audit.json",
+    "fluid_stdout": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/baseline/fluid.stdout",
+    "fluid_stderr": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/baseline/fluid.stderr",
+    "structure_stdout": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/baseline/structure.stdout",
+    "structure_stderr": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h7_iqn_comparison/run-20260923T120142Z-02d9a1f-pid138712/baseline/structure.stderr",
+    "case_precice_logs": [
+      "precice-Fluid_0000-convergence.log",
+      "precice-Fluid_0000-iterations.log",
+      "precice-Structure_0000-iterations.log",
+      "precice-config.xml"
+    ],
+    "case_precice_profiling": [
+      "precice-profiling/Fluid_0000-0-1.txt",
+      "precice-profiling/Structure_0000-0-1.txt"
+    ]
+  }
+}

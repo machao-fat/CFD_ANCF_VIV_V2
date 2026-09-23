@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Phase 1F bounded qualification execution profile: exactly five windows from the
+     global OpenFOAM 30.0 s restart. This is not the 0.2 s scientific duration. -->
+<precice-configuration xmlns:data="http://www.precice.org/schemas/data" xmlns:m2n="http://www.precice.org/schemas/m2n" xmlns:coupling-scheme="http://www.precice.org/schemas/coupling-scheme" xmlns:mapping="http://www.precice.org/schemas/mapping" xmlns:acceleration="http://www.precice.org/schemas/acceleration">
+  <data:vector name="Displacement" waveform-degree="0"/>
+  <data:vector name="Force" waveform-degree="0"/>
+  <mesh name="Structure-Mesh" dimensions="2"><use-data name="Displacement"/><use-data name="Force"/></mesh>
+  <mesh name="Fluid-Mesh" dimensions="2"><use-data name="Displacement"/><use-data name="Force"/></mesh>
+  <m2n:sockets acceptor="Structure_0000" connector="Fluid_0000" exchange-directory="/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1h8_iqn_history/run-20260923T123908Z-02d9a1f-pid143932/precice-sockets"/>
+  <participant name="Structure_0000"><provide-mesh name="Structure-Mesh"/><write-data name="Displacement" mesh="Structure-Mesh"/><read-data name="Force" mesh="Structure-Mesh"/></participant>
+  <participant name="Fluid_0000">
+    <receive-mesh name="Structure-Mesh" from="Structure_0000"/><provide-mesh name="Fluid-Mesh"/>
+    <mapping:nearest-neighbor direction="read" from="Structure-Mesh" to="Fluid-Mesh" constraint="consistent"/>
+    <mapping:nearest-neighbor direction="write" from="Fluid-Mesh" to="Structure-Mesh" constraint="conservative"/>
+    <write-data name="Force" mesh="Fluid-Mesh"/><read-data name="Displacement" mesh="Fluid-Mesh"/>
+  </participant>
+  <coupling-scheme:parallel-implicit>
+    <participants first="Structure_0000" second="Fluid_0000"/>
+    <max-time-windows value="2"/><time-window-size value="0.0002"/><min-iterations value="2"/><max-iterations value="20"/>
+    <!-- Numerical stabilization authorized for bounded HH06 retry: constant under-relaxation. -->
+    <acceleration:IQN-ILS reduced-time-grid="true">
+      <initial-relaxation value="0.2" enforce="true"/>
+      <max-used-iterations value="1"/>
+      <time-windows-reused value="1"/>
+      <data name="Displacement" mesh="Structure-Mesh"/>
+      <data name="Force" mesh="Structure-Mesh"/>
+      <filter type="QR3" limit="1e-2"/>
+      <preconditioner type="residual-sum"/>
+    </acceleration:IQN-ILS>
+    <absolute-or-relative-convergence-measure data="Displacement" mesh="Structure-Mesh" abs-limit="1e-8" rel-limit="1e-5"/>
+    <absolute-or-relative-convergence-measure data="Force" mesh="Structure-Mesh" abs-limit="1e-3" rel-limit="1e-5"/>
+    <exchange data="Displacement" mesh="Structure-Mesh" from="Structure_0000" to="Fluid_0000" initialize="yes" substeps="false"/>
+    <exchange data="Force" mesh="Structure-Mesh" from="Fluid_0000" to="Structure_0000" initialize="yes" substeps="false"/>
+  </coupling-scheme:parallel-implicit>
+</precice-configuration>

@@ -1,0 +1,15 @@
+{
+  "run_id": "run-20260923T103144Z-pid128756",
+  "launcher": {"pid": 128756, "exit_code": 0, "absent_after_shutdown": true},
+  "fluid": {"pid": 129149, "exit_code": 0, "absent_after_shutdown": true},
+  "structure": {"pid": 129148, "exit_code": 0, "absent_after_shutdown": true},
+  "worker": {"pid": 129150, "absent_after_shutdown": true, "independent_exit_code_exposed": false},
+  "orphan_participant_or_worker": false,
+  "socket_directory": "/home/machao/OpenFOAM/coupling/singal_slice/slice0000/precice-sockets",
+  "active_socket_processes_after_shutdown": [],
+  "socket_files_after_shutdown": [],
+  "empty_directory_remaining": "/home/machao/OpenFOAM/coupling/singal_slice/slice0000/precice-sockets/precice-run",
+  "empty_directory_removed": false,
+  "stderr_empty": {"Fluid": true, "Structure": true},
+  "cleanup_note": "The empty preCICE subdirectory was preserved; no post-run cleanup mutation was performed."
+}

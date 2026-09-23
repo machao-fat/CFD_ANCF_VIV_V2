@@ -1,0 +1,70 @@
+{
+  "classification": "REAL_IMPLICIT_FORCE_ITERATION_CONTRACT_PASS",
+  "runtime_classification": "BOUNDED_RUNTIME_COMPLETED",
+  "run_id": "run-20260923T101509Z-02d9a1f1",
+  "attempt_trace": "structure_trace.jsonl",
+  "attempt_trace_sha256": "33266a748588efc115d14121645cc67f660afc734243d214c00042a1dc3fe14c",
+  "max_windows": 2,
+  "completed_windows": 2,
+  "attempts_per_window": {"1": 13, "2": 20},
+  "rollback_count_per_window": {"1": 12, "2": 19},
+  "acceptance_per_window": {
+    "1": "accepted_by_precice_before_iteration_limit",
+    "2": "ACCEPTED_AT_ITERATION_LIMIT"
+  },
+  "no_third_window": true,
+  "force_iteration_contract": {
+    "initial_F0_within_5e-13_N_xy_tolerance": true,
+    "retry_input_equals_previous_attempt_returned_force": true,
+    "window2_input_equals_window1_accepted_force": true,
+    "retry_reads_use_dt_s": true,
+    "accepted_boundary_reads_use_zero": true,
+    "unique_force_inputs_per_window": {"1": 13, "2": 20},
+    "unique_interface_trials_per_window": {"1": 13, "2": 20}
+  },
+  "motion_contract": {
+    "D_written_equals_D_trial_exactly": true,
+    "matching_attempts": 33,
+    "window2_previous_committed_equals_window1_accepted_trial": true
+  },
+  "physical_and_transport_identity": {
+    "one_physical_identity_per_window": true,
+    "window_identity_advances_once": true,
+    "sequence_range": [1, 33],
+    "request_id_range": [910001, 910033],
+    "transaction_id_range": [1910001, 1910033],
+    "all_monotonic_and_unique": true
+  },
+  "residual_ranges": {
+    "window1_force_raw_N": [2.0193153436117644e-05, 2.3507924559667696e-04],
+    "window1_trial_displacement_m": [3.2769769892353885e-11, 1.4279849445626007e-07],
+    "window2_force_raw_N": [1.3005980546772713e-04, 2.7804076758779057e-02],
+    "window2_trial_displacement_m": [2.110631165486097e-10, 5.656588762418716e-07]
+  },
+  "ancf": {
+    "newton_iterations": 3,
+    "residual_window1": 7.826941494926132e-08,
+    "residual_window2": 9.32296835287616e-08,
+    "all_attempts_finite": true
+  },
+  "fluid_diagnostics": {
+    "max_fluid_co": 0.4182184878,
+    "mesh_co": null,
+    "mesh_velocity_max": null,
+    "Umax": null,
+    "kmax": null,
+    "omega_max": null,
+    "nut_max": null,
+    "minimum_cell_volume": null,
+    "unavailable_reason": "Not emitted by the existing runtime diagnostics; no physics/configuration change or extra mesh-quality pass was made."
+  },
+  "shutdown": {
+    "fluid_exit_code": 0,
+    "structure_exit_code": 0,
+    "launcher_exit_code": 0,
+    "worker_pid_absent_after_shutdown": true,
+    "worker_exit_code_independently_exposed": false,
+    "post_run_socket_preflight_clean": true
+  },
+  "interpretation": "The real retry Force-read contract works in this two-window run. This is not HH06 validation, long-run stability evidence, or evidence that the previous 25-window runaway is fixed."
+}

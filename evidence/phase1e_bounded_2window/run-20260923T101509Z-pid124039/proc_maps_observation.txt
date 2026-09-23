@@ -1,0 +1,10 @@
+Runtime /proc maps were inspected while the real Fluid and Structure processes
+were active. Representative mappings below identify the actual loaded paths;
+their SHA256 values are the preflight-pinned identities in runtime_identity.json.
+
+Fluid PID 124433:
+/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+
+Structure PID 124432:
+/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
