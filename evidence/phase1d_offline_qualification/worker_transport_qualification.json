@@ -1,0 +1,84 @@
+{
+  "test": "phase1d_current_source_worker_transport_regression_v1",
+  "git_head_before_phase1d": "8550e6a4cd7fb62c0f8b49471a704604965a7ff6",
+  "worker_source": "/home/machao/projects/CFD_ANCF_VIV_V2/src/ancf/ancf_worker_main.cpp",
+  "worker_source_sha256": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+  "worker_binary": "/tmp/phase1d-cmake-071hBo/cfd_ancf_ancf_kernel_worker",
+  "worker_binary_sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596",
+  "build_mode": "supplied_current_source_cmake_build",
+  "cmake_cache": {
+    "CMAKE_BUILD_TYPE": "Release",
+    "CMAKE_CXX_COMPILER": "/usr/bin/c++"
+  },
+  "cmake_version": "cmake version 3.22.1",
+  "compiler_version": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "two_window_five_attempt_regression": {
+    "status": "PASS",
+    "sequences": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "request_ids": [
+      910001,
+      910002,
+      910003,
+      910004,
+      910005,
+      910006,
+      910007,
+      910008,
+      910009,
+      910010
+    ],
+    "transaction_ids": [
+      1910001,
+      1910002,
+      1910003,
+      1910004,
+      1910005,
+      1910006,
+      1910007,
+      1910008,
+      1910009,
+      1910010
+    ],
+    "physical_identity_by_window": [
+      {
+        "global_step": 1,
+        "bridge_step": 1,
+        "integer_tick": 200000,
+        "time_s": 0.0002,
+        "dt_s": 0.0002
+      },
+      {
+        "global_step": 2,
+        "bridge_step": 2,
+        "integer_tick": 400000,
+        "time_s": 0.0004,
+        "dt_s": 0.0002
+      }
+    ],
+    "q_qdot_qddot_restored_exactly_on_each_rollback": true,
+    "transport_ids_excluded_from_physical_restore": true
+  },
+  "duplicate_request_id_guard": {
+    "status": "PASS",
+    "worker_exit_code": 18,
+    "duplicate_identity": "request_id",
+    "next_sequence": 2
+  },
+  "duplicate_transaction_id_guard": {
+    "status": "PASS",
+    "worker_exit_code": 18,
+    "duplicate_identity": "transaction_id",
+    "next_sequence": 2
+  }
+}

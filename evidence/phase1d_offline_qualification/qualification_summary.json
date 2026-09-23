@@ -1,0 +1,152 @@
+{
+  "qualification": "PHASE1D_STRATEGY_C_OFFLINE_V1",
+  "classification": "PASS_OFFLINE_STRATEGY_C",
+  "git": {
+    "branch": "repair/worker-lineage-implicit-contract-v1",
+    "head_before_phase1d": "8550e6a4cd7fb62c0f8b49471a704604965a7ff6",
+    "phase1d_committed": false
+  },
+  "source_hashes": {
+    "structure_participant.py": "b5c8c30e8634f00fa4a03c05ecf55beecbe5f6ca1ddeda22bd28ee137f41dc8a",
+    "ancf_worker_main.cpp_unchanged": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+    "contract.json": "80f270e7cf3eeac46e62963d8a6a56b603b91763e47c36a2e9ae17746a6cf87c",
+    "precice-config.xml": "6b282ec8db4bdfb67a03c23c86f8ecb26835500fe512f2546616f1602db70219",
+    "launch.sh": "d8ab79614321311c785b36608fb8a814a92f21028b9e9508972cbfbc607f8157",
+    "preflight_adapter_sha.sh": "8142e6e69b3078b7972d6a7cb5453aa34a8b8c8fc9db9cb9ddf8aa1a4eb78eac",
+    "test_implicit_iteration_trace.py": "fa545e43826466f406d78b34e46cbbb92e4175739d9b53fe786874f5754e9a7b",
+    "test_adapter_runtime_pin.py": "45bfc6699eccfd5cc135a7fddeb19336b86b0d9dc03f973173fdb5f89ca1eb06",
+    "test_worker_transport_regression.py": "607d13f26ae0200404f110fef44b4a0b13f7fe2a31362beb30172956a1bf8069"
+  },
+  "runtime_boundary": {
+    "openfoam_solver_started": false,
+    "real_precice_participant_started": false,
+    "hh06_fsi_started": false,
+    "long_run_started": false
+  },
+  "release_force": {
+    "source_global_time_s": 30.0,
+    "target_first_window_global_time_s": 30.0002,
+    "restart_case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+    "time_directory": "30",
+    "time_index": 150000,
+    "patch": "cylinder",
+    "Fx0_raw_N": 0.0655270406544,
+    "Fy0_raw_N": 0.05872987413554,
+    "Fz0_raw_N": -2.44420351566e-21,
+    "result_json_sha256": "6b272f695ebefe28daa176723483f611c42f8d25dbae8d83de928f3790811b8a",
+    "comparison_tolerance_N": 5e-13,
+    "contract_semantics": "raw patch-integrated N; conversion applied once by ForceSample"
+  },
+  "adapter": {
+    "runtime_binary_pinned": true,
+    "source_provenance_resolved": false,
+    "path": "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so",
+    "sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572",
+    "build_id": "e76f7d6491a2f32cf9d6d5712c79b1ce55cd862b",
+    "expected_sha_guard": "PASS",
+    "deliberately_wrong_sha_guard": "FAIL_CLOSED_EXIT_2"
+  },
+  "fixed_point_fake": {
+    "fluid_map": "F=1+2*D_written",
+    "structure_map": "D_trial=0.1+0.2*F_input",
+    "synthetic_seed": {
+      "D0_m": 0.0,
+      "F0": 1.0,
+      "source_kind": "SYNTHETIC_OFFLINE_TEST_SEED"
+    },
+    "first_three_trials_m": [0.3, 0.42, 0.468],
+    "first_three_returned_force_iterates": [1.6, 1.84, 1.936],
+    "residual_contraction_factor": 0.4,
+    "window1_iterations_to_tolerance": 20,
+    "window2_iterations_to_tolerance": 21,
+    "max_iterations_for_fixed_point_test": 25,
+    "accepted_by_tolerance_before_cap": true,
+    "all_written_interface_trials_equal_ancf_trials": true,
+    "window2_uses_preceding_accepted_force": true,
+    "iteration_cap_fixture": {
+      "max_iterations": 3,
+      "acceptance_status": "ACCEPTED_AT_ITERATION_LIMIT",
+      "claimed_converged": false
+    }
+  },
+  "physical_f0_fake": {
+    "first_force_read_after_initialize_before_ancf_solve": true,
+    "raw_force_matches_contract": true,
+    "force_conversion_applied_once": true,
+    "first_force_source_time_s": 30.0,
+    "first_trial_target_time_s": 30.0002
+  },
+  "worker": {
+    "source": "src/ancf/ancf_worker_main.cpp",
+    "source_sha256": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+    "binary": "/tmp/phase1d-cmake-071hBo/cfd_ancf_ancf_kernel_worker",
+    "binary_sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596",
+    "cmake_version": "cmake version 3.22.1",
+    "configuration": "Release",
+    "compiler": "c++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+    "transport_regression": "PASS_TWO_WINDOWS_FIVE_REQUESTS_EACH",
+    "sequences": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "sequence_6_is_next_window": true,
+    "physical_state_rollback_q_qdot_qddot_exact": true,
+    "transport_state_survives_rollback": true,
+    "duplicate_request_id_guard": "PASS_WORKER_EXIT_18",
+    "duplicate_transaction_id_guard": "PASS_WORKER_EXIT_18"
+  },
+  "tests": {
+    "tests_coupling": {"status": "PASS", "passed": 8},
+    "tests_checkpoint": {"status": "PASS", "passed": 3},
+    "ancf_shm1_cpp_selftests": {
+      "status": "PASS",
+      "passed_targets": [
+        "cfd_ancf_ancf_kernel_selftest",
+        "cfd_ancf_spanwise_hydrodynamic_matrix_selftest",
+        "cfd_ancf_spanwise_hydrodynamic_model_selftest",
+        "cfd_ancf_spanwise_hydrodynamic_state_selftest",
+        "cfd_ancf_dense_solver_selftest",
+        "cfd_ancf_physics_ownership_selftest"
+      ]
+    },
+    "repository_python_ancf_suite": {
+      "status": "PREEXISTING_MISSING_MODULES_AND_EVIDENCE",
+      "reported_tests": 15,
+      "errors": 16,
+      "skipped": 1,
+      "representative_missing_items": [
+        "coupling.stage303_interface_mapping_repair_v1",
+        "coupling.openfoam_quality_contract_v3",
+        "coupling.moment_mapping_audit_v1",
+        "results/solver_validation_v3/three_slice_statistical_contract_v3.json"
+      ]
+    },
+    "source_and_shell_static_checks": "PASS",
+    "participant_audit_only": "PASS",
+    "worker_source_modified": false,
+    "generic_coordinator_modified": false,
+    "precice_backend_modified": false,
+    "openfoam_adapter_source_modified": false
+  },
+  "configuration_notes": {
+    "force_exchange_initialize_yes": true,
+    "contract_json_max_iterations": 8,
+    "precice_xml_max_iterations": 20,
+    "iteration_cap_mismatch_changed": false,
+    "physical_parameters_changed": false,
+    "force_scaling_changed": false
+  },
+  "evidence_files": [
+    "implicit_fixed_point_trace.jsonl",
+    "iteration_cap_trace.jsonl",
+    "physical_f0_seed_trace.jsonl",
+    "worker_transport_qualification.json"
+  ],
+  "evidence_sha256": {
+    "implicit_fixed_point_trace.jsonl": "067597ed7256ed9c053030e0409270d9fd5552f8d63f79073a706cff03326433",
+    "iteration_cap_trace.jsonl": "fd93deb0598de3e44344ac11d604751c5e2c849b12b0c18413bb843aae3c3aab",
+    "physical_f0_seed_trace.jsonl": "15180ee21b452bc8338fde66cd2bd490ab42ab982f2ca2e277a53c878009e8c5",
+    "worker_transport_qualification.json": "6c313caffe757a408d761a60ecafa55929498ca42213a9328401bde518824a1f"
+  },
+  "report": {
+    "path": "docs/PHASE1D_STRATEGY_C_IMPLEMENTATION_REPORT.md",
+    "sha256": "3cf647bc79165c302d24d18b5a618657a8bf46b404bf539798b71fec17e2b86e"
+  }
+}

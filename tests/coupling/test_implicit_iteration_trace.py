@@ -1,15 +1,11 @@
-"""Deterministic characterization of the HH06 implicit retry data path.
-
-This test replaces both external endpoints with fakes and exercises the real
-Structure participant loop and GenericStructuralCoordinator. It never imports
-or initializes a preCICE participant, OpenFOAM, or the C++ worker.
-"""
+"""Offline fixed-point and rollback qualification for the HH06 participant."""
 
 from __future__ import annotations
 
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import struct
 import sys
@@ -21,49 +17,39 @@ from unittest.mock import patch
 REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT / "src"))
 
-from coupling.arbitrary_n_live_orchestration_v1.manifest import (
+from coupling.arbitrary_n_live_orchestration_v1.coordinator import ForceSample  # noqa: E402
+from coupling.arbitrary_n_live_orchestration_v1.manifest import (  # noqa: E402
     OrchestrationSlice,
     SliceManifest,
 )
-from coupling.hh06_structure_0000 import structure_0000_participant as participant
+from coupling.hh06_structure_0000 import structure_0000_participant as participant  # noqa: E402
+
+_EVENT_ORDER: list[tuple] = []
 
 
 def _sha(values: list[float]) -> str:
     return hashlib.sha256(struct.pack("<" + "d" * len(values), *values)).hexdigest()
 
 
-def _manifest() -> SliceManifest:
+def _manifest(*, unit_span_m=1.0, slice_length_m=1.0) -> SliceManifest:
     item = OrchestrationSlice(
-        slice_id="slice_0000",
-        ordinal=0,
-        s_ref_m=2.0,
-        slice_length_m=1.0,
-        unit_span_m=1.0,
-        fluid_participant="Fluid_0000",
-        structure_participant="Structure_0000",
-        structure_mesh="Structure-Mesh",
-        fluid_mesh="Fluid-Mesh",
-        force_data="Force",
-        motion_data="Displacement",
-        openfoam_case_id="fake-implicit-case",
-        force_slot=0,
-        motion_slot=0,
+        slice_id="slice_0000", ordinal=0, s_ref_m=2.0, slice_length_m=slice_length_m,
+        unit_span_m=unit_span_m, fluid_participant="Fluid_0000",
+        structure_participant="Structure_0000", structure_mesh="Structure-Mesh",
+        fluid_mesh="Fluid-Mesh", force_data="Force", motion_data="Displacement",
+        openfoam_case_id="fake-implicit-case", force_slot=0, motion_slot=0,
     )
     return SliceManifest(
-        schema_version="arbitrary-n-live-coupling-v1",
-        case_id="fake-implicit-case",
-        reference_length_m=4.0,
-        active_start_m=1.5,
-        active_end_m=2.5,
-        reconstruction_mode="LegacyPointLumped",
-        endpoint_policy="NearestConstant",
-        structure_participant="Structure_0000",
-        slices=(item,),
+        schema_version="arbitrary-n-live-coupling-v1", case_id="fake-implicit-case",
+        reference_length_m=4.0, active_start_m=1.5, active_end_m=2.5,
+        reconstruction_mode="LegacyPointLumped", endpoint_policy="NearestConstant",
+        structure_participant="Structure_0000", slices=(item,),
     )
 
 
 class _FakeWorker:
     instances: list["_FakeWorker"] = []
+    events: list[tuple] = []
 
     def __init__(self, bundle, manifest, worker_path) -> None:
         self.bundle = bundle
@@ -76,9 +62,10 @@ class _FakeWorker:
         self.committed_advance_count = 0
         self.pending = False
         self.sequence = 0
-        self.request_id = 500
-        self.transaction_id = 900
-        self.input_states: list[tuple[list[float], list[float], list[float]]] = []
+        self.request_id = 910000
+        self.transaction_id = 1910000
+        self.input_states: list[dict] = []
+        self.force_input_history: list[tuple[float, ...]] = []
         self.started = False
         self.closed = False
         type(self).instances.append(self)
@@ -88,11 +75,8 @@ class _FakeWorker:
 
     def snapshot(self):
         return {
-            "q": list(self.q),
-            "qdot": list(self.qdot),
-            "qddot": list(self.qddot),
-            "committed": self.committed_advance_count,
-            "pending": self.pending,
+            "q": list(self.q), "qdot": list(self.qdot), "qddot": list(self.qddot),
+            "committed": self.committed_advance_count, "pending": self.pending,
         }
 
     def restore(self, snapshot) -> None:
@@ -103,38 +87,47 @@ class _FakeWorker:
         self.pending = bool(snapshot["pending"])
 
     def advance(self, request):
-        self.input_states.append((list(self.q), list(self.qdot), list(self.qddot)))
-        fy = float(request.slice_force_N[1])
-        self.q[1] += 0.1 * fy
-        self.qdot[1] = fy
-        self.qddot[1] = 2.0 * fy
-        self.pending = True
+        if self.pending:
+            raise AssertionError("fake backend received a second pending physical trial")
         self.sequence += 1
         self.request_id += 1
         self.transaction_id += 1
+        state_before = (list(self.q), list(self.qdot), list(self.qddot))
+        fy = float(request.slice_force_N[1])
+        self.force_input_history.append(tuple(float(value) for value in request.slice_force_N))
+        # D_trial = g(F) = 0.1 + 0.2 F, relative to this window's committed q.
+        self.q[1] += 0.1 + 0.2 * fy
+        self.qdot[1] = fy
+        self.qddot[1] = 2.0 * fy
+        self.pending = True
+        type(self).events.append(("solve", self.sequence))
+        _EVENT_ORDER.append(("solve", self.sequence))
         step = self.committed_advance_count + 1
-        tick = int(round(request.time_s * 1_000_000))
-        return {
-            "iterations": 2,
-            "residual": 1.0e-12,
-            "q_sha256": _sha(self.q),
-            "qdot_sha256": _sha(self.qdot),
-            "qddot_sha256": _sha(self.qddot),
+        tick = int(round(request.time_s * 1_000_000_000))
+        self.input_states.append({
+            "before": state_before,
             "sequence": self.sequence,
             "request_id": self.request_id,
             "transaction_id": self.transaction_id,
+            "physical_step": step,
+            "time_s": request.time_s,
+        })
+        return {
+            "iterations": 3, "residual": 1.0e-12,
+            "q_sha256": _sha(self.q), "qdot_sha256": _sha(self.qdot),
+            "qddot_sha256": _sha(self.qddot),
+            "sequence": self.sequence, "request_id": self.request_id,
+            "transaction_id": self.transaction_id,
             "physical_identity": {
-                "global_step": step,
-                "bridge_step": step,
-                "integer_tick": tick,
-                "time_s": request.time_s,
+                "global_step": step, "bridge_step": step,
+                "integer_tick": tick, "time_s": request.time_s,
                 "dt_s": self.bundle.dt_s,
             },
         }
 
     def commit(self) -> None:
         if not self.pending:
-            raise AssertionError("fake worker commit without trial")
+            raise AssertionError("fake worker commit without a physical trial")
         self.committed_advance_count += 1
         self.pending = False
 
@@ -148,146 +141,306 @@ class _FakeWorker:
 
 class _FakeFleet:
     instances: list["_FakeFleet"] = []
+    events: list[tuple] = []
 
-    def __init__(self, manifest, config_file, vertices_by_slice) -> None:
+    def __init__(self, manifest, config_file, vertices_by_slice, *, windows, max_iterations,
+                 force_seed=(0.0, 1.0, 0.0), mode="fixed_point",
+                 displacement_tolerance=1.0e-8, force_tolerance=1.0e-7) -> None:
         self.manifest = manifest
         self.config_file = config_file
         self.vertices_by_slice = vertices_by_slice
+        self.windows = windows
+        self.max_iterations = max_iterations
+        self.force_seed = tuple(force_seed)
+        self.mode = mode
+        self.displacement_tolerance = displacement_tolerance
+        self.force_tolerance = force_tolerance
+        self.completed_windows = 0
+        self.iteration_in_window = 0
         self.advance_calls = 0
-        self._checkpoint_needed = True
-        self._written: tuple[float, float] | None = None
-        self.written_history: list[tuple[float, float]] = []
+        self.checkpoint_queries = 0
+        self.written: tuple[float, float] | None = None
+        self.previous_written = (0.0, 0.0)
+        self.previous_force = tuple(force_seed)
+        self.current_force = tuple(force_seed)
+        self.initialized = False
         self.initial_motion = None
         self.finalized = False
+        self.write_history: list[tuple[float, float]] = []
         type(self).instances.append(self)
 
     def initialize(self, initial_motion_by_slice=None) -> None:
         self.initial_motion = initial_motion_by_slice
+        self.initialized = True
+        type(self).events.append(("initialize",))
+        _EVENT_ORDER.append(("initialize",))
 
     def is_coupling_ongoing(self) -> bool:
-        return self.advance_calls < 10
+        return self.completed_windows < self.windows
 
     def requires_writing_checkpoint(self) -> bool:
-        return self.advance_calls in (0, 5)
+        # Some API paths can request the already-active window checkpoint
+        # again on retries. The Structure participant must keep one snapshot.
+        self.checkpoint_queries += 1
+        return True
 
     def write_motion(self, slice_id, values) -> None:
-        self._written = (float(values[0][0]), float(values[0][1]))
-        self.written_history.append(self._written)
+        self.written = (float(values[0][0]), float(values[0][1]))
+        self.write_history.append(self.written)
+        type(self).events.append(("write", self.advance_calls + 1, self.written))
+        _EVENT_ORDER.append(("write", self.advance_calls + 1, self.written))
 
     def advance(self, dt_s: float) -> None:
-        if self._written is None or dt_s <= 0.0:
-            raise AssertionError("fake fleet advance requires written motion and positive dt")
+        if self.written is None or dt_s <= 0.0:
+            raise AssertionError("fake preCICE advance requires the current trial displacement")
         self.advance_calls += 1
+        self.iteration_in_window += 1
+        type(self).events.append(("precice_advance", self.advance_calls, self.written))
+        _EVENT_ORDER.append(("precice_advance", self.advance_calls, self.written))
+        if self.mode == "fixed_point":
+            # F = f(D_written) = 1 + 2 D_y.
+            self.current_force = (0.0, 1.0 + 2.0 * self.written[1], 0.0)
+        elif self.mode == "non_convergent":
+            # Deliberately moving force iterate: only the configured cap ends it.
+            self.current_force = (0.0, self.current_force[1] + 1.0, 0.0)
+        else:
+            raise AssertionError(f"unknown fake flow mode {self.mode}")
 
     def read_force(self, slice_id):
-        if self._written is None:
-            raise AssertionError("fake force requested before displacement was written")
-        # Fluid force is an explicit function of the exact displacement written.
-        fy = 1.0 + 10.0 * self._written[1]
-        return [(0.0, fy, 0.0)]
+        kind = "initial" if self.advance_calls == 0 else "post_advance"
+        type(self).events.append(("read_force", kind, tuple(self.current_force)))
+        _EVENT_ORDER.append(("read_force", kind, tuple(self.current_force)))
+        return [self.current_force]
 
     def requires_reading_checkpoint(self) -> bool:
-        attempt_in_window = (self.advance_calls - 1) % 5 + 1
-        return attempt_in_window < 5
+        d_residual = abs(self.written[1] - self.previous_written[1])
+        f_residual = abs(self.current_force[1] - self.previous_force[1])
+        retry = self.iteration_in_window < 2 or (
+            d_residual > self.displacement_tolerance or f_residual > self.force_tolerance
+        )
+        if self.mode == "non_convergent" or self.iteration_in_window >= self.max_iterations:
+            retry = self.iteration_in_window < self.max_iterations
+
+        self.previous_written = self.written
+        self.previous_force = self.current_force
+        type(self).events.append(("checkpoint_decision", self.iteration_in_window, retry))
+        if not retry:
+            self.completed_windows += 1
+            self.iteration_in_window = 0
+        return retry
 
     def finalize(self) -> None:
         self.finalized = True
 
 
+def _fake_bundle(config_file: Path, *, windows: int, max_iterations: int,
+                 force_seed: tuple[float, float, float], source_kind: str,
+                 unit_span_m: float, slice_length_m: float) -> SimpleNamespace:
+    manifest = _manifest()
+    root = {
+        "case_id": "fake-implicit-case",
+        "initial_state": {
+            "openfoam_global_time_s": 30.0,
+            "Fx0_total_N": force_seed[0],
+            "Fy0_total_N": force_seed[1],
+            "release_force_provenance": {
+                "source_kind": source_kind,
+                "initial_data_comparison_tolerance_N": 1.0e-13,
+            },
+        },
+        "coupling": {"accepted_window_limit": windows, "max_iterations": max_iterations},
+    }
+    return SimpleNamespace(
+        root=root, case_id="fake-implicit-case",
+        structure={"geometry": {"length_m": 4.0}},
+        config_file=config_file, dt_s=0.0002, unit_span_m=unit_span_m,
+        slice_length_m=slice_length_m, slice_center_m=2.0,
+    )
+
+
+def _write_fake_precice_xml(path: Path, max_iterations: int) -> None:
+    path.write_text(
+        "<precice-configuration><max-iterations value=\"%d\"/></precice-configuration>\n" % max_iterations,
+        encoding="utf-8",
+    )
+
+
+def _save_machine_trace(filename: str, trace: list[dict]) -> None:
+    evidence_root = os.environ.get("PHASE1D_EVIDENCE_DIR")
+    if not evidence_root:
+        return
+    path = Path(evidence_root)
+    path.mkdir(parents=True, exist_ok=True)
+    with (path / filename).open("w", encoding="utf-8") as stream:
+        for row in trace:
+            stream.write(json.dumps(row, ensure_ascii=False, allow_nan=False) + "\n")
+
+
+def _run_fake(*, windows: int, max_iterations: int, mode="fixed_point",
+              force_seed=(0.0, 1.0, 0.0), source_kind="SYNTHETIC_OFFLINE_TEST_SEED",
+              unit_span_m=1.0, slice_length_m=1.0):
+    _FakeWorker.instances.clear()
+    _FakeFleet.instances.clear()
+    _FakeWorker.events.clear()
+    _FakeFleet.events.clear()
+    _EVENT_ORDER.clear()
+    with tempfile.TemporaryDirectory(prefix="strategy-c-offline-") as temp_dir:
+        config_path = Path(temp_dir) / "precice-config.xml"
+        trace_path = Path(temp_dir) / "attempts.jsonl"
+        _write_fake_precice_xml(config_path, max_iterations)
+        bundle = _fake_bundle(
+            config_path, windows=windows, max_iterations=max_iterations,
+            force_seed=tuple(force_seed), source_kind=source_kind,
+            unit_span_m=unit_span_m, slice_length_m=slice_length_m,
+        )
+        manifest = _manifest(unit_span_m=unit_span_m, slice_length_m=slice_length_m)
+        fake_fleet_factory = lambda m, c, v: _FakeFleet(
+            m, c, v, windows=windows, max_iterations=max_iterations, mode=mode,
+            force_seed=tuple(force_seed),
+        )
+        with (
+            patch.object(participant, "load_contract_bundle", return_value=bundle),
+            patch.object(participant, "audit_contract", return_value={"status": "PASS"}),
+            patch.object(participant, "build_manifest", return_value=manifest),
+            patch.object(participant, "PersistentHH06KernelBackend", _FakeWorker),
+            patch.object(participant, "PreciceStructureFleetBackend", side_effect=fake_fleet_factory),
+        ):
+            result = participant.run("unused-case", "unused-worker", trace_output=trace_path)
+        trace = [json.loads(line) for line in trace_path.read_text(encoding="utf-8").splitlines()]
+    return result, trace, _FakeWorker.instances[0], _FakeFleet.instances[0]
+
+
 class ImplicitIterationTraceTests(unittest.TestCase):
-    def setUp(self) -> None:
-        _FakeWorker.instances.clear()
-        _FakeFleet.instances.clear()
-
-    def test_trace_distinguishes_stale_motion_from_trial_feedback(self) -> None:
-        manifest = _manifest()
-        bundle = SimpleNamespace(
-            root={"coupling": {"accepted_window_limit": 2}},
-            case_id="fake-implicit-case",
-            structure={"geometry": {"length_m": 4.0}},
-            config_file=Path("fake-precice-config.xml"),
-            dt_s=0.1,
-            unit_span_m=1.0,
-            slice_length_m=1.0,
-            slice_center_m=2.0,
-        )
-        with tempfile.TemporaryDirectory(prefix="implicit-trace-test-") as temp_dir:
-            trace_path = Path(temp_dir) / "attempts.jsonl"
-            with (
-                patch.object(participant, "load_contract_bundle", return_value=bundle),
-                patch.object(participant, "audit_contract", return_value={"status": "PASS"}),
-                patch.object(participant, "build_manifest", return_value=manifest),
-                patch.object(participant, "PersistentHH06KernelBackend", _FakeWorker),
-                patch.object(participant, "PreciceStructureFleetBackend", _FakeFleet),
-            ):
-                result = participant.run("unused-case", "unused-worker", trace_output=trace_path)
-
-            trace = [json.loads(line) for line in trace_path.read_text(encoding="utf-8").splitlines()]
-
+    def test_fixed_point_feedback_converges_with_trial_written_before_advance(self) -> None:
+        result, trace, worker, fleet = _run_fake(windows=2, max_iterations=25)
+        _save_machine_trace("implicit_fixed_point_trace.jsonl", trace)
         self.assertEqual(result["accepted_windows"], 2)
-        self.assertEqual(len(trace), 10)
-        self.assertEqual(
-            [(row["window_index"], row["iteration_index"]) for row in trace],
-            [(1, index) for index in range(1, 6)] + [(2, index) for index in range(1, 6)],
-        )
-        self.assertEqual([row["sequence"] for row in trace], list(range(1, 11)))
-        self.assertEqual([row["request_id"] for row in trace], list(range(501, 511)))
-        self.assertEqual([row["transaction_id"] for row in trace], list(range(901, 911)))
-        self.assertEqual([row["commit_status"] for row in trace], ["rolled_back"] * 4 + ["committed"] + ["rolled_back"] * 4 + ["committed"])
-        self.assertEqual([row["rollback_request"] for row in trace], [True] * 4 + [False] + [True] * 4 + [False])
-        self.assertEqual([row["checkpoint_request"] for row in trace], [True] + [False] * 4 + [True] + [False] * 4)
+        self.assertEqual(len(result["records"]), 2)
+        self.assertEqual(trace[0]["force_source_kind"], "SYNTHETIC_OFFLINE_TEST_SEED")
 
-        first, retry, window1_accept, next_window = trace[0], trace[1], trace[4], trace[5]
-        self.assertEqual(len({json.dumps(row["physical_identity"], sort_keys=True) for row in trace[:5]}), 1)
-        self.assertEqual(len({json.dumps(row["physical_identity"], sort_keys=True) for row in trace[5:]}), 1)
-        self.assertEqual(first["physical_identity"]["global_step"], 1)
-        self.assertEqual(first["physical_identity"]["bridge_step"], 1)
-        self.assertEqual(trace[5]["physical_identity"]["global_step"], 2)
-        self.assertEqual(trace[5]["physical_identity"]["bridge_step"], 2)
-        self.assertEqual(trace[5]["physical_identity"]["integer_tick"] - first["physical_identity"]["integer_tick"], 100_000)
-        self.assertAlmostEqual(first["physical_time_s"], 0.1)
-        self.assertAlmostEqual(retry["physical_time_s"], 0.1)
-        self.assertAlmostEqual(next_window["physical_time_s"], 0.2)
-        self.assertTrue(all(math.isclose(row["dt_s"], 0.1) for row in trace))
-        self.assertEqual(first["force_residual_raw_N"], None)
-        self.assertAlmostEqual(retry["force_residual_raw_N"], 0.0)
-        self.assertAlmostEqual(retry["trial_displacement_residual_m"], 0.0)
-        self.assertAlmostEqual(retry["written_motion_delta_m"], 0.0)
-        self.assertAlmostEqual(window1_accept["Fy_raw_N"], 1.0)
-        self.assertAlmostEqual(next_window["Fy_raw_N"], 2.0)
+        first_window = [row for row in trace if row["window_index"] == 1]
+        self.assertGreaterEqual(len(first_window), 3)
+        for row, expected in zip(first_window[:3], (0.3, 0.42, 0.468)):
+            self.assertAlmostEqual(row["D_trial_from_ancf_m"][1], expected, places=14)
+            self.assertAlmostEqual(row["D_written_to_precice_m"][1], expected, places=14)
+            self.assertEqual(row["D_trial_interface_m"], row["D_written_to_precice_m"])
+        self.assertAlmostEqual(first_window[0]["Fy_raw_N"], 1.0)
+        self.assertAlmostEqual(first_window[0]["Fy_returned_raw_N"], 1.6)
+        self.assertAlmostEqual(first_window[1]["Fy_raw_N"], 1.6)
+        self.assertAlmostEqual(first_window[1]["Fy_returned_raw_N"], 1.84)
+        self.assertAlmostEqual(first_window[2]["Fy_raw_N"], 1.84)
+        self.assertAlmostEqual(first_window[2]["Fy_returned_raw_N"], 1.936)
 
-        committed_xy = tuple(first["D_previous_committed_m"][:2])
-        trial_xy = tuple(first["D_trial_from_ancf_m"][:2])
-        retry_written_xy = tuple(retry["D_written_to_precice_m"])
-        stale_path = all(math.isclose(a, b) for a, b in zip(retry_written_xy, committed_xy))
-        trial_feedback_path = all(math.isclose(a, b) for a, b in zip(retry_written_xy, trial_xy))
-        self.assertNotEqual(stale_path, trial_feedback_path, "fixture must make stale and feedback paths distinguishable")
-        self.assertTrue(
-            stale_path,
-            "current Structure loop should be explicitly classified as stale committed-motion feedback",
-        )
+        d_residuals = [row["trial_displacement_residual_m"] for row in first_window[:5]]
+        f_residuals = [row["force_residual_raw_N"] for row in first_window[:5]]
+        for previous, current in zip(d_residuals, d_residuals[1:]):
+            self.assertAlmostEqual(current / previous, 0.4, places=10)
+        for previous, current in zip(f_residuals, f_residuals[1:]):
+            self.assertAlmostEqual(current / previous, 0.4, places=10)
+        self.assertEqual(first_window[-1]["convergence_status"], "accepted_by_precice_before_iteration_limit")
+        self.assertLess(first_window[-1]["iteration_index"], 25)
 
-        # F_y = 1 + 10 D_written_y; D_trial_y = D_checkpoint_y + 0.1 F_y.
-        self.assertFalse(trial_feedback_path)
-        self.assertAlmostEqual(retry["Fy_raw_N"], 1.0)
-        self.assertNotAlmostEqual(retry["Fy_raw_N"], 1.0 + 10.0 * trial_xy[1])
+        # Every trial is sent as-is before its associated fluid advance.
+        self.assertEqual(_EVENT_ORDER[0], ("initialize",))
+        self.assertEqual(_EVENT_ORDER[1][0:2], ("read_force", "initial"))
+        self.assertEqual(len(fleet.write_history), len(trace))
+        for attempt_index, row in enumerate(trace, start=1):
+            write_event = next(event for event in _FakeFleet.events if event[0] == "write" and event[1] == attempt_index)
+            advance_event = next(event for event in _FakeFleet.events if event[0] == "precice_advance" and event[1] == attempt_index)
+            self.assertEqual(write_event[2], tuple(row["D_trial_interface_m"]))
+            self.assertLess(_EVENT_ORDER.index(write_event), _EVENT_ORDER.index(advance_event))
+        for solve_index in range(1, len(trace) + 1):
+            solve_event = next(event for event in _FakeWorker.events if event == ("solve", solve_index))
+            write_event = next(event for event in _FakeFleet.events if event[0] == "write" and event[1] == solve_index)
+            self.assertLess(_EVENT_ORDER.index(solve_event), _EVENT_ORDER.index(write_event))
 
-        # Rollback restores all physical state vectors, while transport IDs advance.
-        worker = _FakeWorker.instances[0]
-        self.assertEqual(len(worker.input_states), 10)
-        for restored_state in worker.input_states[1:5]:
-            self.assertEqual(restored_state, ([0.0, 0.0, 0.0],) * 3)
-        expected_window2_checkpoint = (
-            [0.0, window1_accept["D_trial_from_ancf_m"][1], 0.0],
-            [0.0, 1.0, 0.0],
-            [0.0, 2.0, 0.0],
-        )
-        for restored_state in worker.input_states[5:10]:
-            self.assertEqual(restored_state, expected_window2_checkpoint)
-        self.assertTrue(all(row["q_state_hash"] == trace[0]["q_state_hash"] for row in trace[:5]))
-        self.assertTrue(all(row["qdot_state_hash"] and row["qddot_state_hash"] for row in trace))
-        self.assertTrue(_FakeFleet.instances[0].finalized)
+        # The accepted structural state, trial, and written coupling value agree.
+        last = first_window[-1]
+        accepted = result["records"][0]
+        self.assertEqual(accepted["motion_m"][:2], last["D_trial_interface_m"])
+        self.assertEqual(accepted["written_motion_m"], last["D_written_to_precice_m"])
+        self.assertEqual(accepted["motion_m"][:2], accepted["written_motion_m"])
+
+        # Retry restores q/qdot/qddot exactly; transport identity never rolls back.
+        self.assertEqual([row["sequence"] for row in trace], list(range(1, len(trace) + 1)))
+        self.assertEqual(len({row["request_id"] for row in trace}), len(trace))
+        self.assertEqual(len({row["transaction_id"] for row in trace}), len(trace))
+        for window_index in (1, 2):
+            rows = [row for row in trace if row["window_index"] == window_index]
+            identity_tuples = {json.dumps(row["physical_identity"], sort_keys=True) for row in rows}
+            self.assertEqual(len(identity_tuples), 1)
+            attempts = [state for state in worker.input_states if state["physical_step"] == window_index]
+            self.assertGreater(len(attempts), 1)
+            checkpoint_state = attempts[0]["before"]
+            self.assertTrue(all(state["before"] == checkpoint_state for state in attempts))
+        win1_last = first_window[-1]
+        win2_first = next(row for row in trace if row["window_index"] == 2)
+        self.assertEqual(win2_first["force_input_raw_N"], win1_last["returned_force_raw_N"])
+        self.assertAlmostEqual(win2_first["force_source_global_time_s"], 30.0002)
+        self.assertAlmostEqual(win2_first["window_target_global_time_s"], 30.0004)
+        self.assertEqual(win2_first["force_source_kind"], "PRECEDING_ACCEPTED_PRECICE_EXCHANGE")
+        self.assertEqual(fleet.completed_windows, 2)
+        self.assertTrue(fleet.finalized)
         self.assertTrue(worker.closed)
+
+    def test_iteration_cap_is_reported_honestly(self) -> None:
+        result, trace, _worker, _fleet = _run_fake(
+            windows=1, max_iterations=3, mode="non_convergent",
+        )
+        _save_machine_trace("iteration_cap_trace.jsonl", trace)
+        self.assertEqual(result["accepted_windows"], 1)
+        self.assertEqual(len(trace), 3)
+        self.assertEqual(trace[-1]["convergence_status"], "ACCEPTED_AT_ITERATION_LIMIT")
+        self.assertTrue(all(row["rollback_request"] for row in trace[:-1]))
+        self.assertFalse(trace[-1]["rollback_request"])
+
+    def test_physical_f0_is_read_before_first_solve_and_scaled_once(self) -> None:
+        raw_f0 = (0.0655270406544, 0.05872987413554, 0.0)
+        result, trace, worker, _fleet = _run_fake(
+            windows=1, max_iterations=1, mode="non_convergent",
+            force_seed=raw_f0, source_kind="HH06_PHYSICAL_RELEASE_FORCE",
+            unit_span_m=0.028, slice_length_m=1.98,
+        )
+        _save_machine_trace("physical_f0_seed_trace.jsonl", trace)
+        self.assertEqual(result["accepted_windows"], 1)
+        self.assertEqual(trace[0]["force_source_kind"], "HH06_PHYSICAL_RELEASE_FORCE")
+        self.assertEqual(trace[0]["force_input_raw_N"], list(raw_f0))
+        self.assertAlmostEqual(trace[0]["force_source_global_time_s"], 30.0)
+        self.assertAlmostEqual(trace[0]["window_target_global_time_s"], 30.0002)
+        expected_strip = (
+            raw_f0[0] / 0.028 * 1.98,
+            raw_f0[1] / 0.028 * 1.98,
+            0.0,
+        )
+        for actual, expected in zip(worker.force_input_history[0], expected_strip):
+            self.assertAlmostEqual(actual, expected, places=14)
+        self.assertLess(_EVENT_ORDER.index(("read_force", "initial", raw_f0)), _EVENT_ORDER.index(("solve", 1)))
+        self.assertEqual(trace[0]["convergence_status"], "ACCEPTED_AT_ITERATION_LIMIT")
+
+    def test_frozen_physical_f0_provenance_and_single_force_conversion(self) -> None:
+        case = REPO_ROOT / "cases" / "hh06_single_slice"
+        bundle = participant.load_contract_bundle(case)
+        frozen = participant._load_release_force_contract(bundle)
+        self.assertEqual(
+            frozen["force_raw_N"],
+            (0.0655270406544, 0.05872987413554, -2.44420351566e-21),
+        )
+        self.assertEqual(frozen["source_global_time_s"], 30.0)
+        self.assertEqual(
+            frozen["result_json_sha256"],
+            "6b272f695ebefe28daa176723483f611c42f8d25dbae8d83de928f3790811b8a",
+        )
+        sample = ForceSample.from_openfoam_integrated(
+            participant.build_manifest(bundle), "slice_0000", iteration=1,
+            time_s=bundle.dt_s, force_N=frozen["force_raw_N"],
+            unit_span_m=bundle.unit_span_m,
+        )
+        self.assertAlmostEqual(sample.values[0], 4.633697874846857, places=14)
+        self.assertAlmostEqual(sample.values[1], 4.153041099584614, places=14)
+        self.assertEqual(sample.openfoam_force_N, frozen["force_raw_N"])
+        audit = participant.audit_contract(bundle)
+        self.assertTrue(audit["checks"]["physical_release_force_provenance"])
+        self.assertTrue(audit["checks"]["force_initial_data_exchange"])
 
 
 if __name__ == "__main__":
