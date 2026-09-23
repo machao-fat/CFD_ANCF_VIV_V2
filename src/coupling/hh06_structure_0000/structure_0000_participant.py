@@ -443,7 +443,23 @@ class PersistentHH06KernelBackend:
         response = decode_kernel_response(header + body); validate_kernel_response(kernel_request, response)
         self.q, self.qdot, self.qddot = response.q, response.qdot, response.qddot
         self._pending = True
-        return {"iterations": response.iterations, "residual": response.residual, "q_sha256": _sha256_numbers(self.q)}
+        return {
+            "iterations": response.iterations,
+            "residual": response.residual,
+            "q_sha256": _sha256_numbers(self.q),
+            "qdot_sha256": _sha256_numbers(self.qdot),
+            "qddot_sha256": _sha256_numbers(self.qddot),
+            "sequence": sequence,
+            "request_id": request_id,
+            "transaction_id": transaction_id,
+            "physical_identity": {
+                "global_step": physical_window,
+                "bridge_step": physical_window,
+                "integer_tick": kernel_request.integer_tick,
+                "time_s": kernel_request.time_s,
+                "dt_s": kernel_request.dt_s,
+            },
+        }
 
     def commit(self) -> None:
         if not self._pending:
@@ -488,7 +504,21 @@ def _force_total(rows: Any) -> tuple[float, float, float]:
     return (values[0], values[1], values[2] if len(values) == 3 else 0.0)
 
 
-def run(case_dir: str | Path, worker_path: str | Path, max_windows: int | None = None) -> dict[str, Any]:
+def _vector_norm_delta(current: Sequence[float], previous: Sequence[float] | None) -> float | None:
+    if previous is None:
+        return None
+    if len(current) != len(previous):
+        raise HH06ContractError("diagnostic vector dimensions changed between coupling attempts")
+    return math.sqrt(sum((float(a) - float(b)) ** 2 for a, b in zip(current, previous)))
+
+
+def run(
+    case_dir: str | Path,
+    worker_path: str | Path,
+    max_windows: int | None = None,
+    *,
+    trace_output: str | Path | None = None,
+) -> dict[str, Any]:
     """Run the live wrapper only when the caller explicitly requests it."""
     bundle = load_contract_bundle(case_dir)
     audit = audit_contract(bundle)
@@ -500,6 +530,8 @@ def run(case_dir: str | Path, worker_path: str | Path, max_windows: int | None =
     fleet = PreciceStructureFleetBackend(manifest, bundle.config_file, {item.slice_id: [(0.0, 0.0)]})
     coordinator = GenericStructuralCoordinator(manifest, worker, reference_positions_by_slice={item.slice_id: (0.0, 0.0, item.s_ref_m)})
     records: list[dict[str, Any]] = []
+    attempt_trace: list[dict[str, Any]] = []
+    previous_attempt_by_window: dict[int, dict[str, tuple[float, ...]]] = {}
     accepted = 0
     initial_position = worker.evaluate_position(item.s_ref_m)
     initial_reference = (0.0, 0.0, item.s_ref_m)
@@ -513,14 +545,26 @@ def run(case_dir: str | Path, worker_path: str | Path, max_windows: int | None =
         item.slice_id: [[initial_motion[0], initial_motion[1]]]
     }
     committed_motion = {item.slice_id: initial_motion}
+    trace_stream = None
     worker.start()
     fleet.initialize(initial_motion_by_slice=initial_motion_by_slice)
     try:
+        if trace_output is not None:
+            trace_path = Path(trace_output)
+            trace_path.parent.mkdir(parents=True, exist_ok=True)
+            # Exclusive creation preserves earlier diagnostic evidence.
+            trace_stream = trace_path.open("x", encoding="utf-8")
         limit = int(bundle.root["coupling"]["accepted_window_limit"] if max_windows is None else max_windows)
         while fleet.is_coupling_ongoing() and accepted < limit:
-            if fleet.requires_writing_checkpoint():
+            window_index = accepted + 1
+            iteration_index = 1 + sum(1 for row in attempt_trace if row["window_index"] == window_index)
+            previous_committed_motion = tuple(committed_motion[item.slice_id])
+            written_motion = [[previous_committed_motion[0], previous_committed_motion[1]]]
+
+            checkpoint_request = bool(fleet.requires_writing_checkpoint())
+            if checkpoint_request:
                 coordinator.checkpoint(f"hh06-window-{accepted + 1}")
-            fleet.write_motion(item.slice_id, [[committed_motion[item.slice_id][0], committed_motion[item.slice_id][1]]])
+            fleet.write_motion(item.slice_id, written_motion)
             fleet.advance(bundle.dt_s)
             raw_force = _force_total(fleet.read_force(item.slice_id))
             target_time = (accepted + 1) * bundle.dt_s
@@ -528,17 +572,101 @@ def run(case_dir: str | Path, worker_path: str | Path, max_windows: int | None =
             coordinator.submit_force(sample)
             result = coordinator.advance_if_complete()
             scattered = coordinator.scatter_motion()
-            if fleet.requires_reading_checkpoint():
+            trial_motion = tuple(scattered[item.slice_id])
+            rollback_request = bool(fleet.requires_reading_checkpoint())
+            if rollback_request:
                 coordinator.rollback()
-                continue
-            coordinator.commit(); committed_motion = scattered; accepted += 1
-            records.append({"accepted_window": accepted, "time_s": target_time, "force_N": list(raw_force), "motion_m": list(scattered[item.slice_id]), **result})
+                commit_status = "rolled_back"
+            else:
+                coordinator.commit(); committed_motion = scattered; accepted += 1
+                commit_status = "committed"
+
+            previous_attempt = previous_attempt_by_window.get(window_index)
+            written_xy = (float(written_motion[0][0]), float(written_motion[0][1]))
+            raw_force_vector = tuple(float(value) for value in raw_force)
+            applied_force_vector = tuple(float(value) for value in sample.values)
+            trial_motion_vector = tuple(float(value) for value in trial_motion)
+            physical_identity = result.get("physical_identity")
+            transport_ids = {
+                "sequence": result.get("sequence"),
+                "request_id": result.get("request_id"),
+                "transaction_id": result.get("transaction_id"),
+            }
+            trace_record = {
+                "case_id": bundle.case_id,
+                "window_index": window_index,
+                "iteration_index": iteration_index,
+                "sequence": transport_ids["sequence"],
+                "request_id": transport_ids["request_id"],
+                "transaction_id": transport_ids["transaction_id"],
+                "transport_ids": transport_ids,
+                "physical_identity": physical_identity,
+                "physical_time_s": target_time,
+                "dt_s": bundle.dt_s,
+                "D_previous_committed_m": list(previous_committed_motion),
+                "written_motion_vector_m": [list(written_motion[0])],
+                "trial_motion_vector_m": list(trial_motion),
+                "D_written_to_precice_m": list(written_xy),
+                "D_trial_from_ancf_m": list(trial_motion),
+                "Fx_raw_N": raw_force_vector[0],
+                "Fy_raw_N": raw_force_vector[1],
+                "Fz_raw_N": raw_force_vector[2],
+                "Fx_section_Npm": raw_force_vector[0] / bundle.unit_span_m,
+                "Fy_section_Npm": raw_force_vector[1] / bundle.unit_span_m,
+                "Fx_applied_N": applied_force_vector[0],
+                "Fy_applied_N": applied_force_vector[1],
+                "Fz_applied_N": applied_force_vector[2],
+                "force_residual_raw_N": _vector_norm_delta(
+                    raw_force_vector, previous_attempt.get("raw_force") if previous_attempt else None
+                ),
+                "force_residual_applied_N": _vector_norm_delta(
+                    applied_force_vector, previous_attempt.get("applied_force") if previous_attempt else None
+                ),
+                "trial_displacement_residual_m": _vector_norm_delta(
+                    trial_motion_vector[:2], previous_attempt.get("trial_motion")[:2] if previous_attempt else None
+                ),
+                "written_motion_delta_m": _vector_norm_delta(written_xy, previous_attempt.get("written_motion") if previous_attempt else None),
+                "checkpoint_request": checkpoint_request,
+                "checkpoint_created": checkpoint_request,
+                "rollback_request": rollback_request,
+                "commit_status": commit_status,
+                "time_window_complete": not rollback_request,
+                "convergence_status": "retry_required" if rollback_request else "accepted_converged_or_iteration_limit",
+                "ancf_newton_iterations": result.get("iterations"),
+                "ancf_residual": result.get("residual"),
+                "q_state_hash": result.get("q_sha256"),
+                "qdot_state_hash": result.get("qdot_sha256"),
+                "qddot_state_hash": result.get("qddot_sha256"),
+            }
+            attempt_trace.append(trace_record)
+            previous_attempt_by_window[window_index] = {
+                "raw_force": raw_force_vector,
+                "applied_force": applied_force_vector,
+                "trial_motion": trial_motion_vector,
+                "written_motion": written_xy,
+            }
+            if trace_stream is not None:
+                trace_stream.write(json.dumps(trace_record, ensure_ascii=False, allow_nan=False) + "\n")
+                trace_stream.flush()
+
+            if not rollback_request:
+                records.append({"accepted_window": accepted, "time_s": target_time, "force_N": list(raw_force), "motion_m": list(scattered[item.slice_id]), **result})
     finally:
         try:
             fleet.finalize()
         finally:
-            worker.close()
-    return {"status": "PASS", "accepted_windows": accepted, "records": records, "manifest_sha256": manifest.manifest_sha256}
+            try:
+                worker.close()
+            finally:
+                if trace_stream is not None:
+                    trace_stream.close()
+    return {
+        "status": "PASS",
+        "accepted_windows": accepted,
+        "records": records,
+        "attempt_trace": attempt_trace,
+        "manifest_sha256": manifest.manifest_sha256,
+    }
 
 
 def main(argv: Sequence[str] | None = None) -> int:
@@ -549,6 +677,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser.add_argument("--worker", help="persistent ANCF worker executable; required with --run")
     parser.add_argument("--max-windows", type=int, default=None)
     parser.add_argument("--audit-output", type=Path)
+    parser.add_argument("--trace-output", type=Path, help="write one JSON object per coupling attempt; refuses to overwrite")
     args = parser.parse_args(argv)
     if args.run and not args.worker:
         parser.error("--worker is required with --run")
@@ -561,7 +690,7 @@ def main(argv: Sequence[str] | None = None) -> int:
         print(json.dumps(audit, ensure_ascii=False, indent=2))
         if not args.run:
             return 0 if audit["status"] == "PASS" else 2
-        result = run(args.case, args.worker, args.max_windows)
+        result = run(args.case, args.worker, args.max_windows, trace_output=args.trace_output)
         print(json.dumps(result, ensure_ascii=False, indent=2))
         return 0
     except Exception as exc:

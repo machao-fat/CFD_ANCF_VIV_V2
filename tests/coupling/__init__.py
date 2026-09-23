@@ -1,0 +1,1 @@
+"""Offline coupling contract tests."""
