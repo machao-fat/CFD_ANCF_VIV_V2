@@ -8,6 +8,7 @@ real coupling.
 
 from __future__ import annotations
 
+import math
 from pathlib import Path
 from typing import Any, Callable, Mapping, Sequence
 import xml.etree.ElementTree as ET
@@ -95,10 +96,18 @@ class PreciceStructureFleetBackend:
         item = self.manifest.by_id(slice_id)
         participant.write_data(item.structure_mesh, item.motion_data, self._vertex_ids[slice_id], values)
 
-    def read_force(self, slice_id: str) -> Any:
+    def read_force(self, slice_id: str, *, relative_read_time_s: float) -> Any:
         participant = self._require()
         item = self.manifest.by_id(slice_id)
-        values = participant.read_data(item.structure_mesh, item.force_data, self._vertex_ids[slice_id], 0.0)
+        relative_read_time_s = float(relative_read_time_s)
+        if not math.isfinite(relative_read_time_s) or relative_read_time_s < 0.0:
+            raise PreciceBackendError("Force relative read time must be finite and nonnegative")
+        values = participant.read_data(
+            item.structure_mesh,
+            item.force_data,
+            self._vertex_ids[slice_id],
+            relative_read_time_s,
+        )
         return values.tolist() if hasattr(values, "tolist") else values
 
     def advance(self, dt_s: float) -> None:

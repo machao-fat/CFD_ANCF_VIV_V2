@@ -197,6 +197,7 @@ class CouplingIterationState:
     current_force_raw_N: tuple[float, float, float]
     force_source_global_time_s: float
     force_source_kind: str
+    force_read_offset_s: float
     committed_motion_m: tuple[float, float, float]
     previous_force_raw_N: tuple[float, float, float] | None = None
     current_trial_displacement_m: tuple[float, float, float] | None = None
@@ -679,13 +680,13 @@ def _bounded_window_limit(bundle: HH06ContractBundle, requested: int | None) -> 
         if authorization.get("mode") != "BOUNDED_COUPLING_QUALIFICATION":
             raise HH06ContractError("HH06 runtime is not authorized for bounded coupling qualification")
         authorized_windows = authorization.get("max_windows")
-        if isinstance(authorized_windows, bool) or authorized_windows != 2:
-            raise HH06ContractError("HH06 bounded authorization must specify exactly max_windows=2")
+        if isinstance(authorized_windows, bool) or not isinstance(authorized_windows, int) or authorized_windows != 5:
+            raise HH06ContractError("HH06 bounded authorization must specify exactly max_windows=5")
         if requested != authorized_windows:
             raise HH06ContractError(
-                "HH06 runtime requires explicit --max-windows 2; larger, smaller, or unlimited runs are forbidden"
+                "HH06 runtime requires explicit --max-windows 5; larger, smaller, or unlimited runs are forbidden"
             )
-        return 2
+        return 5
     return int(bundle.root["coupling"]["accepted_window_limit"] if requested is None else requested)
 
 
@@ -735,7 +736,9 @@ def run(
     try:
         fleet.initialize(initial_motion_by_slice=initial_motion_by_slice)
         fleet_initialized = True
-        initial_rows = _force_total(fleet.read_force(item.slice_id))
+        initial_rows = _force_total(
+            fleet.read_force(item.slice_id, relative_read_time_s=0.0)
+        )
         initial_state = bundle.root.get("initial_state", {})
         initial_provenance = initial_state.get("release_force_provenance", {})
         expected_f0 = (
@@ -763,6 +766,7 @@ def run(
             # Exclusive creation preserves earlier diagnostic evidence.
             trace_stream = trace_path.open("x", encoding="utf-8")
         current_force_raw_N = initial_rows
+        current_force_read_offset_s = 0.0
         initial_force_source_kind = str(initial_provenance.get("source_kind", "HH06_PHYSICAL_RELEASE_FORCE"))
         while fleet.is_coupling_ongoing() and accepted < limit:
             window_index = accepted + 1
@@ -773,6 +777,7 @@ def run(
                 current_force_raw_N=current_force_raw_N,
                 force_source_global_time_s=source_global_time_s,
                 force_source_kind=initial_force_source_kind if window_index == 1 else "PRECEDING_ACCEPTED_PRECICE_EXCHANGE",
+                force_read_offset_s=current_force_read_offset_s,
                 committed_motion_m=previous_committed_motion,
             )
             checkpoint_active = False
@@ -821,11 +826,25 @@ def run(
                 iteration_events.append("trial_displacement_written_to_precice")
                 fleet.advance(bundle.dt_s)
                 iteration_events.append("precice_advance_completed")
-                returned_force_raw_N = _force_total(fleet.read_force(item.slice_id))
                 rollback_request = bool(fleet.requires_reading_checkpoint())
                 iteration_events.append(
                     "requires_reading_checkpoint_true" if rollback_request
                     else "requires_reading_checkpoint_false"
+                )
+                returned_force_read_offset_s = bundle.dt_s if rollback_request else 0.0
+                returned_force_raw_N = _force_total(
+                    fleet.read_force(
+                        item.slice_id,
+                        relative_read_time_s=returned_force_read_offset_s,
+                    )
+                )
+                iteration_events.append(
+                    "force_read_at_retry_endpoint_dt" if rollback_request
+                    else "force_read_at_accepted_window_start_zero"
+                )
+                returned_force_source_kind = (
+                    "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE"
+                    if rollback_request else "ACCEPTED_WINDOW_BOUNDARY_FORCE"
                 )
 
                 previous_trial_xy = (
@@ -882,7 +901,23 @@ def run(
                     "case_local_time_s": target_local_time_s,
                     "force_source_global_time_s": state.force_source_global_time_s,
                     "force_source_kind": state.force_source_kind,
+                    "force_input_source_global_time_s": state.force_source_global_time_s,
+                    "force_input_read_offset_s": state.force_read_offset_s,
+                    "force_input_source_kind": state.force_source_kind,
+                    "force_input_vector_raw_N": list(force_input_raw_N),
+                    "force_input_window_index": window_index,
+                    "force_input_iteration_index": state.iteration_index,
                     "returned_force_source_global_time_s": target_global_time_s,
+                    "returned_force_source_kind": returned_force_source_kind,
+                    "force_source_time_global_s": target_global_time_s,
+                    "force_read_time_s": returned_force_read_offset_s,
+                    "force_read_offset_s": returned_force_read_offset_s,
+                    "force_read_source_global_time_s": target_global_time_s,
+                    "force_read_source_kind": returned_force_source_kind,
+                    "force_source_vector_raw_N": list(returned_force_raw_N),
+                    "force_read_vector_raw_N": list(returned_force_raw_N),
+                    "force_read_window_index": window_index,
+                    "force_read_iteration_index": state.iteration_index,
                     "window_target_global_time_s": target_global_time_s,
                     "dt_s": bundle.dt_s,
                     "D_previous_committed_m": list(previous_committed_motion),
@@ -938,9 +973,11 @@ def run(
                     state.current_force_raw_N = returned_force_raw_N
                     state.force_source_global_time_s = target_global_time_s
                     state.force_source_kind = "PRECEDING_PRECICE_ADVANCE_ITERATE"
+                    state.force_read_offset_s = returned_force_read_offset_s
                     state.iteration_index += 1
                     current_force_raw_N = returned_force_raw_N
                     source_global_time_s = target_global_time_s
+                    current_force_read_offset_s = returned_force_read_offset_s
                     continue
 
                 records.append({
@@ -955,6 +992,7 @@ def run(
                 })
                 current_force_raw_N = returned_force_raw_N
                 source_global_time_s = target_global_time_s
+                current_force_read_offset_s = returned_force_read_offset_s
                 initial_force_source_kind = "PRECEDING_ACCEPTED_PRECICE_EXCHANGE"
                 break
     finally:
@@ -989,7 +1027,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.run and not args.worker:
         parser.error("--worker is required with --run")
     if args.run and args.max_windows is None:
-        parser.error("--max-windows is required with --run; HH06 requires exactly 2")
+        parser.error("--max-windows is required with --run; HH06 requires exactly the authorized value 5")
     try:
         bundle = load_contract_bundle(args.case)
         audit = audit_contract(bundle)

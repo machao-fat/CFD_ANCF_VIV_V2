@@ -22,6 +22,9 @@ from coupling.arbitrary_n_live_orchestration_v1.manifest import (  # noqa: E402
     OrchestrationSlice,
     SliceManifest,
 )
+from coupling.arbitrary_n_live_orchestration_v1.precice_backend import (  # noqa: E402
+    PreciceStructureFleetBackend,
+)
 from coupling.hh06_structure_0000 import structure_0000_participant as participant  # noqa: E402
 
 _EVENT_ORDER: list[tuple] = []
@@ -145,7 +148,8 @@ class _FakeFleet:
 
     def __init__(self, manifest, config_file, vertices_by_slice, *, windows, max_iterations,
                  force_seed=(0.0, 1.0, 0.0), mode="fixed_point",
-                 displacement_tolerance=1.0e-8, force_tolerance=1.0e-7) -> None:
+                 displacement_tolerance=1.0e-8, force_tolerance=1.0e-7,
+                 dt_s=0.0002) -> None:
         self.manifest = manifest
         self.config_file = config_file
         self.vertices_by_slice = vertices_by_slice
@@ -155,6 +159,7 @@ class _FakeFleet:
         self.mode = mode
         self.displacement_tolerance = displacement_tolerance
         self.force_tolerance = force_tolerance
+        self.dt_s = float(dt_s)
         self.completed_windows = 0
         self.iteration_in_window = 0
         self.advance_calls = 0
@@ -163,10 +168,15 @@ class _FakeFleet:
         self.previous_written = (0.0, 0.0)
         self.previous_force = tuple(force_seed)
         self.current_force = tuple(force_seed)
+        self.window_start_force = tuple(force_seed)
+        self.last_rollback_request: bool | None = None
+        self.last_advance_window_index: int | None = None
+        self.last_advance_iteration_index: int | None = None
         self.initialized = False
         self.initial_motion = None
         self.finalized = False
         self.write_history: list[tuple[float, float]] = []
+        self.read_history: list[dict] = []
         type(self).instances.append(self)
 
     def initialize(self, initial_motion_by_slice=None) -> None:
@@ -194,7 +204,10 @@ class _FakeFleet:
         if self.written is None or dt_s <= 0.0:
             raise AssertionError("fake preCICE advance requires the current trial displacement")
         self.advance_calls += 1
+        self.last_advance_window_index = self.completed_windows + 1
         self.iteration_in_window += 1
+        self.last_advance_iteration_index = self.iteration_in_window
+        self.last_rollback_request = None
         type(self).events.append(("precice_advance", self.advance_calls, self.written))
         _EVENT_ORDER.append(("precice_advance", self.advance_calls, self.written))
         if self.mode == "fixed_point":
@@ -203,14 +216,50 @@ class _FakeFleet:
         elif self.mode == "non_convergent":
             # Deliberately moving force iterate: only the configured cap ends it.
             self.current_force = (0.0, self.current_force[1] + 1.0, 0.0)
+        elif self.mode == "two_window_transition":
+            # Window 1 accepts F1=(0,2,0); window 2 must start from that value,
+            # not the original release seed F0=(0,1,0).
+            self.current_force = (0.0, 2.0 if self.completed_windows == 0 else 3.0, 0.0)
         else:
             raise AssertionError(f"unknown fake flow mode {self.mode}")
 
-    def read_force(self, slice_id):
+    def read_force(self, slice_id, *, relative_read_time_s):
         kind = "initial" if self.advance_calls == 0 else "post_advance"
-        type(self).events.append(("read_force", kind, tuple(self.current_force)))
-        _EVENT_ORDER.append(("read_force", kind, tuple(self.current_force)))
-        return [self.current_force]
+        offset = float(relative_read_time_s)
+        if self.advance_calls == 0:
+            if offset != 0.0:
+                raise AssertionError("initialized release Force must be read at relative time zero")
+            values = self.current_force
+            source_kind = "initial_force"
+        elif self.last_rollback_request is True:
+            if offset == 0.0:
+                # preCICE start-of-window sample: reproduce the stale retry path.
+                values = self.window_start_force
+                source_kind = "window_start_force"
+            elif math.isclose(offset, self.dt_s, rel_tol=0.0, abs_tol=1.0e-15):
+                values = self.current_force
+                source_kind = "retry_endpoint_force"
+            else:
+                raise AssertionError(f"unexpected retry read offset {offset}")
+        elif self.last_rollback_request is False:
+            if offset != 0.0:
+                raise AssertionError("accepted window must not read the ended endpoint at dt")
+            values = self.current_force
+            source_kind = "accepted_window_boundary_force"
+        else:
+            raise AssertionError("post-advance Force read preceded checkpoint decision")
+        record = {
+            "kind": kind, "source_kind": source_kind,
+            "relative_read_time_s": offset, "force_raw_N": list(values),
+            "window_index": self.last_advance_window_index or 1,
+            "iteration_index": self.last_advance_iteration_index or 0,
+            "source_global_time_s": 30.0 + (self.last_advance_window_index or 0) * self.dt_s,
+        }
+        self.read_history.append(record)
+        type(self).events.append(("read_force", kind, tuple(values)))
+        _EVENT_ORDER.append(("read_force", kind, tuple(values)))
+        _EVENT_ORDER.append(("force_read_offset", kind, offset))
+        return [values]
 
     def requires_reading_checkpoint(self) -> bool:
         d_residual = abs(self.written[1] - self.previous_written[1])
@@ -227,6 +276,8 @@ class _FakeFleet:
         if not retry:
             self.completed_windows += 1
             self.iteration_in_window = 0
+            self.window_start_force = self.current_force
+        self.last_rollback_request = retry
         return retry
 
     def finalize(self) -> None:
@@ -296,7 +347,7 @@ def _run_fake(*, windows: int, max_iterations: int, mode="fixed_point",
         manifest = _manifest(unit_span_m=unit_span_m, slice_length_m=slice_length_m)
         fake_fleet_factory = lambda m, c, v: _FakeFleet(
             m, c, v, windows=windows, max_iterations=max_iterations, mode=mode,
-            force_seed=tuple(force_seed),
+            force_seed=tuple(force_seed), dt_s=bundle.dt_s,
         )
         with (
             patch.object(participant, "load_contract_bundle", return_value=bundle),
@@ -311,6 +362,40 @@ def _run_fake(*, windows: int, max_iterations: int, mode="fixed_point",
 
 
 class ImplicitIterationTraceTests(unittest.TestCase):
+    def test_backend_requires_and_forwards_explicit_force_read_offset(self) -> None:
+        class ParticipantSpy:
+            def __init__(self) -> None:
+                self.read_data_arguments = None
+
+            def set_mesh_vertices(self, mesh_name, vertices):
+                return [17]
+
+            def initialize(self):
+                return None
+
+            def read_data(self, mesh_name, data_name, vertex_ids, relative_read_time_s):
+                self.read_data_arguments = (mesh_name, data_name, vertex_ids, relative_read_time_s)
+                return [[1.25, -0.5]]
+
+            def finalize(self):
+                return None
+
+        with tempfile.TemporaryDirectory(prefix="precice-read-offset-api-") as temp_dir:
+            config_path = Path(temp_dir) / "precice-config.xml"
+            _write_fake_precice_xml(config_path, 4)
+            spy = ParticipantSpy()
+            backend = PreciceStructureFleetBackend(
+                _manifest(), config_path, {"slice_0000": [[0.0, 0.0]]},
+                participant_factory=lambda *_args: spy,
+            )
+            backend.initialize()
+            values = backend.read_force("slice_0000", relative_read_time_s=0.0002)
+            self.assertEqual(values, [[1.25, -0.5]])
+            self.assertEqual(spy.read_data_arguments, ("Structure-Mesh", "Force", [17], 0.0002))
+            with self.assertRaises(TypeError):
+                backend.read_force("slice_0000")
+            backend.finalize()
+
     def test_fixed_point_feedback_converges_with_trial_written_before_advance(self) -> None:
         result, trace, worker, fleet = _run_fake(windows=2, max_iterations=25)
         _save_machine_trace("implicit_fixed_point_trace.jsonl", trace)
@@ -376,12 +461,74 @@ class ImplicitIterationTraceTests(unittest.TestCase):
         win1_last = first_window[-1]
         win2_first = next(row for row in trace if row["window_index"] == 2)
         self.assertEqual(win2_first["force_input_raw_N"], win1_last["returned_force_raw_N"])
+        self.assertEqual(win1_last["force_read_time_s"], 0.0)
+        self.assertEqual(win2_first["force_input_read_offset_s"], 0.0)
         self.assertAlmostEqual(win2_first["force_source_global_time_s"], 30.0002)
         self.assertAlmostEqual(win2_first["window_target_global_time_s"], 30.0004)
         self.assertEqual(win2_first["force_source_kind"], "PRECEDING_ACCEPTED_PRECICE_EXCHANGE")
         self.assertEqual(fleet.completed_windows, 2)
         self.assertTrue(fleet.finalized)
         self.assertTrue(worker.closed)
+
+    def test_retry_uses_endpoint_force_and_acceptance_uses_zero_offset(self) -> None:
+        result, trace, _worker, fleet = _run_fake(windows=2, max_iterations=25)
+        self.assertEqual(result["accepted_windows"], 2)
+        self.assertEqual(len(trace), len(fleet.read_history) - 1)
+        self.assertEqual(fleet.read_history[0]["kind"], "initial")
+        self.assertEqual(fleet.read_history[0]["relative_read_time_s"], 0.0)
+
+        for row, read in zip(trace, fleet.read_history[1:]):
+            expected_read_offset = 0.0002 if row["rollback_request"] else 0.0
+            self.assertEqual(row["force_read_time_s"], expected_read_offset)
+            self.assertEqual(read["relative_read_time_s"], expected_read_offset)
+            self.assertEqual(read["force_raw_N"], row["returned_force_raw_N"])
+            self.assertEqual(read["window_index"], row["force_read_window_index"])
+            self.assertEqual(read["iteration_index"], row["force_read_iteration_index"])
+            self.assertEqual(row["force_source_vector_raw_N"], row["returned_force_raw_N"])
+            expected_source_kind = (
+                "CURRENT_WINDOW_ENDPOINT_RETRY_ITERATE"
+                if row["rollback_request"] else "ACCEPTED_WINDOW_BOUNDARY_FORCE"
+            )
+            self.assertEqual(row["force_read_source_kind"], expected_source_kind)
+            self.assertEqual(row["force_read_source_global_time_s"], row["returned_force_source_global_time_s"])
+            self.assertEqual(row["force_read_vector_raw_N"], row["returned_force_raw_N"])
+            self.assertEqual(row["force_input_vector_raw_N"], row["force_input_raw_N"])
+
+        for window_index in (1, 2):
+            rows = [row for row in trace if row["window_index"] == window_index]
+            self.assertTrue(rows)
+            self.assertEqual(rows[0]["force_input_read_offset_s"], 0.0)
+            for retry_row, next_row in zip(rows, rows[1:]):
+                self.assertTrue(retry_row["rollback_request"])
+                self.assertEqual(retry_row["force_read_time_s"], 0.0002)
+                self.assertEqual(next_row["force_input_raw_N"], retry_row["returned_force_raw_N"])
+                self.assertEqual(next_row["force_input_read_offset_s"], 0.0002)
+            self.assertFalse(rows[-1]["rollback_request"])
+            self.assertEqual(rows[-1]["force_read_time_s"], 0.0)
+
+        win1_accepted = next(row for row in trace if row["window_index"] == 1 and not row["rollback_request"])
+        win2_first = next(row for row in trace if row["window_index"] == 2)
+        self.assertEqual(win2_first["force_input_raw_N"], win1_accepted["returned_force_raw_N"])
+        self.assertNotEqual(win2_first["force_input_raw_N"], [0.0, 1.0, 0.0])
+
+    def test_two_window_transition_uses_accepted_f1_not_original_f0(self) -> None:
+        result, trace, _worker, _fleet = _run_fake(
+            windows=2, max_iterations=2, mode="two_window_transition",
+        )
+        _save_machine_trace("force_window_transition_trace.jsonl", trace)
+        self.assertEqual(result["accepted_windows"], 2)
+        window1 = [row for row in trace if row["window_index"] == 1]
+        window2 = [row for row in trace if row["window_index"] == 2]
+        self.assertEqual(len(window1), 2)
+        self.assertEqual(len(window2), 2)
+        self.assertEqual(window1[0]["force_input_raw_N"], [0.0, 1.0, 0.0])
+        self.assertEqual(window1[0]["returned_force_raw_N"], [0.0, 2.0, 0.0])
+        self.assertTrue(window1[0]["rollback_request"])
+        self.assertEqual(window1[1]["force_input_raw_N"], [0.0, 2.0, 0.0])
+        self.assertFalse(window1[1]["rollback_request"])
+        self.assertEqual(window2[0]["force_input_raw_N"], [0.0, 2.0, 0.0])
+        self.assertNotEqual(window2[0]["force_input_raw_N"], [0.0, 1.0, 0.0])
+        self.assertEqual(window2[0]["force_input_read_offset_s"], 0.0)
 
     def test_iteration_cap_is_reported_honestly(self) -> None:
         result, trace, _worker, _fleet = _run_fake(
@@ -405,6 +552,8 @@ class ImplicitIterationTraceTests(unittest.TestCase):
         self.assertEqual(result["accepted_windows"], 1)
         self.assertEqual(trace[0]["force_source_kind"], "HH06_PHYSICAL_RELEASE_FORCE")
         self.assertEqual(trace[0]["force_input_raw_N"], list(raw_f0))
+        self.assertEqual(trace[0]["force_input_read_offset_s"], 0.0)
+        self.assertEqual(_FakeFleet.instances[0].read_history[0]["force_raw_N"], list(raw_f0))
         self.assertAlmostEqual(trace[0]["force_source_global_time_s"], 30.0)
         self.assertAlmostEqual(trace[0]["window_target_global_time_s"], 30.0002)
         expected_strip = (
