@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fail-closed preflight and exact two-window HH06 launch wrapper.
+"""Fail-closed preflight and exact five-window HH06 launch wrapper.
 
 Preflight-only mode is read-only with respect to the case and starts no solver,
 participant, worker, or ANCF process.  Runtime mode is separately opt-in.
@@ -41,7 +41,7 @@ EXPECTED_WORKER_SOURCE_SHA256 = "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7
 EXPECTED_WORKER_BINARY_SHA256 = "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596"
 EXPECTED_PYPRECICE_METADATA_VERSION = "3.4.0"
 EXPECTED_PRECICE_RUNTIME_VERSION = "3.4.1"
-EXPECTED_MAX_WINDOWS = 2
+EXPECTED_MAX_WINDOWS = 5
 EXPECTED_MAX_ITERATIONS = 20
 EXPECTED_DT = 0.0002
 EXPECTED_RELEASE_TIME = 30.0
@@ -50,7 +50,7 @@ EXPECTED_F0_RESULT_SHA256 = "6b272f695ebefe28daa176723483f611c42f8d25dbae8d83de9
 EXPECTED_F0_REPORT_SHA256 = "6737908b9b29f4ff8550ba4353ff88ad90ad5cfc1355a57a885d655f7d3d7b3b"
 EXPECTED_F0_PROVENANCE_SHA256 = "1df1d2ca0876372874b1e6ac0eca2296e2f3ab8f8900e0b3903b53f2566e72d2"
 BINDING_EVIDENCE = REPO_ROOT / "evidence" / "phase1d6_python_precice_binding" / "qualification.json"
-RUN_EVIDENCE_ROOT = REPO_ROOT / "evidence" / "phase1e_bounded_2window"
+RUN_EVIDENCE_ROOT = REPO_ROOT / "evidence" / "phase1f_bounded_5window"
 
 
 class LaunchContractError(RuntimeError):
@@ -515,7 +515,7 @@ def _validate_linked_launch_boundaries(structure_contract: Mapping[str, Any],
              "linked contract maturity status must remain READY_FOR_DRY_RUN")
     common_override = {
         "authority": "contract.json#execution_authorization",
-        "mode": "BOUNDED_COUPLING_QUALIFICATION", "max_windows": 2,
+        "mode": "BOUNDED_COUPLING_QUALIFICATION", "max_windows": EXPECTED_MAX_WINDOWS,
         "openfoam_solve_allowed": True, "ancf_time_integration_allowed": True,
         "launcher_preflight_required": True, "production_readiness_claim": False,
     }
@@ -551,14 +551,14 @@ class LaunchPlan:
 
 def construct_commands(case_dir: Path, worker_path: Path, max_windows: int,
                        fluid_executable: str, run_directory: Path) -> LaunchPlan:
-    _require(max_windows == EXPECTED_MAX_WINDOWS, "launcher requires exactly --max-windows 2")
+    _require(max_windows == EXPECTED_MAX_WINDOWS, "launcher requires exactly --max-windows 5")
     xml_root = ET.parse(case_dir / "precice-config.xml").getroot()
     sockets = _socket_directory(case_dir, xml_root)
     participant = PARTICIPANT.resolve()
     run_dir = run_directory.resolve()
     # OpenFOAM v10 pimpleFoam has no -endTime option. The preCICE adapter's
     # default end-time control delegates simulation termination to preCICE;
-    # preflight pins the adapter and requires max-time-windows=2.
+    # preflight pins the adapter and requires max-time-windows=5.
     fluid = (fluid_executable, "-case", str(case_dir.resolve()))
     structure = (
         str(Path(sys.executable).resolve()), str(participant), "--case", str(case_dir.resolve()),
@@ -584,13 +584,13 @@ def preflight(case_dir: Path, worker_arg: str, max_windows: int) -> tuple[Launch
     _require(isinstance(auth, Mapping), "explicit execution_authorization object is required")
     _require(auth.get("mode") == "BOUNDED_COUPLING_QUALIFICATION", "execution mode is not bounded qualification")
     _require(type(auth.get("max_windows")) is int and auth.get("max_windows") == EXPECTED_MAX_WINDOWS,
-             "execution authorization must set integer max_windows=2")
-    _require(max_windows == auth.get("max_windows"), "explicit --max-windows must equal the authorized value 2")
+             "execution authorization must set integer max_windows=5")
+    _require(max_windows == auth.get("max_windows"), "explicit --max-windows must equal the authorized value 5")
     _require(auth.get("participant_entrypoint") == "src/coupling/hh06_structure_0000/structure_0000_participant.py",
              "contract participant entrypoint identity mismatch")
 
     # The maturity flags stay at READY_FOR_DRY_RUN and their default launch
-    # boundaries remain denied. Only an exact, separately declared two-window
+    # boundaries remain denied. Only an exact, separately declared five-window
     # override in both linked contracts can authorize the bounded profile.
     structure_contract = load_json_strict(case_dir / "structure_contract.json")
     interface_contract = load_json_strict(case_dir / "interface_contract.json")
@@ -615,7 +615,8 @@ def preflight(case_dir: Path, worker_arg: str, max_windows: int) -> tuple[Launch
     max_time_nodes = [item for item in implicit if _local(item.tag) == "max-time"]
     _require(not max_time_nodes, "bounded profile must use max-time-windows, not an unbounded duration setting")
     windows_node = _one(windows_nodes, "max-time-windows")
-    _require(windows_node.attrib.get("value") == "2", "preCICE max-time-windows must equal 2")
+    _require(windows_node.attrib.get("value") == str(EXPECTED_MAX_WINDOWS),
+             "preCICE max-time-windows must equal 5")
     dt_node = _one([item for item in implicit if _local(item.tag) == "time-window-size"], "time-window-size")
     _require(_xml_numeric(dt_node.attrib.get("value"), "preCICE time-window-size") == EXPECTED_DT,
              "preCICE time-window-size differs from the authorized dt")
@@ -673,7 +674,7 @@ def preflight(case_dir: Path, worker_arg: str, max_windows: int) -> tuple[Launch
         "participant_audit": participant_audit,
         "precice": {"xml_path": str(xml_path), "socket_directory": socket,
                     "active_socket_processes": socket_users,
-                    "max_time_windows": 2, "max_iterations": 20,
+                    "max_time_windows": EXPECTED_MAX_WINDOWS, "max_iterations": 20,
                     "force_initial_data": force_exchange.attrib.copy(),
                     "configuration_validation": {
                         "command": [validator, str(xml_path)], "return_code": xml_validation.returncode,
@@ -683,7 +684,7 @@ def preflight(case_dir: Path, worker_arg: str, max_windows: int) -> tuple[Launch
         "commands_not_executed": {"Fluid": list(plan.fluid_command), "Structure": list(plan.structure_command)},
         "logs": dict(plan.log_paths),
         "checks": {
-            "contract_json": True, "bounded_authorization": True, "max_windows_exactly_2": True,
+            "contract_json": True, "bounded_authorization": True, "max_windows_exactly_5": True,
             "max_iterations_consistent_20": True, "dt_consistent_0p0002": True,
             "F0_provenance_and_restart_hashes": True, "Force_initialize_yes": True,
             "OpenFOAM_adapter_end_time_control_enabled": True,
@@ -789,10 +790,10 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="HH06 single-slice bounded qualification preflight/launcher")
     parser.add_argument("--case", type=Path, default=DEFAULT_CASE)
     parser.add_argument("--worker", required=True, help="explicit executable; SHA-pinned, no default")
-    parser.add_argument("--max-windows", type=int, required=True, help="must equal the authorized value 2")
+    parser.add_argument("--max-windows", type=int, required=True, help="must equal the authorized value 5")
     mode = parser.add_mutually_exclusive_group(required=True)
     mode.add_argument("--preflight-only", action="store_true", help="run all checks; start no participant or solver")
-    mode.add_argument("--run-bounded", action="store_true", help="explicitly start the authorized two-window run")
+    mode.add_argument("--run-bounded", action="store_true", help="explicitly start the authorized five-window run")
     args = parser.parse_args(argv)
     try:
         plan, report = preflight(args.case, args.worker, args.max_windows)

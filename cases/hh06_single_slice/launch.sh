@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Fail-closed launcher for the explicitly bounded HH06 two-window profile.
+# Fail-closed launcher for the explicitly bounded HH06 five-window profile.
 set -Eeuo pipefail
 
 SCRIPT_PATH="$(realpath -e -- "${BASH_SOURCE[0]}")"

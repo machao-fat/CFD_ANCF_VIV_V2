@@ -5,7 +5,7 @@
   "purpose": "HH06 Case 1 高 Re 单切片 ANCF-FSI 合同准备；READY_FOR_DRY_RUN 表示验证成熟度，不代表 production readiness。execution_authorization 单独限定有界 qualification。",
   "execution_authorization": {
     "mode": "BOUNDED_COUPLING_QUALIFICATION",
-    "max_windows": 2,
+    "max_windows": 5,
     "participant_entrypoint": "src/coupling/hh06_structure_0000/structure_0000_participant.py",
     "worker_source": "src/ancf/ancf_worker_main.cpp",
     "worker_source_sha256": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
@@ -155,7 +155,7 @@
     "legacy_604_vertex_participant": false,
     "participant_entrypoint": "src/coupling/hh06_structure_0000/structure_0000_participant.py",
     "participant_entrypoint_wsl": "/home/machao/projects/CFD_ANCF_VIV_V2/src/coupling/hh06_structure_0000/structure_0000_participant.py",
-    "entrypoint_status": "CURRENT_V2_AUTHORITATIVE_SOURCE; offline audit passes; real runtime is restricted to the explicit two-window qualification launcher",
+    "entrypoint_status": "CURRENT_V2_AUTHORITATIVE_SOURCE; offline audit passes; real runtime is restricted to the explicit five-window qualification launcher",
     "force_pipeline": [
       "OpenFOAM cylinder-wall integration over 200 faces",
       "strip resultant force over DeltaL=1.98 m",
@@ -198,7 +198,7 @@
     "the current Structure participant uses benchmark_top_tension_N=1175.0 N; never substitute equilibrium_reaction_tension_N=1188.28 N",
     "use src/coupling/hh06_structure_0000/structure_0000_participant.py as the authoritative Fluid_0000/Structure_0000 participant entry point",
     "run the fail-closed preflight and isolated Python/preCICE binding qualification before any coupled runtime",
-    "the bounded profile is exactly two physical windows; max_windows does not change dt, implicit max_iterations, or the scientific duration contract",
+    "the Phase 1F bounded profile is exactly five physical windows; max_windows does not change dt, implicit max_iterations, or the scientific duration contract",
     "retain status READY_FOR_DRY_RUN; do not promote this case to READY, VALIDATED, or production-ready based on bounded qualification"
   ]
 }

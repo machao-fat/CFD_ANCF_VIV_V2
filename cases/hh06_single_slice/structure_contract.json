@@ -117,7 +117,7 @@
     "bounded_qualification_override": {
       "authority": "contract.json#execution_authorization",
       "mode": "BOUNDED_COUPLING_QUALIFICATION",
-      "max_windows": 2,
+      "max_windows": 5,
       "openfoam_solve_allowed": true,
       "ancf_time_integration_allowed": true,
       "launcher_preflight_required": true,

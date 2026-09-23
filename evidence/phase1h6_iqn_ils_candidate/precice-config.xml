@@ -18,9 +18,15 @@
     <participants first="Structure_0000" second="Fluid_0000"/>
     <max-time-windows value="5"/><time-window-size value="0.0002"/><min-iterations value="2"/><max-iterations value="20"/>
     <!-- Numerical stabilization authorized for bounded HH06 retry: constant under-relaxation. -->
-    <acceleration:constant>
-      <relaxation value="0.2"/>
-    </acceleration:constant>
+    <acceleration:IQN-ILS reduced-time-grid="true">
+      <initial-relaxation value="0.2" enforce="true"/>
+      <max-used-iterations value="1"/>
+      <time-windows-reused value="1"/>
+      <data name="Displacement" mesh="Structure-Mesh"/>
+      <data name="Force" mesh="Structure-Mesh"/>
+      <filter type="QR3" limit="1e-2"/>
+      <preconditioner type="residual-sum"/>
+    </acceleration:IQN-ILS>
     <absolute-or-relative-convergence-measure data="Displacement" mesh="Structure-Mesh" abs-limit="1e-8" rel-limit="1e-5"/>
     <absolute-or-relative-convergence-measure data="Force" mesh="Structure-Mesh" abs-limit="1e-3" rel-limit="1e-5"/>
     <exchange data="Displacement" mesh="Structure-Mesh" from="Structure_0000" to="Fluid_0000" initialize="yes" substeps="false"/>

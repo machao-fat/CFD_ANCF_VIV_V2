@@ -25,8 +25,8 @@ from coupling.hh06_structure_0000 import structure_0000_participant as participa
 class BoundedQualificationLauncherTests(unittest.TestCase):
     def test_command_construction_matches_current_cli_and_paths_without_execution(self) -> None:
         fluid_exe = shutil.which("pimpleFoam") or "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam"
-        run_dir = REPO_ROOT / "evidence" / "phase1e_bounded_2window" / "<UNIQUE_RUN_ID>"
-        plan = launcher.construct_commands(CASE_DIR, WORKER, 2, fluid_exe, run_dir)
+        run_dir = REPO_ROOT / "evidence" / "phase1f_bounded_5window" / "<UNIQUE_RUN_ID>"
+        plan = launcher.construct_commands(CASE_DIR, WORKER, 5, fluid_exe, run_dir)
 
         self.assertEqual(
             list(plan.fluid_command),
@@ -35,7 +35,7 @@ class BoundedQualificationLauncherTests(unittest.TestCase):
         structure = list(plan.structure_command)
         self.assertEqual(structure[:2], [str(Path(sys.executable).resolve()), str(launcher.PARTICIPANT.resolve())])
         self.assertEqual(structure[2:8], ["--case", str(CASE_DIR.resolve()), "--run", "--worker", str(WORKER.resolve()), "--max-windows"])
-        self.assertEqual(structure[8], "2")
+        self.assertEqual(structure[8], "5")
         self.assertIn("--trace-output", structure)
         self.assertNotIn("--contract", structure)
         self.assertEqual(plan.socket_directory, Path(
@@ -50,20 +50,23 @@ class BoundedQualificationLauncherTests(unittest.TestCase):
             "PATH": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin:" + os.environ.get("PATH", ""),
         }
         with patch.dict(os.environ, env, clear=False):
-            plan, report = launcher.preflight(CASE_DIR, str(WORKER), 2)
+            plan, report = launcher.preflight(CASE_DIR, str(WORKER), 5)
         self.assertEqual(report["status"], "PASS_PREFLIGHT_ONLY")
         self.assertFalse(report["runtime_started"])
         self.assertTrue(report["checks"]["F0_provenance_and_restart_hashes"])
         self.assertTrue(report["checks"]["python_precice_binding_runtime_qualified"])
-        self.assertEqual(report["max_windows"], 2)
+        self.assertEqual(report["max_windows"], 5)
+        self.assertEqual(report["precice"]["max_time_windows"], 5)
         self.assertEqual(report["max_iterations"], 20)
         self.assertEqual(plan.socket_directory, Path(report["precice"]["socket_directory"]["path"]))
 
     def test_wrong_cap_is_rejected(self) -> None:
-        with self.assertRaisesRegex(launcher.LaunchContractError, "exactly --max-windows 2"):
-            launcher.construct_commands(CASE_DIR, WORKER, 5, "/usr/bin/pimpleFoam", Path("/tmp/unused"))
-        with self.assertRaisesRegex(launcher.LaunchContractError, "explicit --max-windows"):
-            launcher.preflight(CASE_DIR, str(WORKER), 5)
+        for wrong_cap in (2, 6, 25):
+            with self.subTest(wrong_cap=wrong_cap):
+                with self.assertRaisesRegex(launcher.LaunchContractError, "exactly --max-windows 5"):
+                    launcher.construct_commands(CASE_DIR, WORKER, wrong_cap, "/usr/bin/pimpleFoam", Path("/tmp/unused"))
+                with self.assertRaisesRegex(launcher.LaunchContractError, "explicit --max-windows"):
+                    launcher.preflight(CASE_DIR, str(WORKER), wrong_cap)
 
     def test_wrong_worker_binary_is_rejected(self) -> None:
         with self.assertRaisesRegex(launcher.LaunchContractError, "worker binary SHA mismatch"):
@@ -80,10 +83,10 @@ class BoundedQualificationLauncherTests(unittest.TestCase):
                 launcher._verify_adapter(contract_auth)
 
     def test_participant_run_path_requires_exact_bounded_authorization(self) -> None:
-        root = {"execution_authorization": {"mode": "BOUNDED_COUPLING_QUALIFICATION", "max_windows": 2}}
+        root = {"execution_authorization": {"mode": "BOUNDED_COUPLING_QUALIFICATION", "max_windows": 5}}
         bundle = type("Bundle", (), {"case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1", "root": root})()
-        self.assertEqual(participant._bounded_window_limit(bundle, 2), 2)
-        for requested in (None, 1, 5):
+        self.assertEqual(participant._bounded_window_limit(bundle, 5), 5)
+        for requested in (None, 2, 6, 25):
             with self.subTest(requested=requested):
                 with self.assertRaises( participant.HH06ContractError):
                     participant._bounded_window_limit(bundle, requested)
@@ -91,7 +94,7 @@ class BoundedQualificationLauncherTests(unittest.TestCase):
     def test_duplicate_json_keys_fail_closed(self) -> None:
         with tempfile.TemporaryDirectory(prefix="phase1d6-json-contract-") as temp_dir:
             path = Path(temp_dir) / "duplicate.json"
-            path.write_text('{"max_windows":2,"max_windows":5}\n', encoding="utf-8")
+            path.write_text('{"max_windows":5,"max_windows":2}\n', encoding="utf-8")
             with self.assertRaisesRegex(launcher.LaunchContractError, "duplicate JSON key"):
                 launcher.load_json_strict(path)
 
@@ -100,7 +103,7 @@ class BoundedQualificationLauncherTests(unittest.TestCase):
         interface = launcher.load_json_strict(CASE_DIR / "interface_contract.json")
         launcher._validate_linked_launch_boundaries(structure, interface)
 
-        interface["launch_boundary"]["bounded_qualification_override"]["max_windows"] = 5
+        interface["launch_boundary"]["bounded_qualification_override"]["max_windows"] = 2
         with self.assertRaisesRegex(launcher.LaunchContractError, "bounded override is inconsistent"):
             launcher._validate_linked_launch_boundaries(structure, interface)
 
