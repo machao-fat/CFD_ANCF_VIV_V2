@@ -25,6 +25,6 @@
     <absolute-or-relative-convergence-measure data="Displacement" mesh="Structure-Mesh" abs-limit="1e-8" rel-limit="1e-5"/>
     <absolute-or-relative-convergence-measure data="Force" mesh="Structure-Mesh" abs-limit="1e-3" rel-limit="1e-5"/>
     <exchange data="Displacement" mesh="Structure-Mesh" from="Structure_0000" to="Fluid_0000" initialize="yes" substeps="false"/>
-    <exchange data="Force" mesh="Structure-Mesh" from="Fluid_0000" to="Structure_0000" substeps="false"/>
+    <exchange data="Force" mesh="Structure-Mesh" from="Fluid_0000" to="Structure_0000" initialize="yes" substeps="false"/>
   </coupling-scheme:parallel-implicit>
 </precice-configuration>

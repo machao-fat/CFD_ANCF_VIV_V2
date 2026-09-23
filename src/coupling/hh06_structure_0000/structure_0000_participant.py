@@ -15,10 +15,11 @@ validation workflow.
 from __future__ import annotations
 
 import argparse
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import struct
 import subprocess
@@ -28,7 +29,7 @@ from typing import Any, Mapping, Sequence
 import xml.etree.ElementTree as ET
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
+REPO_ROOT = Path(__file__).resolve().parents[3]
 SRC_ROOT = REPO_ROOT / "src"
 if str(SRC_ROOT) not in sys.path:
     sys.path.insert(0, str(SRC_ROOT))
@@ -182,6 +183,28 @@ class HH06ContractBundle:
         return int(self.structure["geometry"]["state_dof_count"])
 
 
+@dataclass
+class CouplingIterationState:
+    """Participant-owned fixed-point history, separate from physical rollback.
+
+    This object intentionally contains no ANCF q/qdot/qddot and no transport
+    identity counters.  The coordinator owns physical checkpoints; the worker
+    backend owns session-monotonic transport identities.
+    """
+
+    window_index: int
+    iteration_index: int
+    current_force_raw_N: tuple[float, float, float]
+    force_source_global_time_s: float
+    force_source_kind: str
+    committed_motion_m: tuple[float, float, float]
+    previous_force_raw_N: tuple[float, float, float] | None = None
+    current_trial_displacement_m: tuple[float, float, float] | None = None
+    previous_trial_displacement_m: tuple[float, float, float] | None = None
+    residual_history: list[dict[str, float | None]] = field(default_factory=list)
+    event_history: list[str] = field(default_factory=list)
+
+
 def load_contract_bundle(case_dir: str | Path) -> HH06ContractBundle:
     case = Path(case_dir).expanduser().resolve()
     root = _json(case / "contract.json")
@@ -262,6 +285,17 @@ def audit_contract(bundle: HH06ContractBundle) -> dict[str, Any]:
         checks["precice_xml_parse"] = True
     except (OSError, ET.ParseError):
         checks["precice_xml_parse"] = False
+    try:
+        _load_release_force_contract(bundle)
+        checks["physical_release_force_provenance"] = True
+    except (HH06ContractError, OSError, ValueError, KeyError, TypeError):
+        checks["physical_release_force_provenance"] = False
+    try:
+        _precice_max_iterations(bundle.config_file)
+        checks["precice_max_iterations_present"] = True
+    except (HH06ContractError, OSError, ET.ParseError):
+        checks["precice_max_iterations_present"] = False
+    checks["force_initial_data_exchange"] = _force_exchange_initializes(bundle.config_file)
     checks["hydrodynamic_wire_extension"] = _hydro_capability()
     blocking = [name for name, passed in checks.items() if not passed]
     status = "PASS" if not blocking else "BLOCKED"
@@ -278,6 +312,21 @@ def audit_contract(bundle: HH06ContractBundle) -> dict[str, Any]:
         "tension": {"benchmark_top_tension_N": pretension["benchmark_top_tension_N"], "equilibrium_reaction_tension_N": pretension["equilibrium_reaction_tension_N"]},
         "q0": {"artifact": str(bundle.q0_artifact), "sha256": _sha256(bundle.q0_artifact), "count": len(bundle.q0), "q_sha256": _sha256_numbers(bundle.q0), "velocity_zero": True},
         "wire_capability": {"SHM1_hydrodynamic_regions": _hydro_capability(), "note": "Current checked-out protocol must expose SHM1 before a wet-mass runtime is authorized."},
+        "iteration_cap": {
+            "contract_json": coupling.get("max_iterations"),
+            "precice_xml": _precice_max_iterations(bundle.config_file) if checks["precice_max_iterations_present"] else None,
+            "values_match": (
+                int(coupling.get("max_iterations", -1)) == _precice_max_iterations(bundle.config_file)
+                if checks["precice_max_iterations_present"] else False
+            ),
+        },
+        "release_force": (
+            {"Fx0_raw_N": root["initial_state"].get("Fx0_total_N"),
+             "Fy0_raw_N": root["initial_state"].get("Fy0_total_N"),
+             "source_global_time_s": root["initial_state"].get("openfoam_global_time_s"),
+             "provenance": root["initial_state"].get("release_force_provenance")}
+            if checks["physical_release_force_provenance"] else None
+        ),
         "no_runtime_started": True,
     }
 
@@ -353,7 +402,15 @@ class PersistentHH06KernelBackend:
     def start(self) -> None:
         if self.process is not None:
             raise HH06ContractError("worker already started")
-        self.process = subprocess.Popen([self.worker_path], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        worker_environment = os.environ.copy()
+        # The C++ worker keeps implicit same-window retry identity disabled by
+        # default. This participant uses the already-qualified physical-identity
+        # retry contract, so enable that protocol path explicitly per worker.
+        worker_environment["CFD_ANCF_ALLOW_IMPLICIT_RETRY"] = "1"
+        self.process = subprocess.Popen(
+            [self.worker_path], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE, env=worker_environment,
+        )
         if self.process.stdin is None or self.process.stdout is None:
             raise HH06ContractError("worker streams are unavailable")
         self.process.stdin.write(encode_control(MESSAGE_INITIALIZE)); self.process.stdin.flush()
@@ -504,12 +561,132 @@ def _force_total(rows: Any) -> tuple[float, float, float]:
     return (values[0], values[1], values[2] if len(values) == 3 else 0.0)
 
 
+def _load_release_force_contract(bundle: HH06ContractBundle) -> dict[str, Any]:
+    """Verify the numeric F0 contract against its frozen Phase 1C.7A evidence."""
+    initial = bundle.root.get("initial_state")
+    if not isinstance(initial, Mapping):
+        raise HH06ContractError("initial_state is missing from HH06 contract")
+    provenance = initial.get("release_force_provenance")
+    if not isinstance(provenance, Mapping):
+        raise HH06ContractError("physical release Force provenance is missing")
+
+    result_path = (bundle.case_dir / str(provenance["result_json"])).resolve()
+    expected_result_sha = str(provenance["result_json_sha256"])
+    if not result_path.is_file() or _sha256(result_path) != expected_result_sha:
+        raise HH06ContractError("frozen release Force result is missing or its SHA256 changed")
+    result = _json(result_path)
+
+    report_path = (bundle.case_dir / str(provenance["recovery_report"])).resolve()
+    expected_report_sha = str(provenance["recovery_report_sha256"])
+    if not report_path.is_file() or _sha256(report_path) != expected_report_sha:
+        raise HH06ContractError("release Force recovery report is missing or its SHA256 changed")
+
+    expected_identity = {
+        "restart_case_id": str(bundle.root["case_id"]),
+        "restart_time_directory": "30",
+        "restart_global_time_s": 30.0,
+        "restart_time_index": 150000,
+        "patch": "cylinder",
+    }
+    actual_identity = {
+        "restart_case_id": str(provenance["restart_case_id"]),
+        "restart_time_directory": str(provenance["restart_time_directory"]),
+        "restart_global_time_s": _finite(provenance["restart_global_time_s"], "F0.restart_global_time_s"),
+        "restart_time_index": int(provenance["restart_time_index"]),
+        "patch": str(provenance["patch"]),
+    }
+    if actual_identity != expected_identity:
+        raise HH06ContractError(f"release Force restart identity mismatch: {actual_identity}")
+    if result.get("classification") != "RELEASE_FORCE_RECOVERED_REPRODUCIBLY":
+        raise HH06ContractError("frozen release Force result is not reproducibly qualified")
+    if result.get("case_id") != expected_identity["restart_case_id"]:
+        raise HH06ContractError("release Force result case ID mismatch")
+    if result.get("global_time_s") != expected_identity["restart_global_time_s"]:
+        raise HH06ContractError("release Force result time mismatch")
+    if result.get("patch") != expected_identity["patch"]:
+        raise HH06ContractError("release Force result patch mismatch")
+
+    contract_force = (
+        _finite(initial["Fx0_total_N"], "initial_state.Fx0_total_N"),
+        _finite(initial["Fy0_total_N"], "initial_state.Fy0_total_N"),
+        _finite(provenance["Fz0_measured_N"], "release_force_provenance.Fz0_measured_N"),
+    )
+    evidence_force = tuple(_finite(result[key], f"release_force_result.{key}") for key in (
+        "Fx_raw_N", "Fy_raw_N", "Fz_raw_N"
+    ))
+    if contract_force != evidence_force:
+        raise HH06ContractError("numeric F0 contract differs from the frozen release Force result")
+    if str(provenance.get("raw_force_units")) != "N":
+        raise HH06ContractError("F0 must remain raw patch-integrated Force in N")
+    tolerance = _finite(provenance["initial_data_comparison_tolerance_N"], "F0 comparison tolerance")
+    if tolerance <= 0.0:
+        raise HH06ContractError("F0 initial-data comparison tolerance must be positive")
+    return {
+        "force_raw_N": contract_force,
+        "source_global_time_s": _finite(initial["openfoam_global_time_s"], "initial_state.openfoam_global_time_s"),
+        "comparison_tolerance_N": tolerance,
+        "result_json": str(result_path),
+        "result_json_sha256": expected_result_sha,
+    }
+
+
+def _precice_max_iterations(config_file: str | Path) -> int:
+    try:
+        root = ET.parse(config_file).getroot()
+    except (OSError, ET.ParseError) as exc:
+        raise HH06ContractError("cannot parse preCICE configuration for max-iterations") from exc
+    matches = [element for element in root.iter() if element.tag.split("}")[-1] == "max-iterations"]
+    if len(matches) != 1:
+        raise HH06ContractError(f"expected exactly one preCICE max-iterations element, found {len(matches)}")
+    try:
+        value = int(matches[0].attrib["value"])
+    except (KeyError, ValueError) as exc:
+        raise HH06ContractError("preCICE max-iterations value is invalid") from exc
+    if value < 1:
+        raise HH06ContractError("preCICE max-iterations must be positive")
+    return value
+
+
+def _force_exchange_initializes(config_file: str | Path) -> bool:
+    try:
+        root = ET.parse(config_file).getroot()
+    except (OSError, ET.ParseError):
+        return False
+    exchanges = [element for element in root.iter() if element.tag.split("}")[-1] == "exchange"]
+    return any(
+        element.attrib.get("data") == "Force"
+        and element.attrib.get("from") == "Fluid_0000"
+        and element.attrib.get("to") == "Structure_0000"
+        and element.attrib.get("initialize") == "yes"
+        for element in exchanges
+    )
+
+
 def _vector_norm_delta(current: Sequence[float], previous: Sequence[float] | None) -> float | None:
     if previous is None:
         return None
     if len(current) != len(previous):
         raise HH06ContractError("diagnostic vector dimensions changed between coupling attempts")
     return math.sqrt(sum((float(a) - float(b)) ** 2 for a, b in zip(current, previous)))
+
+
+def _bounded_window_limit(bundle: HH06ContractBundle, requested: int | None) -> int:
+    """Fail closed on the real HH06 case unless its exact bounded profile is requested."""
+    if bundle.case_id == "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1":
+        authorization = bundle.root.get("execution_authorization")
+        if not isinstance(authorization, Mapping):
+            raise HH06ContractError("missing bounded execution authorization")
+        if authorization.get("mode") != "BOUNDED_COUPLING_QUALIFICATION":
+            raise HH06ContractError("HH06 runtime is not authorized for bounded coupling qualification")
+        authorized_windows = authorization.get("max_windows")
+        if isinstance(authorized_windows, bool) or authorized_windows != 2:
+            raise HH06ContractError("HH06 bounded authorization must specify exactly max_windows=2")
+        if requested != authorized_windows:
+            raise HH06ContractError(
+                "HH06 runtime requires explicit --max-windows 2; larger, smaller, or unlimited runs are forbidden"
+            )
+        return 2
+    return int(bundle.root["coupling"]["accepted_window_limit"] if requested is None else requested)
 
 
 def run(
@@ -519,19 +696,26 @@ def run(
     *,
     trace_output: str | Path | None = None,
 ) -> dict[str, Any]:
-    """Run the live wrapper only when the caller explicitly requests it."""
+    """Run the live wrapper only when the caller explicitly requests it.
+
+    Each implicit attempt advances the ANCF state from the physical window
+    checkpoint, writes that attempt's absolute trial displacement, and only
+    then calls preCICE ``advance``.  The latest Force returned by that advance
+    is retained as the next fixed-point iterate across physical rollback.
+    """
     bundle = load_contract_bundle(case_dir)
     audit = audit_contract(bundle)
     if audit["status"] != "PASS":
         raise HH06ContractError("contract audit failed: " + ", ".join(audit["blocking_checks"]))
+    limit = _bounded_window_limit(bundle, max_windows)
     manifest = build_manifest(bundle)
     item = manifest.slices[0]
+    max_iterations = _precice_max_iterations(bundle.config_file)
     worker = PersistentHH06KernelBackend(bundle, manifest, worker_path)
     fleet = PreciceStructureFleetBackend(manifest, bundle.config_file, {item.slice_id: [(0.0, 0.0)]})
     coordinator = GenericStructuralCoordinator(manifest, worker, reference_positions_by_slice={item.slice_id: (0.0, 0.0, item.s_ref_m)})
     records: list[dict[str, Any]] = []
     attempt_trace: list[dict[str, Any]] = []
-    previous_attempt_by_window: dict[int, dict[str, tuple[float, ...]]] = {}
     accepted = 0
     initial_position = worker.evaluate_position(item.s_ref_m)
     initial_reference = (0.0, 0.0, item.s_ref_m)
@@ -546,114 +730,237 @@ def run(
     }
     committed_motion = {item.slice_id: initial_motion}
     trace_stream = None
+    fleet_initialized = False
     worker.start()
-    fleet.initialize(initial_motion_by_slice=initial_motion_by_slice)
     try:
+        fleet.initialize(initial_motion_by_slice=initial_motion_by_slice)
+        fleet_initialized = True
+        initial_rows = _force_total(fleet.read_force(item.slice_id))
+        initial_state = bundle.root.get("initial_state", {})
+        initial_provenance = initial_state.get("release_force_provenance", {})
+        expected_f0 = (
+            _finite(initial_state.get("Fx0_total_N"), "initial_state.Fx0_total_N"),
+            _finite(initial_state.get("Fy0_total_N"), "initial_state.Fy0_total_N"),
+        )
+        f0_tolerance = _finite(
+            initial_provenance.get("initial_data_comparison_tolerance_N", 5.0e-13),
+            "release Force comparison tolerance",
+        )
+        initial_force_error = max(abs(initial_rows[0] - expected_f0[0]), abs(initial_rows[1] - expected_f0[1]))
+        if initial_force_error > f0_tolerance:
+            raise HH06ContractError(
+                "initialized preCICE Force does not match the contracted physical release F0: "
+                f"received={initial_rows[:2]}, expected={expected_f0}, error={initial_force_error:.17g} N, "
+                f"tolerance={f0_tolerance:.17g} N"
+            )
+        source_global_time_s = _finite(initial_state.get("openfoam_global_time_s"), "initial_state.openfoam_global_time_s")
+        if abs(source_global_time_s - 30.0) > 1.0e-12:
+            raise HH06ContractError("HH06 physical release Force must originate at global CFD time 30.0 s")
+
         if trace_output is not None:
             trace_path = Path(trace_output)
             trace_path.parent.mkdir(parents=True, exist_ok=True)
             # Exclusive creation preserves earlier diagnostic evidence.
             trace_stream = trace_path.open("x", encoding="utf-8")
-        limit = int(bundle.root["coupling"]["accepted_window_limit"] if max_windows is None else max_windows)
+        current_force_raw_N = initial_rows
+        initial_force_source_kind = str(initial_provenance.get("source_kind", "HH06_PHYSICAL_RELEASE_FORCE"))
         while fleet.is_coupling_ongoing() and accepted < limit:
             window_index = accepted + 1
-            iteration_index = 1 + sum(1 for row in attempt_trace if row["window_index"] == window_index)
             previous_committed_motion = tuple(committed_motion[item.slice_id])
-            written_motion = [[previous_committed_motion[0], previous_committed_motion[1]]]
+            state = CouplingIterationState(
+                window_index=window_index,
+                iteration_index=1,
+                current_force_raw_N=current_force_raw_N,
+                force_source_global_time_s=source_global_time_s,
+                force_source_kind=initial_force_source_kind if window_index == 1 else "PRECEDING_ACCEPTED_PRECICE_EXCHANGE",
+                committed_motion_m=previous_committed_motion,
+            )
+            checkpoint_active = False
+            target_local_time_s = window_index * bundle.dt_s
+            target_global_time_s = _finite(initial_state["openfoam_global_time_s"], "initial global time") + target_local_time_s
 
-            checkpoint_request = bool(fleet.requires_writing_checkpoint())
-            if checkpoint_request:
-                coordinator.checkpoint(f"hh06-window-{accepted + 1}")
-            fleet.write_motion(item.slice_id, written_motion)
-            fleet.advance(bundle.dt_s)
-            raw_force = _force_total(fleet.read_force(item.slice_id))
-            target_time = (accepted + 1) * bundle.dt_s
-            sample = ForceSample.from_openfoam_integrated(manifest, item.slice_id, iteration=accepted + 1, time_s=target_time, force_N=raw_force, unit_span_m=bundle.unit_span_m)
-            coordinator.submit_force(sample)
-            result = coordinator.advance_if_complete()
-            scattered = coordinator.scatter_motion()
-            trial_motion = tuple(scattered[item.slice_id])
-            rollback_request = bool(fleet.requires_reading_checkpoint())
-            if rollback_request:
-                coordinator.rollback()
-                commit_status = "rolled_back"
-            else:
-                coordinator.commit(); committed_motion = scattered; accepted += 1
-                commit_status = "committed"
+            while True:
+                iteration_events: list[str] = []
+                checkpoint_request = bool(fleet.requires_writing_checkpoint())
+                checkpoint_created = False
+                if checkpoint_request and not checkpoint_active:
+                    coordinator.checkpoint(f"hh06-window-{window_index}")
+                    checkpoint_active = True
+                    checkpoint_created = True
+                    state.event_history.append("physical_checkpoint_created")
+                    iteration_events.append("physical_checkpoint_created")
+                if not checkpoint_active:
+                    raise HH06ContractError(
+                        f"preCICE did not request a physical checkpoint before window {window_index} ANCF trial"
+                    )
 
-            previous_attempt = previous_attempt_by_window.get(window_index)
-            written_xy = (float(written_motion[0][0]), float(written_motion[0][1]))
-            raw_force_vector = tuple(float(value) for value in raw_force)
-            applied_force_vector = tuple(float(value) for value in sample.values)
-            trial_motion_vector = tuple(float(value) for value in trial_motion)
-            physical_identity = result.get("physical_identity")
-            transport_ids = {
-                "sequence": result.get("sequence"),
-                "request_id": result.get("request_id"),
-                "transaction_id": result.get("transaction_id"),
-            }
-            trace_record = {
-                "case_id": bundle.case_id,
-                "window_index": window_index,
-                "iteration_index": iteration_index,
-                "sequence": transport_ids["sequence"],
-                "request_id": transport_ids["request_id"],
-                "transaction_id": transport_ids["transaction_id"],
-                "transport_ids": transport_ids,
-                "physical_identity": physical_identity,
-                "physical_time_s": target_time,
-                "dt_s": bundle.dt_s,
-                "D_previous_committed_m": list(previous_committed_motion),
-                "written_motion_vector_m": [list(written_motion[0])],
-                "trial_motion_vector_m": list(trial_motion),
-                "D_written_to_precice_m": list(written_xy),
-                "D_trial_from_ancf_m": list(trial_motion),
-                "Fx_raw_N": raw_force_vector[0],
-                "Fy_raw_N": raw_force_vector[1],
-                "Fz_raw_N": raw_force_vector[2],
-                "Fx_section_Npm": raw_force_vector[0] / bundle.unit_span_m,
-                "Fy_section_Npm": raw_force_vector[1] / bundle.unit_span_m,
-                "Fx_applied_N": applied_force_vector[0],
-                "Fy_applied_N": applied_force_vector[1],
-                "Fz_applied_N": applied_force_vector[2],
-                "force_residual_raw_N": _vector_norm_delta(
-                    raw_force_vector, previous_attempt.get("raw_force") if previous_attempt else None
-                ),
-                "force_residual_applied_N": _vector_norm_delta(
-                    applied_force_vector, previous_attempt.get("applied_force") if previous_attempt else None
-                ),
-                "trial_displacement_residual_m": _vector_norm_delta(
-                    trial_motion_vector[:2], previous_attempt.get("trial_motion")[:2] if previous_attempt else None
-                ),
-                "written_motion_delta_m": _vector_norm_delta(written_xy, previous_attempt.get("written_motion") if previous_attempt else None),
-                "checkpoint_request": checkpoint_request,
-                "checkpoint_created": checkpoint_request,
-                "rollback_request": rollback_request,
-                "commit_status": commit_status,
-                "time_window_complete": not rollback_request,
-                "convergence_status": "retry_required" if rollback_request else "accepted_converged_or_iteration_limit",
-                "ancf_newton_iterations": result.get("iterations"),
-                "ancf_residual": result.get("residual"),
-                "q_state_hash": result.get("q_sha256"),
-                "qdot_state_hash": result.get("qdot_sha256"),
-                "qddot_state_hash": result.get("qddot_sha256"),
-            }
-            attempt_trace.append(trace_record)
-            previous_attempt_by_window[window_index] = {
-                "raw_force": raw_force_vector,
-                "applied_force": applied_force_vector,
-                "trial_motion": trial_motion_vector,
-                "written_motion": written_xy,
-            }
-            if trace_stream is not None:
-                trace_stream.write(json.dumps(trace_record, ensure_ascii=False, allow_nan=False) + "\n")
-                trace_stream.flush()
+                # The Force iterate is converted from raw integrated N exactly
+                # once, here, by the established ForceSample contract.
+                force_input_raw_N = state.current_force_raw_N
+                sample = ForceSample.from_openfoam_integrated(
+                    manifest, item.slice_id, iteration=window_index,
+                    time_s=target_local_time_s, force_N=force_input_raw_N,
+                    unit_span_m=bundle.unit_span_m,
+                )
+                coordinator.submit_force(sample)
+                iteration_events.append("force_iterate_submitted_to_ancf")
+                result = coordinator.advance_if_complete()
+                scattered = coordinator.scatter_motion()
+                trial_motion = tuple(scattered[item.slice_id])
+                trial_vector = tuple(float(value) for value in trial_motion)
+                iteration_events.append("ancf_trial_solved_and_scattered")
+                trial_xy = (trial_vector[0], trial_vector[1])
+                written_motion = [[trial_xy[0], trial_xy[1]]]
+                written_xy_tuple = tuple(float(value) for value in written_motion[0])
+                if written_xy_tuple != trial_vector[:2]:
+                    raise HH06ContractError("D_written_to_precice differs from the ANCF trial interface displacement")
 
-            if not rollback_request:
-                records.append({"accepted_window": accepted, "time_s": target_time, "force_N": list(raw_force), "motion_m": list(scattered[item.slice_id]), **result})
+                # Critical implicit contract: write the exact current ANCF
+                # trial before the advance that evaluates it.
+                fleet.write_motion(item.slice_id, written_motion)
+                iteration_events.append("trial_displacement_written_to_precice")
+                fleet.advance(bundle.dt_s)
+                iteration_events.append("precice_advance_completed")
+                returned_force_raw_N = _force_total(fleet.read_force(item.slice_id))
+                rollback_request = bool(fleet.requires_reading_checkpoint())
+                iteration_events.append(
+                    "requires_reading_checkpoint_true" if rollback_request
+                    else "requires_reading_checkpoint_false"
+                )
+
+                previous_trial_xy = (
+                    tuple(state.previous_trial_displacement_m[:2])
+                    if state.previous_trial_displacement_m is not None
+                    else tuple(state.committed_motion_m[:2])
+                )
+                trial_displacement_residual = _vector_norm_delta(trial_xy, previous_trial_xy)
+                force_residual_raw = _vector_norm_delta(returned_force_raw_N, force_input_raw_N)
+                strip_factor = bundle.slice_length_m / bundle.unit_span_m
+                force_residual_applied = None if force_residual_raw is None else force_residual_raw * strip_factor
+                written_motion_delta = _vector_norm_delta(trial_xy, state.previous_trial_displacement_m[:2] if state.previous_trial_displacement_m is not None else None)
+
+                if rollback_request:
+                    coordinator.rollback()
+                    commit_status = "rolled_back"
+                    convergence_status = "retry_required"
+                    state.event_history.append("physical_state_rolled_back_trial_retained_as_history")
+                    iteration_events.append("physical_state_rolled_back_trial_retained_as_history")
+                else:
+                    coordinator.commit()
+                    committed_motion = dict(scattered)
+                    accepted += 1
+                    commit_status = "committed"
+                    convergence_status = (
+                        "ACCEPTED_AT_ITERATION_LIMIT"
+                        if state.iteration_index >= max_iterations
+                        else "accepted_by_precice_before_iteration_limit"
+                    )
+                    state.event_history.append("accepted_trial_committed")
+                    iteration_events.append("accepted_trial_committed")
+                    checkpoint_active = False
+
+                force_input_applied_N = tuple(float(value) for value in sample.values)
+                transport_ids = {
+                    "sequence": result.get("sequence"),
+                    "request_id": result.get("request_id"),
+                    "transaction_id": result.get("transaction_id"),
+                }
+                physical_identity = result.get("physical_identity")
+                if not isinstance(physical_identity, Mapping):
+                    raise HH06ContractError("worker result is missing its physical identity tuple")
+
+                trace_record = {
+                    "case_id": bundle.case_id,
+                    "window_index": window_index,
+                    "iteration_index": state.iteration_index,
+                    "sequence": transport_ids["sequence"],
+                    "request_id": transport_ids["request_id"],
+                    "transaction_id": transport_ids["transaction_id"],
+                    "transport_ids": transport_ids,
+                    "physical_identity": dict(physical_identity),
+                    "physical_time_s": target_global_time_s,
+                    "case_local_time_s": target_local_time_s,
+                    "force_source_global_time_s": state.force_source_global_time_s,
+                    "force_source_kind": state.force_source_kind,
+                    "returned_force_source_global_time_s": target_global_time_s,
+                    "window_target_global_time_s": target_global_time_s,
+                    "dt_s": bundle.dt_s,
+                    "D_previous_committed_m": list(previous_committed_motion),
+                    "D_trial_from_ancf_m": list(trial_vector),
+                    "D_trial_interface_m": list(trial_vector[:2]),
+                    "D_written_to_precice_m": list(written_xy_tuple),
+                    "written_motion_vector_m": [list(written_xy_tuple)],
+                    "force_input_raw_N": list(force_input_raw_N),
+                    "force_input_applied_N": list(force_input_applied_N),
+                    "Fx_raw_N": force_input_raw_N[0],
+                    "Fy_raw_N": force_input_raw_N[1],
+                    "Fz_raw_N": force_input_raw_N[2],
+                    "Fx_section_Npm": force_input_raw_N[0] / bundle.unit_span_m,
+                    "Fy_section_Npm": force_input_raw_N[1] / bundle.unit_span_m,
+                    "Fx_applied_N": force_input_applied_N[0],
+                    "Fy_applied_N": force_input_applied_N[1],
+                    "Fz_applied_N": force_input_applied_N[2],
+                    "returned_force_raw_N": list(returned_force_raw_N),
+                    "returned_force_applied_N": [value * strip_factor for value in returned_force_raw_N],
+                    "Fx_returned_raw_N": returned_force_raw_N[0],
+                    "Fy_returned_raw_N": returned_force_raw_N[1],
+                    "force_residual_raw_N": force_residual_raw,
+                    "force_residual_applied_N": force_residual_applied,
+                    "trial_displacement_residual_m": trial_displacement_residual,
+                    "written_motion_delta_m": written_motion_delta,
+                    "checkpoint_request": checkpoint_request,
+                    "checkpoint_created": checkpoint_created,
+                    "rollback_request": rollback_request,
+                    "commit_status": commit_status,
+                    "iteration_events": iteration_events,
+                    "time_window_complete": not rollback_request,
+                    "convergence_status": convergence_status,
+                    "precice_max_iterations": max_iterations,
+                    "ancf_newton_iterations": result.get("iterations"),
+                    "ancf_residual": result.get("residual"),
+                    "q_state_hash": result.get("q_sha256"),
+                    "qdot_state_hash": result.get("qdot_sha256"),
+                    "qddot_state_hash": result.get("qddot_sha256"),
+                }
+                attempt_trace.append(trace_record)
+                state.current_trial_displacement_m = trial_vector
+                state.residual_history.append({
+                    "force_residual_raw_N": force_residual_raw,
+                    "trial_displacement_residual_m": trial_displacement_residual,
+                })
+                if trace_stream is not None:
+                    trace_stream.write(json.dumps(trace_record, ensure_ascii=False, allow_nan=False) + "\n")
+                    trace_stream.flush()
+
+                if rollback_request:
+                    state.previous_force_raw_N = force_input_raw_N
+                    state.previous_trial_displacement_m = trial_vector
+                    state.current_force_raw_N = returned_force_raw_N
+                    state.force_source_global_time_s = target_global_time_s
+                    state.force_source_kind = "PRECEDING_PRECICE_ADVANCE_ITERATE"
+                    state.iteration_index += 1
+                    current_force_raw_N = returned_force_raw_N
+                    source_global_time_s = target_global_time_s
+                    continue
+
+                records.append({
+                    "accepted_window": accepted,
+                    "time_s": target_global_time_s,
+                    "force_N": list(force_input_raw_N),
+                    "returned_force_N": list(returned_force_raw_N),
+                    "motion_m": list(scattered[item.slice_id]),
+                    "written_motion_m": list(written_xy_tuple),
+                    "convergence_status": convergence_status,
+                    **result,
+                })
+                current_force_raw_N = returned_force_raw_N
+                source_global_time_s = target_global_time_s
+                initial_force_source_kind = "PRECEDING_ACCEPTED_PRECICE_EXCHANGE"
+                break
     finally:
         try:
-            fleet.finalize()
+            if fleet_initialized:
+                fleet.finalize()
         finally:
             try:
                 worker.close()

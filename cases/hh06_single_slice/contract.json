@@ -27,7 +27,7 @@
     "benchmark_top_tension_N": 1175.0,
     "equilibrium_reaction_tension_N": 1188.28,
     "numeric_section_properties": "loaded from the verified P1 artifact; see structure_contract.json",
-    "tension_contract_status": "DISTINCT_QUANTITIES; benchmark input is 1175 N, P1 static-equilibrium reaction is 1188.28 N; active runtime input remains null until the participant contract explicitly selects the benchmark value"
+    "tension_contract_status": "DISTINCT_QUANTITIES; current participant selects benchmark input 1175 N; P1 static-equilibrium reaction 1188.28 N remains a separate output quantity"
   },
   "mapping_contract": {
     "file": "mapping_contract.json",
@@ -44,11 +44,31 @@
     "structure_state": "q0 = P1 REF_NE32 static equilibrium from ancf_static.raw; no serialized 30 s FSI checkpoint",
     "q0_artifact": "D:/CFD/CFD_ANCF_VIV_reentry_runtime/HH06_P1_WET_MODAL_STRUCTURAL_GATE/ancf_static.raw (CASE REF_NE32, Q record)",
     "q0_artifact_wsl_path": "/mnt/d/CFD/CFD_ANCF_VIV_reentry_runtime/HH06_P1_WET_MODAL_STRUCTURAL_GATE/ancf_static.raw",
-    "initial_force": "not part of q0 dry-run contract; if time integration is later authorized, read the 30 s CFD force at release",
+    "initial_force": "physical raw patch-integrated OpenFOAM Force at the exact 30.0 s CFD release state; used as the first implicit fixed-point Force iterate",
     "initial_acceleration_required": false,
     "initial_acceleration": "not required by this contract",
-    "Fx0_total_N": null,
-    "Fy0_total_N": null,
+    "Fx0_total_N": 0.0655270406544,
+    "Fy0_total_N": 0.05872987413554,
+    "release_force_provenance": {
+      "classification": "RELEASE_FORCE_RECOVERED_REPRODUCIBLY",
+      "restart_case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+      "restart_source_path": "cases/hh06_single_slice/30/",
+      "restart_time_directory": "30",
+      "restart_global_time_s": 30.0,
+      "restart_time_index": 150000,
+      "patch": "cylinder",
+      "component_semantics": "raw dimensional patch-integrated pressure plus viscous force",
+      "raw_force_units": "N",
+      "Fz0_measured_N": -2.44420351566e-21,
+      "result_json": "../../evidence/phase1c7a_release_force/release_force_result.json",
+      "result_json_sha256": "6b272f695ebefe28daa176723483f611c42f8d25dbae8d83de928f3790811b8a",
+      "provenance_json": "../../evidence/phase1c7a_release_force/provenance.json",
+      "provenance_json_sha256": "1df1d2ca0876372874b1e6ac0eca2296e2f3ab8f8900e0b3903b53f2566e72d2",
+      "recovery_report": "../../docs/PHASE1C7A_RELEASE_FORCE_RECOVERY_REPORT.md",
+      "recovery_report_sha256": "6737908b9b29f4ff8550ba4353ff88ad90ad5cfc1355a57a885d655f7d3d7b3b",
+      "initial_data_comparison_tolerance_N": 5e-13,
+      "force_unit_conversion": "applied once by ForceSample: F_strip=(F_raw/0.028)*1.98"
+    },
     "ax0_m_s2": null,
     "ay0_m_s2": null
   },
@@ -87,13 +107,13 @@
       "source": "HH06_P1_WET_MODAL_STRUCTURAL_GATE/source_parameter_contract.json"
     },
     "interface_vertex_count": 1,
-    "participant_entrypoint": "D:/研二文件/开题准备/CFD_ANCF_VIV/tools/hh06_single_slice_structure_0000_participant_v1/structure_0000_participant.py",
+    "participant_entrypoint": "src/coupling/hh06_structure_0000/structure_0000_participant.py",
     "worker_abi_sha256": "7B246C53F2040CE9DCBA3100700E1D5DEF905E84D8452F560B6D1B29E88D8473",
     "initial_x_m": 0.0,
     "initial_y_m": 0.0,
     "initial_vx_m_s": 0.0,
     "initial_vy_m_s": 0.0,
-    "contract_status": "READY_FOR_DRY_RUN; tension quantities are semantically separated (benchmark input 1175 N, equilibrium reaction 1188.28 N); active runtime tension remains unselected until a compatible participant contract is supplied"
+    "contract_status": "READY_FOR_DRY_RUN; validation maturity is unchanged; current participant uses benchmark top-tension input 1175 N, while 1188.28 N remains a separate P1 equilibrium reaction"
   },
   "coupling": {
     "fluid_participant": "Fluid_0000",
@@ -104,7 +124,7 @@
     "duration_s": 0.2,
     "accepted_window_limit": 1000,
     "min_iterations": 2,
-      "max_iterations": 8,
+    "max_iterations": 20,
     "mapping": {
       "force": "Fluid-Mesh -> Structure-Mesh conservative mapping (200 face centers to one structural section coupling point)",
       "displacement": "Structure-Mesh -> Fluid-Mesh consistent mapping (one section coupling point to 200 face centers)",
@@ -123,9 +143,9 @@
     "structure_coupling_mesh_vertices": 1,
     "ancf_state_vertices": 33,
     "legacy_604_vertex_participant": false,
-    "participant_entrypoint": "D:/研二文件/开题准备/CFD_ANCF_VIV/tools/hh06_single_slice_structure_0000_participant_v1/structure_0000_participant.py",
-    "participant_entrypoint_wsl": "/mnt/d/研二文件/开题准备/CFD_ANCF_VIV/tools/hh06_single_slice_structure_0000_participant_v1/structure_0000_participant.py",
-    "entrypoint_status": "PRESENT; offline contract audit available; live run remains blocked until SHM1-capable Python wire protocol is selected",
+    "participant_entrypoint": "src/coupling/hh06_structure_0000/structure_0000_participant.py",
+    "participant_entrypoint_wsl": "/home/machao/projects/CFD_ANCF_VIV_V2/src/coupling/hh06_structure_0000/structure_0000_participant.py",
+    "entrypoint_status": "CURRENT_V2_AUTHORITATIVE_SOURCE; offline audit passes; real runtime is restricted to the explicit two-window qualification launcher",
     "force_pipeline": [
       "OpenFOAM cylinder-wall integration over 200 faces",
       "strip resultant force over DeltaL=1.98 m",
