@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- High-Re single-slice ANCF pilot: global OpenFOAM 30.0 -> 30.2 s.
-     time-window-size equals the OpenFOAM deltaT (0.0002 s); max-time is
-     the pilot duration, not a field-directory name. -->
+<!-- Bounded qualification execution profile: exactly two windows from the
+     global OpenFOAM 30.0 s restart. This is not the 0.2 s scientific duration. -->
 <precice-configuration xmlns:data="http://www.precice.org/schemas/data" xmlns:m2n="http://www.precice.org/schemas/m2n" xmlns:coupling-scheme="http://www.precice.org/schemas/coupling-scheme" xmlns:mapping="http://www.precice.org/schemas/mapping" xmlns:acceleration="http://www.precice.org/schemas/acceleration">
   <data:vector name="Displacement" waveform-degree="0"/>
   <data:vector name="Force" waveform-degree="0"/>
@@ -17,7 +16,7 @@
   </participant>
   <coupling-scheme:parallel-implicit>
     <participants first="Structure_0000" second="Fluid_0000"/>
-    <max-time value="0.2"/><time-window-size value="0.0002"/><min-iterations value="2"/><max-iterations value="20"/>
+    <max-time-windows value="2"/><time-window-size value="0.0002"/><min-iterations value="2"/><max-iterations value="20"/>
     <!-- Numerical stabilization authorized for bounded HH06 retry: constant under-relaxation. -->
     <acceleration:constant>
       <relaxation value="0.2"/>

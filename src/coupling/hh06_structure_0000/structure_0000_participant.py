@@ -988,6 +988,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     args = parser.parse_args(argv)
     if args.run and not args.worker:
         parser.error("--worker is required with --run")
+    if args.run and args.max_windows is None:
+        parser.error("--max-windows is required with --run; HH06 requires exactly 2")
     try:
         bundle = load_contract_bundle(args.case)
         audit = audit_contract(bundle)

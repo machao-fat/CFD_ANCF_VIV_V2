@@ -2,7 +2,17 @@
   "schema_version": "ancf_single_slice_highre_preparation_v1",
   "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
   "status": "READY_FOR_DRY_RUN",
-  "purpose": "HH06 Case 1 高 Re 单切片 ANCF-FSI 合同准备；本文件只定义合同身份，不替代结构 participant，也不授权求解。",
+  "purpose": "HH06 Case 1 高 Re 单切片 ANCF-FSI 合同准备；READY_FOR_DRY_RUN 表示验证成熟度，不代表 production readiness。execution_authorization 单独限定有界 qualification。",
+  "execution_authorization": {
+    "mode": "BOUNDED_COUPLING_QUALIFICATION",
+    "max_windows": 2,
+    "participant_entrypoint": "src/coupling/hh06_structure_0000/structure_0000_participant.py",
+    "worker_source": "src/ancf/ancf_worker_main.cpp",
+    "worker_source_sha256": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+    "worker_binary_sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596",
+    "adapter_runtime_sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572",
+    "adapter_source_provenance_resolved": false
+  },
   "contract_documents": {
     "structure_contract": "structure_contract.json",
     "mapping_contract": "mapping_contract.json",
@@ -175,7 +185,7 @@
       "tools/cfd_current_fixed_zero_bridge_v1/run_fixed_zero_bridge.py (fixed/zero-motion fixture)",
       "tools/shiels_s5_k988_single_slice_free_fsi_long_development_v1/sdof_precice_continuation_participant.py (SDOF, legacy Re=100)"
     ],
-    "reason": "HH06 wrapper is present and passes offline contract parsing; the checked-out Python wire protocol lacks the P1 SHM1 hydrodynamic-region extension, so live coupling remains blocked."
+    "reason": "The current V2 participant and SHM1 worker path pass offline qualification; real implicit preCICE/OpenFOAM coupling remains unqualified and execution is restricted to the exact bounded authorization above."
   },
   "boundary": {
     "no_openfoam_run": true,
@@ -185,10 +195,10 @@
   },
   "required_before_launch": [
     "retain the P1 section-property, damping, matrix, and q0 artifacts; do not substitute legacy Re=100 values",
-    "if launch is later authorized, select benchmark_top_tension_N=1175.0 N as the HH06 input; never substitute equilibrium_reaction_tension_N=1188.28 N",
-    "provide a participant entry point compatible with Fluid_0000/Structure_0000 and the one-point structural coupling mesh",
-    "perform XML parse and participant handshake dry-run before any time integration",
-    "if integration is later authorized, read the initial 30 s CFD force; initial acceleration is not a dry-run prerequisite",
-    "change status to READY only after the participant and P1 numerical artifacts are confirmed"
+    "the current Structure participant uses benchmark_top_tension_N=1175.0 N; never substitute equilibrium_reaction_tension_N=1188.28 N",
+    "use src/coupling/hh06_structure_0000/structure_0000_participant.py as the authoritative Fluid_0000/Structure_0000 participant entry point",
+    "run the fail-closed preflight and isolated Python/preCICE binding qualification before any coupled runtime",
+    "the bounded profile is exactly two physical windows; max_windows does not change dt, implicit max_iterations, or the scientific duration contract",
+    "retain status READY_FOR_DRY_RUN; do not promote this case to READY, VALIDATED, or production-ready based on bounded qualification"
   ]
 }

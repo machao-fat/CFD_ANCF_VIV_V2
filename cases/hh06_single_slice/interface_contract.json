@@ -92,7 +92,7 @@
       }
     ],
     "sdof_structure_0000_scripts_excluded": "Some SDOF scripts use Structure_0000 but are not ANCF and cannot satisfy the HH06 33-node/198-DOF contract",
-    "decision": "HH06 Structure_0000 wrapper is present; keep READY_FOR_DRY_RUN because the current checked-out Python wire protocol lacks the SHM1 wet-mass extension required by the target P1 worker."
+    "decision": "Keep READY_FOR_DRY_RUN as validation maturity; the current V2 participant and SHM1 worker path pass offline qualification, but real implicit FSI remains unqualified. Only the root contract's exact two-window bounded authorization may override the default-deny launch boundary."
   },
   "units": {
     "fluid_raw_force": "N for the current CFD extrusion span 0.028 m",
@@ -105,6 +105,17 @@
     "openfoam_solve_allowed": false,
     "precice_run_allowed": false,
     "ancf_time_integration_allowed": false,
-    "new_time_directory_allowed": false
+    "new_time_directory_allowed": false,
+    "bounded_qualification_override": {
+      "authority": "contract.json#execution_authorization",
+      "mode": "BOUNDED_COUPLING_QUALIFICATION",
+      "max_windows": 2,
+      "openfoam_solve_allowed": true,
+      "precice_run_allowed": true,
+      "ancf_time_integration_allowed": true,
+      "new_time_directory_allowed": true,
+      "launcher_preflight_required": true,
+      "production_readiness_claim": false
+    }
   }
 }
