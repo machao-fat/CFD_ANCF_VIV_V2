@@ -49,6 +49,10 @@ class BoundedQualificationLauncherTests(unittest.TestCase):
             "ANCF_ADAPTER_RUNTIME_PATH": str(ADAPTER),
             "ANCF_ADAPTER_RUNTIME_SHA256": launcher.EXPECTED_ADAPTER_SHA256,
             "PATH": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin:" + os.environ.get("PATH", ""),
+            "WM_PROJECT_VERSION": "10",
+            "WM_PROJECT": "OpenFOAM",
+            "WM_PROJECT_DIR": "/opt/openfoam10",
+            "FOAM_APPBIN": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin",
         }
         git_identity = {"branch": "repair/worker-lineage-implicit-contract-v1",
                         "head": "test-head", "worktree_clean": True, "status_porcelain": ""}
@@ -65,6 +69,23 @@ class BoundedQualificationLauncherTests(unittest.TestCase):
         self.assertTrue(report["checks"]["frozen_iqn_ils_profile"])
         self.assertEqual(report["max_iterations"], 20)
         self.assertEqual(plan.socket_directory, Path(report["precice"]["socket_directory"]["path"]))
+        self.assertEqual(report["openfoam"]["version"], "OpenFOAM-10")
+        self.assertTrue(report["checks"]["OpenFOAM_10_environment_and_solver_path"])
+
+    def test_openfoam_identity_uses_sourced_environment_not_shell_function_path(self) -> None:
+        executable = "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam"
+        env = {
+            "WM_PROJECT_VERSION": "10",
+            "WM_PROJECT": "OpenFOAM",
+            "WM_PROJECT_DIR": "/opt/openfoam10",
+            "FOAM_APPBIN": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin",
+        }
+        with patch.dict(os.environ, env, clear=False):
+            identity = launcher._verify_openfoam_identity(executable)
+        self.assertEqual(identity["version"], "OpenFOAM-10")
+        with patch.dict(os.environ, {**env, "WM_PROJECT_VERSION": "11"}, clear=False):
+            with self.assertRaisesRegex(launcher.LaunchContractError, "WM_PROJECT_VERSION=10"):
+                launcher._verify_openfoam_identity(executable)
 
     def test_wrong_cap_is_rejected(self) -> None:
         git_identity = {"branch": "repair/worker-lineage-implicit-contract-v1",

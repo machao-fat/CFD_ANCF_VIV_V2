@@ -407,6 +407,43 @@ def _verify_adapter(authorization: Mapping[str, Any]) -> dict[str, str]:
     return {"path": str(path), "sha256": actual, "source_provenance_resolved": "NO"}
 
 
+def _verify_openfoam_identity(fluid_executable: str | Path) -> dict[str, str]:
+    """Verify the sourced OpenFOAM environment without assuming foamVersion is an executable."""
+    version = os.environ.get("WM_PROJECT_VERSION", "")
+    project = os.environ.get("WM_PROJECT", "")
+    project_dir_raw = os.environ.get("WM_PROJECT_DIR", "")
+    app_bin_raw = os.environ.get("FOAM_APPBIN", "")
+    _require(version == "10", f"expected WM_PROJECT_VERSION=10, got {version!r}")
+    _require(project == "OpenFOAM", f"expected WM_PROJECT=OpenFOAM, got {project!r}")
+    _require(bool(project_dir_raw), "WM_PROJECT_DIR is unavailable after sourcing OpenFOAM environment")
+    _require(bool(app_bin_raw), "FOAM_APPBIN is unavailable after sourcing OpenFOAM environment")
+
+    project_dir = Path(project_dir_raw).expanduser().resolve()
+    app_bin = Path(app_bin_raw).expanduser().resolve()
+    expected_project_dir = Path("/opt/openfoam10").resolve()
+    _require(project_dir == expected_project_dir,
+             f"unexpected OpenFOAM project directory: {project_dir} != {expected_project_dir}")
+    try:
+        app_bin.relative_to(project_dir)
+    except ValueError as exc:
+        raise LaunchContractError(f"FOAM_APPBIN escapes the qualified OpenFOAM installation: {app_bin}") from exc
+
+    executable = Path(fluid_executable).expanduser().resolve()
+    expected_executable = app_bin / "pimpleFoam"
+    _require(executable == expected_executable,
+             f"pimpleFoam path differs from sourced FOAM_APPBIN: {executable} != {expected_executable}")
+    _require(executable.is_file() and os.access(executable, os.X_OK),
+             f"qualified pimpleFoam executable is missing or not executable: {executable}")
+    return {
+        "version": "OpenFOAM-10",
+        "WM_PROJECT_VERSION": version,
+        "WM_PROJECT": project,
+        "project_dir": str(project_dir),
+        "application_bin": str(app_bin),
+        "pimpleFoam_executable": str(executable),
+    }
+
+
 def _socket_directory(case_dir: Path, root: ET.Element) -> Path:
     sockets = [item for item in root.iter() if _local(item.tag) == "sockets" and "exchange-directory" in item.attrib]
     element = _one(sockets, "socket exchange-directory")
@@ -806,6 +843,7 @@ def preflight(case_dir: Path, worker_arg: str, max_windows: int) -> tuple[Launch
     fluid_executable = shutil.which("pimpleFoam")
     _require(fluid_executable is not None and os.access(fluid_executable, os.X_OK),
              "pimpleFoam is unavailable; source the configured OpenFOAM environment")
+    openfoam_identity = _verify_openfoam_identity(fluid_executable)
     _require(RUN_EVIDENCE_ROOT.parent.is_dir() and os.access(RUN_EVIDENCE_ROOT.parent, os.W_OK | os.X_OK),
              f"qualification log/evidence parent is unavailable: {RUN_EVIDENCE_ROOT.parent}")
     planned_run_dir = RUN_EVIDENCE_ROOT / "<UNIQUE_RUN_ID>"
@@ -824,6 +862,7 @@ def preflight(case_dir: Path, worker_arg: str, max_windows: int) -> tuple[Launch
         "adapter": adapter,
         "python_precice_binding": binding,
         "participant_audit": participant_audit,
+        "openfoam": openfoam_identity,
         "precice": {"xml_path": str(xml_path), "xml_sha256": sha256(xml_path),
                     "socket_directory": socket,
                     "active_socket_processes": socket_users,
@@ -848,6 +887,7 @@ def preflight(case_dir: Path, worker_arg: str, max_windows: int) -> tuple[Launch
             "OpenFOAM_adapter_end_time_control_enabled": True,
             "adapter_runtime_binary_pinned": True, "adapter_source_provenance_resolved": False,
             "worker_source_and_binary_identity": True, "participant_path_and_cli": True,
+            "OpenFOAM_10_environment_and_solver_path": True,
             "python_precice_binding_runtime_qualified": True, "socket_path_matches_xml": True,
             "socket_has_no_stale_files_or_active_process": True,
             "OpenFOAM_executable_available": True, "log_directory_available": True,
@@ -1221,11 +1261,7 @@ def run_bounded(plan: LaunchPlan, *, preflight_report: Mapping[str, Any] | None 
     worker = _verify_worker(str(plan.worker_path), authorization)
     adapter = _verify_adapter(authorization)
     binding = _verify_binding_qualification()
-    foam_version_command = shutil.which("foamVersion")
-    _require(foam_version_command is not None, "foamVersion is unavailable after sourcing OpenFOAM environment")
-    foam_version = subprocess.run([foam_version_command], capture_output=True, text=True, timeout=15, check=False)
-    _require(foam_version.returncode == 0 and foam_version.stdout.strip() == "OpenFOAM-10",
-             f"unexpected OpenFOAM runtime identity: {foam_version.stdout.strip()}")
+    openfoam_identity = _verify_openfoam_identity(plan.fluid_command[0])
 
     run_dir = _make_run_directory()
     started_utc = launcher_started_utc or datetime.now(timezone.utc).isoformat()
@@ -1269,8 +1305,7 @@ def run_bounded(plan: LaunchPlan, *, preflight_report: Mapping[str, Any] | None 
             "worker": worker,
             "fluid_adapter": {**adapter, "build_id": _adapter_build_id(Path(adapter["path"])),
                               "source_provenance_resolved": False},
-            "openfoam": {"version": foam_version.stdout.strip(),
-                         "executable": str(Path(actual_plan.fluid_command[0]).resolve())},
+            "openfoam": openfoam_identity,
             "precice": {"runtime_version": binding["runtime_identity"]["libprecice_runtime_version"],
                         "library_path": binding["runtime_identity"]["libprecice_loaded_path"],
                         "library_sha256": binding["runtime_identity"]["libprecice_sha256"],
