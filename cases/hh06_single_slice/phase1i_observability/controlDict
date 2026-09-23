@@ -1,0 +1,114 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  High-Re single-slice qualification-only passive observability overlay.
+  Applied only to the Phase 1I scratch case; authoritative restart files and
+  case control dictionaries remain unchanged.
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+
+application     pimpleFoam;
+startFrom       latestTime;
+startTime       0;
+stopAt          endTime;
+endTime         30.2;
+deltaT          2e-4;
+
+writeControl    adjustableRunTime;
+writeInterval   0.01;
+purgeWrite      0;
+writeFormat     binary;
+writePrecision  10;
+writeCompression off;
+timeFormat      general;
+timePrecision   10;
+runTimeModifiable true;
+
+functions
+{
+    cylinderForces
+    {
+        type            forces;
+        libs            ("libforces.so");
+        writeControl    timeStep;
+        writeInterval   1;
+        log             yes;
+        patches         (cylinder);
+        rho             rhoInf;
+        rhoInf          1000;
+        CofR            (0 0 0);
+    }
+
+    cylinderForceCoeffs
+    {
+        type            forceCoeffs;
+        libs            ("libforces.so");
+        writeControl    timeStep;
+        writeInterval   5;
+        log             yes;
+        patches         (cylinder);
+        rho             rhoInf;
+        rhoInf          1000;
+        liftDir         (0 1 0);
+        dragDir         (1 0 0);
+        pitchAxis       (0 0 1);
+        CofR            (0 0 0);
+        magUInf         0.31;
+        lRef            0.028;
+        Aref            0.000784;
+    }
+
+    yPlus
+    {
+        type            yPlus;
+        libs            ("libfieldFunctionObjects.so");
+        executeControl  writeTime;
+        writeControl    writeTime;
+    }
+
+    phase1iUMax
+    {
+        type            volFieldValue;
+        libs            ("libfieldFunctionObjects.so");
+        fields          (U);
+        operation       maxMag;
+        regionType      all;
+        writeFields     false;
+        writeControl    timeStep;
+        writeInterval   1;
+    }
+
+    phase1iTurbulenceMax
+    {
+        type            volFieldValue;
+        libs            ("libfieldFunctionObjects.so");
+        fields          (k omega nut);
+        operation       max;
+        regionType      all;
+        writeFields     false;
+        writeControl    timeStep;
+        writeInterval   1;
+    }
+
+    phase1iCellVolumes
+    {
+        type            writeCellVolumes;
+        libs            ("libfieldFunctionObjects.so");
+        executeControl  timeStep;
+        executeInterval 1;
+        writeControl    timeStep;
+        writeInterval   1;
+    }
+
+    preciceAdapter
+    {
+        type preciceAdapterFunctionObject;
+        libs ("libpreciceAdapterFunctionObject.so");
+    }
+}
+
+// ************************************************************************* //

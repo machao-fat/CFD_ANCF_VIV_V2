@@ -680,13 +680,13 @@ def _bounded_window_limit(bundle: HH06ContractBundle, requested: int | None) -> 
         if authorization.get("mode") != "BOUNDED_COUPLING_QUALIFICATION":
             raise HH06ContractError("HH06 runtime is not authorized for bounded coupling qualification")
         authorized_windows = authorization.get("max_windows")
-        if isinstance(authorized_windows, bool) or not isinstance(authorized_windows, int) or authorized_windows != 5:
-            raise HH06ContractError("HH06 bounded authorization must specify exactly max_windows=5")
+        if isinstance(authorized_windows, bool) or not isinstance(authorized_windows, int) or authorized_windows != 25:
+            raise HH06ContractError("HH06 bounded authorization must specify exactly max_windows=25")
         if requested != authorized_windows:
             raise HH06ContractError(
-                "HH06 runtime requires explicit --max-windows 5; larger, smaller, or unlimited runs are forbidden"
+                "HH06 runtime requires explicit --max-windows 25; larger, smaller, or unlimited runs are forbidden"
             )
-        return 5
+        return 25
     return int(bundle.root["coupling"]["accepted_window_limit"] if requested is None else requested)
 
 
@@ -1027,7 +1027,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.run and not args.worker:
         parser.error("--worker is required with --run")
     if args.run and args.max_windows is None:
-        parser.error("--max-windows is required with --run; HH06 requires exactly the authorized value 5")
+        parser.error("--max-windows is required with --run; HH06 requires exactly the authorized value 25")
     try:
         bundle = load_contract_bundle(args.case)
         audit = audit_contract(bundle)
