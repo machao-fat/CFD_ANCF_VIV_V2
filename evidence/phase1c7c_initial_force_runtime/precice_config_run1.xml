@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- High-Re single-slice ANCF pilot: global OpenFOAM 30.0 -> 30.2 s.
+     time-window-size equals the OpenFOAM deltaT (0.0002 s); max-time is
+     the pilot duration, not a field-directory name. -->
+<precice-configuration xmlns:data="http://www.precice.org/schemas/data" xmlns:m2n="http://www.precice.org/schemas/m2n" xmlns:coupling-scheme="http://www.precice.org/schemas/coupling-scheme" xmlns:mapping="http://www.precice.org/schemas/mapping" xmlns:acceleration="http://www.precice.org/schemas/acceleration">
+  <data:vector name="Displacement" waveform-degree="0"/>
+  <data:vector name="Force" waveform-degree="0"/>
+  <mesh name="Structure-Mesh" dimensions="2"><use-data name="Displacement"/><use-data name="Force"/></mesh>
+  <mesh name="Fluid-Mesh" dimensions="2"><use-data name="Displacement"/><use-data name="Force"/></mesh>
+  <m2n:sockets acceptor="Structure_0000" connector="Fluid_0000" exchange-directory="/tmp/phase1c7c.2y60cu/precice-sockets"/>
+  <participant name="Structure_0000"><provide-mesh name="Structure-Mesh"/><write-data name="Displacement" mesh="Structure-Mesh"/><read-data name="Force" mesh="Structure-Mesh"/></participant>
+  <participant name="Fluid_0000">
+    <receive-mesh name="Structure-Mesh" from="Structure_0000"/><provide-mesh name="Fluid-Mesh"/>
+    <mapping:nearest-neighbor direction="read" from="Structure-Mesh" to="Fluid-Mesh" constraint="consistent"/>
+    <mapping:nearest-neighbor direction="write" from="Fluid-Mesh" to="Structure-Mesh" constraint="conservative"/>
+    <write-data name="Force" mesh="Fluid-Mesh"/><read-data name="Displacement" mesh="Fluid-Mesh"/>
+  </participant>
+  <coupling-scheme:parallel-implicit>
+    <participants first="Structure_0000" second="Fluid_0000"/>
+    <max-time value="0.2"/><time-window-size value="0.0002"/><min-iterations value="2"/><max-iterations value="20"/>
+    <!-- Numerical stabilization authorized for bounded HH06 retry: constant under-relaxation. -->
+    <acceleration:constant>
+      <relaxation value="0.2"/>
+    </acceleration:constant>
+    <absolute-or-relative-convergence-measure data="Displacement" mesh="Structure-Mesh" abs-limit="1e-8" rel-limit="1e-5"/>
+    <absolute-or-relative-convergence-measure data="Force" mesh="Structure-Mesh" abs-limit="1e-3" rel-limit="1e-5"/>
+    <exchange data="Displacement" mesh="Structure-Mesh" from="Structure_0000" to="Fluid_0000" initialize="yes" substeps="false"/>
+    <exchange data="Force" mesh="Structure-Mesh" from="Fluid_0000" to="Structure_0000" initialize="yes" substeps="false"/>
+  </coupling-scheme:parallel-implicit>
+</precice-configuration>

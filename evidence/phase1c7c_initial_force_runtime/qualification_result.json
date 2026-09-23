@@ -1,0 +1,111 @@
+{
+  "classification": "FLUID_INITIAL_FORCE_CONFIG_ONLY_CONFIRMED",
+  "qualification_scope": "exact runtime binary and scratch-only initial Force exchange configuration",
+  "git": {
+    "branch": "repair/worker-lineage-implicit-contract-v1",
+    "head": "51b598e5f8d16c6cb69625bb25ca0f07011a0931"
+  },
+  "frozen_f0_evidence": {
+    "restart_case": "cases/hh06_single_slice/30/",
+    "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+    "global_time_s": 30.0,
+    "time_index": 150000,
+    "delta_t_s": 0.0002,
+    "force_result_json_sha256": "6b272f695ebefe28daa176723483f611c42f8d25dbae8d83de928f3790811b8a",
+    "report_sha256": "6737908b9b29f4ff8550ba4353ff88ad90ad5cfc1355a57a885d655f7d3d7b3b",
+    "Fx_raw_N": 0.0655270406544,
+    "Fy_raw_N": 0.05872987413554,
+    "Fz_raw_N": -2.44420351566e-21,
+    "source_field_sha256": {
+      "30/p": "c33098b9634bf39ed09b184f5314aca388cce63063d9cc6c064b280167a78e05",
+      "30/U": "a71a708e7bc12280ce60d0ad141c826ccd39e2100a0e98322cd0a7f53de3668a",
+      "30/k": "eab8f52cc20f5a3aa6832cb6471df18a8119804827d532d72f44930377f37d3e",
+      "30/omega": "cda71b08942c289ef7ae5b73aeb0e8390c5f5c2606706632d9d69d2b31d60c58",
+      "30/nut": "52a9ecad93f73cf84856eea748fa81884797b90d5628121a255b2e557704ef21",
+      "30/uniform/time": "44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109",
+      "constant/polyMesh/points": "41d2d570fb801c4bab9e40cc1c0644150cbaddaa5903e682e9e78b333e3b93bf",
+      "constant/polyMesh/faces": "d2a7dfeefed80fc08af488a83e9bf26d9e570c7db22a3392faa918b21a332242",
+      "system/controlDict": "facd315653b628432629f3fe015caf5cda5750c7912a54e32b81e65cc9251b5f",
+      "system/preciceDict": "5d018d744d1f76280fad2b1cc788e5dd32b331fe2bd0d9aa7900260cf4c7f229",
+      "precice-config.xml": "2c67b8628e428e3d53faa935574bba644a433749109120de34e0026c5ec95c76"
+    }
+  },
+  "runtime": {
+    "openfoam": "OpenFOAM-10",
+    "solver_executable": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+    "precice": "3.4.1",
+    "precice_library_loaded": "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+    "precice_library_sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7",
+    "adapter_version_reported": "v1.3.0",
+    "adapter_binary_loaded": "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so",
+    "adapter_sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572",
+    "adapter_elf_build_id": "e76f7d6491a2f32cf9d6d5712c79b1ce55cd862b",
+    "adapter_source_commit": "UNRESOLVED"
+  },
+  "test": {
+    "scratch_only": true,
+    "runs": 2,
+    "run1_scratch_case": "/tmp/phase1c7c.2y60cu/case",
+    "run2_scratch_case": "/tmp/phase1c7c.replay2.3yJJNz/case",
+    "command_each_run": "pimpleFoam -postProcess -case <scratch-case> -time 30",
+    "xml_delta": "Force exchange gained initialize=\"yes\"; socket exchange-directory points inside the corresponding scratch root",
+    "adapter_execution_stopped_at": "Adapter::execute entry, before execute body and before any adapter advance",
+    "same_structure_mesh_as_case": true,
+    "structure_mesh_vertices": 1,
+    "structure_mesh_vertex_xy_m": [0.0, 0.0],
+    "fake_structure_source_sha256": "7611eceb7f30cd05184967d5dc1e62e5cad8b8f8241850eba5e114154d03b3a7",
+    "fake_structure_binary_sha256": "a478d2b2a0cd095326418b5ca86d3d2563352c9e7d85120fdabe0e52d3446a43",
+    "fake_structure_build": "g++ 11.4, linked to preCICE 3.4.1 via pkg-config",
+    "trace_sequence": [
+      "Adapter::initialize",
+      "Participant::requiresInitialData",
+      "Adapter::writeCouplingData",
+      "FSI::Force::write",
+      "Participant::writeData(Force)",
+      "Participant::initialize",
+      "Structure Participant::readData(Force, relativeReadTime=0.0)"
+    ],
+    "tolerance_abs_N": 1e-8,
+    "runs_identical": true,
+    "results": [
+      {
+        "physical_release_time_s": 30.0,
+        "precice_initial_time_s": 0.0,
+        "relativeReadTime_s": 0.0,
+        "max_dt_s": 0.00020000000000000001,
+        "Fx_received_N": 0.065527040654805538,
+        "Fy_received_N": 0.058729874135090385,
+        "Fz_status": "not_transmitted_mesh_dimensions_2",
+        "delta_Fx_vs_frozen_N": 4.05538e-13,
+        "delta_Fy_vs_frozen_N": -4.49615e-13,
+        "time_step_matches": true,
+        "force_matches": true
+      },
+      {
+        "physical_release_time_s": 30.0,
+        "precice_initial_time_s": 0.0,
+        "relativeReadTime_s": 0.0,
+        "max_dt_s": 0.00020000000000000001,
+        "Fx_received_N": 0.065527040654805538,
+        "Fy_received_N": 0.058729874135090385,
+        "Fz_status": "not_transmitted_mesh_dimensions_2",
+        "delta_Fx_vs_frozen_N": 4.05538e-13,
+        "delta_Fy_vs_frozen_N": -4.49615e-13,
+        "time_step_matches": true,
+        "force_matches": true
+      }
+    ]
+  },
+  "scope_assertions": {
+    "authoritative_case_modified": false,
+    "adapter_source_modified": false,
+    "repository_xml_modified": false,
+    "contract_modified": false,
+    "solver_timestep_advanced": false,
+    "precice_advance_called": false,
+    "structure_ancf_solve_run": false,
+    "fsi_run": false,
+    "force_scaling_changed": false
+  },
+  "interpretation": "Initial Force runtime path and numeric x/y agreement are confirmed for the SHA-pinned installed adapter using only scratch XML initialization. Adapter source-to-binary lineage remains unresolved; this result is runtime-binary-specific and does not qualify source reproducibility."
+}

@@ -1,0 +1,166 @@
+Function "preciceAdapter::Adapter::initialize()" not defined.
+Breakpoint 1 (preciceAdapter::Adapter::initialize()) pending.
+Function "preciceAdapter::Adapter::writeCouplingData()" not defined.
+Breakpoint 2 (preciceAdapter::Adapter::writeCouplingData()) pending.
+Function "_ZN7precice11Participant19requiresInitialDataEv" not defined.
+Breakpoint 3 (_ZN7precice11Participant19requiresInitialDataEv) pending.
+Function "preciceAdapter::FSI::Force::write(double*, bool, unsigned int)" not defined.
+Breakpoint 4 (preciceAdapter::FSI::Force::write(double*, bool, unsigned int)) pending.
+Function "_ZN7precice11Participant9writeDataENS_4spanIKcLm18446744073709551615EEES3_NS1_IKiLm18446744073709551615EEENS1_IKdLm18446744073709551615EEE" not defined.
+Breakpoint 5 (_ZN7precice11Participant9writeDataENS_4spanIKcLm18446744073709551615EEES3_NS1_IKiLm18446744073709551615EEENS1_IKdLm18446744073709551615EEE) pending.
+Function "_ZN7precice11Participant10initializeEv" not defined.
+Breakpoint 6 (_ZN7precice11Participant10initializeEv) pending.
+Function "preciceAdapter::Adapter::execute()" not defined.
+Breakpoint 7 (preciceAdapter::Adapter::execute()) pending.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 10-c4cf895ad8fa
+Exec   : /opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam -postProcess -case /tmp/phase1c7c.2y60cu/case -time 30
+Date   : Sep 23 2026
+Time   : 12:34:02
+Host   : "DESKTOP-NR4V0NP"
+PID    : 75284
+I/O    : uncollated
+Case   : /tmp/phase1c7c.2y60cu/case
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 30
+
+Selecting fvMeshMover motionSolver
+Selecting motion solver: displacementLaplacian
+Selecting motion diffusion: quadratic
+Selecting motion diffusion: inverseDistance
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: No corrector convergence criteria found
+        Calculations will do 3 corrections
+
+
+PIMPLE: Operating solver in transient mode with 3 outer correctors
+
+
+Time = 30s
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting viscosity model constant
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST
+Selecting patchDistMethod meshWave
+RAS
+{
+    model           kOmegaSST;
+    turbulence      on;
+    printCoeffs     on;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.5555555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+}
+
+No MRF models present
+
+No fvModels present
+No fvConstraints present
+forces cylinderForces:
+    Not including porosity effects
+forces cylinderForceCoeffs:
+    Not including porosity effects
+forceCoeffs cylinderForceCoeffs:
+    Not including porosity effects
+[Detaching after fork from child process 75287]
+---[preciceAdapter] Loaded the OpenFOAM-preCICE adapter - v1.3.0.
+---[preciceAdapter] Reading preciceDict...
+(0) 12:34:26 [impl::ParticipantImpl]:185 in configure: [0mThis is preCICE version 3.4.1
+(0) 12:34:26 [impl::ParticipantImpl]:186 in configure: [0mRevision info: no-info [git failed to run]
+(0) 12:34:26 [impl::ParticipantImpl]:205 in configure: [0mBuild type: Release (without debug log)
+(0) 12:34:26 [impl::ParticipantImpl]:207 in configure: [0mWorking directory "/tmp/phase1c7c.2y60cu/case"
+(0) 12:34:26 [impl::ParticipantImpl]:211 in configure: [0mConfiguring preCICE with configuration "precice-config.xml"
+(0) 12:34:26 [impl::ParticipantImpl]:212 in configure: [0mI am participant "Fluid_0000"
+TRACE adapter.initialize.enter
+TRACE Participant.requiresInitialData
+TRACE adapter.writeCouplingData
+TRACE Force.write
+TRACE Participant.writeData
+#0  0x00007fffee83a460 in precice::Participant::writeData(precice::span<char const, 18446744073709551615ul>, precice::span<char const, 18446744073709551615ul>, precice::span<int const, 18446744073709551615ul>, precice::span<double const, 18446744073709551615ul>) () from /lib/x86_64-linux-gnu/libprecice.so.3
+#1  0x00007fffeeaff52a in preciceAdapter::Interface::writeCouplingData() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+#2  0x00007fffeeb767e9 in preciceAdapter::Adapter::writeCouplingData() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+#3  0x00007fffeeb76958 in preciceAdapter::Adapter::initialize() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+#4  0x00007fffeeb83cf1 in preciceAdapter::Adapter::configure() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+TRACE Participant.initialize
+(0) 12:34:26 [impl::ParticipantImpl]:335 in setupCommunication: [0mSetting up primary communication to coupling partner/s
+(0) 12:34:26 [impl::ParticipantImpl]:351 in setupCommunication: [0mPrimary ranks are connected
+(0) 12:34:26 [impl::ParticipantImpl]:357 in setupCommunication: [0mSetting up preliminary secondary communication to coupling partner/s
+(0) 12:34:26 [partition::ProvidedPartition]:120 in prepare: [0mPrepare partition for mesh Fluid-Mesh
+(0) 12:34:26 [partition::ReceivedPartition]:69 in communicate: [0mReceive global mesh Structure-Mesh
+(0) 12:34:26 [impl::ParticipantImpl]:366 in setupCommunication: [0mSetting up secondary communication to coupling partner/s
+(0) 12:34:26 [impl::ParticipantImpl]:373 in setupCommunication: [0mSecondary ranks are connected
+(0) 12:34:26 [impl::ParticipantImpl]:1633 in computeMappings: [0mComputing "nearest-neighbor" mapping from mesh "Fluid-Mesh" to mesh "Structure-Mesh" in "write" direction.
+(0) 12:34:26 [mapping::NearestNeighborMapping]:80 in computeMapping: [0mMapping distance min:0.0139983 max:0.0139983 avg: 0.0139983 var: -8.13152e-20 cnt: 200
+(0) 12:34:26 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 12:34:26 [impl::ParticipantImpl]:1633 in computeMappings: [0mComputing "nearest-neighbor" mapping from mesh "Structure-Mesh" to mesh "Fluid-Mesh" in "read" direction.
+(0) 12:34:26 [mapping::NearestNeighborMapping]:80 in computeMapping: [0mMapping distance min:0.0139983 max:0.0139983 avg: 0.0139983 var: -8.13152e-20 cnt: 200
+(0) 12:34:26 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0 from "Structure-Mesh" to "Fluid-Mesh" (skipped zero sample)
+(0) 12:34:26 [impl::ParticipantImpl]:298 in initialize: [0mit 1 (min: 2, max: 20), time-window 1, t 0 (max: 0.2), Dt 0.0002, max-dt 0.0002
+---[preciceAdapter] preCICE was configured and initialized
+--> FOAM Warning : 
+    From function void adapterInfo(std::string, std::string)
+    in file Utilities.C at line 17
+    [36mWarning in the preCICE adapter: [0m
+You have enabled 'runTimeModifiable' in the controlDict. The preciceAdapter does not yet fully support this functionality when 'adjustableTimestep' is not enabled. If you modify the 'deltaT' in the controlDict during the simulation, it will not be updated.
+
+---[preciceAdapter] Setting the solver's endTime to infinity to prevent early exits. Only preCICE will control the simulation's endTime. Any functionObject's end() method will be triggered by the adapter. You may disable this behavior in the adapter's configuration.
+forces cylinderForces write:
+    sum of forces:
+        pressure : (0.06381182377 0.05810672851 -2.753291492e-21)
+        viscous  : (0.001715216887 0.0006231456235 3.090879763e-22)
+        porous   : (0 0 0)
+    sum of moments:
+        pressure : (-0.0008134941992 0.0008933655327 9.84148821e-17)
+        viscous  : (-8.72403873e-06 2.401303642e-05 -2.400546007e-06)
+        porous   : (0 0 0)
+
+forceCoeffs cylinderForceCoeffs write:
+    Cm    = -0.002275844304
+    Cd    = 1.739446597
+    Cl    = 1.559012565
+    Cl(f) = 0.7772304381
+    Cl(r) = 0.7817821268
+
+yPlus yPlus write:
+    writing object yPlus
+    patch cylinder y+ : min = 0.0002463981499, max = 0.03343294007, average = 0.004649363875
+
+TRACE STOP at Adapter.execute entry; body not run and no adapter advance requested
+#0  0x00007fffeeb889e0 in preciceAdapter::Adapter::execute() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+#1  0x00007fffeebba7b1 in Foam::functionObjects::preciceAdapterFunctionObject::execute() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+#2  0x00007ffff48ae2ca in Foam::functionObjectList::execute() () from /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+#3  0x00005555555804fd in main ()
+[Inferior 1 (process 75284) killed]

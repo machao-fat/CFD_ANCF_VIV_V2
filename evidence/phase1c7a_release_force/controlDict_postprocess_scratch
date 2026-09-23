@@ -1,0 +1,47 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  High-Re single-slice ANCF preparation from the existing 30 s fixed-cylinder field.
+  The run is intentionally bounded to global time 30.2 s (0.2 s pilot).
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+
+application     pimpleFoam;       // Production-family incompressible solver.
+startFrom       latestTime;
+startTime       0;
+stopAt          endTime;
+endTime         30.2;
+deltaT          2e-4;                       // Coupling window and OpenFOAM step are identical.
+
+writeControl    adjustableRunTime; // Full fields are written at physical intervals.
+writeInterval   0.01;              // About 0.1 s; does not alter deltaT.
+purgeWrite      0;
+writeFormat     binary;
+writePrecision  10;
+writeCompression off;
+timeFormat      general;
+timePrecision   10;
+runTimeModifiable true;
+
+functions
+{
+    cylinderForces
+    {
+        type            forces;       // Integrated pressure + viscous force.
+        libs            ("libforces.so");
+        writeControl    timeStep;
+        writeInterval   5;             // Keep force history at every CFD step.
+        log             yes;
+        patches         (cylinder);
+        rho             rhoInf;
+        rhoInf          1000;
+        CofR            (0 0 0);
+    }
+
+}
+
+// ************************************************************************* //

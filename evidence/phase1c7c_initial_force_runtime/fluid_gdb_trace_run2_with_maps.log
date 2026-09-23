@@ -1,0 +1,1329 @@
+Function "preciceAdapter::Adapter::initialize()" not defined.
+Breakpoint 1 (preciceAdapter::Adapter::initialize()) pending.
+Function "preciceAdapter::Adapter::writeCouplingData()" not defined.
+Breakpoint 2 (preciceAdapter::Adapter::writeCouplingData()) pending.
+Function "_ZN7precice11Participant19requiresInitialDataEv" not defined.
+Breakpoint 3 (_ZN7precice11Participant19requiresInitialDataEv) pending.
+Function "preciceAdapter::FSI::Force::write(double*, bool, unsigned int)" not defined.
+Breakpoint 4 (preciceAdapter::FSI::Force::write(double*, bool, unsigned int)) pending.
+Function "_ZN7precice11Participant9writeDataENS_4spanIKcLm18446744073709551615EEES3_NS1_IKiLm18446744073709551615EEENS1_IKdLm18446744073709551615EEE" not defined.
+Breakpoint 5 (_ZN7precice11Participant9writeDataENS_4spanIKcLm18446744073709551615EEES3_NS1_IKiLm18446744073709551615EEENS1_IKdLm18446744073709551615EEE) pending.
+Function "_ZN7precice11Participant10initializeEv" not defined.
+Breakpoint 6 (_ZN7precice11Participant10initializeEv) pending.
+Function "preciceAdapter::Adapter::execute()" not defined.
+Breakpoint 7 (preciceAdapter::Adapter::execute()) pending.
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  10
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 10-c4cf895ad8fa
+Exec   : /opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam -postProcess -case /tmp/phase1c7c.replay2.3yJJNz/case -time 30
+Date   : Sep 23 2026
+Time   : 12:36:18
+Host   : "DESKTOP-NR4V0NP"
+PID    : 75995
+I/O    : uncollated
+Case   : /tmp/phase1c7c.replay2.3yJJNz/case
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 30
+
+Selecting fvMeshMover motionSolver
+Selecting motion solver: displacementLaplacian
+Selecting motion diffusion: quadratic
+Selecting motion diffusion: inverseDistance
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: No corrector convergence criteria found
+        Calculations will do 3 corrections
+
+
+PIMPLE: Operating solver in transient mode with 3 outer correctors
+
+
+Time = 30s
+Reading field p
+
+Reading field U
+
+Reading/calculating face flux field phi
+
+Selecting viscosity model constant
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kOmegaSST
+Selecting patchDistMethod meshWave
+RAS
+{
+    model           kOmegaSST;
+    turbulence      on;
+    printCoeffs     on;
+    alphaK1         0.85;
+    alphaK2         1;
+    alphaOmega1     0.5;
+    alphaOmega2     0.856;
+    gamma1          0.5555555556;
+    gamma2          0.44;
+    beta1           0.075;
+    beta2           0.0828;
+    betaStar        0.09;
+    a1              0.31;
+    b1              1;
+    c1              10;
+    F3              false;
+}
+
+No MRF models present
+
+No fvModels present
+No fvConstraints present
+forces cylinderForces:
+    Not including porosity effects
+forces cylinderForceCoeffs:
+    Not including porosity effects
+forceCoeffs cylinderForceCoeffs:
+    Not including porosity effects
+[Detaching after fork from child process 76001]
+---[preciceAdapter] Loaded the OpenFOAM-preCICE adapter - v1.3.0.
+---[preciceAdapter] Reading preciceDict...
+(0) 12:36:38 [impl::ParticipantImpl]:185 in configure: [0mThis is preCICE version 3.4.1
+(0) 12:36:38 [impl::ParticipantImpl]:186 in configure: [0mRevision info: no-info [git failed to run]
+(0) 12:36:38 [impl::ParticipantImpl]:205 in configure: [0mBuild type: Release (without debug log)
+(0) 12:36:38 [impl::ParticipantImpl]:207 in configure: [0mWorking directory "/tmp/phase1c7c.replay2.3yJJNz/case"
+(0) 12:36:38 [impl::ParticipantImpl]:211 in configure: [0mConfiguring preCICE with configuration "precice-config.xml"
+(0) 12:36:38 [impl::ParticipantImpl]:212 in configure: [0mI am participant "Fluid_0000"
+TRACE adapter.initialize.enter
+TRACE Participant.requiresInitialData
+TRACE adapter.writeCouplingData
+TRACE Force.write
+TRACE Participant.writeData
+#0  0x00007fffee83a460 in precice::Participant::writeData(precice::span<char const, 18446744073709551615ul>, precice::span<char const, 18446744073709551615ul>, precice::span<int const, 18446744073709551615ul>, precice::span<double const, 18446744073709551615ul>) () from /lib/x86_64-linux-gnu/libprecice.so.3
+#1  0x00007fffeeaff52a in preciceAdapter::Interface::writeCouplingData() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+#2  0x00007fffeeb767e9 in preciceAdapter::Adapter::writeCouplingData() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+#3  0x00007fffeeb76958 in preciceAdapter::Adapter::initialize() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+#4  0x00007fffeeb83cf1 in preciceAdapter::Adapter::configure() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+TRACE Participant.initialize
+(0) 12:36:38 [impl::ParticipantImpl]:335 in setupCommunication: [0mSetting up primary communication to coupling partner/s
+(0) 12:36:38 [impl::ParticipantImpl]:351 in setupCommunication: [0mPrimary ranks are connected
+(0) 12:36:38 [impl::ParticipantImpl]:357 in setupCommunication: [0mSetting up preliminary secondary communication to coupling partner/s
+(0) 12:36:38 [partition::ProvidedPartition]:120 in prepare: [0mPrepare partition for mesh Fluid-Mesh
+(0) 12:36:38 [partition::ReceivedPartition]:69 in communicate: [0mReceive global mesh Structure-Mesh
+(0) 12:36:38 [impl::ParticipantImpl]:366 in setupCommunication: [0mSetting up secondary communication to coupling partner/s
+(0) 12:36:38 [impl::ParticipantImpl]:373 in setupCommunication: [0mSecondary ranks are connected
+(0) 12:36:38 [impl::ParticipantImpl]:1633 in computeMappings: [0mComputing "nearest-neighbor" mapping from mesh "Fluid-Mesh" to mesh "Structure-Mesh" in "write" direction.
+(0) 12:36:38 [mapping::NearestNeighborMapping]:80 in computeMapping: [0mMapping distance min:0.0139983 max:0.0139983 avg: 0.0139983 var: -8.13152e-20 cnt: 200
+(0) 12:36:38 [impl::DataContext]:155 in mapData: [0mMapping "Force" for t=0 from "Fluid-Mesh" to "Structure-Mesh"
+(0) 12:36:38 [impl::ParticipantImpl]:1633 in computeMappings: [0mComputing "nearest-neighbor" mapping from mesh "Structure-Mesh" to mesh "Fluid-Mesh" in "read" direction.
+(0) 12:36:38 [mapping::NearestNeighborMapping]:80 in computeMapping: [0mMapping distance min:0.0139983 max:0.0139983 avg: 0.0139983 var: -8.13152e-20 cnt: 200
+(0) 12:36:38 [impl::DataContext]:155 in mapData: [0mMapping "Displacement" for t=0 from "Structure-Mesh" to "Fluid-Mesh" (skipped zero sample)
+(0) 12:36:38 [impl::ParticipantImpl]:298 in initialize: [0mit 1 (min: 2, max: 20), time-window 1, t 0 (max: 0.2), Dt 0.0002, max-dt 0.0002
+---[preciceAdapter] preCICE was configured and initialized
+--> FOAM Warning : 
+    From function void adapterInfo(std::string, std::string)
+    in file Utilities.C at line 17
+    [36mWarning in the preCICE adapter: [0m
+You have enabled 'runTimeModifiable' in the controlDict. The preciceAdapter does not yet fully support this functionality when 'adjustableTimestep' is not enabled. If you modify the 'deltaT' in the controlDict during the simulation, it will not be updated.
+
+---[preciceAdapter] Setting the solver's endTime to infinity to prevent early exits. Only preCICE will control the simulation's endTime. Any functionObject's end() method will be triggered by the adapter. You may disable this behavior in the adapter's configuration.
+forces cylinderForces write:
+    sum of forces:
+        pressure : (0.06381182377 0.05810672851 -2.753291492e-21)
+        viscous  : (0.001715216887 0.0006231456235 3.090879763e-22)
+        porous   : (0 0 0)
+    sum of moments:
+        pressure : (-0.0008134941992 0.0008933655327 9.84148821e-17)
+        viscous  : (-8.72403873e-06 2.401303642e-05 -2.400546007e-06)
+        porous   : (0 0 0)
+
+forceCoeffs cylinderForceCoeffs write:
+    Cm    = -0.002275844304
+    Cd    = 1.739446597
+    Cl    = 1.559012565
+    Cl(f) = 0.7772304381
+    Cl(r) = 0.7817821268
+
+yPlus yPlus write:
+    writing object yPlus
+    patch cylinder y+ : min = 0.0002463981499, max = 0.03343294007, average = 0.004649363875
+
+TRACE STOP at Adapter.execute entry; body not run and no adapter advance requested
+#0  0x00007fffeeb889e0 in preciceAdapter::Adapter::execute() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+#1  0x00007fffeebba7b1 in Foam::functionObjects::preciceAdapterFunctionObject::execute() () from /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+#2  0x00007ffff48ae2ca in Foam::functionObjectList::execute() () from /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+#3  0x00005555555804fd in main ()
+PROC_MAPS_BEGIN pid=75995
+555555554000-55555557b000 r--p 00000000 08:30 99112                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam
+55555557b000-5555555f1000 r-xp 00027000 08:30 99112                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam
+5555555f1000-555555614000 r--p 0009d000 08:30 99112                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam
+555555614000-555555617000 r--p 000bf000 08:30 99112                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam
+555555617000-555555618000 rw-p 000c2000 08:30 99112                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam
+555555618000-555559688000 rw-p 00000000 00:00 0                          [heap]
+7fffcc000000-7fffcc021000 rw-p 00000000 00:00 0 
+7fffcc021000-7fffd0000000 ---p 00000000 00:00 0 
+7fffd4000000-7fffd4021000 rw-p 00000000 00:00 0 
+7fffd4021000-7fffd8000000 ---p 00000000 00:00 0 
+7fffd8000000-7fffd8021000 rw-p 00000000 00:00 0 
+7fffd8021000-7fffdc000000 ---p 00000000 00:00 0 
+7fffdeffe000-7fffdefff000 ---p 00000000 00:00 0 
+7fffdefff000-7fffdf7ff000 rw-p 00000000 00:00 0 
+7fffdf7ff000-7fffdf800000 ---p 00000000 00:00 0 
+7fffdf800000-7fffe0000000 rw-p 00000000 00:00 0 
+7fffe0000000-7fffe0021000 rw-p 00000000 00:00 0 
+7fffe0021000-7fffe4000000 ---p 00000000 00:00 0 
+7fffe4647000-7fffe464b000 r--p 00000000 08:30 72245                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_osc_rdma.so
+7fffe464b000-7fffe465e000 r-xp 00004000 08:30 72245                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_osc_rdma.so
+7fffe465e000-7fffe4661000 r--p 00017000 08:30 72245                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_osc_rdma.so
+7fffe4661000-7fffe4662000 r--p 00019000 08:30 72245                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_osc_rdma.so
+7fffe4662000-7fffe4663000 rw-p 0001a000 08:30 72245                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_osc_rdma.so
+7fffe4663000-7fffe4665000 r--p 00000000 08:30 72246                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_osc_sm.so
+7fffe4665000-7fffe4668000 r-xp 00002000 08:30 72246                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_osc_sm.so
+7fffe4668000-7fffe4669000 r--p 00005000 08:30 72246                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_osc_sm.so
+7fffe4669000-7fffe466a000 r--p 00005000 08:30 72246                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_osc_sm.so
+7fffe466a000-7fffe466c000 rw-p 00006000 08:30 72246                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_osc_sm.so
+7fffe467b000-7fffe4680000 r--p 00000000 08:30 72200                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_libnbc.so
+7fffe4680000-7fffe4698000 r-xp 00005000 08:30 72200                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_libnbc.so
+7fffe4698000-7fffe469d000 r--p 0001d000 08:30 72200                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_libnbc.so
+7fffe469d000-7fffe469e000 r--p 00021000 08:30 72200                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_libnbc.so
+7fffe469e000-7fffe469f000 rw-p 00022000 08:30 72200                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_libnbc.so
+7fffe469f000-7fffe46a1000 r--p 00000000 08:30 72198                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_han.so
+7fffe46a1000-7fffe46b4000 r-xp 00002000 08:30 72198                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_han.so
+7fffe46b4000-7fffe46b9000 r--p 00015000 08:30 72198                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_han.so
+7fffe46b9000-7fffe46ba000 ---p 0001a000 08:30 72198                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_han.so
+7fffe46ba000-7fffe46bb000 r--p 0001a000 08:30 72198                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_han.so
+7fffe46bb000-7fffe46bc000 rw-p 0001b000 08:30 72198                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_han.so
+7fffe46bc000-7fffe46be000 r--p 00000000 08:30 72197                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_basic.so
+7fffe46be000-7fffe46ca000 r-xp 00002000 08:30 72197                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_basic.so
+7fffe46ca000-7fffe46cc000 r--p 0000e000 08:30 72197                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_basic.so
+7fffe46cc000-7fffe46cd000 r--p 0000f000 08:30 72197                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_basic.so
+7fffe46cd000-7fffe46ce000 rw-p 00010000 08:30 72197                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_basic.so
+7fffe46ce000-7fffe46cf000 r--p 00000000 08:30 72164                      /usr/lib/x86_64-linux-gnu/libmca_common_sm.so.40.30.0
+7fffe46cf000-7fffe46d0000 r-xp 00001000 08:30 72164                      /usr/lib/x86_64-linux-gnu/libmca_common_sm.so.40.30.0
+7fffe46d0000-7fffe46d1000 r--p 00002000 08:30 72164                      /usr/lib/x86_64-linux-gnu/libmca_common_sm.so.40.30.0
+7fffe46d1000-7fffe46d2000 r--p 00002000 08:30 72164                      /usr/lib/x86_64-linux-gnu/libmca_common_sm.so.40.30.0
+7fffe46d2000-7fffe46d3000 rw-p 00003000 08:30 72164                      /usr/lib/x86_64-linux-gnu/libmca_common_sm.so.40.30.0
+7fffe46d7000-7fffe46d8000 r--p 00000000 08:30 72199                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_inter.so
+7fffe46d8000-7fffe46da000 r-xp 00001000 08:30 72199                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_inter.so
+7fffe46da000-7fffe46db000 r--p 00003000 08:30 72199                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_inter.so
+7fffe46db000-7fffe46dc000 r--p 00003000 08:30 72199                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_inter.so
+7fffe46dc000-7fffe46dd000 rw-p 00004000 08:30 72199                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_inter.so
+7fffe46dd000-7fffe46de000 r--p 00000000 08:30 72202                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_self.so
+7fffe46de000-7fffe46df000 r-xp 00001000 08:30 72202                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_self.so
+7fffe46df000-7fffe46e0000 r--p 00002000 08:30 72202                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_self.so
+7fffe46e0000-7fffe46e1000 r--p 00002000 08:30 72202                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_self.so
+7fffe46e1000-7fffe46e2000 rw-p 00003000 08:30 72202                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_self.so
+7fffe46e2000-7fffe46e4000 r--p 00000000 08:30 72203                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sm.so
+7fffe46e4000-7fffe46ea000 r-xp 00002000 08:30 72203                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sm.so
+7fffe46ea000-7fffe46eb000 r--p 00008000 08:30 72203                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sm.so
+7fffe46eb000-7fffe46ec000 ---p 00009000 08:30 72203                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sm.so
+7fffe46ec000-7fffe46ed000 r--p 00009000 08:30 72203                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sm.so
+7fffe46ed000-7fffe46ee000 rw-p 0000a000 08:30 72203                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sm.so
+7fffe46ee000-7fffe46ef000 r--p 00000000 08:30 72204                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sync.so
+7fffe46ef000-7fffe46f1000 r-xp 00001000 08:30 72204                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sync.so
+7fffe46f1000-7fffe46f2000 r--p 00003000 08:30 72204                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sync.so
+7fffe46f2000-7fffe46f3000 r--p 00003000 08:30 72204                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sync.so
+7fffe46f3000-7fffe46f4000 rw-p 00004000 08:30 72204                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_sync.so
+7fffe46f4000-7fffe46f9000 r--p 00000000 08:30 72205                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_tuned.so
+7fffe46f9000-7fffe4701000 r-xp 00005000 08:30 72205                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_tuned.so
+7fffe4701000-7fffe4706000 r--p 0000d000 08:30 72205                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_tuned.so
+7fffe4706000-7fffe4707000 ---p 00012000 08:30 72205                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_tuned.so
+7fffe4707000-7fffe4708000 r--p 00012000 08:30 72205                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_tuned.so
+7fffe4708000-7fffe4709000 rw-p 00013000 08:30 72205                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_tuned.so
+7fffe471b000-7fffe471f000 r--p 00000000 08:30 72257                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_pml_ob1.so
+7fffe471f000-7fffe4734000 r-xp 00004000 08:30 72257                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_pml_ob1.so
+7fffe4734000-7fffe4738000 r--p 00019000 08:30 72257                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_pml_ob1.so
+7fffe4738000-7fffe4739000 r--p 0001c000 08:30 72257                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_pml_ob1.so
+7fffe4739000-7fffe473a000 rw-p 0001d000 08:30 72257                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_pml_ob1.so
+7fffe4745000-7fffe4747000 r--p 00000000 08:30 72196                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_adapt.so
+7fffe4747000-7fffe474e000 r-xp 00002000 08:30 72196                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_adapt.so
+7fffe474e000-7fffe4750000 r--p 00009000 08:30 72196                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_adapt.so
+7fffe4750000-7fffe4751000 r--p 0000a000 08:30 72196                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_adapt.so
+7fffe4751000-7fffe4752000 rw-p 0000b000 08:30 72196                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_coll_adapt.so
+7fffe4752000-7fffe4753000 r--p 00000000 08:30 72192                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_self.so
+7fffe4753000-7fffe4755000 r-xp 00001000 08:30 72192                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_self.so
+7fffe4755000-7fffe4756000 r--p 00003000 08:30 72192                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_self.so
+7fffe4756000-7fffe4757000 r--p 00003000 08:30 72192                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_self.so
+7fffe4757000-7fffe4758000 rw-p 00004000 08:30 72192                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_self.so
+7fffe475b000-7fffe475c000 r--p 00000000 08:30 54353                      /usr/lib/x86_64-linux-gnu/librt.so.1
+7fffe475c000-7fffe475d000 r-xp 00001000 08:30 54353                      /usr/lib/x86_64-linux-gnu/librt.so.1
+7fffe475d000-7fffe475e000 r--p 00002000 08:30 54353                      /usr/lib/x86_64-linux-gnu/librt.so.1
+7fffe475e000-7fffe475f000 r--p 00002000 08:30 54353                      /usr/lib/x86_64-linux-gnu/librt.so.1
+7fffe475f000-7fffe4760000 rw-p 00003000 08:30 54353                      /usr/lib/x86_64-linux-gnu/librt.so.1
+7fffe4766000-7fffe476a000 r--p 00000000 08:30 72194                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_tcp.so
+7fffe476a000-7fffe4775000 r-xp 00004000 08:30 72194                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_tcp.so
+7fffe4775000-7fffe4778000 r--p 0000f000 08:30 72194                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_tcp.so
+7fffe4778000-7fffe4779000 ---p 00012000 08:30 72194                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_tcp.so
+7fffe4779000-7fffe477a000 r--p 00012000 08:30 72194                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_tcp.so
+7fffe477a000-7fffe477c000 rw-p 00013000 08:30 72194                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_tcp.so
+7fffe477c000-7fffe477e000 r--p 00000000 08:30 72189                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_bml_r2.so
+7fffe477e000-7fffe4781000 r-xp 00002000 08:30 72189                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_bml_r2.so
+7fffe4781000-7fffe4782000 r--p 00005000 08:30 72189                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_bml_r2.so
+7fffe4782000-7fffe4783000 r--p 00005000 08:30 72189                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_bml_r2.so
+7fffe4783000-7fffe4784000 rw-p 00006000 08:30 72189                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_bml_r2.so
+7fffe4784000-7fffe4786000 r--p 00000000 08:30 72235                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_mpool_hugepage.so
+7fffe4786000-7fffe4788000 r-xp 00002000 08:30 72235                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_mpool_hugepage.so
+7fffe4788000-7fffe4789000 r--p 00004000 08:30 72235                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_mpool_hugepage.so
+7fffe4789000-7fffe478a000 r--p 00004000 08:30 72235                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_mpool_hugepage.so
+7fffe478a000-7fffe478b000 rw-p 00005000 08:30 72235                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_mpool_hugepage.so
+7fffe478b000-7fffe478c000 r--p 00000000 08:30 72263                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_rcache_grdma.so
+7fffe478c000-7fffe478e000 r-xp 00001000 08:30 72263                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_rcache_grdma.so
+7fffe478e000-7fffe478f000 r--p 00003000 08:30 72263                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_rcache_grdma.so
+7fffe478f000-7fffe4790000 r--p 00003000 08:30 72263                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_rcache_grdma.so
+7fffe4790000-7fffe4791000 rw-p 00004000 08:30 72263                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_rcache_grdma.so
+7fffe4791000-7fffe4794000 r--p 00000000 08:30 72242                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_op_avx.so
+7fffe4794000-7fffe47b9000 r-xp 00003000 08:30 72242                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_op_avx.so
+7fffe47b9000-7fffe47bf000 r--p 00028000 08:30 72242                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_op_avx.so
+7fffe47bf000-7fffe47c0000 r--p 0002d000 08:30 72242                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_op_avx.so
+7fffe47c0000-7fffe47c8000 rw-p 0002e000 08:30 72242                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_op_avx.so
+7fffe47c8000-7fffe47cc000 r--p 00000000 08:30 11658                      /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fffe47cc000-7fffe47d7000 r-xp 00004000 08:30 11658                      /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fffe47d7000-7fffe47db000 r--p 0000f000 08:30 11658                      /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fffe47db000-7fffe47dc000 r--p 00012000 08:30 11658                      /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fffe47dc000-7fffe47dd000 rw-p 00013000 08:30 11658                      /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fffe47dd000-7fffe47df000 r--p 00000000 08:30 56082                      /usr/lib/x86_64-linux-gnu/libXNVCtrl.so.0.0.0
+7fffe47df000-7fffe47e3000 r-xp 00002000 08:30 56082                      /usr/lib/x86_64-linux-gnu/libXNVCtrl.so.0.0.0
+7fffe47e3000-7fffe47e4000 r--p 00006000 08:30 56082                      /usr/lib/x86_64-linux-gnu/libXNVCtrl.so.0.0.0
+7fffe47e4000-7fffe47e5000 r--p 00006000 08:30 56082                      /usr/lib/x86_64-linux-gnu/libXNVCtrl.so.0.0.0
+7fffe47e5000-7fffe47e6000 rw-p 00007000 08:30 56082                      /usr/lib/x86_64-linux-gnu/libXNVCtrl.so.0.0.0
+7fffe47e6000-7fffe47e8000 r--p 00000000 08:30 12028                      /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1
+7fffe47e8000-7fffe47ed000 r-xp 00002000 08:30 12028                      /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1
+7fffe47ed000-7fffe47ef000 r--p 00007000 08:30 12028                      /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1
+7fffe47ef000-7fffe47f0000 r--p 00008000 08:30 12028                      /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1
+7fffe47f0000-7fffe47f1000 rw-p 00009000 08:30 12028                      /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1
+7fffe47f1000-7fffe47f2000 r--p 00000000 08:30 72193                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_sm.so
+7fffe47f2000-7fffe47f3000 r-xp 00001000 08:30 72193                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_sm.so
+7fffe47f3000-7fffe47f4000 r--p 00002000 08:30 72193                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_sm.so
+7fffe47f4000-7fffe47f5000 r--p 00002000 08:30 72193                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_sm.so
+7fffe47f5000-7fffe47f6000 rw-p 00003000 08:30 72193                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_btl_sm.so
+7fffe47f6000-7fffe47f7000 r--p 00000000 08:30 72185                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_allocator_basic.so
+7fffe47f7000-7fffe47f8000 r-xp 00001000 08:30 72185                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_allocator_basic.so
+7fffe47f8000-7fffe47f9000 r--p 00002000 08:30 72185                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_allocator_basic.so
+7fffe47f9000-7fffe47fa000 r--p 00002000 08:30 72185                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_allocator_basic.so
+7fffe47fa000-7fffe47fb000 rw-p 00003000 08:30 72185                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_allocator_basic.so
+7fffe47fb000-7fffe47fc000 r--p 00000000 08:30 72186                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_allocator_bucket.so
+7fffe47fc000-7fffe47fd000 r-xp 00001000 08:30 72186                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_allocator_bucket.so
+7fffe47fd000-7fffe47fe000 r--p 00002000 08:30 72186                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_allocator_bucket.so
+7fffe47fe000-7fffe47ff000 r--p 00002000 08:30 72186                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_allocator_bucket.so
+7fffe47ff000-7fffe4800000 rw-p 00003000 08:30 72186                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_allocator_bucket.so
+7fffe4800000-7fffe4c00000 r--s 00000000 08:30 337459                     /tmp/ompi.DESKTOP-NR4V0NP.1000/pid.76001/pmix_dstor_ds21_76001/smdataseg-2040266753-0
+7fffe4c00000-7fffe5000000 r--s 00000000 08:30 337458                     /tmp/ompi.DESKTOP-NR4V0NP.1000/pid.76001/pmix_dstor_ds21_76001/smseg-2040266753-0
+7fffe5002000-7fffe5003000 r--p 00000000 08:30 56287                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_opencl.so
+7fffe5003000-7fffe5004000 r-xp 00001000 08:30 56287                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_opencl.so
+7fffe5004000-7fffe5005000 r--p 00002000 08:30 56287                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_opencl.so
+7fffe5005000-7fffe5006000 r--p 00002000 08:30 56287                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_opencl.so
+7fffe5006000-7fffe5007000 rw-p 00003000 08:30 56287                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_opencl.so
+7fffe5007000-7fffe5009000 r--p 00000000 08:30 56294                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so
+7fffe5009000-7fffe500b000 r-xp 00002000 08:30 56294                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so
+7fffe500b000-7fffe500c000 r--p 00004000 08:30 56294                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so
+7fffe500c000-7fffe500d000 r--p 00004000 08:30 56294                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so
+7fffe500d000-7fffe500e000 rw-p 00005000 08:30 56294                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_pci.so
+7fffe500e000-7fffe5010000 r--p 00000000 08:30 56295                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_xml_libxml.so
+7fffe5010000-7fffe5012000 r-xp 00002000 08:30 56295                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_xml_libxml.so
+7fffe5012000-7fffe5013000 r--p 00004000 08:30 56295                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_xml_libxml.so
+7fffe5013000-7fffe5014000 r--p 00004000 08:30 56295                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_xml_libxml.so
+7fffe5014000-7fffe5015000 rw-p 00005000 08:30 56295                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_xml_libxml.so
+7fffe5015000-7fffe5016000 ---p 00000000 00:00 0 
+7fffe5016000-7fffe5816000 rw-p 00000000 00:00 0 
+7fffe5816000-7fffe5824000 r--p 00000000 08:30 48243                      /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.7.0
+7fffe5824000-7fffe5896000 r-xp 0000e000 08:30 48243                      /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.7.0
+7fffe5896000-7fffe58b1000 r--p 00080000 08:30 48243                      /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.7.0
+7fffe58b1000-7fffe58b5000 r--p 0009a000 08:30 48243                      /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.7.0
+7fffe58b5000-7fffe58b7000 rw-p 0009e000 08:30 48243                      /usr/lib/x86_64-linux-gnu/libcurl-gnutls.so.4.7.0
+7fffe58b7000-7fffe58b8000 rw-p 00000000 00:00 0 
+7fffe58b8000-7fffe58e7000 r--p 00000000 08:30 56405                      /usr/lib/x86_64-linux-gnu/pmix2/lib/libpmix.so.2.5.2
+7fffe58e7000-7fffe5a13000 r-xp 0002f000 08:30 56405                      /usr/lib/x86_64-linux-gnu/pmix2/lib/libpmix.so.2.5.2
+7fffe5a13000-7fffe5a5f000 r--p 0015b000 08:30 56405                      /usr/lib/x86_64-linux-gnu/pmix2/lib/libpmix.so.2.5.2
+7fffe5a5f000-7fffe5a61000 r--p 001a6000 08:30 56405                      /usr/lib/x86_64-linux-gnu/pmix2/lib/libpmix.so.2.5.2
+7fffe5a61000-7fffe5a73000 rw-p 001a8000 08:30 56405                      /usr/lib/x86_64-linux-gnu/pmix2/lib/libpmix.so.2.5.2
+7fffe5a73000-7fffe5a75000 rw-p 00000000 00:00 0 
+7fffe5a75000-7fffe5a76000 r--p 00000000 08:30 72209                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_errmgr_default_app.so
+7fffe5a76000-7fffe5a77000 r-xp 00001000 08:30 72209                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_errmgr_default_app.so
+7fffe5a77000-7fffe5a78000 r--p 00002000 08:30 72209                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_errmgr_default_app.so
+7fffe5a78000-7fffe5a79000 r--p 00002000 08:30 72209                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_errmgr_default_app.so
+7fffe5a79000-7fffe5a7a000 rw-p 00003000 08:30 72209                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_errmgr_default_app.so
+7fffe5a7a000-7fffe5a7b000 r--p 00000000 08:30 56282                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_gl.so
+7fffe5a7b000-7fffe5a7c000 r-xp 00001000 08:30 56282                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_gl.so
+7fffe5a7c000-7fffe5a7d000 r--p 00002000 08:30 56282                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_gl.so
+7fffe5a7d000-7fffe5a7e000 r--p 00002000 08:30 56282                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_gl.so
+7fffe5a7e000-7fffe5a7f000 rw-p 00003000 08:30 56282                      /usr/lib/x86_64-linux-gnu/hwloc/hwloc_gl.so
+7fffe5a7f000-7fffe5a80000 r--p 00000000 08:30 72297                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_state_app.so
+7fffe5a80000-7fffe5a81000 r-xp 00001000 08:30 72297                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_state_app.so
+7fffe5a81000-7fffe5a82000 r--p 00002000 08:30 72297                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_state_app.so
+7fffe5a82000-7fffe5a83000 r--p 00002000 08:30 72297                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_state_app.so
+7fffe5a83000-7fffe5a84000 rw-p 00003000 08:30 72297                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_state_app.so
+7fffe5a84000-7fffe5a88000 r--p 00000000 08:30 72252                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_pmix_ext3x.so
+7fffe5a88000-7fffe5a9e000 r-xp 00004000 08:30 72252                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_pmix_ext3x.so
+7fffe5a9e000-7fffe5aa3000 r--p 0001a000 08:30 72252                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_pmix_ext3x.so
+7fffe5aa3000-7fffe5aa4000 r--p 0001e000 08:30 72252                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_pmix_ext3x.so
+7fffe5aa4000-7fffe5aa5000 rw-p 0001f000 08:30 72252                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_pmix_ext3x.so
+7fffe5aa9000-7fffe5aaa000 r--p 00000000 08:30 71921                      /usr/lib/x86_64-linux-gnu/pmix2/lib/pmix/mca_pcompress_zlib.so
+7fffe5aaa000-7fffe5aab000 r-xp 00001000 08:30 71921                      /usr/lib/x86_64-linux-gnu/pmix2/lib/pmix/mca_pcompress_zlib.so
+7fffe5aab000-7fffe5aac000 r--p 00002000 08:30 71921                      /usr/lib/x86_64-linux-gnu/pmix2/lib/pmix/mca_pcompress_zlib.so
+7fffe5aac000-7fffe5aad000 r--p 00002000 08:30 71921                      /usr/lib/x86_64-linux-gnu/pmix2/lib/pmix/mca_pcompress_zlib.so
+7fffe5aad000-7fffe5aae000 rw-p 00003000 08:30 71921                      /usr/lib/x86_64-linux-gnu/pmix2/lib/pmix/mca_pcompress_zlib.so
+7fffe5aae000-7fffe5aaf000 ---p 00000000 00:00 0 
+7fffe5aaf000-7fffe62af000 rw-p 00000000 00:00 0 
+7fffe62af000-7fffe62b7000 r--p 00000000 08:30 11982                      /usr/lib/x86_64-linux-gnu/libnl-3.so.200.26.0
+7fffe62b7000-7fffe62c6000 r-xp 00008000 08:30 11982                      /usr/lib/x86_64-linux-gnu/libnl-3.so.200.26.0
+7fffe62c6000-7fffe62cf000 r--p 00017000 08:30 11982                      /usr/lib/x86_64-linux-gnu/libnl-3.so.200.26.0
+7fffe62cf000-7fffe62d1000 r--p 0001f000 08:30 11982                      /usr/lib/x86_64-linux-gnu/libnl-3.so.200.26.0
+7fffe62d1000-7fffe62d2000 rw-p 00021000 08:30 11982                      /usr/lib/x86_64-linux-gnu/libnl-3.so.200.26.0
+7fffe62d4000-7fffe62d8000 r--p 00000000 08:30 72282                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_ompi.so
+7fffe62d8000-7fffe62db000 r-xp 00004000 08:30 72282                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_ompi.so
+7fffe62db000-7fffe62de000 r--p 00007000 08:30 72282                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_ompi.so
+7fffe62de000-7fffe62df000 r--p 00009000 08:30 72282                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_ompi.so
+7fffe62df000-7fffe62e1000 rw-p 0000a000 08:30 72282                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_ompi.so
+7fffe62e1000-7fffe62e3000 r--p 00000000 08:30 11808                      /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+7fffe62e3000-7fffe62ea000 r-xp 00002000 08:30 11808                      /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+7fffe62ea000-7fffe62eb000 r--p 00009000 08:30 11808                      /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+7fffe62eb000-7fffe62ec000 ---p 0000a000 08:30 11808                      /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+7fffe62ec000-7fffe62ed000 r--p 0000a000 08:30 11808                      /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+7fffe62ed000-7fffe62ee000 rw-p 0000b000 08:30 11808                      /usr/lib/x86_64-linux-gnu/libffi.so.8.1.0
+7fffe62ee000-7fffe62f0000 r--p 00000000 08:30 11945                      /usr/lib/x86_64-linux-gnu/libmd.so.0.0.5
+7fffe62f0000-7fffe62f7000 r-xp 00002000 08:30 11945                      /usr/lib/x86_64-linux-gnu/libmd.so.0.0.5
+7fffe62f7000-7fffe62f9000 r--p 00009000 08:30 11945                      /usr/lib/x86_64-linux-gnu/libmd.so.0.0.5
+7fffe62f9000-7fffe62fa000 r--p 0000a000 08:30 11945                      /usr/lib/x86_64-linux-gnu/libmd.so.0.0.5
+7fffe62fa000-7fffe62fb000 rw-p 0000b000 08:30 11945                      /usr/lib/x86_64-linux-gnu/libmd.so.0.0.5
+7fffe62fb000-7fffe62fe000 r--p 00000000 08:30 12103                      /usr/lib/x86_64-linux-gnu/libtasn1.so.6.6.2
+7fffe62fe000-7fffe630c000 r-xp 00003000 08:30 12103                      /usr/lib/x86_64-linux-gnu/libtasn1.so.6.6.2
+7fffe630c000-7fffe6310000 r--p 00011000 08:30 12103                      /usr/lib/x86_64-linux-gnu/libtasn1.so.6.6.2
+7fffe6310000-7fffe6311000 ---p 00015000 08:30 12103                      /usr/lib/x86_64-linux-gnu/libtasn1.so.6.6.2
+7fffe6311000-7fffe6312000 r--p 00015000 08:30 12103                      /usr/lib/x86_64-linux-gnu/libtasn1.so.6.6.2
+7fffe6312000-7fffe6313000 rw-p 00016000 08:30 12103                      /usr/lib/x86_64-linux-gnu/libtasn1.so.6.6.2
+7fffe6313000-7fffe633c000 r--p 00000000 08:30 320467                     /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.0
+7fffe633c000-7fffe63e0000 r-xp 00029000 08:30 320467                     /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.0
+7fffe63e0000-7fffe643a000 r--p 000cd000 08:30 320467                     /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.0
+7fffe643a000-7fffe6444000 r--p 00126000 08:30 320467                     /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.0
+7fffe6444000-7fffe644e000 rw-p 00130000 08:30 320467                     /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.3.0
+7fffe644e000-7fffe644f000 r--p 00000000 08:30 11712                      /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.0.9
+7fffe644f000-7fffe6450000 r-xp 00001000 08:30 11712                      /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.0.9
+7fffe6450000-7fffe646f000 r--p 00002000 08:30 11712                      /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.0.9
+7fffe646f000-7fffe6470000 r--p 00020000 08:30 11712                      /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.0.9
+7fffe6470000-7fffe6471000 rw-p 00021000 08:30 11712                      /usr/lib/x86_64-linux-gnu/libbrotlicommon.so.1.0.9
+7fffe6471000-7fffe6474000 r--p 00000000 08:30 12073                      /usr/lib/x86_64-linux-gnu/libsasl2.so.2.0.25
+7fffe6474000-7fffe6485000 r-xp 00003000 08:30 12073                      /usr/lib/x86_64-linux-gnu/libsasl2.so.2.0.25
+7fffe6485000-7fffe648a000 r--p 00014000 08:30 12073                      /usr/lib/x86_64-linux-gnu/libsasl2.so.2.0.25
+7fffe648a000-7fffe648b000 r--p 00018000 08:30 12073                      /usr/lib/x86_64-linux-gnu/libsasl2.so.2.0.25
+7fffe648b000-7fffe648c000 rw-p 00019000 08:30 12073                      /usr/lib/x86_64-linux-gnu/libsasl2.so.2.0.25
+7fffe648c000-7fffe64ad000 r--p 00000000 08:30 41217                      /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7fffe64ad000-7fffe650a000 r-xp 00021000 08:30 41217                      /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7fffe650a000-7fffe6547000 r--p 0007e000 08:30 41217                      /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7fffe6547000-7fffe6548000 ---p 000bb000 08:30 41217                      /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7fffe6548000-7fffe6555000 r--p 000bb000 08:30 41217                      /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7fffe6555000-7fffe6557000 rw-p 000c8000 08:30 41217                      /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7fffe6557000-7fffe6561000 r--p 00000000 08:30 11847                      /usr/lib/x86_64-linux-gnu/libgmp.so.10.4.1
+7fffe6561000-7fffe65c0000 r-xp 0000a000 08:30 11847                      /usr/lib/x86_64-linux-gnu/libgmp.so.10.4.1
+7fffe65c0000-7fffe65d7000 r--p 00069000 08:30 11847                      /usr/lib/x86_64-linux-gnu/libgmp.so.10.4.1
+7fffe65d7000-7fffe65d8000 r--p 0007f000 08:30 11847                      /usr/lib/x86_64-linux-gnu/libgmp.so.10.4.1
+7fffe65d8000-7fffe65d9000 rw-p 00080000 08:30 11847                      /usr/lib/x86_64-linux-gnu/libgmp.so.10.4.1
+7fffe65d9000-7fffe65e3000 r--p 00000000 08:30 11970                      /usr/lib/x86_64-linux-gnu/libnettle.so.8.4
+7fffe65e3000-7fffe6606000 r-xp 0000a000 08:30 11970                      /usr/lib/x86_64-linux-gnu/libnettle.so.8.4
+7fffe6606000-7fffe661c000 r--p 0002d000 08:30 11970                      /usr/lib/x86_64-linux-gnu/libnettle.so.8.4
+7fffe661c000-7fffe661e000 r--p 00042000 08:30 11970                      /usr/lib/x86_64-linux-gnu/libnettle.so.8.4
+7fffe661e000-7fffe661f000 rw-p 00044000 08:30 11970                      /usr/lib/x86_64-linux-gnu/libnettle.so.8.4
+7fffe661f000-7fffe6627000 r--p 00000000 08:30 11881                      /usr/lib/x86_64-linux-gnu/libhogweed.so.6.4
+7fffe6627000-7fffe663a000 r-xp 00008000 08:30 11881                      /usr/lib/x86_64-linux-gnu/libhogweed.so.6.4
+7fffe663a000-7fffe6664000 r--p 0001b000 08:30 11881                      /usr/lib/x86_64-linux-gnu/libhogweed.so.6.4
+7fffe6664000-7fffe6665000 ---p 00045000 08:30 11881                      /usr/lib/x86_64-linux-gnu/libhogweed.so.6.4
+7fffe6665000-7fffe6666000 r--p 00045000 08:30 11881                      /usr/lib/x86_64-linux-gnu/libhogweed.so.6.4
+7fffe6666000-7fffe6667000 rw-p 00046000 08:30 11881                      /usr/lib/x86_64-linux-gnu/libhogweed.so.6.4
+7fffe6667000-7fffe6698000 r--p 00000000 08:30 11030                      /usr/lib/x86_64-linux-gnu/libgnutls.so.30.31.0
+7fffe6698000-7fffe67c3000 r-xp 00031000 08:30 11030                      /usr/lib/x86_64-linux-gnu/libgnutls.so.30.31.0
+7fffe67c3000-7fffe6840000 r--p 0015c000 08:30 11030                      /usr/lib/x86_64-linux-gnu/libgnutls.so.30.31.0
+7fffe6840000-7fffe6850000 r--p 001d8000 08:30 11030                      /usr/lib/x86_64-linux-gnu/libgnutls.so.30.31.0
+7fffe6850000-7fffe6852000 rw-p 001e8000 08:30 11030                      /usr/lib/x86_64-linux-gnu/libgnutls.so.30.31.0
+7fffe6852000-7fffe6854000 rw-p 00000000 00:00 0 
+7fffe6854000-7fffe6865000 r--p 00000000 08:30 12120                      /usr/lib/x86_64-linux-gnu/libunistring.so.2.2.0
+7fffe6865000-7fffe689b000 r-xp 00011000 08:30 12120                      /usr/lib/x86_64-linux-gnu/libunistring.so.2.2.0
+7fffe689b000-7fffe69f9000 r--p 00047000 08:30 12120                      /usr/lib/x86_64-linux-gnu/libunistring.so.2.2.0
+7fffe69f9000-7fffe69fd000 r--p 001a5000 08:30 12120                      /usr/lib/x86_64-linux-gnu/libunistring.so.2.2.0
+7fffe69fd000-7fffe69fe000 rw-p 001a9000 08:30 12120                      /usr/lib/x86_64-linux-gnu/libunistring.so.2.2.0
+7fffe69fe000-7fffe6a08000 r--p 00000000 08:30 12185                      /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8
+7fffe6a08000-7fffe6aba000 r-xp 0000a000 08:30 12185                      /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8
+7fffe6aba000-7fffe6acb000 r--p 000bc000 08:30 12185                      /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8
+7fffe6acb000-7fffe6acc000 r--p 000cc000 08:30 12185                      /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8
+7fffe6acc000-7fffe6acd000 rw-p 000cd000 08:30 12185                      /usr/lib/x86_64-linux-gnu/libzstd.so.1.4.8
+7fffe6acd000-7fffe6adb000 r--p 00000000 08:30 11930                      /usr/lib/x86_64-linux-gnu/libldap-2.5.so.0.1.15
+7fffe6adb000-7fffe6b16000 r-xp 0000e000 08:30 11930                      /usr/lib/x86_64-linux-gnu/libldap-2.5.so.0.1.15
+7fffe6b16000-7fffe6b27000 r--p 00049000 08:30 11930                      /usr/lib/x86_64-linux-gnu/libldap-2.5.so.0.1.15
+7fffe6b27000-7fffe6b28000 ---p 0005a000 08:30 11930                      /usr/lib/x86_64-linux-gnu/libldap-2.5.so.0.1.15
+7fffe6b28000-7fffe6b2a000 r--p 0005a000 08:30 11930                      /usr/lib/x86_64-linux-gnu/libldap-2.5.so.0.1.15
+7fffe6b2a000-7fffe6b2b000 rw-p 0005c000 08:30 11930                      /usr/lib/x86_64-linux-gnu/libldap-2.5.so.0.1.15
+7fffe6b2b000-7fffe6b2d000 rw-p 00000000 00:00 0 
+7fffe6b2d000-7fffe6b4b000 r--p 00000000 08:30 13990                      /usr/lib/x86_64-linux-gnu/libssl.so.3
+7fffe6b4b000-7fffe6ba6000 r-xp 0001e000 08:30 13990                      /usr/lib/x86_64-linux-gnu/libssl.so.3
+7fffe6ba6000-7fffe6bc3000 r--p 00079000 08:30 13990                      /usr/lib/x86_64-linux-gnu/libssl.so.3
+7fffe6bc3000-7fffe6bcd000 r--p 00095000 08:30 13990                      /usr/lib/x86_64-linux-gnu/libssl.so.3
+7fffe6bcd000-7fffe6bd1000 rw-p 0009f000 08:30 13990                      /usr/lib/x86_64-linux-gnu/libssl.so.3
+7fffe6bd1000-7fffe6bde000 r--p 00000000 08:30 1903                       /usr/lib/x86_64-linux-gnu/libssh.so.4.8.7
+7fffe6bde000-7fffe6c22000 r-xp 0000d000 08:30 1903                       /usr/lib/x86_64-linux-gnu/libssh.so.4.8.7
+7fffe6c22000-7fffe6c3b000 r--p 00051000 08:30 1903                       /usr/lib/x86_64-linux-gnu/libssh.so.4.8.7
+7fffe6c3b000-7fffe6c3d000 r--p 00069000 08:30 1903                       /usr/lib/x86_64-linux-gnu/libssh.so.4.8.7
+7fffe6c3d000-7fffe6c3f000 rw-p 0006b000 08:30 1903                       /usr/lib/x86_64-linux-gnu/libssh.so.4.8.7
+7fffe6c3f000-7fffe6c50000 r--p 00000000 08:30 305990                     /usr/lib/x86_64-linux-gnu/libtrilinos_kokkoscore.so.13.2
+7fffe6c50000-7fffe6c77000 r-xp 00011000 08:30 305990                     /usr/lib/x86_64-linux-gnu/libtrilinos_kokkoscore.so.13.2
+7fffe6c77000-7fffe6c84000 r--p 00038000 08:30 305990                     /usr/lib/x86_64-linux-gnu/libtrilinos_kokkoscore.so.13.2
+7fffe6c84000-7fffe6c85000 ---p 00045000 08:30 305990                     /usr/lib/x86_64-linux-gnu/libtrilinos_kokkoscore.so.13.2
+7fffe6c85000-7fffe6c86000 r--p 00045000 08:30 305990                     /usr/lib/x86_64-linux-gnu/libtrilinos_kokkoscore.so.13.2
+7fffe6c86000-7fffe6c87000 rw-p 00046000 08:30 305990                     /usr/lib/x86_64-linux-gnu/libtrilinos_kokkoscore.so.13.2
+7fffe6c87000-7fffe6cc9000 rw-p 00000000 00:00 0 
+7fffe6cc9000-7fffe6cd3000 r--p 00000000 08:30 306008                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparser.so.13.2
+7fffe6cd3000-7fffe6d17000 r-xp 0000a000 08:30 306008                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparser.so.13.2
+7fffe6d17000-7fffe6d26000 r--p 0004e000 08:30 306008                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparser.so.13.2
+7fffe6d26000-7fffe6d27000 ---p 0005d000 08:30 306008                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparser.so.13.2
+7fffe6d27000-7fffe6d28000 r--p 0005d000 08:30 306008                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparser.so.13.2
+7fffe6d28000-7fffe6d29000 rw-p 0005e000 08:30 306008                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparser.so.13.2
+7fffe6d29000-7fffe6d50000 r--p 00000000 08:30 306002                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscomm.so.13.2
+7fffe6d50000-7fffe6dd2000 r-xp 00027000 08:30 306002                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscomm.so.13.2
+7fffe6dd2000-7fffe6df6000 r--p 000a9000 08:30 306002                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscomm.so.13.2
+7fffe6df6000-7fffe6dff000 r--p 000cc000 08:30 306002                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscomm.so.13.2
+7fffe6dff000-7fffe6e00000 rw-p 000d5000 08:30 306002                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscomm.so.13.2
+7fffe6e00000-7fffe6eb2000 r--p 00000000 08:30 13943                      /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+7fffe6eb2000-7fffe7111000 r-xp 000b2000 08:30 13943                      /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+7fffe7111000-7fffe71e3000 r--p 00311000 08:30 13943                      /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+7fffe71e3000-7fffe723e000 r--p 003e2000 08:30 13943                      /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+7fffe723e000-7fffe7241000 rw-p 0043d000 08:30 13943                      /usr/lib/x86_64-linux-gnu/libcrypto.so.3
+7fffe7241000-7fffe7244000 rw-p 00000000 00:00 0 
+7fffe7244000-7fffe7246000 r--p 00000000 08:30 72216                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_ess_singleton.so
+7fffe7246000-7fffe7249000 r-xp 00002000 08:30 72216                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_ess_singleton.so
+7fffe7249000-7fffe724a000 r--p 00005000 08:30 72216                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_ess_singleton.so
+7fffe724a000-7fffe724b000 r--p 00005000 08:30 72216                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_ess_singleton.so
+7fffe724b000-7fffe724c000 rw-p 00006000 08:30 72216                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_ess_singleton.so
+7fffe724c000-7fffe7257000 r--p 00000000 08:30 41225                      /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7fffe7257000-7fffe728f000 r-xp 0000b000 08:30 41225                      /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7fffe728f000-7fffe729b000 r--p 00043000 08:30 41225                      /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7fffe729b000-7fffe729c000 ---p 0004f000 08:30 41225                      /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7fffe729c000-7fffe729e000 r--p 0004f000 08:30 41225                      /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7fffe729e000-7fffe72a0000 rw-p 00051000 08:30 41225                      /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7fffe72a0000-7fffe72b0000 r--p 00000000 08:30 306032                     /usr/lib/x86_64-linux-gnu/libtrilinos_triutils.so.13.2
+7fffe72b0000-7fffe72ec000 r-xp 00010000 08:30 306032                     /usr/lib/x86_64-linux-gnu/libtrilinos_triutils.so.13.2
+7fffe72ec000-7fffe72fa000 r--p 0004c000 08:30 306032                     /usr/lib/x86_64-linux-gnu/libtrilinos_triutils.so.13.2
+7fffe72fa000-7fffe72fd000 r--p 00059000 08:30 306032                     /usr/lib/x86_64-linux-gnu/libtrilinos_triutils.so.13.2
+7fffe72fd000-7fffe72fe000 rw-p 0005c000 08:30 306032                     /usr/lib/x86_64-linux-gnu/libtrilinos_triutils.so.13.2
+7fffe72fe000-7fffe730d000 r--p 00000000 08:30 15202                      /usr/lib/x86_64-linux-gnu/libcurl.so.4.7.0
+7fffe730d000-7fffe7382000 r-xp 0000f000 08:30 15202                      /usr/lib/x86_64-linux-gnu/libcurl.so.4.7.0
+7fffe7382000-7fffe739d000 r--p 00084000 08:30 15202                      /usr/lib/x86_64-linux-gnu/libcurl.so.4.7.0
+7fffe739d000-7fffe739e000 ---p 0009f000 08:30 15202                      /usr/lib/x86_64-linux-gnu/libcurl.so.4.7.0
+7fffe739e000-7fffe73a2000 r--p 0009f000 08:30 15202                      /usr/lib/x86_64-linux-gnu/libcurl.so.4.7.0
+7fffe73a2000-7fffe73a4000 rw-p 000a3000 08:30 15202                      /usr/lib/x86_64-linux-gnu/libcurl.so.4.7.0
+7fffe73a4000-7fffe73a5000 rw-p 00000000 00:00 0 
+7fffe73a5000-7fffe73b8000 r--p 00000000 08:30 306003                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscore.so.13.2
+7fffe73b8000-7fffe73ec000 r-xp 00013000 08:30 306003                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscore.so.13.2
+7fffe73ec000-7fffe73fb000 r--p 00047000 08:30 306003                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscore.so.13.2
+7fffe73fb000-7fffe73fc000 ---p 00056000 08:30 306003                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscore.so.13.2
+7fffe73fc000-7fffe73ff000 r--p 00056000 08:30 306003                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscore.so.13.2
+7fffe73ff000-7fffe7400000 rw-p 00059000 08:30 306003                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchoscore.so.13.2
+7fffe7400000-7fffe7486000 r--p 00000000 08:30 306007                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparameterlist.so.13.2
+7fffe7486000-7fffe7676000 r-xp 00086000 08:30 306007                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparameterlist.so.13.2
+7fffe7676000-7fffe76fc000 r--p 00276000 08:30 306007                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparameterlist.so.13.2
+7fffe76fc000-7fffe76fd000 ---p 002fc000 08:30 306007                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparameterlist.so.13.2
+7fffe76fd000-7fffe771e000 r--p 002fc000 08:30 306007                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparameterlist.so.13.2
+7fffe771e000-7fffe771f000 rw-p 0031d000 08:30 306007                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosparameterlist.so.13.2
+7fffe771f000-7fffe7721000 rw-p 00000000 00:00 0 
+7fffe7722000-7fffe7725000 r--p 00000000 08:30 54352                      /usr/lib/x86_64-linux-gnu/libresolv.so.2
+7fffe7725000-7fffe772e000 r-xp 00003000 08:30 54352                      /usr/lib/x86_64-linux-gnu/libresolv.so.2
+7fffe772e000-7fffe7731000 r--p 0000c000 08:30 54352                      /usr/lib/x86_64-linux-gnu/libresolv.so.2
+7fffe7731000-7fffe7732000 r--p 0000e000 08:30 54352                      /usr/lib/x86_64-linux-gnu/libresolv.so.2
+7fffe7732000-7fffe7733000 rw-p 0000f000 08:30 54352                      /usr/lib/x86_64-linux-gnu/libresolv.so.2
+7fffe7733000-7fffe7735000 rw-p 00000000 00:00 0 
+7fffe7735000-7fffe7773000 r--p 00000000 08:30 306021                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetra.so.13.2
+7fffe7773000-7fffe785a000 r-xp 0003e000 08:30 306021                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetra.so.13.2
+7fffe785a000-7fffe788d000 r--p 00125000 08:30 306021                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetra.so.13.2
+7fffe788d000-7fffe788e000 ---p 00158000 08:30 306021                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetra.so.13.2
+7fffe788e000-7fffe7897000 r--p 00158000 08:30 306021                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetra.so.13.2
+7fffe7897000-7fffe7898000 rw-p 00161000 08:30 306021                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetra.so.13.2
+7fffe7898000-7fffe78d5000 r--p 00000000 08:30 306043                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetraext.so.13.2
+7fffe78d5000-7fffe79c5000 r-xp 0003d000 08:30 306043                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetraext.so.13.2
+7fffe79c5000-7fffe79f5000 r--p 0012d000 08:30 306043                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetraext.so.13.2
+7fffe79f5000-7fffe79f6000 ---p 0015d000 08:30 306043                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetraext.so.13.2
+7fffe79f6000-7fffe79ff000 r--p 0015d000 08:30 306043                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetraext.so.13.2
+7fffe79ff000-7fffe7a00000 rw-p 00166000 08:30 306043                     /usr/lib/x86_64-linux-gnu/libtrilinos_epetraext.so.13.2
+7fffe7a00000-7fffe7a01000 r--p 00000000 08:30 11883                      /usr/lib/x86_64-linux-gnu/libicudata.so.70.1
+7fffe7a01000-7fffe7a02000 r-xp 00001000 08:30 11883                      /usr/lib/x86_64-linux-gnu/libicudata.so.70.1
+7fffe7a02000-7fffe961c000 r--p 00002000 08:30 11883                      /usr/lib/x86_64-linux-gnu/libicudata.so.70.1
+7fffe961c000-7fffe961d000 r--p 01c1b000 08:30 11883                      /usr/lib/x86_64-linux-gnu/libicudata.so.70.1
+7fffe961d000-7fffe961e000 rw-p 01c1c000 08:30 11883                      /usr/lib/x86_64-linux-gnu/libicudata.so.70.1
+7fffe9620000-7fffe9624000 r--p 00000000 08:30 10912                      /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7fffe9624000-7fffe963f000 r-xp 00004000 08:30 10912                      /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7fffe963f000-7fffe964b000 r--p 0001f000 08:30 10912                      /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7fffe964b000-7fffe964c000 ---p 0002b000 08:30 10912                      /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7fffe964c000-7fffe964d000 r--p 0002b000 08:30 10912                      /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7fffe964d000-7fffe964e000 rw-p 0002c000 08:30 10912                      /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7fffe964e000-7fffe964f000 rw-p 00000000 00:00 0 
+7fffe964f000-7fffe9654000 r--p 00000000 08:30 12071                      /usr/lib/x86_64-linux-gnu/librtmp.so.1
+7fffe9654000-7fffe9664000 r-xp 00005000 08:30 12071                      /usr/lib/x86_64-linux-gnu/librtmp.so.1
+7fffe9664000-7fffe966b000 r--p 00015000 08:30 12071                      /usr/lib/x86_64-linux-gnu/librtmp.so.1
+7fffe966b000-7fffe966c000 ---p 0001c000 08:30 12071                      /usr/lib/x86_64-linux-gnu/librtmp.so.1
+7fffe966c000-7fffe966d000 r--p 0001c000 08:30 12071                      /usr/lib/x86_64-linux-gnu/librtmp.so.1
+7fffe966d000-7fffe966e000 rw-p 0001d000 08:30 12071                      /usr/lib/x86_64-linux-gnu/librtmp.so.1
+7fffe966e000-7fffe969f000 r--p 00000000 08:30 306100                     /usr/lib/x86_64-linux-gnu/libtrilinos_ifpack.so.13.2
+7fffe969f000-7fffe97bf000 r-xp 00031000 08:30 306100                     /usr/lib/x86_64-linux-gnu/libtrilinos_ifpack.so.13.2
+7fffe97bf000-7fffe97f4000 r--p 00151000 08:30 306100                     /usr/lib/x86_64-linux-gnu/libtrilinos_ifpack.so.13.2
+7fffe97f4000-7fffe97ff000 r--p 00185000 08:30 306100                     /usr/lib/x86_64-linux-gnu/libtrilinos_ifpack.so.13.2
+7fffe97ff000-7fffe9800000 rw-p 00190000 08:30 306100                     /usr/lib/x86_64-linux-gnu/libtrilinos_ifpack.so.13.2
+7fffe9800000-7fffe98e7000 r--p 00000000 08:30 11885                      /usr/lib/x86_64-linux-gnu/libicui18n.so.70.1
+7fffe98e7000-7fffe9a8a000 r-xp 000e7000 08:30 11885                      /usr/lib/x86_64-linux-gnu/libicui18n.so.70.1
+7fffe9a8a000-7fffe9b1c000 r--p 0028a000 08:30 11885                      /usr/lib/x86_64-linux-gnu/libicui18n.so.70.1
+7fffe9b1c000-7fffe9b2d000 r--p 0031b000 08:30 11885                      /usr/lib/x86_64-linux-gnu/libicui18n.so.70.1
+7fffe9b2d000-7fffe9b2e000 rw-p 0032c000 08:30 11885                      /usr/lib/x86_64-linux-gnu/libicui18n.so.70.1
+7fffe9b2e000-7fffe9b2f000 rw-p 00000000 00:00 0 
+7fffe9b2f000-7fffe9b33000 r--p 00000000 08:30 11718                      /usr/lib/x86_64-linux-gnu/libbsd.so.0.11.5
+7fffe9b33000-7fffe9b40000 r-xp 00004000 08:30 11718                      /usr/lib/x86_64-linux-gnu/libbsd.so.0.11.5
+7fffe9b40000-7fffe9b43000 r--p 00011000 08:30 11718                      /usr/lib/x86_64-linux-gnu/libbsd.so.0.11.5
+7fffe9b43000-7fffe9b44000 ---p 00014000 08:30 11718                      /usr/lib/x86_64-linux-gnu/libbsd.so.0.11.5
+7fffe9b44000-7fffe9b45000 r--p 00014000 08:30 11718                      /usr/lib/x86_64-linux-gnu/libbsd.so.0.11.5
+7fffe9b45000-7fffe9b46000 rw-p 00015000 08:30 11718                      /usr/lib/x86_64-linux-gnu/libbsd.so.0.11.5
+7fffe9b46000-7fffe9b47000 rw-p 00000000 00:00 0 
+7fffe9b47000-7fffe9b4c000 r--p 00000000 08:30 47989                      /usr/lib/x86_64-linux-gnu/libnghttp2.so.14.20.1
+7fffe9b4c000-7fffe9b61000 r-xp 00005000 08:30 47989                      /usr/lib/x86_64-linux-gnu/libnghttp2.so.14.20.1
+7fffe9b61000-7fffe9b6d000 r--p 0001a000 08:30 47989                      /usr/lib/x86_64-linux-gnu/libnghttp2.so.14.20.1
+7fffe9b6d000-7fffe9b70000 r--p 00025000 08:30 47989                      /usr/lib/x86_64-linux-gnu/libnghttp2.so.14.20.1
+7fffe9b70000-7fffe9b71000 rw-p 00028000 08:30 47989                      /usr/lib/x86_64-linux-gnu/libnghttp2.so.14.20.1
+7fffe9b71000-7fffe9b8c000 r--p 00000000 08:30 305938                     /usr/lib/x86_64-linux-gnu/libscotch-6.1.3.so
+7fffe9b8c000-7fffe9bdf000 r-xp 0001b000 08:30 305938                     /usr/lib/x86_64-linux-gnu/libscotch-6.1.3.so
+7fffe9bdf000-7fffe9bf8000 r--p 0006e000 08:30 305938                     /usr/lib/x86_64-linux-gnu/libscotch-6.1.3.so
+7fffe9bf8000-7fffe9bf9000 ---p 00087000 08:30 305938                     /usr/lib/x86_64-linux-gnu/libscotch-6.1.3.so
+7fffe9bf9000-7fffe9bfa000 r--p 00087000 08:30 305938                     /usr/lib/x86_64-linux-gnu/libscotch-6.1.3.so
+7fffe9bfa000-7fffe9bff000 rw-p 00088000 08:30 305938                     /usr/lib/x86_64-linux-gnu/libscotch-6.1.3.so
+7fffe9bff000-7fffe9c00000 rw-p 00000000 00:00 0 
+7fffe9c00000-7fffe9c1d000 r--p 00000000 08:30 55892                      /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7fffe9c1d000-7fffe9ea6000 r-xp 0001d000 08:30 55892                      /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7fffe9ea6000-7fffe9ed7000 r--p 002a6000 08:30 55892                      /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7fffe9ed7000-7fffe9ed8000 ---p 002d7000 08:30 55892                      /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7fffe9ed8000-7fffe9ed9000 r--p 002d7000 08:30 55892                      /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7fffe9ed9000-7fffe9edb000 rw-p 002d8000 08:30 55892                      /usr/lib/x86_64-linux-gnu/libgfortran.so.5.0.0
+7fffe9edb000-7fffe9edc000 r--p 00000000 08:30 72284                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_slurm.so
+7fffe9edc000-7fffe9edd000 r-xp 00001000 08:30 72284                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_slurm.so
+7fffe9edd000-7fffe9ede000 r--p 00002000 08:30 72284                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_slurm.so
+7fffe9ede000-7fffe9edf000 r--p 00002000 08:30 72284                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_slurm.so
+7fffe9edf000-7fffe9ee0000 rw-p 00003000 08:30 72284                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_slurm.so
+7fffe9ee0000-7fffe9ee2000 r--p 00000000 08:30 11895                      /usr/lib/x86_64-linux-gnu/libidn2.so.0.3.7
+7fffe9ee2000-7fffe9ee6000 r-xp 00002000 08:30 11895                      /usr/lib/x86_64-linux-gnu/libidn2.so.0.3.7
+7fffe9ee6000-7fffe9eff000 r--p 00006000 08:30 11895                      /usr/lib/x86_64-linux-gnu/libidn2.so.0.3.7
+7fffe9eff000-7fffe9f00000 r--p 0001e000 08:30 11895                      /usr/lib/x86_64-linux-gnu/libidn2.so.0.3.7
+7fffe9f00000-7fffe9f01000 rw-p 0001f000 08:30 11895                      /usr/lib/x86_64-linux-gnu/libidn2.so.0.3.7
+7fffe9f01000-7fffe9f0c000 r--p 00000000 08:30 306006                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosnumerics.so.13.2
+7fffe9f0c000-7fffe9f17000 r-xp 0000b000 08:30 306006                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosnumerics.so.13.2
+7fffe9f17000-7fffe9f1b000 r--p 00016000 08:30 306006                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosnumerics.so.13.2
+7fffe9f1b000-7fffe9f1c000 ---p 0001a000 08:30 306006                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosnumerics.so.13.2
+7fffe9f1c000-7fffe9f1d000 r--p 0001a000 08:30 306006                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosnumerics.so.13.2
+7fffe9f1d000-7fffe9f1e000 rw-p 0001b000 08:30 306006                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosnumerics.so.13.2
+7fffe9f1e000-7fffe9f2c000 r--p 00000000 08:30 306111                     /usr/lib/x86_64-linux-gnu/libtrilinos_zoltan.so.13.2
+7fffe9f2c000-7fffe9fd8000 r-xp 0000e000 08:30 306111                     /usr/lib/x86_64-linux-gnu/libtrilinos_zoltan.so.13.2
+7fffe9fd8000-7fffe9ffa000 r--p 000ba000 08:30 306111                     /usr/lib/x86_64-linux-gnu/libtrilinos_zoltan.so.13.2
+7fffe9ffa000-7fffe9ffb000 ---p 000dc000 08:30 306111                     /usr/lib/x86_64-linux-gnu/libtrilinos_zoltan.so.13.2
+7fffe9ffb000-7fffe9ffc000 r--p 000dc000 08:30 306111                     /usr/lib/x86_64-linux-gnu/libtrilinos_zoltan.so.13.2
+7fffe9ffc000-7fffe9fff000 rw-p 000dd000 08:30 306111                     /usr/lib/x86_64-linux-gnu/libtrilinos_zoltan.so.13.2
+7fffe9fff000-7fffea000000 rw-p 00000000 00:00 0 
+7fffea000000-7fffea03c000 r--p 00000000 08:30 305599                     /usr/lib/x86_64-linux-gnu/libhdf5_openmpi.so.103.3.0
+7fffea03c000-7fffea2db000 r-xp 0003c000 08:30 305599                     /usr/lib/x86_64-linux-gnu/libhdf5_openmpi.so.103.3.0
+7fffea2db000-7fffea3a1000 r--p 002db000 08:30 305599                     /usr/lib/x86_64-linux-gnu/libhdf5_openmpi.so.103.3.0
+7fffea3a1000-7fffea3a2000 ---p 003a1000 08:30 305599                     /usr/lib/x86_64-linux-gnu/libhdf5_openmpi.so.103.3.0
+7fffea3a2000-7fffea3ab000 r--p 003a1000 08:30 305599                     /usr/lib/x86_64-linux-gnu/libhdf5_openmpi.so.103.3.0
+7fffea3ab000-7fffea3b3000 rw-p 003aa000 08:30 305599                     /usr/lib/x86_64-linux-gnu/libhdf5_openmpi.so.103.3.0
+7fffea3b3000-7fffea3b5000 rw-p 00000000 00:00 0 
+7fffea3b8000-7fffea3bb000 r--p 00000000 08:30 52830                      /usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0
+7fffea3bb000-7fffea3e7000 r-xp 00003000 08:30 52830                      /usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0
+7fffea3e7000-7fffea3fe000 r--p 0002f000 08:30 52830                      /usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0
+7fffea3fe000-7fffea3ff000 r--p 00045000 08:30 52830                      /usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0
+7fffea3ff000-7fffea400000 rw-p 00046000 08:30 52830                      /usr/lib/x86_64-linux-gnu/libquadmath.so.0.0.0
+7fffea400000-7fffea41f000 r--p 00000000 08:30 305291                     /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
+7fffea41f000-7fffeaa90000 r-xp 0001f000 08:30 305291                     /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
+7fffeaa90000-7fffeab33000 r--p 00690000 08:30 305291                     /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
+7fffeab33000-7fffeab37000 r--p 00732000 08:30 305291                     /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
+7fffeab37000-7fffeab39000 rw-p 00736000 08:30 305291                     /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.10.0
+7fffeab39000-7fffeab3a000 r--p 00000000 08:30 72280                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_flux.so
+7fffeab3a000-7fffeab3b000 r-xp 00001000 08:30 72280                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_flux.so
+7fffeab3b000-7fffeab3c000 r--p 00002000 08:30 72280                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_flux.so
+7fffeab3c000-7fffeab3d000 r--p 00002000 08:30 72280                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_flux.so
+7fffeab3d000-7fffeab3e000 rw-p 00003000 08:30 72280                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_flux.so
+7fffeab3e000-7fffeab41000 r--p 00000000 08:30 19193                      /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7fffeab41000-7fffeab47000 r-xp 00003000 08:30 19193                      /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7fffeab47000-7fffeab49000 r--p 00009000 08:30 19193                      /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7fffeab49000-7fffeab4a000 ---p 0000b000 08:30 19193                      /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7fffeab4a000-7fffeab4b000 r--p 0000b000 08:30 19193                      /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7fffeab4b000-7fffeab4c000 rw-p 0000c000 08:30 19193                      /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7fffeab4c000-7fffeab4f000 r--p 00000000 08:30 306054                     /usr/lib/x86_64-linux-gnu/libtrilinos_trilinosss.so.13.2
+7fffeab4f000-7fffeab75000 r-xp 00003000 08:30 306054                     /usr/lib/x86_64-linux-gnu/libtrilinos_trilinosss.so.13.2
+7fffeab75000-7fffeab7a000 r--p 00029000 08:30 306054                     /usr/lib/x86_64-linux-gnu/libtrilinos_trilinosss.so.13.2
+7fffeab7a000-7fffeab7b000 r--p 0002d000 08:30 306054                     /usr/lib/x86_64-linux-gnu/libtrilinos_trilinosss.so.13.2
+7fffeab7b000-7fffeab7c000 rw-p 0002e000 08:30 306054                     /usr/lib/x86_64-linux-gnu/libtrilinos_trilinosss.so.13.2
+7fffeab7c000-7fffeab90000 r--p 00000000 08:30 306076                     /usr/lib/x86_64-linux-gnu/libtrilinos_aztecoo.so.13.2
+7fffeab90000-7fffeabe6000 r-xp 00014000 08:30 306076                     /usr/lib/x86_64-linux-gnu/libtrilinos_aztecoo.so.13.2
+7fffeabe6000-7fffeabfc000 r--p 0006a000 08:30 306076                     /usr/lib/x86_64-linux-gnu/libtrilinos_aztecoo.so.13.2
+7fffeabfc000-7fffeabff000 r--p 0007f000 08:30 306076                     /usr/lib/x86_64-linux-gnu/libtrilinos_aztecoo.so.13.2
+7fffeabff000-7fffeac00000 rw-p 00082000 08:30 306076                     /usr/lib/x86_64-linux-gnu/libtrilinos_aztecoo.so.13.2
+7fffeac00000-7fffeac23000 r--p 00000000 08:30 305383                     /usr/lib/x86_64-linux-gnu/libfftw3.so.3.5.8
+7fffeac23000-7fffeade1000 r-xp 00023000 08:30 305383                     /usr/lib/x86_64-linux-gnu/libfftw3.so.3.5.8
+7fffeade1000-7fffeae09000 r--p 001e1000 08:30 305383                     /usr/lib/x86_64-linux-gnu/libfftw3.so.3.5.8
+7fffeae09000-7fffeae1a000 r--p 00208000 08:30 305383                     /usr/lib/x86_64-linux-gnu/libfftw3.so.3.5.8
+7fffeae1a000-7fffeae1b000 rw-p 00219000 08:30 305383                     /usr/lib/x86_64-linux-gnu/libfftw3.so.3.5.8
+7fffeae1e000-7fffeae20000 r--p 00000000 08:30 11916                      /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.9
+7fffeae20000-7fffeae22000 r-xp 00002000 08:30 11916                      /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.9
+7fffeae22000-7fffeae23000 r--p 00004000 08:30 11916                      /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.9
+7fffeae23000-7fffeae24000 r--p 00004000 08:30 11916                      /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.9
+7fffeae24000-7fffeae25000 rw-p 00005000 08:30 11916                      /usr/lib/x86_64-linux-gnu/libkeyutils.so.1.9
+7fffeae25000-7fffeae32000 r--p 00000000 08:30 306087                     /usr/lib/x86_64-linux-gnu/libtrilinos_galeri-epetra.so.13.2
+7fffeae32000-7fffeae5e000 r-xp 0000d000 08:30 306087                     /usr/lib/x86_64-linux-gnu/libtrilinos_galeri-epetra.so.13.2
+7fffeae5e000-7fffeae67000 r--p 00039000 08:30 306087                     /usr/lib/x86_64-linux-gnu/libtrilinos_galeri-epetra.so.13.2
+7fffeae67000-7fffeae6a000 r--p 00041000 08:30 306087                     /usr/lib/x86_64-linux-gnu/libtrilinos_galeri-epetra.so.13.2
+7fffeae6a000-7fffeae6b000 rw-p 00044000 08:30 306087                     /usr/lib/x86_64-linux-gnu/libtrilinos_galeri-epetra.so.13.2
+7fffeae6b000-7fffeae7c000 r--p 00000000 08:30 306065                     /usr/lib/x86_64-linux-gnu/libtrilinos_amesos.so.13.2
+7fffeae7c000-7fffeaeaf000 r-xp 00011000 08:30 306065                     /usr/lib/x86_64-linux-gnu/libtrilinos_amesos.so.13.2
+7fffeaeaf000-7fffeaebb000 r--p 00044000 08:30 306065                     /usr/lib/x86_64-linux-gnu/libtrilinos_amesos.so.13.2
+7fffeaebb000-7fffeaebc000 ---p 00050000 08:30 306065                     /usr/lib/x86_64-linux-gnu/libtrilinos_amesos.so.13.2
+7fffeaebc000-7fffeaebf000 r--p 00050000 08:30 306065                     /usr/lib/x86_64-linux-gnu/libtrilinos_amesos.so.13.2
+7fffeaebf000-7fffeaec0000 rw-p 00053000 08:30 306065                     /usr/lib/x86_64-linux-gnu/libtrilinos_amesos.so.13.2
+7fffeaec0000-7fffeaed9000 r--p 00000000 08:30 11646                      /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+7fffeaed9000-7fffeaf65000 r-xp 00019000 08:30 11646                      /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+7fffeaf65000-7fffeaffa000 r--p 000a5000 08:30 11646                      /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+7fffeaffa000-7fffeaffb000 ---p 0013a000 08:30 11646                      /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+7fffeaffb000-7fffeaffc000 r--p 0013a000 08:30 11646                      /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+7fffeaffc000-7fffeb000000 rw-p 0013b000 08:30 11646                      /usr/lib/x86_64-linux-gnu/libX11.so.6.4.0
+7fffeb000000-7fffeb03b000 r--p 00000000 08:30 306122                     /usr/lib/x86_64-linux-gnu/libtrilinos_ml.so.13.2
+7fffeb03b000-7fffeb244000 r-xp 0003b000 08:30 306122                     /usr/lib/x86_64-linux-gnu/libtrilinos_ml.so.13.2
+7fffeb244000-7fffeb2a6000 r--p 00244000 08:30 306122                     /usr/lib/x86_64-linux-gnu/libtrilinos_ml.so.13.2
+7fffeb2a6000-7fffeb2a7000 ---p 002a6000 08:30 306122                     /usr/lib/x86_64-linux-gnu/libtrilinos_ml.so.13.2
+7fffeb2a7000-7fffeb2af000 r--p 002a6000 08:30 306122                     /usr/lib/x86_64-linux-gnu/libtrilinos_ml.so.13.2
+7fffeb2af000-7fffeb2b0000 rw-p 002ae000 08:30 306122                     /usr/lib/x86_64-linux-gnu/libtrilinos_ml.so.13.2
+7fffeb2b0000-7fffeb2b9000 rw-p 00000000 00:00 0 
+7fffeb2b9000-7fffeb2ba000 r--p 00000000 08:30 72281                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_jsm.so
+7fffeb2ba000-7fffeb2bb000 r-xp 00001000 08:30 72281                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_jsm.so
+7fffeb2bb000-7fffeb2bc000 r--p 00002000 08:30 72281                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_jsm.so
+7fffeb2bc000-7fffeb2bd000 r--p 00002000 08:30 72281                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_jsm.so
+7fffeb2bd000-7fffeb2be000 rw-p 00003000 08:30 72281                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_jsm.so
+7fffeb2be000-7fffeb2c1000 r--p 00000000 08:30 11926                      /usr/lib/x86_64-linux-gnu/liblber-2.5.so.0.1.15
+7fffeb2c1000-7fffeb2c9000 r-xp 00003000 08:30 11926                      /usr/lib/x86_64-linux-gnu/liblber-2.5.so.0.1.15
+7fffeb2c9000-7fffeb2cc000 r--p 0000b000 08:30 11926                      /usr/lib/x86_64-linux-gnu/liblber-2.5.so.0.1.15
+7fffeb2cc000-7fffeb2cd000 ---p 0000e000 08:30 11926                      /usr/lib/x86_64-linux-gnu/liblber-2.5.so.0.1.15
+7fffeb2cd000-7fffeb2ce000 r--p 0000e000 08:30 11926                      /usr/lib/x86_64-linux-gnu/liblber-2.5.so.0.1.15
+7fffeb2ce000-7fffeb2cf000 rw-p 0000f000 08:30 11926                      /usr/lib/x86_64-linux-gnu/liblber-2.5.so.0.1.15
+7fffeb2cf000-7fffeb2da000 r--p 00000000 08:30 12167                      /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fffeb2da000-7fffeb2ee000 r-xp 0000b000 08:30 12167                      /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fffeb2ee000-7fffeb2f7000 r--p 0001f000 08:30 12167                      /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fffeb2f7000-7fffeb2f8000 r--p 00027000 08:30 12167                      /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fffeb2f8000-7fffeb2f9000 rw-p 00028000 08:30 12167                      /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fffeb2f9000-7fffeb306000 r--p 00000000 08:30 305304                     /usr/lib/x86_64-linux-gnu/libmetis.so.5.1.0
+7fffeb306000-7fffeb350000 r-xp 0000d000 08:30 305304                     /usr/lib/x86_64-linux-gnu/libmetis.so.5.1.0
+7fffeb350000-7fffeb361000 r--p 00057000 08:30 305304                     /usr/lib/x86_64-linux-gnu/libmetis.so.5.1.0
+7fffeb361000-7fffeb362000 r--p 00067000 08:30 305304                     /usr/lib/x86_64-linux-gnu/libmetis.so.5.1.0
+7fffeb362000-7fffeb363000 rw-p 00068000 08:30 305304                     /usr/lib/x86_64-linux-gnu/libmetis.so.5.1.0
+7fffeb363000-7fffeb3a7000 r--p 00000000 08:30 72171                      /usr/lib/x86_64-linux-gnu/libmpi_mpifh.so.40.30.0
+7fffeb3a7000-7fffeb3bc000 r-xp 00044000 08:30 72171                      /usr/lib/x86_64-linux-gnu/libmpi_mpifh.so.40.30.0
+7fffeb3bc000-7fffeb3c6000 r--p 00059000 08:30 72171                      /usr/lib/x86_64-linux-gnu/libmpi_mpifh.so.40.30.0
+7fffeb3c6000-7fffeb3c7000 ---p 00063000 08:30 72171                      /usr/lib/x86_64-linux-gnu/libmpi_mpifh.so.40.30.0
+7fffeb3c7000-7fffeb3c8000 r--p 00063000 08:30 72171                      /usr/lib/x86_64-linux-gnu/libmpi_mpifh.so.40.30.0
+7fffeb3c8000-7fffeb3c9000 rw-p 00064000 08:30 72171                      /usr/lib/x86_64-linux-gnu/libmpi_mpifh.so.40.30.0
+7fffeb3c9000-7fffeb3ec000 r--p 00000000 08:30 305683                     /usr/lib/x86_64-linux-gnu/libptscotch-6.1.3.so
+7fffeb3ec000-7fffeb46c000 r-xp 00023000 08:30 305683                     /usr/lib/x86_64-linux-gnu/libptscotch-6.1.3.so
+7fffeb46c000-7fffeb492000 r--p 000a3000 08:30 305683                     /usr/lib/x86_64-linux-gnu/libptscotch-6.1.3.so
+7fffeb492000-7fffeb493000 ---p 000c9000 08:30 305683                     /usr/lib/x86_64-linux-gnu/libptscotch-6.1.3.so
+7fffeb493000-7fffeb494000 r--p 000c9000 08:30 305683                     /usr/lib/x86_64-linux-gnu/libptscotch-6.1.3.so
+7fffeb494000-7fffeb49a000 rw-p 000ca000 08:30 305683                     /usr/lib/x86_64-linux-gnu/libptscotch-6.1.3.so
+7fffeb49a000-7fffeb49c000 rw-p 00000000 00:00 0 
+7fffeb49c000-7fffeb4b1000 r--p 00000000 08:30 305736                     /usr/lib/x86_64-linux-gnu/libsuperlu_dist.so.7.2.0
+7fffeb4b1000-7fffeb5d2000 r-xp 00015000 08:30 305736                     /usr/lib/x86_64-linux-gnu/libsuperlu_dist.so.7.2.0
+7fffeb5d2000-7fffeb5fb000 r--p 00136000 08:30 305736                     /usr/lib/x86_64-linux-gnu/libsuperlu_dist.so.7.2.0
+7fffeb5fb000-7fffeb5fe000 r--p 0015e000 08:30 305736                     /usr/lib/x86_64-linux-gnu/libsuperlu_dist.so.7.2.0
+7fffeb5fe000-7fffeb5ff000 rw-p 00161000 08:30 305736                     /usr/lib/x86_64-linux-gnu/libsuperlu_dist.so.7.2.0
+7fffeb5ff000-7fffeb600000 rw-p 00000000 00:00 0 
+7fffeb600000-7fffeb61e000 r--p 00000000 08:30 305861                     /usr/lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.1.0
+7fffeb61e000-7fffebade000 r-xp 0001e000 08:30 305861                     /usr/lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.1.0
+7fffebade000-7fffebb82000 r--p 004de000 08:30 305861                     /usr/lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.1.0
+7fffebb82000-7fffebb83000 r--p 00581000 08:30 305861                     /usr/lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.1.0
+7fffebb83000-7fffebb86000 rw-p 00582000 08:30 305861                     /usr/lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.1.0
+7fffebb86000-7fffebba8000 rw-p 00000000 00:00 0 
+7fffebba8000-7fffebba9000 r--p 00000000 08:30 11714                      /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.0.9
+7fffebba9000-7fffebbb1000 r-xp 00001000 08:30 11714                      /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.0.9
+7fffebbb1000-7fffebbb4000 r--p 00009000 08:30 11714                      /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.0.9
+7fffebbb4000-7fffebbb5000 r--p 0000b000 08:30 11714                      /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.0.9
+7fffebbb5000-7fffebbb6000 rw-p 0000c000 08:30 11714                      /usr/lib/x86_64-linux-gnu/libbrotlidec.so.1.0.9
+7fffebbb6000-7fffebbc0000 r--p 00000000 08:30 52753                      /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7fffebbc0000-7fffebbf1000 r-xp 0000a000 08:30 52753                      /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7fffebbf1000-7fffebbfe000 r--p 0003b000 08:30 52753                      /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7fffebbfe000-7fffebbff000 r--p 00047000 08:30 52753                      /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7fffebbff000-7fffebc00000 rw-p 00048000 08:30 52753                      /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0
+7fffebc00000-7fffebc18000 r--p 00000000 08:30 305874                     /usr/lib/x86_64-linux-gnu/libdmumps-5.4.0.so
+7fffebc18000-7fffebdd0000 r-xp 00018000 08:30 305874                     /usr/lib/x86_64-linux-gnu/libdmumps-5.4.0.so
+7fffebdd0000-7fffebe08000 r--p 001d0000 08:30 305874                     /usr/lib/x86_64-linux-gnu/libdmumps-5.4.0.so
+7fffebe08000-7fffebe0c000 r--p 00207000 08:30 305874                     /usr/lib/x86_64-linux-gnu/libdmumps-5.4.0.so
+7fffebe0c000-7fffebe0d000 rw-p 0020b000 08:30 305874                     /usr/lib/x86_64-linux-gnu/libdmumps-5.4.0.so
+7fffebe0d000-7fffebe14000 rw-p 00000000 00:00 0 
+7fffebe17000-7fffebe19000 r--p 00000000 08:30 11739                      /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+7fffebe19000-7fffebe1a000 r-xp 00002000 08:30 11739                      /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+7fffebe1a000-7fffebe1b000 r--p 00003000 08:30 11739                      /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+7fffebe1b000-7fffebe1c000 r--p 00003000 08:30 11739                      /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+7fffebe1c000-7fffebe1d000 rw-p 00004000 08:30 11739                      /usr/lib/x86_64-linux-gnu/libcom_err.so.2.1
+7fffebe1d000-7fffebe27000 r--p 00000000 08:30 305875                     /usr/lib/x86_64-linux-gnu/libmumps_common-5.4.0.so
+7fffebe27000-7fffebe6b000 r-xp 0000a000 08:30 305875                     /usr/lib/x86_64-linux-gnu/libmumps_common-5.4.0.so
+7fffebe6b000-7fffebe74000 r--p 0004e000 08:30 305875                     /usr/lib/x86_64-linux-gnu/libmumps_common-5.4.0.so
+7fffebe74000-7fffebe75000 ---p 00057000 08:30 305875                     /usr/lib/x86_64-linux-gnu/libmumps_common-5.4.0.so
+7fffebe75000-7fffebe76000 r--p 00057000 08:30 305875                     /usr/lib/x86_64-linux-gnu/libmumps_common-5.4.0.so
+7fffebe76000-7fffebe77000 rw-p 00058000 08:30 305875                     /usr/lib/x86_64-linux-gnu/libmumps_common-5.4.0.so
+7fffebe77000-7fffebe79000 rw-p 00000000 00:00 0 
+7fffebe79000-7fffebe7e000 r--p 00000000 08:30 304541                     /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0
+7fffebe7e000-7fffebf15000 r-xp 00005000 08:30 304541                     /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0
+7fffebf15000-7fffebf1c000 r--p 0009c000 08:30 304541                     /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0
+7fffebf1c000-7fffebf1d000 ---p 000a3000 08:30 304541                     /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0
+7fffebf1d000-7fffebf1e000 r--p 000a3000 08:30 304541                     /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0
+7fffebf1e000-7fffebf1f000 rw-p 000a4000 08:30 304541                     /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.10.0
+7fffebf1f000-7fffebf25000 r--p 00000000 08:30 305317                     /usr/lib/x86_64-linux-gnu/libcholmod.so.3.0.14
+7fffebf25000-7fffebff0000 r-xp 00006000 08:30 305317                     /usr/lib/x86_64-linux-gnu/libcholmod.so.3.0.14
+7fffebff0000-7fffebffe000 r--p 000d1000 08:30 305317                     /usr/lib/x86_64-linux-gnu/libcholmod.so.3.0.14
+7fffebffe000-7fffebfff000 r--p 000de000 08:30 305317                     /usr/lib/x86_64-linux-gnu/libcholmod.so.3.0.14
+7fffebfff000-7fffec000000 rw-p 000df000 08:30 305317                     /usr/lib/x86_64-linux-gnu/libcholmod.so.3.0.14
+7fffec000000-7fffec053000 r--p 00000000 08:30 305750                     /usr/lib/x86_64-linux-gnu/libHYPRE-2.22.1.so
+7fffec053000-7fffec3a2000 r-xp 00053000 08:30 305750                     /usr/lib/x86_64-linux-gnu/libHYPRE-2.22.1.so
+7fffec3a2000-7fffec3f9000 r--p 003a2000 08:30 305750                     /usr/lib/x86_64-linux-gnu/libHYPRE-2.22.1.so
+7fffec3f9000-7fffec3fa000 ---p 003f9000 08:30 305750                     /usr/lib/x86_64-linux-gnu/libHYPRE-2.22.1.so
+7fffec3fa000-7fffec3fb000 r--p 003f9000 08:30 305750                     /usr/lib/x86_64-linux-gnu/libHYPRE-2.22.1.so
+7fffec3fb000-7fffec3fc000 rw-p 003fa000 08:30 305750                     /usr/lib/x86_64-linux-gnu/libHYPRE-2.22.1.so
+7fffec3fc000-7fffec418000 rw-p 00000000 00:00 0 
+7fffec41b000-7fffec41e000 r--p 00000000 08:30 305876                     /usr/lib/x86_64-linux-gnu/libpord-5.4.0.so
+7fffec41e000-7fffec42e000 r-xp 00003000 08:30 305876                     /usr/lib/x86_64-linux-gnu/libpord-5.4.0.so
+7fffec42e000-7fffec432000 r--p 00013000 08:30 305876                     /usr/lib/x86_64-linux-gnu/libpord-5.4.0.so
+7fffec432000-7fffec433000 r--p 00016000 08:30 305876                     /usr/lib/x86_64-linux-gnu/libpord-5.4.0.so
+7fffec433000-7fffec434000 rw-p 00017000 08:30 305876                     /usr/lib/x86_64-linux-gnu/libpord-5.4.0.so
+7fffec434000-7fffec438000 r--p 00000000 08:30 301448                     /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+7fffec438000-7fffec458000 r-xp 00004000 08:30 301448                     /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+7fffec458000-7fffec462000 r--p 00024000 08:30 301448                     /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+7fffec462000-7fffec463000 ---p 0002e000 08:30 301448                     /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+7fffec463000-7fffec465000 r--p 0002e000 08:30 301448                     /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+7fffec465000-7fffec466000 rw-p 00030000 08:30 301448                     /usr/lib/x86_64-linux-gnu/libexpat.so.1.8.7
+7fffec466000-7fffec46c000 r--p 00000000 08:30 304001                     /usr/lib/x86_64-linux-gnu/libumfpack.so.5.7.9
+7fffec46c000-7fffec502000 r-xp 00006000 08:30 304001                     /usr/lib/x86_64-linux-gnu/libumfpack.so.5.7.9
+7fffec502000-7fffec510000 r--p 0009c000 08:30 304001                     /usr/lib/x86_64-linux-gnu/libumfpack.so.5.7.9
+7fffec510000-7fffec511000 r--p 000a9000 08:30 304001                     /usr/lib/x86_64-linux-gnu/libumfpack.so.5.7.9
+7fffec511000-7fffec512000 rw-p 000aa000 08:30 304001                     /usr/lib/x86_64-linux-gnu/libumfpack.so.5.7.9
+7fffec512000-7fffec578000 r--p 00000000 08:30 11893                      /usr/lib/x86_64-linux-gnu/libicuuc.so.70.1
+7fffec578000-7fffec66b000 r-xp 00066000 08:30 11893                      /usr/lib/x86_64-linux-gnu/libicuuc.so.70.1
+7fffec66b000-7fffec6f7000 r--p 00159000 08:30 11893                      /usr/lib/x86_64-linux-gnu/libicuuc.so.70.1
+7fffec6f7000-7fffec70a000 r--p 001e4000 08:30 11893                      /usr/lib/x86_64-linux-gnu/libicuuc.so.70.1
+7fffec70a000-7fffec70b000 rw-p 001f7000 08:30 11893                      /usr/lib/x86_64-linux-gnu/libicuuc.so.70.1
+7fffec70b000-7fffec70d000 rw-p 00000000 00:00 0 
+7fffec70d000-7fffec71f000 r--p 00000000 08:30 304271                     /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.74.0
+7fffec71f000-7fffec7da000 r-xp 00012000 08:30 304271                     /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.74.0
+7fffec7da000-7fffec7fa000 r--p 000cd000 08:30 304271                     /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.74.0
+7fffec7fa000-7fffec7ff000 r--p 000ec000 08:30 304271                     /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.74.0
+7fffec7ff000-7fffec800000 rw-p 000f1000 08:30 304271                     /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.74.0
+7fffec800000-7fffec86d000 r--p 00000000 08:30 10729                      /usr/lib/x86_64-linux-gnu/libpython3.10.so.1.0
+7fffec86d000-7fffecb20000 r-xp 0006d000 08:30 10729                      /usr/lib/x86_64-linux-gnu/libpython3.10.so.1.0
+7fffecb20000-7fffecd4a000 r--p 00320000 08:30 10729                      /usr/lib/x86_64-linux-gnu/libpython3.10.so.1.0
+7fffecd4a000-7fffecd4b000 ---p 0054a000 08:30 10729                      /usr/lib/x86_64-linux-gnu/libpython3.10.so.1.0
+7fffecd4b000-7fffecd51000 r--p 0054a000 08:30 10729                      /usr/lib/x86_64-linux-gnu/libpython3.10.so.1.0
+7fffecd51000-7fffecd91000 rw-p 00550000 08:30 10729                      /usr/lib/x86_64-linux-gnu/libpython3.10.so.1.0
+7fffecd91000-7fffecdd7000 rw-p 00000000 00:00 0 
+7fffecdd9000-7fffecddb000 r--p 00000000 08:30 12061                      /usr/lib/x86_64-linux-gnu/libpsl.so.5.3.2
+7fffecddb000-7fffecddd000 r-xp 00002000 08:30 12061                      /usr/lib/x86_64-linux-gnu/libpsl.so.5.3.2
+7fffecddd000-7fffecdeb000 r--p 00004000 08:30 12061                      /usr/lib/x86_64-linux-gnu/libpsl.so.5.3.2
+7fffecdeb000-7fffecdec000 r--p 00011000 08:30 12061                      /usr/lib/x86_64-linux-gnu/libpsl.so.5.3.2
+7fffecdec000-7fffecded000 rw-p 00012000 08:30 12061                      /usr/lib/x86_64-linux-gnu/libpsl.so.5.3.2
+7fffecded000-7fffecdef000 r--p 00000000 08:30 9331                       /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7fffecdef000-7fffecdfc000 r-xp 00002000 08:30 9331                       /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7fffecdfc000-7fffecdfe000 r--p 0000f000 08:30 9331                       /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7fffecdfe000-7fffecdff000 r--p 00010000 08:30 9331                       /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7fffecdff000-7fffece00000 rw-p 00011000 08:30 9331                       /usr/lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7fffece00000-7fffecec0000 r--p 00000000 08:30 304278                     /usr/lib/x86_64-linux-gnu/libpetsc_real.so.3.15.5
+7fffecec0000-7fffedbfb000 r-xp 000c0000 08:30 304278                     /usr/lib/x86_64-linux-gnu/libpetsc_real.so.3.15.5
+7fffedbfb000-7fffedf5c000 r--p 00dfb000 08:30 304278                     /usr/lib/x86_64-linux-gnu/libpetsc_real.so.3.15.5
+7fffedf5c000-7fffedf5d000 ---p 0115c000 08:30 304278                     /usr/lib/x86_64-linux-gnu/libpetsc_real.so.3.15.5
+7fffedf5d000-7fffedf62000 r--p 0115c000 08:30 304278                     /usr/lib/x86_64-linux-gnu/libpetsc_real.so.3.15.5
+7fffedf62000-7fffedf7d000 rw-p 01161000 08:30 304278                     /usr/lib/x86_64-linux-gnu/libpetsc_real.so.3.15.5
+7fffedf7d000-7fffee17e000 rw-p 00000000 00:00 0 
+7fffee182000-7fffee18c000 r--p 00000000 08:30 305330                     /usr/lib/x86_64-linux-gnu/libCombBLAS.so.1.16.0
+7fffee18c000-7fffee194000 r-xp 0000a000 08:30 305330                     /usr/lib/x86_64-linux-gnu/libCombBLAS.so.1.16.0
+7fffee194000-7fffee198000 r--p 00012000 08:30 305330                     /usr/lib/x86_64-linux-gnu/libCombBLAS.so.1.16.0
+7fffee198000-7fffee19a000 r--p 00016000 08:30 305330                     /usr/lib/x86_64-linux-gnu/libCombBLAS.so.1.16.0
+7fffee19a000-7fffee19b000 rw-p 00018000 08:30 305330                     /usr/lib/x86_64-linux-gnu/libCombBLAS.so.1.16.0
+7fffee19b000-7fffee1a2000 r--p 00000000 08:30 305923                     /usr/lib/x86_64-linux-gnu/libsuperlu.so.5.3.0
+7fffee1a2000-7fffee1fe000 r-xp 00007000 08:30 305923                     /usr/lib/x86_64-linux-gnu/libsuperlu.so.5.3.0
+7fffee1fe000-7fffee20b000 r--p 00063000 08:30 305923                     /usr/lib/x86_64-linux-gnu/libsuperlu.so.5.3.0
+7fffee20b000-7fffee20c000 r--p 0006f000 08:30 305923                     /usr/lib/x86_64-linux-gnu/libsuperlu.so.5.3.0
+7fffee20c000-7fffee20d000 rw-p 00070000 08:30 305923                     /usr/lib/x86_64-linux-gnu/libsuperlu.so.5.3.0
+7fffee20d000-7fffee23c000 r--p 00000000 08:30 56254                      /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.13
+7fffee23c000-7fffee38f000 r-xp 0002f000 08:30 56254                      /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.13
+7fffee38f000-7fffee3e4000 r--p 00182000 08:30 56254                      /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.13
+7fffee3e4000-7fffee3ed000 r--p 001d6000 08:30 56254                      /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.13
+7fffee3ed000-7fffee3ee000 rw-p 001df000 08:30 56254                      /usr/lib/x86_64-linux-gnu/libxml2.so.2.9.13
+7fffee3ee000-7fffee3ef000 rw-p 00000000 00:00 0 
+7fffee3ef000-7fffee416000 r--p 00000000 08:30 304601                     /usr/lib/x86_64-linux-gnu/libboost_log.so.1.74.0
+7fffee416000-7fffee473000 r-xp 00027000 08:30 304601                     /usr/lib/x86_64-linux-gnu/libboost_log.so.1.74.0
+7fffee473000-7fffee494000 r--p 00084000 08:30 304601                     /usr/lib/x86_64-linux-gnu/libboost_log.so.1.74.0
+7fffee494000-7fffee49a000 r--p 000a4000 08:30 304601                     /usr/lib/x86_64-linux-gnu/libboost_log.so.1.74.0
+7fffee49a000-7fffee49b000 rw-p 000aa000 08:30 304601                     /usr/lib/x86_64-linux-gnu/libboost_log.so.1.74.0
+7fffee49b000-7fffee4ae000 r--p 00000000 08:30 304602                     /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.74.0
+7fffee4ae000-7fffee513000 r-xp 00013000 08:30 304602                     /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.74.0
+7fffee513000-7fffee532000 r--p 00078000 08:30 304602                     /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.74.0
+7fffee532000-7fffee533000 ---p 00097000 08:30 304602                     /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.74.0
+7fffee533000-7fffee537000 r--p 00097000 08:30 304602                     /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.74.0
+7fffee537000-7fffee538000 rw-p 0009b000 08:30 304602                     /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.74.0
+7fffee538000-7fffee539000 rw-p 00000000 00:00 0 
+7fffee539000-7fffee560000 r--p 00000000 08:30 99312                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseMixture.so
+7fffee560000-7fffee5d9000 r-xp 00027000 08:30 99312                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseMixture.so
+7fffee5d9000-7fffee5fb000 r--p 000a0000 08:30 99312                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseMixture.so
+7fffee5fb000-7fffee5fe000 r--p 000c1000 08:30 99312                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseMixture.so
+7fffee5fe000-7fffee600000 rw-p 000c4000 08:30 99312                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseMixture.so
+7fffee600000-7fffee634000 r--p 00000000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7fffee634000-7fffee962000 r-xp 00034000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7fffee962000-7fffee9ec000 r--p 00362000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7fffee9ec000-7fffee9ed000 ---p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7fffee9ed000-7fffee9f8000 r--p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7fffee9f8000-7fffee9fa000 rw-p 003f7000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1
+7fffee9fd000-7fffee9ff000 r--p 00000000 08:30 12181                      /usr/lib/x86_64-linux-gnu/libyaml-0.so.2.0.6
+7fffee9ff000-7fffeea18000 r-xp 00002000 08:30 12181                      /usr/lib/x86_64-linux-gnu/libyaml-0.so.2.0.6
+7fffeea18000-7fffeea1c000 r--p 0001b000 08:30 12181                      /usr/lib/x86_64-linux-gnu/libyaml-0.so.2.0.6
+7fffeea1c000-7fffeea1d000 r--p 0001e000 08:30 12181                      /usr/lib/x86_64-linux-gnu/libyaml-0.so.2.0.6
+7fffeea1d000-7fffeea1e000 rw-p 0001f000 08:30 12181                      /usr/lib/x86_64-linux-gnu/libyaml-0.so.2.0.6
+7fffeea1e000-7fffeea20000 r--p 00000000 08:30 305798                     /usr/lib/x86_64-linux-gnu/libklu.so.1.3.8
+7fffeea20000-7fffeea48000 r-xp 00002000 08:30 305798                     /usr/lib/x86_64-linux-gnu/libklu.so.1.3.8
+7fffeea48000-7fffeea4b000 r--p 0002a000 08:30 305798                     /usr/lib/x86_64-linux-gnu/libklu.so.1.3.8
+7fffeea4b000-7fffeea4c000 r--p 0002c000 08:30 305798                     /usr/lib/x86_64-linux-gnu/libklu.so.1.3.8
+7fffeea4c000-7fffeea4d000 rw-p 0002d000 08:30 305798                     /usr/lib/x86_64-linux-gnu/libklu.so.1.3.8
+7fffeea4d000-7fffeea61000 r--p 00000000 08:30 99313                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseProperties.so
+7fffeea61000-7fffeea92000 r-xp 00014000 08:30 99313                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseProperties.so
+7fffeea92000-7fffeea9e000 r--p 00045000 08:30 99313                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseProperties.so
+7fffeea9e000-7fffeeaa0000 r--p 00050000 08:30 99313                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseProperties.so
+7fffeeaa0000-7fffeeaa1000 rw-p 00052000 08:30 99313                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseProperties.so
+7fffeeaa1000-7fffeeaed000 r--p 00000000 08:30 41326                      /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7fffeeaed000-7fffeebbc000 r-xp 0004c000 08:30 41326                      /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7fffeebbc000-7fffeebf8000 r--p 0011b000 08:30 41326                      /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7fffeebf8000-7fffeebf9000 ---p 00157000 08:30 41326                      /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7fffeebf9000-7fffeebfd000 r--p 00157000 08:30 41326                      /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7fffeebfd000-7fffeec00000 rw-p 0015b000 08:30 41326                      /home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so
+7fffeec00000-7fffeecdb000 r--p 00000000 08:30 99235                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfieldFunctionObjects.so
+7fffeecdb000-7fffef0a0000 r-xp 000db000 08:30 99235                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfieldFunctionObjects.so
+7fffef0a0000-7fffef1c5000 r--p 004a0000 08:30 99235                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfieldFunctionObjects.so
+7fffef1c5000-7fffef1d0000 r--p 005c4000 08:30 99235                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfieldFunctionObjects.so
+7fffef1d0000-7fffef1d7000 rw-p 005cf000 08:30 99235                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfieldFunctionObjects.so
+7fffef1d7000-7fffef1d9000 rw-p 00000000 00:00 0 
+7fffef1d9000-7fffef1da000 r--p 00000000 08:30 72283                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_orte.so
+7fffef1da000-7fffef1db000 r-xp 00001000 08:30 72283                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_orte.so
+7fffef1db000-7fffef1dc000 r--p 00002000 08:30 72283                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_orte.so
+7fffef1dc000-7fffef1dd000 r--p 00002000 08:30 72283                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_orte.so
+7fffef1dd000-7fffef1de000 rw-p 00003000 08:30 72283                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_schizo_orte.so
+7fffef1de000-7fffef1e1000 r--p 00000000 08:30 10937                      /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+7fffef1e1000-7fffef1fc000 r-xp 00003000 08:30 10937                      /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+7fffef1fc000-7fffef207000 r--p 0001e000 08:30 10937                      /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+7fffef207000-7fffef208000 r--p 00028000 08:30 10937                      /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+7fffef208000-7fffef209000 rw-p 00029000 08:30 10937                      /usr/lib/x86_64-linux-gnu/liblzma.so.5.2.5
+7fffef209000-7fffef269000 r--p 00000000 08:30 99274                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseCompressibleMomentumTransportModels.so
+7fffef269000-7fffef360000 r-xp 00060000 08:30 99274                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseCompressibleMomentumTransportModels.so
+7fffef360000-7fffef3a2000 r--p 00157000 08:30 99274                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseCompressibleMomentumTransportModels.so
+7fffef3a2000-7fffef3a3000 ---p 00199000 08:30 99274                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseCompressibleMomentumTransportModels.so
+7fffef3a3000-7fffef3a9000 r--p 00199000 08:30 99274                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseCompressibleMomentumTransportModels.so
+7fffef3a9000-7fffef3ac000 rw-p 0019f000 08:30 99274                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseCompressibleMomentumTransportModels.so
+7fffef3ac000-7fffef5d6000 rw-p 00000000 00:00 0 
+7fffef5d6000-7fffef5d8000 r--p 00000000 08:30 11656                      /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fffef5d8000-7fffef5da000 r-xp 00002000 08:30 11656                      /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fffef5da000-7fffef5dc000 r--p 00004000 08:30 11656                      /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fffef5dc000-7fffef5dd000 r--p 00005000 08:30 11656                      /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fffef5dd000-7fffef5de000 rw-p 00006000 08:30 11656                      /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fffef5de000-7fffef5fe000 r--p 00000000 08:30 99254                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libinterfaceProperties.so
+7fffef5fe000-7fffef652000 r-xp 00020000 08:30 99254                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libinterfaceProperties.so
+7fffef652000-7fffef66c000 r--p 00074000 08:30 99254                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libinterfaceProperties.so
+7fffef66c000-7fffef66d000 ---p 0008e000 08:30 99254                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libinterfaceProperties.so
+7fffef66d000-7fffef66f000 r--p 0008e000 08:30 99254                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libinterfaceProperties.so
+7fffef66f000-7fffef671000 rw-p 00090000 08:30 99254                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libinterfaceProperties.so
+7fffef671000-7fffef6ce000 r--p 00000000 08:30 99277                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseIncompressibleMomentumTransportModels.so
+7fffef6ce000-7fffef7b7000 r-xp 0005d000 08:30 99277                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseIncompressibleMomentumTransportModels.so
+7fffef7b7000-7fffef7f6000 r--p 00146000 08:30 99277                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseIncompressibleMomentumTransportModels.so
+7fffef7f6000-7fffef7f7000 ---p 00185000 08:30 99277                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseIncompressibleMomentumTransportModels.so
+7fffef7f7000-7fffef7fd000 r--p 00185000 08:30 99277                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseIncompressibleMomentumTransportModels.so
+7fffef7fd000-7fffef800000 rw-p 0018b000 08:30 99277                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphaseIncompressibleMomentumTransportModels.so
+7fffef800000-7fffef893000 r--p 00000000 08:30 99248                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMotionSolvers.so
+7fffef893000-7fffefa22000 r-xp 00093000 08:30 99248                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMotionSolvers.so
+7fffefa22000-7fffefa95000 r--p 00222000 08:30 99248                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMotionSolvers.so
+7fffefa95000-7fffefa96000 ---p 00295000 08:30 99248                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMotionSolvers.so
+7fffefa96000-7fffefa9f000 r--p 00295000 08:30 99248                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMotionSolvers.so
+7fffefa9f000-7fffefaa2000 rw-p 0029e000 08:30 99248                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMotionSolvers.so
+7fffefaa2000-7fffefaa3000 rw-p 00000000 00:00 0 
+7fffefaa3000-7fffefaa4000 r--p 00000000 08:30 304491                     /usr/lib/x86_64-linux-gnu/libaec.so.0.0.12
+7fffefaa4000-7fffefaa9000 r-xp 00001000 08:30 304491                     /usr/lib/x86_64-linux-gnu/libaec.so.0.0.12
+7fffefaa9000-7fffefaaa000 r--p 00006000 08:30 304491                     /usr/lib/x86_64-linux-gnu/libaec.so.0.0.12
+7fffefaaa000-7fffefaab000 r--p 00006000 08:30 304491                     /usr/lib/x86_64-linux-gnu/libaec.so.0.0.12
+7fffefaab000-7fffefaac000 rw-p 00007000 08:30 304491                     /usr/lib/x86_64-linux-gnu/libaec.so.0.0.12
+7fffefaac000-7fffefabb000 r--p 00000000 08:30 72062                      /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.74.0
+7fffefabb000-7fffefae1000 r-xp 0000f000 08:30 72062                      /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.74.0
+7fffefae1000-7fffefaed000 r--p 00035000 08:30 72062                      /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.74.0
+7fffefaed000-7fffefaf0000 r--p 00040000 08:30 72062                      /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.74.0
+7fffefaf0000-7fffefaf1000 rw-p 00043000 08:30 72062                      /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.74.0
+7fffefaf1000-7ffff0a00000 rw-p 00000000 00:00 0 
+7ffff0a00000-7ffff16e7000 r--p 00000000 08:30 99283                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libreactionThermophysicalModels.so
+7ffff16e7000-7ffff1d5a000 r-xp 00ce7000 08:30 99283                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libreactionThermophysicalModels.so
+7ffff1d5a000-7ffff1efb000 r--p 0135a000 08:30 99283                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libreactionThermophysicalModels.so
+7ffff1efb000-7ffff23d5000 r--p 014fa000 08:30 99283                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libreactionThermophysicalModels.so
+7ffff23d5000-7ffff23db000 rw-p 019d4000 08:30 99283                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libreactionThermophysicalModels.so
+7ffff23db000-7ffff23de000 rw-p 00000000 00:00 0 
+7ffff23e0000-7ffff23e7000 r--p 00000000 08:30 304572                     /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0
+7ffff23e7000-7ffff23f9000 r-xp 00007000 08:30 304572                     /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0
+7ffff23f9000-7ffff23fe000 r--p 00019000 08:30 304572                     /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0
+7ffff23fe000-7ffff23ff000 r--p 0001d000 08:30 304572                     /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0
+7ffff23ff000-7ffff2400000 rw-p 0001e000 08:30 304572                     /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0
+7ffff2400000-7ffff24db000 r--p 00000000 08:30 99230                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libdynamicMesh.so
+7ffff24db000-7ffff28a2000 r-xp 000db000 08:30 99230                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libdynamicMesh.so
+7ffff28a2000-7ffff2983000 r--p 004a2000 08:30 99230                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libdynamicMesh.so
+7ffff2983000-7ffff298f000 r--p 00582000 08:30 99230                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libdynamicMesh.so
+7ffff298f000-7ffff2995000 rw-p 0058e000 08:30 99230                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libdynamicMesh.so
+7ffff2995000-7ffff2997000 rw-p 00000000 00:00 0 
+7ffff299a000-7ffff299f000 r--p 00000000 08:30 305524                     /usr/lib/x86_64-linux-gnu/libfftw3_mpi.so.3.5.8
+7ffff299f000-7ffff29ad000 r-xp 00005000 08:30 305524                     /usr/lib/x86_64-linux-gnu/libfftw3_mpi.so.3.5.8
+7ffff29ad000-7ffff29b1000 r--p 00013000 08:30 305524                     /usr/lib/x86_64-linux-gnu/libfftw3_mpi.so.3.5.8
+7ffff29b1000-7ffff29b2000 ---p 00017000 08:30 305524                     /usr/lib/x86_64-linux-gnu/libfftw3_mpi.so.3.5.8
+7ffff29b2000-7ffff29b3000 r--p 00017000 08:30 305524                     /usr/lib/x86_64-linux-gnu/libfftw3_mpi.so.3.5.8
+7ffff29b3000-7ffff29b4000 rw-p 00018000 08:30 305524                     /usr/lib/x86_64-linux-gnu/libfftw3_mpi.so.3.5.8
+7ffff29b4000-7ffff29c6000 r--p 00000000 08:30 99253                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleTwoPhaseMixture.so
+7ffff29c6000-7ffff29f0000 r-xp 00012000 08:30 99253                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleTwoPhaseMixture.so
+7ffff29f0000-7ffff29fd000 r--p 0003c000 08:30 99253                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleTwoPhaseMixture.so
+7ffff29fd000-7ffff29fe000 ---p 00049000 08:30 99253                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleTwoPhaseMixture.so
+7ffff29fe000-7ffff29ff000 r--p 00049000 08:30 99253                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleTwoPhaseMixture.so
+7ffff29ff000-7ffff2a00000 rw-p 0004a000 08:30 99253                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleTwoPhaseMixture.so
+7ffff2a00000-7ffff2b2b000 r--p 00000000 08:30 99301                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsolidThermo.so
+7ffff2b2b000-7ffff2c58000 r-xp 0012b000 08:30 99301                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsolidThermo.so
+7ffff2c58000-7ffff2ca2000 r--p 00258000 08:30 99301                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsolidThermo.so
+7ffff2ca2000-7ffff2cde000 r--p 002a1000 08:30 99301                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsolidThermo.so
+7ffff2cde000-7ffff2ce0000 rw-p 002dd000 08:30 99301                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsolidThermo.so
+7ffff2ce0000-7ffff2ce1000 r--p 00000000 08:30 11648                      /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ffff2ce1000-7ffff2ce3000 r-xp 00001000 08:30 11648                      /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ffff2ce3000-7ffff2ce4000 r--p 00003000 08:30 11648                      /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ffff2ce4000-7ffff2ce5000 r--p 00003000 08:30 11648                      /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ffff2ce5000-7ffff2ce6000 rw-p 00004000 08:30 11648                      /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7ffff2ce6000-7ffff2ce8000 r--p 00000000 08:30 306009                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosremainder.so.13.2
+7ffff2ce8000-7ffff2ceb000 r-xp 00002000 08:30 306009                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosremainder.so.13.2
+7ffff2ceb000-7ffff2cec000 r--p 00005000 08:30 306009                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosremainder.so.13.2
+7ffff2cec000-7ffff2ced000 r--p 00005000 08:30 306009                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosremainder.so.13.2
+7ffff2ced000-7ffff2cee000 rw-p 00006000 08:30 306009                     /usr/lib/x86_64-linux-gnu/libtrilinos_teuchosremainder.so.13.2
+7ffff2cee000-7ffff2cf5000 r--p 00000000 08:30 52674                      /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0
+7ffff2cf5000-7ffff2d07000 r-xp 00007000 08:30 52674                      /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0
+7ffff2d07000-7ffff2d0d000 r--p 00019000 08:30 52674                      /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0
+7ffff2d0d000-7ffff2d0f000 r--p 0001e000 08:30 52674                      /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0
+7ffff2d0f000-7ffff2d10000 rw-p 00020000 08:30 52674                      /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.74.0
+7ffff2d10000-7ffff2d1a000 r--p 00000000 08:30 99250                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libimmiscibleIncompressibleTwoPhaseMixture.so
+7ffff2d1a000-7ffff2d2b000 r-xp 0000a000 08:30 99250                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libimmiscibleIncompressibleTwoPhaseMixture.so
+7ffff2d2b000-7ffff2d30000 r--p 0001b000 08:30 99250                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libimmiscibleIncompressibleTwoPhaseMixture.so
+7ffff2d30000-7ffff2d31000 ---p 00020000 08:30 99250                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libimmiscibleIncompressibleTwoPhaseMixture.so
+7ffff2d31000-7ffff2d32000 r--p 00020000 08:30 99250                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libimmiscibleIncompressibleTwoPhaseMixture.so
+7ffff2d32000-7ffff2d33000 rw-p 00021000 08:30 99250                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libimmiscibleIncompressibleTwoPhaseMixture.so
+7ffff2d33000-7ffff2d50000 r--p 00000000 08:30 99241                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libforces.so
+7ffff2d50000-7ffff2d9c000 r-xp 0001d000 08:30 99241                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libforces.so
+7ffff2d9c000-7ffff2db1000 r--p 00069000 08:30 99241                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libforces.so
+7ffff2db1000-7ffff2db2000 ---p 0007e000 08:30 99241                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libforces.so
+7ffff2db2000-7ffff2db4000 r--p 0007e000 08:30 99241                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libforces.so
+7ffff2db4000-7ffff2db5000 rw-p 00080000 08:30 99241                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libforces.so
+7ffff2db5000-7ffff2dc7000 r--p 00000000 08:30 99244                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshMovers.so
+7ffff2dc7000-7ffff2df1000 r-xp 00012000 08:30 99244                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshMovers.so
+7ffff2df1000-7ffff2dfd000 r--p 0003c000 08:30 99244                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshMovers.so
+7ffff2dfd000-7ffff2dfe000 ---p 00048000 08:30 99244                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshMovers.so
+7ffff2dfe000-7ffff2dff000 r--p 00048000 08:30 99244                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshMovers.so
+7ffff2dff000-7ffff2e00000 rw-p 00049000 08:30 99244                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshMovers.so
+7ffff2e00000-7ffff31ae000 r--p 00000000 08:30 99239                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfluidThermophysicalModels.so
+7ffff31ae000-7ffff3455000 r-xp 003ae000 08:30 99239                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfluidThermophysicalModels.so
+7ffff3455000-7ffff3504000 r--p 00655000 08:30 99239                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfluidThermophysicalModels.so
+7ffff3504000-7ffff3505000 ---p 00704000 08:30 99239                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfluidThermophysicalModels.so
+7ffff3505000-7ffff3626000 r--p 00704000 08:30 99239                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfluidThermophysicalModels.so
+7ffff3626000-7ffff3629000 rw-p 00825000 08:30 99239                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfluidThermophysicalModels.so
+7ffff3629000-7ffff362a000 rw-p 00000000 00:00 0 
+7ffff362b000-7ffff362c000 r--p 00000000 08:30 305939                     /usr/lib/x86_64-linux-gnu/libscotcherr-6.1.3.so
+7ffff362c000-7ffff362d000 r-xp 00001000 08:30 305939                     /usr/lib/x86_64-linux-gnu/libscotcherr-6.1.3.so
+7ffff362d000-7ffff362e000 r--p 00002000 08:30 305939                     /usr/lib/x86_64-linux-gnu/libscotcherr-6.1.3.so
+7ffff362e000-7ffff362f000 r--p 00002000 08:30 305939                     /usr/lib/x86_64-linux-gnu/libscotcherr-6.1.3.so
+7ffff362f000-7ffff3630000 rw-p 00003000 08:30 305939                     /usr/lib/x86_64-linux-gnu/libscotcherr-6.1.3.so
+7ffff3630000-7ffff3631000 r--p 00000000 08:30 305246                     /usr/lib/x86_64-linux-gnu/libcamd.so.2.4.6
+7ffff3631000-7ffff3638000 r-xp 00001000 08:30 305246                     /usr/lib/x86_64-linux-gnu/libcamd.so.2.4.6
+7ffff3638000-7ffff3639000 r--p 00008000 08:30 305246                     /usr/lib/x86_64-linux-gnu/libcamd.so.2.4.6
+7ffff3639000-7ffff363a000 ---p 00009000 08:30 305246                     /usr/lib/x86_64-linux-gnu/libcamd.so.2.4.6
+7ffff363a000-7ffff363b000 r--p 00009000 08:30 305246                     /usr/lib/x86_64-linux-gnu/libcamd.so.2.4.6
+7ffff363b000-7ffff363c000 rw-p 0000a000 08:30 305246                     /usr/lib/x86_64-linux-gnu/libcamd.so.2.4.6
+7ffff363c000-7ffff3663000 r--p 00000000 08:30 99245                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshStitchers.so
+7ffff3663000-7ffff36c9000 r-xp 00027000 08:30 99245                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshStitchers.so
+7ffff36c9000-7ffff36e6000 r--p 0008d000 08:30 99245                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshStitchers.so
+7ffff36e6000-7ffff36e7000 ---p 000aa000 08:30 99245                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshStitchers.so
+7ffff36e7000-7ffff36ea000 r--p 000aa000 08:30 99245                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshStitchers.so
+7ffff36ea000-7ffff36ec000 rw-p 000ad000 08:30 99245                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvMeshStitchers.so
+7ffff36ec000-7ffff3800000 rw-p 00000000 00:00 0 
+7ffff3800000-7ffff388b000 r--p 00000000 08:30 99219                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libcompressibleMomentumTransportModels.so
+7ffff388b000-7ffff3a19000 r-xp 0008b000 08:30 99219                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libcompressibleMomentumTransportModels.so
+7ffff3a19000-7ffff3a75000 r--p 00219000 08:30 99219                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libcompressibleMomentumTransportModels.so
+7ffff3a75000-7ffff3a76000 ---p 00275000 08:30 99219                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libcompressibleMomentumTransportModels.so
+7ffff3a76000-7ffff3a7e000 r--p 00275000 08:30 99219                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libcompressibleMomentumTransportModels.so
+7ffff3a7e000-7ffff3a82000 rw-p 0027d000 08:30 99219                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libcompressibleMomentumTransportModels.so
+7ffff3a82000-7ffff3a83000 r--p 00000000 08:30 305260                     /usr/lib/x86_64-linux-gnu/libccolamd.so.2.9.6
+7ffff3a83000-7ffff3a8b000 r-xp 00001000 08:30 305260                     /usr/lib/x86_64-linux-gnu/libccolamd.so.2.9.6
+7ffff3a8b000-7ffff3a8c000 r--p 00009000 08:30 305260                     /usr/lib/x86_64-linux-gnu/libccolamd.so.2.9.6
+7ffff3a8c000-7ffff3a8d000 ---p 0000a000 08:30 305260                     /usr/lib/x86_64-linux-gnu/libccolamd.so.2.9.6
+7ffff3a8d000-7ffff3a8e000 r--p 0000a000 08:30 305260                     /usr/lib/x86_64-linux-gnu/libccolamd.so.2.9.6
+7ffff3a8e000-7ffff3a8f000 rw-p 0000b000 08:30 305260                     /usr/lib/x86_64-linux-gnu/libccolamd.so.2.9.6
+7ffff3a8f000-7ffff3abd000 rw-p 00000000 00:00 0 
+7ffff3abd000-7ffff3ac1000 r--p 00000000 08:30 16556                      /usr/lib/x86_64-linux-gnu/libudev.so.1.7.2
+7ffff3ac1000-7ffff3adb000 r-xp 00004000 08:30 16556                      /usr/lib/x86_64-linux-gnu/libudev.so.1.7.2
+7ffff3adb000-7ffff3ae4000 r--p 0001e000 08:30 16556                      /usr/lib/x86_64-linux-gnu/libudev.so.1.7.2
+7ffff3ae4000-7ffff3ae5000 ---p 00027000 08:30 16556                      /usr/lib/x86_64-linux-gnu/libudev.so.1.7.2
+7ffff3ae5000-7ffff3ae6000 r--p 00027000 08:30 16556                      /usr/lib/x86_64-linux-gnu/libudev.so.1.7.2
+7ffff3ae6000-7ffff3ae7000 rw-p 00028000 08:30 16556                      /usr/lib/x86_64-linux-gnu/libudev.so.1.7.2
+7ffff3ae7000-7ffff3aed000 r--p 00000000 08:30 56023                      /usr/lib/x86_64-linux-gnu/libhwloc.so.15.5.2
+7ffff3aed000-7ffff3b2e000 r-xp 00006000 08:30 56023                      /usr/lib/x86_64-linux-gnu/libhwloc.so.15.5.2
+7ffff3b2e000-7ffff3b41000 r--p 00047000 08:30 56023                      /usr/lib/x86_64-linux-gnu/libhwloc.so.15.5.2
+7ffff3b41000-7ffff3b42000 r--p 00059000 08:30 56023                      /usr/lib/x86_64-linux-gnu/libhwloc.so.15.5.2
+7ffff3b42000-7ffff3b43000 rw-p 0005a000 08:30 56023                      /usr/lib/x86_64-linux-gnu/libhwloc.so.15.5.2
+7ffff3b43000-7ffff3b5a000 r--p 00000000 08:30 72178                      /usr/lib/x86_64-linux-gnu/libopen-rte.so.40.30.2
+7ffff3b5a000-7ffff3bd9000 r-xp 00017000 08:30 72178                      /usr/lib/x86_64-linux-gnu/libopen-rte.so.40.30.2
+7ffff3bd9000-7ffff3bf8000 r--p 00096000 08:30 72178                      /usr/lib/x86_64-linux-gnu/libopen-rte.so.40.30.2
+7ffff3bf8000-7ffff3bf9000 ---p 000b5000 08:30 72178                      /usr/lib/x86_64-linux-gnu/libopen-rte.so.40.30.2
+7ffff3bf9000-7ffff3bfa000 r--p 000b5000 08:30 72178                      /usr/lib/x86_64-linux-gnu/libopen-rte.so.40.30.2
+7ffff3bfa000-7ffff3bfe000 rw-p 000b6000 08:30 72178                      /usr/lib/x86_64-linux-gnu/libopen-rte.so.40.30.2
+7ffff3bfe000-7ffff3c00000 rw-p 00000000 00:00 0 
+7ffff3c00000-7ffff3c28000 r--p 00000000 08:30 54338                      /usr/lib/x86_64-linux-gnu/libc.so.6
+7ffff3c28000-7ffff3dbd000 r-xp 00028000 08:30 54338                      /usr/lib/x86_64-linux-gnu/libc.so.6
+7ffff3dbd000-7ffff3e15000 r--p 001bd000 08:30 54338                      /usr/lib/x86_64-linux-gnu/libc.so.6
+7ffff3e15000-7ffff3e16000 ---p 00215000 08:30 54338                      /usr/lib/x86_64-linux-gnu/libc.so.6
+7ffff3e16000-7ffff3e1a000 r--p 00215000 08:30 54338                      /usr/lib/x86_64-linux-gnu/libc.so.6
+7ffff3e1a000-7ffff3e1c000 rw-p 00219000 08:30 54338                      /usr/lib/x86_64-linux-gnu/libc.so.6
+7ffff3e1c000-7ffff3e29000 rw-p 00000000 00:00 0 
+7ffff3e2d000-7ffff3e2e000 r--p 00000000 08:30 305586                     /usr/lib/x86_64-linux-gnu/libsz.so.2.0.1
+7ffff3e2e000-7ffff3e2f000 r-xp 00001000 08:30 305586                     /usr/lib/x86_64-linux-gnu/libsz.so.2.0.1
+7ffff3e2f000-7ffff3e30000 r--p 00002000 08:30 305586                     /usr/lib/x86_64-linux-gnu/libsz.so.2.0.1
+7ffff3e30000-7ffff3e31000 r--p 00002000 08:30 305586                     /usr/lib/x86_64-linux-gnu/libsz.so.2.0.1
+7ffff3e31000-7ffff3e32000 rw-p 00003000 08:30 305586                     /usr/lib/x86_64-linux-gnu/libsz.so.2.0.1
+7ffff3e32000-7ffff3e4f000 r--p 00000000 08:30 72177                      /usr/lib/x86_64-linux-gnu/libopen-pal.so.40.30.2
+7ffff3e4f000-7ffff3eb5000 r-xp 0001d000 08:30 72177                      /usr/lib/x86_64-linux-gnu/libopen-pal.so.40.30.2
+7ffff3eb5000-7ffff3ed5000 r--p 00083000 08:30 72177                      /usr/lib/x86_64-linux-gnu/libopen-pal.so.40.30.2
+7ffff3ed5000-7ffff3ed6000 ---p 000a3000 08:30 72177                      /usr/lib/x86_64-linux-gnu/libopen-pal.so.40.30.2
+7ffff3ed6000-7ffff3ed9000 r--p 000a3000 08:30 72177                      /usr/lib/x86_64-linux-gnu/libopen-pal.so.40.30.2
+7ffff3ed9000-7ffff3ede000 rw-p 000a6000 08:30 72177                      /usr/lib/x86_64-linux-gnu/libopen-pal.so.40.30.2
+7ffff3ede000-7ffff3ee5000 rw-p 00000000 00:00 0 
+7ffff3ee5000-7ffff3f14000 r--p 00000000 08:30 99308                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalProperties.so
+7ffff3f14000-7ffff3fd9000 r-xp 0002f000 08:30 99308                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalProperties.so
+7ffff3fd9000-7ffff3ffa000 r--p 000f4000 08:30 99308                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalProperties.so
+7ffff3ffa000-7ffff3ffe000 r--p 00114000 08:30 99308                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalProperties.so
+7ffff3ffe000-7ffff3fff000 rw-p 00118000 08:30 99308                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalProperties.so
+7ffff3fff000-7ffff4000000 rw-p 00000000 00:00 0 
+7ffff4000000-7ffff409a000 r--p 00000000 08:30 12097                      /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+7ffff409a000-7ffff41ab000 r-xp 0009a000 08:30 12097                      /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+7ffff41ab000-7ffff421a000 r--p 001ab000 08:30 12097                      /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+7ffff421a000-7ffff421b000 ---p 0021a000 08:30 12097                      /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+7ffff421b000-7ffff4226000 r--p 0021a000 08:30 12097                      /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+7ffff4226000-7ffff4229000 rw-p 00225000 08:30 12097                      /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30
+7ffff4229000-7ffff422c000 rw-p 00000000 00:00 0 
+7ffff4230000-7ffff4232000 r--p 00000000 08:30 305686                     /usr/lib/x86_64-linux-gnu/libptscotchparmetis-6.1.3.so
+7ffff4232000-7ffff4234000 r-xp 00002000 08:30 305686                     /usr/lib/x86_64-linux-gnu/libptscotchparmetis-6.1.3.so
+7ffff4234000-7ffff4235000 r--p 00004000 08:30 305686                     /usr/lib/x86_64-linux-gnu/libptscotchparmetis-6.1.3.so
+7ffff4235000-7ffff4236000 r--p 00004000 08:30 305686                     /usr/lib/x86_64-linux-gnu/libptscotchparmetis-6.1.3.so
+7ffff4236000-7ffff4237000 rw-p 00005000 08:30 305686                     /usr/lib/x86_64-linux-gnu/libptscotchparmetis-6.1.3.so
+7ffff4237000-7ffff4238000 r--p 00000000 08:30 305274                     /usr/lib/x86_64-linux-gnu/libcolamd.so.2.9.6
+7ffff4238000-7ffff423d000 r-xp 00001000 08:30 305274                     /usr/lib/x86_64-linux-gnu/libcolamd.so.2.9.6
+7ffff423d000-7ffff423e000 r--p 00006000 08:30 305274                     /usr/lib/x86_64-linux-gnu/libcolamd.so.2.9.6
+7ffff423e000-7ffff423f000 r--p 00006000 08:30 305274                     /usr/lib/x86_64-linux-gnu/libcolamd.so.2.9.6
+7ffff423f000-7ffff4240000 rw-p 00007000 08:30 305274                     /usr/lib/x86_64-linux-gnu/libcolamd.so.2.9.6
+7ffff4240000-7ffff4267000 r--p 00000000 08:30 72167                      /usr/lib/x86_64-linux-gnu/libmpi.so.40.30.2
+7ffff4267000-7ffff432a000 r-xp 00027000 08:30 72167                      /usr/lib/x86_64-linux-gnu/libmpi.so.40.30.2
+7ffff432a000-7ffff4353000 r--p 000ea000 08:30 72167                      /usr/lib/x86_64-linux-gnu/libmpi.so.40.30.2
+7ffff4353000-7ffff4355000 r--p 00112000 08:30 72167                      /usr/lib/x86_64-linux-gnu/libmpi.so.40.30.2
+7ffff4355000-7ffff4366000 rw-p 00114000 08:30 72167                      /usr/lib/x86_64-linux-gnu/libmpi.so.40.30.2
+7ffff4366000-7ffff4377000 rw-p 00000000 00:00 0 
+7ffff4377000-7ffff4390000 r--p 00000000 08:30 99224                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libconversion.so
+7ffff4390000-7ffff43ea000 r-xp 00019000 08:30 99224                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libconversion.so
+7ffff43ea000-7ffff43fc000 r--p 00073000 08:30 99224                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libconversion.so
+7ffff43fc000-7ffff43fe000 r--p 00084000 08:30 99224                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libconversion.so
+7ffff43fe000-7ffff43ff000 rw-p 00086000 08:30 99224                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libconversion.so
+7ffff43ff000-7ffff4400000 rw-p 00000000 00:00 0 
+7ffff4400000-7ffff4630000 r--p 00000000 08:30 99208                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+7ffff4630000-7ffff4c06000 r-xp 00230000 08:30 99208                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+7ffff4c06000-7ffff4d73000 r--p 00806000 08:30 99208                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+7ffff4d73000-7ffff4d74000 ---p 00973000 08:30 99208                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+7ffff4d74000-7ffff4d97000 r--p 00973000 08:30 99208                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+7ffff4d97000-7ffff4da1000 rw-p 00996000 08:30 99208                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so
+7ffff4da1000-7ffff4db1000 rw-p 00000000 00:00 0 
+7ffff4db1000-7ffff4dbc000 r--p 00000000 08:30 72168                      /usr/lib/x86_64-linux-gnu/libmpi_cxx.so.40.30.1
+7ffff4dbc000-7ffff4dc4000 r-xp 0000b000 08:30 72168                      /usr/lib/x86_64-linux-gnu/libmpi_cxx.so.40.30.1
+7ffff4dc4000-7ffff4dc7000 r--p 00013000 08:30 72168                      /usr/lib/x86_64-linux-gnu/libmpi_cxx.so.40.30.1
+7ffff4dc7000-7ffff4dc8000 ---p 00016000 08:30 72168                      /usr/lib/x86_64-linux-gnu/libmpi_cxx.so.40.30.1
+7ffff4dc8000-7ffff4dca000 r--p 00016000 08:30 72168                      /usr/lib/x86_64-linux-gnu/libmpi_cxx.so.40.30.1
+7ffff4dca000-7ffff4dcb000 rw-p 00018000 08:30 72168                      /usr/lib/x86_64-linux-gnu/libmpi_cxx.so.40.30.1
+7ffff4dcb000-7ffff4dd3000 r--p 00000000 08:30 37377                      /usr/lib/x86_64-linux-gnu/libevent_core-2.1.so.7.0.1
+7ffff4dd3000-7ffff4df1000 r-xp 00008000 08:30 37377                      /usr/lib/x86_64-linux-gnu/libevent_core-2.1.so.7.0.1
+7ffff4df1000-7ffff4dfd000 r--p 00026000 08:30 37377                      /usr/lib/x86_64-linux-gnu/libevent_core-2.1.so.7.0.1
+7ffff4dfd000-7ffff4dfe000 ---p 00032000 08:30 37377                      /usr/lib/x86_64-linux-gnu/libevent_core-2.1.so.7.0.1
+7ffff4dfe000-7ffff4dff000 r--p 00032000 08:30 37377                      /usr/lib/x86_64-linux-gnu/libevent_core-2.1.so.7.0.1
+7ffff4dff000-7ffff4e00000 rw-p 00033000 08:30 37377                      /usr/lib/x86_64-linux-gnu/libevent_core-2.1.so.7.0.1
+7ffff4e00000-7ffff4ee1000 r--p 00000000 08:30 99261                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libmeshTools.so
+7ffff4ee1000-7ffff51ed000 r-xp 000e1000 08:30 99261                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libmeshTools.so
+7ffff51ed000-7ffff5295000 r--p 003ed000 08:30 99261                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libmeshTools.so
+7ffff5295000-7ffff52a1000 r--p 00494000 08:30 99261                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libmeshTools.so
+7ffff52a1000-7ffff52a7000 rw-p 004a0000 08:30 99261                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libmeshTools.so
+7ffff52a7000-7ffff52ac000 rw-p 00000000 00:00 0 
+7ffff52b0000-7ffff52c0000 r--p 00000000 08:30 99303                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libspecie.so
+7ffff52c0000-7ffff52ea000 r-xp 00010000 08:30 99303                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libspecie.so
+7ffff52ea000-7ffff52f4000 r--p 0003a000 08:30 99303                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libspecie.so
+7ffff52f4000-7ffff52f6000 r--p 00043000 08:30 99303                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libspecie.so
+7ffff52f6000-7ffff52f7000 rw-p 00045000 08:30 99303                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libspecie.so
+7ffff52f7000-7ffff5326000 r--p 00000000 08:30 99305                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsurfMesh.so
+7ffff5326000-7ffff53be000 r-xp 0002f000 08:30 99305                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsurfMesh.so
+7ffff53be000-7ffff53fa000 r--p 000c7000 08:30 99305                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsurfMesh.so
+7ffff53fa000-7ffff53fb000 ---p 00103000 08:30 99305                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsurfMesh.so
+7ffff53fb000-7ffff53fe000 r--p 00103000 08:30 99305                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsurfMesh.so
+7ffff53fe000-7ffff5400000 rw-p 00106000 08:30 99305                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsurfMesh.so
+7ffff5400000-7ffff5495000 r--p 00000000 08:30 99290                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsampling.so
+7ffff5495000-7ffff56d7000 r-xp 00095000 08:30 99290                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsampling.so
+7ffff56d7000-7ffff5767000 r--p 002d7000 08:30 99290                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsampling.so
+7ffff5767000-7ffff5770000 r--p 00366000 08:30 99290                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsampling.so
+7ffff5770000-7ffff5775000 rw-p 0036f000 08:30 99290                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libsampling.so
+7ffff5775000-7ffff5776000 rw-p 00000000 00:00 0 
+7ffff5776000-7ffff5777000 r--p 00000000 08:30 304939                     /usr/lib/x86_64-linux-gnu/libbtf.so.1.2.6
+7ffff5777000-7ffff5779000 r-xp 00001000 08:30 304939                     /usr/lib/x86_64-linux-gnu/libbtf.so.1.2.6
+7ffff5779000-7ffff577a000 r--p 00003000 08:30 304939                     /usr/lib/x86_64-linux-gnu/libbtf.so.1.2.6
+7ffff577a000-7ffff577b000 r--p 00003000 08:30 304939                     /usr/lib/x86_64-linux-gnu/libbtf.so.1.2.6
+7ffff577b000-7ffff577c000 rw-p 00004000 08:30 304939                     /usr/lib/x86_64-linux-gnu/libbtf.so.1.2.6
+7ffff577c000-7ffff5782000 r--p 00000000 08:30 56162                      /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0
+7ffff5782000-7ffff5788000 r-xp 00006000 08:30 56162                      /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0
+7ffff5788000-7ffff578c000 r--p 0000c000 08:30 56162                      /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0
+7ffff578c000-7ffff578d000 r--p 0000f000 08:30 56162                      /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0
+7ffff578d000-7ffff578e000 rw-p 00010000 08:30 56162                      /usr/lib/x86_64-linux-gnu/libOpenCL.so.1.0.0
+7ffff578e000-7ffff5797000 r--p 00000000 08:30 99234                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libextrudeModel.so
+7ffff5797000-7ffff57a5000 r-xp 00009000 08:30 99234                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libextrudeModel.so
+7ffff57a5000-7ffff57a9000 r--p 00017000 08:30 99234                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libextrudeModel.so
+7ffff57a9000-7ffff57aa000 ---p 0001b000 08:30 99234                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libextrudeModel.so
+7ffff57aa000-7ffff57ab000 r--p 0001b000 08:30 99234                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libextrudeModel.so
+7ffff57ab000-7ffff57ac000 rw-p 0001c000 08:30 99234                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libextrudeModel.so
+7ffff57ac000-7ffff57ae000 r--p 00000000 08:30 12183                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7ffff57ae000-7ffff57bf000 r-xp 00002000 08:30 12183                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7ffff57bf000-7ffff57c5000 r--p 00013000 08:30 12183                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7ffff57c5000-7ffff57c6000 ---p 00019000 08:30 12183                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7ffff57c6000-7ffff57c7000 r--p 00019000 08:30 12183                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7ffff57c7000-7ffff57c8000 rw-p 0001a000 08:30 12183                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7ffff57c8000-7ffff57d5000 r--p 00000000 08:30 99255                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/liblagrangian.so
+7ffff57d5000-7ffff57f6000 r-xp 0000d000 08:30 99255                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/liblagrangian.so
+7ffff57f6000-7ffff57fd000 r--p 0002e000 08:30 99255                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/liblagrangian.so
+7ffff57fd000-7ffff57fe000 ---p 00035000 08:30 99255                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/liblagrangian.so
+7ffff57fe000-7ffff57ff000 r--p 00035000 08:30 99255                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/liblagrangian.so
+7ffff57ff000-7ffff5800000 rw-p 00036000 08:30 99255                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/liblagrangian.so
+7ffff5800000-7ffff5883000 r--p 00000000 08:30 99247                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvModels.so
+7ffff5883000-7ffff5a30000 r-xp 00083000 08:30 99247                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvModels.so
+7ffff5a30000-7ffff5ab0000 r--p 00230000 08:30 99247                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvModels.so
+7ffff5ab0000-7ffff5ab8000 r--p 002af000 08:30 99247                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvModels.so
+7ffff5ab8000-7ffff5abc000 rw-p 002b7000 08:30 99247                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvModels.so
+7ffff5abc000-7ffff5abd000 rw-p 00000000 00:00 0 
+7ffff5abf000-7ffff5ac0000 r--p 00000000 08:30 304524                     /usr/lib/x86_64-linux-gnu/libamd.so.2.4.6
+7ffff5ac0000-7ffff5ac6000 r-xp 00001000 08:30 304524                     /usr/lib/x86_64-linux-gnu/libamd.so.2.4.6
+7ffff5ac6000-7ffff5ac7000 r--p 00007000 08:30 304524                     /usr/lib/x86_64-linux-gnu/libamd.so.2.4.6
+7ffff5ac7000-7ffff5ac8000 ---p 00008000 08:30 304524                     /usr/lib/x86_64-linux-gnu/libamd.so.2.4.6
+7ffff5ac8000-7ffff5ac9000 r--p 00008000 08:30 304524                     /usr/lib/x86_64-linux-gnu/libamd.so.2.4.6
+7ffff5ac9000-7ffff5aca000 rw-p 00009000 08:30 304524                     /usr/lib/x86_64-linux-gnu/libamd.so.2.4.6
+7ffff5aca000-7ffff5ad5000 r--p 00000000 08:30 99236                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfileFormats.so
+7ffff5ad5000-7ffff5aee000 r-xp 0000b000 08:30 99236                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfileFormats.so
+7ffff5aee000-7ffff5af5000 r--p 00024000 08:30 99236                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfileFormats.so
+7ffff5af5000-7ffff5af6000 ---p 0002b000 08:30 99236                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfileFormats.so
+7ffff5af6000-7ffff5af7000 r--p 0002b000 08:30 99236                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfileFormats.so
+7ffff5af7000-7ffff5af8000 rw-p 0002c000 08:30 99236                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfileFormats.so
+7ffff5af8000-7ffff5b40000 r--p 00000000 08:30 99309                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalTransportModels.so
+7ffff5b40000-7ffff5bd0000 r-xp 00048000 08:30 99309                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalTransportModels.so
+7ffff5bd0000-7ffff5bf9000 r--p 000d8000 08:30 99309                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalTransportModels.so
+7ffff5bf9000-7ffff5bfa000 ---p 00101000 08:30 99309                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalTransportModels.so
+7ffff5bfa000-7ffff5bfe000 r--p 00101000 08:30 99309                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalTransportModels.so
+7ffff5bfe000-7ffff5c00000 rw-p 00105000 08:30 99309                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libthermophysicalTransportModels.so
+7ffff5c00000-7ffff6213000 r--p 00000000 08:30 99237                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+7ffff6213000-7ffff714c000 r-xp 00613000 08:30 99237                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+7ffff714c000-7ffff7681000 r--p 0154c000 08:30 99237                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+7ffff7681000-7ffff76e6000 r--p 01a80000 08:30 99237                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+7ffff76e6000-7ffff76f7000 rw-p 01ae5000 08:30 99237                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so
+7ffff76f7000-7ffff770a000 rw-p 00000000 00:00 0 
+7ffff770a000-7ffff770b000 r--p 00000000 08:30 305684                     /usr/lib/x86_64-linux-gnu/libptscotcherr-6.1.3.so
+7ffff770b000-7ffff770c000 r-xp 00001000 08:30 305684                     /usr/lib/x86_64-linux-gnu/libptscotcherr-6.1.3.so
+7ffff770c000-7ffff770d000 r--p 00002000 08:30 305684                     /usr/lib/x86_64-linux-gnu/libptscotcherr-6.1.3.so
+7ffff770d000-7ffff770e000 r--p 00002000 08:30 305684                     /usr/lib/x86_64-linux-gnu/libptscotcherr-6.1.3.so
+7ffff770e000-7ffff770f000 rw-p 00003000 08:30 305684                     /usr/lib/x86_64-linux-gnu/libptscotcherr-6.1.3.so
+7ffff770f000-7ffff7710000 r--p 00000000 08:30 304509                     /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so.5.10.1
+7ffff7710000-7ffff7711000 r-xp 00001000 08:30 304509                     /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so.5.10.1
+7ffff7711000-7ffff7712000 r--p 00002000 08:30 304509                     /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so.5.10.1
+7ffff7712000-7ffff7713000 r--p 00002000 08:30 304509                     /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so.5.10.1
+7ffff7713000-7ffff7714000 rw-p 00003000 08:30 304509                     /usr/lib/x86_64-linux-gnu/libsuitesparseconfig.so.5.10.1
+7ffff7714000-7ffff7719000 rw-p 00000000 00:00 0 
+7ffff7719000-7ffff7727000 r--p 00000000 08:30 54342                      /usr/lib/x86_64-linux-gnu/libm.so.6
+7ffff7727000-7ffff77a3000 r-xp 0000e000 08:30 54342                      /usr/lib/x86_64-linux-gnu/libm.so.6
+7ffff77a3000-7ffff77fe000 r--p 0008a000 08:30 54342                      /usr/lib/x86_64-linux-gnu/libm.so.6
+7ffff77fe000-7ffff77ff000 r--p 000e4000 08:30 54342                      /usr/lib/x86_64-linux-gnu/libm.so.6
+7ffff77ff000-7ffff7800000 rw-p 000e5000 08:30 54342                      /usr/lib/x86_64-linux-gnu/libm.so.6
+7ffff7800000-7ffff7894000 r--p 00000000 08:30 99252                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleMomentumTransportModels.so
+7ffff7894000-7ffff7a7c000 r-xp 00094000 08:30 99252                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleMomentumTransportModels.so
+7ffff7a7c000-7ffff7b02000 r--p 0027c000 08:30 99252                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleMomentumTransportModels.so
+7ffff7b02000-7ffff7b03000 ---p 00302000 08:30 99252                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleMomentumTransportModels.so
+7ffff7b03000-7ffff7b0c000 r--p 00302000 08:30 99252                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleMomentumTransportModels.so
+7ffff7b0c000-7ffff7b10000 rw-p 0030b000 08:30 99252                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libincompressibleMomentumTransportModels.so
+7ffff7b10000-7ffff7b1a000 rw-p 00000000 00:00 0 
+7ffff7b1a000-7ffff7b1b000 r--p 00000000 08:30 34887                      /usr/lib/x86_64-linux-gnu/libevent_pthreads-2.1.so.7.0.1
+7ffff7b1b000-7ffff7b1c000 r-xp 00001000 08:30 34887                      /usr/lib/x86_64-linux-gnu/libevent_pthreads-2.1.so.7.0.1
+7ffff7b1c000-7ffff7b1d000 r--p 00002000 08:30 34887                      /usr/lib/x86_64-linux-gnu/libevent_pthreads-2.1.so.7.0.1
+7ffff7b1d000-7ffff7b1e000 r--p 00002000 08:30 34887                      /usr/lib/x86_64-linux-gnu/libevent_pthreads-2.1.so.7.0.1
+7ffff7b1e000-7ffff7b1f000 rw-p 00003000 08:30 34887                      /usr/lib/x86_64-linux-gnu/libevent_pthreads-2.1.so.7.0.1
+7ffff7b1f000-7ffff7b23000 rw-p 00000000 00:00 0 
+7ffff7b23000-7ffff7b39000 r--p 00000000 08:30 99310                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtriSurface.so
+7ffff7b39000-7ffff7b97000 r-xp 00016000 08:30 99310                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtriSurface.so
+7ffff7b97000-7ffff7bbc000 r--p 00074000 08:30 99310                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtriSurface.so
+7ffff7bbc000-7ffff7bbd000 ---p 00099000 08:30 99310                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtriSurface.so
+7ffff7bbd000-7ffff7bbf000 r--p 00099000 08:30 99310                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtriSurface.so
+7ffff7bbf000-7ffff7bc0000 rw-p 0009b000 08:30 99310                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libtriSurface.so
+7ffff7bc0000-7ffff7bc1000 rw-p 00000000 00:00 0 
+7ffff7bc1000-7ffff7bc5000 r--p 00000000 08:30 99319                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/openmpi-system/libPstream.so
+7ffff7bc5000-7ffff7bcc000 r-xp 00004000 08:30 99319                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/openmpi-system/libPstream.so
+7ffff7bcc000-7ffff7bcf000 r--p 0000b000 08:30 99319                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/openmpi-system/libPstream.so
+7ffff7bcf000-7ffff7bd0000 r--p 0000d000 08:30 99319                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/openmpi-system/libPstream.so
+7ffff7bd0000-7ffff7bd1000 rw-p 0000e000 08:30 99319                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/openmpi-system/libPstream.so
+7ffff7bd1000-7ffff7bd4000 r--p 00000000 08:30 11825                      /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7ffff7bd4000-7ffff7beb000 r-xp 00003000 08:30 11825                      /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7ffff7beb000-7ffff7bef000 r--p 0001a000 08:30 11825                      /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7ffff7bef000-7ffff7bf0000 r--p 0001d000 08:30 11825                      /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7ffff7bf0000-7ffff7bf1000 rw-p 0001e000 08:30 11825                      /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+7ffff7bf1000-7ffff7bf2000 r--s 00000000 08:30 337454                     /tmp/ompi.DESKTOP-NR4V0NP.1000/pid.76001/pmix_dstor_ds21_76001/initial-pmix_shared-segment-0
+7ffff7bf2000-7ffff7bf3000 rw-s 00000000 08:30 337455                     /tmp/ompi.DESKTOP-NR4V0NP.1000/pid.76001/pmix_dstor_ds21_76001/smlockseg-2040266753
+7ffff7bf3000-7ffff7bf4000 r--s 00000000 08:30 337456                     /tmp/ompi.DESKTOP-NR4V0NP.1000/pid.76001/pmix_dstor_ds12_76001/initial-pmix_shared-segment-0
+7ffff7bf4000-7ffff7bf5000 r--p 00000000 08:30 72264                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_reachable_netlink.so
+7ffff7bf5000-7ffff7bf7000 r-xp 00001000 08:30 72264                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_reachable_netlink.so
+7ffff7bf7000-7ffff7bf8000 r--p 00003000 08:30 72264                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_reachable_netlink.so
+7ffff7bf8000-7ffff7bf9000 r--p 00003000 08:30 72264                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_reachable_netlink.so
+7ffff7bf9000-7ffff7bfa000 rw-p 00004000 08:30 72264                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_reachable_netlink.so
+7ffff7bfa000-7ffff7bfb000 r--p 00000000 08:30 72290                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_shmem_mmap.so
+7ffff7bfb000-7ffff7bfd000 r-xp 00001000 08:30 72290                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_shmem_mmap.so
+7ffff7bfd000-7ffff7bfe000 r--p 00003000 08:30 72290                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_shmem_mmap.so
+7ffff7bfe000-7ffff7bff000 r--p 00003000 08:30 72290                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_shmem_mmap.so
+7ffff7bff000-7ffff7c00000 rw-p 00004000 08:30 72290                      /usr/lib/x86_64-linux-gnu/openmpi/lib/openmpi3/mca_shmem_mmap.so
+7ffff7c00000-7ffff7c87000 r--p 00000000 08:30 99264                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libmomentumTransportModels.so
+7ffff7c87000-7ffff7e14000 r-xp 00087000 08:30 99264                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libmomentumTransportModels.so
+7ffff7e14000-7ffff7e84000 r--p 00214000 08:30 99264                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libmomentumTransportModels.so
+7ffff7e84000-7ffff7e8d000 r--p 00283000 08:30 99264                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libmomentumTransportModels.so
+7ffff7e8d000-7ffff7e90000 rw-p 0028c000 08:30 99264                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libmomentumTransportModels.so
+7ffff7e90000-7ffff7e99000 rw-p 00000000 00:00 0 
+7ffff7e99000-7ffff7ed1000 r--p 00000000 08:30 99242                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvConstraints.so
+7ffff7ed1000-7ffff7f55000 r-xp 00038000 08:30 99242                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvConstraints.so
+7ffff7f55000-7ffff7f7f000 r--p 000bc000 08:30 99242                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvConstraints.so
+7ffff7f7f000-7ffff7f80000 ---p 000e6000 08:30 99242                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvConstraints.so
+7ffff7f80000-7ffff7f84000 r--p 000e6000 08:30 99242                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvConstraints.so
+7ffff7f84000-7ffff7f86000 rw-p 000ea000 08:30 99242                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libfvConstraints.so
+7ffff7f86000-7ffff7f88000 rw-p 00000000 00:00 0 
+7ffff7f88000-7ffff7f95000 r--p 00000000 08:30 99279                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphysicalProperties.so
+7ffff7f95000-7ffff7fae000 r-xp 0000d000 08:30 99279                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphysicalProperties.so
+7ffff7fae000-7ffff7fb6000 r--p 00026000 08:30 99279                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphysicalProperties.so
+7ffff7fb6000-7ffff7fb7000 ---p 0002e000 08:30 99279                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphysicalProperties.so
+7ffff7fb7000-7ffff7fb8000 r--p 0002e000 08:30 99279                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphysicalProperties.so
+7ffff7fb8000-7ffff7fb9000 rw-p 0002f000 08:30 99279                      /opt/openfoam10/platforms/linux64GccDPInt32Opt/lib/libphysicalProperties.so
+7ffff7fb9000-7ffff7fbb000 rw-p 00000000 00:00 0 
+7ffff7fbb000-7ffff7fbf000 r--p 00000000 00:00 0                          [vvar]
+7ffff7fbf000-7ffff7fc1000 r--p 00000000 00:00 0                          [vvar_vclock]
+7ffff7fc1000-7ffff7fc3000 r-xp 00000000 00:00 0                          [vdso]
+7ffff7fc3000-7ffff7fc5000 r--p 00000000 08:30 54335                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffff7fc5000-7ffff7fef000 r-xp 00002000 08:30 54335                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffff7fef000-7ffff7ffa000 r--p 0002c000 08:30 54335                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffff7ffa000-7ffff7ffb000 rw-s 00000000 08:30 337457                     /tmp/ompi.DESKTOP-NR4V0NP.1000/pid.76001/pmix_dstor_ds12_76001/dstore_sm.lock
+7ffff7ffb000-7ffff7ffd000 r--p 00037000 08:30 54335                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffff7ffd000-7ffff7fff000 rw-p 00039000 08:30 54335                      /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2
+7ffffffdd000-7ffffffff000 rw-p 00000000 00:00 0                          [stack]
+PROC_MAPS_END
+[Inferior 1 (process 75995) killed]
