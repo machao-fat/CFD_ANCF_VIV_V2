@@ -1,0 +1,14 @@
+EIGEN3_INCLUDE_DIR ?= /usr/include/eigen3
+
+EXE_INC = \
+    -DOPENFOAM_ORG -DOPENFOAM_NOT_EXTEND \
+    -Wno-old-style-cast -Wno-deprecated-declarations \
+    -I$(EIGEN3_INCLUDE_DIR) \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -I$(LIB_SRC)/dynamicMesh/lnInclude
+
+LIB_LIBS = \
+    -lfiniteVolume \
+    -ldynamicMesh \
+    -lmeshTools

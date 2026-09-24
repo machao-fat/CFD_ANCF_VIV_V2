@@ -1,0 +1,15 @@
+Utilities.C
+
+Interface.C
+
+CouplingDataUser.C
+
+CHT/ModuleCHT.C
+FSI/ModuleFSI.C
+FF/ModuleFF.C
+
+Adapter.C
+
+preciceAdapterFunctionObject.C
+
+LIB = $(ADAPTER_TARGET_DIR)/libpreciceAdapterPhase1K20
