@@ -1,0 +1,19 @@
+{
+  "classification": "RELEASE_FORCE_RECOVERED_REPRODUCIBLY",
+  "case_id": "ANCF_SINGLE_SLICE_HIGHRE_0P2S_PREP_V1",
+  "global_time_s": 30.0,
+  "restart_case": "Phase1K10 mapped_candidate_30",
+  "patch": "cylinder",
+  "Fx_raw_N": 0.0655270406896,
+  "Fy_raw_N": 0.05872987414832,
+  "Fz_raw_N": -2.10307854575e-21,
+  "Lz_m": 0.028,
+  "DeltaL_m": 1.98,
+  "force_conversion": "F_section = F_raw/Lz; F_strip = F_section*DeltaL; applied once",
+  "phase1k10_new_release_force_json_sha256": "94a4590a92b7a67b31b9a9c38a1e641576c9cd0d64afe4dfbfff67a03878a90d",
+  "force_output_sha256_both_replays": "f29486df3a3a22b874bf04bb5404c1e9c3a95327b7b184add60518002283bb2b",
+  "run1_force_output": "evidence/phase1k10_new_mesh_restart/run-20260924T085251Z-c2245ff/force_eval/postProcessing/cylinderForces/30/forces.dat",
+  "run2_force_output": "evidence/phase1k11_25window_rbf_fsi/staging-20260924T093404Z-c2245ff/f0_replay2/postProcessing/cylinderForces/30/forces.dat",
+  "reproducible": true,
+  "solver_time_advanced": false
+}

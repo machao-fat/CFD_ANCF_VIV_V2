@@ -1,0 +1,12 @@
+{
+  "fluid_pid": 420091,
+  "fluid_exit_code": 0,
+  "fluid_process_remaining": false,
+  "precice_process_started": false,
+  "structure_process_started": false,
+  "ancf_worker_started": false,
+  "remaining_matching_processes": 0,
+  "authoritative_case_field_and_mesh_hashes_unchanged": true,
+  "untouched_mapped_candidate_hashes_unchanged": true,
+  "advanced_30_02_s_state_reused_as_release": false
+}

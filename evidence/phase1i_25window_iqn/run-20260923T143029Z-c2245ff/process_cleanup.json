@@ -1,0 +1,63 @@
+{
+  "run_id": "run-20260923T143029Z-c2245ff",
+  "launcher_pid": 170442,
+  "participant_pids": {
+    "Structure": {
+      "pid": 171489,
+      "exit_code": -15,
+      "absent_after_shutdown": true
+    },
+    "Fluid": {
+      "pid": 171490,
+      "exit_code": -8,
+      "absent_after_shutdown": true
+    }
+  },
+  "worker": {
+    "pid": 171504,
+    "absent_after_shutdown": true,
+    "still_running_after_shutdown": false,
+    "independent_exit_code_exposed": false
+  },
+  "observed_process_runtime_maps": {
+    "Structure": {
+      "171489": {
+        "pid": 171489,
+        "present": true,
+        "exe": "/usr/bin/python3.10",
+        "argv": "/usr/bin/python3.10 /home/machao/projects/CFD_ANCF_VIV_V2/src/coupling/hh06_structure_0000/structure_0000_participant.py --case /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1i_25window_iqn/run-20260923T143029Z-c2245ff/case --run --worker /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker --max-windows 25 --audit-output /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1i_25window_iqn/run-20260923T143029Z-c2245ff/structure_audit.json --trace-output /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1i_25window_iqn/run-20260923T143029Z-c2245ff/structure_trace.jsonl",
+        "coupling_libraries": [
+          "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+        ]
+      }
+    },
+    "Fluid": {
+      "171490": {
+        "pid": 171490,
+        "present": true,
+        "exe": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+        "argv": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam -case /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1i_25window_iqn/run-20260923T143029Z-c2245ff/case",
+        "coupling_libraries": [
+          "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so",
+          "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+        ]
+      }
+    },
+    "worker": {
+      "171504": {
+        "pid": 171504,
+        "present": true,
+        "exe": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "argv": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "coupling_libraries": []
+      }
+    }
+  },
+  "socket_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1i_25window_iqn/run-20260923T143029Z-c2245ff/precice-sockets",
+  "socket_contents_after_shutdown": [],
+  "launcher_lock_released": true,
+  "exit_codes": {
+    "Structure": -15,
+    "Fluid": -8
+  }
+}

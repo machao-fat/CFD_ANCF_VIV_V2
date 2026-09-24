@@ -1,0 +1,5 @@
+Phase 1K.18.6 authorized retry preflight
+Run: run-20260924T141228Z-c2245ff
+Result: PRE_RUN_BLOCKED: preCICE socket path escapes isolated run directory
+
+No Fluid, Structure, or worker process was launched from this run directory.

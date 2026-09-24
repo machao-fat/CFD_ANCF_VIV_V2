@@ -1,0 +1,72 @@
+{
+  "descendant_pids": [
+    531752,
+    531823,
+    531827,
+    531828,
+    531829,
+    531963
+  ],
+  "elapsed_wall_s": 4.152120423997985,
+  "finished_unix": 1790259562.7006426,
+  "hard_stop_reason": null,
+  "loaded_library_maps": {
+    "Fluid": {
+      "531595": [
+        "7a1224c00000-7a1224c34000 r--p 00000000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7a1224c34000-7a1224f62000 r-xp 00034000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7a1224f62000-7a1224fec000 r--p 00362000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7a1224fec000-7a1224fed000 ---p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7a1224fed000-7a1224ff8000 r--p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7a1224ff8000-7a1224ffa000 rw-p 003f7000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7a1225097000-7a12250e4000 r--p 00000000 08:30 368671                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/adapter-lib/libpreciceAdapterPhase1K18Diag.so",
+        "7a12250e4000-7a12251bb000 r-xp 0004d000 08:30 368671                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/adapter-lib/libpreciceAdapterPhase1K18Diag.so",
+        "7a12251bb000-7a12251f8000 r--p 00124000 08:30 368671                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/adapter-lib/libpreciceAdapterPhase1K18Diag.so",
+        "7a12251f8000-7a12251f9000 ---p 00161000 08:30 368671                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/adapter-lib/libpreciceAdapterPhase1K18Diag.so",
+        "7a12251f9000-7a12251fd000 r--p 00161000 08:30 368671                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/adapter-lib/libpreciceAdapterPhase1K18Diag.so",
+        "7a12251fd000-7a1225200000 rw-p 00165000 08:30 368671                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/adapter-lib/libpreciceAdapterPhase1K18Diag.so",
+        "7a1229ae5000-7a1229af9000 r--p 00000000 08:30 368950                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/rbf-lib/libRBFMeshMotionSolverPhase1K18Diag.so",
+        "7a1229af9000-7a1229b35000 r-xp 00014000 08:30 368950                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/rbf-lib/libRBFMeshMotionSolverPhase1K18Diag.so",
+        "7a1229b35000-7a1229b4d000 r--p 00050000 08:30 368950                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/rbf-lib/libRBFMeshMotionSolverPhase1K18Diag.so",
+        "7a1229b4d000-7a1229b4f000 r--p 00067000 08:30 368950                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/rbf-lib/libRBFMeshMotionSolverPhase1K18Diag.so",
+        "7a1229b4f000-7a1229b50000 rw-p 00069000 08:30 368950                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/rbf-lib/libRBFMeshMotionSolverPhase1K18Diag.so"
+      ],
+      "531827": [],
+      "531828": [],
+      "531829": [],
+      "531963": []
+    },
+    "Structure": {
+      "531596": [
+        "7271eec00000-7271eec34000 r--p 00000000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7271eec34000-7271eef62000 r-xp 00034000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7271eef62000-7271eefec000 r--p 00362000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7271eefec000-7271eefed000 ---p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7271eefed000-7271eeff8000 r--p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "7271eeff8000-7271eeffa000 rw-p 003f7000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ],
+      "531752": [
+        "572fba7a3000-572fba7a5000 r--p 00000000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "572fba7a5000-572fba7ce000 r-xp 00002000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "572fba7ce000-572fba7d3000 r--p 0002b000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "572fba7d3000-572fba7d4000 r--p 0002f000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "572fba7d4000-572fba7d5000 rw-p 00030000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker"
+      ],
+      "531823": []
+    }
+  },
+  "processes": {
+    "Fluid": {
+      "exit_code": 0,
+      "pid": 531595,
+      "signal_sent": null
+    },
+    "Structure": {
+      "exit_code": 0,
+      "pid": 531596,
+      "signal_sent": null
+    }
+  },
+  "started_unix": 1790259558.548401,
+  "timed_out": false
+}

@@ -1,0 +1,17 @@
+// Single-DOF FSI setup. The preCICE adapter supplies cylinder displacement
+// through pointDisplacement; the outer boundaries remain fixed in the fields.
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      dynamicMeshDict;
+}
+
+ mover
+{
+    type            motionSolver;
+    libs            ("libfvMeshMovers.so" "libfvMotionSolvers.so");
+    motionSolver    displacementLaplacian;
+    diffusivity     quadratic inverseDistance 1(cylinder);
+}

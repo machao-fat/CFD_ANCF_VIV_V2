@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+OpenFOAM 10 candidate configuration for the pinned solids4foam RBF solver.
+This file is used only by the isolated prescribed-motion qualification.
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      dynamicMeshDict;
+}
+
+mover
+{
+    type                motionSolver;
+    libs                ("libfvMeshMovers.so" "libfvMotionSolvers.so");
+    motionSolverLibs    ("libRBFMeshMotionSolver.so");
+    motionSolver        RBFMeshMotionSolver;
+
+    RBFMeshMotionSolverCoeffs
+    {
+        movingPatches    (cylinder);
+        staticPatches    ();
+        fixedPatches     (inlet outlet upper lower);
+
+        // OF10 port input contract: read pointDisplacement patch values.
+        faceCellCenters  no;
+
+        interpolation
+        {
+            function     TPS;
+            polynomial   no;
+            cpu          no;
+            fullCPU      no;
+        }
+
+        // Values match the upstream perpendicularFlap example; they are a
+        // starting configuration, not a mesh-independent optimum.
+        coarsening
+        {
+            enabled                 yes;
+            tol                     0.05;
+            minPoints               20;
+            maxPoints               200;
+            livePointSelection      yes;
+            tolLivePointSelection   0.05;
+            exportSelectedPoints    no;
+            twoPointSelection       no;
+            surfaceCorrection       no;
+        }
+    }
+}
+
+// ************************************************************************* //

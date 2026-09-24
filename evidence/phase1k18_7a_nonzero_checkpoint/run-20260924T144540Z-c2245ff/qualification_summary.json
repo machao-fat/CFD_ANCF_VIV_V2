@@ -1,0 +1,86 @@
+{
+  "classification": "NONZERO_ACCEPTED_STATE_GENERATED",
+  "physical_windows_authorized": 1,
+  "completed_accepted_windows": 1,
+  "attempts": 20,
+  "rollback_attempts": 19,
+  "acceptance": "ACCEPTED_AT_ITERATION_LIMIT",
+  "accepted_interface_displacement_m": [
+    -1.4162483789100853e-06,
+    -1.235580527301291e-07
+  ],
+  "accepted_interface_displacement_nonzero": true,
+  "nonzero_fluid_to_rbf_motion_observed": true,
+  "trace_one_window_only": true,
+  "transport_ids_monotonic": true,
+  "ancf_state_snapshot_valid": true,
+  "ancf_state_snapshot_sha256": "fae2cedc42186475a27ee01e48deced15580d8d3537c4aa32ec02b0d28cc747c",
+  "motion_observation": {
+    "cellDisplacement_cylinder_boundary_max_norm_m": 9.512021596591312e-07,
+    "pointDisplacement_cylinder_boundary_max_norm_m": 9.512021597e-07,
+    "rbf_mesh_candidate_max_displacement_m": 9.546562338e-07
+  },
+  "endpoint_cfd_snapshot": {
+    "global_time_s": 30.0002,
+    "directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7a_nonzero_checkpoint/run-20260924T144540Z-c2245ff/case/30.0002",
+    "required_files_present": true,
+    "missing_files": [],
+    "file_sha256": {
+      "Force": "0e3362ab841ae9b6bc4e70991e623b154a5d008348181673cc9c067bcb47d235",
+      "U": "3e20739e7bfcdb6f34cbb14cee5d159bd4e7124862ef86c82c0e524f4a26e11b",
+      "U_0": "1c8aa748bb5414cc7fa117997edb12b75a2e7a8a8eebb30b01e80dc41d615c09",
+      "Uf": "0d8ec9c39c9af1ab9e361991cf58a946ebddc6add3739f45279db95cb51e7302",
+      "Uf_0": "5bedb8101d149e8a7ca70bb217f9352720294c52d4039d2fdb40f031e204aeed",
+      "V0": "146e5809b6217ee5718550d6e68b0abd5d8748f4189152f3cc377958d210f2ec",
+      "cellDisplacement": "3773e27364938115926c32804dd16a411e8bf28848e5e32d211c25dd54e99028",
+      "k": "709f0f78266ecec6375fcdaca19c7b6e919df9af8387828abf824ef1d731d75d",
+      "k_0": "3648cdc3928cd37677280977b5d5e54693c7293c5b9a72daa38eaa094c34de6a",
+      "meshPhi": "3479513445da8b8875ecad6de51defe87f40875c349044f84c0b4421f894c848",
+      "nut": "75083b57c0f1582719bc8f4c87e742e6047a0cb88ce45be65f26d6cc203f0314",
+      "omega": "330cfc5c140fff4788edbf6c25c0e0f6b431970fdf771a966fb6256a2a4478d4",
+      "omega_0": "5e3f0332c9ea19535892461be5fb3c60c904e5facb503a392b9bd0c0e74aedef",
+      "p": "1eb7499e8138a4ea94b5975d767baa8c81e4b10b9b41cf86db39bb3a4d97e97a",
+      "phi": "5cfbfe622e2812d3f8a16fb29ee6838932fe68bf8127b0fe113564ad6aee307d",
+      "pointDisplacement": "f140b18ad38ac964f42e0518ea6a653dc9eb8e0eccfbe5bb5f9fdb19d72af781",
+      "polyMesh/points": "be63c59879b2ece39de4d0e5e584b719dcc331e2fa02c189772af74b13b5abb9",
+      "uniform/time": "ffbabc93a614f04985addef0652c2a3d8cf49eb484b9c5317c381162e55c19fc",
+      "yPlus": "fac547e90d0641c36d91aa616d733c87097711e46273b7c5b944b25116719b3c"
+    },
+    "same_tree_hashes_on_immediate_recheck": true
+  },
+  "ancf_state_snapshot_exists": true,
+  "restart_integrity": {
+    "source_restart_fields_unchanged": true,
+    "source_mesh_unchanged": true,
+    "scratch_release_fields_unchanged": true
+  },
+  "process_cleanup": {
+    "fluid_pid": 540242,
+    "structure_pid": 540243,
+    "descendant_pids": [
+      540386,
+      540451,
+      540468,
+      540593
+    ],
+    "exit_codes": {
+      "fluid": 0,
+      "structure": 0
+    },
+    "loaded_library_paths": {
+      "fluid": [
+        "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k13b_rbf_diag/build-20260924T105315Z-c2245ff/lib/libRBFMeshMotionSolverPhase1K13Diag.so",
+        "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k17_adapter/lib/libpreciceAdapterPhase1K17.so",
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ],
+      "structure": [
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ]
+    },
+    "stop_reason": null,
+    "elapsed_wall_s": 12.700278075993992
+  },
+  "run_stop_reason": null,
+  "independent_runtime_replay_performed": false,
+  "hash_reproducibility_scope": "bytewise manifests and frozen input identities; no second physical replay"
+}

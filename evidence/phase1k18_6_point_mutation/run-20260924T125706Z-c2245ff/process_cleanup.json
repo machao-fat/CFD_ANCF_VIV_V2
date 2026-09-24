@@ -1,0 +1,37 @@
+{
+  "descendant_pids": [
+    517740,
+    517810,
+    517811
+  ],
+  "elapsed_wall_s": 0.1528529749775771,
+  "finished_unix": 1790257293.3407419,
+  "hard_stop_reason": "Structure exited nonzero (2)",
+  "loaded_library_maps": {
+    "Fluid": {
+      "517617": [],
+      "517740": [],
+      "517810": [],
+      "517811": []
+    },
+    "Structure": {
+      "517618": []
+    }
+  },
+  "processes": {
+    "Fluid": {
+      "exit_code": -15,
+      "pid": 517617,
+      "reason": "Structure exited nonzero (2)",
+      "signal_sent": "SIGTERM"
+    },
+    "Structure": {
+      "exit_code": 2,
+      "pid": 517618,
+      "reason": "Structure exited nonzero (2)",
+      "signal_sent": null
+    }
+  },
+  "started_unix": 1790257293.1877868,
+  "timed_out": false
+}

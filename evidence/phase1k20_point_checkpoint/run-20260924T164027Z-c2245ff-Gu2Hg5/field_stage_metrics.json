@@ -1,0 +1,239 @@
+{
+  "classification": "DISPLACEMENT_READ_OR_RBF_STAGE_MUTATION",
+  "post_restore_mutation": {
+    "observed": true,
+    "transitions": [
+      {
+        "from": "S1",
+        "to": "S2"
+      },
+      {
+        "from": "S3",
+        "to": "S4"
+      },
+      {
+        "from": "S4",
+        "to": "S5"
+      }
+    ]
+  },
+  "rollback": {
+    "all_checkpointed_mesh_fields_restore_exactly": true,
+    "cellDisplacement_S0_equals_S1": true,
+    "mesh_points_S0_equals_S1": true,
+    "pointDisplacement_S0_equals_S1": true
+  },
+  "selected_rbf_call": 3,
+  "stages": {
+    "S0": {
+      "cellDisplacement": {
+        "boundary_sha256": "6fc43ca8ae59e60bb89a1698e16acfb417d4676a77605bd7916643e2e9933f9f",
+        "boundary_vectors": 846,
+        "changed_boundary_entries": null,
+        "changed_full_entries": null,
+        "changed_internal_entries": null,
+        "full_sha256": "7aa1b0cd6a58c570439b2a511d882504c619b75a1494b5b4cf77abc337c3f5cd",
+        "internal_sha256": "51b5a3e6f4d33c17a2b0514b8cd0d56cf68d3c376e726644193c0ce2a386df54",
+        "internal_vectors": 46826,
+        "max_delta_from_previous": null
+      },
+      "file": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/diagnostics/S0_after_checkpoint_save_1.json",
+      "file_sha256": "1b4eceb597280ee96d6602954822aa5c36edf29e3ef6bf3acb5a9de6f0de4599",
+      "mesh_points": {
+        "changed_points": null,
+        "max_point_delta_m": null,
+        "point_count": 94498,
+        "sha256": "bee2072d6d1f5c2ae6c3eed7cac82fae1f1bac568fff5a36383e9226c3b8893e"
+      },
+      "pointDisplacement": {
+        "boundary_sha256": "c5dbaddde643e6e7a509c8ae1e0aa6dd9e48b2aeab1b80519fea28847f4a8cb5",
+        "boundary_vectors": 96198,
+        "changed_boundary_entries": null,
+        "changed_full_entries": null,
+        "changed_internal_entries": null,
+        "full_sha256": "4309ee30bbf66f11ea08b44d1a38ef91eb6df7acccc306abe9f7e79983d6f0aa",
+        "internal_sha256": "e07ed16096a0c80b159c20e0f0b75d9005446835aa3207d4a5ed7d5ece76711f",
+        "internal_vectors": 94498,
+        "max_delta_from_previous": null
+      },
+      "time_dir": "30.0002",
+      "time_s": 30.0002
+    },
+    "S1": {
+      "cellDisplacement": {
+        "boundary_sha256": "6fc43ca8ae59e60bb89a1698e16acfb417d4676a77605bd7916643e2e9933f9f",
+        "boundary_vectors": 846,
+        "changed_boundary_entries": 0,
+        "changed_full_entries": 0,
+        "changed_internal_entries": 0,
+        "full_sha256": "7aa1b0cd6a58c570439b2a511d882504c619b75a1494b5b4cf77abc337c3f5cd",
+        "internal_sha256": "51b5a3e6f4d33c17a2b0514b8cd0d56cf68d3c376e726644193c0ce2a386df54",
+        "internal_vectors": 46826,
+        "max_delta_from_previous": 0.0
+      },
+      "file": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/diagnostics/S1_after_rollback_restore_retry_1.json",
+      "file_sha256": "b4cf51a8612b44d32af9f104ce46aecb00928e07f6ecc4d8581ed29da3f17396",
+      "mesh_points": {
+        "changed_points": 0,
+        "max_point_delta_m": 0.0,
+        "point_count": 94498,
+        "sha256": "bee2072d6d1f5c2ae6c3eed7cac82fae1f1bac568fff5a36383e9226c3b8893e"
+      },
+      "pointDisplacement": {
+        "boundary_sha256": "c5dbaddde643e6e7a509c8ae1e0aa6dd9e48b2aeab1b80519fea28847f4a8cb5",
+        "boundary_vectors": 96198,
+        "changed_boundary_entries": 0,
+        "changed_full_entries": 0,
+        "changed_internal_entries": 0,
+        "full_sha256": "4309ee30bbf66f11ea08b44d1a38ef91eb6df7acccc306abe9f7e79983d6f0aa",
+        "internal_sha256": "e07ed16096a0c80b159c20e0f0b75d9005446835aa3207d4a5ed7d5ece76711f",
+        "internal_vectors": 94498,
+        "max_delta_from_previous": 0.0
+      },
+      "time_dir": "30.0002",
+      "time_s": 30.0002
+    },
+    "S2": {
+      "cellDisplacement": {
+        "boundary_sha256": "640e403a0199ce2e97682134aad2a022cbf61db3fb5e1017bf5fbd7af1588a2d",
+        "boundary_vectors": 846,
+        "changed_boundary_entries": 200,
+        "changed_full_entries": 200,
+        "changed_internal_entries": 0,
+        "full_sha256": "27f7a2d43d2b9dffd30a9fd9c8b1f0ed88c95a81386e7777bba4a6bb009e2245",
+        "internal_sha256": "51b5a3e6f4d33c17a2b0514b8cd0d56cf68d3c376e726644193c0ce2a386df54",
+        "internal_vectors": 46826,
+        "max_delta_from_previous": 4.470363116019137e-07
+      },
+      "file": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/diagnostics/S2_after_readData_dt_retry_1.json",
+      "file_sha256": "0f127c0227db25cfb988875b62c9e0f5be924254c74594c93e753db0297d20c3",
+      "mesh_points": {
+        "changed_points": 0,
+        "max_point_delta_m": 0.0,
+        "point_count": 94498,
+        "sha256": "bee2072d6d1f5c2ae6c3eed7cac82fae1f1bac568fff5a36383e9226c3b8893e"
+      },
+      "pointDisplacement": {
+        "boundary_sha256": "af5104819dca29cda4007122f2fe7377212afe28a22609c62d575b3e7790556c",
+        "boundary_vectors": 96198,
+        "changed_boundary_entries": 400,
+        "changed_full_entries": 400,
+        "changed_internal_entries": 0,
+        "full_sha256": "ec4e8215d7fd34d082294e3e2337a76d1133b080df8e71a0169421d6427c137e",
+        "internal_sha256": "e07ed16096a0c80b159c20e0f0b75d9005446835aa3207d4a5ed7d5ece76711f",
+        "internal_vectors": 94498,
+        "max_delta_from_previous": 4.4703631160191413e-07
+      },
+      "time_dir": "30.0002",
+      "time_s": 30.0002
+    },
+    "S3": {
+      "cellDisplacement": {
+        "boundary_sha256": "640e403a0199ce2e97682134aad2a022cbf61db3fb5e1017bf5fbd7af1588a2d",
+        "boundary_vectors": 846,
+        "changed_boundary_entries": 0,
+        "changed_full_entries": 0,
+        "changed_internal_entries": 0,
+        "full_sha256": "27f7a2d43d2b9dffd30a9fd9c8b1f0ed88c95a81386e7777bba4a6bb009e2245",
+        "internal_sha256": "51b5a3e6f4d33c17a2b0514b8cd0d56cf68d3c376e726644193c0ce2a386df54",
+        "internal_vectors": 46826,
+        "max_delta_from_previous": 0.0
+      },
+      "file": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/diagnostics/S3_before_correctBoundaryConditions_call_3.json",
+      "file_sha256": "63f4308fd5a5acde5f7183ec6dcccd6dca256ed60063791b54c7373186d5275a",
+      "mesh_points": {
+        "changed_points": 0,
+        "max_point_delta_m": 0.0,
+        "point_count": 94498,
+        "sha256": "bee2072d6d1f5c2ae6c3eed7cac82fae1f1bac568fff5a36383e9226c3b8893e"
+      },
+      "pointDisplacement": {
+        "boundary_sha256": "af5104819dca29cda4007122f2fe7377212afe28a22609c62d575b3e7790556c",
+        "boundary_vectors": 96198,
+        "changed_boundary_entries": 0,
+        "changed_full_entries": 0,
+        "changed_internal_entries": 0,
+        "full_sha256": "ec4e8215d7fd34d082294e3e2337a76d1133b080df8e71a0169421d6427c137e",
+        "internal_sha256": "e07ed16096a0c80b159c20e0f0b75d9005446835aa3207d4a5ed7d5ece76711f",
+        "internal_vectors": 94498,
+        "max_delta_from_previous": 0.0
+      },
+      "time_dir": "30.0004",
+      "time_s": 30.0004
+    },
+    "S4": {
+      "cellDisplacement": {
+        "boundary_sha256": "640e403a0199ce2e97682134aad2a022cbf61db3fb5e1017bf5fbd7af1588a2d",
+        "boundary_vectors": 846,
+        "changed_boundary_entries": 0,
+        "changed_full_entries": 0,
+        "changed_internal_entries": 0,
+        "full_sha256": "27f7a2d43d2b9dffd30a9fd9c8b1f0ed88c95a81386e7777bba4a6bb009e2245",
+        "internal_sha256": "51b5a3e6f4d33c17a2b0514b8cd0d56cf68d3c376e726644193c0ce2a386df54",
+        "internal_vectors": 46826,
+        "max_delta_from_previous": 0.0
+      },
+      "file": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/diagnostics/S4_after_correctBoundaryConditions_call_3.json",
+      "file_sha256": "2487b7b4be8a66e2cf64afdd27c17fdf459dcf95412c5f4fb4e981c30aafe984",
+      "mesh_points": {
+        "changed_points": 0,
+        "max_point_delta_m": 0.0,
+        "point_count": 94498,
+        "sha256": "bee2072d6d1f5c2ae6c3eed7cac82fae1f1bac568fff5a36383e9226c3b8893e"
+      },
+      "pointDisplacement": {
+        "boundary_sha256": "49d58ee9608e9c864ed408ed44c754c8bb87ea65fe3f1b2cc36243d7d914d92b",
+        "boundary_vectors": 96198,
+        "changed_boundary_entries": 400,
+        "changed_full_entries": 800,
+        "changed_internal_entries": 400,
+        "full_sha256": "22d7102c0767e73a693cbc8d0bb5d819cc23776118f41bce76b1864b983050d3",
+        "internal_sha256": "d7e3df090aa9b54d76c575ed1a0b5b4bb629a95be3397c619485b4619e9eecc8",
+        "internal_vectors": 94498,
+        "max_delta_from_previous": 7.651864172437014e-07
+      },
+      "time_dir": "30.0004",
+      "time_s": 30.0004
+    },
+    "S5": {
+      "cellDisplacement": {
+        "boundary_sha256": "640e403a0199ce2e97682134aad2a022cbf61db3fb5e1017bf5fbd7af1588a2d",
+        "boundary_vectors": 846,
+        "changed_boundary_entries": 0,
+        "changed_full_entries": 0,
+        "changed_internal_entries": 0,
+        "full_sha256": "27f7a2d43d2b9dffd30a9fd9c8b1f0ed88c95a81386e7777bba4a6bb009e2245",
+        "internal_sha256": "51b5a3e6f4d33c17a2b0514b8cd0d56cf68d3c376e726644193c0ce2a386df54",
+        "internal_vectors": 46826,
+        "max_delta_from_previous": 0.0
+      },
+      "file": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/diagnostics/S5_after_RBF_solve_call_3.json",
+      "file_sha256": "f2c822b6730152aeee852fb7f6ef2d60ed082818ea5ebf45d47a80ce54ea54d5",
+      "mesh_points": {
+        "changed_points": 0,
+        "max_point_delta_m": 0.0,
+        "point_count": 94498,
+        "sha256": "bee2072d6d1f5c2ae6c3eed7cac82fae1f1bac568fff5a36383e9226c3b8893e"
+      },
+      "pointDisplacement": {
+        "boundary_sha256": "3634fc9dee498f6f5c20bf41dbac0b67e2b26a6aad09a9410a920d6a27ade7ea",
+        "boundary_vectors": 96198,
+        "changed_boundary_entries": 93206,
+        "changed_full_entries": 186412,
+        "changed_internal_entries": 93206,
+        "full_sha256": "29ec9161e8a07415cec672852a70308f09e6c09c3b11292b6e5ca6612d8e0873",
+        "internal_sha256": "11acd9403dc5be835fffbedf6ec99b8681dbeee316fd7afed03efd745169d9fb",
+        "internal_vectors": 94498,
+        "max_delta_from_previous": 7.676456987216975e-07
+      },
+      "rbf_candidate_mesh_points": {
+        "changed_from_current_mesh_points": 93206,
+        "max_delta_from_current_mesh_m": 7.676686797465788e-07,
+        "point_count": 94498,
+        "sha256": "f44f12b6af99e2fc4e314c68b1a851043cfaaccc8e52dd829c01d045ae150c5d"
+      },
+      "time_dir": "30.0004",
+      "time_s": 30.0004
+    }
+  }
+}

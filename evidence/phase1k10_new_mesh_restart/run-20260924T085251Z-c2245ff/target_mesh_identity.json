@@ -1,0 +1,19 @@
+{
+  "case": "mapped_candidate_30",
+  "geo_sha256": "9a19a3b7b593bdf7bbd39409ec8b5fa4958135eac714b24421dfeb0222d9a5d2",
+  "msh2_sha256": "c467ec6cb763864608c84acabef3a2160d48171005291035cae5cf2ddd08fab4",
+  "cells": 46826,
+  "cell_type": "hex",
+  "mesh_check_before": "Mesh OK",
+  "mesh_check_after_100_steps": "Mesh OK",
+  "bbox_m": {"x": [-0.28, 0.56], "y": [-0.35, 0.35], "z": [0.0, 0.028]},
+  "patches": ["front", "back", "cylinder", "inlet", "outlet", "upper", "lower"],
+  "cylinder_faces": 200,
+  "front_back_type": "empty",
+  "min_cell_volume_m3": 7.687364831e-10,
+  "max_non_orthogonality_deg": 43.84604554,
+  "max_skewness": 0.8969795547,
+  "points_sha256": "8cd3213978b1ab7d324f8e41a5669ab4029a2c500f3de986f8f9dca465d53fd3",
+  "check_mesh_before_log": "checkMesh_pre_mapping.log",
+  "check_mesh_after_log": "checkMesh_after_100.log"
+}

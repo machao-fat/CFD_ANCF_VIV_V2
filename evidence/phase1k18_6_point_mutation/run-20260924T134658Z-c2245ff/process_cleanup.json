@@ -1,0 +1,54 @@
+{
+  "descendant_pids": [
+    520231,
+    520271,
+    520323,
+    520325,
+    520329
+  ],
+  "elapsed_wall_s": 0.31065378600033,
+  "finished_unix": 1790257739.0822709,
+  "hard_stop_reason": "fatal/non-finite marker in fluid.stdout",
+  "loaded_library_maps": {
+    "Fluid": {
+      "520108": [],
+      "520231": [],
+      "520323": [],
+      "520325": []
+    },
+    "Structure": {
+      "520109": [
+        "70dfa8600000-70dfa8634000 r--p 00000000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "70dfa8634000-70dfa8962000 r-xp 00034000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "70dfa8962000-70dfa89ec000 r--p 00362000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "70dfa89ec000-70dfa89ed000 ---p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "70dfa89ed000-70dfa89f8000 r--p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "70dfa89f8000-70dfa89fa000 rw-p 003f7000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ],
+      "520271": [
+        "56a38d37a000-56a38d37c000 r--p 00000000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "56a38d37c000-56a38d3a5000 r-xp 00002000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "56a38d3a5000-56a38d3aa000 r--p 0002b000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "56a38d3aa000-56a38d3ab000 r--p 0002f000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "56a38d3ab000-56a38d3ac000 rw-p 00030000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker"
+      ],
+      "520329": []
+    }
+  },
+  "processes": {
+    "Fluid": {
+      "exit_code": -15,
+      "pid": 520108,
+      "reason": "fatal/non-finite marker in fluid.stdout",
+      "signal_sent": "SIGTERM"
+    },
+    "Structure": {
+      "exit_code": -15,
+      "pid": 520109,
+      "reason": "fatal/non-finite marker in fluid.stdout",
+      "signal_sent": "SIGTERM"
+    }
+  },
+  "started_unix": 1790257735.8169968,
+  "timed_out": false
+}

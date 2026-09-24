@@ -1,0 +1,21 @@
+{
+  "global_time_s": 30.0,
+  "case": "mapped_candidate_30",
+  "evaluation_case": "force_eval",
+  "patch": "cylinder",
+  "density_kgpm3": 1000.0,
+  "source_forces_file": "force_eval/postProcessing/cylinderForces/30/forces.dat",
+  "source_forces_sha256": "f29486df3a3a22b874bf04bb5404c1e9c3a95327b7b184add60518002283bb2b",
+  "pressure_N": [0.063811823767, 0.058106728512, -2.4124367132e-21],
+  "viscous_N": [0.0017152169226, 0.00062314563632, 3.0935816745e-22],
+  "porous_N": [0.0, 0.0, 0.0],
+  "F0_new_raw_N": [0.0655270406896, 0.05872987414832, -2.10307854575e-21],
+  "Lz_m": 0.028,
+  "DeltaL_m": 1.98,
+  "F0_new_section_Npm": [2.3402514532, 2.0974955052971, -7.51099480625e-20],
+  "F0_new_strip_N": [4.633697877336, 4.1530411004883, -1.4871769716375e-19],
+  "F0_old_raw_N": [0.0655270406544, 0.05872987413554, -2.44420351566e-21],
+  "delta_new_minus_old_xy_raw_N": [3.5199995696011e-11, 1.2780006219959e-11],
+  "command": "pimpleFoam -postProcess -case <force_eval> -time 30",
+  "solver_time_advanced": false
+}

@@ -1,0 +1,40 @@
+{
+  "fluid_command": [
+    "/bin/bash",
+    "-lc",
+    "source /opt/openfoam10/etc/bashrc && exec pimpleFoam -case \"$1\"",
+    "phase1k16b-fluid",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k16b_adapter/run-20260924T114746Z-c2245ff/case"
+  ],
+  "structure_command": [
+    "/usr/bin/python3.10",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/src/coupling/hh06_structure_0000/structure_0000_participant.py",
+    "--case",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k16b_adapter/run-20260924T114746Z-c2245ff/case",
+    "--run",
+    "--worker",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+    "--max-windows",
+    "25",
+    "--trace-output",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k16b_adapter/run-20260924T114746Z-c2245ff/structure_trace.jsonl",
+    "--audit-output",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k16b_adapter/run-20260924T114746Z-c2245ff/structure_audit_live.json"
+  ],
+  "fluid_pid": 478614,
+  "structure_pid": 478615,
+  "observed_worker_pids": [
+    "478766",
+    "478819"
+  ],
+  "loaded_libraries_observed": [
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k13b_rbf_diag/build-20260924T105315Z-c2245ff/lib/libRBFMeshMotionSolverPhase1K13Diag.so",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k16b_adapter/lib/libpreciceAdapterPhase1K16.so"
+  ],
+  "exit_codes": {
+    "fluid": -6,
+    "structure": -15
+  },
+  "timed_out": false,
+  "stop_reason": "participant exited nonzero: fluid"
+}

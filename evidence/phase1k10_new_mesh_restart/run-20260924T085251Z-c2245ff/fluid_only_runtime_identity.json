@@ -1,0 +1,23 @@
+{
+  "git_head": "c2245ff396ff42dfa5e80fee6555a9ede93e3b04",
+  "openfoam_version": "OpenFOAM-10",
+  "openfoam_build": "10-c4cf895ad8fa",
+  "solver": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+  "rbf_solver": "RBFMeshMotionSolver",
+  "rbf_kernel": "TPS",
+  "rbf_library": "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libRBFMeshMotionSolver.so",
+  "rbf_library_sha256": "b27b347c4ba3026a495517ae7ae237ceb5cd8408ac0db9af6a58ccd83647a20c",
+  "rbf_library_build_id": "f5ba43436c00f75dd314136806e0a00c632d0d58",
+  "rbf_config_sha256": "0ffeeac3d86ccfce4f6468371c188d50f70342b77ea0e8bff61b0e6f36519f78",
+  "control_dict_sha256": "cfdd3c0fc087b9c123ca0d75ff85d0b48aa28eb61ad95e7ef0f241a6da9f7417",
+  "restart_case": "fluid_only_100/30",
+  "restart_source": "mapped_candidate_30/30",
+  "restart_time_s": 30.0,
+  "delta_t_s": 0.0002,
+  "end_time_s": 30.02,
+  "precice_function_object_configured": false,
+  "ancf_worker_started": false,
+  "fsi_started": false,
+  "solver_log": "fluid_only_100.log",
+  "pre_run_hashes": "pre_run_sha256.txt"
+}

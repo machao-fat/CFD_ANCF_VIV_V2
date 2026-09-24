@@ -1,0 +1,29 @@
+{
+  "fluid_command": [
+    "pimpleFoam",
+    "-case",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/case"
+  ],
+  "hard_bounds": {
+    "attempts": 2,
+    "max_wall_time_s": 180,
+    "windows": 1
+  },
+  "run_dir": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff",
+  "started_unix": 1790258388.0552104,
+  "structure_command": [
+    "/usr/bin/python3.10",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/src/coupling/hh06_structure_0000/structure_0000_participant.py",
+    "--case",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/case",
+    "--run",
+    "--worker",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+    "--max-windows",
+    "25",
+    "--audit-output",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/structure_audit.json",
+    "--trace-output",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T135724Z-c2245ff/structure_trace.jsonl"
+  ]
+}

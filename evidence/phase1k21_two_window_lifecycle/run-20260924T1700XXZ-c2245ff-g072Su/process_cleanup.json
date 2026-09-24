@@ -1,0 +1,40 @@
+{
+  "fluid_command": [
+    "/bin/bash",
+    "-c",
+    "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\" || exit 91; test \"$(pwd -P)\" = \"$(realpath \"$1\")\" || exit 92; printf 'PHASE1K21_FLUID_PWD=%s\\n' \"$(pwd -P)\"; exec pimpleFoam -case .",
+    "phase1k21-fluid",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k21_two_window_lifecycle/run-20260924T1700XXZ-c2245ff-g072Su/case"
+  ],
+  "structure_command": [
+    "/usr/bin/python3.10",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k21_two_window_lifecycle/run-20260924T1700XXZ-c2245ff-g072Su/participant_trace.py",
+    "--case",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k21_two_window_lifecycle/run-20260924T1700XXZ-c2245ff-g072Su/case",
+    "--run",
+    "--worker",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+    "--max-windows",
+    "2",
+    "--trace-output",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k21_two_window_lifecycle/run-20260924T1700XXZ-c2245ff-g072Su/structure_trace.jsonl",
+    "--audit-output",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k21_two_window_lifecycle/run-20260924T1700XXZ-c2245ff-g072Su/structure_audit_live.json"
+  ],
+  "fluid_pid": 572653,
+  "structure_pid": 572654,
+  "observed_worker_pids": [
+    "572824",
+    "572959"
+  ],
+  "loaded_libraries_observed": [
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+    "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libpreciceAdapterPhase1K20.so"
+  ],
+  "exit_codes": {
+    "fluid": 0,
+    "structure": 0
+  },
+  "timed_out": false,
+  "stop_reason": null
+}

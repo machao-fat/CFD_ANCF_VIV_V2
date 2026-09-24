@@ -1,0 +1,53 @@
+// HH06 single-slice ALE configuration using the pinned solids4foam RBF port.
+// The solver consumes absolute pointDisplacement values from the Fluid adapter.
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      dynamicMeshDict;
+}
+
+mover
+{
+    type                motionSolver;
+    libs                ("libfvMeshMovers.so" "libfvMotionSolvers.so");
+    motionSolverLibs    ("libRBFMeshMotionSolver.so");
+    motionSolver        RBFMeshMotionSolver;
+
+    RBFMeshMotionSolverCoeffs
+    {
+        movingPatches    (cylinder);
+        staticPatches    ();
+        fixedPatches     (inlet outlet upper lower);
+
+        // The OF10 port reads pointDisplacement values at moving patch points.
+        faceCellCenters  no;
+
+        interpolation
+        {
+            function     TPS;
+            polynomial   no;
+            cpu          no;
+            fullCPU      no;
+        }
+
+        // Initial supported settings from the upstream perpendicularFlap
+        // example; these are not claimed to be a universal optimum.
+        coarsening
+        {
+            enabled                 yes;
+            tol                     0.05;
+            minPoints               20;
+            maxPoints               200;
+            livePointSelection      yes;
+            tolLivePointSelection   0.05;
+            exportSelectedPoints    no;
+            twoPointSelection       no;
+            surfaceCorrection       no;
+        }
+    }
+}
+
+// The 6D O-grid ring is an internal interface, not a boundary patch, and is
+// therefore not independently constrained by the upstream patch-list API.

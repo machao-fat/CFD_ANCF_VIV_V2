@@ -1,0 +1,68 @@
+{
+  "phase": "1K.9",
+  "classification": "RBF_PORT_BUILD_AND_SCRATCH_ALE_PASS_PRODUCTION_MESH_TRANSITION_PENDING",
+  "run_id": "run-20260924T081544Z-c2245ff",
+  "git": {
+    "branch": "repair/worker-lineage-implicit-contract-v1",
+    "head": "c2245ff396ff42dfa5e80fee6555a9ede93e3b04",
+    "committed": false
+  },
+  "upstream": {
+    "repository": "https://github.com/solids4foam/solids4foam",
+    "tag": "v2.4",
+    "commit": "1341312f951caf4d8fcc69499c6ce1a588826156",
+    "license": "GPL-3.0-or-later",
+    "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "upstream_snapshot_manifest_sha256": "5545b649dc5e71b7d4c383930cfdf9f6690b6caf5e8d2e9cea9eaf6be628dc58"
+  },
+  "port": {
+    "openfoam": "OpenFOAM-10",
+    "openfoam_build": "10-c4cf895ad8fa",
+    "wm_options": "linux64GccDPInt32Opt",
+    "compiler": "GCC 11.4.0-1ubuntu1~22.04.3",
+    "source_manifest_sha256": "83129a34b3d9a984f9b1409c5dd10b5732dd9fe20987654ec5651e4ad8592def",
+    "main_source_sha256": "14d5a2d2d7a95c83681e6c6fea2dc61a3fefca73fd81d3d18345d7da84bee793",
+    "header_sha256": "22d41d8d7829c2a4ac7a6f5d6b404da5e549c208710e041f73e4b79a9867239a"
+  },
+  "binary": {
+    "path": "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libRBFMeshMotionSolver.so",
+    "prescribed_test_loaded_path": "/tmp/solids4foam-rbf-phase1k9.8TGZTs/build-output/libRBFMeshMotionSolver.so",
+    "clean_build_output_path": "/tmp/solids4foam-rbf-phase1k9.8TGZTs/build-clean/libRBFMeshMotionSolver.so",
+    "sha256": "b27b347c4ba3026a495517ae7ae237ceb5cd8408ac0db9af6a58ccd83647a20c",
+    "build_id": "f5ba43436c00f75dd314136806e0a00c632d0d58",
+    "clean_build_matches_installed": true,
+    "unresolved_dynamic_symbols": false
+  },
+  "eigen_dependency": {
+    "package": "libeigen3-dev 3.4.0-2ubuntu2",
+    "sha256": "04ee3759712a0f003fb186edf83724947826d7a43f3ef8d858cd359ca38a25ef",
+    "installed_system_wide": false
+  },
+  "mesh": {
+    "geometry_sha256": "9a19a3b7b593bdf7bbd39409ec8b5fa4958135eac714b24421dfeb0222d9a5d2",
+    "msh_sha256": "c467ec6cb763864608c84acabef3a2160d48171005291035cae5cf2ddd08fab4",
+    "gmsh_version": "4.8.4",
+    "cells": 46826,
+    "faces": 187727,
+    "cylinder_patch_faces": 200,
+    "checkmesh_initial_and_both_motion_states": "PASS"
+  },
+  "prescribed_ale": {
+    "utility": "OpenFOAM moveMesh",
+    "motion_y_m": 0.00056,
+    "diameter_m": 0.028,
+    "motion_in_diameters": 0.02,
+    "states_s": [30.0, 30.0002, 30.0004],
+    "minimum_cell_volume_m3": 7.68303679837e-10,
+    "returned_minimum_cell_volume_m3": 7.68736482553e-10,
+    "fluid_solver_started": false,
+    "precice_started": false,
+    "ancf_worker_started": false,
+    "fsi_run": false
+  },
+  "production_mesh_transition": {
+    "performed": false,
+    "reason": "Existing 30 s restart fields are tied to a different mesh; no field remapping was authorized or performed.",
+    "fsi_launch_authorized": false
+  }
+}

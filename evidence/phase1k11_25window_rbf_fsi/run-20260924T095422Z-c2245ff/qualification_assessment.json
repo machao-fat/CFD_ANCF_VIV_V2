@@ -1,0 +1,10 @@
+{
+  "final_classification": "REVIEW_REQUIRED",
+  "runtime_completed_25_windows": true,
+  "implicit_contract": "PASS",
+  "reason": "Large recurring rejected-trial pressure/Force spikes grow through window 25; all saved accepted-window mesh coordinates equal release despite nonzero structural displacement. The 25-window endpoint is reached without Co, volume, or solver failure, but RBF/ALE physical displacement transfer and stress-response mechanism need a read-only forensic audit.",
+  "max_rejected_raw_force_xy_norm_N": 109.18909795008076,
+  "max_structure_trial_displacement_m": 0.00011298695976391279,
+  "accepted_mesh_stationary": true,
+  "no_automatic_rerun": true
+}

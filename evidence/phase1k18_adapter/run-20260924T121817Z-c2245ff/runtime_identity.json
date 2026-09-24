@@ -1,0 +1,61 @@
+{
+  "run_id": "run-20260924T121817Z-c2245ff",
+  "git": {
+    "branch": "repair/worker-lineage-implicit-contract-v1",
+    "head": "c2245ff396ff42dfa5e80fee6555a9ede93e3b04",
+    "tracked_diff_empty": true
+  },
+  "software": {
+    "openfoam": "OpenFOAM-10",
+    "precice_runtime": "3.4.1",
+    "python": "/usr/bin/python3.10",
+    "python_version": "3.10.12",
+    "pyprecice_metadata": "3.4.0",
+    "pyprecice_module": "/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py",
+    "libprecice_path": "/lib/x86_64-linux-gnu/libprecice.so.3",
+    "libprecice_sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7"
+  },
+  "restart": {
+    "source": "evidence/phase1k10_new_mesh_restart/run-20260924T085251Z-c2245ff/mapped_candidate_30",
+    "global_time_s": 30.0,
+    "initial_time_identity_sha256": "44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109",
+    "initial_field_hashes": {
+      "U": "51ec84e648b1a2fe55e1b737e4fb3d3ac67b0f3c33c512bd0c93fca8c38b7795",
+      "p": "d25e7bcb4e4160fc6041544397e22418148bf4877215f81c35a91ce049762f2d",
+      "k": "eb81d47221c2cc27eaefee5983d1192a0304ba6498cb027051cf7314dfc2f74d",
+      "omega": "efe0950c066bd944c68ca90aaeeb5bd2d0685a792ce9e376c54c06e308023e28",
+      "nut": "9a66ba257f510664048a26cd64fe797c34879a73be4a0e796899d6c18a73981d",
+      "pointDisplacement": "b4d543b1cf6dbb292c01f06da32b5b2c3f55a2598d9c9961eb437fe05dabdbbd",
+      "polyMesh_points": "8cd3213978b1ab7d324f8e41a5669ab4029a2c500f3de986f8f9dca465d53fd3"
+    },
+    "restart_fields_match_frozen_candidate_after_run": true
+  },
+  "coupling": {
+    "xml_path": "evidence/phase1k18_adapter/run-20260924T121817Z-c2245ff/case/precice-config.xml",
+    "xml_sha256": "464170069c7b589ef8c1b1fd977c6282e2e4afbb944881e7e252980d1cb6a6d6",
+    "dt_s": 0.0002,
+    "max_iterations": 20,
+    "min_iterations": 2,
+    "max_physical_windows": 2,
+    "iqn_ils_profile": "frozen Phase 1H profile; unchanged"
+  },
+  "adapter": {
+    "loaded_path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k17_adapter/lib/libpreciceAdapterPhase1K17.so",
+    "sha256": "1bc5cf6a1ea481082b01b903d317313be01212413c8bf2718481fa43c485c495",
+    "build_id": "ef890a9afffa253f4aceb051c4c3fed89e64cffe",
+    "source_commit": "d53753b1c927b2413b02299c9da15725b3e772f0",
+    "qualified_historical_binary_sha256_checked_not_loaded": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572"
+  },
+  "rbf": {
+    "loaded_path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k13b_rbf_diag/build-20260924T105315Z-c2245ff/lib/libRBFMeshMotionSolverPhase1K13Diag.so",
+    "sha256": "4a739721bfaa4734151e79bca285545d6934b2f5a9450080a5e833542a4c84ee",
+    "build_id": "3bb45499c0bd8ce75b20cec055f920b6f35f4f41",
+    "dynamic_mesh_dict_sha256": "ca8c428b2d21372504fa040e19b1a8d8515274b6f500e6fd5a59525afacdd751"
+  },
+  "worker": {
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+    "source_sha256": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+    "binary_sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596"
+  },
+  "initial_release_force_evidence_sha256": "ce2cbf6edcda28ae46bf3d0a10b2a6d75ec8641b8417549818acda9c98369949"
+}

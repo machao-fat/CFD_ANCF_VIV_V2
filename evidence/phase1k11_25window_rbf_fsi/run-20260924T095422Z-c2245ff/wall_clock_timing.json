@@ -1,0 +1,11 @@
+{
+  "run_id": "run-20260924T095422Z-c2245ff",
+  "started_at_utc": "2026-09-24T09:54:21.530435+00:00",
+  "ended_at_utc": "2026-09-24T09:55:27.951891+00:00",
+  "elapsed_seconds": 62.81041828999878,
+  "physical_windows": 25,
+  "coupling_attempts": 124,
+  "total_cfd_advances": 124,
+  "mean_seconds_per_cfd_advance": 0.5065356313709579,
+  "mean_seconds_per_coupling_attempt": 0.5065356313709579
+}

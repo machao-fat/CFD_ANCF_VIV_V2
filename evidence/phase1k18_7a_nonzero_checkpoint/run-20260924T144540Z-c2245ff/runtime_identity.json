@@ -1,0 +1,77 @@
+{
+  "run_id": "run-20260924T144540Z-c2245ff",
+  "git": {
+    "branch": "repair/worker-lineage-implicit-contract-v1",
+    "head": "c2245ff396ff42dfa5e80fee6555a9ede93e3b04",
+    "tracked_worktree_clean": true
+  },
+  "software": {
+    "openfoam_version_output": "OpenFOAM-10",
+    "precice_runtime": "3.4.1",
+    "python": "/usr/bin/python3.10",
+    "python_version": "3.10.12",
+    "pyprecice_metadata": "3.4.0",
+    "precice_module": "/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py",
+    "loaded_libprecice": [
+      "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+    ]
+  },
+  "worker": {
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+    "sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596"
+  },
+  "experimental_adapter": {
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k17_adapter/lib/libpreciceAdapterPhase1K17.so",
+    "sha256": "1bc5cf6a1ea481082b01b903d317313be01212413c8bf2718481fa43c485c495",
+    "build_id": "ef890a9afffa253f4aceb051c4c3fed89e64cffe"
+  },
+  "qualified_adapter_not_loaded": {
+    "path": "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so",
+    "sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572"
+  },
+  "diagnostic_rbf": {
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k13b_rbf_diag/build-20260924T105315Z-c2245ff/lib/libRBFMeshMotionSolverPhase1K13Diag.so",
+    "sha256": "4a739721bfaa4734151e79bca285545d6934b2f5a9450080a5e833542a4c84ee",
+    "build_id": "3bb45499c0bd8ce75b20cec055f920b6f35f4f41"
+  },
+  "authoritative_participant": {
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/src/coupling/hh06_structure_0000/structure_0000_participant.py",
+    "sha256": "7329be0208614386cdc7f14ba4875444211a688cc2d4544e15cc7a7d1255e833"
+  },
+  "diagnostic_capture_launcher": {
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7a_nonzero_checkpoint/run-20260924T144540Z-c2245ff/participant_state_capture.py",
+    "sha256": "f6c4d12880fae4e5fd2a559e2a48462b15915595d65e013a19f131868f637357"
+  },
+  "scratch_case": {
+    "source_restart": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k10_new_mesh_restart/run-20260924T085251Z-c2245ff/mapped_candidate_30",
+    "source_time_s": 30.0,
+    "source_field_sha256": {
+      "U": "51ec84e648b1a2fe55e1b737e4fb3d3ac67b0f3c33c512bd0c93fca8c38b7795",
+      "p": "d25e7bcb4e4160fc6041544397e22418148bf4877215f81c35a91ce049762f2d",
+      "k": "eb81d47221c2cc27eaefee5983d1192a0304ba6498cb027051cf7314dfc2f74d",
+      "omega": "efe0950c066bd944c68ca90aaeeb5bd2d0685a792ce9e376c54c06e308023e28",
+      "nut": "9a66ba257f510664048a26cd64fe797c34879a73be4a0e796899d6c18a73981d",
+      "pointDisplacement": "b4d543b1cf6dbb292c01f06da32b5b2c3f55a2598d9c9961eb437fe05dabdbbd"
+    },
+    "mesh_sha256": {
+      "points": "8cd3213978b1ab7d324f8e41a5669ab4029a2c500f3de986f8f9dca465d53fd3",
+      "faces": "55c44296d5e48469ff64d44d1176dd7fe180881d2b581224ba57cf2c6d66a92c",
+      "owner": "ddea4f5355fd4dc819f6d5db2492f2ff5bfbaa011de4ca4c9c18cf0c10331c34",
+      "neighbour": "fefd927b0ad3ec740a39d0ba83c2f1e4dd9400f498e9af2ba01082d5daa36470",
+      "boundary": "aa930c4252198b6e129e384302dfe1737b50cb9d7f40b08c9252ed6b52f83bf2"
+    },
+    "xml_sha256": "1e0cb798429acbc8e4a10e2a145fbd31818b3a491232621ecad5234d12fd2d2a",
+    "dynamicMeshDict_sha256": "ca8c428b2d21372504fa040e19b1a8d8515274b6f500e6fd5a59525afacdd751",
+    "controlDict_sha256": "e6629002a9df73cb109271d8c637b4ac2dc4eb8cc26facac177d90fa8d06fe4a",
+    "preciceDict_sha256": "5d018d744d1f76280fad2b1cc788e5dd32b331fe2bd0d9aa7900260cf4c7f229",
+    "scratch_write_interval_s": 0.0002,
+    "precice_max_time_windows": 1,
+    "precice_dt_s": 0.0002,
+    "precice_max_iterations": 20,
+    "precice_min_iterations": 2,
+    "socket_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7a_nonzero_checkpoint/run-20260924T144540Z-c2245ff/precice-sockets",
+    "reused_preflight_staging": true
+  },
+  "preCICE_validation_stdout": "Checking /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7a_nonzero_checkpoint/run-20260924T144540Z-c2245ff/case/precice-config.xml for syntax and basic setup issues...\n\u001b[1m\u001b[38;2;000;128;000mNo major issues detected\n\u001b[0m",
+  "preCICE_validation_stderr": ""
+}

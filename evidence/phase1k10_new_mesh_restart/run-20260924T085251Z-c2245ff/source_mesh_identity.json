@@ -1,0 +1,14 @@
+{
+  "case": "cases/hh06_single_slice",
+  "restart_time_s": 30.0,
+  "uniform_time_index": 150000,
+  "cells": 46826,
+  "mesh_check": "Mesh OK",
+  "bbox_m": {"x": [-0.28, 0.56], "y": [-0.42, 0.42], "z": [0.0, 0.028]},
+  "min_cell_volume_m3": 7.687364982e-10,
+  "max_non_orthogonality_deg": 44.00486412,
+  "max_skewness": 0.8545162319,
+  "points_sha256": "41d2d570fb801c4bab9e40cc1c0644150cbaddaa5903e682e9e78b333e3b93bf",
+  "field_hashes_file": "source_sha256.txt",
+  "check_mesh_log": "checkMesh_old_source.log"
+}

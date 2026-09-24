@@ -1,0 +1,75 @@
+{
+  "controlled_stop_observed": true,
+  "controlled_stop_record_sha256": "eb579856667a4a1d2c2de3c66028e57d1be7ae48d814fb2b1ea08bd294a6107a",
+  "descendant_pids": [
+    568863,
+    568971,
+    568984,
+    568985,
+    569004,
+    569072,
+    569083,
+    569158,
+    569159,
+    569210
+  ],
+  "elapsed_wall_s": 4.309639397979481,
+  "finished_unix": 1790268487.0181363,
+  "hard_stop_reason": "instrumented stop immediately after retry S5; no next Fluid advance",
+  "loaded_library_maps": {
+    "Fluid": {
+      "568857": [
+        "725271800000-725271834000 r--p 00000000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "725271834000-725271b62000 r-xp 00034000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "725271b62000-725271bec000 r--p 00362000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "725271bec000-725271bed000 ---p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "725271bed000-725271bf8000 r--p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "725271bf8000-725271bfa000 rw-p 003f7000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "725271c92000-725271ce0000 r--p 00000000 08:30 370307                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libpreciceAdapterPhase1K20.so",
+        "725271ce0000-725271dba000 r-xp 0004e000 08:30 370307                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libpreciceAdapterPhase1K20.so",
+        "725271dba000-725271df8000 r--p 00128000 08:30 370307                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libpreciceAdapterPhase1K20.so",
+        "725271df8000-725271df9000 ---p 00166000 08:30 370307                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libpreciceAdapterPhase1K20.so",
+        "725271df9000-725271dfd000 r--p 00166000 08:30 370307                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libpreciceAdapterPhase1K20.so",
+        "725271dfd000-725271e00000 rw-p 0016a000 08:30 370307                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libpreciceAdapterPhase1K20.so",
+        "725275d94000-725275da8000 r--p 00000000 08:30 370514                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+        "725275da8000-725275de4000 r-xp 00014000 08:30 370514                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+        "725275de4000-725275dfc000 r--p 00050000 08:30 370514                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+        "725275dfc000-725275dfd000 ---p 00068000 08:30 370514                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+        "725275dfd000-725275dff000 r--p 00068000 08:30 370514                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+        "725275dff000-725275e00000 rw-p 0006a000 08:30 370514                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so"
+      ]
+    },
+    "Structure": {
+      "568858": [
+        "718363a00000-718363a34000 r--p 00000000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "718363a34000-718363d62000 r-xp 00034000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "718363d62000-718363dec000 r--p 00362000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "718363dec000-718363ded000 ---p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "718363ded000-718363df8000 r--p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "718363df8000-718363dfa000 rw-p 003f7000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ],
+      "569004": [
+        "64da4f634000-64da4f636000 r--p 00000000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "64da4f636000-64da4f65f000 r-xp 00002000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "64da4f65f000-64da4f664000 r--p 0002b000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "64da4f664000-64da4f665000 r--p 0002f000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "64da4f665000-64da4f666000 rw-p 00030000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker"
+      ]
+    }
+  },
+  "post_run_solver_worker_processes": [],
+  "processes": {
+    "Fluid": {
+      "exit_code": 86,
+      "pid": 568857,
+      "signal_sent": null
+    },
+    "Structure": {
+      "exit_code": -15,
+      "pid": 568858,
+      "reason": "peer stopped after S5 diagnostic marker",
+      "signal_sent": "SIGTERM"
+    }
+  },
+  "started_unix": 1790268482.7084198
+}

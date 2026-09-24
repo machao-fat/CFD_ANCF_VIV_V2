@@ -1,0 +1,26 @@
+{
+  "fluid_pid": 540242,
+  "structure_pid": 540243,
+  "descendant_pids": [
+    540386,
+    540451,
+    540468,
+    540593
+  ],
+  "exit_codes": {
+    "fluid": 0,
+    "structure": 0
+  },
+  "loaded_library_paths": {
+    "fluid": [
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k13b_rbf_diag/build-20260924T105315Z-c2245ff/lib/libRBFMeshMotionSolverPhase1K13Diag.so",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k17_adapter/lib/libpreciceAdapterPhase1K17.so",
+      "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+    ],
+    "structure": [
+      "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+    ]
+  },
+  "stop_reason": null,
+  "elapsed_wall_s": 12.700278075993992
+}

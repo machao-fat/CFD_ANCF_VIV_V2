@@ -1,0 +1,64 @@
+{
+  "run_id": "run-20260924T095422Z-c2245ff",
+  "launcher_pid": 438330,
+  "participant_pids": {
+    "Structure": {
+      "pid": 438751,
+      "exit_code": 0,
+      "absent_after_shutdown": true
+    },
+    "Fluid": {
+      "pid": 438752,
+      "exit_code": 0,
+      "absent_after_shutdown": true
+    }
+  },
+  "worker": {
+    "pid": 438753,
+    "absent_after_shutdown": true,
+    "still_running_after_shutdown": false,
+    "independent_exit_code_exposed": false
+  },
+  "observed_process_runtime_maps": {
+    "Structure": {
+      "438751": {
+        "pid": 438751,
+        "present": true,
+        "exe": "/usr/bin/python3.10",
+        "argv": "/usr/bin/python3.10 /home/machao/projects/CFD_ANCF_VIV_V2/src/coupling/hh06_structure_0000/structure_0000_participant.py --case /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k11_25window_rbf_fsi/run-20260924T095422Z-c2245ff/case --run --worker /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker --max-windows 25 --audit-output /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k11_25window_rbf_fsi/run-20260924T095422Z-c2245ff/structure_audit.json --trace-output /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k11_25window_rbf_fsi/run-20260924T095422Z-c2245ff/structure_trace.jsonl",
+        "coupling_libraries": [
+          "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+        ]
+      }
+    },
+    "Fluid": {
+      "438752": {
+        "pid": 438752,
+        "present": true,
+        "exe": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+        "argv": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam -case /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k11_25window_rbf_fsi/run-20260924T095422Z-c2245ff/case",
+        "coupling_libraries": [
+          "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libRBFMeshMotionSolver.so",
+          "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so",
+          "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+        ]
+      }
+    },
+    "worker": {
+      "438753": {
+        "pid": 438753,
+        "present": true,
+        "exe": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "argv": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "coupling_libraries": []
+      }
+    }
+  },
+  "socket_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k11_25window_rbf_fsi/run-20260924T095422Z-c2245ff/precice-sockets",
+  "socket_contents_after_shutdown": [],
+  "launcher_lock_released": true,
+  "exit_codes": {
+    "Structure": 0,
+    "Fluid": 0
+  }
+}

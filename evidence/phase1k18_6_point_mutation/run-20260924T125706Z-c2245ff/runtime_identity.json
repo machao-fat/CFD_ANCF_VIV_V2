@@ -1,0 +1,88 @@
+{
+  "diagnostic_scope": "one physical window; two attempts maximum; one retry maximum",
+  "experimental_adapter": {
+    "build_id": "f17adc69bf9540ce23982d09165628fff2ce8c03",
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T125706Z-c2245ff/adapter-lib/libpreciceAdapterPhase1K18Diag.so",
+    "sha256": "cab6f4bffcc71ea24f296ece6c67ec9f1c6011e7139b39f2af62d2145422f71e",
+    "source_file_count": 125,
+    "source_tree_sha256": "a7b9f46f80b47d55f71a26fd34afa4d05e8709c6a1e523c24c22606d4f5f5a64"
+  },
+  "experimental_rbf": {
+    "build_id": "977bf4d3b867b6cb7a3bd7197e8c5433d70013e7",
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T125706Z-c2245ff/rbf-lib/libRBFMeshMotionSolverPhase1K18Diag.so",
+    "sha256": "3defd4b158f48062d6222911a449a2b1995f1b0fc0ca00e9453c19a6b6f6dd28",
+    "source_file_count": 49,
+    "source_tree_sha256": "7d6745f9764d8eb65684c00aeb5bc77fee2285eaba52e980999120fd44c435cb"
+  },
+  "f0": {
+    "Fx_raw_N": 0.0655270406896,
+    "Fy_raw_N": 0.05872987414832,
+    "Fz_raw_N": -2.10307854575e-21,
+    "result": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T125706Z-c2245ff/new_f0_qualified_result.json",
+    "result_sha256": "ce2cbf6edcda28ae46bf3d0a10b2a6d75ec8641b8417549818acda9c98369949"
+  },
+  "git": {
+    "branch": "repair/worker-lineage-implicit-contract-v1",
+    "head": "c2245ff396ff42dfa5e80fee6555a9ede93e3b04",
+    "tracked_source_clean": true
+  },
+  "qualified_binaries_unchanged": {
+    "adapter_sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572",
+    "rbf_sha256": "b27b347c4ba3026a495517ae7ae237ceb5cd8408ac0db9af6a58ccd83647a20c"
+  },
+  "restart": {
+    "field_sha256": {
+      "U": "51ec84e648b1a2fe55e1b737e4fb3d3ac67b0f3c33c512bd0c93fca8c38b7795",
+      "k": "eb81d47221c2cc27eaefee5983d1192a0304ba6498cb027051cf7314dfc2f74d",
+      "nut": "9a66ba257f510664048a26cd64fe797c34879a73be4a0e796899d6c18a73981d",
+      "omega": "efe0950c066bd944c68ca90aaeeb5bd2d0685a792ce9e376c54c06e308023e28",
+      "p": "d25e7bcb4e4160fc6041544397e22418148bf4877215f81c35a91ce049762f2d",
+      "pointDisplacement": "b4d543b1cf6dbb292c01f06da32b5b2c3f55a2598d9c9961eb437fe05dabdbbd",
+      "uniform/time": "44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109"
+    },
+    "global_time_s": 30.0,
+    "mesh_sha256": {
+      "boundary": "aa930c4252198b6e129e384302dfe1737b50cb9d7f40b08c9252ed6b52f83bf2",
+      "cellZones": "14b95bc6cdcdd59ac552f141d0d069fc3327c74168c1363362f0a0cf1d54c520",
+      "faceZones": "cc6a1fc22b0b72fc3f69287ff35f079391da11d6d1e76f64f09b19a7cc025fae",
+      "faces": "55c44296d5e48469ff64d44d1176dd7fe180881d2b581224ba57cf2c6d66a92c",
+      "neighbour": "fefd927b0ad3ec740a39d0ba83c2f1e4dd9400f498e9af2ba01082d5daa36470",
+      "owner": "ddea4f5355fd4dc819f6d5db2492f2ff5bfbaa011de4ca4c9c18cf0c10331c34",
+      "pointZones": "faf05399503748693b22c95ca561062701753c8720278117f97975ef97254346",
+      "points": "8cd3213978b1ab7d324f8e41a5669ab4029a2c500f3de986f8f9dca465d53fd3",
+      "sets/fluid": "f5ccd43d1529558c795d1e0f71a717f0fd39b55822a1df613eccc0d4aa2d8582",
+      "sets/twoInternalFacesCells": "b7b7e4d283cfcb1b6fed86dcf3502248bfbc0a3dd94dd120161a45ce820525e8"
+    },
+    "scratch_case": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T125706Z-c2245ff/case",
+    "source_case": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k10_new_mesh_restart/run-20260924T085251Z-c2245ff/mapped_candidate_30"
+  },
+  "scratch_bounds": {
+    "controlDict_endTime_s": 30.0002,
+    "dt_s": 0.0002,
+    "max_iterations": 2,
+    "max_windows": 1,
+    "min_iterations": 2,
+    "socket_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T125706Z-c2245ff/precice-sockets"
+  },
+  "software": {
+    "openfoam_version": "OpenFOAM-10",
+    "pimpleFoam": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+    "preCICE_config_validation": "Checking /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_6_point_mutation/run-20260924T125706Z-c2245ff/case/precice-config.xml for syntax and basic setup issues...\n\u001b[1m\u001b[38;2;000;128;000mNo major issues detected\n\u001b[0m",
+    "preCICE_validation_warnings": [],
+    "precice_runtime_sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7",
+    "python_precice_binding": {
+      "extensions": [],
+      "loaded_libprecice": [
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ],
+      "metadata": "3.4.0",
+      "module": "/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py",
+      "python": "/usr/bin/python3.10",
+      "python_version": "3.10.12"
+    }
+  },
+  "worker": {
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+    "sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596"
+  }
+}

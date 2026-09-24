@@ -1,0 +1,87 @@
+{
+  "stage": "static_mesh_prequalification_only",
+  "overall_phase_classification": "REVIEW_REQUIRED",
+  "mesh_static_status": "PASS_CHECKMESH",
+  "fsi_runtime_status": "NOT_RUN",
+  "rbf_motion_status": "BLOCKED_KERNEL_AND_CONTROL_SEMANTICS_UNRESOLVED",
+  "input_geo": {
+    "user_supplied_path": "D:/CFD/CFD_ANCF_VIV_reentry_runtime/OpenFOAM_cylinder-main/1/12.5d.geo",
+    "evidence_copy": "hh06_single_slice_og6d_rbf_y12p5d.geo",
+    "sha256": "9a19a3b7b593bdf7bbd39409ec8b5fa4958135eac714b24421dfeb0222d9a5d2",
+    "note": "The .geo is treated as mesh input; its comments are source annotations, not task instructions."
+  },
+  "gmsh": {
+    "version": "4.8.4",
+    "command": "gmsh -3 -format msh2 -o hh06_single_slice_og6d_rbf_y12p5d.msh hh06_single_slice_og6d_rbf_y12p5d.geo",
+    "nodes_reported": 94500,
+    "elements_reported": 146870,
+    "msh_sha256": "c467ec6cb763864608c84acabef3a2160d48171005291035cae5cf2ddd08fab4"
+  },
+  "gmsh_to_foam": {
+    "openfoam": "OpenFOAM-10",
+    "build": "10-c4cf895ad8fa",
+    "vertices_read": 94498,
+    "cells_read_including_boundary_elements": 141324,
+    "volume_cells": 46826,
+    "hexahedra": 46826,
+    "other_volume_cell_types": 0
+  },
+  "boundary_patches": {
+    "names": ["front", "cylinder", "back", "inlet", "upper", "lower", "outlet"],
+    "cylinder_faces": 200,
+    "precice_name_compatible": true,
+    "required_openfoam_types_applied_in_scratch": {
+      "front": "empty",
+      "back": "empty",
+      "cylinder": "wall",
+      "upper": "symmetryPlane",
+      "lower": "symmetryPlane",
+      "inlet": "patch",
+      "outlet": "patch"
+    },
+    "patch_type_provenance": "Copied from the current qualified case boundary file after verifying all patch names, face counts, and startFace ranges match the generated mesh. No authoritative case file was changed."
+  },
+  "checkMesh": {
+    "command": "checkMesh -allTopology -allGeometry",
+    "result": "Mesh OK",
+    "points": 94498,
+    "faces": 187727,
+    "internal_faces": 93229,
+    "cells": 46826,
+    "boundary_patches": 7,
+    "geometric_directions": 2,
+    "max_aspect_ratio": 6.382833698,
+    "min_volume_m3": 7.687364831e-10,
+    "max_volume_m3": 4.045501587e-6,
+    "total_volume_m3": 0.01644676178,
+    "max_non_orthogonality_deg": 43.84604554,
+    "average_non_orthogonality_deg": 7.816534624,
+    "max_skewness": 0.8969795547,
+    "cell_determinant_min": 0.2197519644,
+    "cell_determinant_check": "PASS",
+    "topology_and_geometry_checks": "PASS"
+  },
+  "baseline_mesh": {
+    "identity": "Current authoritative cases/hh06_single_slice/constant/polyMesh; its five recorded mesh-file hashes match the Phase 1F runtime identity.",
+    "same_cells": 46826,
+    "domain_y_m": [-0.42, 0.42],
+    "max_aspect_ratio": 25.86850031,
+    "min_volume_m3": 7.687364982e-10,
+    "max_non_orthogonality_deg": 44.00486412,
+    "max_skewness": 0.8545162319,
+    "checkMesh": "PASS"
+  },
+  "geometry_delta": {
+    "og_grid_radius": "3D baseline to 6D candidate, as identified in the supplied geometry comments",
+    "outer_y_domain": "baseline +/-15D (0.42 m) to candidate +/-12.5D (0.35 m)",
+    "near_wall_min_edge_m": 6.229423453e-5,
+    "baseline_min_edge_m": 6.229423572e-5,
+    "comparison_caveat": "The outer vertical domain also changes, so any later flow difference cannot be attributed only to the RBF motion solver or O-grid radius."
+  },
+  "logs": {
+    "gmsh": "mesh/gmsh.log",
+    "gmshToFoam": "mesh/gmshToFoam.log",
+    "new_checkMesh": "mesh/checkMesh_new.log",
+    "baseline_checkMesh": "mesh/checkMesh_baseline.log"
+  }
+}

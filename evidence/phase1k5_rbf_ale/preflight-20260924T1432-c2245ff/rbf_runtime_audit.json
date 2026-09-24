@@ -1,0 +1,28 @@
+{
+  "candidate_library": "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libRBFMotionSolver.so",
+  "sha256": "e783ae0aa3765dee2a7f11f24d3a041b9d9b028795c4c703e48aca3a508cf188",
+  "elf_build_id": "d12bef3602874632c74204341110e7f8008e5dc7",
+  "compiler_comment": "GCC 11.4.0-1ubuntu1~22.04.3",
+  "openfoam_abi": "OpenFOAM-10 Foundation build 10-c4cf895ad8fa; ldd resolves OpenFOAM dependencies under /opt/openfoam10",
+  "exported_motion_solver_class": "Foam::rbfMotionSolver",
+  "embedded_source_basename": "rbfMotionSolver.C",
+  "source_file_found": false,
+  "debug_info_found": false,
+  "source_to_binary_provenance": "UNRESOLVED",
+  "configuration_literals_observed": [
+    "rbfDisplacement",
+    "movingPatch",
+    "controlStride",
+    "supportRadius",
+    "controlStride must be positive and supportRadius must be > 0",
+    "movingPatch was not found"
+  ],
+  "motion_solver_name": "rbfMotionSolver",
+  "kernel": "UNRESOLVED_FROM_AVAILABLE_SOURCE/BINARY METADATA",
+  "near_field_control_point_semantics": "UNRESOLVED; a movingPatch keyword exists but control selection/placement cannot be established from installed evidence",
+  "far_field_fixed_point_semantics": "UNRESOLVED",
+  "support_radius_semantics_and_units": "UNRESOLVED; the binary checks only that supportRadius is positive in the exposed error string",
+  "control_stride_semantics": "UNRESOLVED beyond positive-value validation",
+  "configured_or_loaded_for_test": false,
+  "qualification_decision": "DO_NOT_CONFIGURE_OR_RUN_UNTIL_KERNEL_AND_CONTROL_SEMANTICS_HAVE_AUTHORITATIVE_SUPPORT"
+}

@@ -1,0 +1,13 @@
+{
+  "classification": "REVIEW_REQUIRED",
+  "mapping_status": "PASS_FIELD_READABILITY_AND_EXTREMA",
+  "new_mesh_status": "PASS_CHECKMESH_BEFORE_AND_AFTER",
+  "new_release_force_status": "RECOVERED_AT_EXACT_30_S",
+  "fixed_cylinder_fluid_only_status": "PASS_100_STEPS_NO_RUNTIME_FAILURE",
+  "rbf_zero_motion_status": "PASS_FINAL_COORDINATES_IDENTICAL",
+  "fsi_readiness": "NOT_GRANTED_PENDING_STARTUP_TRANSIENT_REVIEW",
+  "reason": "At first post-mapping CFD advance, max p reaches 4.5318815932 m2/s2 versus mapped 30 s max 0.05357864538, and Fx reaches 0.188071358405 N versus F0 0.0655270406896 N. The excursion decays without instability, but its source and first-window coupling implication are unresolved.",
+  "run_count": 1,
+  "steps_completed": 100,
+  "next_action": "Review the first-step pressure/flux re-projection transient before authorizing a new-mesh bounded FSI run. Do not replace the 30.0 s release candidate with the 30.02 s sanity endpoint."
+}

@@ -1,0 +1,68 @@
+{
+  "classification": "REVIEW_REQUIRED",
+  "scope": "exactly two physical windows for experimental Phase 1K.17 adapter lifecycle; no convergence/stability qualification",
+  "run_id": "run-20260924T121817Z-c2245ff",
+  "completed_physical_windows": 2,
+  "unexpected_third_window": false,
+  "target_global_times_s": [30.0002, 30.0004],
+  "dt_s": 0.0002,
+  "max_iterations": 20,
+  "attempts_per_window": [20, 20],
+  "rollback_count_per_window": [19, 19],
+  "acceptance_per_window": [
+    "ACCEPTED_AT_ITERATION_LIMIT",
+    "ACCEPTED_AT_ITERATION_LIMIT"
+  ],
+  "coupling_convergence_claimed": false,
+  "structure_attempts": 40,
+  "structure_written_equals_trial_attempts": 40,
+  "structure_written_equals_trial": true,
+  "transport_identity": {
+    "sequence_range": [1, 40],
+    "request_id_range": [910001, 910040],
+    "transaction_id_range": [1910001, 1910040],
+    "monotonic_and_unique": true
+  },
+  "fluid_displacement_read_offsets": {
+    "startup_initial_data_offset_0_reads": 1,
+    "accepted_window_boundary_offset_0_reads": 1,
+    "retry_endpoint_dt_reads": 38,
+    "dt_s": 0.0002,
+    "accepted_boundary_received_max_abs_m": 1.4162483789100853e-6,
+    "accepted_structure_x_displacement_abs_m": 1.4162483789100853e-6,
+    "accepted_motion_reached_next_window_rbf_input": true
+  },
+  "displacement_path": {
+    "nonzero_fluid_received": true,
+    "nonzero_cellDisplacement": true,
+    "nonzero_pointDisplacement": true,
+    "nonzero_rbf_control_and_mesh_motion": true,
+    "rbf_solve_calls": 78,
+    "moving_controls": 200,
+    "fixed_controls": 646,
+    "selected_controls": 20,
+    "max_mesh_point_displacement_from_points0_m": 4.900887096e-6
+  },
+  "rollback": {
+    "window1_cell_point_mesh_restored_to_zero_checkpoint": true,
+    "window2_cell_max_restored": true,
+    "window2_mesh_max_delta_from_checkpoint_m": 0.0,
+    "window2_point_checkpoint_max_m": 5.8069976555299827e-7,
+    "window2_point_after_rollback_max_m": 5.8280844460221839e-7,
+    "window2_point_max_difference_m": 2.1086790492201146e-9,
+    "full_point_field_restore_verified": false,
+    "field_mismatch_gate_resolved": false
+  },
+  "runtime": {
+    "fluid_exit_code": 0,
+    "structure_exit_code": 0,
+    "timed_out": false,
+    "fluid_stderr_empty": true,
+    "structure_stderr_empty": true,
+    "fatal_error_or_protocol_failure_observed": false,
+    "orphan_pimpleFoam_or_worker_after_exit": false,
+    "socket_directory_empty_of_sockets_after_exit": true
+  },
+  "stop_condition": "one authorized two-window run completed; no retry or longer runtime started",
+  "review_blocker": "Window-2 pointDisplacement rollback maximum differs from the checkpoint diagnostic; max-only trace cannot determine whether this is boundary re-evaluation/interpolation or a restore defect."
+}

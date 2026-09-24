@@ -1,0 +1,77 @@
+{
+  "controlled_stop_observed": false,
+  "descendant_pids": [
+    552740,
+    552816,
+    552817,
+    552848,
+    552867,
+    552868,
+    552893,
+    552946,
+    552960,
+    553026,
+    553028,
+    553087
+  ],
+  "elapsed_wall_s": 0.996250135009177,
+  "finished_unix": 1790265801.8831825,
+  "hard_stop_reason": "Structure exited nonzero before controlled S5 stop: 2",
+  "loaded_library_maps": {
+    "Fluid": {
+      "552734": [
+        "744be1a00000-744be1a34000 r--p 00000000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "744be1a34000-744be1d62000 r-xp 00034000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "744be1d62000-744be1dec000 r--p 00362000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "744be1dec000-744be1ded000 ---p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "744be1ded000-744be1df8000 r--p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "744be1df8000-744be1dfa000 rw-p 003f7000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "744be1e97000-744be1ee4000 r--p 00000000 08:30 369710                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libpreciceAdapterPhase1K18Diag.so",
+        "744be1ee4000-744be1fbb000 r-xp 0004d000 08:30 369710                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libpreciceAdapterPhase1K18Diag.so",
+        "744be1fbb000-744be1ff8000 r--p 00124000 08:30 369710                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libpreciceAdapterPhase1K18Diag.so",
+        "744be1ff8000-744be1ff9000 ---p 00161000 08:30 369710                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libpreciceAdapterPhase1K18Diag.so",
+        "744be1ff9000-744be1ffd000 r--p 00161000 08:30 369710                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libpreciceAdapterPhase1K18Diag.so",
+        "744be1ffd000-744be2000000 rw-p 00165000 08:30 369710                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libpreciceAdapterPhase1K18Diag.so",
+        "744be6949000-744be695d000 r--p 00000000 08:30 369796                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+        "744be695d000-744be6999000 r-xp 00014000 08:30 369796                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+        "744be6999000-744be69b1000 r--p 00050000 08:30 369796                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+        "744be69b1000-744be69b2000 ---p 00068000 08:30 369796                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+        "744be69b2000-744be69b4000 r--p 00068000 08:30 369796                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+        "744be69b4000-744be69b5000 rw-p 0006a000 08:30 369796                     /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so"
+      ]
+    },
+    "Structure": {
+      "552735": [
+        "73afbe000000-73afbe034000 r--p 00000000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "73afbe034000-73afbe362000 r-xp 00034000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "73afbe362000-73afbe3ec000 r--p 00362000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "73afbe3ec000-73afbe3ed000 ---p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "73afbe3ed000-73afbe3f8000 r--p 003ec000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+        "73afbe3f8000-73afbe3fa000 rw-p 003f7000 08:30 319498                     /usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ],
+      "552893": [
+        "5fca58e46000-5fca58e48000 r--p 00000000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "5fca58e48000-5fca58e71000 r-xp 00002000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "5fca58e71000-5fca58e76000 r--p 0002b000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "5fca58e76000-5fca58e77000 r--p 0002f000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+        "5fca58e77000-5fca58e78000 rw-p 00030000 08:30 337998                     /home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker"
+      ]
+    }
+  },
+  "post_run_solver_worker_processes": [],
+  "processes": {
+    "Fluid": {
+      "exit_code": -15,
+      "pid": 552734,
+      "reason": "Structure exited nonzero before controlled S5 stop: 2",
+      "signal_sent": "SIGTERM"
+    },
+    "Structure": {
+      "exit_code": 2,
+      "pid": 552735,
+      "reason": "Structure exited nonzero before controlled S5 stop: 2",
+      "signal_sent": null
+    }
+  },
+  "started_unix": 1790265800.8868558
+}

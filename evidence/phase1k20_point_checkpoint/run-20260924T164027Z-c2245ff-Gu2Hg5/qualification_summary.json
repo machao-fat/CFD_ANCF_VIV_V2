@@ -1,0 +1,43 @@
+{
+  "classification": "PASS_EXPERIMENTAL_NONZERO_POINT_CHECKPOINT_ONE_RETRY",
+  "scope": "experimental adapter only; one nonzero physical checkpoint and exactly one retry; no next-window acceptance",
+  "git_head": "c2245ff396ff42dfa5e80fee6555a9ede93e3b04",
+  "start_global_time_s": 30.0002,
+  "next_trial_target_global_time_s": 30.0004,
+  "field_test": {
+    "status": "PASS",
+    "checkpoint_fnv64": "337d40b6d8391b27",
+    "cylinder_points": 400
+  },
+  "runtime": {
+    "preflight": "PASS_PREFLIGHT_ONLY",
+    "rollback_count": 1,
+    "new_window_accepted": false,
+    "controlled_stop": "S5_AFTER_FIRST_RETRY",
+    "pointDisplacement_S0_equals_S1": true,
+    "pointDisplacement_full_sha256_S0_S1": "4309ee30bbf66f11ea08b44d1a38ef91eb6df7acccc306abe9f7e79983d6f0aa",
+    "pointDisplacement_internal_sha256_S0_S1": "e07ed16096a0c80b159c20e0f0b75d9005446835aa3207d4a5ed7d5ece76711f",
+    "pointDisplacement_boundary_sha256_S0_S1": "c5dbaddde643e6e7a509c8ae1e0aa6dd9e48b2aeab1b80519fea28847f4a8cb5",
+    "cellDisplacement_S0_equals_S1": true,
+    "mesh_points_S0_equals_S1": true,
+    "ancf_q_qdot_qddot_S0_equals_S1": true,
+    "retry_read_offset_s": 0.0002,
+    "S1_to_S2_changed_point_boundary_entries": 400,
+    "S1_to_S2_changed_cell_boundary_entries": 200,
+    "rbf_candidate_moved_points_at_S5": 93206,
+    "active_mesh_update_after_S5": "NOT_TESTED_CONTROLLED_STOP"
+  },
+  "identities": {
+    "experimental_adapter_sha256": "225ecab227b8271f01119fe476370e3a0b705ca06e1ca3a7739200266499b165",
+    "experimental_adapter_build_id": "d1a7fca8f75aea43f9b3b8d7904e57a6ac90c627",
+    "experimental_rbf_sha256": "508f474654f728503e62e4f7a2c88934800dc73f947353839c52106604a2ca11",
+    "qualified_adapter_sha256_unchanged": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572"
+  },
+  "process_cleanup": {
+    "fluid_exit_code": 86,
+    "fluid_exit_meaning": "deliberate S5 diagnostic stop",
+    "structure_exit_code": -15,
+    "structure_exit_meaning": "peer terminated after controlled stop",
+    "orphan_solver_or_worker_count": 0
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "phase": "1K.13-B",
+  "classification": "RBF_NOT_RECEIVING_DISPLACEMENT",
+  "scope": "experimental one-physical-window diagnostic only",
+  "git_head": "c2245ff396ff42dfa5e80fee6555a9ede93e3b04",
+  "completed_physical_windows": 1,
+  "structure_attempts": 4,
+  "structure_rollbacks": 3,
+  "structure_accepted_attempt": 4,
+  "fluid_rbf_solve_calls": 7,
+  "fluid_rbf_pid": 459061,
+  "fluid_rbf_mpi_rank": 0,
+  "rbf_boundary_point_samples": 2800,
+  "rbf_boundary_nonzero_samples": 0,
+  "rbf_control_samples": 5922,
+  "rbf_control_nonzero_samples": 0,
+  "rbf_max_interpolated_displacement_m": 0.0,
+  "rbf_max_curPoints_minus_points0_m": 0.0,
+  "structure_trial_displacement_xy_m_by_attempt": [
+    [1.0633832164606064e-7, 9.530777190012017e-8],
+    [1.46111694396263e-7, 9.150330746462923e-8],
+    [3.5571553049373645e-7, 7.149606491358548e-8],
+    [3.267467623817314e-7, 7.424287999996162e-8]
+  ],
+  "diagnostic_library_sha256": "4a739721bfaa4734151e79bca285545d6934b2f5a9450080a5e833542a4c84ee",
+  "diagnostic_library_build_id": "3bb45499c0bd8ce75b20cec055f920b6f35f4f41",
+  "qualified_library_sha256_unchanged": "b27b347c4ba3026a495517ae7ae237ceb5cd8408ac0db9af6a58ccd83647a20c",
+  "structure_exit_code": 0,
+  "fluid_exit_code": 0,
+  "numeric_adapter_read_observed": false,
+  "notes": [
+    "RBF call counter is not a preCICE iteration ID; alignment uses chronological Fluid and Structure logs.",
+    "The final accepted displacement is mapped after the last Fluid solve; no subsequent RBF solve occurs within this one-window run.",
+    "The accepted time-directory fields are not rejected-attempt snapshots."
+  ]
+}

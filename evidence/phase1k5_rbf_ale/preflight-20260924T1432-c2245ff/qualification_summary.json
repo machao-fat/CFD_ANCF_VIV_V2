@@ -1,0 +1,14 @@
+{
+  "phase": "1K.5",
+  "classification": "REVIEW_REQUIRED",
+  "static_mesh_generation": "PASS",
+  "static_checkMesh": "PASS_AFTER_APPLYING_QUALIFIED_2D_PATCH_TYPES_IN_SCRATCH",
+  "rbf_solver_configuration": "BLOCKED_SOURCE_KERNEL_AND_CONTROL_SEMANTICS_UNRESOLVED",
+  "mesh_motion_test": "NOT_RUN",
+  "fsi_runtime": "NOT_RUN",
+  "completed_physical_windows": 0,
+  "stop_reason": "The installed RBF solver binary is present and ABI-loadable, but its source lineage, kernel, control-point selection, fixed far-field behavior, and support-radius semantics cannot be established from current repository/environment evidence. Choosing configuration values would invent an unverified solver contract.",
+  "no_production_case_modified": true,
+  "no_source_or_coupling_configuration_modified": true,
+  "evidence_directory": "evidence/phase1k5_rbf_ale/preflight-20260924T1432-c2245ff"
+}

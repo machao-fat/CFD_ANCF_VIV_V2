@@ -1,0 +1,33 @@
+{
+  "source_case": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k11_25window_rbf_fsi/staging-20260924T093404Z-c2245ff/source_case",
+  "global_time_s": 30.0,
+  "time_index": 150000,
+  "dt_s": 0.0002,
+  "F0_raw_N": [
+    0.0655270406896,
+    0.05872987414832,
+    -2.10307854575e-21
+  ],
+  "field_hashes_sha256": {
+    "U": "51ec84e648b1a2fe55e1b737e4fb3d3ac67b0f3c33c512bd0c93fca8c38b7795",
+    "p": "d25e7bcb4e4160fc6041544397e22418148bf4877215f81c35a91ce049762f2d",
+    "k": "eb81d47221c2cc27eaefee5983d1192a0304ba6498cb027051cf7314dfc2f74d",
+    "omega": "efe0950c066bd944c68ca90aaeeb5bd2d0685a792ce9e376c54c06e308023e28",
+    "nut": "9a66ba257f510664048a26cd64fe797c34879a73be4a0e796899d6c18a73981d",
+    "pointDisplacement": "b4d543b1cf6dbb292c01f06da32b5b2c3f55a2598d9c9961eb437fe05dabdbbd",
+    "uniform/time": "44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109"
+  },
+  "mesh_hashes_sha256": {
+    "points": "8cd3213978b1ab7d324f8e41a5669ab4029a2c500f3de986f8f9dca465d53fd3",
+    "faces": "55c44296d5e48469ff64d44d1176dd7fe180881d2b581224ba57cf2c6d66a92c",
+    "owner": "ddea4f5355fd4dc819f6d5db2492f2ff5bfbaa011de4ca4c9c18cf0c10331c34",
+    "neighbour": "fefd927b0ad3ec740a39d0ba83c2f1e4dd9400f498e9af2ba01082d5daa36470",
+    "boundary": "aa930c4252198b6e129e384302dfe1737b50cb9d7f40b08c9252ed6b52f83bf2",
+    "cellZones": "14b95bc6cdcdd59ac552f141d0d069fc3327c74168c1363362f0a0cf1d54c520",
+    "faceZones": "cc6a1fc22b0b72fc3f69287ff35f079391da11d6d1e76f64f09b19a7cc025fae",
+    "pointZones": "faf05399503748693b22c95ca561062701753c8720278117f97975ef97254346",
+    "sets/fluid": "f5ccd43d1529558c795d1e0f71a717f0fd39b55822a1df613eccc0d4aa2d8582",
+    "sets/twoInternalFacesCells": "b7b7e4d283cfcb1b6fed86dcf3502248bfbc0a3dd94dd120161a45ce820525e8"
+  },
+  "post_preflight_restart_hashes_match": true
+}

@@ -1,0 +1,123 @@
+{
+  "adapter": {
+    "base_phase1k17_sha256": "1bc5cf6a1ea481082b01b903d317313be01212413c8bf2718481fa43c485c495",
+    "diagnostic_build_id": "f17adc69bf9540ce23982d09165628fff2ce8c03",
+    "diagnostic_sha256": "cab6f4bffcc71ea24f296ece6c67ec9f1c6011e7139b39f2af62d2145422f71e",
+    "qualified_adapter_not_loaded_sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572"
+  },
+  "force_seed": {
+    "evaluation_command": "pimpleFoam -postProcess -case <isolated-force-eval-case> -time 30.0002",
+    "pressure_N": [
+      0.37089082845,
+      0.48445752567,
+      1.3825373187e-19
+    ],
+    "record": "30.0002           \t((3.7089082845e-01 4.8445752567e-01 1.3825373187e-19) (1.9331244929e-03 9.3667529451e-04 1.9513664435e-17)) ((-6.7824053594e-03 5.1924715983e-03 -4.3718301880e-08) (-1.3113454123e-05 2.7063742901e-05 -2.3922296337e-06))",
+    "source": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/force_eval/case/postProcessing/cylinderForces/30.0002/forces.dat",
+    "source_sha256": "9fe0e8c4ec613343fa4f8bf8c39d77133795cda71b39cd9f8a07dcf45439b466",
+    "time_advanced": false,
+    "total_N": [
+      0.3728239529429,
+      0.48539420096451,
+      1.965191816687e-17
+    ],
+    "viscous_N": [
+      0.0019331244929,
+      0.00093667529451,
+      1.9513664435e-17
+    ]
+  },
+  "git": {
+    "branch": "repair/worker-lineage-implicit-contract-v1",
+    "head": "c2245ff396ff42dfa5e80fee6555a9ede93e3b04",
+    "tracked_and_index_clean": true
+  },
+  "participant_restart_variant": {
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/participant_restart.py",
+    "sha256": "9f6cd9bdc2f824e35d2941cdca7d54eb5e6c13d09ba734d50cde44b73aeffaec"
+  },
+  "preCICE_profile": {
+    "iqn_ils": "unchanged Phase 1K profile",
+    "max_iterations": 2,
+    "max_time_windows": 1,
+    "min_iterations": 2,
+    "time_window_size_s": 0.0002
+  },
+  "rbf": {
+    "build_command": "source /opt/openfoam10/etc/bashrc; EIGEN3_INCLUDE_DIR=<preserved Phase1K.13B Eigen 3.4.0 headers>; FOAM_USER_LIBBIN=<run>/build; wclean .; wmake libso .",
+    "build_id": "968461b080423d63f636d6f1afcff0ad346a3c0a",
+    "diagnostic_path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+    "qualified_rbf_not_loaded_sha256": "b27b347c4ba3026a495517ae7ae237ceb5cd8408ac0db9af6a58ccd83647a20c",
+    "sha256": "508f474654f728503e62e4f7a2c88934800dc73f947353839c52106604a2ca11",
+    "source_files": [
+      "FieldSumOp.H",
+      "Make/files",
+      "Make/options",
+      "Phase1K18Snapshot.H",
+      "RBFCoarsening.C",
+      "RBFCoarsening.H",
+      "RBFFunctionInterface.H",
+      "RBFFunctions/LinearFunction.C",
+      "RBFFunctions/LinearFunction.H",
+      "RBFFunctions/TPSFunction.C",
+      "RBFFunctions/TPSFunction.H",
+      "RBFFunctions/WendlandC0Function.C",
+      "RBFFunctions/WendlandC0Function.H",
+      "RBFFunctions/WendlandC2Function.C",
+      "RBFFunctions/WendlandC2Function.H",
+      "RBFFunctions/WendlandC4Function.C",
+      "RBFFunctions/WendlandC4Function.H",
+      "RBFFunctions/WendlandC6Function.C",
+      "RBFFunctions/WendlandC6Function.H",
+      "RBFInterpolation.C",
+      "RBFInterpolation.H",
+      "RBFMeshMotionSolver.C",
+      "RBFMeshMotionSolver.H",
+      "twoDPointCorrectorRBF.C",
+      "twoDPointCorrectorRBF.H"
+    ],
+    "source_tree_sha256": "7229a50e579c423404d20e23909b7cbf4ae6eaec557d2af7182afa6ca8167775"
+  },
+  "restart": {
+    "ancf_state_sha256": "fae2cedc42186475a27ee01e48deced15580d8d3537c4aa32ec02b0d28cc747c",
+    "case": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/case",
+    "checkpoint_id": "hh06-window-1",
+    "checkpoint_sha256": "5901032d3f4f01250ffe79346f1979ca5b8161bcefa59607975c2fd7c049a0b5",
+    "field_sha256": {
+      "Force": "0e3362ab841ae9b6bc4e70991e623b154a5d008348181673cc9c067bcb47d235",
+      "U": "3e20739e7bfcdb6f34cbb14cee5d159bd4e7124862ef86c82c0e524f4a26e11b",
+      "U_0": "1c8aa748bb5414cc7fa117997edb12b75a2e7a8a8eebb30b01e80dc41d615c09",
+      "Uf": "0d8ec9c39c9af1ab9e361991cf58a946ebddc6add3739f45279db95cb51e7302",
+      "Uf_0": "5bedb8101d149e8a7ca70bb217f9352720294c52d4039d2fdb40f031e204aeed",
+      "V0": "146e5809b6217ee5718550d6e68b0abd5d8748f4189152f3cc377958d210f2ec",
+      "cellDisplacement": "3773e27364938115926c32804dd16a411e8bf28848e5e32d211c25dd54e99028",
+      "k": "709f0f78266ecec6375fcdaca19c7b6e919df9af8387828abf824ef1d731d75d",
+      "k_0": "3648cdc3928cd37677280977b5d5e54693c7293c5b9a72daa38eaa094c34de6a",
+      "meshPhi": "3479513445da8b8875ecad6de51defe87f40875c349044f84c0b4421f894c848",
+      "nut": "75083b57c0f1582719bc8f4c87e742e6047a0cb88ce45be65f26d6cc203f0314",
+      "omega": "330cfc5c140fff4788edbf6c25c0e0f6b431970fdf771a966fb6256a2a4478d4",
+      "omega_0": "5e3f0332c9ea19535892461be5fb3c60c904e5facb503a392b9bd0c0e74aedef",
+      "p": "1eb7499e8138a4ea94b5975d767baa8c81e4b10b9b41cf86db39bb3a4d97e97a",
+      "phi": "5cfbfe622e2812d3f8a16fb29ee6838932fe68bf8127b0fe113564ad6aee307d",
+      "pointDisplacement": "f140b18ad38ac964f42e0518ea6a653dc9eb8e0eccfbe5bb5f9fdb19d72af781",
+      "polyMesh/points": "be63c59879b2ece39de4d0e5e584b719dcc331e2fa02c189772af74b13b5abb9",
+      "uniform/time": "ffbabc93a614f04985addef0652c2a3d8cf49eb484b9c5317c381162e55c19fc",
+      "yPlus": "fac547e90d0641c36d91aa616d733c87097711e46273b7c5b944b25116719b3c"
+    },
+    "global_time_s": 30.0002
+  },
+  "scope": "one physical window from accepted window-1 state; exactly one retry; controlled stop at first retry S5; no acceptance of next window",
+  "socket_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/precice-sockets",
+  "software": {
+    "gxx": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+    "openfoam": "OpenFOAM-10",
+    "pimpleFoam": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+    "preCICE_sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7",
+    "preCICE_validation": "Checking /home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k18_7b_nonzero_rollback/run-20260924T153627Z-c2245ff/case/precice-config.xml for syntax and basic setup issues...\n\u001b[1m\u001b[38;2;000;128;000mNo major issues detected\n\u001b[0m",
+    "python_binding_output": "3.10.12\n3.4.0\n/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py\n/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+  },
+  "worker": {
+    "path": "/home/machao/projects/CFD_ANCF_VIV_V2/build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+    "sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596"
+  }
+}

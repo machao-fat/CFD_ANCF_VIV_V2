@@ -1,0 +1,7 @@
+{
+  "controlled_stop_stage": "first RBF S5 after S2 readData(dt)",
+  "max_new_physical_windows": 1,
+  "max_retries": 1,
+  "run_id": "run-20260924T164027Z-c2245ff-Gu2Hg5",
+  "start_unix": 1790268482.7084198
+}

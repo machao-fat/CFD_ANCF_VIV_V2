@@ -1,0 +1,29 @@
+{
+  "openfoam_build": "10-c4cf895ad8fa",
+  "source": "mapping_source/30",
+  "target": "mapped_candidate_30/30",
+  "command": "mapFields -case <mapped_candidate_30> -sourceTime 30 -mapMethod interpolate -noFunctionObjects <mapping_source>",
+  "map_method": "interpolate",
+  "consistent_option_used": false,
+  "patch_map": "mapped_candidate_30/system/mapFieldsDict",
+  "mapped_volume_fields": ["U", "p", "k", "omega", "nut"],
+  "not_mapped": ["phi", "pointDisplacement", "cellDisplacement", "U_0", "k_0", "omega_0", "phi_0", "yPlus"],
+  "point_displacement_construction": "Zero-uniform pointVectorField with NEW mesh patch types; mapFields renamed it .unmapped and the unchanged candidate file was restored to its original name.",
+  "unmapped_sentinel": 1e99,
+  "sentinel_retained_in_target_extrema": false,
+  "dimensions_match_source": true,
+  "source_vs_target_extrema": {
+    "U_max_mps": [0.557968422, 0.557472136],
+    "p_min_m2ps2": [-0.1434163747, -0.1424346684],
+    "p_max_m2ps2": [0.05357864538, 0.05357864538],
+    "k_min_m2ps2": [2.701992533e-10, 2.701992533e-10],
+    "k_max_m2ps2": [0.01589701043, 0.01578528817],
+    "omega_min_per_s": [1.983594574, 1.988436249],
+    "omega_max_per_s": [93792.84749, 93792.84749],
+    "nut_min_m2ps": [2.880808728e-15, 2.880808728e-15],
+    "nut_max_m2ps": [0.0002803142219, 0.0002782685419]
+  },
+  "source_extrema_log": "source_field_postprocess.log",
+  "target_extrema_log": "force_time30_postprocess.log",
+  "map_fields_log": "mapFields.log"
+}

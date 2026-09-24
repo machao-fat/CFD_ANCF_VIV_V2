@@ -1,0 +1,15 @@
+{
+  "classification": "DIAGNOSTIC_RUN_INCOMPLETE",
+  "completed_structure_attempts": 0,
+  "diagnostic_snapshot_count": 0,
+  "elapsed_wall_s": 1.071762851002859,
+  "hard_stop_reason": "Fluid exited nonzero (-6)",
+  "iteration_cap": 2,
+  "process_exit_codes": {
+    "Fluid": -6,
+    "Structure": -15
+  },
+  "rollback_snapshots": 0,
+  "trace_path": null,
+  "window_cap": 1
+}

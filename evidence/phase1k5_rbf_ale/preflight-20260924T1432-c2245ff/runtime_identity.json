@@ -1,0 +1,59 @@
+{
+  "git": {
+    "branch": "repair/worker-lineage-implicit-contract-v1",
+    "head": "c2245ff396ff42dfa5e80fee6555a9ede93e3b04",
+    "tracked_worktree_changes_before_phase": false,
+    "preexisting_untracked": [
+      "docs/PHASE1J_ALE_FLUID_FAILURE_AUDIT.md",
+      "evidence/phase1i_25window_iqn/"
+    ]
+  },
+  "worker": {
+    "source": "src/ancf/ancf_worker_main.cpp",
+    "source_sha256": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+    "binary": "build/phase1d6_worker/cfd_ancf_ancf_kernel_worker",
+    "binary_sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596"
+  },
+  "fluid_adapter": {
+    "path": "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/lib/libpreciceAdapterFunctionObject.so",
+    "sha256": "26ad8529822f96ca8ddfb3370f85257b0d19b56958538d6073cf8af897aac572",
+    "source_provenance_resolved": false
+  },
+  "openfoam": {
+    "version": "OpenFOAM-10",
+    "build": "10-c4cf895ad8fa",
+    "solver": "/opt/openfoam10/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+    "solver_started": false
+  },
+  "mesh_tools": {
+    "gmsh": "4.8.4",
+    "checkMesh": "OpenFOAM-10 build 10-c4cf895ad8fa"
+  },
+  "precice": {
+    "runtime_version": "3.4.1",
+    "runtime_library": "/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+    "runtime_library_sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7",
+    "python": "/usr/bin/python3.10",
+    "python_version": "3.10.12",
+    "pyprecice_metadata": "3.4.0",
+    "python_module": "/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py",
+    "cyprecice_extension": "/home/machao/.local/lib/python3.10/site-packages/cyprecice.cpython-310-x86_64-linux-gnu.so",
+    "cyprecice_extension_sha256": "184b94ac58397ee2de696b10b3ccb11955033f9d4563146368f5b097f0c1684c",
+    "configuration_validation": "PASS_NO_MAJOR_ISSUES_DETECTED"
+  },
+  "coupling_configuration": {
+    "precice_xml": "cases/hh06_single_slice/precice-config.xml",
+    "sha256": "71643ae8042f44e2a661d37ab68b680ae4650bf7118c8d08879cbe441f657211",
+    "baseline_dynamicMeshDict": "cases/hh06_single_slice/constant/dynamicMeshDict",
+    "baseline_dynamicMeshDict_sha256": "56158d50b6198b6b129e384302dfe1737b50cb9d7f40b08c9252ed6b52f83bf2"
+  },
+  "restart_30s_sha256": {
+    "uniform/time": "44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109",
+    "p": "c33098b9634bf39ed09b184f5314aca388cce63063d9cc6c064b280167a78e05",
+    "U": "a71a708e7bc12280ce60d0ad141c826ccd39e2100a0e98322cd0a7f53de3668a",
+    "k": "eab8f52cc20f5a3aa6832cb6471df18a8119804827d532d72f44930377f37d3e",
+    "omega": "cda71b08942c289ef7ae5b73aeb0e8390c5f5c2606706632d9d69d2b31d60c58",
+    "nut": "52a9ecad93f73cf84856eea748fa81884797b90d5628121a255b2e557704ef21"
+  },
+  "run_status": "NO_OPENFOAM_SOLVER_OR_PRECICE_PARTICIPANT_STARTED"
+}

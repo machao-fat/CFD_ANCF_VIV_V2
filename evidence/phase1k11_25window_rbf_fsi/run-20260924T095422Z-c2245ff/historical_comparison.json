@@ -1,0 +1,345 @@
+{
+  "comparison_scope": "Phase 1I old-mesh Laplacian and Phase 1K.11 mapped new-mesh TPS-RBF differ in mesh, ALE and mapped release field; not a single-variable causal isolation",
+  "old": {
+    "completed_windows": 20,
+    "failure": "Fluid participant exited with code -8",
+    "coupling_attempts": 99,
+    "wall_clock_s": 111.11881690500013,
+    "fluid_Co_max": 21.4545107,
+    "mesh_Co_max": 21.30151547,
+    "fluid_Co_samples": 101,
+    "mesh_Co_samples": 100,
+    "cfd_advances": 100,
+    "openfoam_fatal": false,
+    "sigfpe": true,
+    "rbf_control_point_selections": [],
+    "rbf_max_interpolation_error": null,
+    "max_raw_force_xy_norm_N": 81.36807704388531,
+    "iterations_per_window": {
+      "1": 3,
+      "2": 5,
+      "3": 5,
+      "4": 5,
+      "5": 5,
+      "6": 5,
+      "7": 5,
+      "8": 5,
+      "9": 5,
+      "10": 5,
+      "11": 5,
+      "12": 5,
+      "13": 5,
+      "14": 5,
+      "15": 5,
+      "16": 5,
+      "17": 5,
+      "18": 5,
+      "19": 5,
+      "20": 5,
+      "21": 1
+    },
+    "saved_cell_volumes": {
+      "min_cell_volume_m3": -1.1983293025093347e-10,
+      "max_non_positive_cells_in_saved_field": 33,
+      "saved_time_observations": [
+        {
+          "global_time_s": 30.0,
+          "min_cell_volume_m3": 7.687364982048764e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0002,
+          "min_cell_volume_m3": 7.687364982048764e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0004,
+          "min_cell_volume_m3": 7.669859216034257e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0006,
+          "min_cell_volume_m3": 7.599856174192068e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0008,
+          "min_cell_volume_m3": 7.460321906791962e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.001,
+          "min_cell_volume_m3": 7.252828445802982e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0012,
+          "min_cell_volume_m3": 6.980070763334812e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0014,
+          "min_cell_volume_m3": 6.645551432616719e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0016,
+          "min_cell_volume_m3": 6.253398216482731e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0018,
+          "min_cell_volume_m3": 5.808212528075193e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.002,
+          "min_cell_volume_m3": 5.314941018854014e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0022,
+          "min_cell_volume_m3": 4.778750331486008e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0024,
+          "min_cell_volume_m3": 4.204884322236093e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0026,
+          "min_cell_volume_m3": 3.5985136306972393e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0028,
+          "min_cell_volume_m3": 2.9645889454718656e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.003,
+          "min_cell_volume_m3": 2.3077047368157325e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0032,
+          "min_cell_volume_m3": 1.6319796805318162e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0034,
+          "min_cell_volume_m3": 9.409588206266884e-11,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0036,
+          "min_cell_volume_m3": 2.3754224270851332e-11,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.004,
+          "min_cell_volume_m3": -1.1983293025093347e-10,
+          "non_positive_cells": 33
+        },
+        {
+          "global_time_s": 30.0042,
+          "min_cell_volume_m3": 7.687364975856032e-10,
+          "non_positive_cells": 0
+        }
+      ]
+    },
+    "max_U_mps": 33.16580152,
+    "max_omega": 457794787770.0
+  },
+  "new": {
+    "completed_windows": 25,
+    "failure": null,
+    "coupling_attempts": 124,
+    "wall_clock_s": 62.81041828999878,
+    "fluid_Co_max": 0.389960227,
+    "mesh_Co_max": 1.730619541,
+    "fluid_Co_samples": 125,
+    "mesh_Co_samples": 124,
+    "cfd_advances": 124,
+    "openfoam_fatal": false,
+    "sigfpe": false,
+    "rbf_control_point_selections": [
+      [
+        20,
+        846
+      ],
+      [
+        20,
+        846
+      ]
+    ],
+    "rbf_max_interpolation_error": 452.2075962,
+    "max_raw_force_xy_norm_N": 109.18909795008076,
+    "iterations_per_window": {
+      "1": 4,
+      "2": 5,
+      "3": 5,
+      "4": 5,
+      "5": 5,
+      "6": 5,
+      "7": 5,
+      "8": 5,
+      "9": 5,
+      "10": 5,
+      "11": 5,
+      "12": 5,
+      "13": 5,
+      "14": 5,
+      "15": 5,
+      "16": 5,
+      "17": 5,
+      "18": 5,
+      "19": 5,
+      "20": 5,
+      "21": 5,
+      "22": 5,
+      "23": 5,
+      "24": 5,
+      "25": 5
+    },
+    "saved_cell_volumes": {
+      "min_cell_volume_m3": 7.687364830588428e-10,
+      "max_non_positive_cells_in_saved_field": 0,
+      "saved_time_observations": [
+        {
+          "global_time_s": 30.0,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0002,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0004,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0006,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0008,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.001,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0012,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0014,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0016,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0018,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.002,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0022,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0024,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0026,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0028,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.003,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0032,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0034,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0036,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0038,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.004,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0042,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0044,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0046,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.0048,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        },
+        {
+          "global_time_s": 30.005,
+          "min_cell_volume_m3": 7.687364830588428e-10,
+          "non_positive_cells": 0
+        }
+      ]
+    },
+    "max_U_mps": 0.90170971607,
+    "max_omega": 93807.296565
+  }
+}
