@@ -46,3 +46,23 @@ Thumbs.db
 # Keep OpenFOAM initial fields and case setup in Git; do not ignore numeric
 # directories globally. The HH06 restart field is intentionally tracked under
 # cases/hh06_single_slice/30/.
+
+# Phase 1I/1K raw runtime trees are independently archived outside Git.
+# Selected source/config/summary files inside these directories are added
+# explicitly; do not accidentally stage full meshes or diagnostic snapshots.
+/evidence/phase1i_25window_iqn/
+/evidence/phase1k5_rbf_ale/
+/evidence/phase1k9_verified_rbf/
+/evidence/phase1k10_new_mesh_restart/
+/evidence/phase1k11_25window_rbf_fsi/
+/evidence/phase1k13b_rbf_diag/
+/evidence/phase1k14_adapter_read/
+/evidence/phase1k16b_adapter/
+/evidence/phase1k17_adapter/
+/evidence/phase1k18_adapter/
+/evidence/phase1k18_6_point_mutation/
+/evidence/phase1k18_7a_nonzero_checkpoint/
+/evidence/phase1k18_7b_nonzero_rollback/
+/evidence/phase1k20_point_checkpoint/
+/evidence/phase1k21_two_window_lifecycle/
+/evidence/phase1k22_five_window_experimental/
