@@ -1,0 +1,26 @@
+{
+  "same_input_pair": {
+    "attempts": [
+      3,
+      4
+    ],
+    "solve_ids": [
+      3,
+      4
+    ],
+    "fluid_input_sha256": [
+      null,
+      null
+    ],
+    "vertex_ids_sha256": [
+      null,
+      null
+    ],
+    "hash_status": "NOT_COMPUTED_BY_INITIAL_ANALYZER"
+  },
+  "pair_verified_from": "fluid_input_trace.jsonl",
+  "prefix_solve_ids": [
+    3,
+    4
+  ]
+}

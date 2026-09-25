@@ -1,0 +1,7 @@
+{
+  "R1_vs_R2_production_prefix_exact": false,
+  "R1_vs_R2_continuation_exact": true,
+  "force_trace_exact": true,
+  "status": "PRELIMINARY_ONLY",
+  "note": "Continuation solver traces repeat across fresh processes, but production-prefix equivalence and continuation write isolation are not yet accepted gates."
+}

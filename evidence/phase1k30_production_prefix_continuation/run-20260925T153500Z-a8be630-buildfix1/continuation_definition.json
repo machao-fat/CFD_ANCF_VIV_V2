@@ -1,0 +1,15 @@
+{
+  "cycles": [
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "same_time_step": true,
+  "advance_called": false,
+  "new_displacement_read": false,
+  "mesh_move_called": false,
+  "preCICE_write_called": false,
+  "solver_path": "explicit final-path UEqn + two current-case pressure correctors + turbulence.correct",
+  "write_isolation_status": "NOT_PROVEN",
+  "note": "The continuation block does not explicitly call preCICE write, but the later adapter/function-object lifecycle can recompute the outgoing force from continuation fields."
+}

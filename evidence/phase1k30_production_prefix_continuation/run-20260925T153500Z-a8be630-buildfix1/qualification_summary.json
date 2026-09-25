@@ -1,0 +1,12 @@
+{
+  "classification": "K30_DIAGNOSTIC_PRELIMINARY_WRITE_ISOLATION_UNRESOLVED",
+  "production_prefix_gate": "NOT_ACCEPTED_CONTROLLED_SCHEMA_COMPARISON_PENDING",
+  "continuation_tail": "SUPPORTED",
+  "fresh_process_repeatability": "PRELIMINARY_ONLY",
+  "delta_prod_to_strict_N_attempt_3_4": 7.209646011425813e-05,
+  "ratio_to_1e-3_attempt_3_4": 0.07209646011425813,
+  "next_authorization": "NONE_UNTIL_CONTINUATION_WRITE_ISOLATION_IS_PROVEN",
+  "iqn_retest": "NO",
+  "scope": "preliminary tested old-native B1/G2 state only; not a final adequacy qualification",
+  "blocking_issue": "Adapter/function-object force write after continuation may observe continuation fields; a coupling-write isolation gate is required before accepting the adequacy result."
+}

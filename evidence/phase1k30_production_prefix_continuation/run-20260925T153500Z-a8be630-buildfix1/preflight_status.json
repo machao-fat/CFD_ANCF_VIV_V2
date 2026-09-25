@@ -1,0 +1,8 @@
+{
+  "status": "PASS_PREFLIGHT_ONLY",
+  "runtime_started": false,
+  "physical_windows": 0,
+  "prefix_outer_count": 3,
+  "continuation_cycles": 3,
+  "continuation_writes_to_precice": false
+}
