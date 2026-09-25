@@ -143,6 +143,29 @@ global operator repeatability. A CFD inner-convergence A/B is now authorized as
 the next diagnostic only and has not been run. IQN retest, parameter tuning,
 multi-window runs, and production-adapter adoption remain unauthorized.
 
+## Phase 1K.28 old-native reference confirms an ALE rollback causal path
+
+The old authoritative polyMesh and its own native 30.0 s fields were tested as
+a software reference without `mapFields`, new-mesh fields, or RBF motion. The
+first B0 candidate reproduced the old-mesh rollback lifecycle mismatch: S0 had
+no `meshPhi`/`meshPhi_0` and `moving=false, changing=false`, while post-rollback
+S1 had those objects, `moving=true, changing=true`, volume-history proxies and
+additional runtime history. Attempts 3/4 had the same complete Fluid-read
+displacement, but direct raw Force and adapter preWrite differed by
+`0.03743996584180332 N`.
+
+The separately named B1 G2 candidate retained only the existing meshPhi
+canonicalization. It made all 15 paired solver stages and raw pressure,
+viscous, total, and adapter preWrite payloads exactly equal (`0 N`) for the
+tested pair. This supports `GENERIC_ALE_ROLLBACK_STATE_CAUSAL` as an isolated
+software diagnostic result; it is not a production repair or proof of complete
+OpenFOAM state restoration. Structure-received Force still differed by
+`0.1104032190226757 N` because the retry read used `relativeReadTime=dt` and
+the accepted read used `0`; the internal pre-acceleration value was not
+observed. The next CFD inner-convergence A/B is authorized only on this
+experimental B1 software-reference branch and was not run in K28. IQN retest,
+parameter sweeps, long-window runs and physical validation remain unauthorized.
+
 ## Forbidden historical shortcuts
 
 - Do not revive the old Re=100 / D=1 m / 50 m / 604-vertex participant for HH06.

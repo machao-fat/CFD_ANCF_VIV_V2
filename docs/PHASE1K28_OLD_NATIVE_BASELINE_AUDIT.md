@@ -1,106 +1,63 @@
 # Phase 1K.28 - Old-native baseline audit
 
-Status: `PASS_AUDIT_ONLY_RUNTIME_NOT_STARTED`
+Status: `PASS_AUDIT_AND_BOUNDED_REFERENCE_RUN`
 
-This is a read-only provenance audit on branch
-`diagnostic/phase1k28-old-mesh-native-reference-v1`, based on K27 checkpoint
-`fc0f94db038e9e00cf99e4d14eb113ec5da93ccb`. No OpenFOAM, preCICE, or ANCF
-process was started and no case file was changed.
+This audit qualifies an old-mesh software reference only. It does not claim a
+from-t=0 native 30 s reproduction, long-window ALE stability, HH06 validation,
+or production suitability. The old-native runs used the authoritative old mesh
+and its own 30 s fields, without `mapFields`, without the K27 new-mesh restart,
+and without RBF motion.
 
-## Scope and source authorities
+## Provenance
 
-The authoritative old-mesh runtime case is the existing local source case
-`/home/machao/OpenFOAM/coupling/singal_slice/slice0000`. The repository
-snapshot is `cases/hh06_single_slice`. The source case is read-only input for
-this audit; it is not a run directory and is not modified.
-
-The source case startup log records `Create mesh for time = 30`, selects
-`displacementLaplacian` with `quadratic inverseDistance` diffusion, reads `p`
-and `U`, calculates `phi`, and constructs `kOmegaSST`. A read-only search of
-the source case found no `mapFields` command, mapping manifest, or new-mesh
-case reference. The K10 mapping evidence separately identifies the same old
-case fields as `mapping_source/30` and identifies `mapped_candidate_30` as the
-different target mesh. This supports the classification **native to the old
-polyMesh**, while not claiming that K28 independently regenerated the 30 s
-state from t=0.
-
-## Mesh and restart consistency
-
-The repository and source case are byte-identical for all restart and mesh
-objects checked below. The mesh has 46,826 cells, 200 `cylinder` wall faces,
-and `front`/`back` empty patches. The restart time is 30 s, index 150000, and
-`deltaT=0.0002 s`.
-
-| Object | Source and repository identity | SHA256 |
+| Item | Result | Evidence |
 |---|---|---|
-| `30/U` | equal | `a71a708e7bc12280ce60d0ad141c826ccd39e2100a0e98322cd0a7f53de3668a` |
-| `30/p` | equal | `c33098b9634bf39ed09b184f5314aca388cce63063d9cc6c064b280167a78e05` |
-| `30/k` | equal | `eab8f52cc20f5a3aa6832cb6471df18a8119804827d532d72f44930377f37d3e` |
-| `30/omega` | equal | `cda71b08942c289ef7ae5b73aeb0e8390c5f5c2606706632d9d69d2b31d60c58` |
-| `30/nut` | equal | `52a9ecad93f73cf84856eea748fa81884797b90d5628121a255b2e557704ef21` |
-| `30/pointDisplacement` | equal | `c39b4977c62592e42661d17ed7a3bc9d13ebdbec9b9966d8f195b501b1ba534a` |
-| `30/cellDisplacement` | equal | `93c2b1d13d8f56efe43fc8c8d865e97ec4fabdad9dca4032c32c2813818b6f9d` |
-| `30/phi` | equal | `aedd09592bca8e7e7a0f5ba193dd3e236779bf48bfea393bf744ac8df7b5fcb2` |
-| `30/phi_0` | equal | `d4a821b80b3fb5156b4431d334c8249eeb8a0b878fb44e354124122a89461a93` |
-| `30/U_0` | equal | `ff1b0c321cd008e260115fd926e621c8f940acb7e2f120072ab094da68e86ae0` |
-| `30/k_0` | equal | `4df41aae9007b3a95e481e0d84d03d4704f46082ac512c07a9684ca96554ef4c` |
-| `30/omega_0` | equal | `db87be853b7d82f35ce20ed51760da027307df10d793336e367fa6f21d8c5e73` |
-| `30/yPlus` | equal | `74bb07313d7a86fccbf335792fc39abf3faf9ea4f76bf763f995ff94bf0f657a` |
-| `30/uniform/time` | equal | `44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109` |
-| `constant/polyMesh/points` | equal | `41d2d570fb801c4bab9e40cc1c0644150cbaddaa5903e682e9e78b333e3b93bf` |
-| `constant/polyMesh/faces` | equal | `d2a7dfeefed80fc08af488a83e9bf26d9e570c7db22a3392faa918b21a332242` |
-| `constant/polyMesh/owner` | equal | `b433a77644b807eec43cd32e739e927cff1c4f1fca2d0cf6edf0cc93de5283bc` |
-| `constant/polyMesh/neighbour` | equal | `79cc5e86396555ab0cdbac498cd5042f2cbdbfbc229e527ae5597afb69af94a7` |
-| `constant/polyMesh/boundary` | equal | `aa930c4252198b6e129e384302dfe1737b50cb9d7f40b08c9252ed6b52f83bf2` |
-| `constant/polyMesh/cellZones` | equal | `5dda898dd3e65c76ed3ac78d1346dc74b5d55cd1020b59863d07510f078bde47` |
-| `constant/polyMesh/faceZones` | equal | `ea550fd99f1ed807268426d518b3272e528773db364d8969211eb8e9bbb59254` |
-| `constant/polyMesh/pointZones` | equal | `890d1eeae9c0391662acd0a8a27c24bc3a39b693251444af90e16ecc5cc7c0dd` |
+| Git branch | PASS | `diagnostic/phase1k28-old-mesh-native-reference-v1` |
+| K28 audit checkpoint | PASS | `ed3e8e2d5cb49e5d1dd7ebe3b2a91ea586494545` is an ancestor of runtime commits |
+| Runtime HEAD | PASS | `4a10ee68d9d03d5bbc509191b4b1fdaf8933998f` |
+| OpenFOAM | PASS | Foundation OpenFOAM 10 |
+| preCICE | PASS | 3.4.1, SHA256 `b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7` |
+| dt | PASS | `0.0002 s` |
+| Restart | PASS, scoped | old polyMesh, native 30.0 s fields, time index 150000 |
+| mapFields | PASS | not used for this restart |
+| motion | PASS | `displacementLaplacian`, quadratic inverseDistance, no RBF |
+| production adapter | PASS | not modified; B0/B1 are isolated libraries |
 
-## Native old-mesh motion contract
+The restart identity is preserved in `old_native_restart_identity.json` and in
+each run's `restart_identity.json`. Checked field and mesh hashes are recorded
+there, including `U`, `p`, `k`, `omega`, `nut`, displacement fields, `phi`,
+history fields, and the old polyMesh files.
 
-The old authoritative case owns the following motion path:
+## Runtime boundary
 
-- OpenFOAM `fvMeshMover` with `motionSolver` type;
-- `displacementLaplacian` motion solver;
-- `quadratic inverseDistance 1(cylinder)` diffusivity;
-- `pointDisplacement` as the boundary displacement input;
-- `cellDisplacement` as the volume displacement field;
-- 200-face `cylinder` wall with moving-wall semantics;
-- `meshPhi` generated by the OpenFOAM moving-mesh lifecycle at runtime.
+Both candidates used one physical time window and four attempts. The result is
+`ACCEPTED_AT_ITERATION_LIMIT / NOT_CONVERGED`; preCICE did not report coupling
+convergence. No second window, 5/25-window run, IQN sweep, relaxation sweep,
+PIMPLE sweep, dt change, mesh change, RBF change, or turbulence-parameter change
+was performed. The fixed-displacement Structure participant was used only as a
+diagnostic participant; no ANCF worker was started.
 
-There is no old-native RBF library or RBF parameter in this contract. K27's
-TPS RBF `dynamicMeshDict` is therefore not reused. `meshPhi`, its history,
-`moving/changing` flags, and volume-history objects are runtime-created state;
-their values cannot be asserted from the static 30 s files and will only be
-recorded during a later bounded diagnostic run.
+## Motion and rollback observations
 
-## Configuration identity
+The old-native baseline reproduced the same lifecycle pattern observed in the
+new-mesh baseline:
 
-The native-flow configuration files are byte-identical between source and
-repository for `constant/dynamicMeshDict`, `momentumTransport`,
-`physicalProperties`, `system/fvSchemes`, `system/fvSolution`,
-`system/controlDict`, and `system/preciceDict`. The current repository
-`precice-config.xml` and diagnostic coupling contracts intentionally differ
-from the historical source runtime configuration; they are current coupling
-software inputs, not evidence that the 30 s fields were generated by K27.
+| State | meshPhi / meshPhi_0 | fvMesh flags | Other observable topology |
+|---|---|---|---|
+| B0 S0 checkpoint | absent | `moving=false`, `changing=false` | no `yPlus`; `Uf` has no old-time chain |
+| B0 S1 after rollback | present with current/old-time objects | `moving=true`, `changing=true` | `meshPhi_0`, `V/V0/V00`, `yPlus`, and `Uf` history present |
+| B1 S1 after rollback | present and canonicalized to zero values | `moving=true`, `changing=true` | same runtime topology, but meshPhi current/old values are zero |
 
-The old mesh uses OpenFOAM Foundation 10 `pimpleFoam`, RAS `kOmegaSST`,
-`rhoInf=1000`, `nu=1.1388087116e-6 m2/s`, and `deltaT=0.0002 s`. No turbulence,
-mesh, RBF, or physical parameter change is proposed by this audit.
+Current `U`, `p`, `phi`, `k`, `omega`, `nut`, displacement fields, and mesh
+points remained byte-level-equivalent in the captured observable summaries.
+The relevant mismatch is runtime/ALE lifecycle state, not a claim that the
+primary current fields were restored incorrectly.
 
-## Gate decision
+## Gate
 
-| Gate | Result | Basis |
-|---|---|---|
-| Old authoritative polyMesh exists | PASS | source case and repository mesh are byte-identical; 46,826 cells and 200 cylinder faces are documented |
-| Native 30 s fields belong to that polyMesh | PASS, scoped | source case contains the fields at time 30 and all field/mesh hashes match; no mapFields artifact or command was found in the source case |
-| Restart time identity | PASS | `value=30`, `index=150000`, `deltaT=0.0002` |
-| Native motion contract identified | PASS | `displacementLaplacian`, not RBF; point/cell displacement ownership is explicit |
-| Current coupling compatibility | NOT YET TESTED | no K28 adapter or participant runtime has been started |
-| Long-window or physical validity | NOT CLAIMED | old mesh has historical late-window ALE/RAS failure evidence |
-
-The old-native baseline is eligible for a separate B0 diagnostic scratch. The
-next runtime must copy this frozen source state into a unique scratch, use the
-old native motion path, use the current diagnostic checkpoint/force
-instrumentation without G2, and stop after one physical window. It must not
-use the K27 new-mesh restart or `mapFields`.
+The old authoritative mesh plus native 30 s restart is proven consistent as a
+software-reference input for this bounded run. It is not proven to be a native
+from-t=0 trajectory. B0 showed an effect-relevant `meshPhi` mismatch, so B1
+was authorized as the single isolated G2 candidate. B1 restored the tested
+Fluid raw-force and adapter preWrite repeatability. Under the stop rule, no
+additional candidate was run.
