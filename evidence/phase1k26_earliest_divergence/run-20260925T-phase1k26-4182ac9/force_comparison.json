@@ -1,0 +1,46 @@
+{
+  "force_kind": "Structure preCICE-received Force after exchange/acceleration; NOT direct OpenFOAM integrated Force",
+  "baseline_received_force_N_per_attempt": [
+    [
+      0.0900359042326746,
+      0.056385514259487284
+    ],
+    [
+      0.1615021722747258,
+      -0.021510905978815276
+    ],
+    [
+      0.10674012020107931,
+      -0.03899730797417809
+    ],
+    [
+      0.06173208299132629,
+      -0.07937302508219088
+    ]
+  ],
+  "G2_received_force_N_per_attempt": [
+    [
+      0.0900359042326746,
+      0.056385514259487284
+    ],
+    [
+      0.1615021722747258,
+      -0.021510905978815276
+    ],
+    [
+      0.11051428672025433,
+      -0.03561152033583504
+    ],
+    [
+      0.09659825039505082,
+      -0.04809509323023877
+    ]
+  ],
+  "baseline_attempt_3_to_4_difference_N": 0.060464220374208,
+  "G2_attempt_3_to_4_difference_N": 0.018694803000146195,
+  "difference_reduction_fraction": 0.6908121384110202,
+  "G2_difference_over_force_abs_limit_1e_3_N": 18.694803000146194,
+  "fresh_A_B_received_force_sequences_identical": true,
+  "direct_openfoam_force_per_attempt": "NOT_MEASURED",
+  "adapter_outgoing_unaccelerated_force_per_attempt": "NOT_MEASURED"
+}

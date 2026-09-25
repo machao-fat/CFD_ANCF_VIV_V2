@@ -1,0 +1,40 @@
+{
+  "valid_same_actual_fluid_input_pair": [
+    3,
+    4
+  ],
+  "invalid_same_input_pair": [
+    1,
+    2
+  ],
+  "earliest_divergence": {
+    "stage": "S00_postrollback_before_readData_dt",
+    "objects": ["meshPhi", "meshPhi_0"]
+  },
+  "first_solver_stage_divergence": {
+    "stage": "S01_before_mesh_move.json",
+    "field_differences": {
+      "meshPhi": {
+        "hash": [
+          "422b4d116dc898dd",
+          "1886d01a8df51f94"
+        ],
+        "max_mag": [
+          1.6121653031358853e-08,
+          8.060826515328194e-08
+        ],
+        "old_hash": [
+          "50ff2e67a182aca0",
+          "21a039f29be94615"
+        ],
+        "old_max_mag": [
+          1.6121653031358853e-08,
+          8.060826515328194e-08
+        ]
+      }
+    },
+    "other_differences": {}
+  },
+  "region": "ALE_FLUX_AFTER_ROLLBACK_BEFORE_READ_DATA_AND_MESH_MOVE",
+  "candidate_qualifier": "meshPhi zeroing removes this stage difference but does not establish full Force-channel repeatability"
+}

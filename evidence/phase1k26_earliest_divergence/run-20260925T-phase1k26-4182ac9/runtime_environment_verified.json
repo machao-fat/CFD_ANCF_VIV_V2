@@ -1,0 +1,13 @@
+{
+  "verification_kind": "post-run identity check against runtime /proc maps and pinned child manifests",
+  "openfoam_version": "OpenFOAM-10",
+  "precice_runtime_version": "3.4.1",
+  "precice_loaded_library": "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+  "precice_library_sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7",
+  "python_executable": "/usr/bin/python3.10",
+  "python_version": "3.10.12",
+  "pyprecice_package_metadata": "3.4.0",
+  "python_module": "/home/machao/.local/lib/python3.10/site-packages/precice/__init__.py",
+  "python_extension": "/home/machao/.local/lib/python3.10/site-packages/cyprecice.cpython-310-x86_64-linux-gnu.so",
+  "python_extension_sha256": "184b94ac58397ee2de696b10b3ccb11955033f9d4563146368f5b097f0c1684c"
+}

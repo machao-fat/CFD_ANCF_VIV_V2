@@ -1,0 +1,12 @@
+{
+  "classification": "EARLIEST_DIVERGENCE_LOCALIZED_CAUSE_UNRESOLVED",
+  "first_observable_difference": "meshPhi and meshPhi_0 at S00 after rollback, attempts 3 vs 4",
+  "G2_causal_contribution_to_received_force_difference": true,
+  "G2_sufficient_for_operator_repeatability": false,
+  "fresh_process_stage_trajectory_reproducible": true,
+  "RBF_same_input_output_identical": true,
+  "turbulence_runtime_causality": "NOT_SUPPORTED_BY_EARLIEST_STAGE",
+  "RBF_runtime_causality": "NOT_SUPPORTED_BY_SAME_INPUT_RBF_OUTPUT",
+  "inner_convergence_AB_authorized": false,
+  "IQN_requalification_authorized": false
+}

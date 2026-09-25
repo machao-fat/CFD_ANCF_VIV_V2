@@ -1,0 +1,892 @@
+{
+  "S00_postrollback_attempt_3_vs_4": {
+    "volScalarField": [],
+    "volVectorField": [],
+    "surfaceScalarField": ["meshPhi", "meshPhi_0"],
+    "surfaceVectorField": [],
+    "pointVectorField": [],
+    "mesh": []
+  },
+  "G2_S00_postrollback_attempt_3_vs_4": {
+    "volScalarField": [],
+    "volVectorField": [],
+    "surfaceScalarField": [],
+    "surfaceVectorField": [],
+    "pointVectorField": [],
+    "mesh": []
+  },
+  "baseline_attempt_3_vs_4": [
+    {
+      "stage": "S01_before_mesh_move.json",
+      "field_differences": {
+        "meshPhi": {
+          "hash": [
+            "422b4d116dc898dd",
+            "1886d01a8df51f94"
+          ],
+          "max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ],
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S04_after_mesh_move_outer_1.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "770074b7bb9f5649",
+            "531fa985ba747d89"
+          ]
+        },
+        "phi": {
+          "hash": [
+            "ac8d7f10e148a402",
+            "a35cc53fc669b461"
+          ],
+          "max_mag": [
+            9.522577908862107e-05,
+            9.52256963196475e-05
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S05_before_UEqn_outer_1.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "770074b7bb9f5649",
+            "531fa985ba747d89"
+          ]
+        },
+        "phi": {
+          "hash": [
+            "ac8d7f10e148a402",
+            "a35cc53fc669b461"
+          ],
+          "max_mag": [
+            9.522577908862107e-05,
+            9.52256963196475e-05
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S05_before_UEqn_outer_2.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "857730b23d8a0c48",
+            "074a7804cc3a65b1"
+          ],
+          "max_mag": [
+            0.5575109295725684,
+            0.5574505326498898
+          ]
+        },
+        "p": {
+          "hash": [
+            "c4b547a315f57c63",
+            "43bb7cae61ee6bb0"
+          ],
+          "max_mag": [
+            3.17879281487577,
+            3.1784632494832645
+          ]
+        },
+        "phi": {
+          "hash": [
+            "2fc1036327b1f39c",
+            "bf1dbcaf8d1a4bd0"
+          ],
+          "max_mag": [
+            9.522704094556935e-05,
+            9.522695411832126e-05
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "ec93739d86c21fd6",
+            "347c5d1e4eec9194"
+          ],
+          "max_mag": [
+            0.5574294634333916,
+            0.5573711715438543
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S05_before_UEqn_outer_3.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "485af8f51ee5a8fd",
+            "a4a8a69047a43da5"
+          ],
+          "max_mag": [
+            0.5575260037109109,
+            0.5573976593117205
+          ]
+        },
+        "p": {
+          "hash": [
+            "1bb8e097bbedc731",
+            "10f90e7c9b95bb38"
+          ],
+          "max_mag": [
+            4.9348813097647035,
+            4.934418706458353
+          ]
+        },
+        "phi": {
+          "hash": [
+            "d736deda50fb808c",
+            "9d8a63a210b1ad6a"
+          ],
+          "max_mag": [
+            9.522865609220287e-05,
+            9.522856930606338e-05
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "1759a75bca3b6c72",
+            "1c7abe05449656f6"
+          ],
+          "max_mag": [
+            0.5574553287200882,
+            0.5573078134350723
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S06_after_UEqn_outer_1.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "2a2a51f3f4dbab08",
+            "1b918039776a228e"
+          ],
+          "max_mag": [
+            0.5575518688083234,
+            0.5575518832106394
+          ]
+        },
+        "phi": {
+          "hash": [
+            "ac8d7f10e148a402",
+            "a35cc53fc669b461"
+          ],
+          "max_mag": [
+            9.522577908862107e-05,
+            9.52256963196475e-05
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S06_after_UEqn_outer_2.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "304b89bad6eb2946",
+            "ea694437b3237aeb"
+          ],
+          "max_mag": [
+            0.5575366040612644,
+            0.5574397549106608
+          ]
+        },
+        "p": {
+          "hash": [
+            "c4b547a315f57c63",
+            "43bb7cae61ee6bb0"
+          ],
+          "max_mag": [
+            3.17879281487577,
+            3.1784632494832645
+          ]
+        },
+        "phi": {
+          "hash": [
+            "2fc1036327b1f39c",
+            "bf1dbcaf8d1a4bd0"
+          ],
+          "max_mag": [
+            9.522704094556935e-05,
+            9.522695411832126e-05
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "ec93739d86c21fd6",
+            "347c5d1e4eec9194"
+          ],
+          "max_mag": [
+            0.5574294634333916,
+            0.5573711715438543
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S06_after_UEqn_outer_3.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "513e5e4f1dda1520",
+            "9697f968eb62e7ec"
+          ],
+          "max_mag": [
+            0.5575533686259977,
+            0.5573429787463505
+          ]
+        },
+        "p": {
+          "hash": [
+            "1bb8e097bbedc731",
+            "10f90e7c9b95bb38"
+          ],
+          "max_mag": [
+            4.9348813097647035,
+            4.934418706458353
+          ]
+        },
+        "phi": {
+          "hash": [
+            "d736deda50fb808c",
+            "9d8a63a210b1ad6a"
+          ],
+          "max_mag": [
+            9.522865609220287e-05,
+            9.522856930606338e-05
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "1759a75bca3b6c72",
+            "1c7abe05449656f6"
+          ],
+          "max_mag": [
+            0.5574553287200882,
+            0.5573078134350723
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S07_after_pEqn_outer_1.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "857730b23d8a0c48",
+            "074a7804cc3a65b1"
+          ],
+          "max_mag": [
+            0.5575109295725684,
+            0.5574505326498898
+          ]
+        },
+        "p": {
+          "hash": [
+            "c4b547a315f57c63",
+            "43bb7cae61ee6bb0"
+          ],
+          "max_mag": [
+            3.17879281487577,
+            3.1784632494832645
+          ]
+        },
+        "phi": {
+          "hash": [
+            "2fc1036327b1f39c",
+            "bf1dbcaf8d1a4bd0"
+          ],
+          "max_mag": [
+            9.522704094556935e-05,
+            9.522695411832126e-05
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "ec93739d86c21fd6",
+            "347c5d1e4eec9194"
+          ],
+          "max_mag": [
+            0.5574294634333916,
+            0.5573711715438543
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S07_after_pEqn_outer_2.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "485af8f51ee5a8fd",
+            "a4a8a69047a43da5"
+          ],
+          "max_mag": [
+            0.5575260037109109,
+            0.5573976593117205
+          ]
+        },
+        "p": {
+          "hash": [
+            "1bb8e097bbedc731",
+            "10f90e7c9b95bb38"
+          ],
+          "max_mag": [
+            4.9348813097647035,
+            4.934418706458353
+          ]
+        },
+        "phi": {
+          "hash": [
+            "d736deda50fb808c",
+            "9d8a63a210b1ad6a"
+          ],
+          "max_mag": [
+            9.522865609220287e-05,
+            9.522856930606338e-05
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "1759a75bca3b6c72",
+            "1c7abe05449656f6"
+          ],
+          "max_mag": [
+            0.5574553287200882,
+            0.5573078134350723
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S07_after_pEqn_outer_3.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "09ff53e6cf9dbd8a",
+            "7a44f11c95435aec"
+          ],
+          "max_mag": [
+            0.5575805766468537,
+            0.5573722188351791
+          ]
+        },
+        "p": {
+          "hash": [
+            "89d112290eeb76c4",
+            "5a8b7d4c24b1555d"
+          ],
+          "max_mag": [
+            5.0468375640740195,
+            5.046376230509887
+          ]
+        },
+        "phi": {
+          "hash": [
+            "e374e9acf33bfce8",
+            "ee50acfe7f689b85"
+          ],
+          "max_mag": [
+            9.5228629878963e-05,
+            9.522854716767188e-05
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "a940fa0d8a61da8e",
+            "344f8c921e761079"
+          ],
+          "max_mag": [
+            0.5575863066712345,
+            0.5573794801865022
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S08_after_turbulence_outer_1.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "857730b23d8a0c48",
+            "074a7804cc3a65b1"
+          ],
+          "max_mag": [
+            0.5575109295725684,
+            0.5574505326498898
+          ]
+        },
+        "p": {
+          "hash": [
+            "c4b547a315f57c63",
+            "43bb7cae61ee6bb0"
+          ],
+          "max_mag": [
+            3.17879281487577,
+            3.1784632494832645
+          ]
+        },
+        "phi": {
+          "hash": [
+            "2fc1036327b1f39c",
+            "bf1dbcaf8d1a4bd0"
+          ],
+          "max_mag": [
+            9.522704094556935e-05,
+            9.522695411832126e-05
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "ec93739d86c21fd6",
+            "347c5d1e4eec9194"
+          ],
+          "max_mag": [
+            0.5574294634333916,
+            0.5573711715438543
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S08_after_turbulence_outer_2.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "485af8f51ee5a8fd",
+            "a4a8a69047a43da5"
+          ],
+          "max_mag": [
+            0.5575260037109109,
+            0.5573976593117205
+          ]
+        },
+        "p": {
+          "hash": [
+            "1bb8e097bbedc731",
+            "10f90e7c9b95bb38"
+          ],
+          "max_mag": [
+            4.9348813097647035,
+            4.934418706458353
+          ]
+        },
+        "phi": {
+          "hash": [
+            "d736deda50fb808c",
+            "9d8a63a210b1ad6a"
+          ],
+          "max_mag": [
+            9.522865609220287e-05,
+            9.522856930606338e-05
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "1759a75bca3b6c72",
+            "1c7abe05449656f6"
+          ],
+          "max_mag": [
+            0.5574553287200882,
+            0.5573078134350723
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S08_after_turbulence_outer_3.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "09ff53e6cf9dbd8a",
+            "7a44f11c95435aec"
+          ],
+          "max_mag": [
+            0.5575805766468537,
+            0.5573722188351791
+          ]
+        },
+        "p": {
+          "hash": [
+            "89d112290eeb76c4",
+            "5a8b7d4c24b1555d"
+          ],
+          "max_mag": [
+            5.0468375640740195,
+            5.046376230509887
+          ]
+        },
+        "phi": {
+          "hash": [
+            "e374e9acf33bfce8",
+            "ee50acfe7f689b85"
+          ],
+          "max_mag": [
+            9.5228629878963e-05,
+            9.522854716767188e-05
+          ]
+        },
+        "k": {
+          "hash": [
+            "b8e0d88199d8c423",
+            "c0cad679dcaff6ec"
+          ],
+          "max_mag": [
+            0.015785230049903346,
+            0.015785223632935406
+          ]
+        },
+        "omega": {
+          "hash": [
+            "5e103ed9e851f099",
+            "6a7074b7050d29f0"
+          ]
+        },
+        "nut": {
+          "hash": [
+            "78a3b6ef2a2c9961",
+            "96e1535701f9bfc5"
+          ],
+          "max_mag": [
+            0.0002783385912047683,
+            0.0002783386024058162
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "a940fa0d8a61da8e",
+            "344f8c921e761079"
+          ],
+          "max_mag": [
+            0.5575863066712345,
+            0.5573794801865022
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    },
+    {
+      "stage": "S11_before_runTime_write.json",
+      "field_differences": {
+        "U": {
+          "hash": [
+            "09ff53e6cf9dbd8a",
+            "7a44f11c95435aec"
+          ],
+          "max_mag": [
+            0.5575805766468537,
+            0.5573722188351791
+          ]
+        },
+        "p": {
+          "hash": [
+            "89d112290eeb76c4",
+            "5a8b7d4c24b1555d"
+          ],
+          "max_mag": [
+            5.0468375640740195,
+            5.046376230509887
+          ]
+        },
+        "phi": {
+          "hash": [
+            "e374e9acf33bfce8",
+            "ee50acfe7f689b85"
+          ],
+          "max_mag": [
+            9.5228629878963e-05,
+            9.522854716767188e-05
+          ]
+        },
+        "k": {
+          "hash": [
+            "b8e0d88199d8c423",
+            "c0cad679dcaff6ec"
+          ],
+          "max_mag": [
+            0.015785230049903346,
+            0.015785223632935406
+          ]
+        },
+        "omega": {
+          "hash": [
+            "5e103ed9e851f099",
+            "6a7074b7050d29f0"
+          ]
+        },
+        "nut": {
+          "hash": [
+            "78a3b6ef2a2c9961",
+            "96e1535701f9bfc5"
+          ],
+          "max_mag": [
+            0.0002783385912047683,
+            0.0002783386024058162
+          ]
+        },
+        "Uf": {
+          "hash": [
+            "a940fa0d8a61da8e",
+            "344f8c921e761079"
+          ],
+          "max_mag": [
+            0.5575863066712345,
+            0.5573794801865022
+          ]
+        },
+        "meshPhi": {
+          "old_hash": [
+            "50ff2e67a182aca0",
+            "21a039f29be94615"
+          ],
+          "old_max_mag": [
+            1.6121653031358853e-08,
+            8.060826515328194e-08
+          ]
+        }
+      },
+      "other_differences": {}
+    }
+  ],
+  "G2_attempt_3_vs_4": [
+    {
+      "stage": "S01_before_mesh_move.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S04_after_mesh_move_outer_1.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S05_before_UEqn_outer_1.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S05_before_UEqn_outer_2.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S05_before_UEqn_outer_3.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S06_after_UEqn_outer_1.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S06_after_UEqn_outer_2.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S06_after_UEqn_outer_3.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S07_after_pEqn_outer_1.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S07_after_pEqn_outer_2.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S07_after_pEqn_outer_3.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S08_after_turbulence_outer_1.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S08_after_turbulence_outer_2.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S08_after_turbulence_outer_3.json",
+      "field_differences": {},
+      "other_differences": {}
+    },
+    {
+      "stage": "S11_before_runTime_write.json",
+      "field_differences": {},
+      "other_differences": {}
+    }
+  ],
+  "fresh_A_vs_B_compared_stage_count": 60,
+  "fresh_A_vs_B_differences": [],
+  "RBF_call_5_vs_7_differences": {}
+}
