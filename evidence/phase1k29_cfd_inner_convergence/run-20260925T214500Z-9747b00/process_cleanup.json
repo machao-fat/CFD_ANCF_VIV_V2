@@ -1,0 +1,128 @@
+{
+  "A": {
+    "fluid_command": [
+      "/bin/bash",
+      "-c",
+      "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\"; exec \"$2\" -case .",
+      "phase1k29-fluid",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/A/case",
+      "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/bin/pimpleFoamPhase1K29Diag"
+    ],
+    "structure_command": [
+      "/usr/bin/python3.10",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/fixed_structure.py",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/A/case/precice-config.xml",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/A/fixed_structure_result.json",
+      "1.0633832164606064e-07",
+      "9.530777190012017e-08"
+    ],
+    "pids": {
+      "fluid": 756044,
+      "structure": 756045
+    },
+    "exit_codes": {
+      "fluid": 0,
+      "structure": 0
+    },
+    "loaded_libraries_by_role": {
+      "fluid": [
+        "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k28_old_native_reference/run-20260925T113000Z-fc0f94d-b1-g2b/adapter-build/libpreciceAdapterPhase1K28OldNativeB1G2Diag.so",
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ],
+      "structure": [
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ]
+    },
+    "stop_reason": null,
+    "wall_duration_s": 7.870559698989382,
+    "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/A/case",
+    "worker_process": "NOT_STARTED; fixed-displacement diagnostic participant",
+    "socket_entries_after_shutdown": [
+      "precice-run"
+    ]
+  },
+  "B1": {
+    "fluid_command": [
+      "/bin/bash",
+      "-c",
+      "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\"; exec \"$2\" -case .",
+      "phase1k29-fluid",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/B1/case",
+      "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/bin/pimpleFoamPhase1K29Diag"
+    ],
+    "structure_command": [
+      "/usr/bin/python3.10",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/fixed_structure.py",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/B1/case/precice-config.xml",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/B1/fixed_structure_result.json",
+      "1.0633832164606064e-07",
+      "9.530777190012017e-08"
+    ],
+    "pids": {
+      "fluid": 756415,
+      "structure": 756416
+    },
+    "exit_codes": {
+      "fluid": 0,
+      "structure": 0
+    },
+    "loaded_libraries_by_role": {
+      "fluid": [
+        "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k28_old_native_reference/run-20260925T113000Z-fc0f94d-b1-g2b/adapter-build/libpreciceAdapterPhase1K28OldNativeB1G2Diag.so",
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ],
+      "structure": [
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ]
+    },
+    "stop_reason": null,
+    "wall_duration_s": 11.100051415007329,
+    "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/B1/case",
+    "worker_process": "NOT_STARTED; fixed-displacement diagnostic participant",
+    "socket_entries_after_shutdown": [
+      "precice-run"
+    ]
+  },
+  "B2": {
+    "fluid_command": [
+      "/bin/bash",
+      "-c",
+      "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\"; exec \"$2\" -case .",
+      "phase1k29-fluid",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/B2/case",
+      "/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/bin/pimpleFoamPhase1K29Diag"
+    ],
+    "structure_command": [
+      "/usr/bin/python3.10",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/fixed_structure.py",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/B2/case/precice-config.xml",
+      "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/B2/fixed_structure_result.json",
+      "1.0633832164606064e-07",
+      "9.530777190012017e-08"
+    ],
+    "pids": {
+      "fluid": 756976,
+      "structure": 756977
+    },
+    "exit_codes": {
+      "fluid": 0,
+      "structure": 0
+    },
+    "loaded_libraries_by_role": {
+      "fluid": [
+        "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k28_old_native_reference/run-20260925T113000Z-fc0f94d-b1-g2b/adapter-build/libpreciceAdapterPhase1K28OldNativeB1G2Diag.so",
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ],
+      "structure": [
+        "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+      ]
+    },
+    "stop_reason": null,
+    "wall_duration_s": 10.898522242991021,
+    "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/B2/case",
+    "worker_process": "NOT_STARTED; fixed-displacement diagnostic participant",
+    "socket_entries_after_shutdown": [
+      "precice-run"
+    ]
+  }
+}

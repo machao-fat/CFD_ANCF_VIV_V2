@@ -1,0 +1,52 @@
+{
+  "schema": "phase1k29_cfd_inner_convergence_qualification_v1",
+  "classification": "INNER_AB_NOT_CONTROLLED",
+  "A_configuration": {
+    "nOuterCorrectors": 3,
+    "nCorrectors": 2,
+    "nNonOrthogonalCorrectors": 0,
+    "momentumPredictor": true
+  },
+  "B_configuration": {
+    "nOuterCorrectors": 6,
+    "nCorrectors": 2,
+    "nNonOrthogonalCorrectors": 0,
+    "momentumPredictor": true
+  },
+  "common_outer_1_to_3_trajectory_equivalent": false,
+  "first_divergence": {
+    "solve_id": 1,
+    "outer": 3,
+    "raw_difference": {
+      "components": [
+        -4.0058128421935346e-05,
+        0.00011839840150504322,
+        1.645072184236352e-23
+      ],
+      "norm_N": 0.00012499134022650403
+    },
+    "pressure_difference": {
+      "components": [
+        -4.0058047913169026e-05,
+        0.00011839879937463466,
+        1.6599232886022686e-23
+      ],
+      "norm_N": 0.00012499169130773745
+    },
+    "viscous_difference": {
+      "components": [
+        -8.050875671829867e-11,
+        -3.9786956238247217e-10,
+        -1.485110436569324e-25
+      ],
+      "norm_N": 4.059333055795571e-10
+    },
+    "raw_array_hash_equal": false
+  },
+  "B_fresh_repeatability": "PASS",
+  "observed_final_force_difference_N": 0.006627370781791863,
+  "inner_adequacy_for_tested_state": "UNRESOLVED",
+  "reason": "The first three common outer trajectories are not controlled because A outer 3 uses final solver settings while B outer 3 does not.",
+  "next_cfd_inner_solver_repair_study": "NOT_AUTHORIZED_BY_K29; redesign control first",
+  "iqn_retest": "NO"
+}

@@ -1,0 +1,49 @@
+{
+  "criterion": "conditional only; A/B common outer trajectory is not controlled",
+  "A_final_raw_force_N": [
+    -0.04060569387559982,
+    -0.03522795724790643,
+    1.5607308735964174e-17
+  ],
+  "B_final_raw_force_N": [
+    -0.045560265665227306,
+    -0.039629577615541055,
+    1.5607240999759676e-17
+  ],
+  "observed_final_difference": {
+    "components": [
+      -0.004954571789627486,
+      -0.004401620367634626,
+      -6.773620449799267e-23
+    ],
+    "norm_N": 0.006627370781791863
+  },
+  "pressure_difference": {
+    "components": [
+      -0.004955987883694911,
+      -0.004403147677975776,
+      -6.349293327655907e-23
+    ],
+    "norm_N": 0.0066294438211206095
+  },
+  "viscous_difference": {
+    "components": [
+      1.4160940674937724e-06,
+      1.527310341249092e-06,
+      -4.2432712043003496e-24
+    ],
+    "norm_N": 2.082786423634808e-06
+  },
+  "ratio_to_1e-3_N": 6.627370781791862,
+  "relative_difference_to_A": 0.12328351830175904,
+  "raw_array_hash_A": "d422589c52481f08",
+  "raw_array_hash_B": "4ec97cf36557b9f8",
+  "pressure_array_hash_A": "079d255e1ca2c0b3",
+  "pressure_array_hash_B": "0d1792d03ecd2607",
+  "viscous_array_hash_A": "4c5462d9fc7bc59a",
+  "viscous_array_hash_B": "6997322db4eec403",
+  "adapter_prewrite_value_sha256_A": "32dc84bcef91611787f8b41951d4169f1fd0e8106c3b40c81211b68da375a08e",
+  "adapter_prewrite_value_sha256_B": "bc94c70b66f227300c554cc2d744f5ab76a5817fcf674da89ee080a98728a3ff",
+  "adapter_prewrite_value_l2_difference": 0.0006916855557504164,
+  "note": "A final outer=3 uses final solver entries; B outer=3 is not final because B has six outer correctors."
+}

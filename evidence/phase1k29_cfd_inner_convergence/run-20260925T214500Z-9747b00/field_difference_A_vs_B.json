@@ -1,0 +1,39 @@
+{
+  "fields": [
+    "U",
+    "p",
+    "k",
+    "omega",
+    "nut",
+    "phi"
+  ],
+  "A_vs_B_final_hashes": {
+    "U": {
+      "A": "4e2f2ffba2416bb6",
+      "B": "b2d14124309af8e9"
+    },
+    "p": {
+      "A": "d249176fa0b77e7d",
+      "B": "4ef5e51e82c5a204"
+    },
+    "k": {
+      "A": "c03dd644981a510f",
+      "B": "bd9924c34e45d32b"
+    },
+    "omega": {
+      "A": "77d6edaedc890bea",
+      "B": "ecb07f684cc66a49"
+    },
+    "nut": {
+      "A": "446b217c911a4a79",
+      "B": "e5c832aa95976c79"
+    },
+    "phi": {
+      "A": "ec72f96dd725a0c3",
+      "B": "3a0067fae96c5dbe"
+    }
+  },
+  "L2_difference": "NOT_OBSERVABLE_FROM_RECORDED_HASH_AND_STATS",
+  "Linf_difference": "NOT_OBSERVABLE_FROM_RECORDED_HASH_AND_STATS",
+  "reason": "K29 outer trace records field hashes and norms, but no full field snapshot was emitted by the isolated solver."
+}

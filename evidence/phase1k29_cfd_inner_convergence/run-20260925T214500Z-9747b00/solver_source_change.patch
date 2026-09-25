@@ -1,0 +1,22 @@
+--- a/evidence/phase1k26_earliest_divergence/source/pimpleFoam/pimpleFoam.C
++++ b/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/solver-source/pimpleFoam.C
+@@
+ #include "Phase1K26StageTrace.H"
++#include "phase1k29_inner_trace.H"
+@@
+             phase1k26diag::write(mesh, "S08_after_turbulence", phase1k26SolveId, phase1k26Outer);
++            phase1k29diag::writeOuter(mesh, p, U, turbulence->k(), turbulence->omega(), turbulence->nut(), phi, *turbulence, phase1k26SolveId, phase1k26Outer);
+
+--- a/evidence/phase1k26_earliest_divergence/source/pimpleFoam/Make/files
++++ b/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/solver-source/Make/files
+@@
+-EXE = $(FOAM_USER_APPBIN)/pimpleFoamPhase1K26Diag
++EXE = $(FOAM_USER_APPBIN)/pimpleFoamPhase1K29Diag
+
+--- /dev/null
++++ b/evidence/phase1k29_cfd_inner_convergence/run-20260925T214500Z-9747b00/solver-source/phase1k29_inner_trace.H
+@@
++New diagnostic-only header copied from `scripts/phase1k29_inner_trace.H`.
++It records per-outer cylinder pressure/viscous/raw Force integrals, stable
++per-array hashes, and field hashes/norm statistics. No governing equation or
++OpenFOAM solver setting is changed.

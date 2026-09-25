@@ -1,0 +1,339 @@
+{
+  "B1_vs_B2": [
+    {
+      "solve_id": 1,
+      "outer": 1,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 1,
+      "outer": 2,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 1,
+      "outer": 3,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 1,
+      "outer": 4,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 1,
+      "outer": 5,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 1,
+      "outer": 6,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 2,
+      "outer": 1,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 2,
+      "outer": 2,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 2,
+      "outer": 3,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 2,
+      "outer": 4,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 2,
+      "outer": 5,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 2,
+      "outer": 6,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 3,
+      "outer": 1,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 3,
+      "outer": 2,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 3,
+      "outer": 3,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 3,
+      "outer": 4,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 3,
+      "outer": 5,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 3,
+      "outer": 6,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 4,
+      "outer": 1,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 4,
+      "outer": 2,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 4,
+      "outer": 3,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 4,
+      "outer": 4,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 4,
+      "outer": 5,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 4,
+      "outer": 6,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    }
+  ],
+  "all_outer_records_equal": true,
+  "final_raw_force_B1": [
+    -0.045560265665227306,
+    -0.039629577615541055,
+    1.5607240999759676e-17
+  ],
+  "final_raw_force_B2": [
+    -0.045560265665227306,
+    -0.039629577615541055,
+    1.5607240999759676e-17
+  ],
+  "final_difference": {
+    "components": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "norm_N": 0.0
+  },
+  "final_adapter_prewrite_sha256_B1": "bc94c70b66f227300c554cc2d744f5ab76a5817fcf674da89ee080a98728a3ff",
+  "final_adapter_prewrite_sha256_B2": "bc94c70b66f227300c554cc2d744f5ab76a5817fcf674da89ee080a98728a3ff",
+  "final_adapter_prewrite_l2_difference": 0.0,
+  "status": "PASS"
+}

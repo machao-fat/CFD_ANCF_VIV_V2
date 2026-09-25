@@ -1,0 +1,40 @@
+{
+  "label": "B1",
+  "outer_count": 6,
+  "nCorrectors": 2,
+  "nNonOrthogonalCorrectors": 0,
+  "momentumPredictor": true,
+  "adapter_sha256": "0edcfae77d51d8a57a354a1b745c77f6c15108bf532be0d4893394e80a2d785d",
+  "adapter_build_id": "90bd299327c280ecd4b72d5a9695a64540dd389b",
+  "configuration_hashes": {
+    "system/fvSolution": "2449c6ab52eca546dd0c13331938ab896529ec320869b3c53c868e746632ac83",
+    "system/fvSchemes": "3c60f43d1cf67043e18f896c783302ca27d30ceb609abccb39f1642a8cf6508b",
+    "constant/momentumTransport": "41b0f7435366f11a60479bde4fbc68b08c744eb89c7ed5255fc8ccf7316d229a",
+    "constant/physicalProperties": "2f2e8daa47ad67766e0ce92eccd43be56914a41b5cd3c0aa38ec1e74a2550d70",
+    "constant/dynamicMeshDict": "56158d50b619174c67a343d2660c87c4c0c5e1370e2fde44a4a4c6f07c5ccdc5",
+    "system/controlDict": "1b4dfe0f6fbb2d0100c18a651049fe64ff94a0f3defa0300ec76abf7bc888c31",
+    "system/preciceDict": "5d018d744d1f76280fad2b1cc788e5dd32b331fe2bd0d9aa7900260cf4c7f229",
+    "precice-config.xml": "77df827c5175822be46af074f5f4d6ab13434c2503dfdeea98d78f9e4552a857",
+    "contract.json": "e8f82e65a90b4754938a2ad82c3bd1f2ea07e538119645fc27f7bbc2caa09bfe"
+  },
+  "restart_hashes": {
+    "30/uniform/time": "44e3c62df2f2506cf283b85886f8ade0a6d34d1949c89091add862047ab27109",
+    "30/U": "a71a708e7bc12280ce60d0ad141c826ccd39e2100a0e98322cd0a7f53de3668a",
+    "30/p": "c33098b9634bf39ed09b184f5314aca388cce63063d9cc6c064b280167a78e05",
+    "30/k": "eab8f52cc20f5a3aa6832cb6471df18a8119804827d532d72f44930377f37d3e",
+    "30/omega": "cda71b08942c289ef7ae5b73aeb0e8390c5f5c2606706632d9d69d2b31d60c58",
+    "30/nut": "52a9ecad93f73cf84856eea748fa81884797b90d5628121a255b2e557704ef21",
+    "30/pointDisplacement": "c39b4977c62592e42661d17ed7a3bc9d13ebdbec9b9966d8f195b501b1ba534a",
+    "30/cellDisplacement": "93c2b1d13d8f56efe43fc8c8d865e97ec4fabdad9dca4032c32c2813818b6f9d",
+    "30/phi": "aedd09592bca8e7e7a0f5ba193dd3e236779bf48bfea393bf744ac8df7b5fcb2",
+    "30/phi_0": "d4a821b80b3fb5156b4431d334c8249eeb8a0b878fb44e354124122a89461a93",
+    "30/U_0": "ff1b0c321cd008e260115fd926e621c8f940acb7e2f120072ab094da68e86ae0",
+    "30/k_0": "4df41aae9007b3a95e481e0d84d03d4704f46082ac512c07a9684ca96554ef4c",
+    "30/omega_0": "db87be853b7d82f35ce20ed51760da027307df10d793336e367fa6f21d8c5e73",
+    "constant/polyMesh/points": "41d2d570fb801c4bab9e40cc1c0644150cbaddaa5903e682e9e78b333e3b93bf",
+    "constant/polyMesh/faces": "d2a7dfeefed80fc08af488a83e9bf26d9e570c7db22a3392faa918b21a332242",
+    "constant/polyMesh/owner": "b433a77644b807eec43cd32e739e927cff1c4f1fca2d0cf6edf0cc93de5283bc",
+    "constant/polyMesh/neighbour": "79cc5e86396555ab0cdbac498cd5042f2cbdbfbc229e527ae5597afb69af94a7",
+    "constant/polyMesh/boundary": "aa930c4252198b6e129e384302dfe1737b50cb9d7f40b08c9252ed6b52f83bf2"
+  }
+}

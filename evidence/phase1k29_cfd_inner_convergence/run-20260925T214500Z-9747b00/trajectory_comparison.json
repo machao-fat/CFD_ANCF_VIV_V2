@@ -1,0 +1,383 @@
+{
+  "comparison": "A vs B1 corresponding solve/outer 1..3",
+  "records": [
+    {
+      "solve_id": 1,
+      "outer": 1,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "pressure_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "viscous_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 1,
+      "outer": 2,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "pressure_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "viscous_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 1,
+      "outer": 3,
+      "raw_difference": {
+        "components": [
+          -4.0058128421935346e-05,
+          0.00011839840150504322,
+          1.645072184236352e-23
+        ],
+        "norm_N": 0.00012499134022650403
+      },
+      "pressure_difference": {
+        "components": [
+          -4.0058047913169026e-05,
+          0.00011839879937463466,
+          1.6599232886022686e-23
+        ],
+        "norm_N": 0.00012499169130773745
+      },
+      "viscous_difference": {
+        "components": [
+          -8.050875671829867e-11,
+          -3.9786956238247217e-10,
+          -1.485110436569324e-25
+        ],
+        "norm_N": 4.059333055795571e-10
+      },
+      "raw_array_hash_equal": false
+    },
+    {
+      "solve_id": 2,
+      "outer": 1,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "pressure_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "viscous_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 2,
+      "outer": 2,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "pressure_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "viscous_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 2,
+      "outer": 3,
+      "raw_difference": {
+        "components": [
+          -0.0028082229606697165,
+          -0.002359606974842776,
+          6.775272048366677e-24
+        ],
+        "norm_N": 0.0036679505548138547
+      },
+      "pressure_difference": {
+        "components": [
+          -0.002808223023625357,
+          -0.0023596067174722346,
+          6.921924457726962e-24
+        ],
+        "norm_N": 0.0036679504374459095
+      },
+      "viscous_difference": {
+        "components": [
+          6.295563964030586e-11,
+          -2.573705718233325e-10,
+          -1.4665240936404608e-25
+        ],
+        "norm_N": 2.64958532233233e-10
+      },
+      "raw_array_hash_equal": false
+    },
+    {
+      "solve_id": 3,
+      "outer": 1,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "pressure_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "viscous_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 3,
+      "outer": 2,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "pressure_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "viscous_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 3,
+      "outer": 3,
+      "raw_difference": {
+        "components": [
+          -0.013677866086538398,
+          -0.012110410817456528,
+          -5.626246133133895e-23
+        ],
+        "norm_N": 0.01826871836908231
+      },
+      "pressure_difference": {
+        "components": [
+          -0.013677866705713582,
+          -0.012110411104735964,
+          -5.608664437068578e-23
+        ],
+        "norm_N": 0.018268719023100122
+      },
+      "viscous_difference": {
+        "components": [
+          6.191752038815054e-10,
+          2.872793794589424e-10,
+          -1.7581696064864965e-25
+        ],
+        "norm_N": 6.825740802023021e-10
+      },
+      "raw_array_hash_equal": false
+    },
+    {
+      "solve_id": 4,
+      "outer": 1,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "pressure_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "viscous_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 4,
+      "outer": 2,
+      "raw_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "pressure_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "viscous_difference": {
+        "components": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "norm_N": 0.0
+      },
+      "raw_array_hash_equal": true
+    },
+    {
+      "solve_id": 4,
+      "outer": 3,
+      "raw_difference": {
+        "components": [
+          -0.013677866086538398,
+          -0.012110410817456528,
+          -5.626246133133895e-23
+        ],
+        "norm_N": 0.01826871836908231
+      },
+      "pressure_difference": {
+        "components": [
+          -0.013677866705713582,
+          -0.012110411104735964,
+          -5.608664437068578e-23
+        ],
+        "norm_N": 0.018268719023100122
+      },
+      "viscous_difference": {
+        "components": [
+          6.191752038815054e-10,
+          2.872793794589424e-10,
+          -1.7581696064864965e-25
+        ],
+        "norm_N": 6.825740802023021e-10
+      },
+      "raw_array_hash_equal": false
+    }
+  ],
+  "all_equal": false,
+  "first_divergence": {
+    "solve_id": 1,
+    "outer": 3,
+    "raw_difference": {
+      "components": [
+        -4.0058128421935346e-05,
+        0.00011839840150504322,
+        1.645072184236352e-23
+      ],
+      "norm_N": 0.00012499134022650403
+    },
+    "pressure_difference": {
+      "components": [
+        -4.0058047913169026e-05,
+        0.00011839879937463466,
+        1.6599232886022686e-23
+      ],
+      "norm_N": 0.00012499169130773745
+    },
+    "viscous_difference": {
+      "components": [
+        -8.050875671829867e-11,
+        -3.9786956238247217e-10,
+        -1.485110436569324e-25
+      ],
+      "norm_N": 4.059333055795571e-10
+    },
+    "raw_array_hash_equal": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "phase1k29_evidence_index_v1",
+  "run_id": "run-20260925T214500Z-9747b00",
+  "classification": "INNER_AB_NOT_CONTROLLED",
+  "runtime_identity": "runtime_identity.json",
+  "restart_identity": "restart_identity.json",
+  "configuration_A": "configuration_A.json",
+  "configuration_B": "configuration_B.json",
+  "outer_trace_A": "outer_iteration_force_trace_A.jsonl",
+  "outer_trace_B": "outer_iteration_force_trace_B.jsonl",
+  "residual_trace_A": "solver_residual_trace_A.jsonl",
+  "residual_trace_B": "solver_residual_trace_B.jsonl",
+  "trajectory_comparison": "trajectory_comparison.json",
+  "force_difference": "force_difference_A_vs_B.json",
+  "field_difference": "field_difference_A_vs_B.json",
+  "repeatability": "repeatability_B.json",
+  "qualification_summary": "qualification_summary.json",
+  "cleanup": "process_cleanup.json",
+  "raw_run_subtrees": ["A/", "B1/", "B2/"],
+  "note": "Raw run trees are retained locally under repository evidence policy; root curated artifacts are indexable diagnostics."
+}
