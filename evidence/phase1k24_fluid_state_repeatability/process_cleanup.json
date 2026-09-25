@@ -1,0 +1,7 @@
+{
+  "same_process_initial_attempt": {"status": "RUNTIME_BLOCKED_BEFORE_S0", "preserved": true},
+  "same_process_retry": {"fluid_exit": 0, "structure_exit": 0, "orphan_process": false, "path": "same_process_retry/process_cleanup.json"},
+  "fresh_process_A": {"fluid_exit": 0, "structure_exit": 0, "orphan_process": false, "path": "fresh_process_A/process_cleanup.json"},
+  "fresh_process_B": {"fluid_exit": 0, "structure_exit": 0, "orphan_process": false, "path": "fresh_process_B/process_cleanup.json"},
+  "socket_directories": "isolated per scratch run; no live participant remained"
+}

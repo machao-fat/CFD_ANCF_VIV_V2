@@ -1,0 +1,28 @@
+{
+  "phase": "1K.23",
+  "run_id": "run-20260925T055605Z-d3890de-e",
+  "classification": "FLUID_OPERATOR_NOT_REPEATABLE_OR_INNER_UNCONVERGED",
+  "status_vocabulary": "diagnostic_only",
+  "window_count": 1,
+  "diagnostic_max_iterations": 40,
+  "iterations_per_window": [40],
+  "rollback_count_per_window": [39],
+  "accepted_at_iteration_limit": [true],
+  "precice_converged": false,
+  "d_written_equals_d_trial": true,
+  "transport_ids_monotonic_unique": true,
+  "checkpoint_restore_s0_s1_exact": {
+    "point_displacement": true,
+    "cell_displacement": true,
+    "mesh_points": true,
+    "ancf_state": true
+  },
+  "repeatability_test": "repeatability-20260925T060549Z-d3890de-b/repeatability_test.json",
+  "delta_force_norm_N": 0.1057131957411209,
+  "relative_force_repeatability_delta": 0.9950919530038619,
+  "force_tolerance_abs_N": 0.001,
+  "inner_convergence_ab": "NOT_MEASURED",
+  "constant_relaxation_trace": "NOT_MEASURED",
+  "no_second_window": true,
+  "production_source_or_config_modified": false
+}

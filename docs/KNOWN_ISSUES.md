@@ -24,6 +24,39 @@ windows, and five windows. K22 reached the 20-iteration cap in all five windows;
 the lifecycle evidence is useful, while convergence efficiency and production
 adapter adoption remain unresolved.
 
+Phase 1K.23 then isolated one physical window with a diagnostic ceiling of 40
+iterations. It reached 40 attempts with 39 rollbacks and was accepted at the
+iteration limit, not converged. The repaired checkpoint path restored point and
+cell displacement, mesh points, and the available ANCF state exactly from S0 to
+S1. However, a same-input Fluid replay using a real trace displacement produced
+`||F2-F1|| = 0.1057131957411209 N`, relative difference `0.9950919530038619`,
+versus the `1e-3 N` coupling-force limit. The result is
+`FLUID_OPERATOR_REPEATABILITY_NOT_ESTABLISHED`; it does not yet distinguish CFD
+inner-solve error from another unrecovered Fluid state. The inner-convergence
+A/B and repaired-adapter constant-relaxation baseline were therefore not run.
+Do not tune IQN until Fluid operator repeatability is established.
+
+Phase 1K.24 then instrumented the Fluid state at the checkpoint boundary. The
+same-process replay showed that current hashes for `U`, `p`, `phi`, `k`,
+`omega`, `nut`, `Uf`, `pointDisplacement`, and `cellDisplacement`, as well as
+mesh point coordinates, matched at the captured S0/S1 boundary. However,
+`U/k/omega/Uf` old-time layers and related `_0` objects were created after the
+first advance, `meshPhi` appeared, `fvMesh` changed from `moving=false,
+changing=false` to `moving=true, changing=true`, and volume-history proxies
+`V/V0/V00` were only available after motion. The mismatch is therefore
+localized to OpenFOAM solver-history/objectRegistry/ALE lifecycle state, while
+turbulence-object, function-object, RBF-cache, and other internal `fvMesh`
+state remain not directly hashable.
+
+The corresponding same-process Force replay remained non-repeatable
+(`||F2-F1|| = 0.1057131957411209 N`). Two independent fresh-process replays
+from the same frozen 30.0 s restart and identical `D*` returned exactly the
+same Force (`||FB-FA|| = 0 N`) on their one-step accepted branch. Thus the
+current evidence supports a rollback-state mismatch rather than generic
+fresh-process nondeterminism. CFD inner-convergence A/B remains
+`NOT_YET_TESTABLE`; do not tune IQN or solver settings before the rollback
+state gate is repaired and requalified.
+
 ## Worker lineage parity repair — source and offline qualified
 
 The authoritative V2 worker source no longer uses sequence parity to classify
@@ -84,6 +117,23 @@ cell-displacement staging field, mesh state and ANCF state across the K20--K22
 rollback checks. K22 still accepted every window at the 20-iteration limit and
 reported no convergence within that cap. The adapter therefore has an isolated
 lifecycle qualification and no production convergence qualification.
+
+## Phase 1K.25 Fluid rollback repeatability remains unresolved
+
+Phase 1K.25 tested isolated rollback-state candidates from the frozen 30.0 s
+restart. Canonicalizing `U/k/omega/Uf` old-time topology before the first
+checkpoint reduced the same-process replay difference from `0.1057131957411209`
+N to `0.08047955765631062` N, so Group 1 has causal contribution evidence but
+is not sufficient. Isolated `meshPhi` value handling and legal zero-motion
+`fvMesh` lifecycle canonicalization did not reduce the difference. Fresh-process
+A/B controls were deterministic for all tested candidate topologies.
+
+The classification is `ROLLBACK_REPEATABILITY_NOT_RESTORED`. Turbulence-model
+internals and RBF/motion-solver caches remain unmeasured rather than cleared as
+causes; isolated removal of the current ancillary function objects did not
+change the replay difference. CFD inner-convergence A/B, IQN tuning,
+multi-window runs, and production-adapter adoption remain blocked until the
+same-process Fluid operator is repeatable below the `1e-3 N` coupling limit.
 
 ## Forbidden historical shortcuts
 

@@ -1,0 +1,65 @@
+{
+  "S0_registry": {
+    "volScalarField": [
+      "k",
+      "nu",
+      "nut",
+      "omega",
+      "p",
+      "pPrevIter",
+      "yWall"
+    ],
+    "volVectorField": [
+      "Force",
+      "U",
+      "cellDisplacement"
+    ],
+    "surfaceScalarField": [
+      "meshPhi",
+      "phi"
+    ],
+    "surfaceVectorField": [
+      "Uf"
+    ],
+    "pointVectorField": [
+      "pointDisplacement"
+    ]
+  },
+  "S1_registry": {
+    "volScalarField": [
+      "k",
+      "k_0",
+      "k_0_0",
+      "nu",
+      "nut",
+      "omega",
+      "omega_0",
+      "omega_0_0",
+      "p",
+      "pPrevIter",
+      "yPlus",
+      "yWall"
+    ],
+    "volVectorField": [
+      "Force",
+      "U",
+      "U_0",
+      "U_0_0",
+      "cellDisplacement"
+    ],
+    "surfaceScalarField": [
+      "meshPhi",
+      "meshPhi_0",
+      "phi"
+    ],
+    "surfaceVectorField": [
+      "Uf",
+      "Uf_0",
+      "Uf_0_0"
+    ],
+    "pointVectorField": [
+      "pointDisplacement"
+    ]
+  },
+  "note": "candidate-specific full snapshots and diffs are preserved under candidate-G1/G2/G3"
+}

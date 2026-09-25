@@ -1,0 +1,295 @@
+{
+  "candidates": [
+    {
+      "runs": [
+        {
+          "fluid_command": [
+            "/bin/bash",
+            "-c",
+            "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\" || exit 91; test \"$(pwd -P)\" = \"$(realpath \"$1\")\" || exit 92; printf 'PHASE1K24_FLUID_PWD=%s\\n' \"$(pwd -P)\"; exec pimpleFoam -case .",
+            "phase1k24-fluid",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/same_process_replay/case"
+          ],
+          "structure_command": [
+            "/usr/bin/python3.10",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/same_process_replay/fixed_structure.py",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/same_process_replay/case/precice-config.xml",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/same_process_replay/fixed_structure_result.json",
+            "1.0633832164606064e-07",
+            "9.530777190012017e-08"
+          ],
+          "fluid_pid": 641442,
+          "structure_pid": 641443,
+          "exit_codes": {
+            "fluid": 0,
+            "structure": 0
+          },
+          "loaded_libraries_observed": [
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/adapter-build/libpreciceAdapterPhase1K25G1Diag.so",
+            "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+          ],
+          "stop_reason": null,
+          "wall_duration_s": 8.43167483000434,
+          "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/same_process_replay/case"
+        },
+        {
+          "fluid_command": [
+            "/bin/bash",
+            "-c",
+            "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\" || exit 91; test \"$(pwd -P)\" = \"$(realpath \"$1\")\" || exit 92; printf 'PHASE1K24_FLUID_PWD=%s\\n' \"$(pwd -P)\"; exec pimpleFoam -case .",
+            "phase1k24-fluid",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/fresh_A/case"
+          ],
+          "structure_command": [
+            "/usr/bin/python3.10",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/fresh_A/fixed_structure.py",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/fresh_A/case/precice-config.xml",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/fresh_A/fixed_structure_result.json",
+            "1.0633832164606064e-07",
+            "9.530777190012017e-08"
+          ],
+          "fluid_pid": 641817,
+          "structure_pid": 641818,
+          "exit_codes": {
+            "fluid": 0,
+            "structure": 0
+          },
+          "loaded_libraries_observed": [
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/adapter-build/libpreciceAdapterPhase1K25G1Diag.so",
+            "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+          ],
+          "stop_reason": null,
+          "wall_duration_s": 2.208576480014017,
+          "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/fresh_A/case"
+        },
+        {
+          "fluid_command": [
+            "/bin/bash",
+            "-c",
+            "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\" || exit 91; test \"$(pwd -P)\" = \"$(realpath \"$1\")\" || exit 92; printf 'PHASE1K24_FLUID_PWD=%s\\n' \"$(pwd -P)\"; exec pimpleFoam -case .",
+            "phase1k24-fluid",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/fresh_B/case"
+          ],
+          "structure_command": [
+            "/usr/bin/python3.10",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/fresh_B/fixed_structure.py",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/fresh_B/case/precice-config.xml",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/fresh_B/fixed_structure_result.json",
+            "1.0633832164606064e-07",
+            "9.530777190012017e-08"
+          ],
+          "fluid_pid": 642209,
+          "structure_pid": 642210,
+          "exit_codes": {
+            "fluid": 0,
+            "structure": 0
+          },
+          "loaded_libraries_observed": [
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/adapter-build/libpreciceAdapterPhase1K25G1Diag.so",
+            "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+          ],
+          "stop_reason": null,
+          "wall_duration_s": 2.4094621629919857,
+          "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/fresh_B/case"
+        }
+      ]
+    },
+    {
+      "runs": [
+        {
+          "fluid_command": [
+            "/bin/bash",
+            "-c",
+            "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\" || exit 91; test \"$(pwd -P)\" = \"$(realpath \"$1\")\" || exit 92; printf 'PHASE1K24_FLUID_PWD=%s\\n' \"$(pwd -P)\"; exec pimpleFoam -case .",
+            "phase1k24-fluid",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/same_process_replay/case"
+          ],
+          "structure_command": [
+            "/usr/bin/python3.10",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/same_process_replay/fixed_structure.py",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/same_process_replay/case/precice-config.xml",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/same_process_replay/fixed_structure_result.json",
+            "1.0633832164606064e-07",
+            "9.530777190012017e-08"
+          ],
+          "fluid_pid": 644950,
+          "structure_pid": 644951,
+          "exit_codes": {
+            "fluid": 0,
+            "structure": 0
+          },
+          "loaded_libraries_observed": [
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/adapter-build/libpreciceAdapterPhase1K25G2Diag.so",
+            "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+          ],
+          "stop_reason": null,
+          "wall_duration_s": 8.43157701700693,
+          "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/same_process_replay/case"
+        },
+        {
+          "fluid_command": [
+            "/bin/bash",
+            "-c",
+            "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\" || exit 91; test \"$(pwd -P)\" = \"$(realpath \"$1\")\" || exit 92; printf 'PHASE1K24_FLUID_PWD=%s\\n' \"$(pwd -P)\"; exec pimpleFoam -case .",
+            "phase1k24-fluid",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/fresh_A/case"
+          ],
+          "structure_command": [
+            "/usr/bin/python3.10",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/fresh_A/fixed_structure.py",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/fresh_A/case/precice-config.xml",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/fresh_A/fixed_structure_result.json",
+            "1.0633832164606064e-07",
+            "9.530777190012017e-08"
+          ],
+          "fluid_pid": 645375,
+          "structure_pid": 645376,
+          "exit_codes": {
+            "fluid": 0,
+            "structure": 0
+          },
+          "loaded_libraries_observed": [
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/adapter-build/libpreciceAdapterPhase1K25G2Diag.so",
+            "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+          ],
+          "stop_reason": null,
+          "wall_duration_s": 2.409921332000522,
+          "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/fresh_A/case"
+        },
+        {
+          "fluid_command": [
+            "/bin/bash",
+            "-c",
+            "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\" || exit 91; test \"$(pwd -P)\" = \"$(realpath \"$1\")\" || exit 92; printf 'PHASE1K24_FLUID_PWD=%s\\n' \"$(pwd -P)\"; exec pimpleFoam -case .",
+            "phase1k24-fluid",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/fresh_B/case"
+          ],
+          "structure_command": [
+            "/usr/bin/python3.10",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/fresh_B/fixed_structure.py",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/fresh_B/case/precice-config.xml",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/fresh_B/fixed_structure_result.json",
+            "1.0633832164606064e-07",
+            "9.530777190012017e-08"
+          ],
+          "fluid_pid": 645875,
+          "structure_pid": 645876,
+          "exit_codes": {
+            "fluid": 0,
+            "structure": 0
+          },
+          "loaded_libraries_observed": [
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/adapter-build/libpreciceAdapterPhase1K25G2Diag.so",
+            "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+          ],
+          "stop_reason": null,
+          "wall_duration_s": 2.4093172069988213,
+          "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/fresh_B/case"
+        }
+      ]
+    },
+    {
+      "runs": [
+        {
+          "fluid_command": [
+            "/bin/bash",
+            "-c",
+            "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\" || exit 91; test \"$(pwd -P)\" = \"$(realpath \"$1\")\" || exit 92; printf 'PHASE1K24_FLUID_PWD=%s\\n' \"$(pwd -P)\"; exec pimpleFoam -case .",
+            "phase1k24-fluid",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/same_process_retry/case"
+          ],
+          "structure_command": [
+            "/usr/bin/python3.10",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/same_process_retry/fixed_structure.py",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/same_process_retry/case/precice-config.xml",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/same_process_retry/fixed_structure_result.json",
+            "1.0633832164606064e-07",
+            "9.530777190012017e-08"
+          ],
+          "fluid_pid": 650002,
+          "structure_pid": 650003,
+          "exit_codes": {
+            "fluid": 0,
+            "structure": 0
+          },
+          "loaded_libraries_observed": [
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/candidate-G3/adapter-build/libpreciceAdapterPhase1K25G3Diag.so",
+            "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+          ],
+          "stop_reason": null,
+          "wall_duration_s": 10.442960789980134,
+          "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/same_process_retry/case"
+        },
+        {
+          "fluid_command": [
+            "/bin/bash",
+            "-c",
+            "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\" || exit 91; test \"$(pwd -P)\" = \"$(realpath \"$1\")\" || exit 92; printf 'PHASE1K24_FLUID_PWD=%s\\n' \"$(pwd -P)\"; exec pimpleFoam -case .",
+            "phase1k24-fluid",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/fresh_A_retry/case"
+          ],
+          "structure_command": [
+            "/usr/bin/python3.10",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/fresh_A_retry/fixed_structure.py",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/fresh_A_retry/case/precice-config.xml",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/fresh_A_retry/fixed_structure_result.json",
+            "1.0633832164606064e-07",
+            "9.530777190012017e-08"
+          ],
+          "fluid_pid": 650433,
+          "structure_pid": 650434,
+          "exit_codes": {
+            "fluid": 0,
+            "structure": 0
+          },
+          "loaded_libraries_observed": [
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/candidate-G3/adapter-build/libpreciceAdapterPhase1K25G3Diag.so",
+            "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+          ],
+          "stop_reason": null,
+          "wall_duration_s": 3.2121536929917056,
+          "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/fresh_A_retry/case"
+        },
+        {
+          "fluid_command": [
+            "/bin/bash",
+            "-c",
+            "set +u; source /opt/openfoam10/etc/bashrc >/dev/null; cd \"$1\" || exit 91; test \"$(pwd -P)\" = \"$(realpath \"$1\")\" || exit 92; printf 'PHASE1K24_FLUID_PWD=%s\\n' \"$(pwd -P)\"; exec pimpleFoam -case .",
+            "phase1k24-fluid",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/fresh_B_retry/case"
+          ],
+          "structure_command": [
+            "/usr/bin/python3.10",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/fresh_B_retry/fixed_structure.py",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/fresh_B_retry/case/precice-config.xml",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/fresh_B_retry/fixed_structure_result.json",
+            "1.0633832164606064e-07",
+            "9.530777190012017e-08"
+          ],
+          "fluid_pid": 650807,
+          "structure_pid": 650808,
+          "exit_codes": {
+            "fluid": 0,
+            "structure": 0
+          },
+          "loaded_libraries_observed": [
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k20_point_checkpoint/run-20260924T164027Z-c2245ff-Gu2Hg5/build/libRBFMeshMotionSolverPhase1K187BStopDiag.so",
+            "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/candidate-G3/adapter-build/libpreciceAdapterPhase1K25G3Diag.so",
+            "/usr/lib/x86_64-linux-gnu/libprecice.so.3.4.1"
+          ],
+          "stop_reason": null,
+          "wall_duration_s": 3.4129651640250813,
+          "working_directory": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/fresh_B_retry/case"
+        }
+      ]
+    }
+  ]
+}

@@ -66,3 +66,9 @@ Thumbs.db
 /evidence/phase1k20_point_checkpoint/
 /evidence/phase1k21_two_window_lifecycle/
 /evidence/phase1k22_five_window_experimental/
+
+# Phase 1K.23-1K.25 raw scratch trees are retained locally as external
+# archives.  Curated root summaries and provenance files are added explicitly.
+/evidence/phase1k23_single_window_convergence/*/
+/evidence/phase1k24_fluid_state_repeatability/*/
+/evidence/phase1k25_minimal_rollback_repair/*/

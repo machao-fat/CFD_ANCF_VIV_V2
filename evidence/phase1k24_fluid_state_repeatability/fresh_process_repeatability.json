@@ -1,0 +1,12 @@
+{
+  "D_star_m": [1.0633832164606064e-07, 9.530777190012017e-08],
+  "F_A_N": [0.18807135840349185, 0.04700807470592938],
+  "F_B_N": [0.18807135840349185, 0.04700807470592938],
+  "F_B_minus_F_A_norm_N": 0.0,
+  "relative_difference": 0.0,
+  "force_absolute_limit_N": 0.001,
+  "processes_independent": true,
+  "restart_and_configuration_hashes_checked": true,
+  "classification": "FRESH_PROCESS_REPLAY_REPEATABLE",
+  "note": "Both runs used max_iterations=1/min_iterations=1 and the accepted one-step read branch; this is a process-level determinism control, not a substitute for the same-process rollback replay."
+}

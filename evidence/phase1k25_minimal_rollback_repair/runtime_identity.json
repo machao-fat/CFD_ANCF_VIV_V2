@@ -1,0 +1,41 @@
+{
+  "git_head": "d3890deb0e609cc7e38e3f38ff6203787f889c07",
+  "git_branch": "diagnostic/phase1k25-minimal-rollback-repair-v1",
+  "openfoam_bashrc": "/opt/openfoam10/etc/bashrc",
+  "python_executable": "/usr/bin/python3.10",
+  "precice_runtime_expected": "3.4.1",
+  "pyprecice_metadata_expected": "3.4.0",
+  "restart_global_time_s": 30.0,
+  "dt_s": 0.0002,
+  "max_time_windows": 1,
+  "d_star_m": [
+    1.0633832164606064e-07,
+    9.530777190012017e-08
+  ],
+  "rbf_sha256": "508f474654f728503e62e4f7a2c88934800dc73f947353839c52106604a2ca11",
+  "worker_sha256": "3d4a4eaa8c13856a1616e7672866a1ac8bec2c7dda1c194fa2c549ab3f564596",
+  "worker_source_sha256": "c6dd29f344a506deb7c1d06d0b408dc1f504ad8d67259b7c2f3b24e16a0b759e",
+  "candidates": [
+    {
+      "name": "GROUP1_FIELD_HISTORY_CANONICALIZATION",
+      "adapter_path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G1/candidate-G1/adapter-build/libpreciceAdapterPhase1K25G1Diag.so",
+      "adapter_sha256": "aa74122daed27b2bce02139fe4ade7a99a83c8cd2473da561a11b4d5a2716fe0",
+      "max_iterations": 4,
+      "min_iterations": 2
+    },
+    {
+      "name": "GROUP2_MESHPHI_ZERO_CANONICALIZATION",
+      "adapter_path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G2/candidate-G2/adapter-build/libpreciceAdapterPhase1K25G2Diag.so",
+      "adapter_sha256": "f9a89b21b0a0fe92f297a0c8bceb67bc5df5f52e5f7a9c35fa17df5b7eb8b754",
+      "max_iterations": 4,
+      "min_iterations": 2
+    },
+    {
+      "name": "GROUP3_FVMESH_ZERO_MOTION_CANONICALIZATION",
+      "adapter_path": "/home/machao/projects/CFD_ANCF_VIV_V2/evidence/phase1k25_minimal_rollback_repair/run-20260925T080000Z-d3890de-G3/candidate-G3/adapter-build/libpreciceAdapterPhase1K25G3Diag.so",
+      "adapter_sha256": "faa6a1f40e4578976feb53c375328296ff61d515d01a2862c383a39a07ceb8cd",
+      "max_iterations": 4,
+      "min_iterations": 2
+    }
+  ]
+}
