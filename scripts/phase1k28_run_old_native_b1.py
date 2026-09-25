@@ -19,9 +19,10 @@ import sys
 import phase1k28_run_old_native_b0 as b0
 
 
-RUN_ID = "run-20260925T113000Z-fc0f94d-b1-g2"
+RUN_ID = "run-20260925T113000Z-fc0f94d-b1-g2b"
 RUN = b0.ROOT / "evidence/phase1k28_old_native_reference" / RUN_ID
-ADAPTER_NAME = "libpreciceAdapterPhase1K28OldNativeB1G2Diag.so"
+ADAPTER_STEM = "libpreciceAdapterPhase1K28OldNativeB1G2Diag"
+ADAPTER_FILE = ADAPTER_STEM + ".so"
 
 
 def build_adapter() -> tuple[Path, Path]:
@@ -33,7 +34,7 @@ def build_adapter() -> tuple[Path, Path]:
     )
     make_files = source / "Make/files"
     baseline = make_files.read_text(encoding="utf-8")
-    updated = baseline.replace("libpreciceAdapterPhase1K27ForceDiag", ADAPTER_NAME)
+    updated = baseline.replace("libpreciceAdapterPhase1K27ForceDiag", ADAPTER_STEM)
     b0.require(updated != baseline, "B1 library identity rename did not apply")
     make_files.write_text(updated, encoding="utf-8")
 
@@ -56,7 +57,7 @@ def build_adapter() -> tuple[Path, Path]:
     )
     (build / "build.log").write_text(result.stdout + result.stderr, encoding="utf-8")
     b0.require(result.returncode == 0, f"B1 adapter build failed; see {build / 'build.log'}")
-    adapter = build / ADAPTER_NAME
+    adapter = build / ADAPTER_FILE
     b0.require(adapter.is_file(), f"B1 adapter binary missing: {adapter}")
     return adapter, patch_path
 
@@ -114,7 +115,7 @@ def main() -> int:
         "g2": True, "runtime_started": False, "physical_windows": 0,
     }, "B1 preflight gate mismatch")
     case = RUN / "prepared/case"
-    adapter = RUN / f"adapter-build/{ADAPTER_NAME}"
+    adapter = RUN / f"adapter-build/{ADAPTER_FILE}"
     b0.require(case.is_dir() and adapter.is_file(), "B1 case or adapter missing")
     b0.require(not (RUN / "process_cleanup.json").exists(), "refusing to overwrite B1 runtime evidence")
     b0.validate(case)
@@ -122,7 +123,7 @@ def main() -> int:
     b0.require(cleanup["stop_reason"] is None, f"B1 runtime stopped: {cleanup['stop_reason']}")
     b0.require(cleanup["exit_codes"] == {"fluid": 0, "structure": 0},
                f"B1 participant exit codes: {cleanup['exit_codes']}")
-    b0.require(any(ADAPTER_NAME in x for x in cleanup["loaded_libraries_by_role"]["fluid"]),
+    b0.require(any(ADAPTER_FILE in x for x in cleanup["loaded_libraries_by_role"]["fluid"]),
                "B1 adapter was not loaded")
     b0.require(not any("libRBFMeshMotionSolver" in x
                        for x in cleanup["loaded_libraries_by_role"]["fluid"]),
