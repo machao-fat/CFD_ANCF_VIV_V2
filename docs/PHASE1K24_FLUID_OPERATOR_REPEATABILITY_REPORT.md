@@ -1,5 +1,14 @@
 # Phase 1K.24 — Fluid Operator Repeatability Report
 
+> **Later evidence qualification (Phase 1K.26/K.27):** The S0/S1 object and
+> history inventory below remains valid. The original same-process `F1`/`F2`
+> samples were from attempts 1 and 2, which K26 later showed had different
+> Fluid-read displacements. Their Force difference therefore does not establish
+> same-input Fluid-operator non-repeatability or prove that the inventory
+> mismatch caused that Force difference. The fresh-process result remains valid
+> for its distinct one-step accepted branch. See
+> [Phase 1K.27](PHASE1K27_DIRECT_FLUID_FORCE_REPEATABILITY_REPORT.md).
+
 Primary classification: **`FLUID_ROLLBACK_STATE_MISMATCH_LOCALIZED`**
 
 This is a diagnostic-only result. No IQN, relaxation, timestep, turbulence, mesh, RBF, ANCF, or production configuration change was made. No second physical window, 5-window run, 25-window run, or repair experiment was performed.
@@ -19,9 +28,12 @@ This is a diagnostic-only result. No IQN, relaxation, timestep, turbulence, mesh
 - Experimental adapter Build ID: `91e011c76e613a1a6b272f522afc4cf5b9cfccc7`
 - Qualified historical adapter: not used
 
-## 2. Same-process S0/S1 replay
+## 2. Same-process S0/S1 state observation and Force samples
 
-The same-process run used one physical window, four attempts, three rollback requests, and the exact fixed displacement `D*`. The first two retry-endpoint Force values were:
+The same-process run used one physical window, four attempts, and three
+rollback requests. The harness held nominal Structure displacement `D*`, but
+K26 later established that the first two Fluid reads differed. The first two
+retry-endpoint Force values were:
 
 | sample | Force input/endpoint (N) |
 |---|---:|
@@ -40,7 +52,13 @@ The S0/S1 comparison was performed before the second Fluid solve:
 - `fvMesh` state changed from `moving=false, changing=false` at S0 to `moving=true, changing=true` at S1, while the point coordinates remained equal;
 - `V/V0/V00` were unavailable at S0 because the mesh was not yet marked moving and were hashable proxies at S1.
 
-This is a concrete, high-impact mismatch in the OpenFOAM solver/ALE state boundary. It supports the statement that the same-process replay did not restart from an identical Fluid state. It does not yet identify which of the newly created histories or internal runtime caches is sufficient by itself to explain the full Force difference.
+This is a concrete, high-impact mismatch in the OpenFOAM solver/ALE state
+boundary. It supports the statement that the observed registry/history topology
+changed across the checkpoint boundary. Because the Fluid inputs to the first
+two Force samples differed, this inventory does not establish that the state
+mismatch caused their Force difference. It does not identify which newly
+created histories or internal runtime caches affect a controlled identical-
+input replay.
 
 ## 3. Fresh-process control replay
 
@@ -57,15 +75,15 @@ The fresh A/B branch used `max_iterations=1` and `min_iterations=1` solely to ob
 
 ## 4. Answers to the required questions
 
-1. **Is `F1 != F2` supported by a same-process rollback state mismatch?** **SUPPORTED.** The S0/S1 snapshot shows field-history/objectRegistry/ALE lifecycle differences before the second solve.
+1. **Does the S0/S1 mismatch causally support the original `F1 != F2` Force difference?** **UNRESOLVED / NOT ESTABLISHED.** The inventory mismatch is observed, but K26 showed the paired Fluid-read displacement values differed; the Force comparison is not an identical-input causal test.
 
 2. **Which states differ?** The observed differences are `U/k/omega/Uf` old-time allocation and hashes, new `U_0/k_0/omega_0/Uf_0` objects, new `meshPhi/meshPhi_0`, `yPlus`, `fvMesh moving/changing` flags, and volume-history proxies `V/V0/V00`. Current primary-field hashes, pointDisplacement, cellDisplacement, and mesh point coordinates were equal. Turbulence-object internals, function-object mutable state, RBF caches, and other fvMesh caches remain not directly hashable.
 
 3. **Are fresh-process A/B replays repeatable?** **YES for the tested one-step accepted branch.** `F_A`, `F_B`, and the exact difference are reported above.
 
-4. **Can the current failure still be attributed to CFD inner convergence?** **NOT_YET_TESTABLE.** The rollback-state equality gate fails first. The Phase 1K.23 inner-convergence A/B remains unmeasured and must not be reopened yet.
+4. **Can the original Force difference be attributed to CFD inner convergence?** **NOT_YET_TESTABLE from K24.** K24 did not isolate a same-Fluid-input replay; its inner-convergence A/B remains unmeasured.
 
-5. **Is the next phase allowed to begin CFD inner-convergence A/B?** **NO.** The next gate is to localize and minimally repair/validate the proven Fluid rollback-state mismatch, one state group at a time. No repair was attempted in Phase 1K.24.
+5. **Was CFD inner-convergence A/B allowed at the end of K24?** **NO.** K27 later authorizes it as the next diagnostic only, after matching Fluid inputs and repeatable raw Force/payload were observed on the tested G2 branch. It was not run in K24 or K27.
 
 ## 5. Final evidence status
 

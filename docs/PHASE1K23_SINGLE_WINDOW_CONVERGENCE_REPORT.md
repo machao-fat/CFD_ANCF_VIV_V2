@@ -1,10 +1,21 @@
 # Phase 1K.23 — Single-Window Implicit Convergence Mechanism Diagnostic
 
+> **Later evidence qualification (Phase 1K.26/K.27):** The original
+> `F1`/`F2` values below remain valid recorded Structure-side samples, and the
+> 40-attempt window still ended `ACCEPTED_AT_ITERATION_LIMIT`, not converged.
+> However, K26 showed that the corresponding attempts 1 and 2 did not deliver
+> the same displacement to Fluid. Therefore the `0.1057131957411209 N`
+> difference is not valid same-Fluid-input operator-repeatability evidence;
+> the original repeatability interpretation is superseded. See
+> [Phase 1K.27](PHASE1K27_DIRECT_FLUID_FORCE_REPEATABILITY_REPORT.md).
+
 ## Result
 
-Primary classification: `FLUID_OPERATOR_NOT_REPEATABLE_OR_INNER_UNCONVERGED`
+Primary classification: `NOT_CONVERGED`
 
-Gate qualifier: `FLUID_OPERATOR_REPEATABILITY_NOT_ESTABLISHED`
+Fluid-operator qualifier: `REPEATABILITY_NOT_ESTABLISHED`; the original
+same-input replay inference was invalidated by Phase 1K.26 Fluid-input
+alignment.
 
 This is a diagnostic result, not a convergence pass. One physical coupling
 window was run from the frozen 30.0 s new-mesh restart. No second window, 5-
@@ -53,7 +64,8 @@ The force residual history is not a stable decreasing contraction: its ratio
 range was approximately `0.2024` to `3.9433`, with median ratio about `1.3865`.
 The trial displacement residual likewise increased to the final value. This
 observation alone does not distinguish an intrinsically noncontractive map from
-a non-repeatable Fluid operator, because the repeatability gate below failed.
+a non-repeatable Fluid operator, because same-input Fluid repeatability was not
+established by the replay pair.
 
 Representative Force/trial pairs from the trace:
 
@@ -69,15 +81,17 @@ written displacement. Direct per-attempt OpenFOAM `forces` output was
 `NOT_MEASURED`; the available `forces.dat` output contains the restart-time
 record only and was not substituted for attempt-level data.
 
-## Same-input Fluid repeatability gate
+## Original replay pair (later shown not to be same-Fluid-input)
 
-The fixed displacement was taken from the real window-1 trace:
+The nominal fixed displacement was taken from the real window-1 Structure
+trace:
 
 `D* = (1.0633832164606064e-07, 9.530777190012017e-08) m`.
 
-The controlled replay used the same 30.0 s scratch restart, the same
-experimental adapter/RBF identities, and the same displacement. The measured
-Force difference was:
+The original harness used the same nominal Structure displacement and frozen
+restart, but Phase 1K.26 later showed attempts 1 and 2 delivered different
+displacements to Fluid. These recorded Force samples therefore do not form a
+valid same-Fluid-input replay. Their measured difference was:
 
 ```text
 F1 = ( 0.0900359042326746,  0.056385514259487284) N
@@ -88,7 +102,9 @@ absolute coupling-force limit = 0.001 N
 ratio to limit = 105.7131957411209
 ```
 
-The result is `NOT_PASS`: `FLUID_OPERATOR_REPEATABILITY_NOT_ESTABLISHED`.
+The historical comparison was `NOT_PASS`; after K26 input alignment, its
+correct interpretation is `FLUID_OPERATOR_REPEATABILITY_UNRESOLVED`, not a
+measured failure of a deterministic `G(S0,D)` map.
 The S0-to-S1 checks did pass for point-displacement internal and boundary
 fields, cell-displacement internal and boundary fields, mesh points, and the
 available ANCF checkpoint state. Thus this evidence does not indicate a
@@ -100,12 +116,12 @@ Machine-readable result: [repeatability_test.json](../evidence/phase1k23_single_
 
 ## Gated-off tests
 
-The failed repeatability gate required stopping here:
+The unmet repeatability-evidence gate required stopping here:
 
 | Test | Status | Reason |
 |---|---|---|
-| CFD inner-convergence A/B | `NOT_MEASURED` | Not authorized after repeatability failure |
-| Repaired-adapter constant-relaxation 0.2 baseline | `NOT_MEASURED` | Not authorized after repeatability failure |
+| CFD inner-convergence A/B | `NOT_MEASURED` | Not authorized because the compared Fluid inputs were not verified equal |
+| Repaired-adapter constant-relaxation 0.2 baseline | `NOT_MEASURED` | Not authorized because the compared Fluid inputs were not verified equal |
 | Further IQN tuning | NOT RUN | Explicitly forbidden by the phase gate |
 | Direct per-attempt OpenFOAM force reconciliation | `NOT_MEASURED` | No attempt-level direct force output in this run |
 
@@ -114,21 +130,22 @@ The artifacts explicitly preserve these statuses in
 
 ## Answers to the five required questions
 
-1. A stable fixed point is **UNRESOLVED**. The run did not converge, and the
-   same-input Fluid operator repeatability gate failed.
-2. The current 20-iteration behavior is best recorded as
-   **NOISY_FLUID_OPERATOR** pending the inner-convergence isolation test. The
-   observed residual ratios are not sufficient to call it a clean slow
-   contraction or a purely noncontractive fixed point.
-3. Same `S0 + D*` did **not** produce sufficiently consistent Force in the
-   measured replay: `0.1057131957411209 N`, relative `0.9950919530038619`, over
-   100 times the `1e-3 N` limit.
+1. A stable fixed point is **UNRESOLVED**. The run did not converge.
+2. The residual history was non-monotonic, but the data do not distinguish a
+   noisy Fluid operator from the fixed-point's convergence behavior. The
+   original `NOISY_FLUID_OPERATOR` interpretation is not established by the
+   invalidated replay pair.
+3. Same `S0 + D*` repeatability is **NOT ESTABLISHED** by the original replay:
+   the Fluid-read displacement differed between the compared attempts. The
+   `0.1057131957411209 N` value remains a valid difference between the recorded
+   Force samples, not an identical-input operator error.
 4. CFD inner-convergence error versus a stricter diagnostic setting is
-   **NOT_MEASURED** because the repeatability gate stopped the phase.
-5. The evidence-supported next action is **B: improve/diagnose Fluid inner
-   convergence and operator repeatability**. Acceleration tuning is not
-   justified yet; checkpoint/state determinism is supported by the exact S0-S1
-   checks.
+   **NOT_MEASURED** because the same-input prerequisite was not established.
+5. At the end of K23, Fluid input alignment and rollback-state completeness
+   still needed diagnosis; an inner-convergence A/B was not authorized or run.
+   Phase 1K.27 later authorizes that A/B as a next diagnostic only, based on its
+   repeatable raw Force and adapter payload on the tested G2 branch. Acceleration
+   tuning remains unauthorized.
 
 The K22 IQN column/drop counts are preserved as evidence but are **not
 interpreted** here. This phase did not perform the required preCICE 3.4.1

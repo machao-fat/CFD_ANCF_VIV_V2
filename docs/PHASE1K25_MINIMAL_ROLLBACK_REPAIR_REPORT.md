@@ -1,16 +1,26 @@
 # Phase 1K.25 — Minimal Fluid Rollback-State Repair and Causal Qualification
 
+> **Later evidence qualification (Phase 1K.26/K.27):** Candidate state and
+> history-topology observations below remain preserved. The table's Force
+> differences came from attempts without verified matching Fluid-read
+> displacement, so the stated Group 1 causal contribution to same-input Force
+> replay is not established. Do not interpret the original `F1`/`F2` values as
+> a controlled same-Fluid-input comparison. See
+> [Phase 1K.27](PHASE1K27_DIRECT_FLUID_FORCE_REPEATABILITY_REPORT.md).
+
 Status: completed as an isolated diagnostic study. No production adapter, case,
 mesh, RBF configuration, coupling configuration, or physical parameter was
 modified.
 
 ## Final classification
 
-`ROLLBACK_REPEATABILITY_NOT_RESTORED`
+Current evidence-qualified interpretation: `FORCE_REPEATABILITY_UNRESOLVED_AFTER_INPUT_ALIGNMENT_AUDIT`.
 
-The tested candidates did not restore same-process Fluid replay repeatability.
-The fresh-process controls remained deterministic for every tested topology.
-Consequently CFD inner-convergence A/B and IQN requalification remain closed.
+Historical K25 classification: `ROLLBACK_REPEATABILITY_NOT_RESTORED`.
+K26/K27 later showed that K25's attempts 1/2 were not a same-Fluid-input pair,
+so the Force evidence cannot establish either restored or unrestored
+same-process operator repeatability. The fresh-process controls remain
+deterministic for the tested one-step accepted branches and topologies.
 
 ## Frozen baseline
 
@@ -25,24 +35,29 @@ Consequently CFD inner-convergence A/B and IQN requalification remain closed.
 The qualified historical adapter was not used. Every candidate used a
 separately identified experimental adapter.
 
-## Causal candidate results
+## Candidate state and historical Force observations
 
-| Candidate | Isolated state group | Same-process `F1` (N) | Same-process `F2` (N) | `||F2-F1||` (N) | Fresh A/B difference | Result |
+The `F1`/`F2` entries below are preserved historical values. Fluid-read
+displacement equality was not verified for these paired samples; the reported
+Force deltas therefore cannot be used to infer causal effects of the state
+group interventions on same-input Fluid Force repeatability.
+
+| Candidate | Isolated state group | Recorded `F1` (N) | Recorded `F2` (N) | `||F2-F1||` (N) | Fresh A/B difference | Historical interpretation (causality unverified) |
 |---|---|---:|---:|---:|---:|---|
-| G1 | field old-time/history canonicalization | `(0.09266996754766044, 0.056130040689796094)` | `(0.14069864208624935, -0.008447088563692154)` | `0.08047955765631062` | `0` | contributes, insufficient |
-| G2 | `meshPhi`/ALE flux value canonicalization only | `(0.0900359042326746, 0.056385514259487284)` | `(0.1615021722747258, -0.021510905978815276)` | `0.1057131957411209` | `0` | no measurable dominant effect |
-| G3 | legal zero-motion `fvMesh` lifecycle canonicalization | `(0.0900359042326746, 0.056385514259487284)` | `(0.1615021722747258, -0.021510905978815276)` | `0.1057131957411209` | `0` | not sufficient |
-| G5 | scratch-only removal of `forces/forceCoeffs/yPlus` function objects | `(0.0900359042326746, 0.056385514259487284)` | `(0.1615021722747258, -0.021510905978815276)` | `0.1057131957411209` | `0` | no measurable dominant effect |
+| G1 | field old-time/history canonicalization | `(0.09266996754766044, 0.056130040689796094)` | `(0.14069864208624935, -0.008447088563692154)` | `0.08047955765631062` | `0` | old label: contributes; matching Fluid input unverified |
+| G2 | `meshPhi`/ALE flux value canonicalization only | `(0.0900359042326746, 0.056385514259487284)` | `(0.1615021722747258, -0.021510905978815276)` | `0.1057131957411209` | `0` | old label: no dominant effect; force causality unverified |
+| G3 | legal zero-motion `fvMesh` lifecycle canonicalization | `(0.0900359042326746, 0.056385514259487284)` | `(0.1615021722747258, -0.021510905978815276)` | `0.1057131957411209` | `0` | old label: not sufficient; force causality unverified |
+| G5 | scratch-only removal of `forces/forceCoeffs/yPlus` function objects | `(0.0900359042326746, 0.056385514259487284)` | `(0.1615021722747258, -0.021510905978815276)` | `0.1057131957411209` | `0` | old label: no dominant effect; force causality unverified |
 
-The G1 result is `80.47955765631062` times the coupling limit. Its history
-topology was equalized at the checkpoint/retry comparison, but the replay
-difference remained far above tolerance. This is causal contribution evidence,
-not a sufficient repair.
+The G1 history topology was equalized at the checkpoint/retry comparison. Its
+recorded Force-sample difference was `80.47955765631062` times the coupling
+limit, but without matching Fluid-read displacement this is not evidence of a
+causal Force contribution or of failed same-input repeatability.
 
 For G1 the next recorded same-process Force was
-`F3=(0.10290444955509812,-0.04243815561050917) N`; because `F2-F1` already
-failed the repeatability gate, no candidate was eligible for an acceptance
-decision based on a third replay.
+`F3=(0.10290444955509812,-0.04243815561050917) N`; the read displacement for
+this sample was not shown to form a same-input replay with `F1`/`F2`, so these
+samples do not establish a repeatability-gate result.
 
 ## State observations
 
@@ -56,26 +71,30 @@ The baseline K24 mismatch remains observable in the current adapter path:
 
 G1 materialized `U`, `k`, `omega`, and `Uf` old-time levels before the initial
 checkpoint. At S0/S1 those targeted history objects matched, but `meshPhi` and
-`yPlus` still appeared in the post-rollback registry and the Force replay was
-not repeatable.
+`yPlus` still appeared in the post-rollback registry. The recorded Force
+samples differed, but their same-input repeatability was not established.
 
 G2 zeroed the available `meshPhi` current/old-time values after rollback. It
 did not remove the topology or restore the `fvMesh` lifecycle, and it produced
-the K24 baseline Force sequence exactly.
+the K24 recorded Force sequence exactly. K27 later established a valid G2
+same-input attempt pair with equal raw Force and adapter payload; the K25
+Structure-read difference was not itself a same-offset comparison.
 
 G3 entered the legal OpenFOAM moving-mesh lifecycle with zero displacement
 before the first checkpoint. Its initial diagnostic attempt was blocked by a
 snapshot assumption that `V0/V00` always exist; that diagnostic-only snapshot
 was made presence-safe and the candidate was rerun. The corrected G3 run
-completed cleanly, but produced the same Force sequence as K24. This is not a
-production fix and does not justify private-flag manipulation or direct
-`V0/V00` fabrication.
+completed cleanly, but produced the same recorded Force sequence as K24. This
+does not determine its effect on same-input raw Force and is not a production
+fix; it does not justify private-flag manipulation or direct `V0/V00`
+fabrication.
 
 G5 removed the three scratch-only ancillary function objects that appear in the
 K24 case (`cylinderForces`, `cylinderForceCoeffs`, and `yPlus`). The same-process
-Force difference remained exactly `0.1057131957411209 N`, while fresh-process A/B
-remained identical. This does not support ancillary function-object state as the
-dominant cause.
+recorded Force-sample difference remained `0.1057131957411209 N`, while
+fresh-process A/B remained identical. The input mismatch means this does not
+support or refute ancillary function-object state as a cause of identical-input
+Force variation.
 
 Group 4 turbulence-model internals and Group 6 RBF/motion-solver caches were not
 assigned an unverified runtime mutation. They are not currently exposed through
@@ -97,17 +116,17 @@ branch.
 
 ## Required decisions
 
-1. Which group has causal support? **Group 1 has causal contribution support**;
-   Groups 2 and 3 were not sufficient and showed no measurable dominant effect
-   in their isolated candidates.
-2. Minimal sufficient repair found? **NO**.
-3. Repaired same-process replay? **Not restored**; the smallest observed G1
-   difference is `0.08047955765631062 N`.
-4. Fresh-process determinism? **YES for the tested candidate topologies**.
-5. CFD inner-convergence A/B allowed? **NO**. Same-process Fluid operator
-   repeatability is still not established.
-6. IQN re-test allowed? **NO**. This phase does not authorize acceleration
-   qualification.
+1. Which group has causal support for Force repeatability? **UNRESOLVED**;
+   Group 1 topology was canonicalized, but its Force comparison did not verify
+   equal Fluid inputs. G2/G3/G5 Force-causal effects are also unresolved.
+2. Minimal sufficient repair for same-input replay? **NOT ESTABLISHED**.
+3. Same-process repeatability after candidate changes? **NOT MEASURED with a
+   verified identical Fluid input**; the quoted deltas are not a valid gate.
+4. Fresh-process determinism? **YES for the tested candidate topologies and
+   their recorded branch**.
+5. At the end of K25, CFD inner-convergence A/B was **not authorized**. K27
+   later authorizes it as the next diagnostic only; it has not been run.
+6. IQN re-test allowed? **NO**. Acceleration qualification remains closed.
 
 ## Evidence
 
