@@ -17,24 +17,34 @@ The authoritative working directory is this Linux tree:
 The former Windows repository `machao-fat/CFD_ANCF_VIV` is legacy forensic history.
 Do not merge, rebase, force-push, or infer authority from its newest filename.
 
-## Current stage
+## Current state
 
-```text
-ANCF numerical baseline
-  -> fixed-cylinder CFD baseline
-  -> force/displacement mapping
-  -> HH06 single-slice coupling repair
-  -> single-slice qualification (currently blocked)
-  -> 3-slice smoke
-  -> slice-number sensitivity
-  -> HH06 quantitative validation
-```
+The repair branch has completed the single-slice implicit-coupling and RBF/ALE
+qualification work through Phase 1K.22. The results have different qualification
+levels:
 
-The current project is not authorized to start a new production FSI run. The latest
-25-window HH06 qualification is `DO_NOT_PASS` because a late-window
-`LATE_WINDOW_ALE_FLOW_TURBULENCE_RUNAWAY` was observed. The main remaining hypothesis
-is an unverified implicit retry / trial-displacement feedback defect; see
-`docs/KNOWN_ISSUES.md`.
+| Phase | Status | Scope of the result |
+|---|---|---|
+| Phase 1E-R | `REAL_IMPLICIT_FORCE_ITERATION_CONTRACT_PASS` | Two-window real Structure/Fluid lifecycle with the qualified historical adapter |
+| Phase 1F | `PASS_REAL_5WINDOW_STRATEGY_C` | Five-window real lifecycle; the windows remain bounded observations |
+| Phase 1I | `FAIL_ALE_OR_FLUID_RUNTIME` | Old mesh plus Laplacian ALE; the historical late-window failure occurred after 20 accepted windows |
+| Phase 1K.11 | `REVIEW_REQUIRED` | New 6D O-grid plus RBF completed 25 windows, but the displacement-to-mesh path was not closed |
+| Phase 1K.20 | `PASS_EXPERIMENTAL_NONZERO_POINT_CHECKPOINT_ONE_RETRY` | Experimental adapter restored a nonzero point-displacement checkpoint for one retry |
+| Phase 1K.21 | `PASS_EXPERIMENTAL_TWO_WINDOW_LIFECYCLE` | Experimental adapter completed two windows with nonzero rollback checks; both reached the iteration cap |
+| Phase 1K.22 | `PASS_EXPERIMENTAL_FIVE_WINDOW_LIFECYCLE` | Experimental adapter completed five windows; every window reached the 20-iteration cap |
+
+K20--K22 use the separately identified experimental adapter
+`libpreciceAdapterPhase1K20.so` (SHA-256
+`225ecab227b8271f01119fe476370e3a0b705ca06e1ca3a7739200266499b165`). Their
+results cover field restoration and the tested retry/read handoff lifecycle.
+They do not qualify the historically installed adapter for replacement or
+establish converged or long-run FSI behavior. The K11 RBF displacement path and
+the historical adapter source-to-binary provenance remain open issues.
+
+The repair branch is currently not ready to merge into `main`. The merge gate is
+recorded in `docs/ROADMAP.md`: production adapter adoption, the K11
+displacement-to-mesh path, and convergence beyond iteration-cap acceptance need
+separate review.
 
 ## Architecture
 

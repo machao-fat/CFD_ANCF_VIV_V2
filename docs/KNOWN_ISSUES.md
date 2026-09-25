@@ -1,6 +1,6 @@
 # Known issues and forbidden shortcuts
 
-## HIGH PRIORITY — real implicit FSI and runaway requalification remain open
+## HIGH PRIORITY — production RBF/adapter path remains open
 
 Phase 1B source tracing and a deterministic fake backend confirmed the participant's
 old retry behavior: after rollback it restored ANCF physical state and wrote the
@@ -8,16 +8,23 @@ previous `committed_motion`, discarding the just-computed trial interface
 displacement. This explains the identically zero displacement residual in that
 historical participant path (`STALE_COMMITTED_MOTION`).
 
-Phase 1D implements a participant-side fixed-point lifecycle and passes offline
-deterministic qualification. Every attempt now writes its own ANCF trial before the
-associated preCICE `advance`; rejected physical ANCF state is rolled back while the
-Force iterate and iteration history survive. This has **not** been qualified in a
-real preCICE/OpenFOAM run. Therefore the stale-motion defect is confirmed, but its
-role in the historical late-window ALE/flow/turbulence runaway remains unconfirmed.
-Do not infer long-run stability or change physical/numerical parameters from the
-offline test alone.
+Phase 1D implemented the participant-side fixed-point lifecycle. Phase 1E-R and
+Phase 1F then exercised the repaired Structure/Fluid lifecycle in real bounded
+runs with the qualified historical adapter. Phase 1I showed that the old mesh plus
+Laplacian ALE still fails in the historical late-window region.
 
-## Worker lineage parity repair — offline qualified, runtime deployment pending
+Phase 1K.11 completed 25 windows with the new RBF mesh and no solver crash, but its
+accepted mesh points remained at the release coordinates while rejected-trial
+pressure and force spikes grew. The displacement-to-mesh path therefore remains a
+`REVIEW_REQUIRED` item. The result does not establish that the historical runaway
+has been removed.
+
+K20--K22 qualified a separately identified experimental adapter for one retry, two
+windows, and five windows. K22 reached the 20-iteration cap in all five windows;
+the lifecycle evidence is useful, while convergence efficiency and production
+adapter adoption remain unresolved.
+
+## Worker lineage parity repair — source and offline qualified
 
 The authoritative V2 worker source no longer uses sequence parity to classify
 same-window retries versus next-window requests. Commit `0383920` classifies
@@ -27,18 +34,20 @@ source-built worker passed the bounded offline 2-window x 5-request test,
 including acceptance of sequence 6 as the next physical window and physical
 rollback without transport-ID rollback.
 
-The repair has not been deployed or runtime-qualified in the HH06 slice.
-Production runtime qualification remains pending.
+The repair is source-traceable and offline-qualified. The bounded HH06 records in
+this branch preserve the qualified worker identity, but no separate production
+release claim is made for the worker beyond the cited runtime evidence.
 
-## ALE/flow runaway
+## ALE/flow runaway and mesh-path ambiguity
 
-The bounded test showed a late feedback chain consistent with large force, large
-absolute structural displacement change, high mesh velocity/mesh Co, flow velocity
-growth and SST `omega` growth. Do not mask this with arbitrary dt, relaxation, SST,
-fvSchemes or fvSolution changes. First establish the actual displacement read/write
-semantics and retry state lineage.
+Phase 1I showed a late feedback chain consistent with large force, large absolute
+structural displacement change, high mesh velocity/mesh Co, flow velocity growth
+and SST `omega` growth. Phase 1K.11 avoided the same solver crash for 25 windows,
+but did not close the displacement-to-RBF-to-mesh path. Do not mask either result
+with arbitrary dt, relaxation, SST, fvSchemes or fvSolution changes. The next
+technical decision must use direct displacement-path evidence.
 
-## Bounded HH06 runtime is launch-ready only; real qualification remains pending
+## Bounded HH06 runtime and production readiness
 
 Phase 1D.6 closes the bounded launcher contract with a separate
 `BOUNDED_COUPLING_QUALIFICATION` authorization for exactly two physical windows.
@@ -47,10 +56,11 @@ worker and Fluid adapter, the frozen 30.0 s F0 evidence, Force initial data,
 `dt=0.0002`, `max-iterations=20`, Python/preCICE runtime qualification, and a
 clear XML-configured socket directory. It does not start either participant.
 
-No real HH06 Fluid/Structure coupling was started in Phase 1D.6. Real two-window
-qualification, convergence behavior, and stability remain unqualified; this
-authorization is not production readiness and does not resolve the historical
-25-window ALE/flow/turbulence runaway.
+The later Phase 1E-R and Phase 1F runs established bounded real lifecycle results.
+They did not establish production readiness. Phase 1K.11 is a separate RBF/ALE
+stress result with `REVIEW_REQUIRED`, and K20--K22 use an experimental adapter.
+No result in this branch authorizes production HH06 FSI, 0.2 s production time,
+or multi-slice coupling.
 
 ## Adapter source lineage remains unresolved
 
@@ -61,6 +71,19 @@ The source-to-binary provenance of the installed Fluid adapter is unresolved. Ph
 different adapter binary. The pin is restricted to the bounded qualification
 profile; it does not resolve adapter source/build provenance or imply production
 readiness.
+
+K20--K22 use a separately named source-preserved experimental adapter with SHA256
+`225ecab227b8271f01119fe476370e3a0b705ca06e1ca3a7739200266499b165`. That
+experimental identity must not be silently substituted for the historically
+qualified adapter.
+
+## Experimental adapter convergence limitation
+
+The experimental adapter preserves the tested point-displacement boundary values,
+cell-displacement staging field, mesh state and ANCF state across the K20--K22
+rollback checks. K22 still accepted every window at the 20-iteration limit and
+reported no convergence within that cap. The adapter therefore has an isolated
+lifecycle qualification and no production convergence qualification.
 
 ## Forbidden historical shortcuts
 
