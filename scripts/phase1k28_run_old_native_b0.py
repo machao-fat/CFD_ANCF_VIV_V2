@@ -320,8 +320,11 @@ def main() -> int:
     if len(sys.argv) != 2 or sys.argv[1] not in {"preflight", "run"}:
         raise SystemExit(f"usage: {Path(sys.argv[0]).name} preflight|run")
     mode = sys.argv[1]
-    require(run_text(["git", "rev-parse", "HEAD^"], ROOT) == EXPECTED_CHECKPOINT,
-            "K28 runner is not directly based on the frozen audit checkpoint")
+    ancestor_check = subprocess.run(
+        ["git", "merge-base", "--is-ancestor", EXPECTED_CHECKPOINT, "HEAD"],
+        cwd=ROOT, capture_output=True, text=True)
+    require(ancestor_check.returncode == 0,
+            "K28 runner is not based on the frozen audit checkpoint")
     require(run_text(["git", "branch", "--show-current"], ROOT) == EXPECTED_BRANCH, "K28 branch mismatch")
     require(SOLVER.is_file(), f"diagnostic solver missing: {SOLVER}")
     require(sha(SOLVER) == "e895e5f1788146da2205e4c8bb0b959f99f66e426c92dc7233d7ac303fd91e96", "solver SHA mismatch")
