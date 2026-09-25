@@ -28,7 +28,7 @@ SOURCE_CASE = ROOT / "cases/hh06_single_slice"
 K27_SOURCE = ROOT / "evidence/phase1k27_force_pipeline/run-20260925T090832Z-e0da50c/adapter-source"
 K26_STRUCTURE = ROOT / "evidence/phase1k26_earliest_divergence/run-20260925T-phase1k26-4182ac9/selected_causal_test_G2/fixed_structure.py"
 SOLVER = Path("/home/machao/OpenFOAM/machao-10/platforms/linux64GccDPInt32Opt/bin/pimpleFoamPhase1K26Diag")
-EXPECTED_HEAD = "ed3e8e2d5cb49e5d1dd7ebe3b2a91ea586494545"
+EXPECTED_CHECKPOINT = "ed3e8e2d5cb49e5d1dd7ebe3b2a91ea586494545"
 EXPECTED_BRANCH = "diagnostic/phase1k28-old-mesh-native-reference-v1"
 EXPECTED_DT = 0.0002
 EXPECTED_DSTAR = [1.0633832164606064e-07, 9.530777190012017e-08]
@@ -320,7 +320,8 @@ def main() -> int:
     if len(sys.argv) != 2 or sys.argv[1] not in {"preflight", "run"}:
         raise SystemExit(f"usage: {Path(sys.argv[0]).name} preflight|run")
     mode = sys.argv[1]
-    require(run_text(["git", "rev-parse", "HEAD"], ROOT) == EXPECTED_HEAD, "K28 HEAD mismatch")
+    require(run_text(["git", "rev-parse", "HEAD^"], ROOT) == EXPECTED_CHECKPOINT,
+            "K28 runner is not directly based on the frozen audit checkpoint")
     require(run_text(["git", "branch", "--show-current"], ROOT) == EXPECTED_BRANCH, "K28 branch mismatch")
     require(SOLVER.is_file(), f"diagnostic solver missing: {SOLVER}")
     require(sha(SOLVER) == "e895e5f1788146da2205e4c8bb0b959f99f66e426c92dc7233d7ac303fd91e96", "solver SHA mismatch")
