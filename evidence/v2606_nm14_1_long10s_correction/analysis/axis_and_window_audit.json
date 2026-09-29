@@ -1,0 +1,9 @@
+{
+  "interface_s_over_L": 0.45274390243902446,
+  "axis_contract": "all corrected full-riser figures use vertical s/L in [0,1]",
+  "window_specific_mean_subtraction": true,
+  "startup_contamination": "quantified by comparing 0-10 against 2-10, 5-10, 7.5-10",
+  "representative_late_cf_frequency_Hz": 1.6002560409665547,
+  "representative_period_s": 0.6249,
+  "figure_marker_audit": "corrected figures use shaded current-region bar; no misplaced s/L marker"
+}

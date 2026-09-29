@@ -1,0 +1,26 @@
+{
+  "0-10s": {
+    "mean_Cd": 1.71061458138542,
+    "std_Cd": 0.19332340553860086,
+    "integrated_total_Cl_RMS": 0.38510295569521197,
+    "integrated_total_Cl_mean": 0.018801172760849992
+  },
+  "2-10s": {
+    "mean_Cd": 1.7394148226218595,
+    "std_Cd": 0.1780015132580258,
+    "integrated_total_Cl_RMS": 0.34333524419275513,
+    "integrated_total_Cl_mean": 0.018438040800749882
+  },
+  "5-10s": {
+    "mean_Cd": 1.7428207156147182,
+    "std_Cd": 0.19576222172288732,
+    "integrated_total_Cl_RMS": 0.3882713229391668,
+    "integrated_total_Cl_mean": 0.002226055849148893
+  },
+  "7.5-10s": {
+    "mean_Cd": 1.7698549802423067,
+    "std_Cd": 0.18932683710142043,
+    "integrated_total_Cl_RMS": 0.4542759545401382,
+    "integrated_total_Cl_mean": -0.0056722182603930775
+  }
+}

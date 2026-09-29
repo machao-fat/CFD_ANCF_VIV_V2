@@ -1,0 +1,22 @@
+{
+  "classification": "V2606_NM14_2_MODAL_AND_CL_CORRECTED",
+  "physical_ny_late": [
+    2,
+    2
+  ],
+  "physical_nx_late": [
+    5,
+    5
+  ],
+  "former_ny_4_nx_1": "raw eigenvector ordinals; prior ny=4 corrected to physical family 2",
+  "CF_family_2_supported": true,
+  "IL_4Hz_frequency_closest_family": [
+    5,
+    5
+  ],
+  "HUERA_Cl_status": "THESIS_DEFINITION_VERIFIED; ACTIVE_REGION_VALUE_NOT_STRICTLY_COMPARABLE_TO_FULL_RISER_CASE_1",
+  "10_TO_15_EXTENSION": "RECOMMENDED",
+  "extension_reason": "The distributed local Cl RMS is nearly unchanged across late windows, but integrated-total Cl RMS changes and the 5 s/2.5 s spectral windows have coarse 0.2/0.4 Hz resolution; stationarity and a robust inline VIV frequency remain unestablished",
+  "real_simulation_started": false,
+  "production_data_modified": false
+}

@@ -1,0 +1,27 @@
+{
+  "source_title": "Multi-mode vortex-induced vibrations of a flexible circular cylinder",
+  "author": "Francisco Javier Huera Huarte",
+  "year": 2006,
+  "local_pdf_filename": "Huera-Huarte - 2006 - Multi-mode vortex-induced vibrations of a flexible circular cylinder.pdf",
+  "local_pdf_note": "Provided by the user from Zotero; PDF intentionally not included in this Git upload.",
+  "sha256": "675c26f85eb0387dd21aa60d0c4647162786d901d2a14f0d3883509719f7d900",
+  "pdf_page_count": 218,
+  "locations": {
+    "geometry": "PDF p88 (printed p87), Table 4.2: D=0.028 m, L=13.12 m, Ls=5.94 m, EI=29.88 Nm^2. Although the table labels Ls 'submerged length', section 4.1 on PDF pp79-80 makes clear that 5.94 m is the lower 45% exposed to moving uniform current; the remaining upper riser was in still water inside the filled tank.",
+    "near_tension_frequencies": "PDF p102 (printed p101), Table 5.2, C001 May19 at mean Tt=1188.28 N: f1-f6=0.80865,1.6211,2.4411,3.2722,4.1181,4.9822 Hz",
+    "dominant_frequency_extraction": "PDF p109 (printed p108), section 5.4.1: dominant frequencies are peaks in spectra of dominant modal amplitudes",
+    "temporal_standard_deviation": "PDF p110 (printed p109), Eq 5.18: sqrt(time mean of squared deviation from time mean)",
+    "spatial_then_temporal_rms": "PDF p110 (printed p109), Eq 5.20: spatial mean squared dynamic displacement, then time mean and square root; used as spatial-temporal statistical template",
+    "case1_reference": "PDF p165 (printed p164), Table 6.1: U=0.31 m/s, Re=7622, Tt0=1175 N, ny=2, fy=1.66 Hz, nx=4, fx=3.40 Hz, mean Cd=1.86, RMS Cl=1.93",
+    "case1_immersion": "PDF p164 (printed p163), section 6.4: all listed cases except case 4 had water around the entire riser length",
+    "case1_cl_field": "PDF p165 (printed p164), section 6.4: Figure 6.8a(c) shows local Cl along riser, thick curve is its RMS, colour maps show spatiotemporal Cl",
+    "mean_cd_definition": "PDF p171 (printed p170), Eq 6.9-6.10: mean Cd uses total integrated mean in-line force and Ls exposed to current",
+    "transverse_cl_rms_definition": "PDF pp171-172 (printed pp170-171), section 6.4.2: each plotted point is transverse-force-coefficient RMS along riser model and in time, calculated by applying Eq 5.18"
+  },
+  "interpretive_scope": {
+    "verified": "The Cl reference is a distributed spatial-temporal statistic, not RMS of one total integrated lift coefficient.",
+    "continuous_analogue": "The NM14.2 analytic spatial integral of squared piecewise-linear Cl is a continuous analogue of the thesis nodewise spatial mean; the exact discretization is different.",
+    "active_region_gap": "NM14.2 direct OpenFOAM force samples only reconstruct a field over [0,5.94] m and set it to zero outside, whereas thesis Case 1 had water around the whole riser. The active-region RMS cannot be represented as strict same-domain Case-1 RMS.",
+    "experimental_force_method_gap": "Thesis force field is reconstructed from measured motion and FEM; simulation force field comes from direct OpenFOAM slice forces. The two procedures are not identical."
+  }
+}

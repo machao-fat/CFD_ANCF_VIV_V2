@@ -1,0 +1,31 @@
+{
+  "CF": {
+    "late_observed_Hz": [
+      1.8001440115209217,
+      1.6002560409665547
+    ],
+    "physical_family_2_natural_Hz": 1.6217542080007634,
+    "late_dominant_family_by_RMS": [
+      2,
+      2
+    ],
+    "supports_family_2": true
+  },
+  "IL": {
+    "late_observed_candidate_Hz": [
+      4.000320025602048,
+      4.000640102416387
+    ],
+    "family_4_natural_Hz": 3.2734351885077073,
+    "family_5_natural_Hz": 4.119591757056693,
+    "closer_natural_frequency_family": [
+      5,
+      5
+    ],
+    "dominant_family_by_total_modal_RMS": [
+      5,
+      5
+    ],
+    "interpretation": "Spectral proximity does not relabel the dominant whole-window modal-energy family; assess 4-Hz band separately if needed."
+  }
+}

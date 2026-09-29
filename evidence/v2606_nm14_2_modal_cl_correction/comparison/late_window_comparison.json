@@ -1,0 +1,40 @@
+{
+  "simulation": [
+    {
+      "window": "5-10s",
+      "fy_Hz": 1.8001440115209217,
+      "physical_ny_by_modal_RMS": 2,
+      "fx_candidate_Hz": 4.000320025602048,
+      "physical_nx_by_modal_RMS": 5,
+      "sigma_y_over_D": 0.20016904942070693,
+      "sigma_x_over_D": 0.10173657842286292,
+      "mean_Cd": 1.7428207156147182,
+      "ACTIVE_REGION_DISTRIBUTED_LOCAL_CL_RMS": 1.1551479426022606,
+      "FULL_RISER_ZERO_EXTENDED_CL_RMS_DIAGNOSTIC": 0.7772556969344365,
+      "RMS_INTEGRATED_TOTAL_CL": 0.38827132293916683
+    },
+    {
+      "window": "7.5-10s",
+      "fy_Hz": 1.6002560409665547,
+      "physical_ny_by_modal_RMS": 2,
+      "fx_candidate_Hz": 4.000640102416387,
+      "physical_nx_by_modal_RMS": 5,
+      "sigma_y_over_D": 0.20766854951043653,
+      "sigma_x_over_D": 0.09573543858252775,
+      "mean_Cd": 1.7698549802423074,
+      "ACTIVE_REGION_DISTRIBUTED_LOCAL_CL_RMS": 1.1526068838186694,
+      "FULL_RISER_ZERO_EXTENDED_CL_RMS_DIAGNOSTIC": 0.7755459138469627,
+      "RMS_INTEGRATED_TOTAL_CL": 0.45427595454013825
+    }
+  ],
+  "Huera_Case_1": {
+    "physical_ny": 2,
+    "fy_Hz": 1.66,
+    "physical_nx": 4,
+    "fx_Hz": 3.4,
+    "mean_Cd": 1.86,
+    "HUERA_RMS_Cl": 1.93
+  },
+  "sigma_definition": "spanwise maximum temporal standard deviation / D, from NM14.1",
+  "frequency_definition": "peak of representative s=2.97 m signal, finite-window resolution; not necessarily exact modal coordinate frequency"
+}

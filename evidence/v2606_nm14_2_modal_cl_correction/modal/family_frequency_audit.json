@@ -1,0 +1,102 @@
+{
+  "model": "frozen current ANCF mass and q0 tangent; 32 elements; 198 DOF",
+  "basis_origin": "v2606_nm14_1_long10s_correction/modal/M.bin (relative to the evidence root)",
+  "source_kernel_modified": false,
+  "constraint_dofs_zero_based": [
+    0,
+    1,
+    2,
+    192,
+    193
+  ],
+  "eigenvector_frequencies_Hz": [
+    0.8089584848982362,
+    0.8089584849100457,
+    1.6217542079589007,
+    1.6217542080426262,
+    2.44201883028231,
+    2.442018830404542,
+    3.273435188456623,
+    3.273435188558792,
+    4.119591757005161,
+    4.119591757108224,
+    4.983970307724093,
+    4.983970307824684
+  ],
+  "M_orthonormality_max_abs_error": 1.1102230246251565e-15,
+  "families": [
+    {
+      "physical_family": 1,
+      "eigenvector_ordinals": [
+        1,
+        2
+      ],
+      "frequency_Hz": 0.8089584849041409,
+      "reference_Hz": 0.80865,
+      "absolute_difference_Hz": 0.00030848490414092655,
+      "relative_difference": 0.0003814813629393762,
+      "pair_split_Hz": 1.1809553335240253e-11
+    },
+    {
+      "physical_family": 2,
+      "eigenvector_ordinals": [
+        3,
+        4
+      ],
+      "frequency_Hz": 1.6217542080007634,
+      "reference_Hz": 1.6211,
+      "absolute_difference_Hz": 0.0006542080007634343,
+      "relative_difference": 0.00040355807831931055,
+      "pair_split_Hz": 8.372547100066186e-11
+    },
+    {
+      "physical_family": 3,
+      "eigenvector_ordinals": [
+        5,
+        6
+      ],
+      "frequency_Hz": 2.442018830343426,
+      "reference_Hz": 2.4411,
+      "absolute_difference_Hz": 0.0009188303434259915,
+      "relative_difference": 0.00037640012429887814,
+      "pair_split_Hz": 1.2223200229755093e-10
+    },
+    {
+      "physical_family": 4,
+      "eigenvector_ordinals": [
+        7,
+        8
+      ],
+      "frequency_Hz": 3.2734351885077073,
+      "reference_Hz": 3.2722,
+      "absolute_difference_Hz": 0.0012351885077070968,
+      "relative_difference": 0.0003774795268342695,
+      "pair_split_Hz": 1.021689399749448e-10
+    },
+    {
+      "physical_family": 5,
+      "eigenvector_ordinals": [
+        9,
+        10
+      ],
+      "frequency_Hz": 4.119591757056693,
+      "reference_Hz": 4.1181,
+      "absolute_difference_Hz": 0.0014917570566925775,
+      "relative_difference": 0.00036224400978426396,
+      "pair_split_Hz": 1.0306333564358283e-10
+    },
+    {
+      "physical_family": 6,
+      "eigenvector_ordinals": [
+        11,
+        12
+      ],
+      "frequency_Hz": 4.983970307774388,
+      "reference_Hz": 4.9822,
+      "absolute_difference_Hz": 0.0017703077743886908,
+      "relative_difference": 0.0003553265172792523,
+      "pair_split_Hz": 1.0059153510155738e-10
+    }
+  ],
+  "reference_status": "Huera-Huarte 2006 thesis Table 5.2, C001 May19 FEM frequencies at mean top tension 1188.28 N; simulation uses nominal 1175 N, so this is a near-tension rather than exact-state comparison"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "FIXED",
+  "interface_s_over_L": 0.4527439024390244,
+  "old_issue": "NM14 augment figures used s/0.13 in selected full-riser plotting code; the resulting horizontal coordinate was not s/L.",
+  "corrected_output_directory": "evidence/v2606_nm14_1_long10s_correction/figures",
+  "corrected_axis": "vertical s/L, range [0,1]",
+  "current_region_annotation": "shaded bar 0 <= s/L <= 0.4527439024390244",
+  "superseded_figures": [
+    "NM14 mean_inline_shape",
+    "NM14 spanwise_sigma_x_over_D",
+    "NM14 spanwise_sigma_y_over_D",
+    "NM14 displacement_envelopes",
+    "NM14 Chaplin-style figure"
+  ],
+  "replacement_figures": [
+    "mean_inline_shape_0_10s",
+    "mean_inline_shape_2_10s",
+    "mean_inline_shape_5_10s",
+    "mean_inline_shape_7p5_10s",
+    "chaplin_fig8_style_simulation_corrected",
+    "xy_trajectories_5_10s_1period",
+    "xy_trajectories_7.5_10s_1period"
+  ]
+}

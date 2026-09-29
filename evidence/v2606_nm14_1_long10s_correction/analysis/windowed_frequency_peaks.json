@@ -1,0 +1,450 @@
+{
+  "0-10s": {
+    "record_length_s": 10.0,
+    "bin_resolution_Hz": 0.1,
+    "inline_detrended_peaks": [
+      {
+        "frequency_Hz": 0.7000280011200447,
+        "PSD": 2.625458819885209e-05,
+        "relative_peak_power": 0.22406248605156812
+      },
+      {
+        "frequency_Hz": 0.500020000800032,
+        "PSD": 9.666477164443912e-06,
+        "relative_peak_power": 0.08249586275821738
+      },
+      {
+        "frequency_Hz": 4.000160006400256,
+        "PSD": 6.356793617454559e-06,
+        "relative_peak_power": 0.054250288386008046
+      },
+      {
+        "frequency_Hz": 0.20000800032001279,
+        "PSD": 4.806332697495372e-06,
+        "relative_peak_power": 0.04101831058385589
+      },
+      {
+        "frequency_Hz": 1.7000680027201087,
+        "PSD": 3.7253324241961254e-06,
+        "relative_peak_power": 0.03179281419353567
+      }
+    ],
+    "inline_window_mean_removed_peaks": [
+      {
+        "frequency_Hz": 0.7000280011200447,
+        "PSD": 2.4889885016499933e-05,
+        "relative_peak_power": 0.20567984426911265
+      },
+      {
+        "frequency_Hz": 0.500020000800032,
+        "PSD": 8.551024433328477e-06,
+        "relative_peak_power": 0.07066217351435965
+      },
+      {
+        "frequency_Hz": 4.000160006400256,
+        "PSD": 6.5374532107693126e-06,
+        "relative_peak_power": 0.054022843312304156
+      },
+      {
+        "frequency_Hz": 0.20000800032001279,
+        "PSD": 5.232159066210474e-06,
+        "relative_peak_power": 0.043236425608876784
+      },
+      {
+        "frequency_Hz": 1.7000680027201087,
+        "PSD": 4.048716809004363e-06,
+        "relative_peak_power": 0.033456942135880456
+      }
+    ],
+    "crossflow_peaks": [
+      {
+        "frequency_Hz": 1.5000600024000958,
+        "PSD": 4.76842522125053e-05,
+        "relative_peak_power": 0.16574436816775504
+      },
+      {
+        "frequency_Hz": 1.7000680027201087,
+        "PSD": 3.433562837385869e-05,
+        "relative_peak_power": 0.11934625723197544
+      },
+      {
+        "frequency_Hz": 2.1000840033601342,
+        "PSD": 3.030411775659986e-05,
+        "relative_peak_power": 0.10533324142454868
+      },
+      {
+        "frequency_Hz": 0.8000320012800511,
+        "PSD": 2.8805073787240586e-05,
+        "relative_peak_power": 0.100122756116949
+      },
+      {
+        "frequency_Hz": 1.9000760030401214,
+        "PSD": 2.0869419557673403e-05,
+        "relative_peak_power": 0.07253943593787218
+      }
+    ],
+    "inline_linear_detrend_sensitivity": [
+      {
+        "frequency_Hz": 0.7000280011200447,
+        "PSD": 2.625458819885209e-05,
+        "relative_peak_power": 0.22406248605156812
+      },
+      {
+        "frequency_Hz": 0.500020000800032,
+        "PSD": 9.666477164443912e-06,
+        "relative_peak_power": 0.08249586275821738
+      },
+      {
+        "frequency_Hz": 4.000160006400256,
+        "PSD": 6.356793617454559e-06,
+        "relative_peak_power": 0.054250288386008046
+      },
+      {
+        "frequency_Hz": 0.20000800032001279,
+        "PSD": 4.806332697495372e-06,
+        "relative_peak_power": 0.04101831058385589
+      },
+      {
+        "frequency_Hz": 1.7000680027201087,
+        "PSD": 3.7253324241961254e-06,
+        "relative_peak_power": 0.03179281419353567
+      }
+    ]
+  },
+  "2-10s": {
+    "record_length_s": 8.0,
+    "bin_resolution_Hz": 0.125,
+    "inline_detrended_peaks": [
+      {
+        "frequency_Hz": 0.7500375018750938,
+        "PSD": 6.713691706238261e-06,
+        "relative_peak_power": 0.17609515558889882
+      },
+      {
+        "frequency_Hz": 4.0002000100005,
+        "PSD": 5.208936891542307e-06,
+        "relative_peak_power": 0.13662655249966058
+      },
+      {
+        "frequency_Hz": 1.000050002500125,
+        "PSD": 2.4270375369172812e-06,
+        "relative_peak_power": 0.06365939506671456
+      },
+      {
+        "frequency_Hz": 0.2500125006250313,
+        "PSD": 1.9689968095704486e-06,
+        "relative_peak_power": 0.05164532640263724
+      },
+      {
+        "frequency_Hz": 1.375068753437672,
+        "PSD": 1.0784029512466328e-06,
+        "relative_peak_power": 0.028285709829489164
+      }
+    ],
+    "inline_window_mean_removed_peaks": [
+      {
+        "frequency_Hz": 0.6250312515625782,
+        "PSD": 6.916917274331367e-06,
+        "relative_peak_power": 0.17954493192469986
+      },
+      {
+        "frequency_Hz": 4.0002000100005,
+        "PSD": 5.268662398433092e-06,
+        "relative_peak_power": 0.13676058193891558
+      },
+      {
+        "frequency_Hz": 1.000050002500125,
+        "PSD": 2.2452623131514934e-06,
+        "relative_peak_power": 0.058281088695953456
+      },
+      {
+        "frequency_Hz": 0.2500125006250313,
+        "PSD": 1.5927471743781924e-06,
+        "relative_peak_power": 0.041343516432995685
+      },
+      {
+        "frequency_Hz": 1.375068753437672,
+        "PSD": 9.902612848133518e-07,
+        "relative_peak_power": 0.02570457154797561
+      }
+    ],
+    "crossflow_peaks": [
+      {
+        "frequency_Hz": 1.5000750037501875,
+        "PSD": 5.3292949760867e-05,
+        "relative_peak_power": 0.24377573637205222
+      },
+      {
+        "frequency_Hz": 2.1251062553127658,
+        "PSD": 4.4150580129339575e-05,
+        "relative_peak_power": 0.20195617301308028
+      },
+      {
+        "frequency_Hz": 1.8750937546877346,
+        "PSD": 3.5701915668708645e-05,
+        "relative_peak_power": 0.1633097965319075
+      },
+      {
+        "frequency_Hz": 0.7500375018750938,
+        "PSD": 1.1865799503271585e-05,
+        "relative_peak_power": 0.05427723600462425
+      },
+      {
+        "frequency_Hz": 1.2500625031251564,
+        "PSD": 3.3615187282483815e-06,
+        "relative_peak_power": 0.015376456116319544
+      }
+    ],
+    "inline_linear_detrend_sensitivity": [
+      {
+        "frequency_Hz": 0.7500375018750938,
+        "PSD": 6.713691706238261e-06,
+        "relative_peak_power": 0.17609515558889882
+      },
+      {
+        "frequency_Hz": 4.0002000100005,
+        "PSD": 5.208936891542307e-06,
+        "relative_peak_power": 0.13662655249966058
+      },
+      {
+        "frequency_Hz": 1.000050002500125,
+        "PSD": 2.4270375369172812e-06,
+        "relative_peak_power": 0.06365939506671456
+      },
+      {
+        "frequency_Hz": 0.2500125006250313,
+        "PSD": 1.9689968095704486e-06,
+        "relative_peak_power": 0.05164532640263724
+      },
+      {
+        "frequency_Hz": 1.375068753437672,
+        "PSD": 1.0784029512466328e-06,
+        "relative_peak_power": 0.028285709829489164
+      }
+    ]
+  },
+  "5-10s": {
+    "record_length_s": 5.0,
+    "bin_resolution_Hz": 0.2,
+    "inline_detrended_peaks": [
+      {
+        "frequency_Hz": 4.000320025602048,
+        "PSD": 4.781123319763941e-06,
+        "relative_peak_power": 0.2473535629204749
+      },
+      {
+        "frequency_Hz": 0.8000640051204096,
+        "PSD": 1.0698428545865766e-06,
+        "relative_peak_power": 0.05534880072076175
+      },
+      {
+        "frequency_Hz": 5.600448035842867,
+        "PSD": 1.032829556779493e-06,
+        "relative_peak_power": 0.05343390113007922
+      },
+      {
+        "frequency_Hz": 4.800384030722458,
+        "PSD": 8.356975092283052e-07,
+        "relative_peak_power": 0.04323518608626765
+      },
+      {
+        "frequency_Hz": 8.200656052484199,
+        "PSD": 5.815672404104562e-07,
+        "relative_peak_power": 0.030087642458144583
+      }
+    ],
+    "inline_window_mean_removed_peaks": [
+      {
+        "frequency_Hz": 4.000320025602048,
+        "PSD": 4.896871287590803e-06,
+        "relative_peak_power": 0.24633375483213774
+      },
+      {
+        "frequency_Hz": 0.8000640051204096,
+        "PSD": 1.124532720330565e-06,
+        "relative_peak_power": 0.05656884797699305
+      },
+      {
+        "frequency_Hz": 5.600448035842867,
+        "PSD": 9.936447666086138e-07,
+        "relative_peak_power": 0.049984619148204276
+      },
+      {
+        "frequency_Hz": 4.800384030722458,
+        "PSD": 8.200961191178904e-07,
+        "relative_peak_power": 0.04125437335008328
+      },
+      {
+        "frequency_Hz": 8.200656052484199,
+        "PSD": 5.895232320651525e-07,
+        "relative_peak_power": 0.029655562253267393
+      }
+    ],
+    "crossflow_peaks": [
+      {
+        "frequency_Hz": 1.8001440115209217,
+        "PSD": 3.0202478324430418e-05,
+        "relative_peak_power": 0.2645342996640846
+      },
+      {
+        "frequency_Hz": 0.8000640051204096,
+        "PSD": 1.6010591952421875e-05,
+        "relative_peak_power": 0.14023189368256
+      },
+      {
+        "frequency_Hz": 2.6002080166413313,
+        "PSD": 1.3424016688497284e-06,
+        "relative_peak_power": 0.011757686952789437
+      },
+      {
+        "frequency_Hz": 3.2002560204816386,
+        "PSD": 8.684887484117118e-07,
+        "relative_peak_power": 0.007606828166859127
+      },
+      {
+        "frequency_Hz": 4.800384030722458,
+        "PSD": 4.6537112648407573e-07,
+        "relative_peak_power": 0.004076043816866898
+      }
+    ],
+    "inline_linear_detrend_sensitivity": [
+      {
+        "frequency_Hz": 4.000320025602048,
+        "PSD": 4.781123319763941e-06,
+        "relative_peak_power": 0.2473535629204749
+      },
+      {
+        "frequency_Hz": 0.8000640051204096,
+        "PSD": 1.0698428545865766e-06,
+        "relative_peak_power": 0.05534880072076175
+      },
+      {
+        "frequency_Hz": 5.600448035842867,
+        "PSD": 1.032829556779493e-06,
+        "relative_peak_power": 0.05343390113007922
+      },
+      {
+        "frequency_Hz": 4.800384030722458,
+        "PSD": 8.356975092283052e-07,
+        "relative_peak_power": 0.04323518608626765
+      },
+      {
+        "frequency_Hz": 8.200656052484199,
+        "PSD": 5.815672404104562e-07,
+        "relative_peak_power": 0.030087642458144583
+      }
+    ]
+  },
+  "7.5-10s": {
+    "record_length_s": 2.5,
+    "bin_resolution_Hz": 0.4,
+    "inline_detrended_peaks": [
+      {
+        "frequency_Hz": 4.000640102416387,
+        "PSD": 3.1319545966674737e-06,
+        "relative_peak_power": 0.3811917929940098
+      },
+      {
+        "frequency_Hz": 4.800768122899664,
+        "PSD": 7.433474166104716e-07,
+        "relative_peak_power": 0.09047319359505247
+      },
+      {
+        "frequency_Hz": 5.600896143382942,
+        "PSD": 7.123824378803193e-07,
+        "relative_peak_power": 0.08670443022449544
+      },
+      {
+        "frequency_Hz": 2.0003200512081936,
+        "PSD": 5.166600718896263e-07,
+        "relative_peak_power": 0.06288296113282733
+      },
+      {
+        "frequency_Hz": 1.200192030724916,
+        "PSD": 4.4023733774020325e-07,
+        "relative_peak_power": 0.05358151114152783
+      }
+    ],
+    "inline_window_mean_removed_peaks": [
+      {
+        "frequency_Hz": 4.000640102416387,
+        "PSD": 2.9199185024922415e-06,
+        "relative_peak_power": 0.33199872532530017
+      },
+      {
+        "frequency_Hz": 5.600896143382942,
+        "PSD": 7.729342774632821e-07,
+        "relative_peak_power": 0.0878836839654991
+      },
+      {
+        "frequency_Hz": 4.800768122899664,
+        "PSD": 7.574189743460813e-07,
+        "relative_peak_power": 0.08611957279131745
+      },
+      {
+        "frequency_Hz": 1.200192030724916,
+        "PSD": 7.573681698582636e-07,
+        "relative_peak_power": 0.08611379625160175
+      },
+      {
+        "frequency_Hz": 2.0003200512081936,
+        "PSD": 7.096367278918143e-07,
+        "relative_peak_power": 0.08068666605009989
+      }
+    ],
+    "crossflow_peaks": [
+      {
+        "frequency_Hz": 1.6002560409665547,
+        "PSD": 3.918196586997227e-05,
+        "relative_peak_power": 0.7843825165687068
+      },
+      {
+        "frequency_Hz": 2.400384061449832,
+        "PSD": 2.497966216645e-06,
+        "relative_peak_power": 0.05000670547817521
+      },
+      {
+        "frequency_Hz": 3.2005120819331094,
+        "PSD": 9.265802308712318e-07,
+        "relative_peak_power": 0.018549179888153085
+      },
+      {
+        "frequency_Hz": 4.400704112658025,
+        "PSD": 2.7746828086824934e-07,
+        "relative_peak_power": 0.005554628604845554
+      },
+      {
+        "frequency_Hz": 5.600896143382942,
+        "PSD": 2.0659008547311244e-07,
+        "relative_peak_power": 0.004135720287218423
+      }
+    ],
+    "inline_linear_detrend_sensitivity": [
+      {
+        "frequency_Hz": 4.000640102416387,
+        "PSD": 3.1319545966674737e-06,
+        "relative_peak_power": 0.3811917929940098
+      },
+      {
+        "frequency_Hz": 4.800768122899664,
+        "PSD": 7.433474166104716e-07,
+        "relative_peak_power": 0.09047319359505247
+      },
+      {
+        "frequency_Hz": 5.600896143382942,
+        "PSD": 7.123824378803193e-07,
+        "relative_peak_power": 0.08670443022449544
+      },
+      {
+        "frequency_Hz": 2.0003200512081936,
+        "PSD": 5.166600718896263e-07,
+        "relative_peak_power": 0.06288296113282733
+      },
+      {
+        "frequency_Hz": 1.200192030724916,
+        "PSD": 4.4023733774020325e-07,
+        "relative_peak_power": 0.05358151114152783
+      }
+    ]
+  }
+}

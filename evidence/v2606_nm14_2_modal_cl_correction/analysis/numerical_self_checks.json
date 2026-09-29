@@ -1,0 +1,8 @@
+{
+  "M_orthonormality_max_abs_error": 1.1102230246251565e-15,
+  "family_2_subspace_rotation_norm_error": 5.204170427930421e-18,
+  "analytical_vs_independent_dense_trapezoid_square_integral_error": 3.8791947432059715e-10,
+  "accepted_force_count": 25000,
+  "state_count": 25000,
+  "direct_force_alignment_to_NM14_1_integrated_RMS": "PASS <=1e-12 for all four windows"
+}

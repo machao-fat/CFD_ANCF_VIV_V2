@@ -1,0 +1,110 @@
+{
+  "physical_force_source": "accepted direct OpenFOAM Fy for five slices",
+  "conversion": "Fy[N] / 0.028[m] once, then / (0.5*rho*U^2*D)",
+  "rho_kg_m3": 1000.0,
+  "U_m_s": 0.31,
+  "D_m": 0.028,
+  "active_m": [
+    0,
+    5.94
+  ],
+  "mapping": "PiecewiseLinearDistributed + NearestConstant",
+  "primary_formula": "sqrt((1/(L_active*T)) integral_time integral_0^L_active (Cl(s,t)-time_mean_Cl(s))^2 ds dt)",
+  "axial_quadrature": "analytically exact integral of square of each linear segment, including constant end segments",
+  "thesis_definition": "Huera-Huarte 2006 PDF p110, Eq 5.18 temporal standard deviation and Eq 5.20 spatial-first/time-second RMS form; PDF pp171-172 section 6.4.2 says transverse-force-coefficient RMS along riser model and in time, using Eq 5.18",
+  "comparison_caveat": "Thesis Case 1 Table 6.1 uses full riser and whole riser was water-immersed; production CFD force reconstruction is exactly zero outside [0,5.94] m. Active-region RMS is not strictly commensurate with thesis full-riser 1.93; full-length zero extension is diagnostic and omits still-water hydrodynamic forces. Integrated-total Cl RMS is different by definition.",
+  "windows": {
+    "0-10s": {
+      "samples": 24999,
+      "ACTIVE_REGION_DISTRIBUTED_LOCAL_CL_RMS": 1.0948898795337636,
+      "FULL_RISER_ZERO_EXTENDED_CL_RMS_DIAGNOSTIC": 0.7367103078298044,
+      "LOCAL_CL_RMS_INCLUDING_MEAN_diagnostic": 1.0952618502616558,
+      "RMS_INTEGRATED_TOTAL_CL": 0.385102955695212,
+      "mean_Cd": 1.7106145813854203,
+      "mean_integrated_total_Cl": 0.018801172760849985,
+      "local_Cl_mean_at_five_centers": [
+        0.03042302331630555,
+        0.02395912972346482,
+        0.01401724480171606,
+        0.05478411733510299,
+        -0.029177651372339755
+      ],
+      "local_Cl_fluctuation_RMS_at_five_centers": [
+        1.3415794470080336,
+        1.4110237683419906,
+        1.3528199905528089,
+        1.346090911912516,
+        1.1795806531343707
+      ]
+    },
+    "2-10s": {
+      "samples": 19999,
+      "ACTIVE_REGION_DISTRIBUTED_LOCAL_CL_RMS": 1.1313607749748533,
+      "FULL_RISER_ZERO_EXTENDED_CL_RMS_DIAGNOSTIC": 0.761250204589719,
+      "LOCAL_CL_RMS_INCLUDING_MEAN_diagnostic": 1.1318427600787795,
+      "RMS_INTEGRATED_TOTAL_CL": 0.3433352441927552,
+      "mean_Cd": 1.73941482262186,
+      "mean_integrated_total_Cl": 0.018438040800749882,
+      "local_Cl_mean_at_five_centers": [
+        0.02161159025378484,
+        0.0380288051029351,
+        0.01616664978918567,
+        0.06009160336484508,
+        -0.043708444507001766
+      ],
+      "local_Cl_fluctuation_RMS_at_five_centers": [
+        1.3595235115504736,
+        1.5016707890972716,
+        1.410975179287813,
+        1.4098796419910906,
+        1.270658981907728
+      ]
+    },
+    "5-10s": {
+      "samples": 12499,
+      "ACTIVE_REGION_DISTRIBUTED_LOCAL_CL_RMS": 1.1551479426022606,
+      "FULL_RISER_ZERO_EXTENDED_CL_RMS_DIAGNOSTIC": 0.7772556969344365,
+      "LOCAL_CL_RMS_INCLUDING_MEAN_diagnostic": 1.156180721472415,
+      "RMS_INTEGRATED_TOTAL_CL": 0.38827132293916683,
+      "mean_Cd": 1.7428207156147182,
+      "mean_integrated_total_Cl": 0.0022260558491488894,
+      "local_Cl_mean_at_five_centers": [
+        0.03008051479253227,
+        0.06187349709469712,
+        0.015003460278665925,
+        -0.0007816942377916698,
+        -0.09504549868235959
+      ],
+      "local_Cl_fluctuation_RMS_at_five_centers": [
+        1.3506839430655526,
+        1.6345798842808383,
+        1.452954283755349,
+        1.4195311002580127,
+        1.2314016521725317
+      ]
+    },
+    "7.5-10s": {
+      "samples": 6249,
+      "ACTIVE_REGION_DISTRIBUTED_LOCAL_CL_RMS": 1.1526068838186694,
+      "FULL_RISER_ZERO_EXTENDED_CL_RMS_DIAGNOSTIC": 0.7755459138469627,
+      "LOCAL_CL_RMS_INCLUDING_MEAN_diagnostic": 1.1538930429082666,
+      "RMS_INTEGRATED_TOTAL_CL": 0.45427595454013825,
+      "mean_Cd": 1.7698549802423074,
+      "mean_integrated_total_Cl": -0.005672218260393091,
+      "local_Cl_mean_at_five_centers": [
+        0.08218099828822993,
+        -0.1021639130819609,
+        0.08438031636269057,
+        -0.03667789093667195,
+        -0.05608060193425301
+      ],
+      "local_Cl_fluctuation_RMS_at_five_centers": [
+        1.4825522734038374,
+        1.5408888006968149,
+        1.6867165454886577,
+        1.353663101049586,
+        1.0374889491102333
+      ]
+    }
+  }
+}

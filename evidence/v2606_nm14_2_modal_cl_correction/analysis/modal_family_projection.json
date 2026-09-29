@@ -1,0 +1,93 @@
+{
+  "former_ny_4_and_nx_1": "raw eigenvector ordinals; ny=4 must be renamed physical family 2",
+  "subspace_measure": "sqrt(time_mean(a_(2m-1)^2 + a_(2m)^2))",
+  "mean_removal": "separate q mean in each window",
+  "windows": {
+    "5-10s": {
+      "sample_count": 12499,
+      "inline": {
+        "pair_invariant_M_normalized_RMS": [
+          0.007117429343523065,
+          0.003765254393058981,
+          0.001952154123268368,
+          0.0013345743879233513,
+          0.008031096893782485,
+          0.0019395128003215467
+        ],
+        "pair_invariant_M_normalized_peak": [
+          0.019368405111195395,
+          0.00896636514525845,
+          0.005856792804737893,
+          0.003526225290681008,
+          0.014181358222120471,
+          0.004189054813851696
+        ],
+        "dominant_physical_family_by_RMS": 5,
+        "note": "M-normalized coordinates have sqrt(kg)*m units, not displacement metres"
+      },
+      "crossflow": {
+        "pair_invariant_M_normalized_RMS": [
+          0.013057098616019147,
+          0.015408391945264943,
+          0.013620469522012619,
+          0.007831812450610471,
+          0.002233752833526108,
+          0.0016152671793500035
+        ],
+        "pair_invariant_M_normalized_peak": [
+          0.026743614551895556,
+          0.03573203397444393,
+          0.02490744501662491,
+          0.020889711123507657,
+          0.00515922241598453,
+          0.004057105388589693
+        ],
+        "dominant_physical_family_by_RMS": 2,
+        "note": "M-normalized coordinates have sqrt(kg)*m units, not displacement metres"
+      }
+    },
+    "7.5-10s": {
+      "sample_count": 6249,
+      "inline": {
+        "pair_invariant_M_normalized_RMS": [
+          0.004151000984712896,
+          0.0033804162717207403,
+          0.00212826507999587,
+          0.0011642600666924474,
+          0.008854437670093857,
+          0.0022401431117622687
+        ],
+        "pair_invariant_M_normalized_peak": [
+          0.01354968996569395,
+          0.007929546042246358,
+          0.005999304152246536,
+          0.0025536013053354453,
+          0.014229151958783836,
+          0.004187295967755907
+        ],
+        "dominant_physical_family_by_RMS": 5,
+        "note": "M-normalized coordinates have sqrt(kg)*m units, not displacement metres"
+      },
+      "crossflow": {
+        "pair_invariant_M_normalized_RMS": [
+          0.008008261844836618,
+          0.018824281795880114,
+          0.012044176264905008,
+          0.006707581456629437,
+          0.0023466070142379634,
+          0.0014618092514617695
+        ],
+        "pair_invariant_M_normalized_peak": [
+          0.019186435935491984,
+          0.03633569862575692,
+          0.02263115261802697,
+          0.013646841922975512,
+          0.005122142868759858,
+          0.00337097761502418
+        ],
+        "dominant_physical_family_by_RMS": 2,
+        "note": "M-normalized coordinates have sqrt(kg)*m units, not displacement metres"
+      }
+    }
+  }
+}

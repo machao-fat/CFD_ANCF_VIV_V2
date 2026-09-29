@@ -1,0 +1,35 @@
+{
+  "classification": "V2606_NM14_1_LONG10S_POSTPROCESS_CORRECTED",
+  "s_over_L_plotting_bug": "FIXED",
+  "startup_contamination_of_inline_metrics": "QUANTIFIED",
+  "late_time_fy_Hz": [
+    1.8001440115209217,
+    1.6002560409665547
+  ],
+  "late_time_candidate_fx_Hz": [
+    4.000320025602048,
+    4.000640102416387
+  ],
+  "fx_over_fy_candidates": [
+    2.222222222222222,
+    2.5
+  ],
+  "current_late_candidate_pair_labels": [
+    "5-10s",
+    "7.5-10s"
+  ],
+  "late_time_sigma_x_over_D": 0.09573543858252775,
+  "late_time_sigma_y_over_D": 0.20766854951043653,
+  "current_modal_basis": "LIMITED",
+  "ny_diagnostic": 4,
+  "nx_diagnostic": 1,
+  "modal_frequency_crosscheck": "NO_COMPATIBLE_CURRENT_ARTIFACT_FOUND",
+  "ten_second_status": "EXTENSION_RECOMMENDED",
+  "extension_basis": [
+    "window-specific inline RMS/frequency changes materially from 0-10 to late windows",
+    "modal basis remains unverified against a retained current-model frequency artifact",
+    "Huera distributed RMS Cl definition remains source-definition-limited"
+  ],
+  "recommended_extension": "10_to_15_s_first; reassess before 20 s",
+  "real_simulation_started": false
+}
