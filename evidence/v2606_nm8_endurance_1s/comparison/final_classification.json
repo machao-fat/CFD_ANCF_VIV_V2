@@ -1,0 +1,202 @@
+{
+  "classification": "V2606_NM8_STRUCTURE_FAIL",
+  "scheme": "parallel-implicit",
+  "mpi_ranks": 6,
+  "windows_requested": 2500,
+  "windows_accepted": 541,
+  "physical_duration_s": 0.2164,
+  "participant_exit_codes": {
+    "fluid": 1,
+    "structure": 2
+  },
+  "wrapper_exit_code": 1,
+  "monitor_exit_code": 1,
+  "mesh_exit_code": 0,
+  "iteration_statistics": {
+    "min": 2.0,
+    "median": 2.0,
+    "mean": 2.0388170055452863,
+    "p95": 2.0,
+    "p99": 3.0,
+    "max": 6.0
+  },
+  "windows_ge_5": 2,
+  "windows_ge_10": 0,
+  "windows_ge_20": 0,
+  "force_residual_range": [
+    3.68e-07,
+    0.00499
+  ],
+  "displacement_residual_range": [
+    4.19e-14,
+    0.000458
+  ],
+  "iqn_warning_total": 958,
+  "warning_trend": [
+    {
+      "window_range": [
+        1,
+        250
+      ],
+      "warning_count": 344,
+      "warnings_per_window": 1.376
+    },
+    {
+      "window_range": [
+        251,
+        500
+      ],
+      "warning_count": 532,
+      "warnings_per_window": 2.128
+    },
+    {
+      "window_range": [
+        501,
+        750
+      ],
+      "warning_count": 82,
+      "warnings_per_window": 2.0
+    },
+    {
+      "window_range": [
+        751,
+        1000
+      ],
+      "warning_count": 0,
+      "warnings_per_window": null
+    },
+    {
+      "window_range": [
+        1001,
+        1250
+      ],
+      "warning_count": 0,
+      "warnings_per_window": null
+    },
+    {
+      "window_range": [
+        1251,
+        1500
+      ],
+      "warning_count": 0,
+      "warnings_per_window": null
+    },
+    {
+      "window_range": [
+        1501,
+        1750
+      ],
+      "warning_count": 0,
+      "warnings_per_window": null
+    },
+    {
+      "window_range": [
+        1751,
+        2000
+      ],
+      "warning_count": 0,
+      "warnings_per_window": null
+    },
+    {
+      "window_range": [
+        2001,
+        2250
+      ],
+      "warning_count": 0,
+      "warnings_per_window": null
+    },
+    {
+      "window_range": [
+        2251,
+        2500
+      ],
+      "warning_count": 0,
+      "warnings_per_window": null
+    }
+  ],
+  "warning_iteration_correlation": {
+    "high_iteration_windows": 2,
+    "warning_lines_in_high_iteration_windows": 18,
+    "high_iteration_windows_with_warning": 2
+  },
+  "max_accepted_Fraw_N": 0.14671205037584317,
+  "max_accepted_Dx_m": 0.011444281610340052,
+  "max_accepted_Dy_m": 0.008036280674138098,
+  "max_accepted_D_norm_m": 0.013984040498021055,
+  "max_abs_Dx_over_D": 0.4087243432264304,
+  "max_abs_Dy_over_D": 0.2870100240763606,
+  "max_accepted_Co": 2.264628455,
+  "max_accepted_meshCo": 0.6723364561,
+  "max_rejected_Co": 2.264628455,
+  "max_rejected_meshCo": 0.5632311439,
+  "mesh_health": {
+    "initial": {
+      "log_present": true,
+      "mesh_ok": true,
+      "min_volume_m3": 7.687364233e-10,
+      "max_nonorthogonality_deg": 43.84604596,
+      "max_skewness": 0.8969795303,
+      "max_aspect_ratio": 7.659081709
+    },
+    "0.5s": {
+      "log_present": false,
+      "mesh_ok": false,
+      "min_volume_m3": null,
+      "max_nonorthogonality_deg": null,
+      "max_skewness": null,
+      "max_aspect_ratio": null
+    },
+    "1.0s": {
+      "log_present": false,
+      "mesh_ok": false,
+      "min_volume_m3": null,
+      "max_nonorthogonality_deg": null,
+      "max_skewness": null,
+      "max_aspect_ratio": null
+    },
+    "last_complete_at_stop": {
+      "log_present": true,
+      "mesh_ok": true,
+      "min_volume_m3": 7.687364014e-10,
+      "max_nonorthogonality_deg": 44.92470634,
+      "max_skewness": 0.9060235669,
+      "max_aspect_ratio": 6.382834643
+    }
+  },
+  "NM7_prefix": {
+    "compared_windows": 500,
+    "bitwise_equality_required": false,
+    "criteria_for_gross_anomaly": "RMS trajectory error normalized by NM7 RMS > 1, or any accepted force/displacement envelope > 10x NM7 maximum",
+    "per_window_numeric_differences": 0,
+    "earliest_numeric_difference_window": null,
+    "NM7_windows": 500,
+    "iteration_mismatch_windows": [],
+    "force_rms_difference_N": 0.0,
+    "force_rms_difference_relative_to_NM7_rms": 0.0,
+    "displacement_rms_difference_m": 0.0,
+    "displacement_rms_difference_relative_to_NM7_rms": 0.0,
+    "mean_abs_Co_difference": 0.0,
+    "mean_abs_meshCo_difference": 0.0,
+    "NM7_max_Fraw_N": 0.14646265796068514,
+    "NM8_max_Fraw_N": 0.14646265796068514,
+    "NM7_max_D_m": 0.012312815988685907,
+    "NM8_max_D_m": 0.012312815988685907,
+    "gross_trajectory_discrepancy": false,
+    "earliest_divergence_window": null
+  },
+  "disk": {
+    "initial_free_bytes": 96665223168,
+    "minimum_free_bytes": 96656838656,
+    "final_free_bytes": 96654413824,
+    "max_scratch_bytes": 73690465
+  },
+  "purgeWrite_observed": true,
+  "retained_production_full_field_times": [
+    "30.0999999999832042",
+    "30.1999999999829711"
+  ],
+  "final_restart_complete": false,
+  "frozen_release_unchanged": true,
+  "runtime_health": false,
+  "next_phase_recommendation": "\u5148\u5904\u7406\u672c\u9636\u6bb5\u5931\u8d25\u9879\uff0c\u4e0d\u5efa\u8bae\u7ee7\u7eed\u52a0\u957f"
+}

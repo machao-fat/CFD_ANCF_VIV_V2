@@ -1,0 +1,18 @@
+{
+  "fluid_exit": 0,
+  "structure_exit": 0,
+  "clean_runtime": true,
+  "checkMesh_OK": true,
+  "attempts": 4,
+  "max_rejected_trial_Courant": 0.8822924897,
+  "max_rejected_trial_meshCourant": 0.003391538409,
+  "accepted_Courant": 0.8822924897,
+  "accepted_meshCourant": 0.006782200244,
+  "max_U_per_attempt_m_s": [
+    0.575048565,
+    0.575048565,
+    0.575048802,
+    0.5750490456
+  ],
+  "fieldMinMax_diagnostic_scratch": "/tmp/nm5a.dG0HOd"
+}

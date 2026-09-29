@@ -1,0 +1,148 @@
+{
+  "V2_FEATURE_RECOVERY_MATRIX": {
+    "arbitrary_N_mapping": "RESTORED",
+    "manifest_driven_mapping_contract": "RESTORED",
+    "force_representation_type_safety": "RESTORED",
+    "active_region_zero_outside": "RESTORED",
+    "slice_length_legacy_only": "RESTORED",
+    "generic_evaluateStructureState": "RESTORED",
+    "permanent_regression_suite": "RESTORED",
+    "virtual_work_and_resultant_audits": "RESTORED",
+    "V2_historical_reference": "PRESENT_ALREADY",
+    "python_coordinator_runtime": "INTENTIONALLY_NOT_PORTED",
+    "worker_process": "INTENTIONALLY_NOT_PORTED",
+    "IPC_wire_state_machine": "INTENTIONALLY_NOT_PORTED",
+    "carried_Force": "INTENTIONALLY_NOT_PORTED",
+    "force_read_offsets": "INTENTIONALLY_NOT_PORTED",
+    "old_rollback": "INTENTIONALLY_NOT_PORTED",
+    "old_parallel_explicit_topology_generator": "INTENTIONALLY_NOT_PORTED",
+    "OF10_RBF_G2_hacks": "INTENTIONALLY_NOT_PORTED",
+    "PiecewiseConstantDistributed": "DIAGNOSTIC_ONLY",
+    "M1_structure_trajectory": "BLOCKED"
+  },
+  "V2_REFERENCE_SEMANTICS": "PASS",
+  "mapping_mode": "PiecewiseLinearDistributed",
+  "endpoint_policy": "NearestConstant",
+  "ANCF_CORE_MODIFIED": "NO",
+  "official_adapter_unchanged": "YES",
+  "CFD_PRECISE_EXECUTED": "NO",
+  "raw_force_conversion": "Fraw / 0.028 exactly once",
+  "distributed_tributary_multiplier": "NO",
+  "force_conservation": "PASS",
+  "gauss3_vs_gauss5_vs_gauss8": {
+    "max_Q_difference": 2.220446049250313e-16
+  },
+  "V2_crosscheck_N2_N3_N5": "PASS",
+  "V2_crosscheck_N2_N3_N5_N8_max_abs": 2.220446049250313e-16,
+  "legacy_regression": "PASS",
+  "NM9B_mapping_replay": {
+    "windows": 100,
+    "generalized_force_difference_statistics": {
+      "M0-M2": {
+        "min": 1.4964951132478614,
+        "median": 4.0720285774011264,
+        "p95": 4.6260081322663105,
+        "max": 4.647295975980631
+      },
+      "M1-M2": {
+        "min": 0.0013344107759988638,
+        "median": 0.026371440128513154,
+        "p95": 0.05831840472149641,
+        "max": 0.061788099045653855
+      },
+      "M0-M1": {
+        "min": 1.4967770400106093,
+        "median": 4.072412791935786,
+        "p95": 4.626063202633012,
+        "max": 4.6472878563061055
+      }
+    },
+    "power_difference_statistics": {
+      "M0-M2": {
+        "min": 0.0028497548382099957,
+        "median": 0.1190286465868182,
+        "p95": 0.16064307910474673,
+        "max": 0.16333842923072941
+      },
+      "M1-M2": {
+        "min": 2.4794380326255435e-08,
+        "median": 3.438406272689394e-06,
+        "p95": 4.3122573608384585e-05,
+        "max": 5.920127159348111e-05
+      },
+      "M0-M1": {
+        "min": 0.002849872653538114,
+        "median": 0.11898854539093312,
+        "p95": 0.16065432578724717,
+        "max": 0.16335120352285928
+      }
+    },
+    "M0": "LegacyPointLumped",
+    "M1": "PiecewiseConstantDistributed offline reference",
+    "M2": "PiecewiseLinearDistributed",
+    "M1_structure_trajectory": "LOAD_ONLY due frozen public API boundary"
+  },
+  "structure_only_replay": {
+    "M0": {
+      "max_abs_Dx": 0.001102418895643758,
+      "max_abs_Dy": 0.0002059364281308132,
+      "max_D594_minus_D495": 0.0010211668861745133,
+      "final_D594_minus_D495": 0.0010211668861745133
+    },
+    "M2": {
+      "max_abs_Dx": 0.0005969368548046178,
+      "max_abs_Dy": 0.00014299104997804988,
+      "max_D594_minus_D495": 0.0003051344028141976,
+      "final_D594_minus_D495": 0.0003051344028141976
+    },
+    "M1": {
+      "status": "LOAD_ONLY",
+      "reason": "No public generalized-force advance API in frozen core; no trajectory fabricated"
+    }
+  },
+  "distributed_mapping_unit_tests": {
+    "status": "PASS",
+    "constant_force_q_error": 3.3306690738754696e-16,
+    "helper_vs_frozen_core_max_abs_error": 5.551115123125783e-16,
+    "gauss3_vs_gauss5_max_abs_difference": 2.220446049250313e-16,
+    "gauss3_vs_gauss8_max_abs_difference": 0,
+    "linear_force_q_error": 5.551115123125783e-16,
+    "conservation_max_abs_error": 4.440892098500626e-16,
+    "v2_crosscheck_errors_n2_n3_n5": [
+      1.1102230246251565e-16,
+      2.220446049250313e-16,
+      1.6653345369377348e-16
+    ],
+    "v2_crosscheck_max_abs_error": 2.220446049250313e-16,
+    "legacy_regression_max_abs_error": 4.440892098500626e-16,
+    "invalid_inputs": {
+      "unsorted": true,
+      "duplicate": true,
+      "nonfinite": true,
+      "outside": true
+    },
+    "mapping_mode": "PiecewiseLinearDistributed",
+    "endpoint_policy": "NearestConstant"
+  },
+  "contract_tests": {
+    "status": "PASS",
+    "nonuniform_sample_positions": true,
+    "nearest_constant_endpoints": true,
+    "outside_zero": true,
+    "arbitrary_N_2_3_5_8": true,
+    "smooth_refinement_N5_N10_N20_N40": true,
+    "virtual_work_abs_error": 2.6391310469463247e-15,
+    "resultant_abs_error": 4.440892098500626e-16,
+    "manifest_duplicate_id_rejected": true,
+    "generic_evaluator_finite": true
+  },
+  "self_test": "PASS",
+  "ANCF_core_hashes": {
+    "ancf_kernel.cpp": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+    "ancf_kernel.hpp": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c"
+  },
+  "structure_replay_M1_limitation": "Frozen core has no public generalized-force advance; M1 is load/power reference only",
+  "classification": "V2606_NM10_1_INCONCLUSIVE",
+  "authorized_next_action": "MORE_DIAGNOSTICS",
+  "NO_CFD_EXECUTED": true
+}

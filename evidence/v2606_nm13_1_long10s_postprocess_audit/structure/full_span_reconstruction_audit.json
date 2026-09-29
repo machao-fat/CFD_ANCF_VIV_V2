@@ -1,0 +1,17 @@
+{
+  "basis": "qualified evaluateStructureState / exact ANCF H(s)",
+  "domain_m": [
+    0.0,
+    13.12
+  ],
+  "five_interface_centers_only": false,
+  "minimum_grid": "all 33 ANCF nodes",
+  "outputs": [
+    "r",
+    "D",
+    "v",
+    "a if available"
+  ],
+  "preferred_grid": "element-resolved dense uniform grid",
+  "status": "READY"
+}

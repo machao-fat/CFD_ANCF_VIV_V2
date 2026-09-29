@@ -1,0 +1,20 @@
+{
+  "anomalies": [],
+  "clean_log": true,
+  "deltaT": 0.0004,
+  "mpi_ranks": 6,
+  "restart_loaded_time": 29.999999999983437,
+  "result": "PASS",
+  "scratch_case": "/tmp/nm3r_smoke.fGfEZc",
+  "scratch_controlDict_sha256": "1994e4e819575cbc1c0aebbcf52a42c9086886dbdc86a10cb0f7e9e32f6881de",
+  "smoke_log": "${V2606_PROJECT_ROOT}/evidence/v2606_nm3_existing_fixed30_release/restart_smoke.log",
+  "smoke_log_sha256": "122071bc74c28b3d90907f609f130693abad28de1c4290b1c6e18da9a3af1f7c",
+  "solved_step_count": 1,
+  "solved_time": 30.000399999983436,
+  "solver_exit_code": 0,
+  "source_case": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "source_configuration_unchanged": true,
+  "source_final_time_directory": "29.9999999999834372",
+  "source_state_unchanged": true,
+  "startFrom": "latestTime"
+}

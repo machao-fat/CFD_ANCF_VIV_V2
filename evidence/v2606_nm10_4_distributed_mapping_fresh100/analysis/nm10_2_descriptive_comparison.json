@@ -1,0 +1,94 @@
+{
+  "NM10_2_20_window_reference": {
+    "max_G_interface": 1.1437234249233894e-05,
+    "NM10_2_pairwise_max": 2.0218317405815244e-07
+  },
+  "NM10_4_first20": {
+    "reference": "${V2606_PROJECT_ROOT}/evidence/v2606_nm10_2_distributed_mapping_smoke20/run/runtime/accepted_windows_structure.jsonl",
+    "iteration_sequence_nm10_2": [
+      6,
+      8,
+      7,
+      6,
+      6,
+      5,
+      6,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      2,
+      3,
+      4
+    ],
+    "iteration_sequence_nm10_4": [
+      6,
+      8,
+      7,
+      6,
+      6,
+      5,
+      6,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      2,
+      3,
+      4
+    ],
+    "iteration_sequence_equal": true,
+    "field_differences": {
+      "F_raw_N": {
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "exact": true,
+        "roundoff_only": true
+      },
+      "D_absolute_m": {
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "exact": true,
+        "roundoff_only": true
+      },
+      "D_s594_x": {
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "exact": true,
+        "roundoff_only": true
+      },
+      "D_s594_y": {
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "exact": true,
+        "roundoff_only": true
+      },
+      "D_s594_minus_s495_norm": {
+        "max_abs": 0.0,
+        "max_relative": 0.0,
+        "exact": true,
+        "roundoff_only": true
+      }
+    },
+    "classification": "EXACT_REPRODUCTION"
+  },
+  "spatial_status": "NOT_ESTABLISHED",
+  "trajectory_equality_required": false,
+  "NM9B_LegacyPointLumped": {
+    "accepted_windows": 100,
+    "max_G_interface": 0.0009203583376466765,
+    "final_G_interface": 0.0009203583376466765
+  }
+}

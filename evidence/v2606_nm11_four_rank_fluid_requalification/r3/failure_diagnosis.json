@@ -1,0 +1,15 @@
+{
+  "classification": "V2606_NM11_FOUR_RANK_MOVING_WALL_COUPLING_FAIL",
+  "stage": "preCICE primary communication handshake",
+  "accepted_windows": 0,
+  "attempt_records": 0,
+  "fluid_exit": 1,
+  "structure_exit": -15,
+  "fluid_log_last_event": "Setting up primary communication to coupling partner/s",
+  "structure_log_last_event": "Setting up primary communication to coupling partner/s",
+  "numerical_failure_observed": false,
+  "mesh_failure_observed": false,
+  "ancf_failure_observed": false,
+  "next_action": "inspect preCICE socket startup/launcher contract before repeating R3",
+  "N5_started": false
+}

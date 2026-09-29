@@ -1,0 +1,14 @@
+{
+  "DIRECT_FORCE_ACCEPTED_ALIGNMENT": "READY",
+  "method": [
+    "native record physical time",
+    "native record ordinal within duplicate time",
+    "slice identity",
+    "coupling attempt ordinal from Structure attempts",
+    "accepted window final attempt",
+    "adapter/launcher event if available"
+  ],
+  "parser": "align_direct_forces.py",
+  "selection": "DIRECT_OPENFOAM_FORCE_AT_ACCEPTED_ATTEMPT",
+  "timestamp_only": "FORBIDDEN"
+}

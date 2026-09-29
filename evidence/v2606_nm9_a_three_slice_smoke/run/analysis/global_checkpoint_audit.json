@@ -1,0 +1,21 @@
+{
+  "Fluid_binary_pre_solve_identity": "NOT_DIRECTLY_OBSERVABLE",
+  "Fluid_official_adapter_rollback_path": "EXERCISED_BY_REPEATED_SAME_TIME_TRIALS",
+  "Structure_qv_hash_restore_exact": true,
+  "pass": true,
+  "rejected_attempts_checked": 77,
+  "samples": [
+    {
+      "attempt": 1,
+      "next_attemptOrdinal": 2,
+      "qv_exact_checkpoint_hash_match": true,
+      "window": 1
+    },
+    {
+      "attempt": 1,
+      "next_attemptOrdinal": 76,
+      "qv_exact_checkpoint_hash_match": true,
+      "window": 10
+    }
+  ]
+}

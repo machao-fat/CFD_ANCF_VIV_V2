@@ -1,0 +1,9 @@
+{
+  "final_20_window": {
+    "Mesh_OK": true,
+    "min_volume_m3": 7.687364225e-10,
+    "max_nonorthogonality_deg": 43.86157728,
+    "max_skewness": 0.896986752,
+    "max_aspect_ratio": 7.655545547
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "checkMesh_pass": true,
+  "max_Courant": 0.8822924897,
+  "max_speed_m_s": 0.5731836936,
+  "mesh_Courant": "NOT_RECORDED_IN_NM4A_LOG",
+  "max_absolute_structure_displacement_m": 4.1835999923927113e-07
+}

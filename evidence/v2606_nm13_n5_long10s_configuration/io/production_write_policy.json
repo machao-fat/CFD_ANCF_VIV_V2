@@ -1,0 +1,11 @@
+{
+  "all_five_cases": "PASS",
+  "checkpoint_physical_interval_s": 0.1,
+  "endTime_s": 40.0,
+  "full_field_write_policy_not_validated_by_running_CFD": true,
+  "max_time_windows": 25000,
+  "purgeWrite": 3,
+  "time_window_size_s": 0.0004,
+  "writeControl": "timeStep",
+  "writeInterval": 250
+}

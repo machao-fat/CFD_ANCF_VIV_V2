@@ -1,0 +1,103 @@
+{
+  "cases": [
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch/fluid_s0594",
+      "field_sha256_rank0": {
+        "U": "47ccef8996c49311850d5d75a43ddfeda9939256a687968ed04222f1057821e5",
+        "U_0": "1996b9ab30f581613f162b86350e509d68ccb1576b7ee2085e8b60bf8179e3d0",
+        "k": "c75e81f1f560b236d5830316b1e50ff4f299e165b9a32d0db7dc3cd5d5320ed8",
+        "nut": "0ebed3151c02086c698af36448f096a4f3cff94180d9172b39d5aafe8ec2d1a9",
+        "omega": "b818ea8992de4607fa802c69628d65aeeb9c378cc9f8cdf64b11071d8fb3deb0",
+        "p": "9f9ea783310b90be3cc50e3acc25f7057f505852f3374df7d5ecfe1cc8554d4b",
+        "phi": "351acbb0a1636fa18a834deeaef8756cdbcd3a89200963ef23c71135eb70908c",
+        "pointDisplacement": "142d02d579f86d926d6ab3512ae1d37bc0ebf52553e9d8ecb9d6ac0ade8b2100"
+      },
+      "label": "s0594",
+      "mesh_sha256_rank0": "ea6e45be5e36f4f0754cfbfa07dadf19f90d6763c3ec9d189f9f8079a64f6a0f",
+      "mpi_ranks": 4,
+      "participant": "Fluid-S1",
+      "s_ref_m": 0.594,
+      "slice_id": "S1"
+    },
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch/fluid_s1782",
+      "field_sha256_rank0": {
+        "U": "47ccef8996c49311850d5d75a43ddfeda9939256a687968ed04222f1057821e5",
+        "U_0": "1996b9ab30f581613f162b86350e509d68ccb1576b7ee2085e8b60bf8179e3d0",
+        "k": "c75e81f1f560b236d5830316b1e50ff4f299e165b9a32d0db7dc3cd5d5320ed8",
+        "nut": "0ebed3151c02086c698af36448f096a4f3cff94180d9172b39d5aafe8ec2d1a9",
+        "omega": "b818ea8992de4607fa802c69628d65aeeb9c378cc9f8cdf64b11071d8fb3deb0",
+        "p": "9f9ea783310b90be3cc50e3acc25f7057f505852f3374df7d5ecfe1cc8554d4b",
+        "phi": "351acbb0a1636fa18a834deeaef8756cdbcd3a89200963ef23c71135eb70908c",
+        "pointDisplacement": "142d02d579f86d926d6ab3512ae1d37bc0ebf52553e9d8ecb9d6ac0ade8b2100"
+      },
+      "label": "s1782",
+      "mesh_sha256_rank0": "ea6e45be5e36f4f0754cfbfa07dadf19f90d6763c3ec9d189f9f8079a64f6a0f",
+      "mpi_ranks": 4,
+      "participant": "Fluid-S2",
+      "s_ref_m": 1.782,
+      "slice_id": "S2"
+    },
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch/fluid_s2970",
+      "field_sha256_rank0": {
+        "U": "47ccef8996c49311850d5d75a43ddfeda9939256a687968ed04222f1057821e5",
+        "U_0": "1996b9ab30f581613f162b86350e509d68ccb1576b7ee2085e8b60bf8179e3d0",
+        "k": "c75e81f1f560b236d5830316b1e50ff4f299e165b9a32d0db7dc3cd5d5320ed8",
+        "nut": "0ebed3151c02086c698af36448f096a4f3cff94180d9172b39d5aafe8ec2d1a9",
+        "omega": "b818ea8992de4607fa802c69628d65aeeb9c378cc9f8cdf64b11071d8fb3deb0",
+        "p": "9f9ea783310b90be3cc50e3acc25f7057f505852f3374df7d5ecfe1cc8554d4b",
+        "phi": "351acbb0a1636fa18a834deeaef8756cdbcd3a89200963ef23c71135eb70908c",
+        "pointDisplacement": "142d02d579f86d926d6ab3512ae1d37bc0ebf52553e9d8ecb9d6ac0ade8b2100"
+      },
+      "label": "s2970",
+      "mesh_sha256_rank0": "ea6e45be5e36f4f0754cfbfa07dadf19f90d6763c3ec9d189f9f8079a64f6a0f",
+      "mpi_ranks": 4,
+      "participant": "Fluid-S3",
+      "s_ref_m": 2.97,
+      "slice_id": "S3"
+    },
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch/fluid_s4158",
+      "field_sha256_rank0": {
+        "U": "47ccef8996c49311850d5d75a43ddfeda9939256a687968ed04222f1057821e5",
+        "U_0": "1996b9ab30f581613f162b86350e509d68ccb1576b7ee2085e8b60bf8179e3d0",
+        "k": "c75e81f1f560b236d5830316b1e50ff4f299e165b9a32d0db7dc3cd5d5320ed8",
+        "nut": "0ebed3151c02086c698af36448f096a4f3cff94180d9172b39d5aafe8ec2d1a9",
+        "omega": "b818ea8992de4607fa802c69628d65aeeb9c378cc9f8cdf64b11071d8fb3deb0",
+        "p": "9f9ea783310b90be3cc50e3acc25f7057f505852f3374df7d5ecfe1cc8554d4b",
+        "phi": "351acbb0a1636fa18a834deeaef8756cdbcd3a89200963ef23c71135eb70908c",
+        "pointDisplacement": "142d02d579f86d926d6ab3512ae1d37bc0ebf52553e9d8ecb9d6ac0ade8b2100"
+      },
+      "label": "s4158",
+      "mesh_sha256_rank0": "ea6e45be5e36f4f0754cfbfa07dadf19f90d6763c3ec9d189f9f8079a64f6a0f",
+      "mpi_ranks": 4,
+      "participant": "Fluid-S4",
+      "s_ref_m": 4.158,
+      "slice_id": "S4"
+    },
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch/fluid_s5346",
+      "field_sha256_rank0": {
+        "U": "47ccef8996c49311850d5d75a43ddfeda9939256a687968ed04222f1057821e5",
+        "U_0": "1996b9ab30f581613f162b86350e509d68ccb1576b7ee2085e8b60bf8179e3d0",
+        "k": "c75e81f1f560b236d5830316b1e50ff4f299e165b9a32d0db7dc3cd5d5320ed8",
+        "nut": "0ebed3151c02086c698af36448f096a4f3cff94180d9172b39d5aafe8ec2d1a9",
+        "omega": "b818ea8992de4607fa802c69628d65aeeb9c378cc9f8cdf64b11071d8fb3deb0",
+        "p": "9f9ea783310b90be3cc50e3acc25f7057f505852f3374df7d5ecfe1cc8554d4b",
+        "phi": "351acbb0a1636fa18a834deeaef8756cdbcd3a89200963ef23c71135eb70908c",
+        "pointDisplacement": "142d02d579f86d926d6ab3512ae1d37bc0ebf52553e9d8ecb9d6ac0ade8b2100"
+      },
+      "label": "s5346",
+      "mesh_sha256_rank0": "ea6e45be5e36f4f0754cfbfa07dadf19f90d6763c3ec9d189f9f8079a64f6a0f",
+      "mpi_ranks": 4,
+      "participant": "Fluid-S5",
+      "s_ref_m": 5.346,
+      "slice_id": "S5"
+    }
+  ],
+  "frozen30_origin": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "initial_time_directory": "29.9999999999834372",
+  "not_nm12_continuation": true,
+  "status": "PASS"
+}

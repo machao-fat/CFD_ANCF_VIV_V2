@@ -1,0 +1,71 @@
+{
+  "s099": {
+    "final": {
+      "max_aspect_ratio": 7.655747974,
+      "max_nonorthogonality": 43.86078799,
+      "max_skewness": 0.8969869325,
+      "mesh_ok": true,
+      "min_volume": 7.687364225e-10,
+      "times_checked": [
+        "29.9999999999834372",
+        "30.0079999999834186"
+      ]
+    },
+    "initial": {
+      "max_aspect_ratio": 7.659081709,
+      "max_nonorthogonality": 43.84604596,
+      "max_skewness": 0.8969795303,
+      "mesh_ok": true,
+      "min_volume": 7.687364233e-10,
+      "times_checked": [
+        "29.9999999999834372"
+      ]
+    }
+  },
+  "s297": {
+    "final": {
+      "max_aspect_ratio": 7.655639383,
+      "max_nonorthogonality": 43.86121932,
+      "max_skewness": 0.8969870464,
+      "mesh_ok": true,
+      "min_volume": 7.687364225e-10,
+      "times_checked": [
+        "29.9999999999834372",
+        "30.0079999999834186"
+      ]
+    },
+    "initial": {
+      "max_aspect_ratio": 7.659081709,
+      "max_nonorthogonality": 43.84604596,
+      "max_skewness": 0.8969795303,
+      "mesh_ok": true,
+      "min_volume": 7.687364233e-10,
+      "times_checked": [
+        "29.9999999999834372"
+      ]
+    }
+  },
+  "s495": {
+    "final": {
+      "max_aspect_ratio": 7.655656037,
+      "max_nonorthogonality": 43.86118555,
+      "max_skewness": 0.8969871073,
+      "mesh_ok": true,
+      "min_volume": 7.687364225e-10,
+      "times_checked": [
+        "29.9999999999834372",
+        "30.0079999999834186"
+      ]
+    },
+    "initial": {
+      "max_aspect_ratio": 7.659081709,
+      "max_nonorthogonality": 43.84604596,
+      "max_skewness": 0.8969795303,
+      "mesh_ok": true,
+      "min_volume": 7.687364233e-10,
+      "times_checked": [
+        "29.9999999999834372"
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "ancf_kernel_cpp_sha256": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+  "ancf_kernel_hpp_sha256": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c",
+  "P1_REF_NE32_static_artifact_sha256": "b298979244f67e23d02a63566e718ccb1f8897570c12b0aab98f7cbbf6577091",
+  "participant_source_sha256": "9894bd7230d779eeab5f546285a77010490bdf591d29306bd790750e799462d5",
+  "participant_binary_sha256": "b8bccf0df1914326b705916bf25a1fd32a3cde63ce72c16120405a763b6fa93b",
+  "build": "g++ -std=c++17 -O2 -ffp-contract=off -Wall -Wextra -Wpedantic main.cpp ancf_kernel.cpp -lprecice -lcrypto",
+  "core_source_original_project": "${D_DRIVE_ROOT}/CFD_Work/projects/CFD_ANCF_VIV_V2",
+  "old_worker_ported": false,
+  "official_adapter_modified": false
+}

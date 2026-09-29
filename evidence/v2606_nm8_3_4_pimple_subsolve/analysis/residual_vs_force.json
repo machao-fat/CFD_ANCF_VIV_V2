@@ -1,0 +1,2082 @@
+{
+  "assessment": "PARTIAL",
+  "pressure": {
+    "A": [
+      {
+        "last_final_residual": 9.608413182e-11,
+        "last_iterations": 184,
+        "outer": 1,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.200294727e-11,
+            "initial_residual": 0.3608893316,
+            "iterations": 190,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.608413182e-11,
+            "initial_residual": 0.236568352,
+            "iterations": 184,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.531209815e-11,
+        "last_iterations": 180,
+        "outer": 2,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.731745475e-11,
+            "initial_residual": 0.2101566071,
+            "iterations": 185,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.531209815e-11,
+            "initial_residual": 0.1400991695,
+            "iterations": 180,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.209203776e-11,
+        "last_iterations": 170,
+        "outer": 3,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.84870802e-11,
+            "initial_residual": 0.1104796357,
+            "iterations": 174,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.209203776e-11,
+            "initial_residual": 0.0753928214,
+            "iterations": 170,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.712458329e-11,
+        "last_iterations": 167,
+        "outer": 4,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.163091596e-11,
+            "initial_residual": 0.05605059372,
+            "iterations": 172,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.712458329e-11,
+            "initial_residual": 0.03879819812,
+            "iterations": 167,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.963618225e-11,
+        "last_iterations": 170,
+        "outer": 5,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.983150646e-11,
+            "initial_residual": 0.03399677909,
+            "iterations": 175,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.963618225e-11,
+            "initial_residual": 0.02364530668,
+            "iterations": 170,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.953572126e-11,
+        "last_iterations": 169,
+        "outer": 6,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.480632477e-11,
+            "initial_residual": 0.02663245155,
+            "iterations": 174,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.953572126e-11,
+            "initial_residual": 0.01856566921,
+            "iterations": 169,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.260803998e-11,
+        "last_iterations": 166,
+        "outer": 7,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.619155192e-11,
+            "initial_residual": 0.01974404023,
+            "iterations": 170,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.260803998e-11,
+            "initial_residual": 0.01378970547,
+            "iterations": 166,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.730425099e-11,
+        "last_iterations": 158,
+        "outer": 8,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.917418195e-11,
+            "initial_residual": 0.0134254345,
+            "iterations": 162,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.730425099e-11,
+            "initial_residual": 0.009381768004,
+            "iterations": 158,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.136061007e-11,
+        "last_iterations": 146,
+        "outer": 9,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.492409905e-11,
+            "initial_residual": 0.008471881605,
+            "iterations": 149,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.136061007e-11,
+            "initial_residual": 0.005917659059,
+            "iterations": 146,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.279712276e-11,
+        "last_iterations": 131,
+        "outer": 10,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.929889894e-11,
+            "initial_residual": 0.005113876321,
+            "iterations": 135,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.279712276e-11,
+            "initial_residual": 0.003576391952,
+            "iterations": 131,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.047149544e-11,
+        "last_iterations": 135,
+        "outer": 11,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.917353206e-11,
+            "initial_residual": 0.003118093117,
+            "iterations": 139,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.047149544e-11,
+            "initial_residual": 0.00218532157,
+            "iterations": 135,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.874261985e-11,
+        "last_iterations": 131,
+        "outer": 12,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.451406222e-11,
+            "initial_residual": 0.002052561183,
+            "iterations": 136,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.874261985e-11,
+            "initial_residual": 0.001440811319,
+            "iterations": 131,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.459075146e-11,
+        "last_iterations": 126,
+        "outer": 13,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.575316205e-11,
+            "initial_residual": 0.001461027235,
+            "iterations": 130,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.459075146e-11,
+            "initial_residual": 0.001026513921,
+            "iterations": 126,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.975706947e-11,
+        "last_iterations": 119,
+        "outer": 14,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.219141606e-11,
+            "initial_residual": 0.001032703208,
+            "iterations": 123,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.975706947e-11,
+            "initial_residual": 0.0007211016015,
+            "iterations": 119,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.563034656e-11,
+        "last_iterations": 115,
+        "outer": 15,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.866963702e-11,
+            "initial_residual": 0.0007041444531,
+            "iterations": 121,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.563034656e-11,
+            "initial_residual": 0.0004928171291,
+            "iterations": 115,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.169091926e-11,
+        "last_iterations": 112,
+        "outer": 16,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 8.982485628e-11,
+            "initial_residual": 0.0004673073651,
+            "iterations": 116,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.169091926e-11,
+            "initial_residual": 0.000333114335,
+            "iterations": 112,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.54680653e-11,
+        "last_iterations": 108,
+        "outer": 17,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.795689704e-11,
+            "initial_residual": 0.0003145895567,
+            "iterations": 110,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.54680653e-11,
+            "initial_residual": 0.0002258907345,
+            "iterations": 108,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.156939114e-11,
+        "last_iterations": 107,
+        "outer": 18,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.63877013e-11,
+            "initial_residual": 0.0002169763398,
+            "iterations": 108,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.156939114e-11,
+            "initial_residual": 0.0001566053578,
+            "iterations": 107,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.912973108e-11,
+        "last_iterations": 104,
+        "outer": 19,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.535677839e-11,
+            "initial_residual": 0.0001530183778,
+            "iterations": 107,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.912973108e-11,
+            "initial_residual": 0.0001107276938,
+            "iterations": 104,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.394521196e-11,
+        "last_iterations": 101,
+        "outer": 20,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.637764943e-11,
+            "initial_residual": 0.0001082783769,
+            "iterations": 104,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.394521196e-11,
+            "initial_residual": 7.868512091e-05,
+            "iterations": 101,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.973614964e-11,
+        "last_iterations": 96,
+        "outer": 21,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.336933135e-11,
+            "initial_residual": 7.646483099e-05,
+            "iterations": 100,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.973614964e-11,
+            "initial_residual": 5.620699545e-05,
+            "iterations": 96,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.958661642e-11,
+        "last_iterations": 92,
+        "outer": 22,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.687588509e-11,
+            "initial_residual": 5.48262591e-05,
+            "iterations": 95,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.958661642e-11,
+            "initial_residual": 4.08949661e-05,
+            "iterations": 92,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.159051545e-11,
+        "last_iterations": 89,
+        "outer": 23,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.462797796e-11,
+            "initial_residual": 4.000533277e-05,
+            "iterations": 91,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.159051545e-11,
+            "initial_residual": 3.016780097e-05,
+            "iterations": 89,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.586820022e-11,
+        "last_iterations": 85,
+        "outer": 24,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.563933056e-11,
+            "initial_residual": 2.95553589e-05,
+            "iterations": 87,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.586820022e-11,
+            "initial_residual": 2.254285834e-05,
+            "iterations": 85,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.594359127e-11,
+        "last_iterations": 82,
+        "outer": 25,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.354846663e-11,
+            "initial_residual": 2.213255287e-05,
+            "iterations": 84,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.594359127e-11,
+            "initial_residual": 1.711550787e-05,
+            "iterations": 82,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.281600585e-11,
+        "last_iterations": 80,
+        "outer": 26,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.639348698e-11,
+            "initial_residual": 1.684004207e-05,
+            "iterations": 81,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.281600585e-11,
+            "initial_residual": 1.325415932e-05,
+            "iterations": 80,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.518208583e-11,
+        "last_iterations": 78,
+        "outer": 27,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.903521405e-11,
+            "initial_residual": 1.308256419e-05,
+            "iterations": 79,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.518208583e-11,
+            "initial_residual": 1.046363268e-05,
+            "iterations": 78,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.501090908e-11,
+        "last_iterations": 76,
+        "outer": 28,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.535148938e-11,
+            "initial_residual": 1.033191211e-05,
+            "iterations": 78,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.501090908e-11,
+            "initial_residual": 8.384607344e-06,
+            "iterations": 76,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.63022299e-11,
+        "last_iterations": 73,
+        "outer": 29,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.266171032e-11,
+            "initial_residual": 8.271012955e-06,
+            "iterations": 76,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.63022299e-11,
+            "initial_residual": 6.807961265e-06,
+            "iterations": 73,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.804984183e-11,
+        "last_iterations": 141,
+        "outer": 30,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.244849699e-11,
+            "initial_residual": 0.2652969076,
+            "iterations": 157,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.804984183e-11,
+            "initial_residual": 0.01405424053,
+            "iterations": 141,
+            "pressure_corrector": 2
+          }
+        ]
+      }
+    ],
+    "B": [
+      {
+        "last_final_residual": 9.661650668e-11,
+        "last_iterations": 184,
+        "outer": 1,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.252857047e-11,
+            "initial_residual": 0.3609620637,
+            "iterations": 190,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.661650668e-11,
+            "initial_residual": 0.2365921788,
+            "iterations": 184,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.547351379e-11,
+        "last_iterations": 180,
+        "outer": 2,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.755695181e-11,
+            "initial_residual": 0.2101566919,
+            "iterations": 185,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.547351379e-11,
+            "initial_residual": 0.1400933791,
+            "iterations": 180,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.965570017e-11,
+        "last_iterations": 169,
+        "outer": 3,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.79549534e-11,
+            "initial_residual": 0.1104460702,
+            "iterations": 174,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.965570017e-11,
+            "initial_residual": 0.07536717524,
+            "iterations": 169,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.80563952e-11,
+        "last_iterations": 167,
+        "outer": 4,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.248961617e-11,
+            "initial_residual": 0.05604729799,
+            "iterations": 172,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.80563952e-11,
+            "initial_residual": 0.03879292191,
+            "iterations": 167,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.152957927e-11,
+        "last_iterations": 171,
+        "outer": 5,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.271588997e-11,
+            "initial_residual": 0.03400378644,
+            "iterations": 176,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.152957927e-11,
+            "initial_residual": 0.02365073458,
+            "iterations": 171,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.965000799e-11,
+        "last_iterations": 169,
+        "outer": 6,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.49096206e-11,
+            "initial_residual": 0.02663821247,
+            "iterations": 174,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.965000799e-11,
+            "initial_residual": 0.0185724731,
+            "iterations": 169,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.261544627e-11,
+        "last_iterations": 166,
+        "outer": 7,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.620222237e-11,
+            "initial_residual": 0.0197477767,
+            "iterations": 170,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.261544627e-11,
+            "initial_residual": 0.01379412842,
+            "iterations": 166,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.691117654e-11,
+        "last_iterations": 158,
+        "outer": 8,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.874548951e-11,
+            "initial_residual": 0.01342932439,
+            "iterations": 162,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.691117654e-11,
+            "initial_residual": 0.00938403085,
+            "iterations": 158,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.84583298e-11,
+        "last_iterations": 145,
+        "outer": 9,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.291875975e-11,
+            "initial_residual": 0.008476088738,
+            "iterations": 149,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.84583298e-11,
+            "initial_residual": 0.005920378692,
+            "iterations": 145,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.448166455e-11,
+        "last_iterations": 131,
+        "outer": 10,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.369759566e-11,
+            "initial_residual": 0.005116953884,
+            "iterations": 136,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.448166455e-11,
+            "initial_residual": 0.00357759864,
+            "iterations": 131,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.199859124e-11,
+        "last_iterations": 135,
+        "outer": 11,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.249330094e-11,
+            "initial_residual": 0.003119483982,
+            "iterations": 140,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.199859124e-11,
+            "initial_residual": 0.002186221139,
+            "iterations": 135,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.90906939e-11,
+        "last_iterations": 131,
+        "outer": 12,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.484538084e-11,
+            "initial_residual": 0.002053538925,
+            "iterations": 136,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.90906939e-11,
+            "initial_residual": 0.001441738873,
+            "iterations": 131,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.433412996e-11,
+        "last_iterations": 126,
+        "outer": 13,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.54261607e-11,
+            "initial_residual": 0.001462188689,
+            "iterations": 130,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.433412996e-11,
+            "initial_residual": 0.001027471806,
+            "iterations": 126,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.905569225e-11,
+        "last_iterations": 119,
+        "outer": 14,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.158198347e-11,
+            "initial_residual": 0.001033796724,
+            "iterations": 123,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.905569225e-11,
+            "initial_residual": 0.0007219218846,
+            "iterations": 119,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.555033346e-11,
+        "last_iterations": 115,
+        "outer": 15,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.022346891e-11,
+            "initial_residual": 0.0007048694792,
+            "iterations": 122,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.555033346e-11,
+            "initial_residual": 0.0004932606384,
+            "iterations": 115,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.231447103e-11,
+        "last_iterations": 112,
+        "outer": 16,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.1114905e-11,
+            "initial_residual": 0.0004676986049,
+            "iterations": 116,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.231447103e-11,
+            "initial_residual": 0.0003333256266,
+            "iterations": 112,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.578438434e-11,
+        "last_iterations": 108,
+        "outer": 17,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.870108723e-11,
+            "initial_residual": 0.0003147818021,
+            "iterations": 110,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.578438434e-11,
+            "initial_residual": 0.000225993923,
+            "iterations": 108,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.22963316e-11,
+        "last_iterations": 107,
+        "outer": 18,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.715096239e-11,
+            "initial_residual": 0.0002170647062,
+            "iterations": 108,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.22963316e-11,
+            "initial_residual": 0.0001568114203,
+            "iterations": 107,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.160298437e-11,
+        "last_iterations": 105,
+        "outer": 19,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.655113223e-11,
+            "initial_residual": 0.0001532218394,
+            "iterations": 107,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.160298437e-11,
+            "initial_residual": 0.000110962431,
+            "iterations": 105,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.491937586e-11,
+        "last_iterations": 101,
+        "outer": 20,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.761992106e-11,
+            "initial_residual": 0.000108505373,
+            "iterations": 104,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.491937586e-11,
+            "initial_residual": 7.890808334e-05,
+            "iterations": 101,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.147365878e-11,
+        "last_iterations": 97,
+        "outer": 21,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.419942693e-11,
+            "initial_residual": 7.667369217e-05,
+            "iterations": 100,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.147365878e-11,
+            "initial_residual": 5.640407082e-05,
+            "iterations": 97,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.973926131e-11,
+        "last_iterations": 92,
+        "outer": 22,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.713813608e-11,
+            "initial_residual": 5.501250885e-05,
+            "iterations": 95,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.973926131e-11,
+            "initial_residual": 4.10591852e-05,
+            "iterations": 92,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.152257967e-11,
+        "last_iterations": 89,
+        "outer": 23,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.462585633e-11,
+            "initial_residual": 4.016887077e-05,
+            "iterations": 91,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.152257967e-11,
+            "initial_residual": 3.02992633e-05,
+            "iterations": 89,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.569440696e-11,
+        "last_iterations": 85,
+        "outer": 24,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.545363383e-11,
+            "initial_residual": 2.968088602e-05,
+            "iterations": 87,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.569440696e-11,
+            "initial_residual": 2.263602364e-05,
+            "iterations": 85,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.572626131e-11,
+        "last_iterations": 82,
+        "outer": 25,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.336804499e-11,
+            "initial_residual": 2.222064591e-05,
+            "iterations": 84,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.572626131e-11,
+            "initial_residual": 1.717629383e-05,
+            "iterations": 82,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.261622262e-11,
+        "last_iterations": 80,
+        "outer": 26,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.61553378e-11,
+            "initial_residual": 1.689529297e-05,
+            "iterations": 81,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.261622262e-11,
+            "initial_residual": 1.328991773e-05,
+            "iterations": 80,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.511035588e-11,
+        "last_iterations": 78,
+        "outer": 27,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.884967258e-11,
+            "initial_residual": 1.311664015e-05,
+            "iterations": 79,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.511035588e-11,
+            "initial_residual": 1.048419299e-05,
+            "iterations": 78,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.51702606e-11,
+        "last_iterations": 76,
+        "outer": 28,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.547118043e-11,
+            "initial_residual": 1.035220388e-05,
+            "iterations": 78,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.51702606e-11,
+            "initial_residual": 8.395470431e-06,
+            "iterations": 76,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.659580163e-11,
+        "last_iterations": 73,
+        "outer": 29,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.297956008e-11,
+            "initial_residual": 8.277592777e-06,
+            "iterations": 76,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.659580163e-11,
+            "initial_residual": 6.807302936e-06,
+            "iterations": 73,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.801209774e-11,
+        "last_iterations": 141,
+        "outer": 30,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.244804911e-11,
+            "initial_residual": 0.2652415242,
+            "iterations": 157,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.801209774e-11,
+            "initial_residual": 0.01405117174,
+            "iterations": 141,
+            "pressure_corrector": 2
+          }
+        ]
+      }
+    ],
+    "D": [
+      {
+        "last_final_residual": 9.575227062e-11,
+        "last_iterations": 184,
+        "outer": 1,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.167760178e-11,
+            "initial_residual": 0.3608441585,
+            "iterations": 190,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.575227062e-11,
+            "initial_residual": 0.2365533755,
+            "iterations": 184,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.52429808e-11,
+        "last_iterations": 180,
+        "outer": 2,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.719726804e-11,
+            "initial_residual": 0.2101566681,
+            "iterations": 185,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.52429808e-11,
+            "initial_residual": 0.1401029345,
+            "iterations": 180,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.239829332e-11,
+        "last_iterations": 170,
+        "outer": 3,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.883220493e-11,
+            "initial_residual": 0.1105012053,
+            "iterations": 174,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.239829332e-11,
+            "initial_residual": 0.07540988305,
+            "iterations": 170,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.654239068e-11,
+        "last_iterations": 167,
+        "outer": 4,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.108765842e-11,
+            "initial_residual": 0.05605252985,
+            "iterations": 172,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.654239068e-11,
+            "initial_residual": 0.03880125392,
+            "iterations": 167,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.875281896e-11,
+        "last_iterations": 170,
+        "outer": 5,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.902439354e-11,
+            "initial_residual": 0.03399234518,
+            "iterations": 175,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.875281896e-11,
+            "initial_residual": 0.02364182357,
+            "iterations": 170,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.946095784e-11,
+        "last_iterations": 169,
+        "outer": 6,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.473670345e-11,
+            "initial_residual": 0.02662864724,
+            "iterations": 174,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.946095784e-11,
+            "initial_residual": 0.0185609949,
+            "iterations": 169,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.260220022e-11,
+        "last_iterations": 166,
+        "outer": 7,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.618427739e-11,
+            "initial_residual": 0.01974171728,
+            "iterations": 170,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.260220022e-11,
+            "initial_residual": 0.0137873336,
+            "iterations": 166,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.755163898e-11,
+        "last_iterations": 158,
+        "outer": 8,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.944611383e-11,
+            "initial_residual": 0.01342323054,
+            "iterations": 162,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.755163898e-11,
+            "initial_residual": 0.00938078184,
+            "iterations": 158,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.241261849e-11,
+        "last_iterations": 146,
+        "outer": 9,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.619023e-11,
+            "initial_residual": 0.008469522362,
+            "iterations": 149,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.241261849e-11,
+            "initial_residual": 0.005916273247,
+            "iterations": 146,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.188479741e-11,
+        "last_iterations": 131,
+        "outer": 10,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.747456801e-11,
+            "initial_residual": 0.005112039522,
+            "iterations": 135,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.188479741e-11,
+            "initial_residual": 0.003575309788,
+            "iterations": 131,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.918523081e-11,
+        "last_iterations": 134,
+        "outer": 11,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.812451251e-11,
+            "initial_residual": 0.00311691281,
+            "iterations": 139,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.918523081e-11,
+            "initial_residual": 0.002184809731,
+            "iterations": 134,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.853122072e-11,
+        "last_iterations": 131,
+        "outer": 12,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.431572862e-11,
+            "initial_residual": 0.002052064986,
+            "iterations": 136,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.853122072e-11,
+            "initial_residual": 0.001440660981,
+            "iterations": 131,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.477567126e-11,
+        "last_iterations": 126,
+        "outer": 13,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.596923378e-11,
+            "initial_residual": 0.001460685128,
+            "iterations": 130,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.477567126e-11,
+            "initial_residual": 0.001026345656,
+            "iterations": 126,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.196541591e-11,
+        "last_iterations": 120,
+        "outer": 14,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.257323387e-11,
+            "initial_residual": 0.00103234994,
+            "iterations": 123,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.196541591e-11,
+            "initial_residual": 0.0007207049843,
+            "iterations": 120,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.568504668e-11,
+        "last_iterations": 115,
+        "outer": 15,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.776680606e-11,
+            "initial_residual": 0.0007037915094,
+            "iterations": 121,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.568504668e-11,
+            "initial_residual": 0.0004925351987,
+            "iterations": 115,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.131996128e-11,
+        "last_iterations": 112,
+        "outer": 16,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.920087123e-11,
+            "initial_residual": 0.0004670736849,
+            "iterations": 115,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.131996128e-11,
+            "initial_residual": 0.0003328864076,
+            "iterations": 112,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.523794071e-11,
+        "last_iterations": 108,
+        "outer": 17,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.749955453e-11,
+            "initial_residual": 0.0003143788772,
+            "iterations": 110,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.523794071e-11,
+            "initial_residual": 0.0002256743029,
+            "iterations": 108,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.963008011e-11,
+        "last_iterations": 106,
+        "outer": 18,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.58649886e-11,
+            "initial_residual": 0.0002167351414,
+            "iterations": 108,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.963008011e-11,
+            "initial_residual": 0.0001564121713,
+            "iterations": 106,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.847697523e-11,
+        "last_iterations": 104,
+        "outer": 19,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.459541465e-11,
+            "initial_residual": 0.0001528369743,
+            "iterations": 107,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.847697523e-11,
+            "initial_residual": 0.000110638905,
+            "iterations": 104,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.344226647e-11,
+        "last_iterations": 101,
+        "outer": 20,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.565427728e-11,
+            "initial_residual": 0.0001081912505,
+            "iterations": 104,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.344226647e-11,
+            "initial_residual": 7.867411476e-05,
+            "iterations": 101,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.95557924e-11,
+        "last_iterations": 96,
+        "outer": 21,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.294749162e-11,
+            "initial_residual": 7.645781764e-05,
+            "iterations": 100,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.95557924e-11,
+            "initial_residual": 5.62454528e-05,
+            "iterations": 96,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.966465639e-11,
+        "last_iterations": 92,
+        "outer": 22,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.683362364e-11,
+            "initial_residual": 5.486225342e-05,
+            "iterations": 95,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.966465639e-11,
+            "initial_residual": 4.09467511e-05,
+            "iterations": 92,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.177690897e-11,
+        "last_iterations": 89,
+        "outer": 23,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.475289472e-11,
+            "initial_residual": 4.00479639e-05,
+            "iterations": 91,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.177690897e-11,
+            "initial_residual": 3.021874532e-05,
+            "iterations": 89,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.606394403e-11,
+        "last_iterations": 85,
+        "outer": 24,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.584584994e-11,
+            "initial_residual": 2.960199868e-05,
+            "iterations": 87,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.606394403e-11,
+            "initial_residual": 2.258064188e-05,
+            "iterations": 85,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.612454898e-11,
+        "last_iterations": 82,
+        "outer": 25,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.370271672e-11,
+            "initial_residual": 2.217206439e-05,
+            "iterations": 84,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.612454898e-11,
+            "initial_residual": 1.714764102e-05,
+            "iterations": 82,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.29657636e-11,
+        "last_iterations": 80,
+        "outer": 26,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.655421561e-11,
+            "initial_residual": 1.687427732e-05,
+            "iterations": 81,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.29657636e-11,
+            "initial_residual": 1.328394906e-05,
+            "iterations": 80,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.521873579e-11,
+        "last_iterations": 78,
+        "outer": 27,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.91504329e-11,
+            "initial_residual": 1.311442631e-05,
+            "iterations": 79,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.521873579e-11,
+            "initial_residual": 1.048731369e-05,
+            "iterations": 78,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.487816242e-11,
+        "last_iterations": 76,
+        "outer": 28,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.525108988e-11,
+            "initial_residual": 1.0354646e-05,
+            "iterations": 78,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.487816242e-11,
+            "initial_residual": 8.399169563e-06,
+            "iterations": 76,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.607814772e-11,
+        "last_iterations": 73,
+        "outer": 29,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.243099435e-11,
+            "initial_residual": 8.286898355e-06,
+            "iterations": 76,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.607814772e-11,
+            "initial_residual": 6.819153854e-06,
+            "iterations": 73,
+            "pressure_corrector": 2
+          }
+        ]
+      },
+      {
+        "last_final_residual": 9.807209104e-11,
+        "last_iterations": 141,
+        "outer": 30,
+        "solves": [
+          {
+            "dictionary": "p",
+            "final_inner": false,
+            "final_residual": 9.244843763e-11,
+            "initial_residual": 0.2653314663,
+            "iterations": 157,
+            "pressure_corrector": 1
+          },
+          {
+            "dictionary": "pFinal",
+            "final_inner": true,
+            "final_residual": 9.807209104e-11,
+            "initial_residual": 0.01405609481,
+            "iterations": 141,
+            "pressure_corrector": 2
+          }
+        ]
+      }
+    ]
+  },
+  "reason": "Final pressure residuals reach approximately 1e-10 throughout, while initial residuals and force changes decay through outer 29; the outer-30 reset breaks a simple one-to-one residual/force criterion."
+}

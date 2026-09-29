@@ -1,0 +1,14 @@
+{
+  "participant_exits": {
+    "participant_exits": {
+      "structure": 0,
+      "s099": 0,
+      "s297": 0,
+      "s495": 0
+    },
+    "wrapper_exit": 0,
+    "initial_gate": "PASS",
+    "stop_reason": null,
+    "accepted_windows": 20
+  }
+}

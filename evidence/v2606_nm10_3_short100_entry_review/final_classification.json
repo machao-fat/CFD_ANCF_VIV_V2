@@ -1,0 +1,117 @@
+{
+  "review_scope": "READ_ONLY; no CFD/preCICE/source modification/build/new replay",
+  "input_nm10_2_classification": "V2606_NM10_2_THREE_SLICE_DISTRIBUTED_MAPPING_SMOKE20_PASS",
+  "review_gates": {
+    "accepted_windows": "20/20",
+    "forced_acceptance": 0,
+    "participant_exits": {
+      "structure": 0,
+      "s099": 0,
+      "s297": 0,
+      "s495": 0
+    },
+    "all_participant_exits_zero": true,
+    "iteration_max_lt_50": true,
+    "force_convergence_pass": true,
+    "displacement_convergence_pass": true,
+    "no_nan_inf": true,
+    "no_ancf_failure": true,
+    "no_fluid_failure": true,
+    "no_mesh_failure": true,
+    "runtime_distributed_q_reconstruction": true,
+    "runtime_q_max_abs_difference": 6.661338147750939e-16,
+    "one_global_ancf_advance_per_attempt": true,
+    "rollback_qv_restore": true,
+    "movingWallVelocity_3_of_3": true,
+    "p_relTol_0p01_3_of_3": true,
+    "pFinal_relTol_0_3_of_3": true,
+    "ancf_core_unchanged": true,
+    "official_adapter_unchanged": true,
+    "fraw_div_unit_span_exactly_once": true,
+    "distributed_tributary_multiplier": false
+  },
+  "coupling_behavior": {
+    "iteration_sequence": [
+      6,
+      8,
+      7,
+      6,
+      6,
+      5,
+      6,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      2,
+      3,
+      4
+    ],
+    "stats": {
+      "min": 2,
+      "median": 3.0,
+      "mean": 4.0,
+      "p95": 7.050000000000001,
+      "max": 8,
+      "counts_ge5": 7,
+      "counts_ge10": 0,
+      "counts_ge20": 0,
+      "counts_ge40": 0,
+      "counts_50": 0
+    },
+    "persistent_iteration_degradation": "NO_EVIDENCE_IN_20_WINDOWS",
+    "long_duration_stability_inferred": false
+  },
+  "structural_spatial_review": {
+    "max_Dnorm_m": {
+      "s099": 2.283812294009542e-05,
+      "s297": 2.2636056686656327e-05,
+      "s495": 2.2758452491534233e-05
+    },
+    "max_D594_minus_D495_m": 1.1437234249233894e-05,
+    "max_pairwise_center_difference_m": {
+      "S099-S297": 2.0218317405815244e-07,
+      "S297-S495": 1.2248826370358128e-07,
+      "S099-S495": 7.969849047444656e-08
+    },
+    "THREE_SLICE_SPATIAL_ADEQUACY": "NOT_ESTABLISHED"
+  },
+  "rejected_trial_review": {
+    "max_rejected_direct_Fraw_N": {
+      "s099": 0.6030178142080339,
+      "s297": 0.5915368628246693,
+      "s495": 0.5979637382405012
+    },
+    "max_rejected_Qtrial_norm": 5.191086814653089,
+    "max_rejected_Qtrial_location": {
+      "window": 3,
+      "attempt": 19
+    },
+    "first_trial_trend": "BOUNDED_OVER_20_WINDOWS",
+    "nonfinite_state": false,
+    "ancf_failure": false,
+    "fluid_failure": false,
+    "mesh_failure": false,
+    "all_rejected_structure_qv_rollbacks_recovered": true
+  },
+  "nm10_4_entry_contract": {
+    "fresh_from_frozen30_required": true,
+    "three_fresh_fluid_copies_required": true,
+    "same_q0_v0_and_frozen_numerics_required": true,
+    "same_mapping_contract": "PiecewiseLinearDistributed + NearestConstant, active [0,5.94], unit span 0.028",
+    "exactly_100_accepted_windows": true,
+    "forced_acceptance_allowed": false,
+    "first20_reproducibility_gate_required": true
+  },
+  "classification": "V2606_NM10_3_SHORT100_ENTRY_REVIEW_PASS",
+  "authorized_next_action": "NM10_4_THREE_SLICE_DISTRIBUTED_MAPPING_FRESH100",
+  "nm10_4_executed_in_this_review": false,
+  "cfd_executed_in_this_review": false,
+  "precice_executed_in_this_review": false
+}

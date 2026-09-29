@@ -1,0 +1,29 @@
+{
+  "reference": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_endurance_1s/runtime/window_trace.jsonl",
+  "target_windows": 541,
+  "tolerances": {
+    "force_N": 1e-12,
+    "displacement_m": 1e-14,
+    "Co": 1e-09,
+    "meshCo": 1e-09
+  },
+  "segments": {
+    "1-500": {
+      "checked": 500,
+      "status": "MATCH"
+    },
+    "501-541": {
+      "checked": 41,
+      "status": "MATCH"
+    }
+  },
+  "max_abs_differences": {
+    "force_N": 0.0,
+    "displacement_m": 0.0,
+    "Co": 0.0,
+    "meshCo": 0.0
+  },
+  "status": "MATCH",
+  "earliest_divergence": null,
+  "checked_windows": 541
+}

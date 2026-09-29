@@ -1,0 +1,57 @@
+{
+  "MPI_ranks": 6,
+  "OpenFOAM_build": "_481094f-20260618 OPENFOAM=2606 version=2606",
+  "adjustTimeStep": false,
+  "case_path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "command": "pimpleFoam -parallel",
+  "deltaT": 0.0004,
+  "endTime_configured": 30.0,
+  "final_time_directories": [
+    {
+      "directory": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor0/29.9999999999834372",
+      "numeric_time": 29.999999999983437,
+      "rank": 0
+    },
+    {
+      "directory": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor1/29.9999999999834372",
+      "numeric_time": 29.999999999983437,
+      "rank": 1
+    },
+    {
+      "directory": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor2/29.9999999999834372",
+      "numeric_time": 29.999999999983437,
+      "rank": 2
+    },
+    {
+      "directory": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor3/29.9999999999834372",
+      "numeric_time": 29.999999999983437,
+      "rank": 3
+    },
+    {
+      "directory": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor4/29.9999999999834372",
+      "numeric_time": 29.999999999983437,
+      "rank": 4
+    },
+    {
+      "directory": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor5/29.9999999999834372",
+      "numeric_time": 29.999999999983437,
+      "rank": 5
+    }
+  ],
+  "first_logged_time": 0.0004,
+  "fixed_cylinder": true,
+  "historical_log_case_path": "${LINUX_HOME}/projects/CFD_ANCF_VIV_V2_of2606/case/hh06_v2606_fixed30",
+  "last_logged_time": 29.999999999983437,
+  "logged_step_count": 75000,
+  "no_RBF": true,
+  "no_adapter": true,
+  "no_dynamic_mesh": true,
+  "no_precice": true,
+  "reached_30": true,
+  "runtime_anomalies": [],
+  "runtime_clean": true,
+  "saw_End": true,
+  "saw_finalising_parallel_run": true,
+  "startTime": 0.0,
+  "turbulence_model": "kOmegaSST"
+}

@@ -1,0 +1,28 @@
+{
+  "phase": "V2606-NM7 fresh rerun",
+  "project_root": "${V2606_PROJECT_ROOT}",
+  "release_source": "case/hh06_v2606_fixed30",
+  "scratch": "${LINUX_HOME}/nm7.m1qG9R",
+  "openfoam": "OpenFOAM.com v2606",
+  "preCICE": "3.4.1",
+  "adapter_tag": "v1.4.0",
+  "adapter_commit": "0801887b958f3101389cb719838dc8fc864d5369",
+  "adapter_runtime_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "mpi_ranks": 6,
+  "coupling_scheme": "parallel-implicit",
+  "time_window_s": 0.0004,
+  "target_windows": 500,
+  "target_duration_s": 0.2,
+  "dt_s": 0.0004,
+  "pimple": {"nOuterCorrectors": 3, "nCorrectors": 2, "nNonOrthogonalCorrectors": 0},
+  "iqn_ils": {"QR2_limit": 0.01, "initial_relaxation": 0.5, "max_used_iterations": 100, "time_windows_reused": 15},
+  "strict_convergence": {"Force": 0.005, "Displacement": 0.005, "max_iterations": 50},
+  "storage_policy": {"writeControl": "timeStep", "writeInterval": 100, "purgeWrite": 2},
+  "structure_source": "frozen NM5 clean_structure participant; fresh P1_REF_NE32 q0, v0=0",
+  "config_provenance": {
+    "fluid_system": "NM4 adapter_config snapshot plus frozen release decomposeParDict",
+    "dynamic_mesh": "NM4 adapter_config/dynamicMeshDict; SHA256 4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb",
+    "point_displacement": "v2606 ALE template zero reference field decomposed onto frozen 6-rank mesh",
+    "precice_xml": "NM5B XML with only max-time-windows changed from 20 to 500"
+  }
+}

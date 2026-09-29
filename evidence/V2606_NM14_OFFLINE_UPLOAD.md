@@ -2,6 +2,8 @@
 
 This upload contains the offline NM14.1 postprocessing correction and its NM14.2 modal-family / distributed lift-coefficient correction.
 
+For the earlier curated NM2–NM13.1 artifacts uploaded alongside this package, see [V2606_NM_SERIES_OFFLINE_ARCHIVE.md](V2606_NM_SERIES_OFFLINE_ARCHIVE.md).
+
 ## Authoritative latest interpretation
 
 Use `v2606_nm14_2_modal_cl_correction/comparison/final_report.md` and its `comparison/final_classification.json` for the corrected modal and Cl conclusions. NM14.1 is retained as the historical Phase NM14.1 result; its raw-eigenvector modal labels and Cl source-definition status are superseded by NM14.2.

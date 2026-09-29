@@ -1,0 +1,21 @@
+{
+  "Fraw_units": "N",
+  "centers_m": [
+    0.594,
+    1.782,
+    2.97,
+    4.158,
+    5.346
+  ],
+  "line_force_reconstruction": "Fraw/0.028 exactly once",
+  "per_accepted_window": true,
+  "rejected_separate": true,
+  "slice_ids": [
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+  ],
+  "unit_span_m": 0.028
+}

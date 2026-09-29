@@ -1,0 +1,18 @@
+{
+  "classification": "V2606_NM10_1R_DISTRIBUTED_MAPPING_OFFLINE_CLOSEOUT_PASS",
+  "historical_NM10_1_classification": "V2606_NM10_1_INCONCLUSIVE",
+  "M1_trajectory_status": "NOT_REQUIRED_FOR_M2_ENTRY",
+  "ARBITRARY_GENERALIZED_FORCE_ADVANCE_API_NEEDED_FOR_M2": "NO",
+  "M2_requirement_matrix": "PASS",
+  "M0_M2_existing_replay": "COMPLETE_FINITE",
+  "M1_status": "OFFLINE_DIAGNOSTIC_REFERENCE_ONLY",
+  "authorized_next_action": "NM10_2_THREE_SLICE_DISTRIBUTED_MAPPING_COUPLED_SMOKE",
+  "NM10_2_executed": false,
+  "source_modified": false,
+  "build_performed": false,
+  "new_structure_trajectory": false,
+  "CFD_executed": false,
+  "preCICE_executed": false,
+  "ANCF_core_modified": false,
+  "official_adapter_modified": false
+}

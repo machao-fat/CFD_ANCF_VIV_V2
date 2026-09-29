@@ -1,0 +1,12 @@
+{
+  "source_release": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "scratch": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_window39_repro",
+  "scratch_filesystem": "D:",
+  "only_configuration_difference_from_NM8_2_C": "writeInterval 100 -> 38, diagnostic restart write at accepted window 38; purgeWrite 2 unchanged",
+  "official_adapter_modified": false,
+  "ANCF_core_modified": false,
+  "coupling_numerics_modified": false,
+  "prefix_gate": "windows 1-38 compared online before any window-39 interpretation",
+  "same_input_replay": "only if formal failure and prerequisite state identity evidence are available",
+  "NM9_authorized": false
+}

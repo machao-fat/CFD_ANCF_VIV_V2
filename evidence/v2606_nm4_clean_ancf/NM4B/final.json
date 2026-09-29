@@ -1,0 +1,107 @@
+{
+  "classification": "V2606_NM4_B_NEEDS_ACCELERATION",
+  "qualified_accepted_windows": 0,
+  "preCICE_advanced_but_not_converged_windows": 2,
+  "first_failure": "window 1 Force/Displacement nonconvergence at iteration ceiling 20",
+  "convergence_limit_each": 0.001,
+  "force_conversion_once_all_traced_attempts": true,
+  "checkpoint_pre_solve_exact_all_traced_attempts": true,
+  "windows": [
+    {
+      "window": 1,
+      "attempts_observed": 20,
+      "iterations_at_ceiling": 20,
+      "preCICE_advanced": true,
+      "converged": false,
+      "qualified_accepted": false,
+      "last_Displacement_relative_residual": 0.628636058,
+      "last_Force_relative_residual": 4.45951106,
+      "last_F_raw_N": [
+        4.119892411947401,
+        -1.7155286795521891
+      ],
+      "last_F_strip_N": [
+        291.3352491305662,
+        -121.3123851969048
+      ],
+      "last_D_absolute_m": [
+        2.64809028229957e-05,
+        -1.1026683153556012e-05
+      ],
+      "last_q_norm": 44.23386579552696,
+      "last_v_norm": 1.7615736900548467,
+      "max_structure_displacement_m": 2.8684943013536865e-05,
+      "max_Courant": 0.8822924897,
+      "max_mesh_Courant": 0.2455543812
+    },
+    {
+      "window": 2,
+      "attempts_observed": 20,
+      "iterations_at_ceiling": 20,
+      "preCICE_advanced": true,
+      "converged": false,
+      "qualified_accepted": false,
+      "last_Displacement_relative_residual": 0.0192399983,
+      "last_Force_relative_residual": 1.91624204,
+      "last_F_raw_N": [
+        -238.4574407496132,
+        83.96545386955341
+      ],
+      "last_F_strip_N": [
+        -16862.347595865507,
+        5937.557095061277
+      ],
+      "last_D_absolute_m": [
+        -0.0014277605307938806,
+        0.0004960226078596498
+      ],
+      "last_q_norm": 44.23386867837562,
+      "last_v_norm": 96.4445278971168,
+      "max_structure_displacement_m": 0.001540511753741603,
+      "max_Courant": 16.97727344,
+      "max_mesh_Courant": 25.14982891
+    },
+    {
+      "window": 3,
+      "attempts_observed": 3,
+      "iterations_at_ceiling": null,
+      "preCICE_advanced": false,
+      "converged": false,
+      "qualified_accepted": false,
+      "last_Displacement_relative_residual": null,
+      "last_Force_relative_residual": null,
+      "last_F_raw_N": [
+        -24.756112201472536,
+        39.338385178176466
+      ],
+      "last_F_strip_N": [
+        -1750.6107913898434,
+        2781.785809028193
+      ],
+      "last_D_absolute_m": [
+        -0.005979078635281978,
+        0.002288256637594079
+      ],
+      "last_q_norm": 44.233930057122556,
+      "last_v_norm": 196.43949357639687,
+      "max_structure_displacement_m": 0.009935691365325669,
+      "max_Courant": 16.97727344,
+      "max_mesh_Courant": 136.1135522
+    }
+  ],
+  "mesh_health": {
+    "latest_persisted_checkMesh_OK": true,
+    "latest_persisted_min_cell_volume_m3": 7.687362824e-10,
+    "max_Courant_all_trials": 16.97727344,
+    "max_mesh_Courant_all_trials": 136.1135522,
+    "latest_persisted_max_speed_m_s": 46.05120372,
+    "max_attempt_structure_displacement_m": 0.009935691365325669,
+    "max_mesh_displacement_m": null,
+    "max_mesh_displacement_note": "No per-attempt mesh-points observer; latest checkMesh cannot certify rejected trials",
+    "anomalies": [
+      "structure displacement safety guard fired in window 3 after failed convergence in windows 1-2",
+      "Fluid socket EOF downstream of Structure safety exit",
+      "mesh Courant exceeded one during nonconverged trials"
+    ]
+  }
+}

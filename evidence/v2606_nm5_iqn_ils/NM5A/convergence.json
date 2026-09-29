@@ -1,0 +1,40 @@
+{
+  "limits": {
+    "Force": 0.005,
+    "Displacement": 0.005
+  },
+  "strict": true,
+  "rows": [
+    {
+      "window": 1,
+      "iteration": 1,
+      "Displacement_residual": "inf",
+      "Force_residual": 1.0
+    },
+    {
+      "window": 1,
+      "iteration": 2,
+      "Displacement_residual": 1.0,
+      "Force_residual": 0.5
+    },
+    {
+      "window": 1,
+      "iteration": 3,
+      "Displacement_residual": 0.5,
+      "Force_residual": 0.000475742333
+    },
+    {
+      "window": 1,
+      "iteration": 4,
+      "Displacement_residual": 0.000457840102,
+      "Force_residual": 0.000336483287
+    }
+  ],
+  "iterations_log": {
+    "iterations": 4,
+    "converged": 1,
+    "QNColumns": 2,
+    "DeletedQNColumns": 1,
+    "DroppedQNColumns": 0
+  }
+}

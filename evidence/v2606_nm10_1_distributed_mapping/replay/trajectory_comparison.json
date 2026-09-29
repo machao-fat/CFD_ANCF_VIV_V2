@@ -1,0 +1,18 @@
+{
+  "M0": {
+    "max_abs_Dx": 0.001102418895643758,
+    "max_abs_Dy": 0.0002059364281308132,
+    "max_D594_minus_D495": 0.0010211668861745133,
+    "final_D594_minus_D495": 0.0010211668861745133
+  },
+  "M2": {
+    "max_abs_Dx": 0.0005969368548046178,
+    "max_abs_Dy": 0.00014299104997804988,
+    "max_D594_minus_D495": 0.0003051344028141976,
+    "final_D594_minus_D495": 0.0003051344028141976
+  },
+  "M1": {
+    "status": "LOAD_ONLY",
+    "reason": "No public generalized-force advance API in frozen core; no trajectory fabricated"
+  }
+}

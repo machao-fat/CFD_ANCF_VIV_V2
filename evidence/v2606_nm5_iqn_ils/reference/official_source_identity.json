@@ -1,0 +1,14 @@
+{
+  "precice_version": "3.4.1;no-info [git failed to run];PRECICE_FEATURE_MPI_COMMUNICATION=Y;PRECICE_FEATURE_PETSC_MAPPING=Y;PRECICE_FEATURE_GINKGO_MAPPING=N;PRECICE_FEATURE_PYTHON_ACTIONS=Y;PRECICE_BINDINGS_C=Y;PRECICE_BINDINGS_FORTRAN=Y;CXX=GNU;CXXFLAGS= -O3 -DNDEBUG;LDFLAGS=",
+  "runtime_library": "/lib/x86_64-linux-gnu/libprecice.so.3.4.1",
+  "runtime_library_sha256": "b20729622d2dbbafdea3d6ead0480ec66be98cb947db3500cc3c27ed4e3039c7",
+  "tutorial_root": "${LINUX_HOME}/software/precice-tutorials-v2606-smoke",
+  "tutorial_head": "a022dc9c9411a878d35f23bdc02437fb990eb4fd",
+  "tutorial_config_sha256": "79dca1d450b554d61f69a8718d0bfc9c03247e33049d276f05f21dd0fbad7c1e",
+  "config_doc_source": "precice-config-doc md/dtd from installed preCICE 3.4.1",
+  "strict_schema": true,
+  "strict_semantics": "non-convergence of the measure ends the simulation; strict overrules suffices",
+  "strict_doc_excerpt_lines": "reference/precice_xml_reference.md:2813-2828",
+  "iqn_reference": "perpendicular-flap official tutorial: IQN-ILS, QR2, initial-relaxation 0.5, max-used-iterations 100, time-windows-reused 15",
+  "rbf_used": false
+}

@@ -1,0 +1,11 @@
+{
+  "NM9_A0_output_only_delta": {
+    "endTime": "30.008",
+    "writeInterval": "20"
+  },
+  "ordinary_p_relTol": "0.01",
+  "pFinal_relTol": "0",
+  "pcorr_relTol": "0",
+  "physical_field_source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "qualified_configuration_source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_5_500/fluid"
+}

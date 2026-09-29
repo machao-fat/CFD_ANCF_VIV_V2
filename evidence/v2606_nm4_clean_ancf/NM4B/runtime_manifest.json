@@ -1,0 +1,15 @@
+{
+  "scratch": "/tmp/nm4b.TE71bh",
+  "fluid_config_sha256": {
+    "system/controlDict": "9aca279db690e1b297055d0916b1a55a379c48acdc526229720070432530af79",
+    "system/fvSchemes": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+    "system/fvSolution": "e84ffcb7f08ca0718ec09a761928d26ecccef46f7627b8526cb7340b46174216",
+    "system/preciceDict": "e40c92b88da9f9ca017399f4c80d65497b0b5eec4c5c8ef7b144a8de130abbef",
+    "constant/dynamicMeshDict": "4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb",
+    "precice-config-nm4.xml": "5179de5e6ac06007989e4c9cdc9e3498b8abca9acee7b49e783ede04b4392108"
+  },
+  "attempt_trace_sha256": "d432be61d229509d78b6e7378549b4f28f323e1baadeab789b6b331e736a7289",
+  "fluid_log_sha256": "01241c4e3e9767d903ae27d8712995b85a49337b8f1accbad011404540e3a606",
+  "structure_log_sha256": "feb8e7d2995ca46331b5b6b9c8ca9ef06e104a2f6d5ecf3557d717c8e9f04e4f",
+  "frozen_release_unchanged": true
+}

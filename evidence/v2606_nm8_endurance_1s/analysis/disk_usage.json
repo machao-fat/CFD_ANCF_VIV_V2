@@ -1,0 +1,16 @@
+{
+  "d_total_bytes_initial": 733776703488,
+  "d_free_bytes_initial": 96665223168,
+  "scratch_fs_total_bytes_initial": 1081101176832,
+  "scratch_fs_free_bytes_initial": 1009204232192,
+  "scratch_bytes_initial": 26013292,
+  "disk_guard_free_bytes": 10000000000,
+  "scratch": "${LINUX_HOME}/nm8.cA799T",
+  "minimum_d_free_bytes_observed": 96656838656,
+  "minimum_scratch_fs_free_bytes_observed": 1009125048320,
+  "final_d_free_bytes": 96654413824,
+  "final_scratch_fs_free_bytes": 1009141452800,
+  "maximum_scratch_bytes_observed": 73690465,
+  "scratch_bytes_final": 72674657,
+  "monitor_samples": 296
+}

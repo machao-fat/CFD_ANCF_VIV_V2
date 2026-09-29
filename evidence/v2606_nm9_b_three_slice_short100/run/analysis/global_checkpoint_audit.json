@@ -1,0 +1,17 @@
+{
+  "Fluid_binary_rollback": "NOT_DIRECTLY_OBSERVABLE; official adapter path exercised",
+  "all_rejected_restore_exact": true,
+  "early_sample": {
+    "attempt": 1,
+    "next_ordinal": 2,
+    "qv_exact": true,
+    "window": 1
+  },
+  "late_sample": {
+    "attempt": 1,
+    "next_ordinal": 188,
+    "qv_exact": true,
+    "window": 50
+  },
+  "pass": true
+}

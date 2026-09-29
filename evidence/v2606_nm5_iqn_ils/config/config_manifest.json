@@ -1,0 +1,41 @@
+{
+  "project_root": "${V2606_PROJECT_ROOT}",
+  "release_case": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "production_dt_s": 0.0004,
+  "mpi_ranks": 6,
+  "OpenFOAM": "OpenFOAM-2606",
+  "WM_PROJECT_VERSION": "v2606",
+  "pimpleFoam": "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+  "preCICE": "3.4.1",
+  "adapter_tag": "v1.4.0",
+  "adapter_commit": "0801887b958f3101389cb719838dc8fc864d5369",
+  "adapter_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "strict_convergence": true,
+  "max_iterations": 50,
+  "relative_limits": {
+    "Force": 0.005,
+    "Displacement": 0.005
+  },
+  "IQN_ILS": {
+    "filter": "QR2",
+    "filter_limit": 0.01,
+    "initial_relaxation": 0.5,
+    "max_used_iterations": 100,
+    "time_windows_reused": 15
+  },
+  "mapping": {
+    "Displacement": "Solid-Mesh -> Fluid-Mesh consistent nearest-neighbor",
+    "Force": "Fluid-Mesh -> Solid-Mesh conservative nearest-neighbor"
+  },
+  "NM4B_state_reused": false,
+  "RBF_used": false,
+  "OF10_used": false,
+  "configs": {
+    "precice_nm5a.xml": "7fbc46712e01aac952fcd6f18c85be2e35056a1344255bd0c96c2e95326f36fc",
+    "precice_nm5b.xml": "7ec254efff22b14fc180f43b60fbf71e07d0a2eb7e27a02437a440c68eebb701"
+  },
+  "validation": {
+    "nm5a": "Checking /tmp/nm5a.ZO7p0A/fluid/precice-config-nm5.xml for syntax and basic setup issues...\n\u001b[1m\u001b[38;2;000;128;000mNo major issues detected\n\u001b[0m",
+    "nm5b": "Checking /tmp/nm5b.m407C5/fluid/precice-config-nm5.xml for syntax and basic setup issues...\n\u001b[1m\u001b[38;2;000;128;000mNo major issues detected\n\u001b[0m"
+  }
+}

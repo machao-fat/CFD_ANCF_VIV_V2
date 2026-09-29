@@ -1,0 +1,16 @@
+{
+  "scratch": "/tmp/nm5b.m407C5",
+  "fluid_config_sha256": {
+    "system/controlDict": "9aca279db690e1b297055d0916b1a55a379c48acdc526229720070432530af79",
+    "system/fvSchemes": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+    "system/fvSolution": "e84ffcb7f08ca0718ec09a761928d26ecccef46f7627b8526cb7340b46174216",
+    "system/preciceDict": "af55db2163146a45afde1e386ba0bfc1374bd04af101b09e0c5d0bd1780a90f6",
+    "constant/dynamicMeshDict": "4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb",
+    "precice-config-nm5.xml": "7ec254efff22b14fc180f43b60fbf71e07d0a2eb7e27a02437a440c68eebb701"
+  },
+  "fluid_log_sha256": "914097bb07bb39e3893bdfc52e20d29d8dd8b7a7bb9b37957fbedc0ea0afda8c",
+  "structure_log_sha256": "0bc5e6b2b440ab1d77ca17a5ec762b1afa65b427e92d57eb0a5ea3ab66e12fb7",
+  "raw_trace_sha256": "1b9000e4495a440c4fb2b5b5c730796b3517baf7a05b0cd9776ea0283a4533a6",
+  "fresh_from_frozen_release": true,
+  "NM4B_runtime_reused": false
+}

@@ -1,0 +1,26 @@
+{
+  "interpretation": "DIAGNOSTIC ONLY: the Fluid wall BC changes physics",
+  "compared_accepted_prefix_windows": 38,
+  "first_nonexact_window": {
+    "window": 1,
+    "old_iterations": 4,
+    "new_iterations": 19,
+    "old_Fraw_N": [
+      0.060023651134800377,
+      -0.025150803588005696
+    ],
+    "new_Fraw_N": [
+      0.019616045742918007,
+      -0.008257418316476904
+    ],
+    "old_D_m": [
+      3.858063434447522e-07,
+      -1.616586026263879e-07
+    ],
+    "new_D_m": [
+      1.2608354770127888e-07,
+      -5.307515132456336e-08
+    ]
+  },
+  "old_NM7_evidence": "${V2606_PROJECT_ROOT}/evidence/v2606_nm7_endurance_500/runtime/window_trace.jsonl"
+}

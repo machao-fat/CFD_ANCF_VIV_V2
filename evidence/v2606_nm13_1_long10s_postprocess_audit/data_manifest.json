@@ -1,0 +1,82 @@
+{
+  "products": [
+    {
+      "Huera": true,
+      "cadence": "every accepted window",
+      "name": "accepted_global_q_v_qddot",
+      "path": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/runtime/state_accepted_states.bin",
+      "producer": "Structure recorder",
+      "qualification": true,
+      "restart": true,
+      "status": "READY",
+      "units": "SI/state"
+    },
+    {
+      "Huera": false,
+      "cadence": "every accepted window",
+      "name": "PRECICE_ACCEPTED_FORCE",
+      "path": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/runtime/accepted_windows.jsonl",
+      "producer": "Structure accepted_windows.jsonl",
+      "qualification": true,
+      "restart": false,
+      "status": "READY",
+      "units": "N"
+    },
+    {
+      "Huera": true,
+      "cadence": "every solver time step",
+      "name": "DIRECT_OPENFOAM_FORCE",
+      "path": "fluid_*/postProcessing/cylinderForces/*/force.dat",
+      "producer": "forces function object, summed over ranks",
+      "qualification": false,
+      "restart": false,
+      "status": "READY",
+      "units": "N"
+    },
+    {
+      "Huera": true,
+      "cadence": "every solver time step",
+      "name": "DIRECT_OPENFOAM_FORCECOEFFS",
+      "path": "fluid_*/postProcessing/cylinderForceCoeffs/*/coefficient.dat",
+      "producer": "forceCoeffs function object",
+      "qualification": false,
+      "restart": false,
+      "status": "AUXILIARY",
+      "units": "dimensionless local coefficient"
+    },
+    {
+      "Huera": false,
+      "cadence": "250 steps, purge3",
+      "name": "FULL_FIELD_CHECKPOINT",
+      "path": "fluid_*/processor*/<time>/",
+      "producer": "OpenFOAM Time",
+      "qualification": true,
+      "restart": true,
+      "status": "READY",
+      "units": "fields/mesh"
+    },
+    {
+      "Huera": false,
+      "cadence": "writeTime",
+      "name": "yPlus",
+      "path": "fluid_*/postProcessing/yPlus/*/yPlus.dat",
+      "producer": "yPlus function object",
+      "qualification": false,
+      "restart": false,
+      "status": "OPTIONAL",
+      "units": "dimensionless"
+    },
+    {
+      "Huera": true,
+      "cadence": "offline after run",
+      "name": "DIRECT_FORCE_ACCEPTED_ALIGNMENT",
+      "path": "derived accepted direct stream",
+      "producer": "align_direct_forces.py",
+      "qualification": false,
+      "restart": false,
+      "status": "READY",
+      "units": "N"
+    }
+  ],
+  "unbounded_full_field_debug_output": "DISABLED"
+}

@@ -1,0 +1,32 @@
+{
+  "active_region_m": [
+    0,
+    5.94
+  ],
+  "endpoint_policy": "NearestConstant",
+  "mapping_mode": "PiecewiseLinearDistributed",
+  "slices": [
+    {
+      "s_ref_m": 0.594,
+      "stable_id": "S1"
+    },
+    {
+      "s_ref_m": 1.782,
+      "stable_id": "S2"
+    },
+    {
+      "s_ref_m": 2.97,
+      "stable_id": "S3"
+    },
+    {
+      "s_ref_m": 4.158,
+      "stable_id": "S4"
+    },
+    {
+      "s_ref_m": 5.346,
+      "stable_id": "S5"
+    }
+  ],
+  "tributary_multiplier_in_distributed_path": false,
+  "unit_span_m": 0.028
+}

@@ -1,0 +1,12 @@
+{
+  "identity_by_state": {
+    "A": true,
+    "B": true,
+    "D": true
+  },
+  "identity_ok": true,
+  "source_files": [
+    "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_3_1_four_state_response/input/four_readData_states.json",
+    "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_3_2_local_gain/input/displacement_states.json"
+  ]
+}

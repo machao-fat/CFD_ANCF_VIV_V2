@@ -1,0 +1,348 @@
+{
+  "writeInterval_steps": 250,
+  "purgeWrite": 2,
+  "full_field_definition": "U,p,phi,k,omega,nut,pointDisplacement,cellDisplacement and polyMesh/points exist at the same numeric time on all six ranks",
+  "milestone_samples": [
+    {
+      "utc": "2026-09-26T14:44:59Z",
+      "accepted_windows": 256,
+      "milestone_window": 250,
+      "d_free_bytes": 96661123072,
+      "scratch_fs_free_bytes": 1009156567040,
+      "scratch_bytes": 49551677,
+      "full_field_time_count": 1,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_time_count": 2,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:45:01.932636+00:00",
+      "accepted_windows": 259,
+      "d_free_bytes": 96661123072,
+      "scratch_fs_free_bytes": 1009156460544,
+      "scratch_bytes": 49607867,
+      "external_monitor": true,
+      "milestone_window": 250,
+      "full_field_time_count": 1,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_time_count": 2,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:45:01.932636+00:00",
+      "accepted_windows": 259,
+      "d_free_bytes": 96661123072,
+      "scratch_fs_free_bytes": 1009156460544,
+      "scratch_bytes": 49607867,
+      "external_monitor": true,
+      "milestone_window": 250,
+      "full_field_time_count": 1,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_time_count": 2,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:45:01.932636+00:00",
+      "accepted_windows": 259,
+      "d_free_bytes": 96661123072,
+      "scratch_fs_free_bytes": 1009156460544,
+      "scratch_bytes": 49607867,
+      "external_monitor": true,
+      "milestone_window": 250,
+      "full_field_time_count": 1,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_time_count": 2,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:45:01.932636+00:00",
+      "accepted_windows": 259,
+      "d_free_bytes": 96661123072,
+      "scratch_fs_free_bytes": 1009156460544,
+      "scratch_bytes": 49607867,
+      "external_monitor": true,
+      "milestone_window": 250,
+      "full_field_time_count": 1,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_time_count": 2,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:45:01.932636+00:00",
+      "accepted_windows": 259,
+      "d_free_bytes": 96661123072,
+      "scratch_fs_free_bytes": 1009156460544,
+      "scratch_bytes": 49607867,
+      "external_monitor": true,
+      "milestone_window": 250,
+      "full_field_time_count": 1,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_time_count": 2,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:45:01.932636+00:00",
+      "accepted_windows": 259,
+      "d_free_bytes": 96661123072,
+      "scratch_fs_free_bytes": 1009156460544,
+      "scratch_bytes": 49607867,
+      "external_monitor": true,
+      "milestone_window": 250,
+      "full_field_time_count": 1,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_time_count": 2,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:49:33.289755+00:00",
+      "accepted_windows": 504,
+      "d_free_bytes": 96657383424,
+      "scratch_fs_free_bytes": 1009126449152,
+      "scratch_bytes": 72938412,
+      "external_monitor": true,
+      "milestone_window": 500,
+      "full_field_time_count": 2,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_time_count": 3,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:49:33.289755+00:00",
+      "accepted_windows": 504,
+      "d_free_bytes": 96657383424,
+      "scratch_fs_free_bytes": 1009126449152,
+      "scratch_bytes": 72938412,
+      "external_monitor": true,
+      "milestone_window": 500,
+      "full_field_time_count": 2,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_time_count": 3,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:49:33.289755+00:00",
+      "accepted_windows": 504,
+      "d_free_bytes": 96657383424,
+      "scratch_fs_free_bytes": 1009126449152,
+      "scratch_bytes": 72938412,
+      "external_monitor": true,
+      "milestone_window": 500,
+      "full_field_time_count": 2,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_time_count": 3,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:49:33.289755+00:00",
+      "accepted_windows": 504,
+      "d_free_bytes": 96657383424,
+      "scratch_fs_free_bytes": 1009126449152,
+      "scratch_bytes": 72938412,
+      "external_monitor": true,
+      "milestone_window": 500,
+      "full_field_time_count": 2,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_time_count": 3,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:49:33.289755+00:00",
+      "accepted_windows": 504,
+      "d_free_bytes": 96657383424,
+      "scratch_fs_free_bytes": 1009126449152,
+      "scratch_bytes": 72938412,
+      "external_monitor": true,
+      "milestone_window": 500,
+      "full_field_time_count": 2,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_time_count": 3,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:49:33.289755+00:00",
+      "accepted_windows": 504,
+      "d_free_bytes": 96657383424,
+      "scratch_fs_free_bytes": 1009126449152,
+      "scratch_bytes": 72938412,
+      "external_monitor": true,
+      "milestone_window": 500,
+      "full_field_time_count": 2,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_time_count": 3,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "monitor_source": "launcher"
+    },
+    {
+      "utc": "2026-09-26T14:49:42Z",
+      "accepted_windows": 510,
+      "milestone_window": 500,
+      "d_free_bytes": 96657358848,
+      "scratch_fs_free_bytes": 1009126219776,
+      "scratch_bytes": 73046674,
+      "full_field_time_count": 2,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_time_count": 3,
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "monitor_source": "launcher"
+    }
+  ],
+  "production_full_field_times_final": [
+    "30.0999999999832042",
+    "30.1999999999829711"
+  ],
+  "metadata_only_time_count_final": 3,
+  "metadata_only_times_final": [
+    "29.9999999999834372",
+    "30.0995999999832051",
+    "30.1995999999829721"
+  ],
+  "purgeWrite_observed": true,
+  "storage_violation_observed": false,
+  "run_completed_for_storage_target": false,
+  "final_two_production_writes_expected_30p9_31p0": false
+}

@@ -1,0 +1,39 @@
+{
+  "pairs": [
+    {
+      "pair": "HIGH",
+      "fields": {
+        "meshPhi": {
+          "L2_abs": 5.1860838828280126e-08,
+          "L2_relative": 0.00014415734273370465,
+          "Linf": 5.630545069674968e-10,
+          "count": 92392
+        },
+        "phi": {
+          "L2_abs": 7.756049407750005e-08,
+          "L2_relative": 1.051923979162881e-05,
+          "Linf": 8.551289167057791e-10,
+          "count": 92392
+        }
+      }
+    },
+    {
+      "pair": "LOW",
+      "fields": {
+        "meshPhi": {
+          "L2_abs": 1.9951412612858582e-08,
+          "L2_relative": 5.545885278826283e-05,
+          "Linf": 2.1660922026797217e-10,
+          "count": 92392
+        },
+        "phi": {
+          "L2_abs": 2.983834825775065e-08,
+          "L2_relative": 4.0468636003759414e-06,
+          "Linf": 3.2897124979761614e-10,
+          "count": 92392
+        }
+      }
+    }
+  ],
+  "note": "phi is the solved surface flux; meshPhi is the mesh-motion flux"
+}

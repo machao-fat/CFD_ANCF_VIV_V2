@@ -1,0 +1,93 @@
+{
+  "cases": [
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm12_n5_4rank_diagnostic100/launch/fluid_s0594",
+      "field_sha256": {
+        "U": "47ccef8996c49311850d5d75a43ddfeda9939256a687968ed04222f1057821e5",
+        "k": "c75e81f1f560b236d5830316b1e50ff4f299e165b9a32d0db7dc3cd5d5320ed8",
+        "nut": "0ebed3151c02086c698af36448f096a4f3cff94180d9172b39d5aafe8ec2d1a9",
+        "omega": "b818ea8992de4607fa802c69628d65aeeb9c378cc9f8cdf64b11071d8fb3deb0",
+        "p": "9f9ea783310b90be3cc50e3acc25f7057f505852f3374df7d5ecfe1cc8554d4b",
+        "phi": "351acbb0a1636fa18a834deeaef8756cdbcd3a89200963ef23c71135eb70908c"
+      },
+      "label": "s0594",
+      "mesh_sha256": "ea6e45be5e36f4f0754cfbfa07dadf19f90d6763c3ec9d189f9f8079a64f6a0f",
+      "participant": "Fluid-S1",
+      "ranks": 4,
+      "s_ref_m": 0.594,
+      "slice_id": "S1"
+    },
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm12_n5_4rank_diagnostic100/launch/fluid_s1782",
+      "field_sha256": {
+        "U": "47ccef8996c49311850d5d75a43ddfeda9939256a687968ed04222f1057821e5",
+        "k": "c75e81f1f560b236d5830316b1e50ff4f299e165b9a32d0db7dc3cd5d5320ed8",
+        "nut": "0ebed3151c02086c698af36448f096a4f3cff94180d9172b39d5aafe8ec2d1a9",
+        "omega": "b818ea8992de4607fa802c69628d65aeeb9c378cc9f8cdf64b11071d8fb3deb0",
+        "p": "9f9ea783310b90be3cc50e3acc25f7057f505852f3374df7d5ecfe1cc8554d4b",
+        "phi": "351acbb0a1636fa18a834deeaef8756cdbcd3a89200963ef23c71135eb70908c"
+      },
+      "label": "s1782",
+      "mesh_sha256": "ea6e45be5e36f4f0754cfbfa07dadf19f90d6763c3ec9d189f9f8079a64f6a0f",
+      "participant": "Fluid-S2",
+      "ranks": 4,
+      "s_ref_m": 1.782,
+      "slice_id": "S2"
+    },
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm12_n5_4rank_diagnostic100/launch/fluid_s2970",
+      "field_sha256": {
+        "U": "47ccef8996c49311850d5d75a43ddfeda9939256a687968ed04222f1057821e5",
+        "k": "c75e81f1f560b236d5830316b1e50ff4f299e165b9a32d0db7dc3cd5d5320ed8",
+        "nut": "0ebed3151c02086c698af36448f096a4f3cff94180d9172b39d5aafe8ec2d1a9",
+        "omega": "b818ea8992de4607fa802c69628d65aeeb9c378cc9f8cdf64b11071d8fb3deb0",
+        "p": "9f9ea783310b90be3cc50e3acc25f7057f505852f3374df7d5ecfe1cc8554d4b",
+        "phi": "351acbb0a1636fa18a834deeaef8756cdbcd3a89200963ef23c71135eb70908c"
+      },
+      "label": "s2970",
+      "mesh_sha256": "ea6e45be5e36f4f0754cfbfa07dadf19f90d6763c3ec9d189f9f8079a64f6a0f",
+      "participant": "Fluid-S3",
+      "ranks": 4,
+      "s_ref_m": 2.97,
+      "slice_id": "S3"
+    },
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm12_n5_4rank_diagnostic100/launch/fluid_s4158",
+      "field_sha256": {
+        "U": "47ccef8996c49311850d5d75a43ddfeda9939256a687968ed04222f1057821e5",
+        "k": "c75e81f1f560b236d5830316b1e50ff4f299e165b9a32d0db7dc3cd5d5320ed8",
+        "nut": "0ebed3151c02086c698af36448f096a4f3cff94180d9172b39d5aafe8ec2d1a9",
+        "omega": "b818ea8992de4607fa802c69628d65aeeb9c378cc9f8cdf64b11071d8fb3deb0",
+        "p": "9f9ea783310b90be3cc50e3acc25f7057f505852f3374df7d5ecfe1cc8554d4b",
+        "phi": "351acbb0a1636fa18a834deeaef8756cdbcd3a89200963ef23c71135eb70908c"
+      },
+      "label": "s4158",
+      "mesh_sha256": "ea6e45be5e36f4f0754cfbfa07dadf19f90d6763c3ec9d189f9f8079a64f6a0f",
+      "participant": "Fluid-S4",
+      "ranks": 4,
+      "s_ref_m": 4.158,
+      "slice_id": "S4"
+    },
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm12_n5_4rank_diagnostic100/launch/fluid_s5346",
+      "field_sha256": {
+        "U": "47ccef8996c49311850d5d75a43ddfeda9939256a687968ed04222f1057821e5",
+        "k": "c75e81f1f560b236d5830316b1e50ff4f299e165b9a32d0db7dc3cd5d5320ed8",
+        "nut": "0ebed3151c02086c698af36448f096a4f3cff94180d9172b39d5aafe8ec2d1a9",
+        "omega": "b818ea8992de4607fa802c69628d65aeeb9c378cc9f8cdf64b11071d8fb3deb0",
+        "p": "9f9ea783310b90be3cc50e3acc25f7057f505852f3374df7d5ecfe1cc8554d4b",
+        "phi": "351acbb0a1636fa18a834deeaef8756cdbcd3a89200963ef23c71135eb70908c"
+      },
+      "label": "s5346",
+      "mesh_sha256": "ea6e45be5e36f4f0754cfbfa07dadf19f90d6763c3ec9d189f9f8079a64f6a0f",
+      "participant": "Fluid-S5",
+      "ranks": 4,
+      "s_ref_m": 5.346,
+      "slice_id": "S5"
+    }
+  ],
+  "frozen30_origin": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "not_continuation_from_NM10_4_or_NM11": true,
+  "status": "PASS",
+  "time_directory": "29.9999999999834372"
+}

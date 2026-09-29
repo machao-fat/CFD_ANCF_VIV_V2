@@ -1,0 +1,44 @@
+{
+  "source_evidence": "${V2606_PROJECT_ROOT}/evidence/v2606_nm10_4_distributed_mapping_fresh100/analysis/rejected_trial_extrema.json",
+  "max_rejected_direct_Fraw_N": {
+    "S099": 2.6180823560279203,
+    "S297": 2.634273522804094,
+    "S495": 2.6237629701776544
+  },
+  "max_rejected_Qtrial_norm": 13.328571157732393,
+  "max_Qtrial_location": {
+    "window": 98,
+    "attempt": 299
+  },
+  "segment_maxima": {
+    "1-20": {
+      "max_Fraw": 0.6030178142080339,
+      "max_Qtrial": 5.191086814653089
+    },
+    "21-40": {
+      "max_Fraw": 1.1325258195692074,
+      "max_Qtrial": 3.7418348066458726
+    },
+    "41-60": {
+      "max_Fraw": 1.7332323577878623,
+      "max_Qtrial": 3.455768760138442
+    },
+    "61-80": {
+      "max_Fraw": 2.2552654493202557,
+      "max_Qtrial": 2.516423840251318
+    },
+    "81-100": {
+      "max_Fraw": 2.634273522804094,
+      "max_Qtrial": 13.328571157732393
+    }
+  },
+  "rejected_force_envelope": "GROWING",
+  "disposition": "MONITOR",
+  "gates": {
+    "accepted_windows": "100/100",
+    "forced_acceptance": 0,
+    "rollback": "206/206 PASS",
+    "ANCF_Fluid_mesh_failure": false
+  },
+  "interpretation": "Large rejected values alone are not a stop condition; no new threshold or tuning is introduced."
+}

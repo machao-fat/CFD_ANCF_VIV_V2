@@ -1,0 +1,207 @@
+{
+  "sequence": [
+    {
+      "attempt": 1,
+      "residual": 0.0427651905
+    },
+    {
+      "attempt": 2,
+      "residual": 6.27168864e-09
+    },
+    {
+      "attempt": 3,
+      "residual": 2.55505027e-09
+    },
+    {
+      "attempt": 4,
+      "residual": 5.44695417e-12
+    },
+    {
+      "attempt": 5,
+      "residual": 3.76542772e-14
+    },
+    {
+      "attempt": 6,
+      "residual": 1.81266364e-15
+    },
+    {
+      "attempt": 7,
+      "residual": 1.77882124e-15
+    },
+    {
+      "attempt": 8,
+      "residual": 9.16232278e-16
+    },
+    {
+      "attempt": 9,
+      "residual": 0.0
+    },
+    {
+      "attempt": 10,
+      "residual": 1.5247087e-15
+    },
+    {
+      "attempt": 11,
+      "residual": 1.23265078e-16
+    },
+    {
+      "attempt": 12,
+      "residual": 1.84896472e-16
+    },
+    {
+      "attempt": 13,
+      "residual": 5.08233635e-16
+    },
+    {
+      "attempt": 14,
+      "residual": 6.63804526e-16
+    },
+    {
+      "attempt": 15,
+      "residual": 1.15139011e-15
+    },
+    {
+      "attempt": 16,
+      "residual": 1.24643325e-15
+    },
+    {
+      "attempt": 17,
+      "residual": 8.26884971e-16
+    },
+    {
+      "attempt": 18,
+      "residual": 1.54451111e-15
+    },
+    {
+      "attempt": 19,
+      "residual": 1.46498766e-15
+    },
+    {
+      "attempt": 20,
+      "residual": 2.86506682e-15
+    },
+    {
+      "attempt": 21,
+      "residual": 1.1693919e-15
+    },
+    {
+      "attempt": 22,
+      "residual": 9.64704394e-16
+    },
+    {
+      "attempt": 23,
+      "residual": 6.28530571e-16
+    },
+    {
+      "attempt": 24,
+      "residual": 9.9378868e-16
+    },
+    {
+      "attempt": 25,
+      "residual": 6.89070782e-16
+    },
+    {
+      "attempt": 26,
+      "residual": 1.4375093e-15
+    },
+    {
+      "attempt": 27,
+      "residual": 6.43462119e-16
+    },
+    {
+      "attempt": 28,
+      "residual": 8.62850206e-16
+    },
+    {
+      "attempt": 29,
+      "residual": 5.08233496e-16
+    },
+    {
+      "attempt": 30,
+      "residual": 6.63804526e-16
+    },
+    {
+      "attempt": 31,
+      "residual": 1.37814444e-16
+    },
+    {
+      "attempt": 32,
+      "residual": 4.31425103e-16
+    },
+    {
+      "attempt": 33,
+      "residual": 2.54116748e-16
+    },
+    {
+      "attempt": 34,
+      "residual": 9.93797474e-16
+    },
+    {
+      "attempt": 35,
+      "residual": 2.54117279e-16
+    },
+    {
+      "attempt": 36,
+      "residual": 1.74322066e-16
+    },
+    {
+      "attempt": 37,
+      "residual": 3.74895036e-16
+    },
+    {
+      "attempt": 38,
+      "residual": 8.65056209e-16
+    },
+    {
+      "attempt": 39,
+      "residual": 2.54117279e-16
+    },
+    {
+      "attempt": 40,
+      "residual": 1.23264315e-16
+    },
+    {
+      "attempt": 41,
+      "residual": 3.89797298e-16
+    },
+    {
+      "attempt": 42,
+      "residual": 9.16235999e-16
+    },
+    {
+      "attempt": 43,
+      "residual": 1.23264986e-16
+    },
+    {
+      "attempt": 44,
+      "residual": 1.84896473e-16
+    },
+    {
+      "attempt": 45,
+      "residual": 2.75628313e-16
+    },
+    {
+      "attempt": 46,
+      "residual": 9.16235999e-16
+    },
+    {
+      "attempt": 47,
+      "residual": 2.46529972e-16
+    },
+    {
+      "attempt": 48,
+      "residual": 1.23264315e-16
+    },
+    {
+      "attempt": 49,
+      "residual": 2.46529457e-16
+    },
+    {
+      "attempt": 50,
+      "residual": 6.4346431e-16
+    }
+  ],
+  "first_below_limit": 2,
+  "all_later_below_limit": true,
+  "force_side_limiting": true
+}

@@ -1,0 +1,7 @@
+{
+  "purgeWrite": 2,
+  "writeInterval": 100,
+  "scratch_size_bytes": 63866336,
+  "final_free_bytes": 85285552128,
+  "full_fields_not_written_each_window": true
+}

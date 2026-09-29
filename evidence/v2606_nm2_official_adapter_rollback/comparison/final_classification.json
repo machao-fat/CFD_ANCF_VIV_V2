@@ -1,0 +1,24 @@
+{
+  "C0_C1_observer_nonintrusive": true,
+  "R1": {
+    "earliest_divergence": "phi",
+    "fluid_input_same": true,
+    "force_exact": true,
+    "nonzero_ALE": true,
+    "protocol": true,
+    "rollback_observed": true,
+    "state_exact": false
+  },
+  "R1_R2_exact": true,
+  "R2": {
+    "earliest_divergence": "phi",
+    "fluid_input_same": true,
+    "force_exact": true,
+    "nonzero_ALE": true,
+    "protocol": true,
+    "rollback_observed": true,
+    "state_exact": false
+  },
+  "classification": "V2606_NEWMESH_OFFICIAL_ADAPTER_ROLLBACK_FAIL",
+  "next_authorized_phase": null
+}

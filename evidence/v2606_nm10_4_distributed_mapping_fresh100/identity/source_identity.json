@@ -1,0 +1,22 @@
+{
+  "active_region_m": [
+    0,
+    5.94
+  ],
+  "ancf_core_sha256": {
+    "ancf_kernel.cpp": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+    "ancf_kernel.hpp": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c"
+  },
+  "candidate_binary_sha256": "35e6fb29f5365f2ac9e4ba75d9ed977837218221466133845ad30e760b0e517a",
+  "candidate_source": "${V2606_PROJECT_ROOT}/evidence/v2606_nm10_1_distributed_mapping/source",
+  "endpoint_policy": "NearestConstant",
+  "mapping_mode": "PiecewiseLinearDistributed",
+  "self_test": "PASS",
+  "unit_span_m": 0.028,
+  "runtime_core_hashes": {
+    "ancf_kernel.cpp": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+    "ancf_kernel.hpp": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c"
+  },
+  "runtime_adapter_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "official_adapter_unchanged": true
+}

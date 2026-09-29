@@ -1,0 +1,65 @@
+{
+  "phase": "NM11_FOUR_RANK_FLUID_REQUALIFICATION",
+  "status": "PLANNED_NOT_EXECUTED",
+  "R1_frozen30_startup_decomposition": {
+    "fresh_frozen30_copy": true,
+    "checks": [
+      "decomposePar success",
+      "four valid processor domains",
+      "mesh reconstruction/decomposition consistency",
+      "startup success",
+      "same physical initial state/mesh/fields/histories",
+      "movingWallVelocity semantics",
+      "no configuration drift"
+    ]
+  },
+  "R2_short_fixed_state_one_step": {
+    "dt_s": 0.0004,
+    "checks": [
+      "same p settings",
+      "same turbulence",
+      "same mesh",
+      "short Fluid execution/restart health",
+      "force comparison where meaningful",
+      "field finiteness",
+      "Co",
+      "meshCo",
+      "mesh health",
+      "restart completeness"
+    ],
+    "comparison_rule": "Quantify absolute/relative 4-rank vs 6-rank differences; bitwise equality is not required."
+  },
+  "R3_moving_wall_four_rank_smoke": {
+    "slices": 1,
+    "fluid_ranks": 4,
+    "target_accepted_windows": 20,
+    "settings": [
+      "dt=4e-4",
+      "movingWallVelocity",
+      "p.relTol=0.01",
+      "pFinal.relTol=0",
+      "nOuter=3",
+      "official adapter",
+      "preCICE 3.4.1",
+      "current strict convergence",
+      "clean Structure architecture"
+    ],
+    "pass_gates": [
+      "converged smoke",
+      "no NaN/Inf",
+      "no mesh/Fluid failure",
+      "no rollback failure",
+      "no configuration drift"
+    ]
+  },
+  "explicitly_not_done": [
+    "30 s development rerun",
+    "NM1 prescribed-motion envelope",
+    "full NM3 release",
+    "NM6 ladder",
+    "N5 coupled run",
+    "N3-500",
+    "parameter tuning",
+    "ANCF/adapter modification"
+  ]
+}

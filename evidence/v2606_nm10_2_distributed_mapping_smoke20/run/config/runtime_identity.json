@@ -1,0 +1,9 @@
+{
+  "pass": true,
+  "xml_sha256": "6c03afc7ae24988e90b7c0a1cafc8a7ddb884865f404aef785473ead61bab3fb",
+  "structure_binary_sha256": "35e6fb29f5365f2ac9e4ba75d9ed977837218221466133845ad30e760b0e517a",
+  "launcher_sha256": "91b66ef750c3061332d57c70fb5e936af753815a8e5c1f47744e028c9965fff7",
+  "windows": 20,
+  "mapping_mode": "PiecewiseLinearDistributed",
+  "endpoint_policy": "NearestConstant"
+}

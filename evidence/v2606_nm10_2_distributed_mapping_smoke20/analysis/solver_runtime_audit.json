@@ -1,0 +1,28 @@
+{
+  "cases": {
+    "s099": {
+      "p_dictionary_hash": "ab2f185644ff929cba13c3590a7ef71c4c4686d81a596d52a406ec8abcc046ea",
+      "GAMG_p_solves_observed": true,
+      "GAMG_pFinal_path_observed_by_final_solve": true,
+      "p_relTol_0p01_configured": true,
+      "pFinal_relTol_0_configured": true
+    },
+    "s297": {
+      "p_dictionary_hash": "ab2f185644ff929cba13c3590a7ef71c4c4686d81a596d52a406ec8abcc046ea",
+      "GAMG_p_solves_observed": true,
+      "GAMG_pFinal_path_observed_by_final_solve": true,
+      "p_relTol_0p01_configured": true,
+      "pFinal_relTol_0_configured": true
+    },
+    "s495": {
+      "p_dictionary_hash": "ab2f185644ff929cba13c3590a7ef71c4c4686d81a596d52a406ec8abcc046ea",
+      "GAMG_p_solves_observed": true,
+      "GAMG_pFinal_path_observed_by_final_solve": true,
+      "p_relTol_0p01_configured": true,
+      "pFinal_relTol_0_configured": true
+    }
+  },
+  "ordinary_p_relTol": 0.01,
+  "pFinal_relTol": 0.0,
+  "runtime_solver_log_observed": true
+}

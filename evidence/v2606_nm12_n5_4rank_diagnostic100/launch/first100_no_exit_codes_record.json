@@ -1,0 +1,17 @@
+{
+  "accepted_windows": 100,
+  "attempts": 347,
+  "q_reconstruction_max_abs_error": 3.1086244689504383e-15,
+  "reason": "external monitor ENODATA while participants remained running; numeric exit codes lost",
+  "rerun_scope": "same NM12 evidence root and same five Fluid case paths; no physics/numerics change",
+  "rollback": {
+    "all_q_v_finite": true,
+    "checked": 247,
+    "failures": 0,
+    "one_global_advance_per_attempt": true,
+    "passes": 247,
+    "rejected_attempts": 247
+  },
+  "status": "COMPLETED_NUMERIC_EXIT_CODES_UNOBSERVABLE",
+  "structure_and_all_five_fluid_normal_end_markers": true
+}

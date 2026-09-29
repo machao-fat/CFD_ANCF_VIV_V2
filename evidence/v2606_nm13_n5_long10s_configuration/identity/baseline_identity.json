@@ -1,0 +1,14 @@
+{
+  "ancf_core_sha256": {
+    "ancf_kernel.cpp": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+    "ancf_kernel.hpp": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c"
+  },
+  "frozen30_source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "nm12_classification": "V2606_NM12_N5_4RANK_DISTRIBUTED_MAPPING_DIAGNOSTIC100_PASS",
+  "nm12_evidence_unchanged": true,
+  "official_adapter_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "real_long_run_started": false,
+  "source_controlDict_sha256": "082443dc4a0473c4197c3d25ee4ef2b2b297931e8b6e5fef2bd3eb029af461a0",
+  "source_fvSolution_sha256": "3a0fbc8bab5998b89074bb6f28bac18a3a65c75b016ecd41240444bdfe958e80",
+  "source_time_directory": "29.9999999999834372"
+}

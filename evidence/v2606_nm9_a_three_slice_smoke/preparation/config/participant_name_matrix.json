@@ -1,0 +1,101 @@
+{
+  "pass": true,
+  "rows": [
+    {
+      "mesh": "Fluid-Mesh-S1",
+      "participant": "Fluid-S1",
+      "preciceDict_name": "Fluid-S1",
+      "reads": [
+        {
+          "mesh": "Fluid-Mesh-S1",
+          "name": "Displacement-S1"
+        }
+      ],
+      "status": "PASS",
+      "writes": [
+        {
+          "mesh": "Fluid-Mesh-S1",
+          "name": "Force-S1"
+        }
+      ],
+      "xml_name": "Fluid-S1"
+    },
+    {
+      "mesh": "Fluid-Mesh-S2",
+      "participant": "Fluid-S2",
+      "preciceDict_name": "Fluid-S2",
+      "reads": [
+        {
+          "mesh": "Fluid-Mesh-S2",
+          "name": "Displacement-S2"
+        }
+      ],
+      "status": "PASS",
+      "writes": [
+        {
+          "mesh": "Fluid-Mesh-S2",
+          "name": "Force-S2"
+        }
+      ],
+      "xml_name": "Fluid-S2"
+    },
+    {
+      "mesh": "Fluid-Mesh-S3",
+      "participant": "Fluid-S3",
+      "preciceDict_name": "Fluid-S3",
+      "reads": [
+        {
+          "mesh": "Fluid-Mesh-S3",
+          "name": "Displacement-S3"
+        }
+      ],
+      "status": "PASS",
+      "writes": [
+        {
+          "mesh": "Fluid-Mesh-S3",
+          "name": "Force-S3"
+        }
+      ],
+      "xml_name": "Fluid-S3"
+    },
+    {
+      "mesh": [
+        "Solid-S1",
+        "Solid-S2",
+        "Solid-S3"
+      ],
+      "participant": "Structure",
+      "reads": [
+        {
+          "mesh": "Solid-S1",
+          "name": "Force-S1"
+        },
+        {
+          "mesh": "Solid-S2",
+          "name": "Force-S2"
+        },
+        {
+          "mesh": "Solid-S3",
+          "name": "Force-S3"
+        }
+      ],
+      "source_name": "Structure",
+      "status": "PASS",
+      "writes": [
+        {
+          "mesh": "Solid-S1",
+          "name": "Displacement-S1"
+        },
+        {
+          "mesh": "Solid-S2",
+          "name": "Displacement-S2"
+        },
+        {
+          "mesh": "Solid-S3",
+          "name": "Displacement-S3"
+        }
+      ],
+      "xml_name": "Structure"
+    }
+  ]
+}

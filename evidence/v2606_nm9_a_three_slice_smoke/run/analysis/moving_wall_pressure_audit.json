@@ -1,0 +1,529 @@
+{
+  "moving_wall_runtime_3_of_3": true,
+  "pFinal_relTol_0_3_of_3": true,
+  "p_relTol_0p01_3_of_3": true,
+  "slices": [
+    {
+      "ordinary_p_relTol_0p01_in_active_dictionary": true,
+      "pFinal_relTol_0_in_active_dictionary": true,
+      "pass": true,
+      "pressure_final_inner_residual_pattern": true,
+      "pressure_runtime_samples": [
+        {
+          "attemptOrdinal": 31,
+          "pressure_solves": [
+            {
+              "final_residual": 0.00518575038,
+              "initial_residual": 0.5629893148,
+              "iterations": 14
+            },
+            {
+              "final_residual": 9.938108566e-09,
+              "initial_residual": 0.3539526619,
+              "iterations": 152
+            },
+            {
+              "final_residual": 0.003168509209,
+              "initial_residual": 0.3175026547,
+              "iterations": 12
+            },
+            {
+              "final_residual": 9.253810824e-09,
+              "initial_residual": 0.2055386513,
+              "iterations": 145
+            },
+            {
+              "final_residual": 0.0001741701219,
+              "initial_residual": 0.01916750022,
+              "iterations": 24
+            },
+            {
+              "final_residual": 9.986899521e-09,
+              "initial_residual": 0.004912000383,
+              "iterations": 116
+            }
+          ],
+          "window": 1
+        },
+        {
+          "attemptOrdinal": 76,
+          "pressure_solves": [
+            {
+              "final_residual": 0.002789324442,
+              "initial_residual": 0.2904517304,
+              "iterations": 19
+            },
+            {
+              "final_residual": 9.993164871e-09,
+              "initial_residual": 0.1927962521,
+              "iterations": 147
+            },
+            {
+              "final_residual": 0.001570607291,
+              "initial_residual": 0.1719212912,
+              "iterations": 7
+            },
+            {
+              "final_residual": 9.902423589e-09,
+              "initial_residual": 0.1164208123,
+              "iterations": 130
+            },
+            {
+              "final_residual": 0.001588291413,
+              "initial_residual": 0.1633794267,
+              "iterations": 17
+            },
+            {
+              "final_residual": 9.568502552e-09,
+              "initial_residual": 0.01732744561,
+              "iterations": 126
+            }
+          ],
+          "window": 10
+        },
+        {
+          "attemptOrdinal": 97,
+          "pressure_solves": [
+            {
+              "final_residual": 0.003186529608,
+              "initial_residual": 0.3271029188,
+              "iterations": 15
+            },
+            {
+              "final_residual": 9.776551693e-09,
+              "initial_residual": 0.2160968024,
+              "iterations": 139
+            },
+            {
+              "final_residual": 0.001350132958,
+              "initial_residual": 0.1913786347,
+              "iterations": 6
+            },
+            {
+              "final_residual": 9.561316432e-09,
+              "initial_residual": 0.1285379707,
+              "iterations": 128
+            },
+            {
+              "final_residual": 0.001825904819,
+              "initial_residual": 0.1879354603,
+              "iterations": 14
+            },
+            {
+              "final_residual": 9.420609493e-09,
+              "initial_residual": 0.01720725201,
+              "iterations": 122
+            }
+          ],
+          "window": 20
+        }
+      ],
+      "pressure_solver_runtime_path": "pEqn.H uses p.select(pimple.finalInnerIter()); v2606 finalOnLastPimpleIterOnly defaults false, so corrector 2 of each outer selects pFinal. Log prints field name p for both.",
+      "ranks": [
+        {
+          "final_movingWallVelocity": true,
+          "rank": 0,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 1,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 2,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 3,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 4,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 5,
+          "startup_movingWallVelocity": true
+        }
+      ],
+      "slice": "s099",
+      "wall_motion_active": true,
+      "wall_samples_start_mid_final": [
+        {
+          "maxFaceMotion": 1.219831008e-07,
+          "maxFaceSpeed": 0.000304957752,
+          "maxNormalU": 0.0006104877936,
+          "maxU": 0.000610492412,
+          "ordinal": 31
+        },
+        {
+          "maxFaceMotion": 3.266974805e-06,
+          "maxFaceSpeed": 0.008167437013,
+          "maxNormalU": 0.008558086049,
+          "maxU": 0.008558095742,
+          "ordinal": 76
+        },
+        {
+          "maxFaceMotion": 5.842980411e-06,
+          "maxFaceSpeed": 0.01460745103,
+          "maxNormalU": 0.01488501731,
+          "maxU": 0.01488558321,
+          "ordinal": 97
+        }
+      ]
+    },
+    {
+      "ordinary_p_relTol_0p01_in_active_dictionary": true,
+      "pFinal_relTol_0_in_active_dictionary": true,
+      "pass": true,
+      "pressure_final_inner_residual_pattern": true,
+      "pressure_runtime_samples": [
+        {
+          "attemptOrdinal": 31,
+          "pressure_solves": [
+            {
+              "final_residual": 0.005133519694,
+              "initial_residual": 0.5635922495,
+              "iterations": 15
+            },
+            {
+              "final_residual": 9.778164284e-09,
+              "initial_residual": 0.3548778443,
+              "iterations": 153
+            },
+            {
+              "final_residual": 0.002791840555,
+              "initial_residual": 0.3176603895,
+              "iterations": 14
+            },
+            {
+              "final_residual": 9.253760527e-09,
+              "initial_residual": 0.205617335,
+              "iterations": 146
+            },
+            {
+              "final_residual": 0.0001890474845,
+              "initial_residual": 0.01954533765,
+              "iterations": 24
+            },
+            {
+              "final_residual": 9.87993606e-09,
+              "initial_residual": 0.005120537182,
+              "iterations": 117
+            }
+          ],
+          "window": 1
+        },
+        {
+          "attemptOrdinal": 76,
+          "pressure_solves": [
+            {
+              "final_residual": 0.002653060347,
+              "initial_residual": 0.2904289579,
+              "iterations": 19
+            },
+            {
+              "final_residual": 9.895040816e-09,
+              "initial_residual": 0.1928400101,
+              "iterations": 146
+            },
+            {
+              "final_residual": 0.001671370934,
+              "initial_residual": 0.1719871387,
+              "iterations": 6
+            },
+            {
+              "final_residual": 9.486143543e-09,
+              "initial_residual": 0.1164519556,
+              "iterations": 133
+            },
+            {
+              "final_residual": 0.001559039816,
+              "initial_residual": 0.1635389192,
+              "iterations": 17
+            },
+            {
+              "final_residual": 9.331331133e-09,
+              "initial_residual": 0.01719747455,
+              "iterations": 126
+            }
+          ],
+          "window": 10
+        },
+        {
+          "attemptOrdinal": 97,
+          "pressure_solves": [
+            {
+              "final_residual": 0.002980099215,
+              "initial_residual": 0.3273262707,
+              "iterations": 16
+            },
+            {
+              "final_residual": 9.456404395e-09,
+              "initial_residual": 0.2158496658,
+              "iterations": 140
+            },
+            {
+              "final_residual": 0.001342501601,
+              "initial_residual": 0.1913197584,
+              "iterations": 6
+            },
+            {
+              "final_residual": 9.884190569e-09,
+              "initial_residual": 0.1284899909,
+              "iterations": 128
+            },
+            {
+              "final_residual": 0.001701610348,
+              "initial_residual": 0.1881865484,
+              "iterations": 15
+            },
+            {
+              "final_residual": 9.172595816e-09,
+              "initial_residual": 0.0173050142,
+              "iterations": 123
+            }
+          ],
+          "window": 20
+        }
+      ],
+      "pressure_solver_runtime_path": "pEqn.H uses p.select(pimple.finalInnerIter()); v2606 finalOnLastPimpleIterOnly defaults false, so corrector 2 of each outer selects pFinal. Log prints field name p for both.",
+      "ranks": [
+        {
+          "final_movingWallVelocity": true,
+          "rank": 0,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 1,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 2,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 3,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 4,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 5,
+          "startup_movingWallVelocity": true
+        }
+      ],
+      "slice": "s297",
+      "wall_motion_active": true,
+      "wall_samples_start_mid_final": [
+        {
+          "maxFaceMotion": 1.35848285e-07,
+          "maxFaceSpeed": 0.0003396207125,
+          "maxNormalU": 0.0006802749752,
+          "maxU": 0.0006802801054,
+          "ordinal": 31
+        },
+        {
+          "maxFaceMotion": 3.408928631e-06,
+          "maxFaceSpeed": 0.008522321576,
+          "maxNormalU": 0.008903238058,
+          "maxU": 0.008903255308,
+          "ordinal": 76
+        },
+        {
+          "maxFaceMotion": 5.957334651e-06,
+          "maxFaceSpeed": 0.01489333663,
+          "maxNormalU": 0.01518476415,
+          "maxU": 0.01518536931,
+          "ordinal": 97
+        }
+      ]
+    },
+    {
+      "ordinary_p_relTol_0p01_in_active_dictionary": true,
+      "pFinal_relTol_0_in_active_dictionary": true,
+      "pass": true,
+      "pressure_final_inner_residual_pattern": true,
+      "pressure_runtime_samples": [
+        {
+          "attemptOrdinal": 31,
+          "pressure_solves": [
+            {
+              "final_residual": 0.00540905762,
+              "initial_residual": 0.5632598075,
+              "iterations": 14
+            },
+            {
+              "final_residual": 9.466023241e-09,
+              "initial_residual": 0.3540535491,
+              "iterations": 153
+            },
+            {
+              "final_residual": 0.003089250196,
+              "initial_residual": 0.3175740173,
+              "iterations": 13
+            },
+            {
+              "final_residual": 9.503710014e-09,
+              "initial_residual": 0.2058085631,
+              "iterations": 145
+            },
+            {
+              "final_residual": 0.0001832496005,
+              "initial_residual": 0.01934020513,
+              "iterations": 24
+            },
+            {
+              "final_residual": 9.4307937e-09,
+              "initial_residual": 0.005003445102,
+              "iterations": 117
+            }
+          ],
+          "window": 1
+        },
+        {
+          "attemptOrdinal": 76,
+          "pressure_solves": [
+            {
+              "final_residual": 0.002796921079,
+              "initial_residual": 0.2907339156,
+              "iterations": 19
+            },
+            {
+              "final_residual": 9.802565887e-09,
+              "initial_residual": 0.1929521262,
+              "iterations": 147
+            },
+            {
+              "final_residual": 0.001580858637,
+              "initial_residual": 0.1719766942,
+              "iterations": 7
+            },
+            {
+              "final_residual": 9.406937338e-09,
+              "initial_residual": 0.1164587792,
+              "iterations": 132
+            },
+            {
+              "final_residual": 0.00160398479,
+              "initial_residual": 0.1636077918,
+              "iterations": 17
+            },
+            {
+              "final_residual": 9.708951119e-09,
+              "initial_residual": 0.01741658473,
+              "iterations": 126
+            }
+          ],
+          "window": 10
+        },
+        {
+          "attemptOrdinal": 97,
+          "pressure_solves": [
+            {
+              "final_residual": 0.002988139622,
+              "initial_residual": 0.3275371335,
+              "iterations": 16
+            },
+            {
+              "final_residual": 9.489985044e-09,
+              "initial_residual": 0.2159712494,
+              "iterations": 140
+            },
+            {
+              "final_residual": 0.001352885933,
+              "initial_residual": 0.1913927054,
+              "iterations": 6
+            },
+            {
+              "final_residual": 9.795417816e-09,
+              "initial_residual": 0.1285404594,
+              "iterations": 128
+            },
+            {
+              "final_residual": 0.00170248298,
+              "initial_residual": 0.188300534,
+              "iterations": 15
+            },
+            {
+              "final_residual": 9.188291308e-09,
+              "initial_residual": 0.01731486594,
+              "iterations": 123
+            }
+          ],
+          "window": 20
+        }
+      ],
+      "pressure_solver_runtime_path": "pEqn.H uses p.select(pimple.finalInnerIter()); v2606 finalOnLastPimpleIterOnly defaults false, so corrector 2 of each outer selects pFinal. Log prints field name p for both.",
+      "ranks": [
+        {
+          "final_movingWallVelocity": true,
+          "rank": 0,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 1,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 2,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 3,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 4,
+          "startup_movingWallVelocity": true
+        },
+        {
+          "final_movingWallVelocity": true,
+          "rank": 5,
+          "startup_movingWallVelocity": true
+        }
+      ],
+      "slice": "s495",
+      "wall_motion_active": true,
+      "wall_samples_start_mid_final": [
+        {
+          "maxFaceMotion": 1.281800707e-07,
+          "maxFaceSpeed": 0.0003204501766,
+          "maxNormalU": 0.0006417542147,
+          "maxU": 0.0006417590368,
+          "ordinal": 31
+        },
+        {
+          "maxFaceMotion": 3.362020085e-06,
+          "maxFaceSpeed": 0.008405050213,
+          "maxNormalU": 0.008799789863,
+          "maxU": 0.008799802386,
+          "ordinal": 76
+        },
+        {
+          "maxFaceMotion": 6.00163094e-06,
+          "maxFaceSpeed": 0.01500407735,
+          "maxNormalU": 0.01529689219,
+          "maxU": 0.01529745462,
+          "ordinal": 97
+        }
+      ]
+    }
+  ]
+}

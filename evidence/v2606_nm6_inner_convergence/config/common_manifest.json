@@ -1,0 +1,40 @@
+{
+  "phase": "V2606-NM6",
+  "purpose": "controlled same-input Fluid-only PIMPLE inner-convergence replay",
+  "project_root": "${V2606_PROJECT_ROOT}",
+  "openfoam": {
+    "project": "OpenFOAM",
+    "version": "v2606",
+    "project_dir": "/usr/lib/openfoam/openfoam2606",
+    "pimpleFoam": "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+    "mpi_ranks": 6
+  },
+  "precice": "3.4.1",
+  "adapter": {
+    "tag": "v1.4.0",
+    "commit": "0801887b958f3101389cb719838dc8fc864d5369",
+    "runtime_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9"
+  },
+  "production_contract": {
+    "dt": 0.0004,
+    "mesh": "frozen new-mesh 30 s release",
+    "turbulence": "kOmegaSST",
+    "nCorrectors": 2,
+    "nNonOrthogonalCorrectors": 0,
+    "relaxation_unchanged": true,
+    "iqn_unchanged": true
+  },
+  "diagnostic_change": {
+    "controlled_replay": true,
+    "coupling_input": "prescribed absolute displacement from NM5-B accepted window",
+    "precice_config": "precice_nm6_replay.xml",
+    "parallel_implicit_production_loop": false,
+    "residualControl_disabled": true,
+    "only_variable": "PIMPLE.nOuterCorrectors in {3,6,9,12}"
+  },
+  "input_points": {
+    "OP1": "NM5-B window 1 accepted absolute displacement; pristine 30 s release state",
+    "OP2": "NM5-B window 20 target displacement; state after window 19 accepted"
+  },
+  "force_scale": "raw OpenFOAM forces in N; no /0.028 or *1.98 conversion"
+}

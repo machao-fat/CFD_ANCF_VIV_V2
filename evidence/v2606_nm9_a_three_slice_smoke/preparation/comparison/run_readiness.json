@@ -1,0 +1,20 @@
+{
+  "ANCF_core_unchanged": true,
+  "D_5p94_coupling_influence": "NONE",
+  "D_5p94_implemented": true,
+  "NM9_actual_run_executed": false,
+  "authorized_next_action": "NM9_A_THREE_SLICE_20_WINDOW_SMOKE",
+  "classification": "V2606_NM9_A0_THREE_SLICE_RUN_READY",
+  "fluid_participants_generated": 3,
+  "fresh_frozen30": "3/3 PASS",
+  "movingWallVelocity": "18/18 PASS",
+  "pFinal_relTol_0": "3/3 PASS",
+  "p_relTol_0p01": "3/3 PASS",
+  "participant_name_matrix": "PASS",
+  "protected_sources_unchanged": true,
+  "self_test": "PASS",
+  "self_test_argument_bug_fixed": true,
+  "six_rank_startup_complete": "3/3 PASS",
+  "structure_coupling_semantics_unchanged": true,
+  "xml_20_window_validate": "PASS"
+}

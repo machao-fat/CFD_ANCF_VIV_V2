@@ -1,0 +1,21 @@
+{
+  "classification": "V2606_NM8_3_ROOT_CAUSE_UNRESOLVED",
+  "fresh_reproduction": true,
+  "prefix_match": true,
+  "force_residual_morphology": "CYCLIC",
+  "displacement_first_strict_attempt": 2,
+  "force_side_limiting": true,
+  "structure_checkpoint_exact": true,
+  "fluid_rollback_consistency": "NOT_OBSERVABLE",
+  "natural_exact_pair": false,
+  "direct_force_variation_attribution": "PRESSURE",
+  "authorized_next_action": "MORE_DIAGNOSTICS",
+  "NM9_authorized": false,
+  "diagnostic_replay": "YES",
+  "fluid_repeatability": "FLUID_OPERATOR_REPEATABILITY_SUPPORTED",
+  "window39_iqn_conditioning_warnings": 48,
+  "window39_iqn_QR_warnings": 48,
+  "pressure_force_replay_delta_logged_N": 0.0,
+  "viscous_force_replay_delta_logged_N": 0.0,
+  "total_force_replay_delta_logged_N": 0.0
+}

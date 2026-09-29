@@ -1,0 +1,37 @@
+{
+  "label": "R1",
+  "project_root": "${LINUX_HOME}/projects/CFD_ANCF_VIV_V2",
+  "template": "${LINUX_HOME}/projects/CFD_ANCF_VIV_V2/cases/hh06_v2606_newmesh_rollback_gate/template",
+  "fluid_command": [
+    "bash",
+    "-lc",
+    "source /usr/lib/openfoam/openfoam2606/etc/bashrc && exec pimpleFoam -case ."
+  ],
+  "solid_command": [
+    "/usr/bin/python3",
+    "${LINUX_HOME}/projects/CFD_ANCF_VIV_V2/cases/hh06_v2606_newmesh_rollback_gate/solid-fake/fake.py",
+    "--config",
+    "${LINUX_HOME}/projects/CFD_ANCF_VIV_V2/evidence/v2606_nm2_official_adapter_rollback/R1/case/precice-config-nm2.xml",
+    "--mesh-case",
+    "${LINUX_HOME}/projects/CFD_ANCF_VIV_V2/evidence/v2606_nm2_official_adapter_rollback/R1/case",
+    "--trace",
+    "${LINUX_HOME}/projects/CFD_ANCF_VIV_V2/evidence/v2606_nm2_official_adapter_rollback/R1/solid_attempt_trace.jsonl",
+    "--identity",
+    "${LINUX_HOME}/projects/CFD_ANCF_VIV_V2/evidence/v2606_nm2_official_adapter_rollback/R1/solid_mesh_identity.json"
+  ],
+  "fluid_returncode": 0,
+  "solid_returncode": 0,
+  "elapsed_seconds": 5.006270408630371,
+  "mesh_sha256": {
+    "points": "9918bb58ad8a3052be917eb0e3403ac26abbece25f18d40651c5282407dbad36",
+    "faces": "d2a7dfeefed80fc08af488a83e9bf26d9e570c7db22a3392faa918b21a332242",
+    "owner": "b433a77644b807eec43cd32e739e927cff1c4f1fca2d0cf6edf0cc93de5283bc",
+    "neighbour": "79cc5e86396555ab0cdbac498cd5042f2cbdbfbc229e527ae5597afb69af94a7",
+    "boundary": "aa930c4252198b6e129e384302dfe1737b50cb9d7f40b08c9252ed6b52f83bf2"
+  },
+  "dynamicMeshDict_sha256": "4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb",
+  "adapter_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "observer_sha256": "829646b6474c4d939f671d70060ea55bdfc098c653416c46b6cb0e00a86c8129",
+  "precice_config_sha256": "5476b0f9a023c724e0e563427b954c1e7741fd03937e749c29aab12c5f9a5477",
+  "controlDict_sha256": "821dcea6da0a482940ec2b21903d69af5406de586363e2ab6803df215f5328b6"
+}

@@ -1,0 +1,235 @@
+{
+  "attempt3": {
+    "forces": {
+      "pressureForce": [
+        26.69889249200534,
+        -0.036526946384944026,
+        7.971572236263153e-20
+      ],
+      "totalForce": [
+        26.730901472492327,
+        -0.03657668881280536,
+        2.9278764515018936e-16
+      ],
+      "viscousForce": [
+        0.03200898048698936,
+        -4.97424278613365e-05,
+        2.927079294278267e-16
+      ]
+    },
+    "metadata": {
+      "V": "NOT_SAFELY_OBSERVABLE",
+      "V0": "NOT_SAFELY_OBSERVABLE",
+      "V00": "NOT_SAFELY_OBSERVABLE",
+      "cylinder_max_rigid_deviation": 9.032751689563512e-22,
+      "cylinder_mean_displacement": [
+        1.0633832164606151e-07,
+        9.530777190012e-08,
+        0
+      ],
+      "cylinder_points": 400,
+      "mesh_points": 94498,
+      "oldPoints": "NOT_SAFELY_OBSERVABLE",
+      "ordinal": 3,
+      "standard_forces_available": true,
+      "time": 0.0002,
+      "time_index": 1
+    },
+    "optional": {
+      "V": "NOT_SAFELY_OBSERVABLE",
+      "V0": "NOT_SAFELY_OBSERVABLE",
+      "V00": "NOT_SAFELY_OBSERVABLE",
+      "meshPhi": "NOT_REGISTERED",
+      "oldPoints": "NOT_SAFELY_OBSERVABLE"
+    },
+    "ordinal": 3,
+    "sha256": {
+      "U": "a0ab344c3a08b1b60a8aeba6999b8fb57ff022daf048b81f3a1a079f5ff4e244",
+      "k": "fb8df6498f8c23e6cba1300808c429797bc248b436a4eabdf0c5397e11e1365c",
+      "nut": "c04390846e75ec8ae893c472ac04055f86892dcc7f08f6e413aa252337cb3666",
+      "omega": "2f7eaf290ca09c0ed8c318b45359d104f416486fff2e630cb7f4322474777b3c",
+      "p": "c6f39a0afab1dce3695046d5fdf34d40cefee163b21b45da29a5b644e796223e",
+      "phi": "5209a4916bd0bee358aea98c55e887c427fbc9d63426706fa8e24f1c22558726",
+      "pointDisplacement": "d6b7189d0c37106f180078f55e24b2532a976a7d277daecd4d43e7ca390865f9",
+      "points": "b677ff3a2416d1cc64c35a01ce8f4738f172ada57ed4885a9ccc492e88763386",
+      "pressureForce": "d1ffd7370a4b6ec468868a91df715997772a6bc49a4533148423b46dd3dacde0",
+      "totalForce": "678c6cbe246e125ccd55d087fc1125b13a7146d8b18064d05e9689fa15b4b140",
+      "viscousForce": "09c54fe961968e10c3e7393d7bf4caac08ac0fea3fb3e68e0593f6c188921e64"
+    },
+    "standard_force_binary_match": true
+  },
+  "attempt4": {
+    "forces": {
+      "pressureForce": [
+        26.69889249200534,
+        -0.036526946384944026,
+        7.971572236263153e-20
+      ],
+      "totalForce": [
+        26.730901472492327,
+        -0.03657668881280536,
+        2.9278764515018936e-16
+      ],
+      "viscousForce": [
+        0.03200898048698936,
+        -4.97424278613365e-05,
+        2.927079294278267e-16
+      ]
+    },
+    "metadata": {
+      "V": "NOT_SAFELY_OBSERVABLE",
+      "V0": "NOT_SAFELY_OBSERVABLE",
+      "V00": "NOT_SAFELY_OBSERVABLE",
+      "cylinder_max_rigid_deviation": 9.032751689563512e-22,
+      "cylinder_mean_displacement": [
+        1.0633832164606151e-07,
+        9.530777190012e-08,
+        0
+      ],
+      "cylinder_points": 400,
+      "mesh_points": 94498,
+      "oldPoints": "NOT_SAFELY_OBSERVABLE",
+      "ordinal": 4,
+      "standard_forces_available": true,
+      "time": 0.0002,
+      "time_index": 1
+    },
+    "optional": {
+      "V": "NOT_SAFELY_OBSERVABLE",
+      "V0": "NOT_SAFELY_OBSERVABLE",
+      "V00": "NOT_SAFELY_OBSERVABLE",
+      "meshPhi": "NOT_REGISTERED",
+      "oldPoints": "NOT_SAFELY_OBSERVABLE"
+    },
+    "ordinal": 4,
+    "sha256": {
+      "U": "a0ab344c3a08b1b60a8aeba6999b8fb57ff022daf048b81f3a1a079f5ff4e244",
+      "k": "fb8df6498f8c23e6cba1300808c429797bc248b436a4eabdf0c5397e11e1365c",
+      "nut": "c04390846e75ec8ae893c472ac04055f86892dcc7f08f6e413aa252337cb3666",
+      "omega": "2f7eaf290ca09c0ed8c318b45359d104f416486fff2e630cb7f4322474777b3c",
+      "p": "c6f39a0afab1dce3695046d5fdf34d40cefee163b21b45da29a5b644e796223e",
+      "phi": "5818f2149eff5bded571b23fdd245b02d2955950909a94b48c2c2acd33cbff82",
+      "pointDisplacement": "d6b7189d0c37106f180078f55e24b2532a976a7d277daecd4d43e7ca390865f9",
+      "points": "b677ff3a2416d1cc64c35a01ce8f4738f172ada57ed4885a9ccc492e88763386",
+      "pressureForce": "d1ffd7370a4b6ec468868a91df715997772a6bc49a4533148423b46dd3dacde0",
+      "totalForce": "678c6cbe246e125ccd55d087fc1125b13a7146d8b18064d05e9689fa15b4b140",
+      "viscousForce": "09c54fe961968e10c3e7393d7bf4caac08ac0fea3fb3e68e0593f6c188921e64"
+    },
+    "standard_force_binary_match": true
+  },
+  "comparisons": {
+    "U": {
+      "count": 47672,
+      "delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "differing_components": 0,
+      "exact": true
+    },
+    "k": {
+      "count": 47672,
+      "delta": [
+        0.0
+      ],
+      "differing_components": 0,
+      "exact": true
+    },
+    "nut": {
+      "count": 47672,
+      "delta": [
+        0.0
+      ],
+      "differing_components": 0,
+      "exact": true
+    },
+    "omega": {
+      "count": 47672,
+      "delta": [
+        0.0
+      ],
+      "differing_components": 0,
+      "exact": true
+    },
+    "p": {
+      "count": 47672,
+      "delta": [
+        0.0
+      ],
+      "differing_components": 0,
+      "exact": true
+    },
+    "phi": {
+      "count": 94075,
+      "differing_components": 84,
+      "exact": false,
+      "first_difference": {
+        "component": 0,
+        "delta": 2.9534295564409974e-36,
+        "item": 93574,
+        "left": 4.533424288833943e-24,
+        "right": 4.533424288836896e-24
+      },
+      "max_abs_delta": 9.525074031516734e-36
+    },
+    "pointDisplacement": {
+      "count": 190696,
+      "delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "differing_components": 0,
+      "exact": true
+    },
+    "points": {
+      "count": 94498,
+      "delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "differing_components": 0,
+      "exact": true
+    },
+    "pressureForce": {
+      "count": 1,
+      "delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "differing_components": 0,
+      "exact": true
+    },
+    "totalForce": {
+      "count": 1,
+      "delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "differing_components": 0,
+      "exact": true
+    },
+    "viscousForce": {
+      "count": 1,
+      "delta": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "differing_components": 0,
+      "exact": true
+    }
+  },
+  "earliest_divergence": "phi",
+  "fluid_input_same": true,
+  "force_exact": true,
+  "max_abs_mesh_motion": 1.0633832164645696e-07,
+  "mesh_coordinate_components_changed": 187164,
+  "nonzero_ALE": true,
+  "protocol": true,
+  "state_exact": false
+}

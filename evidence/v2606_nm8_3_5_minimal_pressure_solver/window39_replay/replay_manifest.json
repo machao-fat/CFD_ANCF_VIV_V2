@@ -1,0 +1,31 @@
+{
+  "replay_case": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_5_window39_replay",
+  "source_fluid_restart": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_restart_capture/fluid",
+  "source_time": "30.0151999999834018",
+  "window38_state_identity": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_3_moving_wall_failure/window38/state_identity.json",
+  "structure_q_checkpoint": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_3_moving_wall_failure/window38/capture_run/guard_checkpoint_q.bin",
+  "structure_v_checkpoint": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_3_moving_wall_failure/window38/capture_run/guard_checkpoint_v.bin",
+  "structure_q_sha256": "4d58327648dbcfca7634004f109044cd9b9de32a73ad003eedb5a852538d22b4",
+  "structure_v_sha256": "ec87517d6ee0e8d5dd2fdcf674ed4ec57de006cdc1e0dd6ed95bd783459553e5",
+  "p_relTol": "0.01",
+  "pFinal_unchanged": true,
+  "pcorr_unchanged": true,
+  "nOuterCorrectors": 3,
+  "nCorrectors": 2,
+  "nNonOrthogonalCorrectors": 0,
+  "dt_s": 0.0004,
+  "MPI_ranks": 6,
+  "precice_xml_source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_restart_capture/fluid/precice-config-nm8_2.xml",
+  "precice_xml_runtime": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_5_window39_replay/fluid/precice-config-nm8_3_5_window39.xml",
+  "precice_scheme_parameters_unchanged": true,
+  "runtime_only_max_time_windows_change": "500 -> 1 to terminate after the one replay window",
+  "max_coupling_iterations": 50,
+  "strict_force_limit": 0.005,
+  "strict_displacement_limit": 0.005,
+  "diagnostic_observer_libraries": [
+    "${V2606_PROJECT_ROOT}/diagnostics/nm8_3_1ForceResultObserver/lib/libnm831ForceResultObserver.so",
+    "${V2606_PROJECT_ROOT}/diagnostics/nm8_3InputObserver/lib/libnm8InputObserver.so",
+    "${V2606_PROJECT_ROOT}/diagnostics/nm8_2WallObserver/lib/libnm8WallObserver.so"
+  ],
+  "official_adapter_source_modified": false
+}

@@ -1,0 +1,49 @@
+{
+  "active_region_m": [
+    0,
+    5.94
+  ],
+  "slice_count": 5,
+  "cell_width_m": 1.188,
+  "centers_m": [
+    0.594,
+    1.782,
+    2.97,
+    4.158,
+    5.346
+  ],
+  "local_cfd_span_m": 0.028,
+  "mapping_mode": "PiecewiseLinearDistributed",
+  "endpoint_policy": "NearestConstant",
+  "reconstruction": {
+    "intervals_m": [
+      [
+        0,
+        0.594
+      ],
+      [
+        0.594,
+        1.782
+      ],
+      [
+        1.782,
+        2.97
+      ],
+      [
+        2.97,
+        4.158
+      ],
+      [
+        4.158,
+        5.346
+      ],
+      [
+        5.346,
+        5.94
+      ]
+    ],
+    "endpoint_extension": "constant first/last sample within active region",
+    "outside_active_region": "exact zero"
+  },
+  "force_conversion": "Fraw_N / 0.028_m = f_Npm; no cell-width multiplier"
+}

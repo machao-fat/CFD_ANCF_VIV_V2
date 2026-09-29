@@ -1,0 +1,11 @@
+{
+  "classification": "V2606_NM8_2_MOVING_WALL_SHORT_PASS",
+  "accepted_windows": 20,
+  "mesh_OK": true,
+  "wall_motion_audit": true,
+  "process_exit": {
+    "fluid_exit_code": 0,
+    "structure_exit_code": 0,
+    "wrapper_exit_code": 0
+  }
+}

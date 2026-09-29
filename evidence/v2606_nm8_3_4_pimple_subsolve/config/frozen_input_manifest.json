@@ -1,0 +1,50 @@
+{
+  "project_root": "${V2606_PROJECT_ROOT}",
+  "source_restart_time": "30.0151999999834018",
+  "target_time": "30.0155999999834009",
+  "nOuterCorrectors": 30,
+  "nCorrectors": 2,
+  "nNonOrthogonalCorrectors": 0,
+  "pressure_reference": {
+    "p": {
+      "tolerance": "1e-10",
+      "relTol": "0"
+    },
+    "pFinal": {
+      "tolerance": "1e-10",
+      "relTol": "0"
+    },
+    "pcorr": "production unchanged 1e-8 relTol 0"
+  },
+  "correctPhi": "mesh.dynamic() default (no explicit fvSolution override)",
+  "input_states": {
+    "A": {
+      "raw_D_xy": [
+        0.00020765246670545467,
+        -7.234082133878694e-05
+      ],
+      "full_raw_array_sha256": "d176f245c76e2902de9bf782ed0c1562aac4cec7b3216e44186d2c0d5bc33a50"
+    },
+    "B": {
+      "raw_D_xy": [
+        0.00020765378035482516,
+        -7.234068872912082e-05
+      ],
+      "full_raw_array_sha256": "6788dcd6c214e175a05b473d68d121b2a422b79626fa83fb3f9c250d42dab01a"
+    },
+    "C": {
+      "raw_D_xy": [
+        0.00020765297068144233,
+        -7.234077073632843e-05
+      ],
+      "full_raw_array_sha256": "2a48e7bec814688dc59a9c0deda287c6d4256cba973ff458e1f4cc530fe66f2f"
+    },
+    "D": {
+      "raw_D_xy": [
+        0.00020765164526087532,
+        -7.234090307965125e-05
+      ],
+      "full_raw_array_sha256": "f9171dc7b4bfa68c261abaaf39df409ee6eebd49c95877485b8db37c0bf0962e"
+    }
+  }
+}

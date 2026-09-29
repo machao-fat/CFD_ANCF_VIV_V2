@@ -1,0 +1,17 @@
+{
+  "attempt": 1,
+  "status": "INSTRUMENTATION_INCOMPLETE_NOT_QUALIFICATION_EVIDENCE",
+  "accepted_windows_before_graceful_stop": 184,
+  "physical_time_at_stop_s": 30.0736,
+  "reason": "scratch fvSolution omitted PIMPLE.checkMeshCourantNo true, so per-solve meshCourantNo was not emitted and the required 1-541 prefix gate could not be fully evaluated",
+  "production_equations_changed": false,
+  "ANCF_failure": false,
+  "coupling_failure": false,
+  "full_run_classification": "NOT_CLASSIFIED_AS_NM8_1_RESULT",
+  "fluid_exit_code_after_manual_SIGINT": 1,
+  "structure_exit_code_after_manual_SIGINT": 130,
+  "monitor_exit_code": 0,
+  "wrapper_exit_code": 1,
+  "scratch_preserved": "${LINUX_HOME}/nm8_1.ef7tFD",
+  "frozen_30s_release_modified": false
+}

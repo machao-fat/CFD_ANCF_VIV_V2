@@ -1,0 +1,12 @@
+{
+  "fluid_exit": 0,
+  "structure_exit": 0,
+  "clean_runtime": true,
+  "checkMesh_OK": true,
+  "min_cell_volume_latest_accepted_m3": 7.687364216e-10,
+  "max_accepted_Courant": 0.8822924897,
+  "max_accepted_meshCourant": 0.1903530158,
+  "max_rejected_trial_Courant": 0.8822924897,
+  "max_rejected_trial_meshCourant": 0.003391538409,
+  "max_U_latest_accepted_m_s": 0.5684873474
+}

@@ -1,0 +1,12 @@
+{
+  "MESH_IDENTITY_MANUALLY_CONFIRMED": true,
+  "NM4_authorized": true,
+  "NM4_executed": false,
+  "PRODUCTION_CFD_RELEASE": "existing v2606/new-mesh t=30 s state",
+  "classification": "V2606_NEWMESH_EXISTING_FIXED30_RELEASE_PASS",
+  "final_fields_complete": true,
+  "late_shedding_stationary": true,
+  "original_run_deltaT_s": 0.0004,
+  "restart_one_step_pass": true,
+  "runtime_clean": true
+}

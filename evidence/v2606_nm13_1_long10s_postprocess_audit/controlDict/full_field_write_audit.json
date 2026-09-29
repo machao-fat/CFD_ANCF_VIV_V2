@@ -1,0 +1,9 @@
+{
+  "native_force_streams_separate": true,
+  "physical_interval_s": 0.1,
+  "purgeWrite": 3,
+  "retained_times": 3,
+  "status": "PASS",
+  "writeControl": "timeStep",
+  "writeInterval": 250
+}

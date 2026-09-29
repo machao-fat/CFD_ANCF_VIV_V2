@@ -1,0 +1,98 @@
+{
+  "s099": {
+    "final": {
+      "max_aspect_ratio": 7.60748756,
+      "max_nonorthogonality": 43.9503894,
+      "max_skewness": 0.8966300171,
+      "mesh_ok": true,
+      "min_volume": 7.687364196e-10,
+      "times_checked": [
+        "30.039999999983344"
+      ]
+    },
+    "initial": {
+      "max_aspect_ratio": 7.659081709,
+      "max_nonorthogonality": 43.84604596,
+      "max_skewness": 0.8969795303,
+      "mesh_ok": true,
+      "min_volume": 7.687364233e-10,
+      "times_checked": [
+        "29.9999999999834372"
+      ]
+    },
+    "mid": {
+      "max_aspect_ratio": 7.639563951,
+      "max_nonorthogonality": 43.89613023,
+      "max_skewness": 0.8969604459,
+      "mesh_ok": true,
+      "min_volume": 7.687364212e-10,
+      "times_checked": [
+        "30.0199999999833906"
+      ]
+    }
+  },
+  "s297": {
+    "final": {
+      "max_aspect_ratio": 7.607143336,
+      "max_nonorthogonality": 43.95240974,
+      "max_skewness": 0.8966301493,
+      "mesh_ok": true,
+      "min_volume": 7.687364195e-10,
+      "times_checked": [
+        "30.039999999983344"
+      ]
+    },
+    "initial": {
+      "max_aspect_ratio": 7.659081709,
+      "max_nonorthogonality": 43.84604596,
+      "max_skewness": 0.8969795303,
+      "mesh_ok": true,
+      "min_volume": 7.687364233e-10,
+      "times_checked": [
+        "29.9999999999834372"
+      ]
+    },
+    "mid": {
+      "max_aspect_ratio": 7.639114973,
+      "max_nonorthogonality": 43.89708342,
+      "max_skewness": 0.8969597355,
+      "mesh_ok": true,
+      "min_volume": 7.687364211e-10,
+      "times_checked": [
+        "30.0199999999833906"
+      ]
+    }
+  },
+  "s495": {
+    "final": {
+      "max_aspect_ratio": 7.607299582,
+      "max_nonorthogonality": 43.95109435,
+      "max_skewness": 0.8966263806,
+      "mesh_ok": true,
+      "min_volume": 7.687364195e-10,
+      "times_checked": [
+        "30.039999999983344"
+      ]
+    },
+    "initial": {
+      "max_aspect_ratio": 7.659081709,
+      "max_nonorthogonality": 43.84604596,
+      "max_skewness": 0.8969795303,
+      "mesh_ok": true,
+      "min_volume": 7.687364233e-10,
+      "times_checked": [
+        "29.9999999999834372"
+      ]
+    },
+    "mid": {
+      "max_aspect_ratio": 7.639064649,
+      "max_nonorthogonality": 43.8971751,
+      "max_skewness": 0.8969598036,
+      "mesh_ok": true,
+      "min_volume": 7.687364211e-10,
+      "times_checked": [
+        "30.0199999999833906"
+      ]
+    }
+  }
+}

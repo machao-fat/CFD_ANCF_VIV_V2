@@ -1,0 +1,21 @@
+{
+  "classification_gate": "BEFORE_WINDOW_1",
+  "first_launch": {
+    "cause": "OpenFOAM v2606 environment not propagated to MPI children",
+    "duration_s": 6.803771475,
+    "first_error": "libfiniteVolume.so: cannot open shared object file",
+    "first_exit": "s0594"
+  },
+  "no_third_run": "one-clean-retry limit reached",
+  "one_clean_retry": {
+    "accepted_windows": 0,
+    "actual_floating_point_exception_observed": false,
+    "duration_s": 11.069748305,
+    "first_real_participant_exit_before_monitor_stop": null,
+    "handshake_completed": false,
+    "launch_fix": "source /usr/lib/openfoam/openfoam2606/etc/bashrc before mpirun",
+    "monitor_false_positive": true,
+    "monitor_pattern": "Floating point exception",
+    "observed_first_trigger": "trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE)."
+  }
+}

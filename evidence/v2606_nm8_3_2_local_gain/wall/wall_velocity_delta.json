@@ -1,0 +1,141 @@
+{
+  "pairs": [
+    {
+      "pair": "HIGH",
+      "letters": "BD",
+      "ranks": [
+        {
+          "rank": 0,
+          "point_delta_L2": 1.1042406135876825e-07,
+          "point_delta_Linf": 1.436071751098611e-09,
+          "cellD_delta_L2": 0.0,
+          "cellD_delta_Linf": 0.0,
+          "wallU_delta_L2": 0.0,
+          "wallU_delta_Linf": 0.0
+        },
+        {
+          "rank": 1,
+          "point_delta_L2": 6.964662661366574e-08,
+          "point_delta_Linf": 1.1783718723012981e-09,
+          "cellD_delta_L2": 0.0,
+          "cellD_delta_Linf": 0.0,
+          "wallU_delta_L2": 0.0,
+          "wallU_delta_Linf": 0.0
+        },
+        {
+          "rank": 2,
+          "point_delta_L2": 9.816839486640726e-08,
+          "point_delta_Linf": 1.6907421157563718e-09,
+          "cellD_delta_L2": 0.0,
+          "cellD_delta_Linf": 0.0,
+          "wallU_delta_L2": 0.0,
+          "wallU_delta_Linf": 0.0
+        },
+        {
+          "rank": 3,
+          "point_delta_L2": 2.4114832507721714e-07,
+          "point_delta_Linf": 2.106704605252599e-09,
+          "cellD_delta_L2": 0.0,
+          "cellD_delta_Linf": 0.0,
+          "wallU_delta_L2": 0.0,
+          "wallU_delta_Linf": 0.0
+        },
+        {
+          "rank": 4,
+          "point_delta_L2": 2.702481813339513e-07,
+          "point_delta_Linf": 2.135093950163952e-09,
+          "cellD_delta_L2": 2.2196604216100898e-08,
+          "cellD_delta_Linf": 2.1350939498929015e-09,
+          "wallU_delta_L2": 6.987341331246466e-05,
+          "wallU_delta_Linf": 8.013287648205025e-06
+        },
+        {
+          "rank": 5,
+          "point_delta_L2": 2.700615082815999e-07,
+          "point_delta_Linf": 2.135093950163952e-09,
+          "cellD_delta_L2": 2.0693603508858027e-08,
+          "cellD_delta_Linf": 2.1350939498929015e-09,
+          "wallU_delta_L2": 6.686361970024134e-05,
+          "wallU_delta_Linf": 8.013287650380368e-06
+        }
+      ],
+      "max_point_delta_m": 2.135093950163952e-09,
+      "L2_point_delta_m": 4.804174977386474e-07,
+      "max_cellD_delta_m": 2.1350939498929015e-09,
+      "L2_cellD_delta_m": 3.0346572539712774e-08,
+      "max_wallU_delta_m_per_s": 8.013287650380368e-06,
+      "L2_wallU_delta_m_per_s": 9.671110343364414e-05,
+      "input_D_delta_m": 2.1458267228589518e-09,
+      "wallU_over_D_diagnostic_ratio": 3734.3591469976736
+    },
+    {
+      "pair": "LOW",
+      "letters": "AD",
+      "ranks": [
+        {
+          "rank": 0,
+          "point_delta_L2": 4.248092721460205e-08,
+          "point_delta_Linf": 5.525065266409612e-10,
+          "cellD_delta_L2": 0.0,
+          "cellD_delta_Linf": 0.0,
+          "wallU_delta_L2": 0.0,
+          "wallU_delta_Linf": 0.0
+        },
+        {
+          "rank": 1,
+          "point_delta_L2": 2.6793370613314242e-08,
+          "point_delta_Linf": 4.5336046028410237e-10,
+          "cellD_delta_L2": 0.0,
+          "cellD_delta_Linf": 0.0,
+          "wallU_delta_L2": 0.0,
+          "wallU_delta_Linf": 0.0
+        },
+        {
+          "rank": 2,
+          "point_delta_L2": 3.7765890552696006e-08,
+          "point_delta_Linf": 6.504870392332052e-10,
+          "cellD_delta_L2": 0.0,
+          "cellD_delta_Linf": 0.0,
+          "wallU_delta_L2": 0.0,
+          "wallU_delta_Linf": 0.0
+        },
+        {
+          "rank": 3,
+          "point_delta_L2": 9.277001157058345e-08,
+          "point_delta_Linf": 8.105222150996821e-10,
+          "cellD_delta_L2": 0.0,
+          "cellD_delta_Linf": 0.0,
+          "wallU_delta_L2": 0.0,
+          "wallU_delta_Linf": 0.0
+        },
+        {
+          "rank": 4,
+          "point_delta_L2": 1.0396472530589146e-07,
+          "point_delta_Linf": 8.214445794581249e-10,
+          "cellD_delta_L2": 8.539054159909865e-09,
+          "cellD_delta_Linf": 8.214445794039148e-10,
+          "wallU_delta_L2": 2.6880228873547674e-05,
+          "wallU_delta_Linf": 3.082946478306925e-06
+        },
+        {
+          "rank": 5,
+          "point_delta_L2": 1.0389291210516765e-07,
+          "point_delta_Linf": 8.214445798918057e-10,
+          "cellD_delta_L2": 7.960848398492318e-09,
+          "cellD_delta_Linf": 8.214445794039148e-10,
+          "wallU_delta_L2": 2.5722640323647545e-05,
+          "wallU_delta_Linf": 3.0829464804926765e-06
+        }
+      ],
+      "max_point_delta_m": 8.214445798918057e-10,
+      "L2_point_delta_m": 1.848173496063091e-07,
+      "max_cellD_delta_m": 8.214445794039148e-10,
+      "L2_cellD_delta_m": 1.1674354507622754e-08,
+      "max_wallU_delta_m_per_s": 3.0829464804926765e-06,
+      "L2_wallU_delta_m_per_s": 3.720485088686749e-05,
+      "input_D_delta_m": 8.255015238270618e-10,
+      "wallU_over_D_diagnostic_ratio": 3734.6345118783056
+    }
+  ],
+  "source": "existing exact wallU binary arrays from NM8.3.1 trials"
+}

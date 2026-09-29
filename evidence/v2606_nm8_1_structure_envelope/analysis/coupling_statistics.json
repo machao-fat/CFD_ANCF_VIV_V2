@@ -1,0 +1,46 @@
+{
+  "accepted_windows": 825,
+  "attempts": 1671,
+  "strict_convergence_all_accepted": true,
+  "all_attempt_rows_have_finite_D_q_v": true,
+  "iterations": {
+    "count": 825,
+    "min": 2.0,
+    "median": 2.0,
+    "mean": 2.0254545454545454,
+    "p95": 2.0,
+    "p99": 3.0,
+    "max": 6.0
+  },
+  "windows_ge_5": 2,
+  "windows_ge_10": 0,
+  "windows_ge_20": 0,
+  "force_residual_final": {
+    "count": 825,
+    "min": 3.68e-07,
+    "median": 0.000434,
+    "mean": 0.000968326749090909,
+    "p95": 0.00418,
+    "p99": 0.00489,
+    "max": 0.00499
+  },
+  "displacement_residual_final": {
+    "count": 825,
+    "min": 4.19e-14,
+    "median": 3.12e-08,
+    "mean": 9.128267074225455e-07,
+    "p95": 1.84e-07,
+    "p99": 9.63e-07,
+    "max": 0.000458
+  },
+  "residual_measure_count": 3342,
+  "attempts_with_residual_pairs": 1671,
+  "strict_measure_pairs_complete": true,
+  "rollback_attempt_count": 846,
+  "checkpoint_restore_failures": [],
+  "checkpoint_restore_exact_pass": true,
+  "force_conversion_exact_operation_all_mapped_attempts": true,
+  "force_conversion_check_count": 1671,
+  "force_conversion_scale_reference": 70.71428571428571,
+  "physical_duration_from_accepted_s": 0.3300000000000054
+}

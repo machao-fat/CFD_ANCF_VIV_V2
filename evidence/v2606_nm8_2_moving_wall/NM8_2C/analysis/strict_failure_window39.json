@@ -1,0 +1,20 @@
+{
+  "window": 39,
+  "maximum_iterations": 50,
+  "accepted": false,
+  "last_complete_residual_pair_before_strict_termination": [
+    {
+      "data": "Displacement",
+      "value": 2.47e-16,
+      "conv": true
+    },
+    {
+      "data": "Force",
+      "value": 0.0114,
+      "conv": false
+    }
+  ],
+  "last_iteration_has_unpaired_displacement_measure": true,
+  "strict_Force_failure_in_structure_log": true,
+  "fluid_EOF_after_structure_stop_is_downstream": true
+}

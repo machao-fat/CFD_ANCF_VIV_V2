@@ -1,0 +1,85 @@
+{
+  "attempts": [
+    {
+      "attempt": 1,
+      "fluid_input_sha_equal": true,
+      "force_binary_equal": {
+        "pressureForce": true,
+        "totalForce": true,
+        "viscousForce": true
+      },
+      "solid_D_sha_equal": true,
+      "state_sha_equal": {
+        "U": true,
+        "k": true,
+        "nut": true,
+        "omega": true,
+        "p": true,
+        "phi": true,
+        "pointDisplacement": true,
+        "points": true
+      }
+    },
+    {
+      "attempt": 2,
+      "fluid_input_sha_equal": true,
+      "force_binary_equal": {
+        "pressureForce": true,
+        "totalForce": true,
+        "viscousForce": true
+      },
+      "solid_D_sha_equal": true,
+      "state_sha_equal": {
+        "U": true,
+        "k": true,
+        "nut": true,
+        "omega": true,
+        "p": true,
+        "phi": true,
+        "pointDisplacement": true,
+        "points": true
+      }
+    },
+    {
+      "attempt": 3,
+      "fluid_input_sha_equal": true,
+      "force_binary_equal": {
+        "pressureForce": true,
+        "totalForce": true,
+        "viscousForce": true
+      },
+      "solid_D_sha_equal": true,
+      "state_sha_equal": {
+        "U": true,
+        "k": true,
+        "nut": true,
+        "omega": true,
+        "p": true,
+        "phi": true,
+        "pointDisplacement": true,
+        "points": true
+      }
+    },
+    {
+      "attempt": 4,
+      "fluid_input_sha_equal": true,
+      "force_binary_equal": {
+        "pressureForce": true,
+        "totalForce": true,
+        "viscousForce": true
+      },
+      "solid_D_sha_equal": true,
+      "state_sha_equal": {
+        "U": true,
+        "k": true,
+        "nut": true,
+        "omega": true,
+        "p": true,
+        "phi": true,
+        "pointDisplacement": true,
+        "points": true
+      }
+    }
+  ],
+  "exact": true
+}

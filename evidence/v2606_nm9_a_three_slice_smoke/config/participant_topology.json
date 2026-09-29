@@ -1,0 +1,10 @@
+{
+  "fluid_participants": ["Fluid-S1", "Fluid-S2", "Fluid-S3"],
+  "structure_participants": ["Structure"],
+  "coupling_scheme": "coupling-scheme:multi",
+  "multi_scheme_semantics": "block-Jacobi implicit multi-coupling",
+  "fluid_meshes": ["Fluid-Mesh-S1", "Fluid-Mesh-S2", "Fluid-Mesh-S3"],
+  "structure_meshes": ["Solid-S1", "Solid-S2", "Solid-S3"],
+  "validation": {"nm9a": "PASS", "nm9b": "PASS"},
+  "execution": "NOT_STARTED"
+}

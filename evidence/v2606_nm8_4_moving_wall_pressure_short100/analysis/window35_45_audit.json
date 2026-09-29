@@ -1,0 +1,1702 @@
+{
+  "windows": [
+    {
+      "window": 35,
+      "attemptOrdinal": 97,
+      "physical_time_s": 30.014,
+      "iterations": 2,
+      "F_raw_N": [
+        0.041225892554946686,
+        -0.010884834008676902
+      ],
+      "F_strip_N": [
+        2.9152595449569443,
+        -0.7697132620421524
+      ],
+      "Dx_m": 0.00016866263776668889,
+      "Dy_m": -6.091945373974797e-05,
+      "D_norm_m": 0.00017932725733241616,
+      "Dx_over_D": 0.006023665634524603,
+      "Dy_over_D": -0.0021756947764195703,
+      "Dnorm_over_D": 0.006404544904729148,
+      "q_norm": 44.23371456186349,
+      "v_norm": 0.08682546420238212,
+      "velocity_at_s_mps": [
+        0.020858422554465496,
+        -0.006473094854109632,
+        0.0006146644986007585
+      ],
+      "acceleration_at_s_mps2": [
+        0.9373162827845992,
+        -0.06905268041187251,
+        0.9315375148199297
+      ],
+      "kinetic_energy_J": 0.0003228911660868243,
+      "external_power_W": 0.06579014240031573,
+      "Force_residual_final": 0.00123,
+      "Displacement_residual_final": 4.22e-09,
+      "accepted_attemptOrdinal": 97,
+      "accepted_Co": [
+        0.03350287089,
+        0.8351456521
+      ],
+      "accepted_meshCo": [
+        0.00168354275,
+        0.1404308536
+      ],
+      "direct_pressure_force_N": [
+        0.04004424012,
+        -0.01043187144
+      ],
+      "direct_viscous_force_N": [
+        0.00117072963,
+        -0.0005042351451
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.04121496975,
+        -0.0109361065851
+      ],
+      "direct_Fraw_norm_N": 0.042641202594838744
+    },
+    {
+      "window": 36,
+      "attemptOrdinal": 99,
+      "physical_time_s": 30.0144,
+      "iterations": 2,
+      "F_raw_N": [
+        0.04170591246946298,
+        -0.010803781084077646
+      ],
+      "F_strip_N": [
+        2.949203810340596,
+        -0.7639816623740622
+      ],
+      "Dx_m": 0.00017708027637040866,
+      "Dy_m": -6.351357532338029e-05,
+      "D_norm_m": 0.00018812601768436766,
+      "Dx_over_D": 0.006324295584657452,
+      "Dy_over_D": -0.00226834197583501,
+      "Dnorm_over_D": 0.006718786345870273,
+      "q_norm": 44.23371650428721,
+      "v_norm": 0.08785204777975499,
+      "velocity_at_s_mps": [
+        0.021229770464133255,
+        -0.0064975130640519355,
+        0.00014290764473826398
+      ],
+      "acceleration_at_s_mps2": [
+        0.9194232655542097,
+        -0.053038369299648766,
+        -3.2903217841324017
+      ],
+      "kinetic_energy_J": 0.00035145580814588157,
+      "external_power_W": 0.06757490077744963,
+      "Force_residual_final": 0.00235,
+      "Displacement_residual_final": 4.1e-09,
+      "accepted_attemptOrdinal": 99,
+      "accepted_Co": [
+        0.03348484925,
+        0.8342782465
+      ],
+      "accepted_meshCo": [
+        0.001723683053,
+        0.1428061945
+      ],
+      "direct_pressure_force_N": [
+        0.04044994795,
+        -0.01035395675
+      ],
+      "direct_viscous_force_N": [
+        0.001169292351,
+        -0.0005019155488
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.041619240301000004,
+        -0.010855872298800001
+      ],
+      "direct_Fraw_norm_N": 0.04301175567911913
+    },
+    {
+      "window": 37,
+      "attemptOrdinal": 101,
+      "physical_time_s": 30.0148,
+      "iterations": 2,
+      "F_raw_N": [
+        0.04207082157693476,
+        -0.010720500252953902
+      ],
+      "F_strip_N": [
+        2.975008097226101,
+        -0.7580925178874545
+      ],
+      "Dx_m": 0.00018564388727733796,
+      "Dy_m": -6.611602142852341e-05,
+      "D_norm_m": 0.0001970659310306526,
+      "Dx_over_D": 0.006630138831333498,
+      "Dy_over_D": -0.0023612864795901217,
+      "Dnorm_over_D": 0.00703806896538045,
+      "q_norm": 44.23371931416449,
+      "v_norm": 0.08878685128972305,
+      "velocity_at_s_mps": [
+        0.02158828407051325,
+        -0.00651471746166364,
+        -0.0005811053711597573
+      ],
+      "acceleration_at_s_mps2": [
+        0.8731447663457814,
+        -0.03298361875886886,
+        -0.3297432953577046
+      ],
+      "kinetic_energy_J": 0.00038110572911532846,
+      "external_power_W": 0.06916407847883212,
+      "Force_residual_final": 0.00059,
+      "Displacement_residual_final": 4.03e-09,
+      "accepted_attemptOrdinal": 101,
+      "accepted_Co": [
+        0.03343969308,
+        0.8333314638
+      ],
+      "accepted_meshCo": [
+        0.001745160118,
+        0.1451141378
+      ],
+      "direct_pressure_force_N": [
+        0.04091973812,
+        -0.01023971323
+      ],
+      "direct_viscous_force_N": [
+        0.001168381154,
+        -0.0004997256812
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.042088119274,
+        -0.0107394389112
+      ],
+      "direct_Fraw_norm_N": 0.04343668187315702
+    },
+    {
+      "window": 38,
+      "attemptOrdinal": 103,
+      "physical_time_s": 30.0152,
+      "iterations": 2,
+      "F_raw_N": [
+        0.042609199187539915,
+        -0.010635405501165818
+      ],
+      "F_strip_N": [
+        3.013079085404608,
+        -0.7520751032967257
+      ],
+      "Dx_m": 0.00019434827205566416,
+      "Dy_m": -6.872371939918212e-05,
+      "D_norm_m": 0.00020614121484817142,
+      "Dx_over_D": 0.00694100971627372,
+      "Dy_over_D": -0.00245441854997079,
+      "Dnorm_over_D": 0.007362186244577551,
+      "q_norm": 44.23372279945936,
+      "v_norm": 0.08947752790577009,
+      "velocity_at_s_mps": [
+        0.021933639821117786,
+        -0.006523772391630026,
+        -0.00010903778131425877
+      ],
+      "acceleration_at_s_mps2": [
+        0.8536339866768899,
+        -0.012291031073059285,
+        2.690081244585197
+      ],
+      "kinetic_energy_J": 0.00040642683517595627,
+      "external_power_W": 0.07099415820712715,
+      "Force_residual_final": 0.00208,
+      "Displacement_residual_final": 3.95e-09,
+      "accepted_attemptOrdinal": 103,
+      "accepted_Co": [
+        0.03342927061,
+        0.8323014824
+      ],
+      "accepted_meshCo": [
+        0.001786450179,
+        0.147329265
+      ],
+      "direct_pressure_force_N": [
+        0.04150169087,
+        -0.01020629846
+      ],
+      "direct_viscous_force_N": [
+        0.001168134273,
+        -0.0004977717442
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.042669825143,
+        -0.0107040702042
+      ],
+      "direct_Fraw_norm_N": 0.043991943542774255
+    },
+    {
+      "window": 39,
+      "attemptOrdinal": 105,
+      "physical_time_s": 30.0156,
+      "iterations": 2,
+      "F_raw_N": [
+        0.043033721378020307,
+        -0.010572027211659951
+      ],
+      "F_strip_N": [
+        3.043098868874293,
+        -0.7475933528245251
+      ],
+      "Dx_m": 0.00020318891255132707,
+      "Dy_m": -7.133369391222678e-05,
+      "D_norm_m": 0.00021534676703158118,
+      "Dx_over_D": 0.007256746876833109,
+      "Dy_over_D": -0.0025476319254366707,
+      "Dnorm_over_D": 0.007690955965413613,
+      "q_norm": 44.23372689080522,
+      "v_norm": 0.09039092561726124,
+      "velocity_at_s_mps": [
+        0.022269562657196592,
+        -0.006526100173593191,
+        0.00035567937053408494
+      ],
+      "acceleration_at_s_mps2": [
+        0.8259801937171115,
+        0.000652121257239794,
+        -0.36649548534347887
+      ],
+      "kinetic_energy_J": 0.0004300385283408912,
+      "external_power_W": 0.07264735004208539,
+      "Force_residual_final": 0.000537,
+      "Displacement_residual_final": 3.87e-09,
+      "accepted_attemptOrdinal": 105,
+      "accepted_Co": [
+        0.03338023006,
+        0.8311878248
+      ],
+      "accepted_meshCo": [
+        0.001820318321,
+        0.1494605593
+      ],
+      "direct_pressure_force_N": [
+        0.04185199957,
+        -0.01009564475
+      ],
+      "direct_viscous_force_N": [
+        0.001168184895,
+        -0.0004959658154
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.043020184465,
+        -0.0105916105654
+      ],
+      "direct_Fraw_norm_N": 0.044304835918573496
+    },
+    {
+      "window": 40,
+      "attemptOrdinal": 107,
+      "physical_time_s": 30.016,
+      "iterations": 2,
+      "F_raw_N": [
+        0.043371175327233225,
+        -0.010421643824227389
+      ],
+      "F_strip_N": [
+        3.066961683854349,
+        -0.7369590989989369
+      ],
+      "Dx_m": 0.00021216153867877332,
+      "Dy_m": -7.394318700513785e-05,
+      "D_norm_m": 0.0002246777990790844,
+      "Dx_over_D": 0.00757719780995619,
+      "Dy_over_D": -0.002640828107326352,
+      "Dnorm_over_D": 0.0080242071099673,
+      "q_norm": 44.23373137873412,
+      "v_norm": 0.09140224097506475,
+      "velocity_at_s_mps": [
+        0.02259356798003478,
+        -0.0065213652909621705,
+        -2.383764351702972e-05
+      ],
+      "acceleration_at_s_mps2": [
+        0.7940464204738257,
+        0.023022291897861584,
+        -1.5310895849120942
+      ],
+      "kinetic_energy_J": 0.0004565418084158888,
+      "external_power_W": 0.0740995867853956,
+      "Force_residual_final": 0.00133,
+      "Displacement_residual_final": 3.79e-09,
+      "accepted_attemptOrdinal": 107,
+      "accepted_Co": [
+        0.03335031842,
+        0.8299798033
+      ],
+      "accepted_meshCo": [
+        0.001861036456,
+        0.1515128643
+      ],
+      "direct_pressure_force_N": [
+        0.04225528799,
+        -0.009955341071
+      ],
+      "direct_viscous_force_N": [
+        0.001168480307,
+        -0.0004942236695
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.043423768297,
+        -0.010449564740500001
+      ],
+      "direct_Fraw_norm_N": 0.04466337488790389
+    },
+    {
+      "window": 41,
+      "attemptOrdinal": 109,
+      "physical_time_s": 30.0164,
+      "iterations": 2,
+      "F_raw_N": [
+        0.0437809798919826,
+        -0.010285277029556839
+      ],
+      "F_strip_N": [
+        3.0959407209330547,
+        -0.7273160185186621
+      ],
+      "Dx_m": 0.0002212619948622659,
+      "Dy_m": -7.654927701765913e-05,
+      "D_norm_m": 0.00023412958416730616,
+      "Dx_over_D": 0.007902214102223781,
+      "Dy_over_D": -0.002733902750630683,
+      "Dnorm_over_D": 0.008361770863118076,
+      "q_norm": 44.23373623612283,
+      "v_norm": 0.09267436361631705,
+      "velocity_at_s_mps": [
+        0.022908712937427987,
+        -0.006509084771644279,
+        -0.0001861622964935091
+      ],
+      "acceleration_at_s_mps2": [
+        0.7816783664922237,
+        0.03838030469160436,
+        0.7194663200296975
+      ],
+      "kinetic_energy_J": 0.00048549751755607947,
+      "external_power_W": 0.07565817886746197,
+      "Force_residual_final": 0.00214,
+      "Displacement_residual_final": 3.8e-09,
+      "accepted_attemptOrdinal": 109,
+      "accepted_Co": [
+        0.03331014893,
+        0.8286723763
+      ],
+      "accepted_meshCo": [
+        0.001811620205,
+        0.1534883862
+      ],
+      "direct_pressure_force_N": [
+        0.04262898141,
+        -0.009887516551
+      ],
+      "direct_viscous_force_N": [
+        0.001168988153,
+        -0.0004926198198
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.043797969563,
+        -0.0103801363708
+      ],
+      "direct_Fraw_norm_N": 0.045011213812980864
+    },
+    {
+      "window": 42,
+      "attemptOrdinal": 111,
+      "physical_time_s": 30.0168,
+      "iterations": 2,
+      "F_raw_N": [
+        0.04399412508177969,
+        -0.010132480317825654
+      ],
+      "F_strip_N": [
+        3.1110131307829922,
+        -0.7165111081890998
+      ],
+      "Dx_m": 0.00023048702108118414,
+      "Dy_m": -7.91494634594986e-05,
+      "D_norm_m": 0.00024369838828520128,
+      "Dx_over_D": 0.008231679324328004,
+      "Dy_over_D": -0.00282676655212495,
+      "Dnorm_over_D": 0.008703513867328616,
+      "q_norm": 44.23374142125651,
+      "v_norm": 0.09381380548552265,
+      "velocity_at_s_mps": [
+        0.02321641815716311,
+        -0.006491847437553055,
+        7.513681961757018e-05
+      ],
+      "acceleration_at_s_mps2": [
+        0.7568477321833883,
+        0.04780636576451546,
+        0.5870292605256989
+      ],
+      "kinetic_energy_J": 0.0005112332495037867,
+      "external_power_W": 0.07687806253835883,
+      "Force_residual_final": 0.000981,
+      "Displacement_residual_final": 3.72e-09,
+      "accepted_attemptOrdinal": 111,
+      "accepted_Co": [
+        0.03338931093,
+        0.8276089094
+      ],
+      "accepted_meshCo": [
+        0.001847936328,
+        0.1554019507
+      ],
+      "direct_pressure_force_N": [
+        0.04285804817,
+        -0.00967068936
+      ],
+      "direct_viscous_force_N": [
+        0.001169441285,
+        -0.0004909895033
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.044027489455000006,
+        -0.0101616788633
+      ],
+      "direct_Fraw_norm_N": 0.04518494821321559
+    },
+    {
+      "window": 43,
+      "attemptOrdinal": 113,
+      "physical_time_s": 30.0172,
+      "iterations": 2,
+      "F_raw_N": [
+        0.04423750558363748,
+        -0.009895900634921406
+      ],
+      "F_strip_N": [
+        3.1282236091286504,
+        -0.6997815448980137
+      ],
+      "Dx_m": 0.00023983415197921786,
+      "Dy_m": -8.174179987796542e-05,
+      "D_norm_m": 0.00025338141664865623,
+      "Dx_over_D": 0.008565505427829209,
+      "Dy_over_D": -0.002919349995641622,
+      "Dnorm_over_D": 0.009049336308880579,
+      "q_norm": 44.23374702699904,
+      "v_norm": 0.0946400283882437,
+      "velocity_at_s_mps": [
+        0.023519236333005455,
+        -0.006469834654781016,
+        0.000275091785407926
+      ],
+      "acceleration_at_s_mps2": [
+        0.7572431470283466,
+        0.062257548095677656,
+        0.41274556842608034
+      ],
+      "kinetic_energy_J": 0.0005375781308564379,
+      "external_power_W": 0.07810090125554138,
+      "Force_residual_final": 0.00289,
+      "Displacement_residual_final": 3.61e-09,
+      "accepted_attemptOrdinal": 113,
+      "accepted_Co": [
+        0.03331673911,
+        0.8265967165
+      ],
+      "accepted_meshCo": [
+        0.001856436584,
+        0.1572683403
+      ],
+      "direct_pressure_force_N": [
+        0.04293972082,
+        -0.009431395593
+      ],
+      "direct_viscous_force_N": [
+        0.001169674896,
+        -0.0004892037438
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.044109395716,
+        -0.0099205993368
+      ],
+      "direct_Fraw_norm_N": 0.04521124950310482
+    },
+    {
+      "window": 44,
+      "attemptOrdinal": 115,
+      "physical_time_s": 30.0176,
+      "iterations": 2,
+      "F_raw_N": [
+        0.04426314753867855,
+        -0.009658569653437254
+      ],
+      "F_strip_N": [
+        3.1300368616636973,
+        -0.6829988540644916
+      ],
+      "Dx_m": 0.00024930116766333575,
+      "Dy_m": -8.43243011712739e-05,
+      "D_norm_m": 0.0002631761006746744,
+      "Dx_over_D": 0.00890361313083342,
+      "Dy_over_D": -0.0030115821846883536,
+      "Dnorm_over_D": 0.009399146452666943,
+      "q_norm": 44.23375302932456,
+      "v_norm": 0.09505875785915428,
+      "velocity_at_s_mps": [
+        0.0238158420875842,
+        -0.006442671811761437,
+        0.0005548251349429857
+      ],
+      "acceleration_at_s_mps2": [
+        0.7257856258653602,
+        0.07355666700221161,
+        0.9859211792492186
+      ],
+      "kinetic_energy_J": 0.0005662571687263261,
+      "external_power_W": 0.07894480109024692,
+      "Force_residual_final": 0.00245,
+      "Displacement_residual_final": 3.61e-09,
+      "accepted_attemptOrdinal": 115,
+      "accepted_Co": [
+        0.0333199538,
+        0.8254873705
+      ],
+      "accepted_meshCo": [
+        0.00191009495,
+        0.1590946199
+      ],
+      "direct_pressure_force_N": [
+        0.04317056484,
+        -0.009251287401
+      ],
+      "direct_viscous_force_N": [
+        0.001169785582,
+        -0.0004873513904
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.044340350422000005,
+        -0.009738638791399998
+      ],
+      "direct_Fraw_norm_N": 0.04539722195305696
+    },
+    {
+      "window": 45,
+      "attemptOrdinal": 117,
+      "physical_time_s": 30.018,
+      "iterations": 2,
+      "F_raw_N": [
+        0.04450476882662091,
+        -0.009436602070984401
+      ],
+      "F_strip_N": [
+        3.147122938453907,
+        -0.6673025750196112
+      ],
+      "Dx_m": 0.00025888580983763325,
+      "Dy_m": -8.689522385202338e-05,
+      "D_norm_m": 0.0002730799195539292,
+      "Dx_over_D": 0.009245921779915473,
+      "Dy_over_D": -0.003103400851857978,
+      "Dnorm_over_D": 0.009752854269783187,
+      "q_norm": 44.23375935215924,
+      "v_norm": 0.09518227542711365,
+      "velocity_at_s_mps": [
+        0.024107368783902915,
+        -0.006411941591985954,
+        0.0007476715522348494
+      ],
+      "acceleration_at_s_mps2": [
+        0.7318478557281939,
+        0.08009443187520497,
+        -0.021689092789900468
+      ],
+      "kinetic_energy_J": 0.0005933743160708985,
+      "external_power_W": 0.08014755842079611,
+      "Force_residual_final": 0.00144,
+      "Displacement_residual_final": 3.54e-09,
+      "accepted_attemptOrdinal": 117,
+      "accepted_Co": [
+        0.03325004398,
+        0.824275942
+      ],
+      "accepted_meshCo": [
+        0.001951790304,
+        0.1608945942
+      ],
+      "direct_pressure_force_N": [
+        0.04337442166,
+        -0.009003577841
+      ],
+      "direct_viscous_force_N": [
+        0.001169854709,
+        -0.0004853871004
+      ],
+      "direct_Fraw_direct_observer_N": [
+        0.044544276369000005,
+        -0.009488964941399999
+      ],
+      "direct_Fraw_norm_N": 0.045543748340436035
+    }
+  ],
+  "attempts": [
+    {
+      "attemptOrdinal": 96,
+      "window": 35,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.0136,
+      "Dx_m": 0.00016865993090836074,
+      "Dy_m": -6.0920369926888444e-05,
+      "Dnorm_m": 0.0001793250226991257,
+      "Fraw_N": [
+        0.04080477715707317,
+        -0.011027368235039046
+      ],
+      "Force_residual": 0.98,
+      "Force_converged": false,
+      "Force_normalization": 2.14,
+      "Displacement_residual": 0.0483,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000179,
+      "Co": [
+        0.03350287089,
+        0.8351456521
+      ],
+      "meshCo": [
+        2.112769564e-11,
+        5.844795823e-09
+      ],
+      "direct_pressure_force_N": [
+        2.042048972,
+        -0.6347545957
+      ],
+      "direct_viscous_force_N": [
+        0.003908079079,
+        -0.00135898216
+      ],
+      "direct_Fraw_N": [
+        2.0459570510789997,
+        -0.63611357786
+      ],
+      "direct_Fraw_norm_N": 2.142564057104881,
+      "wall": {
+        "time": 30.014,
+        "maxU": 0.01063713137,
+        "maxFaceSpeed": 1.806301479e-09,
+        "maxFaceMotion": 7.225205917e-13,
+        "maxNormalU": 0.01063713137
+      }
+    },
+    {
+      "attemptOrdinal": 97,
+      "window": 35,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.014,
+      "Dx_m": 0.00016866263776668889,
+      "Dy_m": -6.091945373974797e-05,
+      "Dnorm_m": 0.00017932725733241616,
+      "Fraw_N": [
+        0.041225892554946686,
+        -0.010884834008676902
+      ],
+      "Force_residual": 0.00123,
+      "Force_converged": true,
+      "Force_normalization": 0.0426,
+      "Displacement_residual": 4.22e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000179,
+      "Co": [
+        0.03350287089,
+        0.8351456521
+      ],
+      "meshCo": [
+        0.00168354275,
+        0.1404308536
+      ],
+      "direct_pressure_force_N": [
+        0.04004424012,
+        -0.01043187144
+      ],
+      "direct_viscous_force_N": [
+        0.00117072963,
+        -0.0005042351451
+      ],
+      "direct_Fraw_N": [
+        0.04121496975,
+        -0.0109361065851
+      ],
+      "direct_Fraw_norm_N": 0.042641202594838744,
+      "wall": {
+        "time": 30.014,
+        "maxU": 0.02184492613,
+        "maxFaceSpeed": 0.02165343137,
+        "maxFaceMotion": 8.661372546e-06,
+        "maxNormalU": 0.0218427042
+      }
+    },
+    {
+      "attemptOrdinal": 98,
+      "window": 36,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.014,
+      "Dx_m": 0.0001770771206737223,
+      "Dy_m": -6.35144258907925e-05,
+      "Dnorm_m": 0.00018812333444401038,
+      "Fraw_N": [
+        0.04121496975365925,
+        -0.010936106584981875
+      ],
+      "Force_residual": 0.98,
+      "Force_converged": false,
+      "Force_normalization": 2.18,
+      "Displacement_residual": 0.0468,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000188,
+      "Co": [
+        0.03348484925,
+        0.8342782465
+      ],
+      "meshCo": [
+        2.030307987e-11,
+        6.123236443e-09
+      ],
+      "direct_pressure_force_N": [
+        2.078962766,
+        -0.6373087953
+      ],
+      "direct_viscous_force_N": [
+        0.00395638277,
+        -0.001360269231
+      ],
+      "direct_Fraw_N": [
+        2.0829191487700003,
+        -0.6386690645309999
+      ],
+      "direct_Fraw_norm_N": 2.1786349750019265,
+      "wall": {
+        "time": 30.0144,
+        "maxU": 0.01082661188,
+        "maxFaceSpeed": 1.892487577e-09,
+        "maxFaceMotion": 7.569950307e-13,
+        "maxNormalU": 0.01082661188
+      }
+    },
+    {
+      "attemptOrdinal": 99,
+      "window": 36,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.0144,
+      "Dx_m": 0.00017708027637040866,
+      "Dy_m": -6.351357532338029e-05,
+      "Dnorm_m": 0.00018812601768436766,
+      "Fraw_N": [
+        0.04170591246946298,
+        -0.010803781084077646
+      ],
+      "Force_residual": 0.00235,
+      "Force_converged": true,
+      "Force_normalization": 0.043,
+      "Displacement_residual": 4.1e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000188,
+      "Co": [
+        0.03348484925,
+        0.8342782465
+      ],
+      "meshCo": [
+        0.001723683053,
+        0.1428061945
+      ],
+      "direct_pressure_force_N": [
+        0.04044994795,
+        -0.01035395675
+      ],
+      "direct_viscous_force_N": [
+        0.001169292351,
+        -0.0005019155488
+      ],
+      "direct_Fraw_N": [
+        0.041619240301000004,
+        -0.010855872298800001
+      ],
+      "direct_Fraw_norm_N": 0.04301175567911913,
+      "wall": {
+        "time": 30.0144,
+        "maxU": 0.02220684405,
+        "maxFaceSpeed": 0.02202074405,
+        "maxFaceMotion": 8.80829762e-06,
+        "maxNormalU": 0.02220450032
+      }
+    },
+    {
+      "attemptOrdinal": 100,
+      "window": 37,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.0144,
+      "Dx_m": 0.0001856409845935348,
+      "Dy_m": -6.611689157738641e-05,
+      "Dnorm_m": 0.0001970634885327896,
+      "Fraw_N": [
+        0.04161924030157523,
+        -0.010855872303740558
+      ],
+      "Force_residual": 0.981,
+      "Force_converged": false,
+      "Force_normalization": 2.21,
+      "Displacement_residual": 0.0454,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000197,
+      "Co": [
+        0.03343969308,
+        0.8333314638
+      ],
+      "meshCo": [
+        2.486327896e-11,
+        6.240716673e-09
+      ],
+      "direct_pressure_force_N": [
+        2.114767093,
+        -0.6391919329
+      ],
+      "direct_viscous_force_N": [
+        0.004003706632,
+        -0.001360789568
+      ],
+      "direct_Fraw_N": [
+        2.118770799632,
+        -0.640552722468
+      ],
+      "direct_Fraw_norm_N": 2.213480854137752,
+      "wall": {
+        "time": 30.0148,
+        "maxU": 0.01101037091,
+        "maxFaceSpeed": 1.92869605e-09,
+        "maxFaceMotion": 7.714784198e-13,
+        "maxNormalU": 0.01101037091
+      }
+    },
+    {
+      "attemptOrdinal": 101,
+      "window": 37,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.0148,
+      "Dx_m": 0.00018564388727733796,
+      "Dy_m": -6.611602142852341e-05,
+      "Dnorm_m": 0.0001970659310306526,
+      "Fraw_N": [
+        0.04207082157693476,
+        -0.010720500252953902
+      ],
+      "Force_residual": 0.00059,
+      "Force_converged": true,
+      "Force_normalization": 0.0434,
+      "Displacement_residual": 4.03e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000197,
+      "Co": [
+        0.03343969308,
+        0.8333314638
+      ],
+      "meshCo": [
+        0.001745160118,
+        0.1451141378
+      ],
+      "direct_pressure_force_N": [
+        0.04091973812,
+        -0.01023971323
+      ],
+      "direct_viscous_force_N": [
+        0.001168381154,
+        -0.0004997256812
+      ],
+      "direct_Fraw_N": [
+        0.042088119274,
+        -0.0107394389112
+      ],
+      "direct_Fraw_norm_N": 0.04343668187315702,
+      "wall": {
+        "time": 30.0148,
+        "maxU": 0.02255598385,
+        "maxFaceSpeed": 0.02237579022,
+        "maxFaceMotion": 8.950316088e-06,
+        "maxNormalU": 0.02255311787
+      }
+    },
+    {
+      "attemptOrdinal": 102,
+      "window": 38,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.0148,
+      "Dx_m": 0.00019434492265181643,
+      "Dy_m": -6.872438810795628e-05,
+      "Dnorm_m": 0.00020613827999998814,
+      "Fraw_N": [
+        0.042088119274942104,
+        -0.010739438907223344
+      ],
+      "Force_residual": 0.981,
+      "Force_converged": false,
+      "Force_normalization": 2.25,
+      "Displacement_residual": 0.0441,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000206,
+      "Co": [
+        0.03342927061,
+        0.8323014824
+      ],
+      "meshCo": [
+        2.549923507e-11,
+        6.428697989e-09
+      ],
+      "direct_pressure_force_N": [
+        2.149380859,
+        -0.6403634218
+      ],
+      "direct_viscous_force_N": [
+        0.004049956524,
+        -0.001360515382
+      ],
+      "direct_Fraw_N": [
+        2.153430815524,
+        -0.641723937182
+      ],
+      "direct_Fraw_norm_N": 2.2470144389390843,
+      "wall": {
+        "time": 30.0152,
+        "maxU": 0.01118782985,
+        "maxFaceSpeed": 1.986748384e-09,
+        "maxFaceMotion": 7.946993535e-13,
+        "maxNormalU": 0.01118782985
+      }
+    },
+    {
+      "attemptOrdinal": 103,
+      "window": 38,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.0152,
+      "Dx_m": 0.00019434827205566416,
+      "Dy_m": -6.872371939918212e-05,
+      "Dnorm_m": 0.00020614121484817142,
+      "Fraw_N": [
+        0.042609199187539915,
+        -0.010635405501165818
+      ],
+      "Force_residual": 0.00208,
+      "Force_converged": true,
+      "Force_normalization": 0.044,
+      "Displacement_residual": 3.95e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000206,
+      "Co": [
+        0.03342927061,
+        0.8323014824
+      ],
+      "meshCo": [
+        0.001786450179,
+        0.147329265
+      ],
+      "direct_pressure_force_N": [
+        0.04150169087,
+        -0.01020629846
+      ],
+      "direct_viscous_force_N": [
+        0.001168134273,
+        -0.0004977717442
+      ],
+      "direct_Fraw_N": [
+        0.042669825143,
+        -0.0107040702042
+      ],
+      "direct_Fraw_norm_N": 0.043991943542774255,
+      "wall": {
+        "time": 30.0152,
+        "maxU": 0.02288977991,
+        "maxFaceSpeed": 0.02271651418,
+        "maxFaceMotion": 9.08660567e-06,
+        "maxNormalU": 0.02288601486
+      }
+    },
+    {
+      "attemptOrdinal": 104,
+      "window": 39,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.0152,
+      "Dx_m": 0.0002031865734887058,
+      "Dy_m": -7.133454266340829e-05,
+      "Dnorm_m": 0.00021534484118055595,
+      "Fraw_N": [
+        0.04266982514728546,
+        -0.010704070209041164
+      ],
+      "Force_residual": 0.981,
+      "Force_converged": false,
+      "Force_normalization": 2.28,
+      "Displacement_residual": 0.0428,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000215,
+      "Co": [
+        0.03338023006,
+        0.8311878248
+      ],
+      "meshCo": [
+        2.961083523e-11,
+        6.590157156e-09
+      ],
+      "direct_pressure_force_N": [
+        2.182742794,
+        -0.6407870889
+      ],
+      "direct_viscous_force_N": [
+        0.004095034806,
+        -0.001359411252
+      ],
+      "direct_Fraw_N": [
+        2.186837828806,
+        -0.642146500152
+      ],
+      "direct_Fraw_norm_N": 2.279169106747984,
+      "wall": {
+        "time": 30.0156,
+        "maxU": 0.01135794836,
+        "maxFaceSpeed": 2.036649511e-09,
+        "maxFaceMotion": 8.146598045e-13,
+        "maxNormalU": 0.01135794836
+      }
+    },
+    {
+      "attemptOrdinal": 105,
+      "window": 39,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.0156,
+      "Dx_m": 0.00020318891255132707,
+      "Dy_m": -7.133369391222678e-05,
+      "Dnorm_m": 0.00021534676703158118,
+      "Fraw_N": [
+        0.043033721378020307,
+        -0.010572027211659951
+      ],
+      "Force_residual": 0.000537,
+      "Force_converged": true,
+      "Force_normalization": 0.0443,
+      "Displacement_residual": 3.87e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000215,
+      "Co": [
+        0.03338023006,
+        0.8311878248
+      ],
+      "meshCo": [
+        0.001820318321,
+        0.1494605593
+      ],
+      "direct_pressure_force_N": [
+        0.04185199957,
+        -0.01009564475
+      ],
+      "direct_viscous_force_N": [
+        0.001168184895,
+        -0.0004959658154
+      ],
+      "direct_Fraw_N": [
+        0.043020184465,
+        -0.0105916105654
+      ],
+      "direct_Fraw_norm_N": 0.044304835918573496,
+      "wall": {
+        "time": 30.0156,
+        "maxU": 0.0232118868,
+        "maxFaceSpeed": 0.02304464312,
+        "maxFaceMotion": 9.217857247e-06,
+        "maxNormalU": 0.02320677775
+      }
+    },
+    {
+      "attemptOrdinal": 106,
+      "window": 40,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.0156,
+      "Dx_m": 0.00021215928256640784,
+      "Dy_m": -7.394427952538389e-05,
+      "Dnorm_m": 0.0002246760282131162,
+      "Fraw_N": [
+        0.04302018446736629,
+        -0.010591610560714702
+      ],
+      "Force_residual": 0.981,
+      "Force_converged": false,
+      "Force_normalization": 2.31,
+      "Displacement_residual": 0.0416,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000225,
+      "Co": [
+        0.03335031842,
+        0.8299798033
+      ],
+      "meshCo": [
+        3.004674963e-11,
+        6.738354306e-09
+      ],
+      "direct_pressure_force_N": [
+        2.215057484,
+        -0.6405059351
+      ],
+      "direct_viscous_force_N": [
+        0.004138916238,
+        -0.001357464468
+      ],
+      "direct_Fraw_N": [
+        2.219196400238,
+        -0.641863399568
+      ],
+      "direct_Fraw_norm_N": 2.3101561173510086,
+      "wall": {
+        "time": 30.016,
+        "maxU": 0.01152157571,
+        "maxFaceSpeed": 2.082504264e-09,
+        "maxFaceMotion": 8.330017056e-13,
+        "maxNormalU": 0.01152157571
+      }
+    },
+    {
+      "attemptOrdinal": 107,
+      "window": 40,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.016,
+      "Dx_m": 0.00021216153867877332,
+      "Dy_m": -7.394318700513785e-05,
+      "Dnorm_m": 0.0002246777990790844,
+      "Fraw_N": [
+        0.043371175327233225,
+        -0.010421643824227389
+      ],
+      "Force_residual": 0.00133,
+      "Force_converged": true,
+      "Force_normalization": 0.0447,
+      "Displacement_residual": 3.79e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000225,
+      "Co": [
+        0.03335031842,
+        0.8299798033
+      ],
+      "meshCo": [
+        0.001861036456,
+        0.1515128643
+      ],
+      "direct_pressure_force_N": [
+        0.04225528799,
+        -0.009955341071
+      ],
+      "direct_viscous_force_N": [
+        0.001168480307,
+        -0.0004942236695
+      ],
+      "direct_Fraw_N": [
+        0.043423768297,
+        -0.010449564740500001
+      ],
+      "direct_Fraw_norm_N": 0.04466337488790389,
+      "wall": {
+        "time": 30.016,
+        "maxU": 0.02352258227,
+        "maxFaceSpeed": 0.02336095478,
+        "maxFaceMotion": 9.344381913e-06,
+        "maxNormalU": 0.02351694569
+      }
+    },
+    {
+      "attemptOrdinal": 108,
+      "window": 41,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.016,
+      "Dx_m": 0.00022125969877269999,
+      "Dy_m": -7.655033303011755e-05,
+      "Dnorm_m": 0.0002341277595416824,
+      "Fraw_N": [
+        0.043423768295407505,
+        -0.010449564740613176
+      ],
+      "Force_residual": 0.981,
+      "Force_converged": false,
+      "Force_normalization": 2.34,
+      "Displacement_residual": 0.0404,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000234,
+      "Co": [
+        0.03331014893,
+        0.8286723763
+      ],
+      "meshCo": [
+        2.86715652e-11,
+        6.880024141e-09
+      ],
+      "direct_pressure_force_N": [
+        2.246371156,
+        -0.6395242627
+      ],
+      "direct_viscous_force_N": [
+        0.004181655744,
+        -0.001354661848
+      ],
+      "direct_Fraw_N": [
+        2.250552811744,
+        -0.640878924548
+      ],
+      "direct_Fraw_norm_N": 2.34002430636492,
+      "wall": {
+        "time": 30.0164,
+        "maxU": 0.01167908725,
+        "maxFaceSpeed": 2.126344289e-09,
+        "maxFaceMotion": 8.505377156e-13,
+        "maxNormalU": 0.01167908725
+      }
+    },
+    {
+      "attemptOrdinal": 109,
+      "window": 41,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.0164,
+      "Dx_m": 0.0002212619948622659,
+      "Dy_m": -7.654927701765913e-05,
+      "Dnorm_m": 0.00023412958416730616,
+      "Fraw_N": [
+        0.0437809798919826,
+        -0.010285277029556839
+      ],
+      "Force_residual": 0.00214,
+      "Force_converged": true,
+      "Force_normalization": 0.045,
+      "Displacement_residual": 3.8e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000234,
+      "Co": [
+        0.03331014893,
+        0.8286723763
+      ],
+      "meshCo": [
+        0.001811620205,
+        0.1534883862
+      ],
+      "direct_pressure_force_N": [
+        0.04262898141,
+        -0.009887516551
+      ],
+      "direct_viscous_force_N": [
+        0.001168988153,
+        -0.0004926198198
+      ],
+      "direct_Fraw_N": [
+        0.043797969563,
+        -0.0103801363708
+      ],
+      "direct_Fraw_norm_N": 0.045011213812980864,
+      "wall": {
+        "time": 30.0164,
+        "maxU": 0.02382175677,
+        "maxFaceSpeed": 0.0236656407,
+        "maxFaceMotion": 9.466256281e-06,
+        "maxNormalU": 0.02381697547
+      }
+    },
+    {
+      "attemptOrdinal": 110,
+      "window": 42,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.0164,
+      "Dx_m": 0.00023048576023085128,
+      "Dy_m": -7.915105534684279e-05,
+      "Dnorm_m": 0.00024369771281592374,
+      "Fraw_N": [
+        0.04379796956314696,
+        -0.010380136371113798
+      ],
+      "Force_residual": 0.981,
+      "Force_converged": false,
+      "Force_normalization": 2.37,
+      "Displacement_residual": 0.0393,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000244,
+      "Co": [
+        0.03338931093,
+        0.8276089094
+      ],
+      "meshCo": [
+        2.90108837e-11,
+        7.2017334e-09
+      ],
+      "direct_pressure_force_N": [
+        2.276734772,
+        -0.6378540148
+      ],
+      "direct_viscous_force_N": [
+        0.004223247666,
+        -0.001351025371
+      ],
+      "direct_Fraw_N": [
+        2.280958019666,
+        -0.639205040171
+      ],
+      "direct_Fraw_norm_N": 2.36882936718934,
+      "wall": {
+        "time": 30.0168,
+        "maxU": 0.01183198724,
+        "maxFaceSpeed": 2.225777432e-09,
+        "maxFaceMotion": 8.90310973e-13,
+        "maxNormalU": 0.01183198724
+      }
+    },
+    {
+      "attemptOrdinal": 111,
+      "window": 42,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.0168,
+      "Dx_m": 0.00023048702108118414,
+      "Dy_m": -7.91494634594986e-05,
+      "Dnorm_m": 0.00024369838828520128,
+      "Fraw_N": [
+        0.04399412508177969,
+        -0.010132480317825654
+      ],
+      "Force_residual": 0.000981,
+      "Force_converged": true,
+      "Force_normalization": 0.0452,
+      "Displacement_residual": 3.72e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000244,
+      "Co": [
+        0.03338931093,
+        0.8276089094
+      ],
+      "meshCo": [
+        0.001847936328,
+        0.1554019507
+      ],
+      "direct_pressure_force_N": [
+        0.04285804817,
+        -0.00967068936
+      ],
+      "direct_viscous_force_N": [
+        0.001169441285,
+        -0.0004909895033
+      ],
+      "direct_Fraw_N": [
+        0.044027489455000006,
+        -0.0101616788633
+      ],
+      "direct_Fraw_norm_N": 0.04518494821321559,
+      "wall": {
+        "time": 30.0168,
+        "maxU": 0.024113067,
+        "maxFaceSpeed": 0.02396117681,
+        "maxFaceMotion": 9.584470723e-06,
+        "maxNormalU": 0.0241087131
+      }
+    },
+    {
+      "attemptOrdinal": 112,
+      "window": 43,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.0168,
+      "Dx_m": 0.00023983280203117516,
+      "Dy_m": -8.174350825684744e-05,
+      "Dnorm_m": 0.000253380690014575,
+      "Fraw_N": [
+        0.04402748945216682,
+        -0.010161678863251894
+      ],
+      "Force_residual": 0.981,
+      "Force_converged": false,
+      "Force_normalization": 2.4,
+      "Displacement_residual": 0.0383,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000253,
+      "Co": [
+        0.03331673911,
+        0.8265967165
+      ],
+      "meshCo": [
+        3.186231665e-11,
+        7.33251087e-09
+      ],
+      "direct_pressure_force_N": [
+        2.306514608,
+        -0.6356952445
+      ],
+      "direct_viscous_force_N": [
+        0.004263859378,
+        -0.001346587258
+      ],
+      "direct_Fraw_N": [
+        2.310778467378,
+        -0.637041831758
+      ],
+      "direct_Fraw_norm_N": 2.3969813142174066,
+      "wall": {
+        "time": 30.0172,
+        "maxU": 0.01198023389,
+        "maxFaceSpeed": 2.266065622e-09,
+        "maxFaceMotion": 9.064262487e-13,
+        "maxNormalU": 0.01198023389
+      }
+    },
+    {
+      "attemptOrdinal": 113,
+      "window": 43,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.0172,
+      "Dx_m": 0.00023983415197921786,
+      "Dy_m": -8.174179987796542e-05,
+      "Dnorm_m": 0.00025338141664865623,
+      "Fraw_N": [
+        0.04423750558363748,
+        -0.009895900634921406
+      ],
+      "Force_residual": 0.00289,
+      "Force_converged": true,
+      "Force_normalization": 0.0452,
+      "Displacement_residual": 3.61e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000253,
+      "Co": [
+        0.03331673911,
+        0.8265967165
+      ],
+      "meshCo": [
+        0.001856436584,
+        0.1572683403
+      ],
+      "direct_pressure_force_N": [
+        0.04293972082,
+        -0.009431395593
+      ],
+      "direct_viscous_force_N": [
+        0.001169674896,
+        -0.0004892037438
+      ],
+      "direct_Fraw_N": [
+        0.044109395716,
+        -0.0099205993368
+      ],
+      "direct_Fraw_norm_N": 0.04521124950310482,
+      "wall": {
+        "time": 30.0172,
+        "maxU": 0.02439858536,
+        "maxFaceSpeed": 0.02424987928,
+        "maxFaceMotion": 9.699951714e-06,
+        "maxNormalU": 0.02439436215
+      }
+    },
+    {
+      "attemptOrdinal": 114,
+      "window": 44,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.0172,
+      "Dx_m": 0.00024930017937485496,
+      "Dy_m": -8.432598545113743e-05,
+      "Dnorm_m": 0.00026317570415720427,
+      "Fraw_N": [
+        0.04410939571541276,
+        -0.009920599336829157
+      ],
+      "Force_residual": 0.981,
+      "Force_converged": false,
+      "Force_normalization": 2.42,
+      "Displacement_residual": 0.0373,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000263,
+      "Co": [
+        0.0333199538,
+        0.8254873705
+      ],
+      "meshCo": [
+        2.91743695e-11,
+        7.404583163e-09
+      ],
+      "direct_pressure_force_N": [
+        2.335702338,
+        -0.6330606764
+      ],
+      "direct_viscous_force_N": [
+        0.004303545974,
+        -0.001341413259
+      ],
+      "direct_Fraw_N": [
+        2.340005883974,
+        -0.6344020896589999
+      ],
+      "direct_Fraw_norm_N": 2.424477995032466,
+      "wall": {
+        "time": 30.0176,
+        "maxU": 0.01212486556,
+        "maxFaceSpeed": 2.288454511e-09,
+        "maxFaceMotion": 9.153818044e-13,
+        "maxNormalU": 0.01212486556
+      }
+    },
+    {
+      "attemptOrdinal": 115,
+      "window": 44,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.0176,
+      "Dx_m": 0.00024930116766333575,
+      "Dy_m": -8.43243011712739e-05,
+      "Dnorm_m": 0.0002631761006746744,
+      "Fraw_N": [
+        0.04426314753867855,
+        -0.009658569653437254
+      ],
+      "Force_residual": 0.00245,
+      "Force_converged": true,
+      "Force_normalization": 0.0454,
+      "Displacement_residual": 3.61e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000263,
+      "Co": [
+        0.0333199538,
+        0.8254873705
+      ],
+      "meshCo": [
+        0.00191009495,
+        0.1590946199
+      ],
+      "direct_pressure_force_N": [
+        0.04317056484,
+        -0.009251287401
+      ],
+      "direct_viscous_force_N": [
+        0.001169785582,
+        -0.0004873513904
+      ],
+      "direct_Fraw_N": [
+        0.044340350422000005,
+        -0.009738638791399998
+      ],
+      "direct_Fraw_norm_N": 0.04539722195305696,
+      "wall": {
+        "time": 30.0176,
+        "maxU": 0.0246781744,
+        "maxFaceSpeed": 0.02453233826,
+        "maxFaceMotion": 9.812935305e-06,
+        "maxNormalU": 0.02467363256
+      }
+    },
+    {
+      "attemptOrdinal": 116,
+      "window": 45,
+      "coupling_iteration": 1,
+      "accepted": false,
+      "physical_time_s": 30.0176,
+      "Dx_m": 0.00025888475299185374,
+      "Dy_m": -8.689716527976247e-05,
+      "Dnorm_m": 0.00027307953542019854,
+      "Fraw_N": [
+        0.04434035042412589,
+        -0.009738638791559676
+      ],
+      "Force_residual": 0.981,
+      "Force_converged": false,
+      "Force_normalization": 2.45,
+      "Displacement_residual": 0.0363,
+      "Displacement_converged": false,
+      "Displacement_normalization": 0.000273,
+      "Co": [
+        0.03325004398,
+        0.824275942
+      ],
+      "meshCo": [
+        3.940546618e-11,
+        7.688115321e-09
+      ],
+      "direct_pressure_force_N": [
+        2.364353077,
+        -0.6299640115
+      ],
+      "direct_viscous_force_N": [
+        0.00434245246,
+        -0.001335563266
+      ],
+      "direct_Fraw_N": [
+        2.36869552946,
+        -0.6312995747660001
+      ],
+      "direct_Fraw_norm_N": 2.451378727243818,
+      "wall": {
+        "time": 30.018,
+        "maxU": 0.01226616639,
+        "maxFaceSpeed": 2.375966811e-09,
+        "maxFaceMotion": 9.503867242e-13,
+        "maxNormalU": 0.01226616639
+      }
+    },
+    {
+      "attemptOrdinal": 117,
+      "window": 45,
+      "coupling_iteration": 2,
+      "accepted": true,
+      "physical_time_s": 30.018,
+      "Dx_m": 0.00025888580983763325,
+      "Dy_m": -8.689522385202338e-05,
+      "Dnorm_m": 0.0002730799195539292,
+      "Fraw_N": [
+        0.04450476882662091,
+        -0.009436602070984401
+      ],
+      "Force_residual": 0.00144,
+      "Force_converged": true,
+      "Force_normalization": 0.0455,
+      "Displacement_residual": 3.54e-09,
+      "Displacement_converged": true,
+      "Displacement_normalization": 0.000273,
+      "Co": [
+        0.03325004398,
+        0.824275942
+      ],
+      "meshCo": [
+        0.001951790304,
+        0.1608945942
+      ],
+      "direct_pressure_force_N": [
+        0.04337442166,
+        -0.009003577841
+      ],
+      "direct_viscous_force_N": [
+        0.001169854709,
+        -0.0004853871004
+      ],
+      "direct_Fraw_N": [
+        0.044544276369000005,
+        -0.009488964941399999
+      ],
+      "direct_Fraw_norm_N": 0.045543748340436035,
+      "wall": {
+        "time": 30.018,
+        "maxU": 0.02495165963,
+        "maxFaceSpeed": 0.02480864376,
+        "maxFaceMotion": 9.923457506e-06,
+        "maxNormalU": 0.02494634002
+      }
+    }
+  ],
+  "persistent_four_state_cycle": "NO",
+  "basis": "Every window in 35-45 was strictly accepted; no window reached maxIterations and no late four-state plateau persisted."
+}

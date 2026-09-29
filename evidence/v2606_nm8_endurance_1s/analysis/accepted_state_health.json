@@ -1,0 +1,18 @@
+{
+  "count": 541,
+  "all_structure_values_finite": true,
+  "force_conversion_exactly_once": true,
+  "checkpoint_restore_exact": true,
+  "max_accepted_Fraw_N": 0.14671205037584317,
+  "max_accepted_Fraw_at_window": 503,
+  "max_abs_Dx_m": 0.011444281610340052,
+  "Dx_at_max_abs_window": 541,
+  "signed_Dx_at_max_abs_m": 0.011444281610340052,
+  "max_abs_Dy_m": 0.008036280674138098,
+  "Dy_at_max_abs_window": 541,
+  "signed_Dy_at_max_abs_m": 0.008036280674138098,
+  "max_accepted_D_norm_m": 0.013984040498021055,
+  "max_D_at_window": 541,
+  "max_accepted_Co": 2.264628455,
+  "max_accepted_meshCo": 0.6723364561
+}

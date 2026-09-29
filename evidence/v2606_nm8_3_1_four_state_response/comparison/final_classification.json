@@ -1,0 +1,23 @@
+{
+  "classification": "V2606_NM8_3_1_LOCAL_FLUID_RESPONSE_CYCLE_REPRODUCED",
+  "authorized_next_action": "INVESTIGATE_MOVING_WALL_LOCAL_GAIN",
+  "NM9_authorized": false,
+  "four_inputs_exact_obtained": true,
+  "within_state_repeatability": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+  },
+  "max_pairwise_displacement_m": 2.1458267228589518e-09,
+  "max_pairwise_wall_U_m_per_s": 8.046631269058459e-06,
+  "fresh_max_pressure_force_difference_N": 0.001334348765085574,
+  "fresh_max_viscous_force_difference_N": 1.0360533604603939e-06,
+  "fresh_max_total_force_difference_N": 0.001335384808470678,
+  "production_four_state_total_force_spread_N": 0.0013353848062164385,
+  "fresh_to_production_spread_ratio": 1.0000000016880823,
+  "production_four_states_xy_reproduced_to_stdout_precision": true,
+  "local_response_sufficient_to_explain_cycle": true,
+  "scope": "diagnostic one-step Fluid map from same accepted window38 restart; no IQN, no coupled rollback",
+  "source_precision_limit": "The physical coupling contract is 2D x/y. Production direct forces only available in standard OpenFOAM stdout decimal precision; binary64 production-force equality is not asserted. Tiny uncoupled z components can differ and are reported separately."
+}

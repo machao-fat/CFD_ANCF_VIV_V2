@@ -1,0 +1,16 @@
+{
+  "force": {
+    "min": 9.08e-07,
+    "median": 0.00183,
+    "p95": 0.0042805000000000005,
+    "max": 0.00479
+  },
+  "displacement": {
+    "min": 3.9e-16,
+    "median": 6.03e-11,
+    "p95": 4.106000000000001e-09,
+    "max": 2.46e-05
+  },
+  "closest_force_window": 59,
+  "closest_displacement_window": 12
+}

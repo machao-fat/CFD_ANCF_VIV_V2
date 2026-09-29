@@ -1,0 +1,10 @@
+{
+  "log": false,
+  "pressure_viscous_total_columns": "native force.dat",
+  "status": "PASS",
+  "type": "forces",
+  "v2606_source": "src/functionObjects/forces/forces/forces.H: writeFields bool default false",
+  "writeControl": "timeStep",
+  "writeFields": false,
+  "writeInterval": 1
+}

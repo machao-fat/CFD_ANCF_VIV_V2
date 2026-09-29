@@ -1,0 +1,6 @@
+{
+  "executed": false,
+  "reason": "Full coupled one-step restart would alter preCICE/Structure window state; user permits complete-state audit as minimum.",
+  "status": "NOT_EXECUTED",
+  "three_Fluid_restart_states_complete": true
+}

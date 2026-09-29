@@ -1,0 +1,10 @@
+{
+  "initial": {
+    "Mesh_OK": true,
+    "min_volume_m3": 7.687364233e-10,
+    "max_nonorthogonality_deg": 43.84604596,
+    "max_skewness": 0.8969795303,
+    "max_aspect_ratio": 7.659081709
+  },
+  "at_failure": "NOT_AVAILABLE: no complete field write before window 39"
+}

@@ -1,0 +1,8 @@
+{
+  "estimated_state_history_bytes": 119200000,
+  "flush": "per accepted window",
+  "per_window_state_bytes": 4768,
+  "record": "compact binary q/v/qddot + accepted-window JSON force/displacement metadata",
+  "tentative_state_as_committed": "NO",
+  "windows": 25000
+}

@@ -1,0 +1,7 @@
+{
+  "authorization": "User explicitly requested repair and re-run in the original NM12 directory until the bounded 100-window target is completed",
+  "previous_abort": "Normal OpenFOAM FOAM_SIGFPE trapping-enabled banner was falsely classified as an actual numerical exception",
+  "repair_scope": "Monitor regex only; no physical or numerical setting change",
+  "case_state": "All five processor cases remain at frozen30 initial time; zero coupled attempts and zero accepted windows",
+  "run_limit": "Exactly 100 accepted windows; no long-duration continuation"
+}

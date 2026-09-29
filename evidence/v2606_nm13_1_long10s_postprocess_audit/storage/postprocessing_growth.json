@@ -1,0 +1,8 @@
+{
+  "arbitrary_postProcessing_purge": "not assumed",
+  "direct_force_alignment_required": true,
+  "forceCoeffs": "compact text, same cadence; no force fields",
+  "full_fields": "only 250-step times, purgeWrite=3",
+  "native_forces": "compact text, ~one record per solver step/attempt; duplicates at repeated physical times are retained",
+  "yPlus": "writeTime only, writeFields=no"
+}

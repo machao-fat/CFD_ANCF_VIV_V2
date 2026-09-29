@@ -1,0 +1,12 @@
+{
+  "coupling_influence": "NONE",
+  "fourth_coupling_mesh": false,
+  "fourth_force": false,
+  "implemented": true,
+  "source_model_copied_for_observation": true,
+  "test_D_s594_m": [
+    0.000826671720462452,
+    -0.000590161156550575
+  ],
+  "test_gradient_norm_m": 0.002648837353871382
+}

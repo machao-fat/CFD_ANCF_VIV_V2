@@ -1,0 +1,11 @@
+{
+  "status": "INVALID_SETUP_RUN",
+  "accepted_windows": 0,
+  "cause": [
+    "diagnostic force observer library path was misspelled; official fluid solver reached the first time step but function-object loading failed",
+    "temporary monitor treated the expected preCICE initial zero-normalization inf diagnostic as fatal"
+  ],
+  "production_numerics_changed": false,
+  "qualification_evidence": false,
+  "replacement": "fresh scratch rebuilt from frozen30 after correcting diagnostic-only setup"
+}

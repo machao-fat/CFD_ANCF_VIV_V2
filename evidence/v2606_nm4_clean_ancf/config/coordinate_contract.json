@@ -1,0 +1,20 @@
+{
+  "fluid_reference_mesh": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/constant/polyMesh",
+  "fluid_mesh_sha256_points": "9918bb58ad8a3052be917eb0e3403ac26abbece25f18d40651c5282407dbad36",
+  "fluid_cylinder_center_xyz_m": [-1.2923689896027213e-18, 1.235990476633475e-18, 0.013999999999999948],
+  "fluid_cylinder_face_count": 200,
+  "structure_coordinate_source": "${D_DRIVE_ROOT}/CFD_Work/projects/CFD_ANCF_VIV_V2/cases/hh06_single_slice/structure_contract.json",
+  "structure_axis": "s measured bottom-to-top along ANCF z; ANCF x inline, y crossflow",
+  "fluid_axis": "OpenFOAM inlet U=(0.31,0,0) defines x streamwise; y is crossflow; z is extrusion/spanwise",
+  "coupling_s_m": 2.97,
+  "tributary_interval_m": [1.98, 3.96],
+  "Fluid_Fx_to_ANCF": "+x",
+  "Fluid_Fy_to_ANCF": "+y",
+  "ANCF_Dx_to_Fluid": "+x",
+  "ANCF_Dy_to_Fluid": "+y",
+  "sign_flip": false,
+  "reference_alignment": "P1 REF_NE32 q0 has x=y=0 at s=2.97; Fluid fixed30 cylinder is at its undeformed reference position; initial preCICE Displacement=(0,0)",
+  "Solid_Mesh_vertices": 1,
+  "Solid_Mesh_vertex_xy_m": [-1.2923689896027213e-18, 1.235990476633475e-18],
+  "identity_meaning": "single Fluid slice at ANCF section s=2.97 m, not an ANCF physical x/y coordinate used to change q"
+}

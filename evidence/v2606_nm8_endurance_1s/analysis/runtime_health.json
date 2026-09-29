@@ -1,0 +1,22 @@
+{
+  "fluid_fatal_or_nonfinite": false,
+  "fluid_peer_eof_after_structure_exit": true,
+  "structure_failure": true,
+  "all_values_finite": true,
+  "checkpoint_lifecycle_intact": true,
+  "force_conversion_intact": true,
+  "frozen_release_unchanged": true,
+  "mesh_ok_all_checkpoints": false,
+  "exit_codes": {
+    "fluid_pid": 18189,
+    "structure_pid": 18190,
+    "fluid_exit_code": 1,
+    "structure_exit_code": 2,
+    "monitor_exit_code": 1,
+    "mesh_exit_code": 0,
+    "wrapper_exit_code": 1,
+    "finished_utc": "2026-09-26T14:50:31Z"
+  },
+  "monitor_stop_reason": "NM8_STRUCTURE_RUNTIME_ANOMALY accepted=541",
+  "runtime_health_pass": false
+}

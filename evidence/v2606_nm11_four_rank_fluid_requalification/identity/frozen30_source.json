@@ -1,0 +1,67 @@
+{
+  "frozen_release": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "histories_present_on_source_processors": true,
+  "mesh_hashes_by_rank": {
+    "0": "118ea3882fc302e295d0fdadcacfb77180a391603a49bdb1ebc7dddc0c98795e"
+  },
+  "processor_count": 6,
+  "release_time_directory": "29.9999999999834372",
+  "release_time_s": 29.999999999983437,
+  "required_fields": [
+    "U",
+    "p",
+    "phi",
+    "k",
+    "omega",
+    "nut"
+  ],
+  "source_fields": {
+    "all_complete": true,
+    "ranks": 6,
+    "required_fields": [
+      "U",
+      "p",
+      "phi",
+      "k",
+      "omega",
+      "nut"
+    ],
+    "rows": [
+      {
+        "complete": true,
+        "missing": [],
+        "rank": 0
+      },
+      {
+        "complete": true,
+        "missing": [],
+        "rank": 1
+      },
+      {
+        "complete": true,
+        "missing": [],
+        "rank": 2
+      },
+      {
+        "complete": true,
+        "missing": [],
+        "rank": 3
+      },
+      {
+        "complete": true,
+        "missing": [],
+        "rank": 4
+      },
+      {
+        "complete": true,
+        "missing": [],
+        "rank": 5
+      }
+    ],
+    "time": "29.9999999999834372"
+  },
+  "source_release_provenance": "qualified v2606 frozen fixed-cylinder 30 s release; no continuation from NM10.4",
+  "system_controlDict_sha256": "082443dc4a0473c4197c3d25ee4ef2b2b297931e8b6e5fef2bd3eb029af461a0",
+  "system_fvSchemes_sha256": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+  "system_fvSolution_sha256": "3a0fbc8bab5998b89074bb6f28bac18a3a65c75b016ecd41240444bdfe958e80"
+}

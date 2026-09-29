@@ -1,0 +1,8 @@
+{
+  "cause": "external monitor log-read ENODATA",
+  "fix": "safe tail with ENODATA fallback; incremental timeline flush",
+  "fresh_cases_from": "${V2606_PROJECT_ROOT}/evidence/v2606_nm12_n5_4rank_diagnostic100/launch/frozen30_four_rank_template",
+  "physics_or_numerics_changed": false,
+  "previous_complete_run_preserved_at": "${V2606_PROJECT_ROOT}/evidence/v2606_nm12_n5_4rank_diagnostic100/launch/first100_no_exit_codes_runtime",
+  "same_case_paths": true
+}

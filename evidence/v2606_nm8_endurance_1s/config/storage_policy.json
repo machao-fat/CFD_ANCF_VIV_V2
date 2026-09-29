@@ -1,0 +1,11 @@
+{
+  "writeControl": "timeStep",
+  "writeInterval_steps": 250,
+  "purgeWrite": 2,
+  "deltaT_s": 0.0004,
+  "target_windows": 2500,
+  "target_duration_s": 1.0,
+  "target_final_time_s": 31.0,
+  "disk_guard_free_bytes": 10000000000,
+  "full_field_time_requires_all_six_ranks": ["U", "p", "phi", "k", "omega", "nut", "pointDisplacement", "cellDisplacement", "polyMesh/points"]
+}

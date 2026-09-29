@@ -1,0 +1,15 @@
+{
+  "scratch": "/tmp/nm4a_final.CPXodj",
+  "fluid_config_sha256": {
+    "system/controlDict": "8715be1dea90975d10d708c00041c6390efef1b8ee5efd5ffc41f3218f82f293",
+    "system/fvSchemes": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+    "system/fvSolution": "42efc5d385706740f9a101fecd5be535e3079aed1871dc1cf106d1df7c469ff6",
+    "system/preciceDict": "e40c92b88da9f9ca017399f4c80d65497b0b5eec4c5c8ef7b144a8de130abbef",
+    "constant/dynamicMeshDict": "4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb",
+    "precice-config-nm4.xml": "01e004315d354363866a91981ae81fb98fb8906ee1b813753e7ed5b98960740e"
+  },
+  "attempt_trace_sha256": "6fca4d50ddc13af0ffe23104dd376b7308eca8c9b7b3af8c9a7e96b778293f5d",
+  "fluid_log_sha256": "2569a2ff79e7190f26fd575c59ed29d336caa29e3a2e65e9ded4cb34fa3ec354",
+  "structure_log_sha256": "a844e189f378556e3acc742bdfb3a05936d35f19a53316dd172823848245be6f",
+  "frozen_release_unchanged": true
+}

@@ -1,0 +1,11 @@
+{
+  "fluids": {
+    "Fluid-S1": 4,
+    "Fluid-S2": 4,
+    "Fluid-S3": 4,
+    "Fluid-S4": 4,
+    "Fluid-S5": 4
+  },
+  "structure_processes": 1,
+  "total_fluid_ranks": 20
+}

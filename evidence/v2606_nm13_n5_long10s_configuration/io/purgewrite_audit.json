@@ -1,0 +1,8 @@
+{
+  "complete_time_directories_retained": 3,
+  "immutable_frozen30_modified": false,
+  "purgeWrite": 3,
+  "runtime_proof": "NOT_RUN; configuration/source audit only",
+  "semantics": "previous write times are pushed after a successful complete objectRegistry write; directories older than purgeWrite are removed",
+  "source": "OpenFOAM v2606 TimeIO.C"
+}

@@ -1,0 +1,30 @@
+{
+  "bc_checks": 21,
+  "bc_pass": 21,
+  "all_18_pass": true,
+  "solver_cases": {
+    "s099": {
+      "p_relTol_0p01_configured": true,
+      "pFinal_relTol_0_configured": true,
+      "ordinary_p_runtime_seen": true,
+      "p_final_runtime_lines": 1836
+    },
+    "s297": {
+      "p_relTol_0p01_configured": true,
+      "pFinal_relTol_0_configured": true,
+      "ordinary_p_runtime_seen": true,
+      "p_final_runtime_lines": 1836
+    },
+    "s495": {
+      "p_relTol_0p01_configured": true,
+      "pFinal_relTol_0_configured": true,
+      "ordinary_p_runtime_seen": true,
+      "p_final_runtime_lines": 1836
+    }
+  },
+  "runtime_nonzero_displacement": true,
+  "bc_checks_total": 21,
+  "processor_bc_checks": 18,
+  "processor_bc_pass": 18,
+  "all_18_processor_pass": true
+}

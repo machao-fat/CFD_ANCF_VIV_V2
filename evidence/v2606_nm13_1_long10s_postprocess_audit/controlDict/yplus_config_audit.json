@@ -1,0 +1,9 @@
+{
+  "executeControl": "writeTime",
+  "frequency": "main full-field write times only",
+  "status": "PASS",
+  "unbounded_output": "NO",
+  "v2606_source": "src/functionObjects/field/yPlus/yPlus.H: writeFields supported",
+  "writeControl": "writeTime",
+  "writeFields": false
+}

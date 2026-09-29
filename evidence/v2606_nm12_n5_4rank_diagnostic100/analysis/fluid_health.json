@@ -1,0 +1,316 @@
+{
+  "all_configuration_pass": true,
+  "all_final_fields_complete_finite": true,
+  "all_final_mesh_pass": true,
+  "all_no_fatal_or_nonfinite_marker": true,
+  "all_normal_end_markers": true,
+  "final_fields": {
+    "s0594": {
+      "complete_4_of_4": true,
+      "final_time_s": 30.039999999983344,
+      "finite_4_of_4": true,
+      "ranks": [
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": false,
+          "rank": 0,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 1,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 2,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 3,
+          "time": 30.039999999983344
+        }
+      ]
+    },
+    "s1782": {
+      "complete_4_of_4": true,
+      "final_time_s": 30.039999999983344,
+      "finite_4_of_4": true,
+      "ranks": [
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 0,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": false,
+          "rank": 1,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 2,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": false,
+          "rank": 3,
+          "time": 30.039999999983344
+        }
+      ]
+    },
+    "s2970": {
+      "complete_4_of_4": true,
+      "final_time_s": 30.039999999983344,
+      "finite_4_of_4": true,
+      "ranks": [
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 0,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 1,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 2,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": false,
+          "rank": 3,
+          "time": 30.039999999983344
+        }
+      ]
+    },
+    "s4158": {
+      "complete_4_of_4": true,
+      "final_time_s": 30.039999999983344,
+      "finite_4_of_4": true,
+      "ranks": [
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": false,
+          "rank": 0,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": false,
+          "rank": 1,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 2,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": false,
+          "rank": 3,
+          "time": 30.039999999983344
+        }
+      ]
+    },
+    "s5346": {
+      "complete_4_of_4": true,
+      "final_time_s": 30.039999999983344,
+      "finite_4_of_4": true,
+      "ranks": [
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 0,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": false,
+          "rank": 1,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": false,
+          "rank": 2,
+          "time": 30.039999999983344
+        },
+        {
+          "complete": true,
+          "finite_audit_method": "OpenFOAM binary scalar/vector float64 decode",
+          "finite_binary_numeric_audit": true,
+          "provisional_ascii_scan_result": true,
+          "rank": 3,
+          "time": 30.039999999983344
+        }
+      ]
+    }
+  },
+  "final_mesh_checks": {
+    "s0594": {
+      "exit_code": 0,
+      "max_aspect_ratio": 7.633377045,
+      "max_nonorthogonality_deg": 43.91318378,
+      "max_skewness": 0.8967910172,
+      "min_volume_m3": 7.687364176e-10,
+      "pass": true
+    },
+    "s1782": {
+      "exit_code": 0,
+      "max_aspect_ratio": 7.631211153,
+      "max_nonorthogonality_deg": 43.92611405,
+      "max_skewness": 0.8967918043,
+      "min_volume_m3": 7.687364155e-10,
+      "pass": true
+    },
+    "s2970": {
+      "exit_code": 0,
+      "max_aspect_ratio": 7.631113304,
+      "max_nonorthogonality_deg": 43.92744699,
+      "max_skewness": 0.8967936115,
+      "min_volume_m3": 7.687364153e-10,
+      "pass": true
+    },
+    "s4158": {
+      "exit_code": 0,
+      "max_aspect_ratio": 7.631158552,
+      "max_nonorthogonality_deg": 43.92673783,
+      "max_skewness": 0.8967933536,
+      "min_volume_m3": 7.687364154e-10,
+      "pass": true
+    },
+    "s5346": {
+      "exit_code": 0,
+      "max_aspect_ratio": 7.632394351,
+      "max_nonorthogonality_deg": 43.91947053,
+      "max_skewness": 0.8967909777,
+      "min_volume_m3": 7.687364164e-10,
+      "pass": true
+    }
+  },
+  "per_fluid": {
+    "s0594": {
+      "fatal_or_nonfinite_marker": false,
+      "max_Co": 0.8822924897,
+      "max_meshCo": 0.1277669001,
+      "normal_end_marker": true
+    },
+    "s1782": {
+      "fatal_or_nonfinite_marker": false,
+      "max_Co": 0.8822924897,
+      "max_meshCo": 0.1695530392,
+      "normal_end_marker": true
+    },
+    "s2970": {
+      "fatal_or_nonfinite_marker": false,
+      "max_Co": 0.8822924897,
+      "max_meshCo": 0.1732586765,
+      "normal_end_marker": true
+    },
+    "s4158": {
+      "fatal_or_nonfinite_marker": false,
+      "max_Co": 0.8822924897,
+      "max_meshCo": 0.1709980511,
+      "normal_end_marker": true
+    },
+    "s5346": {
+      "fatal_or_nonfinite_marker": false,
+      "max_Co": 0.8822924897,
+      "max_meshCo": 0.1488081935,
+      "normal_end_marker": true
+    }
+  },
+  "provisional_ascii_scanner": "FALSE_POSITIVE_ON_BINARY_PAYLOAD",
+  "runtime_configuration": {
+    "s0594": {
+      "dt_4e_minus_4": true,
+      "movingWallVelocity": true,
+      "nOuter_3": true,
+      "pFinal_relTol_0": true,
+      "p_relTol_0p01": true
+    },
+    "s1782": {
+      "dt_4e_minus_4": true,
+      "movingWallVelocity": true,
+      "nOuter_3": true,
+      "pFinal_relTol_0": true,
+      "p_relTol_0p01": true
+    },
+    "s2970": {
+      "dt_4e_minus_4": true,
+      "movingWallVelocity": true,
+      "nOuter_3": true,
+      "pFinal_relTol_0": true,
+      "p_relTol_0p01": true
+    },
+    "s4158": {
+      "dt_4e_minus_4": true,
+      "movingWallVelocity": true,
+      "nOuter_3": true,
+      "pFinal_relTol_0": true,
+      "p_relTol_0p01": true
+    },
+    "s5346": {
+      "dt_4e_minus_4": true,
+      "movingWallVelocity": true,
+      "nOuter_3": true,
+      "pFinal_relTol_0": true,
+      "p_relTol_0p01": true
+    }
+  }
+}

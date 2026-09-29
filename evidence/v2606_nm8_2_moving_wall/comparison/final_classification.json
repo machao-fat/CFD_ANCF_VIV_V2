@@ -1,0 +1,11 @@
+{
+  "classification": "V2606_NM8_2_MOVING_WALL_COUPLING_NOT_CONVERGED",
+  "NM8_2A_pass": true,
+  "NM8_2B_pass": true,
+  "NM8_2C_pass": false,
+  "NM8_2C_accepted_windows": 38,
+  "corrected_production_BC_qualified": false,
+  "NM9_authorized": false,
+  "earliest_failure": "C window 39: Force relative convergence still above 5e-3 at max 50 iterations; strict preCICE terminated before acceptance",
+  "old_fixedValue_trajectory": "DIAGNOSTIC ONLY"
+}

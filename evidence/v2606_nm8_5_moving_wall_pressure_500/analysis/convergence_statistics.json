@@ -1,0 +1,38 @@
+{
+  "accepted_windows": 500,
+  "attempts": 1038,
+  "iteration_statistics": {
+    "min": 2,
+    "median": 2.0,
+    "mean": 2.076,
+    "p95": 2.0,
+    "p99": 3.0,
+    "max": 15,
+    "windows_ge_5": 2,
+    "windows_ge_10": 1,
+    "windows_ge_20": 0,
+    "windows_ge_40": 0,
+    "reached_50": 0,
+    "forced_acceptance": 0
+  },
+  "force_residual": {
+    "min": 9.08e-07,
+    "median": 0.00183,
+    "p95": 0.0042805000000000005,
+    "max": 0.00479
+  },
+  "displacement_residual": {
+    "min": 3.9e-16,
+    "median": 6.03e-11,
+    "p95": 4.106000000000001e-09,
+    "max": 2.46e-05
+  },
+  "strict_limits": {
+    "Force": 0.005,
+    "Displacement": 0.005
+  },
+  "authoritative_fluid_time_s": [
+    30.0,
+    30.2
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "max_loadavg_1m": 21.29638671875,
+  "max_swap_used_bytes": 45056,
+  "min_system_MemAvailable_bytes": 13837611008,
+  "peak_fluid_rank_RSS_bytes": 177520640,
+  "peak_structure_RSS_bytes": 48410624,
+  "peak_total_participant_RSS_bytes": 3506950144,
+  "samples": 398
+}

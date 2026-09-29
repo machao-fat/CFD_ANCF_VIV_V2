@@ -1,0 +1,14 @@
+{
+  "launcher": "${V2606_PROJECT_ROOT}/scripts/run_v2606_nm9_b.py",
+  "launcher_sha256": "4b95ae346d8c01f5ad8a36cd15e66b6b91f4f8016166050d06b76670a4a93a33",
+  "structure_cwd": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_b_three_slice_short100/preparation/structure_runtime",
+  "fluid_cwds": [
+    "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_b_three_slice_short100/preparation/fluid_s099",
+    "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_b_three_slice_short100/preparation/fluid_s297",
+    "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_b_three_slice_short100/preparation/fluid_s495"
+  ],
+  "precice_exchange_directory_resolved": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_b_three_slice_short100/preparation",
+  "structure_binary": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_a_three_slice_smoke/preparation/source/prepared_structure_three_slice",
+  "xml": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_b_three_slice_short100/preparation/config/precice_nm9b_short100.xml",
+  "windows": 100
+}

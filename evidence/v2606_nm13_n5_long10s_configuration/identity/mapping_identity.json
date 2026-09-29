@@ -1,0 +1,19 @@
+{
+  "active_region_m": [
+    0.0,
+    5.94
+  ],
+  "centers_m": [
+    0.594,
+    1.782,
+    2.97,
+    4.158,
+    5.346
+  ],
+  "endpoint_policy": "NearestConstant",
+  "mapping_mode": "PiecewiseLinearDistributed",
+  "sampling_cell_width_is_force_multiplier": false,
+  "sampling_cell_width_m": 1.188,
+  "structure_source_sha256": "e1a89bd814697d8f01f061f1de85ff5d85f820daf16b720821247cbd3ece2153",
+  "unit_span_m": 0.028
+}

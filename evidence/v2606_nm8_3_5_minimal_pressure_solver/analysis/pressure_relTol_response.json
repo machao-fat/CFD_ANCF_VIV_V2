@@ -1,0 +1,1052 @@
+{
+  "input_identity_by_state": {
+    "A": true,
+    "B": true,
+    "D": true
+  },
+  "references": {
+    "P0_true_nOuter3": {
+      "source": "NM8.3.2 frozen diagnostic evidence",
+      "Pair-HIGH_deltaFpressure_norm": 0.0013343487671308297,
+      "Pair-LOW_deltaFpressure_norm": 0.000189863028752838
+    },
+    "P3_NM8_3_3_TIGHT": {
+      "Pair-HIGH_deltaFpressure_norm": 0.0005203280073810713,
+      "Pair-LOW_deltaFpressure_norm": 0.00020017191540864734
+    },
+    "NM8_3_4_outer30": {
+      "HIGH": 0.0005212527134771329,
+      "LOW": 0.00020052697997849145
+    }
+  },
+  "variants": {
+    "P1_relTol_0p01": {
+      "p_relTol": "0.01",
+      "final_force_by_state": {
+        "A": {
+          "time": 30.0155999999834,
+          "timeIndex": 75039,
+          "outer": 3,
+          "rank": 0,
+          "U_L2": 0.3117816080697068,
+          "p_L2": 0.002173513135719242,
+          "phi_L2": 3.2708711193684875e-05,
+          "meshPhi_L2": 1.4742036607470527e-06,
+          "U_hash": "ceb25ac0d70a10e3",
+          "p_hash": "1b224f09bc3f71bd",
+          "phi_hash": "7ae75dbcbcf6dbfd",
+          "meshPhi_hash": "dd91ffc1b958a56a",
+          "pressureForce": [
+            0.04135501844,
+            -0.0102605621,
+            -2.909925687e-22
+          ],
+          "viscousForce": [
+            0.001160308945,
+            -0.0004942479705,
+            1.170860106e-16
+          ],
+          "totalForce": [
+            0.042515327383064856,
+            -0.010754810067200917,
+            1.1708571958930023e-16
+          ]
+        },
+        "B": {
+          "time": 30.0155999999834,
+          "timeIndex": 75039,
+          "outer": 3,
+          "rank": 0,
+          "U_L2": 0.3117815969159384,
+          "p_L2": 0.002149252744888817,
+          "phi_L2": 3.2708531795286185e-05,
+          "meshPhi_L2": 1.4743259334537193e-06,
+          "U_hash": "a53e88cc94c3375a",
+          "p_hash": "865d29740dcae461",
+          "phi_hash": "602ad22aff83c50d",
+          "meshPhi_hash": "4d5a4aecc1b26eb4",
+          "pressureForce": [
+            0.04103839289,
+            -0.01029233036,
+            3.080672279e-23
+          ],
+          "viscousForce": [
+            0.00115987403,
+            -0.0004942916725,
+            1.112316347e-16
+          ],
+          "totalForce": [
+            0.042198266915513184,
+            -0.010786622032767633,
+            1.1123166547225533e-16
+          ]
+        },
+        "D": {
+          "time": 30.0155999999834,
+          "timeIndex": 75039,
+          "outer": 3,
+          "rank": 0,
+          "U_L2": 0.3117816150635686,
+          "p_L2": 0.0021887214217653265,
+          "phi_L2": 3.270882336688926e-05,
+          "meshPhi_L2": 1.4741271832198718e-06,
+          "U_hash": "9deb98ec09b3fa20",
+          "p_hash": "4b7d28f669c3f7fa",
+          "phi_hash": "7e2b0dcae02341c6",
+          "meshPhi_hash": "21daa13f3a48eccf",
+          "pressureForce": [
+            0.04155265905,
+            -0.01024096151,
+            7.061039883e-24
+          ],
+          "viscousForce": [
+            0.001160580674,
+            -0.0004942210043,
+            1.053774139e-16
+          ],
+          "totalForce": [
+            0.04271323972706277,
+            -0.010735182513861888,
+            1.0537742093271125e-16
+          ]
+        }
+      },
+      "Pair-HIGH_B-D": {
+        "pressure": {
+          "delta_vector": [
+            -0.0005142661600000056,
+            -5.136884999999876e-05
+          ],
+          "delta_norm": 0.0005168253496796319
+        },
+        "viscous": {
+          "delta_vector": [
+            -7.066439999998692e-07,
+            -7.06682000000151e-08
+          ],
+          "delta_norm": 7.101688089652046e-07
+        },
+        "raw": {
+          "delta_vector": [
+            -0.0005149728115495869,
+            -5.143951890574511e-05
+          ],
+          "delta_norm": 0.0005175355260661251
+        },
+        "p": {
+          "count": 46826,
+          "L2_abs": 0.028214749020332414,
+          "L2_relative": 0.004867144966822071,
+          "Linf": 0.0004510500417021189,
+          "hash_equal": false
+        },
+        "phi": {
+          "count": 92392,
+          "L2_abs": 7.75803184807258e-08,
+          "L2_relative": 1.0521934704886398e-05,
+          "Linf": 8.557504239527594e-10,
+          "hash_equal": false
+        }
+      },
+      "Pair-LOW_A-D": {
+        "pressure": {
+          "delta_vector": [
+            -0.00019764061000000083,
+            -1.960059000000007e-05
+          ],
+          "delta_norm": 0.00019861015545414725
+        },
+        "viscous": {
+          "delta_vector": [
+            -2.7172899999994456e-07,
+            -2.696619999997471e-08
+          ],
+          "delta_norm": 2.730637753042474e-07
+        },
+        "raw": {
+          "delta_vector": [
+            -0.00019791234399791496,
+            -1.9627553339028603e-05
+          ],
+          "delta_norm": 0.00019888322392003162
+        },
+        "p": {
+          "count": 46826,
+          "L2_abs": 0.010846723985277374,
+          "L2_relative": 0.0018710986233975379,
+          "Linf": 0.00017349145408798033,
+          "hash_equal": false
+        },
+        "phi": {
+          "count": 92392,
+          "L2_abs": 2.984610728372228e-08,
+          "L2_relative": 4.047918314648071e-06,
+          "Linf": 3.2921626646461926e-10,
+          "hash_equal": false
+        }
+      },
+      "error_HIGH_vs_outer30_reference": 0.008493699280656575,
+      "error_LOW_vs_outer30_reference": 0.00955893578285475,
+      "pressure_solver_trace": {
+        "A": [
+          {
+            "outer": 1,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.3608893316,
+            "final_residual": 0.003580855714,
+            "iterations": 10
+          },
+          {
+            "outer": 1,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.2368624352,
+            "final_residual": 9.907344851e-09,
+            "iterations": 136
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.2101549032,
+            "final_residual": 0.00179886855,
+            "iterations": 6
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.14018395,
+            "final_residual": 9.253973804e-09,
+            "iterations": 132
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.2124448259,
+            "final_residual": 0.002020865754,
+            "iterations": 9
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.01693619452,
+            "final_residual": 9.439317528e-09,
+            "iterations": 118
+          }
+        ],
+        "B": [
+          {
+            "outer": 1,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.3609620637,
+            "final_residual": 0.003413596105,
+            "iterations": 11
+          },
+          {
+            "outer": 1,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.2372357763,
+            "final_residual": 9.685937269e-09,
+            "iterations": 136
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.2101539411,
+            "final_residual": 0.001812118525,
+            "iterations": 6
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.1401925429,
+            "final_residual": 9.292645375e-09,
+            "iterations": 132
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.2124172891,
+            "final_residual": 0.002026220437,
+            "iterations": 9
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.016964995,
+            "final_residual": 9.438852188e-09,
+            "iterations": 118
+          }
+        ],
+        "D": [
+          {
+            "outer": 1,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.3608441585,
+            "final_residual": 0.003552498323,
+            "iterations": 10
+          },
+          {
+            "outer": 1,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.236842436,
+            "final_residual": 9.863691525e-09,
+            "iterations": 136
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.210154707,
+            "final_residual": 0.001790193891,
+            "iterations": 6
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.1401790765,
+            "final_residual": 9.232216851e-09,
+            "iterations": 132
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.2124605613,
+            "final_residual": 0.002016332136,
+            "iterations": 9
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.0169174156,
+            "final_residual": 9.433869955e-09,
+            "iterations": 118
+          }
+        ]
+      },
+      "auxiliary_solver_trace": {
+        "A": [
+          {
+            "outer": 1,
+            "field": "Ux",
+            "initial_residual": 0.0001851349878,
+            "final_residual": 1.446672978e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 1,
+            "field": "Uy",
+            "initial_residual": 0.0008714450959,
+            "final_residual": 6.56828765e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Ux",
+            "initial_residual": 9.402229158e-05,
+            "final_residual": 7.960867091e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Uy",
+            "initial_residual": 0.000451745124,
+            "final_residual": 3.664798126e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "Ux",
+            "initial_residual": 0.0001002885975,
+            "final_residual": 1.534235346e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "Uy",
+            "initial_residual": 0.0004823898469,
+            "final_residual": 8.480755438e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "omega",
+            "initial_residual": 4.083454424e-06,
+            "final_residual": 3.377724244e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "k",
+            "initial_residual": 0.0003531446654,
+            "final_residual": 5.664430239e-08,
+            "iterations": 2
+          }
+        ],
+        "B": [
+          {
+            "outer": 1,
+            "field": "Ux",
+            "initial_residual": 0.0001851335763,
+            "final_residual": 1.446650402e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 1,
+            "field": "Uy",
+            "initial_residual": 0.0008714389683,
+            "final_residual": 6.568177482e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Ux",
+            "initial_residual": 9.405205005e-05,
+            "final_residual": 7.961582975e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Uy",
+            "initial_residual": 0.0004518085863,
+            "final_residual": 3.666111296e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "Ux",
+            "initial_residual": 0.0001003505503,
+            "final_residual": 1.530059113e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "Uy",
+            "initial_residual": 0.0004825283657,
+            "final_residual": 8.501161488e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "omega",
+            "initial_residual": 4.083437069e-06,
+            "final_residual": 3.37773803e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "k",
+            "initial_residual": 0.0003531422365,
+            "final_residual": 5.664449154e-08,
+            "iterations": 2
+          }
+        ],
+        "D": [
+          {
+            "outer": 1,
+            "field": "Ux",
+            "initial_residual": 0.0001851358709,
+            "final_residual": 1.446687115e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 1,
+            "field": "Uy",
+            "initial_residual": 0.000871448928,
+            "final_residual": 6.568356587e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Ux",
+            "initial_residual": 9.40035084e-05,
+            "final_residual": 7.960884647e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Uy",
+            "initial_residual": 0.0004517032948,
+            "final_residual": 3.66383813e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "Ux",
+            "initial_residual": 0.0001002498144,
+            "final_residual": 1.537730844e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "Uy",
+            "initial_residual": 0.0004823008636,
+            "final_residual": 8.465955386e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "omega",
+            "initial_residual": 4.083466419e-06,
+            "final_residual": 3.377716287e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "k",
+            "initial_residual": 0.000353146185,
+            "final_residual": 5.664417694e-08,
+            "iterations": 2
+          }
+        ]
+      }
+    },
+    "P2_relTol_0": {
+      "p_relTol": "0",
+      "final_force_by_state": {
+        "A": {
+          "time": 30.0155999999834,
+          "timeIndex": 75039,
+          "outer": 3,
+          "rank": 0,
+          "U_L2": 0.31178161144621513,
+          "p_L2": 0.002164526740575404,
+          "phi_L2": 3.270871095082895e-05,
+          "meshPhi_L2": 1.4742036607470527e-06,
+          "U_hash": "4f0b7115825620b2",
+          "p_hash": "b3365630b794d92e",
+          "phi_hash": "94b3b52cda5e18e5",
+          "meshPhi_hash": "dd91ffc1b958a56a",
+          "pressureForce": [
+            0.04084061732,
+            -0.0103765582,
+            -2.863906271e-22
+          ],
+          "viscousForce": [
+            0.001160127864,
+            -0.0004942852415,
+            1.170860097e-16
+          ],
+          "totalForce": [
+            0.04200074518099298,
+            -0.010870843446073667,
+            1.1708572328400685e-16
+          ]
+        },
+        "B": {
+          "time": 30.0155999999834,
+          "timeIndex": 75039,
+          "outer": 3,
+          "rank": 0,
+          "U_L2": 0.3117816003064814,
+          "p_L2": 0.0021402346041168906,
+          "phi_L2": 3.27085315533926e-05,
+          "meshPhi_L2": 1.4743259334537193e-06,
+          "U_hash": "e7d0493cd87c245e",
+          "p_hash": "5e46ff2184edce66",
+          "phi_hash": "275553617bae1a9a",
+          "meshPhi_hash": "4d5a4aecc1b26eb4",
+          "pressureForce": [
+            0.04052208354,
+            -0.01040874805,
+            3.235849473e-23
+          ],
+          "viscousForce": [
+            0.001159692271,
+            -0.0004943291591,
+            1.112316343e-16
+          ],
+          "totalForce": [
+            0.0416817758142672,
+            -0.010903077210254384,
+            1.1123166662997695e-16
+          ]
+        },
+        "D": {
+          "time": 30.0155999999834,
+          "timeIndex": 75039,
+          "outer": 3,
+          "rank": 0,
+          "U_L2": 0.3117816184089332,
+          "p_L2": 0.002179751691795679,
+          "phi_L2": 3.270882312518891e-05,
+          "meshPhi_L2": 1.4741271832198718e-06,
+          "U_hash": "76ea7d9b11c85904",
+          "p_hash": "e3abeead470d99a3",
+          "phi_hash": "8ca10338276eafb",
+          "meshPhi_hash": "21daa13f3a48eccf",
+          "pressureForce": [
+            0.04103980343,
+            -0.01035671719,
+            7.502518079e-24
+          ],
+          "viscousForce": [
+            0.001160400248,
+            -0.0004942581715,
+            1.053774141e-16
+          ],
+          "totalForce": [
+            0.04220020368239817,
+            -0.01085097536506032,
+            1.0537742160439868e-16
+          ]
+        }
+      },
+      "Pair-HIGH_B-D": {
+        "pressure": {
+          "delta_vector": [
+            -0.0005177198899999971,
+            -5.203085999999982e-05
+          ],
+          "delta_norm": 0.0005203278724938235
+        },
+        "viscous": {
+          "delta_vector": [
+            -7.079769999999638e-07,
+            -7.098760000006157e-08
+          ],
+          "delta_norm": 7.115270001080195e-07
+        },
+        "raw": {
+          "delta_vector": [
+            -0.0005184278681309717,
+            -5.210184519406462e-05
+          ],
+          "delta_norm": 0.0005210394003599445
+        },
+        "p": {
+          "count": 46826,
+          "L2_abs": 0.028354085597908373,
+          "L2_relative": 0.004904928609329906,
+          "Linf": 0.0004515259008425615,
+          "hash_equal": false
+        },
+        "phi": {
+          "count": 92392,
+          "L2_abs": 7.758142645225538e-08,
+          "L2_relative": 1.0522084878283233e-05,
+          "Linf": 8.557115321842644e-10,
+          "hash_equal": false
+        }
+      },
+      "Pair-LOW_A-D": {
+        "pressure": {
+          "delta_vector": [
+            -0.0001991861099999992,
+            -1.9841010000000436e-05
+          ],
+          "delta_norm": 0.0002001718564003239
+        },
+        "viscous": {
+          "delta_vector": [
+            -2.723839999999294e-07,
+            -2.7070000000036995e-08
+          ],
+          "delta_norm": 2.7372582698014365e-07
+        },
+        "raw": {
+          "delta_vector": [
+            -0.00019945850140519472,
+            -1.9868081013348082e-05
+          ],
+          "delta_norm": 0.00020044558968946918
+        },
+        "p": {
+          "count": 46826,
+          "L2_abs": 0.01090809658125644,
+          "L2_relative": 0.0018869744471211336,
+          "Linf": 0.00017370546302022602,
+          "hash_equal": false
+        },
+        "phi": {
+          "count": 92392,
+          "L2_abs": 2.984649127355239e-08,
+          "L2_relative": 4.047970356571451e-06,
+          "Linf": 3.2920308579847957e-10,
+          "hash_equal": false
+        }
+      },
+      "error_HIGH_vs_outer30_reference": 0.0017742660314226859,
+      "error_LOW_vs_outer30_reference": 0.0017709516106292791,
+      "pressure_solver_trace": {
+        "A": [
+          {
+            "outer": 1,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.3608893316,
+            "final_residual": 9.73245298e-09,
+            "iterations": 140
+          },
+          {
+            "outer": 1,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.2365683523,
+            "final_residual": 9.323484241e-09,
+            "iterations": 135
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.2101566087,
+            "final_residual": 9.820172345e-09,
+            "iterations": 134
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.1400991706,
+            "final_residual": 9.5342501e-09,
+            "iterations": 129
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.2124207585,
+            "final_residual": 9.712899035e-09,
+            "iterations": 134
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.01569869275,
+            "final_residual": 9.736159659e-09,
+            "iterations": 121
+          }
+        ],
+        "B": [
+          {
+            "outer": 1,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.3609620637,
+            "final_residual": 9.80445497e-09,
+            "iterations": 140
+          },
+          {
+            "outer": 1,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.2365921791,
+            "final_residual": 9.392078934e-09,
+            "iterations": 135
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.2101566935,
+            "final_residual": 9.868753853e-09,
+            "iterations": 134
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.1400933801,
+            "final_residual": 9.575930326e-09,
+            "iterations": 129
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.212394773,
+            "final_residual": 9.790972088e-09,
+            "iterations": 134
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.01572730569,
+            "final_residual": 9.857102201e-09,
+            "iterations": 121
+          }
+        ],
+        "D": [
+          {
+            "outer": 1,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.3608441585,
+            "final_residual": 9.68771895e-09,
+            "iterations": 140
+          },
+          {
+            "outer": 1,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.2365533757,
+            "final_residual": 9.280610791e-09,
+            "iterations": 135
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.2101566697,
+            "final_residual": 9.792615334e-09,
+            "iterations": 134
+          },
+          {
+            "outer": 2,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.1401029355,
+            "final_residual": 9.511125854e-09,
+            "iterations": 129
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 1,
+            "final_inner": false,
+            "dictionary": "p",
+            "initial_residual": 0.2124369872,
+            "final_residual": 9.664113816e-09,
+            "iterations": 134
+          },
+          {
+            "outer": 3,
+            "pressure_corrector": 2,
+            "final_inner": true,
+            "dictionary": "pFinal",
+            "initial_residual": 0.01568063767,
+            "final_residual": 9.66067032e-09,
+            "iterations": 121
+          }
+        ]
+      },
+      "auxiliary_solver_trace": {
+        "A": [
+          {
+            "outer": 1,
+            "field": "Ux",
+            "initial_residual": 0.0001851349878,
+            "final_residual": 1.446672978e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 1,
+            "field": "Uy",
+            "initial_residual": 0.0008714450959,
+            "final_residual": 6.56828765e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Ux",
+            "initial_residual": 9.401958788e-05,
+            "final_residual": 7.967181317e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Uy",
+            "initial_residual": 0.0004517163229,
+            "final_residual": 3.662806036e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "Ux",
+            "initial_residual": 0.0001002866569,
+            "final_residual": 1.555014348e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "Uy",
+            "initial_residual": 0.000482330805,
+            "final_residual": 8.429538442e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "omega",
+            "initial_residual": 4.083685599e-06,
+            "final_residual": 3.377866945e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "k",
+            "initial_residual": 0.0003531447638,
+            "final_residual": 5.664335758e-08,
+            "iterations": 2
+          }
+        ],
+        "B": [
+          {
+            "outer": 1,
+            "field": "Ux",
+            "initial_residual": 0.0001851335763,
+            "final_residual": 1.446650402e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 1,
+            "field": "Uy",
+            "initial_residual": 0.0008714389683,
+            "final_residual": 6.568177482e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Ux",
+            "initial_residual": 9.404952708e-05,
+            "final_residual": 7.967152258e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Uy",
+            "initial_residual": 0.0004517830003,
+            "final_residual": 3.664328328e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "Ux",
+            "initial_residual": 0.0001003483039,
+            "final_residual": 1.549601169e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "Uy",
+            "initial_residual": 0.000482472136,
+            "final_residual": 8.452618418e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "omega",
+            "initial_residual": 4.083669813e-06,
+            "final_residual": 3.377882117e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "k",
+            "initial_residual": 0.0003531423358,
+            "final_residual": 5.664355174e-08,
+            "iterations": 2
+          }
+        ],
+        "D": [
+          {
+            "outer": 1,
+            "field": "Ux",
+            "initial_residual": 0.0001851358709,
+            "final_residual": 1.446687115e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 1,
+            "field": "Uy",
+            "initial_residual": 0.000871448928,
+            "final_residual": 6.568356587e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Ux",
+            "initial_residual": 9.400089805e-05,
+            "final_residual": 7.967231962e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 2,
+            "field": "Uy",
+            "initial_residual": 0.0004516747647,
+            "final_residual": 3.661856496e-07,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "Ux",
+            "initial_residual": 0.0001002485171,
+            "final_residual": 1.558513495e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "Uy",
+            "initial_residual": 0.0004822429639,
+            "final_residual": 8.415106638e-08,
+            "iterations": 2
+          },
+          {
+            "outer": 3,
+            "field": "omega",
+            "initial_residual": 4.083695532e-06,
+            "final_residual": 3.377857602e-08,
+            "iterations": 1
+          },
+          {
+            "outer": 3,
+            "field": "k",
+            "initial_residual": 0.0003531462829,
+            "final_residual": 5.664323839e-08,
+            "iterations": 2
+          }
+        ]
+      }
+    }
+  }
+}

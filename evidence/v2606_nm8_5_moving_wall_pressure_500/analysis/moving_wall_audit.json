@@ -1,0 +1,86 @@
+{
+  "samples": {
+    "1": {
+      "attempt": 1,
+      "wall": {
+        "time": 30.0004,
+        "maxU": 0.000679826142,
+        "maxFaceSpeed": 0.0003392465191,
+        "maxFaceMotion": 1.356986076e-07,
+        "maxNormalU": 0.0006798211016
+      },
+      "Dx_m": 1.249647094798516e-07,
+      "Dy_m": -5.2895495969171426e-08
+    },
+    "100": {
+      "attempt": 226,
+      "wall": {
+        "time": 30.04,
+        "maxU": 0.03358671365,
+        "maxFaceSpeed": 0.03350553257,
+        "maxFaceMotion": 1.340221303e-05,
+        "maxNormalU": 0.03355948972
+      },
+      "Dx_m": 0.000909494307301374,
+      "Dy_m": -0.0001663720341610035
+    },
+    "250": {
+      "attempt": 533,
+      "wall": {
+        "time": 30.1,
+        "maxU": 0.05222238155,
+        "maxFaceSpeed": 0.052176922,
+        "maxFaceMotion": 2.08707688e-05,
+        "maxNormalU": 0.05219936807
+      },
+      "Dx_m": 0.0032478123319251515,
+      "Dy_m": 0.0007932739105159213
+    },
+    "500": {
+      "attempt": 1037,
+      "wall": {
+        "time": 30.2,
+        "maxU": 0.03434703444,
+        "maxFaceSpeed": 0.03432720117,
+        "maxFaceMotion": 1.373088047e-05,
+        "maxNormalU": 0.03426416263
+      },
+      "Dx_m": 0.007233626121892295,
+      "Dy_m": 0.0036155426611578206
+    }
+  },
+  "final_bc_6_of_6": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_5_500/fluid/processor0/30.1999999999829711/U",
+      "type": "movingWallVelocity"
+    },
+    {
+      "rank": 1,
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_5_500/fluid/processor1/30.1999999999829711/U",
+      "type": "movingWallVelocity"
+    },
+    {
+      "rank": 2,
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_5_500/fluid/processor2/30.1999999999829711/U",
+      "type": "movingWallVelocity"
+    },
+    {
+      "rank": 3,
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_5_500/fluid/processor3/30.1999999999829711/U",
+      "type": "movingWallVelocity"
+    },
+    {
+      "rank": 4,
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_5_500/fluid/processor4/30.1999999999829711/U",
+      "type": "movingWallVelocity"
+    },
+    {
+      "rank": 5,
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_5_500/fluid/processor5/30.1999999999829711/U",
+      "type": "movingWallVelocity"
+    }
+  ],
+  "runtime_nonzero_wall_motion": true
+}

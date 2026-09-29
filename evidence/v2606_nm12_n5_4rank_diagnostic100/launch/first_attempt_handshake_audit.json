@@ -1,0 +1,20 @@
+{
+  "adapter_initialized_fluids": {
+    "s0594": false,
+    "s1782": false,
+    "s2970": false,
+    "s4158": false,
+    "s5346": false
+  },
+  "first_exit": "s0594",
+  "handshake_completed_monotonic_ns": null,
+  "primary_connected_fluids": {
+    "s0594": false,
+    "s1782": false,
+    "s2970": false,
+    "s4158": false,
+    "s5346": false
+  },
+  "primary_connected_structure": false,
+  "status": "FAIL"
+}

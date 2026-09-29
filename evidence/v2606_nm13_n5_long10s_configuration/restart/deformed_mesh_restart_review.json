@@ -1,0 +1,6 @@
+{
+  "DEFORMED_MESH_RESTART_CONFIG": "official adapter restartFromDeformed=true (default in v1.4.0) with solid and Fluid restart state agreeing",
+  "FULL_COUPLED_CROSS_PROCESS_RESTART": "CONFIGURED_NOT_YET_QUALIFIED",
+  "basis": "official OpenFOAM adapter documentation",
+  "runtime_restart_smoke": "NOT_RUN"
+}

@@ -1,0 +1,34 @@
+{
+  "QN_columns": "NOT_DIRECTLY_OBSERVABLE",
+  "all_attempt_warning_counts": {
+    "QR": 80,
+    "conditioning": 265
+  },
+  "per_20_windows": {
+    "1-20": {
+      "QR": 26,
+      "conditioning": 70,
+      "other": 0
+    },
+    "21-40": {
+      "QR": 29,
+      "conditioning": 38,
+      "other": 0
+    },
+    "41-60": {
+      "QR": 8,
+      "conditioning": 54,
+      "other": 0
+    },
+    "61-80": {
+      "QR": 4,
+      "conditioning": 55,
+      "other": 0
+    },
+    "81-100": {
+      "QR": 13,
+      "conditioning": 48,
+      "other": 0
+    }
+  }
+}

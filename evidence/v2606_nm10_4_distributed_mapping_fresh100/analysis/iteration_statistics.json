@@ -1,0 +1,13 @@
+{
+  "min": 2,
+  "median": 3.0,
+  "mean": 3.06,
+  "p95": 6.0,
+  "p99": 7.010000000000005,
+  "max": 8,
+  "counts_ge5": 7,
+  "counts_ge10": 0,
+  "counts_ge20": 0,
+  "counts_ge40": 0,
+  "counts_50": 0
+}

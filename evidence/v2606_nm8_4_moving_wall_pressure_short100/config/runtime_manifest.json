@@ -1,0 +1,67 @@
+{
+  "phase": "V2606-NM8.4",
+  "scratch_case": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100",
+  "fluid": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid",
+  "solid": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/solid",
+  "source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "source_time": "29.9999999999834372",
+  "target_windows": 100,
+  "target_end_time": 30.04,
+  "dt": 0.0004,
+  "mpi_ranks": 6,
+  "p_relTol": 0.01,
+  "nOuterCorrectors": 3,
+  "nCorrectors": 2,
+  "nNonOrthogonalCorrectors": 0,
+  "strict_force": 0.005,
+  "strict_displacement": 0.005,
+  "max_coupling_iterations": 50,
+  "purgeWrite": 2,
+  "structure_initial": "P1_REF_NE32/q0",
+  "force_factor": 70.71428571428571,
+  "edited_scratch_files": [
+    {
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/0/U",
+      "original_sha256": "05cc41a71f371a24a1e9970b80ddfd82e9bc4be7f4737550d50ebebe153e9722",
+      "corrected_sha256": "1124aae503d31ad23439dae239f12a571536a7a68add76308bafb0e669323573",
+      "only_cylinder_type_changed": true
+    },
+    {
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor0/29.9999999999834372/U",
+      "original_sha256": "51ca5b6e901d7ed48c89334c8d349bfb0d8924beb189806cbc9859906085926b",
+      "corrected_sha256": "06dfdac2fa015e58a272fd4f27a217615704fa31528a7fe7cf4ce2e0c8784033",
+      "only_cylinder_type_changed": true
+    },
+    {
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor1/29.9999999999834372/U",
+      "original_sha256": "9971be2c39aa1e9d76a3df161b4f914b32cdedf520c7137c352fa20f544c3bd9",
+      "corrected_sha256": "6c4e8d32c7e926c31b437209eaf83c50d0d9baca4dd67bfb1d2501a5435016d7",
+      "only_cylinder_type_changed": true
+    },
+    {
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor2/29.9999999999834372/U",
+      "original_sha256": "9f51e4a2513409d333cd1dbab76573d1d4464f1303423b47852277e41ab61a2b",
+      "corrected_sha256": "059b6687f18bc6b28380e9ccca7bdf27a71c8e5818133e63c654a096cde38dd6",
+      "only_cylinder_type_changed": true
+    },
+    {
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor3/29.9999999999834372/U",
+      "original_sha256": "6825258592bc22d9a326e573d8c9daf4e0235227ede64d046a8e819099303a68",
+      "corrected_sha256": "29aaffebfb7f0f3d60a657eb02b4fc0895a8fae4e0ccabd7f65622f39e7e7aca",
+      "only_cylinder_type_changed": true
+    },
+    {
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor4/29.9999999999834372/U",
+      "original_sha256": "1fe72a8360235550ff01d98bc383285cbddf5a9254d18e96309382d856b1bdae",
+      "corrected_sha256": "274afe27cf3086d36e97aac2b3775458e649f0b43d14fb27ea42b9b71d09e9a7",
+      "only_cylinder_type_changed": true
+    },
+    {
+      "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor5/29.9999999999834372/U",
+      "original_sha256": "cb2eab4c9ae6310b6d436fe8eb75635738e4d9bff6b946c850caee8809e8ccca",
+      "corrected_sha256": "6d3e479f4618944e74ea03b4eef66105a0d7895d202080f2ef97c039f704e8b4",
+      "only_cylinder_type_changed": true
+    }
+  ],
+  "frozen_release_untouched": true
+}

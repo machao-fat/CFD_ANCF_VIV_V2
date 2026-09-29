@@ -1,0 +1,19 @@
+{
+  "filesystems": [
+    "/mnt/d",
+    "${LINUX_HOME}"
+  ],
+  "d_total_bytes_initial": 733776703488,
+  "d_free_bytes_initial": 95667720192,
+  "scratch_fs_total_bytes_initial": 1081101176832,
+  "scratch_fs_free_bytes_initial": 1009291964416,
+  "scratch_bytes_initial": 26016611,
+  "disk_guard_free_bytes": 5000000000,
+  "minimum_d_free_bytes_observed": 95662501888,
+  "minimum_scratch_fs_free_bytes_observed": 1009208147968,
+  "maximum_scratch_bytes_observed": 73126948,
+  "d_free_bytes_at_analysis": 96665915392,
+  "scratch_fs_free_bytes_at_analysis": 1009231253504,
+  "last_disk_sample_accepted_windows": 500,
+  "scratch_exists_at_analysis": true
+}

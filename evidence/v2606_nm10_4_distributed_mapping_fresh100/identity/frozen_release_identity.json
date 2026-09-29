@@ -1,0 +1,11 @@
+{
+  "frozen_release": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "frozen_release_controlDict_sha256": "082443dc4a0473c4197c3d25ee4ef2b2b297931e8b6e5fef2bd3eb029af461a0",
+  "official_adapter_unchanged": true,
+  "protected": {
+    "${LINUX_HOME}/OpenFOAM/v2606-precice-adapter/lib/libpreciceAdapterFunctionObject.so": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/system/controlDict": "082443dc4a0473c4197c3d25ee4ef2b2b297931e8b6e5fef2bd3eb029af461a0",
+    "${V2606_PROJECT_ROOT}/evidence/v2606_nm10_1_distributed_mapping/source/ancf_kernel.cpp": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+    "${V2606_PROJECT_ROOT}/evidence/v2606_nm10_1_distributed_mapping/source/ancf_kernel.hpp": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c"
+  }
+}

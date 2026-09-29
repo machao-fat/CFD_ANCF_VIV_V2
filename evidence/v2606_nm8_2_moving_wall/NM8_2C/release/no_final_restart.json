@@ -1,0 +1,4 @@
+{
+  "final_500_window_restart_available": false,
+  "reason": "strict Force nonconvergence stopped at window 39, before first 100-window full-field write"
+}

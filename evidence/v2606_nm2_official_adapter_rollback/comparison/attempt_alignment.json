@@ -1,0 +1,174 @@
+{
+  "C0": {
+    "attempts": [
+      {
+        "adapter_mapping_sequence": 1,
+        "attempt": 1,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 1,
+        "observer_ordinal": null,
+        "solid_attempt": 1
+      },
+      {
+        "adapter_mapping_sequence": 2,
+        "attempt": 2,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 2,
+        "observer_ordinal": null,
+        "solid_attempt": 2
+      },
+      {
+        "adapter_mapping_sequence": 3,
+        "attempt": 3,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 3,
+        "observer_ordinal": null,
+        "solid_attempt": 3
+      },
+      {
+        "adapter_mapping_sequence": 4,
+        "attempt": 4,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 4,
+        "observer_ordinal": null,
+        "solid_attempt": 4
+      }
+    ],
+    "counts": {
+      "adapter_mappings": 4,
+      "fluid_solves": 4,
+      "forces": 4,
+      "observer": 0
+    },
+    "order_ok": true
+  },
+  "C1": {
+    "attempts": [
+      {
+        "adapter_mapping_sequence": 1,
+        "attempt": 1,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 1,
+        "observer_ordinal": 1,
+        "solid_attempt": 1
+      },
+      {
+        "adapter_mapping_sequence": 2,
+        "attempt": 2,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 2,
+        "observer_ordinal": 2,
+        "solid_attempt": 2
+      },
+      {
+        "adapter_mapping_sequence": 3,
+        "attempt": 3,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 3,
+        "observer_ordinal": 3,
+        "solid_attempt": 3
+      },
+      {
+        "adapter_mapping_sequence": 4,
+        "attempt": 4,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 4,
+        "observer_ordinal": 4,
+        "solid_attempt": 4
+      }
+    ],
+    "counts": {
+      "adapter_mappings": 4,
+      "fluid_solves": 4,
+      "forces": 4,
+      "observer": 4
+    },
+    "order_ok": true
+  },
+  "R1": {
+    "attempts": [
+      {
+        "adapter_mapping_sequence": 1,
+        "attempt": 1,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 1,
+        "observer_ordinal": 1,
+        "solid_attempt": 1
+      },
+      {
+        "adapter_mapping_sequence": 2,
+        "attempt": 2,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 2,
+        "observer_ordinal": 2,
+        "solid_attempt": 2
+      },
+      {
+        "adapter_mapping_sequence": 3,
+        "attempt": 3,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 3,
+        "observer_ordinal": 3,
+        "solid_attempt": 3
+      },
+      {
+        "adapter_mapping_sequence": 4,
+        "attempt": 4,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 4,
+        "observer_ordinal": 4,
+        "solid_attempt": 4
+      }
+    ],
+    "counts": {
+      "adapter_mappings": 4,
+      "fluid_solves": 4,
+      "forces": 4,
+      "observer": 4
+    },
+    "order_ok": true
+  },
+  "R2": {
+    "attempts": [
+      {
+        "adapter_mapping_sequence": 1,
+        "attempt": 1,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 1,
+        "observer_ordinal": 1,
+        "solid_attempt": 1
+      },
+      {
+        "adapter_mapping_sequence": 2,
+        "attempt": 2,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 2,
+        "observer_ordinal": 2,
+        "solid_attempt": 2
+      },
+      {
+        "adapter_mapping_sequence": 3,
+        "attempt": 3,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 3,
+        "observer_ordinal": 3,
+        "solid_attempt": 3
+      },
+      {
+        "adapter_mapping_sequence": 4,
+        "attempt": 4,
+        "fluid_time": 0.0002,
+        "forces_stdout_sequence": 4,
+        "observer_ordinal": 4,
+        "solid_attempt": 4
+      }
+    ],
+    "counts": {
+      "adapter_mappings": 4,
+      "fluid_solves": 4,
+      "forces": 4,
+      "observer": 4
+    },
+    "order_ok": true
+  }
+}

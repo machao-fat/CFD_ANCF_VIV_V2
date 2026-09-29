@@ -1,0 +1,16 @@
+{
+  "classification": "V2606_NM8_2_MOVING_WALL_COUPLING_NOT_CONVERGED",
+  "accepted_windows": 38,
+  "requested_windows": 500,
+  "first_failed_window": 39,
+  "strict_Force_nonconvergence": true,
+  "no_unconverged_window_accepted": true,
+  "q_v_D_finite_through_recorded_attempts": true,
+  "initial_Mesh_OK": true,
+  "no_full_field_write_before_failure": true,
+  "process_exit": {
+    "fluid_exit_code": 1,
+    "structure_exit_code": 23,
+    "wrapper_exit_code": 1
+  }
+}

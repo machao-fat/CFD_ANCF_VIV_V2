@@ -1,0 +1,75 @@
+{
+  "status": "PRELIMINARY ONLY",
+  "bins": [
+    {
+      "coupled_time_interval_s": [
+        0.0,
+        0.2
+      ],
+      "windows": 500,
+      "Dy_min_m": -0.00027667986487057766,
+      "Dy_max_m": 0.006983104354548021,
+      "Dy_RMS_m": 0.0030626773857442197,
+      "max_D_norm_m": 0.012312815988685907,
+      "Fy_raw_RMS_N": 0.06580767495438801,
+      "Fx_raw_mean_N": 0.07807020387892695,
+      "frequency": "not estimated; five bins describe early transient only"
+    },
+    {
+      "coupled_time_interval_s": [
+        0.2,
+        0.4
+      ],
+      "windows": 41,
+      "Dy_min_m": 0.007010369834615809,
+      "Dy_max_m": 0.008036280674138098,
+      "Dy_RMS_m": 0.00753554313738348,
+      "max_D_norm_m": 0.013984040498021055,
+      "Fy_raw_RMS_N": 0.0978427709357507,
+      "Fx_raw_mean_N": 0.10790416270297676,
+      "frequency": "not estimated; five bins describe early transient only"
+    },
+    {
+      "coupled_time_interval_s": [
+        0.4,
+        0.6000000000000001
+      ],
+      "windows": 0,
+      "Dy_min_m": null,
+      "Dy_max_m": null,
+      "Dy_RMS_m": null,
+      "max_D_norm_m": null,
+      "Fy_raw_RMS_N": null,
+      "Fx_raw_mean_N": null,
+      "frequency": "not estimated; five bins describe early transient only"
+    },
+    {
+      "coupled_time_interval_s": [
+        0.6000000000000001,
+        0.8
+      ],
+      "windows": 0,
+      "Dy_min_m": null,
+      "Dy_max_m": null,
+      "Dy_RMS_m": null,
+      "max_D_norm_m": null,
+      "Fy_raw_RMS_N": null,
+      "Fx_raw_mean_N": null,
+      "frequency": "not estimated; five bins describe early transient only"
+    },
+    {
+      "coupled_time_interval_s": [
+        0.8,
+        1.0
+      ],
+      "windows": 0,
+      "Dy_min_m": null,
+      "Dy_max_m": null,
+      "Dy_RMS_m": null,
+      "max_D_norm_m": null,
+      "Fy_raw_RMS_N": null,
+      "Fx_raw_mean_N": null,
+      "frequency": "not estimated; five bins describe early transient only"
+    }
+  ]
+}

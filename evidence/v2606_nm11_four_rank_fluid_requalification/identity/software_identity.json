@@ -1,0 +1,21 @@
+{
+  "OpenFOAM": "OpenFOAM.com v2606",
+  "adapter_ldd_contamination": true,
+  "adapter_path": "${LINUX_HOME}/OpenFOAM/v2606-precice-adapter/lib/libpreciceAdapterFunctionObject.so",
+  "adapter_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "ancf_core_cpp_sha256": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+  "ancf_core_hpp_sha256": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c",
+  "dt_s": 0.0004,
+  "movingWallVelocity": true,
+  "nOuterCorrectors": 3,
+  "official_adapter": "v1.4.0",
+  "official_adapter_unchanged": true,
+  "pFinal_relTol": 0.0,
+  "p_relTol": 0.01,
+  "preCICE": "3.4.1",
+  "strict_convergence": {
+    "Displacement": 0.005,
+    "Force": 0.005,
+    "max_iterations": 50
+  }
+}

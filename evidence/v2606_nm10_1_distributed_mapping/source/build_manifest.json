@@ -1,0 +1,19 @@
+{
+  "compiler": "g++ 11.4.0",
+  "flags": "-std=c++17 -O2 -ffp-contract=off -Wall -Wextra -Wpedantic",
+  "baseline_clean_source_sha256": "4aa0f4528e2429ba533f93211fc3dcb60ef9b0d9f41d80f42b1967845ae03cfb",
+  "candidate_source_sha256": "609d3ff49e418874773bc74a705a65d86bb451023cc4256ff9e34b59db8dc1b1",
+  "mapper_header_sha256": "103a5e067be98cb627dd942bf612d7a157456b3a66e23719c553bb4744cafd68",
+  "mapper_cpp_sha256": "476813af778753c94b4686db4e5322495b0aa73f63d7d2cbccf2872b029bdca8",
+  "evaluator_cpp_sha256": "b1aec0e1787159c94303e833b05c10ef818c36adc63c3d132ba5d3a3902ee744",
+  "binary_sha256": "35e6fb29f5365f2ac9e4ba75d9ed977837218221466133845ad30e760b0e517a",
+  "mapping_tests_binary_sha256": "847e91ff3d8f29910283628736afaf8d1eecd387b73c5dc7c8c89218b1337d29",
+  "contract_tests_binary_sha256": "686e839a9c16967a8ba1d55dcef858fc2c15c1845bed83f3885b108e068a29dc",
+  "replay_binary_sha256": "a1af560b41db847fa05f0d3b248ca26b19c64f6c3cc1281feb2bd9b605df1484",
+  "ancf_core_hashes": {
+    "ancf_kernel.cpp": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+    "ancf_kernel.hpp": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c"
+  },
+  "official_adapter_changed": false,
+  "cfd_precice_executed": false
+}

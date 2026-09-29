@@ -1,0 +1,7 @@
+{
+  "accepted_records_exactly_equal": true,
+  "comparison_role": "supplementary rerun consistency; original run lacked observed numeric exit codes",
+  "current_completed_windows": 100,
+  "iteration_sequence_exactly_equal": true,
+  "prior_completed_windows": 100
+}

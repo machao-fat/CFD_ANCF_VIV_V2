@@ -1,0 +1,141 @@
+{
+  "classification": "V2606_NM5_A_IQN_FIRST_WINDOW_PASS",
+  "iterations": 4,
+  "final_Force_residual": 0.000336483287,
+  "final_Displacement_residual": 0.000457840102,
+  "actual_convergence": true,
+  "strict": true,
+  "iqn_active": true,
+  "QNColumns": 2,
+  "DeletedQNColumns": 1,
+  "DroppedQNColumns": 0,
+  "max_rejected_trial_Courant": 0.8822924897,
+  "max_rejected_trial_meshCourant": 0.003391538409,
+  "accepted_Courant": 0.8822924897,
+  "accepted_meshCourant": 0.006782200244,
+  "checkpoint_integrity": true,
+  "force_conversion": true,
+  "runtime_health": true,
+  "records": [
+    {
+      "iteration": 1,
+      "F_raw_N": [
+        0,
+        0
+      ],
+      "F_strip_N": [
+        0,
+        0
+      ],
+      "D_absolute_m": [
+        0,
+        0
+      ],
+      "Force_residual": 1.0,
+      "Displacement_residual": "inf",
+      "IQN_acceleration_active": true,
+      "requires_rollback": true,
+      "q_checkpoint_sha256": "e1ba7fc759244d8e0ef884f256980c6bd815c64932b0318fd021395815b1a9f0",
+      "v_checkpoint_sha256": "c87499548f9efbd98c824a95a664af38f414efb1c9eede544e55e019473d6b24",
+      "q_trial_sha256": "d37ee2e31c008c68944ef9f937a49f59c9af7811ce4c510c521dd25d9e7ab064",
+      "v_trial_sha256": "15110f7ce194229c7a71fbf18ac80a6f5b7c48245ecb48e22aafdae013ed04e8",
+      "Courant_max": 0.8822924897,
+      "meshCourant_max": 0.0,
+      "q_norm": 44.23386579410805,
+      "v_norm": 0.010217771135526897,
+      "max_U_m_s": 0.575048565,
+      "structure_displacement_norm_m": 0.0,
+      "accepted": false
+    },
+    {
+      "iteration": 2,
+      "F_raw_N": [
+        0.030009927346711422,
+        -0.012590761589024457
+      ],
+      "F_strip_N": [
+        2.122130576660308,
+        -0.8903467123667295
+      ],
+      "D_absolute_m": [
+        1.9289097077508052e-07,
+        -8.0928027503894e-08
+      ],
+      "Force_residual": 0.5,
+      "Displacement_residual": 1.0,
+      "IQN_acceleration_active": true,
+      "requires_rollback": true,
+      "q_checkpoint_sha256": "e1ba7fc759244d8e0ef884f256980c6bd815c64932b0318fd021395815b1a9f0",
+      "v_checkpoint_sha256": "c87499548f9efbd98c824a95a664af38f414efb1c9eede544e55e019473d6b24",
+      "q_trial_sha256": "85a234d069bc1671be6fa821df62b5c6d0c5582d9343f7551aaebb6969235151",
+      "v_trial_sha256": "1ab2f9a8a8119b418cd73845b43c0e7bbcb98a195392ae4bec43e10550e21c32",
+      "Courant_max": 0.8822924897,
+      "meshCourant_max": 0.0,
+      "q_norm": 44.23386579410813,
+      "v_norm": 0.016413906346375823,
+      "max_U_m_s": 0.575048565,
+      "structure_displacement_norm_m": 2.0917999962287022e-07,
+      "accepted": false
+    },
+    {
+      "iteration": 3,
+      "F_raw_N": [
+        0.060019854693422844,
+        -0.025181523178048913
+      ],
+      "F_strip_N": [
+        4.244261153320616,
+        -1.780693424733459
+      ],
+      "D_absolute_m": [
+        3.857819415441948e-07,
+        -1.6185605500528483e-07
+      ],
+      "Force_residual": 0.000475742333,
+      "Displacement_residual": 0.5,
+      "IQN_acceleration_active": true,
+      "requires_rollback": true,
+      "q_checkpoint_sha256": "e1ba7fc759244d8e0ef884f256980c6bd815c64932b0318fd021395815b1a9f0",
+      "v_checkpoint_sha256": "c87499548f9efbd98c824a95a664af38f414efb1c9eede544e55e019473d6b24",
+      "q_trial_sha256": "66313cbb228995c98869226d73f8375b3d30240190f2db27cd7da27cffa40c2c",
+      "v_trial_sha256": "26b59848c77cfca02be9f7548c8fff3eae0dcee044abf909dc743d5f2b1e6809",
+      "Courant_max": 0.8822924897,
+      "meshCourant_max": 0.003391538409,
+      "q_norm": 44.233865794108354,
+      "v_norm": 0.027648810918764397,
+      "max_U_m_s": 0.575048802,
+      "structure_displacement_norm_m": 4.183599992392704e-07,
+      "accepted": false
+    },
+    {
+      "iteration": 4,
+      "F_raw_N": [
+        0.060023651134800377,
+        -0.025150803588005696
+      ],
+      "F_strip_N": [
+        4.244529615960884,
+        -1.7785211108661172
+      ],
+      "D_absolute_m": [
+        3.858063434447522e-07,
+        -1.616586026263879e-07
+      ],
+      "Force_residual": 0.000336483287,
+      "Displacement_residual": 0.000457840102,
+      "IQN_acceleration_active": true,
+      "requires_rollback": false,
+      "q_checkpoint_sha256": "e1ba7fc759244d8e0ef884f256980c6bd815c64932b0318fd021395815b1a9f0",
+      "v_checkpoint_sha256": "c87499548f9efbd98c824a95a664af38f414efb1c9eede544e55e019473d6b24",
+      "q_trial_sha256": "344491f0fca5add81a427ba1c0a0727a64d07017f6c06d5b7b98b76178c40754",
+      "v_trial_sha256": "80caa7c332d97d706825c59d4fb1da476d7c1f89fafc591de2a315870b15a6b6",
+      "Courant_max": 0.8822924897,
+      "meshCourant_max": 0.006782200244,
+      "q_norm": 44.233865794108354,
+      "v_norm": 0.027645738385728435,
+      "max_U_m_s": 0.5750490456,
+      "structure_displacement_norm_m": 4.1830615396540184e-07,
+      "accepted": true
+    }
+  ]
+}

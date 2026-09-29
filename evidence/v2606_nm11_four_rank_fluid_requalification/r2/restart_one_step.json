@@ -1,0 +1,48 @@
+{
+  "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm11_four_rank_fluid_requalification/r2/restart4",
+  "checkMesh": {
+    "max_aspect_ratio": 7.659081709,
+    "max_nonorthogonality": 43.84604596,
+    "max_skewness": 0.8969795303,
+    "mesh_ok": true,
+    "min_volume": 7.687364233e-10
+  },
+  "exit_code": 0,
+  "fields": {
+    "all_complete": true,
+    "ranks": 4,
+    "required_fields": [
+      "U",
+      "p",
+      "phi",
+      "k",
+      "omega",
+      "nut"
+    ],
+    "rows": [
+      {
+        "complete": true,
+        "missing": [],
+        "rank": 0
+      },
+      {
+        "complete": true,
+        "missing": [],
+        "rank": 1
+      },
+      {
+        "complete": true,
+        "missing": [],
+        "rank": 2
+      },
+      {
+        "complete": true,
+        "missing": [],
+        "rank": 3
+      }
+    ],
+    "time": "30.0011999999834345"
+  },
+  "finite_log": true,
+  "latest_time_after_restart": "30.0011999999834345"
+}

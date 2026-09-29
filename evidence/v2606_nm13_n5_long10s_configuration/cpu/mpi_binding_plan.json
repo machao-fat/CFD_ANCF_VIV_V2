@@ -1,0 +1,20 @@
+{
+  "binding_probe": "PASS: mpirun --mca hwloc_base_cpu_list <slice-cpuset> --use-hwthread-cpus --bind-to hwthread -np 4 /bin/bash; each slice ranks remained within its disjoint cpuset",
+  "overlap": "NO",
+  "policy": "explicit OpenMPI hwloc_base_cpu_list per Fluid; bind-to hwthread within each disjoint 4-logical-CPU cpuset",
+  "sets": {
+    "Structure": "20",
+    "s0594": "0-3",
+    "s1782": "4-7",
+    "s2970": "8-11",
+    "s4158": "12-15",
+    "s5346": "16-19"
+  },
+  "structure_cpuset": "20",
+  "thread_env": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "unused_cpus": "21-25"
+}

@@ -1,0 +1,129 @@
+{
+  "NM9_long_endurance_authorized": false,
+  "accepted_windows": 20,
+  "all_ANCF_states_finite": true,
+  "authorized_next_action": "NM9_B_THREE_SLICE_SHORT_ENDURANCE_REVIEW",
+  "classification": "V2606_NM9_A_THREE_SLICE_SMOKE_PASS",
+  "final_meshes": {
+    "s099": true,
+    "s297": true,
+    "s495": true
+  },
+  "forced_acceptance": 0,
+  "generalized_force_mapping": "PASS",
+  "global_checkpoint_rollback": "PASS",
+  "initial_slice_identity": "PASS",
+  "iteration_statistics": {
+    "accepted_windows": 20,
+    "forced_acceptance": 0,
+    "max": 31,
+    "mean": 4.85,
+    "median": 2.5,
+    "min": 2,
+    "p95": 19.60000000000001,
+    "sequence": [
+      31,
+      19,
+      4,
+      3,
+      4,
+      4,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      3,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "windows_ge10": 2,
+    "windows_ge20": 1,
+    "windows_ge40": 0,
+    "windows_ge5": 2,
+    "windows_reached50": 0
+  },
+  "max_interface_gradient_norm_m": 6.701427080034296e-05,
+  "max_pairwise_displacement_difference_m": {
+    "s099_s297": 2.1109426607411015e-06,
+    "s099_s495": 1.7834345252103637e-06,
+    "s297_s495": 5.532897911940301e-07
+  },
+  "max_rejected_Qtrial_norm_N": 544.1614816957215,
+  "movingWallVelocity_runtime_3_of_3": true,
+  "no_independent_Fluid_fatal": true,
+  "note": "A0 preparation and frozen sources were not numerically modified; pre-run setup interruptions are archived separately.",
+  "one_global_ANCF_advance": "PASS",
+  "pFinal_relTol_0_runtime_3_of_3": true,
+  "p_relTol_0p01_runtime_3_of_3": true,
+  "participant_exits": {
+    "accepted_windows_structure": 20,
+    "initial_gate": "PASS",
+    "participant_exits": {
+      "s099": 0,
+      "s297": 0,
+      "s495": 0,
+      "structure": 0
+    },
+    "stop_reason": null,
+    "wrapper_exit": 0
+  },
+  "per_slice_max_accepted": {
+    "s099": {
+      "max_Co": 0.8822924897,
+      "max_Dnorm_m": 6.47882786819594e-05,
+      "max_Fraw_norm_N": 0.037889872933494516,
+      "max_abs_Dx_m": 6.019057589411946e-05,
+      "max_abs_Dy_m": 2.397114156867546e-05,
+      "max_abs_Fx_N": 0.035820142384999996,
+      "max_abs_Fy_N": 0.0123515128804,
+      "max_meshCo": 0.09473248796
+    },
+    "s297": {
+      "max_Co": 0.8822924897,
+      "max_Dnorm_m": 6.689889048785482e-05,
+      "max_Fraw_norm_N": 0.036594221026659775,
+      "max_abs_Dx_m": 6.216544907372719e-05,
+      "max_abs_Dy_m": 2.4716765362154965e-05,
+      "max_abs_Fx_N": 0.034599138411,
+      "max_abs_Fy_N": 0.012816163832900001,
+      "max_meshCo": 0.0965876994
+    },
+    "s495": {
+      "max_Co": 0.8822924897,
+      "max_Dnorm_m": 6.657168929717028e-05,
+      "max_Fraw_norm_N": 0.036535041642253796,
+      "max_abs_Dx_m": 6.18508896365793e-05,
+      "max_abs_Dy_m": 2.462229207532604e-05,
+      "max_abs_Fx_N": 0.034539328044,
+      "max_abs_Fy_N": 0.0120732131041,
+      "max_meshCo": 0.09730479191
+    }
+  },
+  "per_slice_max_first_trial": {
+    "s099": {
+      "max_Fpressure_norm_N": 1.4510529843863458,
+      "max_Fraw_norm_N": 1.4543187563641196,
+      "max_R_force": 38.38278262154073
+    },
+    "s297": {
+      "max_Fpressure_norm_N": 1.47750168233241,
+      "max_Fraw_norm_N": 1.4807962355363855,
+      "max_R_force": 40.46530282630117
+    },
+    "s495": {
+      "max_Fpressure_norm_N": 1.4881710309327287,
+      "max_Fraw_norm_N": 1.4914738892319874,
+      "max_R_force": 40.82310631629488
+    }
+  },
+  "protected_frozen_adapter_ANCF_NM8p5_unchanged": true,
+  "rejected_trial_caused_ANCF_failure": false,
+  "target_windows": 20
+}

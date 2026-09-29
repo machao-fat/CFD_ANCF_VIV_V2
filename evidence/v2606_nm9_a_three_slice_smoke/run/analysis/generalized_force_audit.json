@@ -1,0 +1,204 @@
+{
+  "all_attempts_checked": 97,
+  "max_Qtotal_offline_error": 5.684341886080802e-14,
+  "pass": true,
+  "required_sample_rows": [
+    {
+      "Qtotal_max_abs_error": 0.0,
+      "Qtotal_tolerance": 1e-12,
+      "attempt": 1,
+      "attemptOrdinal": 1,
+      "pass": true,
+      "per_slice": [
+        {
+          "Fraw_received_N": [
+            0,
+            0
+          ],
+          "Fstrip_N": [
+            0,
+            0
+          ],
+          "Q_component_max_abs_error": 0.0,
+          "Q_component_norm": 0.0,
+          "slice": "s099"
+        },
+        {
+          "Fraw_received_N": [
+            0,
+            0
+          ],
+          "Fstrip_N": [
+            0,
+            0
+          ],
+          "Q_component_max_abs_error": 0.0,
+          "Q_component_norm": 0.0,
+          "slice": "s297"
+        },
+        {
+          "Fraw_received_N": [
+            0,
+            0
+          ],
+          "Fstrip_N": [
+            0,
+            0
+          ],
+          "Q_component_max_abs_error": 0.0,
+          "Q_component_norm": 0.0,
+          "slice": "s495"
+        }
+      ],
+      "window": 1
+    },
+    {
+      "Qtotal_max_abs_error": 2.220446049250313e-16,
+      "Qtotal_tolerance": 1.5156555885139163e-12,
+      "attempt": 31,
+      "attemptOrdinal": 31,
+      "pass": true,
+      "per_slice": [
+        {
+          "Fraw_received_N": [
+            0.02362106769465068,
+            -0.010000412189148263
+          ],
+          "Fstrip_N": [
+            1.6703469298360123,
+            -0.7071720048040557
+          ],
+          "Q_component_max_abs_error": 0.0,
+          "Q_component_norm": 1.3295294006416385,
+          "slice": "s099"
+        },
+        {
+          "Fraw_received_N": [
+            0.01947430926399484,
+            -0.008244550977693497
+          ],
+          "Fstrip_N": [
+            1.3771118693824922,
+            -0.5830075334226116
+          ],
+          "Q_component_max_abs_error": 2.220446049250313e-16,
+          "Q_component_norm": 1.2945552429092986,
+          "slice": "s297"
+        },
+        {
+          "Fraw_received_N": [
+            0.021766063169318388,
+            -0.009214327202862499
+          ],
+          "Fstrip_N": [
+            1.5391716098303716,
+            -0.6515845664881339
+          ],
+          "Q_component_max_abs_error": 1.1102230246251565e-16,
+          "Q_component_norm": 1.6466387341074373,
+          "slice": "s495"
+        }
+      ],
+      "window": 1
+    },
+    {
+      "Qtotal_max_abs_error": 4.440892098500626e-16,
+      "Qtotal_tolerance": 1.93365396867664e-12,
+      "attempt": 2,
+      "attemptOrdinal": 76,
+      "pass": true,
+      "per_slice": [
+        {
+          "Fraw_received_N": [
+            0.02815066093202845,
+            -0.01105748405892426
+          ],
+          "Fstrip_N": [
+            1.9906538801934401,
+            -0.7819220870239298
+          ],
+          "Q_component_max_abs_error": 0.0,
+          "Q_component_norm": 1.5676282783142148,
+          "slice": "s099"
+        },
+        {
+          "Fraw_received_N": [
+            0.029348844553833797,
+            -0.011740668328711623
+          ],
+          "Fstrip_N": [
+            2.0753825791639615,
+            -0.8302329746731791
+          ],
+          "Q_component_max_abs_error": 4.440892098500626e-16,
+          "Q_component_norm": 1.9350183998493236,
+          "slice": "s297"
+        },
+        {
+          "Fraw_received_N": [
+            0.02776886434409931,
+            -0.011103435928578431
+          ],
+          "Fstrip_N": [
+            1.9636554071898795,
+            -0.7851715406637605
+          ],
+          "Q_component_max_abs_error": 1.1102230246251565e-16,
+          "Q_component_norm": 2.083470802319442,
+          "slice": "s495"
+        }
+      ],
+      "window": 10
+    },
+    {
+      "Qtotal_max_abs_error": 1.1102230246251565e-16,
+      "Qtotal_tolerance": 2.4072941812437115e-12,
+      "attempt": 2,
+      "attemptOrdinal": 97,
+      "pass": true,
+      "per_slice": [
+        {
+          "Fraw_received_N": [
+            0.03576577813397219,
+            -0.012257559063487689
+          ],
+          "Fstrip_N": [
+            2.529151453759462,
+            -0.8667845337752008
+          ],
+          "Q_component_max_abs_error": 5.551115123125783e-17,
+          "Q_component_norm": 1.9596564482126133,
+          "slice": "s099"
+        },
+        {
+          "Fraw_received_N": [
+            0.034583481002269156,
+            -0.011832938732765919
+          ],
+          "Fstrip_N": [
+            2.445546156589033,
+            -0.8367578103884471
+          ],
+          "Q_component_max_abs_error": 6.938893903907228e-18,
+          "Q_component_norm": 2.237527297952941,
+          "slice": "s297"
+        },
+        {
+          "Fraw_received_N": [
+            0.03457072808173933,
+            -0.011852984827048108
+          ],
+          "Fstrip_N": [
+            2.4446443429229956,
+            -0.8381753556269733
+          ],
+          "Q_component_max_abs_error": 1.1102230246251565e-16,
+          "Q_component_norm": 2.546040474287239,
+          "slice": "s495"
+        }
+      ],
+      "window": 20
+    }
+  ],
+  "source_of_Fraw_for_actual_Q": "Structure preCICE readData (may be accelerated, distinct from direct Fluid wall force)"
+}

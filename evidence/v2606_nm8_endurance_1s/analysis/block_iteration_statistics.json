@@ -1,0 +1,194 @@
+{
+  "blocks": [
+    {
+      "window_range": [
+        1,
+        250
+      ],
+      "accepted_count": 250,
+      "iterations": {
+        "count": 250,
+        "min": 2.0,
+        "median": 2.0,
+        "mean": 2.028,
+        "p95": 2.0,
+        "p99": 2.509999999999991,
+        "max": 6.0
+      },
+      "iqn_warning_count": 344,
+      "warnings_per_window": 1.376,
+      "windows_ge_5_iterations": 1
+    },
+    {
+      "window_range": [
+        251,
+        500
+      ],
+      "accepted_count": 250,
+      "iterations": {
+        "count": 250,
+        "min": 2.0,
+        "median": 2.0,
+        "mean": 2.056,
+        "p95": 2.0,
+        "p99": 3.0,
+        "max": 5.0
+      },
+      "iqn_warning_count": 532,
+      "warnings_per_window": 2.128,
+      "windows_ge_5_iterations": 1
+    },
+    {
+      "window_range": [
+        501,
+        750
+      ],
+      "accepted_count": 41,
+      "iterations": {
+        "count": 41,
+        "min": 2.0,
+        "median": 2.0,
+        "mean": 2.0,
+        "p95": 2.0,
+        "p99": 2.0,
+        "max": 2.0
+      },
+      "iqn_warning_count": 82,
+      "warnings_per_window": 2.0,
+      "windows_ge_5_iterations": 0
+    },
+    {
+      "window_range": [
+        751,
+        1000
+      ],
+      "accepted_count": 0,
+      "iterations": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "iqn_warning_count": 0,
+      "warnings_per_window": null,
+      "windows_ge_5_iterations": 0
+    },
+    {
+      "window_range": [
+        1001,
+        1250
+      ],
+      "accepted_count": 0,
+      "iterations": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "iqn_warning_count": 0,
+      "warnings_per_window": null,
+      "windows_ge_5_iterations": 0
+    },
+    {
+      "window_range": [
+        1251,
+        1500
+      ],
+      "accepted_count": 0,
+      "iterations": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "iqn_warning_count": 0,
+      "warnings_per_window": null,
+      "windows_ge_5_iterations": 0
+    },
+    {
+      "window_range": [
+        1501,
+        1750
+      ],
+      "accepted_count": 0,
+      "iterations": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "iqn_warning_count": 0,
+      "warnings_per_window": null,
+      "windows_ge_5_iterations": 0
+    },
+    {
+      "window_range": [
+        1751,
+        2000
+      ],
+      "accepted_count": 0,
+      "iterations": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "iqn_warning_count": 0,
+      "warnings_per_window": null,
+      "windows_ge_5_iterations": 0
+    },
+    {
+      "window_range": [
+        2001,
+        2250
+      ],
+      "accepted_count": 0,
+      "iterations": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "iqn_warning_count": 0,
+      "warnings_per_window": null,
+      "windows_ge_5_iterations": 0
+    },
+    {
+      "window_range": [
+        2251,
+        2500
+      ],
+      "accepted_count": 0,
+      "iterations": {
+        "count": 0,
+        "min": null,
+        "median": null,
+        "mean": null,
+        "p95": null,
+        "p99": null,
+        "max": null
+      },
+      "iqn_warning_count": 0,
+      "warnings_per_window": null,
+      "windows_ge_5_iterations": 0
+    }
+  ]
+}

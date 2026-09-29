@@ -1,0 +1,22 @@
+{
+  "budget": "PASS",
+  "component_estimates": {
+    "attempt_and_accepted_logs_estimate_bytes": 1500000000,
+    "base_template_bytes": 31657562,
+    "evidence_and_logs_estimate_bytes": 3000000000,
+    "five_initial_cases_bytes": 158443990,
+    "one_case_bytes": 31688798,
+    "postProcessing_estimate_bytes": 2000000000,
+    "retained_full_checkpoints_estimate_bytes": 4753319,
+    "safety_reserve_bytes": 15000000000,
+    "structure_history_estimate_bytes": 120000000
+  },
+  "current_free_GB_decimal": 85.984886784,
+  "current_free_bytes": 85984886784,
+  "long_run_not_started": true,
+  "measured_NM12_growth_per_100_windows_bytes": 190820602,
+  "new_policy_note": "purgeWrite=3 bounds full fields; logs/history dominate",
+  "projected_additional_bytes_conservative": 12000000000,
+  "projected_free_after_bytes": 73984886784,
+  "reserve_requirement_bytes": 15000000000
+}

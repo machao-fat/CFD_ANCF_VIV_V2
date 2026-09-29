@@ -1,0 +1,7 @@
+{
+  "compared_to": "evidence/v2606_nm3_existing_fixed30_release/release_manifest.json",
+  "configuration_and_all_recorded_final_rank_fields_exact": true,
+  "mismatches": [],
+  "nm4_scratch_A": "/tmp/nm4a_final.CPXodj",
+  "nm4_scratch_B": "/tmp/nm4b.TE71bh"
+}

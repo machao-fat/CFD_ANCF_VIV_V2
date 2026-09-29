@@ -1,0 +1,21 @@
+{
+  "V2 semantic identity": "PASS",
+  "Fraw / unit_span exactly once": "PASS",
+  "no slice_length multiplier in distributed path": "PASS",
+  "PiecewiseLinear reconstruction": "PASS",
+  "NearestConstant endpoints": "PASS",
+  "active-region outside exact zero": "PASS",
+  "Gauss integration": "PASS",
+  "force conservation": "PASS",
+  "virtual work": "PASS",
+  "generalized resultant": "PASS",
+  "V2 N=2/3/5/8 cross-check": "PASS",
+  "LegacyPointLumped regression": "PASS",
+  "arbitrary-N": "PASS",
+  "manifest contract": "PASS",
+  "generic evaluateStructureState(s)": "PASS",
+  "ANCF core unchanged": "PASS",
+  "official adapter unchanged": "PASS",
+  "evidence_basis": "existing NM10.1 final_classification.json, mapping_tests.log, contract_tests.log, self_test.log, and build_manifest.json",
+  "actual_M2_requirement_incomplete": false
+}

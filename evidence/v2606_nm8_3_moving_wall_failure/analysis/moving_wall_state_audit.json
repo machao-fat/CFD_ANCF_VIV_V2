@@ -1,0 +1,7 @@
+{
+  "moving_wall_U_nonzero": true,
+  "max_wall_U": 0.024482626027590756,
+  "wall_U_rollback_consistency": "NOT_ESTABLISHED_PRE_SOLVE",
+  "mesh_motion_rollback_consistency": "NOT_ESTABLISHED_PRE_SOLVE",
+  "post_solve_wall_trace": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_3_moving_wall_failure/window39/wall_kinematics_trace.jsonl"
+}

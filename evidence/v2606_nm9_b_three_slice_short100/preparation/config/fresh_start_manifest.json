@@ -1,0 +1,280 @@
+{
+  "A0_xml_sha256": "6c03afc7ae24988e90b7c0a1cafc8a7ddb884865f404aef785473ead61bab3fb",
+  "frozen30": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "output_only_deltas": [
+    "endTime 30.008 -> 30.04",
+    "writeInterval 20 -> 50",
+    "observer output paths"
+  ],
+  "rows": [
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_b_three_slice_short100/preparation/fluid_s099",
+      "dynamicMeshDict_matches_NM9_A": true,
+      "frozen_start_time": "29.9999999999834372",
+      "fvSchemes_matches_NM9_A": true,
+      "fvSolution_matches_NM9_A": true,
+      "rank_startup_checks": {
+        "rank0": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank1": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank2": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank3": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank4": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank5": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        }
+      },
+      "slice": "s099"
+    },
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_b_three_slice_short100/preparation/fluid_s297",
+      "dynamicMeshDict_matches_NM9_A": true,
+      "frozen_start_time": "29.9999999999834372",
+      "fvSchemes_matches_NM9_A": true,
+      "fvSolution_matches_NM9_A": true,
+      "rank_startup_checks": {
+        "rank0": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank1": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank2": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank3": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank4": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank5": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        }
+      },
+      "slice": "s297"
+    },
+    {
+      "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_b_three_slice_short100/preparation/fluid_s495",
+      "dynamicMeshDict_matches_NM9_A": true,
+      "frozen_start_time": "29.9999999999834372",
+      "fvSchemes_matches_NM9_A": true,
+      "fvSolution_matches_NM9_A": true,
+      "rank_startup_checks": {
+        "rank0": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank1": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank2": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank3": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank4": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        },
+        "rank5": {
+          "U_0": true,
+          "U_frozen_except_wall_type": true,
+          "k": true,
+          "k_0": true,
+          "nut": true,
+          "omega": true,
+          "omega_0": true,
+          "p": true,
+          "phi": true,
+          "phi_0": true,
+          "pointDisplacement_qualified_zero": true
+        }
+      },
+      "slice": "s495"
+    }
+  ],
+  "structure_binary": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_a_three_slice_smoke/preparation/source/prepared_structure_three_slice",
+  "structure_binary_sha256": "d0611c8a84db6025308c0ca6299dea2321ab3768cb7caf319cabd54650f9dc1e",
+  "xml": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_b_three_slice_short100/preparation/config/precice_nm9b_short100.xml",
+  "xml_only_delta": "max-time-windows 20 -> 100",
+  "xml_sha256": "9138a60e2ecd503d19f429bf835b883f1d27d408a14228569a2b9ec2349306d3"
+}

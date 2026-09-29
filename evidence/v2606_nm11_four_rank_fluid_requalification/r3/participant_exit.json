@@ -1,0 +1,9 @@
+{
+  "accepted_windows": 0,
+  "fluid_exit": 1,
+  "fluid_log": "${V2606_PROJECT_ROOT}/evidence/v2606_nm11_four_rank_fluid_requalification/r3/fluid.log",
+  "forced_acceptance": 0,
+  "stop_reason": "V2606_NM11_R3_FLUID_FAIL",
+  "structure_exit": -15,
+  "structure_log": "${V2606_PROJECT_ROOT}/evidence/v2606_nm11_four_rank_fluid_requalification/r3/structure.log"
+}

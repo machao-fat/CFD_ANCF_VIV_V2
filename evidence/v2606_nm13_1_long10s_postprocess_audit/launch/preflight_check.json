@@ -1,0 +1,15 @@
+{
+  "CPU_binding": "PASS",
+  "accepted_coupling_force": "configured",
+  "accepted_qv": "configured",
+  "controlDicts": "5/5 audited",
+  "direct_alignment": "READY",
+  "disk_budget": "PASS",
+  "full_fields": "5/5 interval250 purge3",
+  "manual_launcher": "READY",
+  "native_forceCoeffs": "5/5 timeStep/1",
+  "native_forces": "5/5 timeStep/1",
+  "participants_started": false,
+  "status": "PASS",
+  "yPlus": "5/5 writeTime writeFields=no"
+}

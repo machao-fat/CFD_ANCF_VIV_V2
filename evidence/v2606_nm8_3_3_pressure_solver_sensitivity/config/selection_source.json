@@ -1,0 +1,5 @@
+{
+  "GeometricField_select_source": "/usr/lib/openfoam/openfoam2606/src/OpenFOAM/fields/GeometricFields/GeometricField/GeometricField.C:1179-1190",
+  "select_rule": "final=true -> name()+\"Final\", else name()",
+  "pimple_finalInnerIter_source": "/usr/lib/openfoam/openfoam2606/src/finiteVolume/cfdTools/general/solutionControl/pimpleControl/pimpleControlI.H:98-112"
+}

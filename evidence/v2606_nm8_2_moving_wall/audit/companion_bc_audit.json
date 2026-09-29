@@ -1,0 +1,12 @@
+{
+  "cylinder": {
+    "p": "zeroGradient",
+    "k": "kqRWallFunction",
+    "omega": "omegaWallFunction",
+    "nut": "nutkWallFunction",
+    "phi": "calculated",
+    "pointDisplacement": "fixedValue"
+  },
+  "additional_change_required": false,
+  "reference": "reference/official_reference.md"
+}

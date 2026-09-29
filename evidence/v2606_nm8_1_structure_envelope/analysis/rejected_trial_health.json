@@ -1,0 +1,8 @@
+{
+  "rejected_attempts": 846,
+  "max_rejected_Co": 2.864280019,
+  "max_rejected_meshCo": 0.5632311439,
+  "max_rejected_D_norm_m": 0.026568941759250994,
+  "max_rejected_Fraw_norm_N": 0.2005619770019829,
+  "max_rejected_Fstrip_norm_N": 14.182596945140217
+}

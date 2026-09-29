@@ -1,0 +1,629 @@
+{
+  "strict": true,
+  "limits": {
+    "Force": 0.005,
+    "Displacement": 0.005
+  },
+  "windows": [
+    {
+      "window": 1,
+      "attempts": 4,
+      "iterations": 4,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000336483287,
+      "final_Displacement_residual": 0.000457840102,
+      "F_raw_accepted_N": [
+        0.060023651134800377,
+        -0.025150803588005696
+      ],
+      "F_strip_accepted_N": [
+        4.244529615960884,
+        -1.7785211108661172
+      ],
+      "D_absolute_accepted_m": [
+        3.858063434447522e-07,
+        -1.616586026263879e-07
+      ],
+      "q_norm_accepted": 44.233865794108354,
+      "v_norm_accepted": 0.027645738385728435,
+      "max_accepted_D_m": 4.1830615396540184e-07,
+      "max_rejected_trial_Courant": 0.8822924897,
+      "max_rejected_trial_meshCourant": 0.003391538409,
+      "accepted_Courant": 0.8822924897,
+      "accepted_meshCourant": 0.006782200244,
+      "QNColumns": 2,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 2,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000198865968,
+      "final_Displacement_residual": 0.000245707943,
+      "F_raw_accepted_N": [
+        0.05948161215537476,
+        -0.02480571284313399
+      ],
+      "F_strip_accepted_N": [
+        4.206199716701501,
+        -1.7541182653359035
+      ],
+      "D_absolute_accepted_m": [
+        1.9056376127353276e-06,
+        -7.977322849932788e-07
+      ],
+      "q_norm_accepted": 44.233864729522004,
+      "v_norm_accepted": 0.07459242475081831,
+      "max_accepted_D_m": 2.0658730623134122e-06,
+      "max_rejected_trial_Courant": 0.8774720691,
+      "max_rejected_trial_meshCourant": 1.789582039e-05,
+      "accepted_Courant": 0.8774720691,
+      "accepted_meshCourant": 0.02671245974,
+      "QNColumns": 3,
+      "DeletedQNColumns": 0,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 3,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000576518609,
+      "final_Displacement_residual": 1.71193311e-08,
+      "F_raw_accepted_N": [
+        0.059332224237900515,
+        -0.024890157888756623
+      ],
+      "F_strip_accepted_N": [
+        4.195635856822965,
+        -1.7600897364192183
+      ],
+      "D_absolute_accepted_m": [
+        4.860396377746764e-06,
+        -2.0337714503548546e-06
+      ],
+      "q_norm_accepted": 44.23386291895898,
+      "v_norm_accepted": 0.11325597377186818,
+      "max_accepted_D_m": 5.268745511133779e-06,
+      "max_rejected_trial_Courant": 0.8673840126,
+      "max_rejected_trial_meshCourant": 8.725315098e-05,
+      "accepted_Courant": 0.8673840126,
+      "accepted_meshCourant": 0.05192924432,
+      "QNColumns": 4,
+      "DeletedQNColumns": 0,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 4,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000385248215,
+      "final_Displacement_residual": 1.36846377e-09,
+      "F_raw_accepted_N": [
+        0.058996813267348965,
+        -0.02492378920944941
+      ],
+      "F_strip_accepted_N": [
+        4.171917509619677,
+        -1.762467951239637
+      ],
+      "D_absolute_accepted_m": [
+        9.098532918992711e-06,
+        -3.8086288675803273e-06
+      ],
+      "q_norm_accepted": 44.233860420695656,
+      "v_norm_accepted": 0.13913921334096002,
+      "max_accepted_D_m": 9.86351636734893e-06,
+      "max_rejected_trial_Courant": 0.856093121,
+      "max_rejected_trial_meshCourant": 7.296295359e-10,
+      "accepted_Courant": 0.856093121,
+      "accepted_meshCourant": 0.07449677329,
+      "QNColumns": 4,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 5,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.00127167158,
+      "final_Displacement_residual": 2.41409744e-12,
+      "F_raw_accepted_N": [
+        0.058672905428145905,
+        -0.024839687603791325
+      ],
+      "F_strip_accepted_N": [
+        4.149012598133175,
+        -1.7565207662681008
+      ],
+      "D_absolute_accepted_m": [
+        1.4419733935161649e-05,
+        -6.041923892254034e-06
+      ],
+      "q_norm_accepted": 44.23385729156622,
+      "v_norm_accepted": 0.15087570354758678,
+      "max_accepted_D_m": 1.5634371464201643e-05,
+      "max_rejected_trial_Courant": 0.8476080378,
+      "max_rejected_trial_meshCourant": 1.091927138e-10,
+      "accepted_Courant": 0.8476080378,
+      "accepted_meshCourant": 0.09356585918,
+      "QNColumns": 5,
+      "DeletedQNColumns": 0,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 6,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000156432212,
+      "final_Displacement_residual": 2.59029066e-09,
+      "F_raw_accepted_N": [
+        0.058525539670906714,
+        -0.024666677728545465
+      ],
+      "F_strip_accepted_N": [
+        4.138591733871261,
+        -1.744286496518572
+      ],
+      "D_absolute_accepted_m": [
+        2.0598314990694208e-05,
+        -8.639946176184102e-06
+      ],
+      "q_norm_accepted": 44.23385356214778,
+      "v_norm_accepted": 0.15042096775291158,
+      "max_accepted_D_m": 2.2336948099129747e-05,
+      "max_rejected_trial_Courant": 0.8407692295,
+      "max_rejected_trial_meshCourant": 3.992563061e-11,
+      "accepted_Courant": 0.8407692295,
+      "accepted_meshCourant": 0.1086730824,
+      "QNColumns": 4,
+      "DeletedQNColumns": 2,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 7,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000186078692,
+      "final_Displacement_residual": 1.31808866e-09,
+      "F_raw_accepted_N": [
+        0.05830803159051029,
+        -0.024462551293060592
+      ],
+      "F_strip_accepted_N": [
+        4.123210805328942,
+        -1.7298518414378563
+      ],
+      "D_absolute_accepted_m": [
+        2.741062681535636e-05,
+        -1.1506667031740668e-05
+      ],
+      "q_norm_accepted": 44.233849315883035,
+      "v_norm_accepted": 0.14321077403242274,
+      "max_accepted_D_m": 2.972786316892085e-05,
+      "max_rejected_trial_Courant": 0.8356972359,
+      "max_rejected_trial_meshCourant": 4.680594955e-10,
+      "accepted_Courant": 0.8356972359,
+      "accepted_meshCourant": 0.1198338468,
+      "QNColumns": 4,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 8,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000210413751,
+      "final_Displacement_residual": 1.55792986e-09,
+      "F_raw_accepted_N": [
+        0.05812401458401126,
+        -0.02424161250591144
+      ],
+      "F_strip_accepted_N": [
+        4.110198174155082,
+        -1.7142283129180234
+      ],
+      "D_absolute_accepted_m": [
+        3.465758339170821e-05,
+        -1.4554960568896077e-05
+      ],
+      "q_norm_accepted": 44.23384455860914,
+      "v_norm_accepted": 0.13703896763899184,
+      "max_accepted_D_m": 3.758982526848626e-05,
+      "max_rejected_trial_Courant": 0.8322834757,
+      "max_rejected_trial_meshCourant": 3.169745851e-10,
+      "accepted_Courant": 0.8322834757,
+      "accepted_meshCourant": 0.1274710242,
+      "QNColumns": 4,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 9,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.00016687665,
+      "final_Displacement_residual": 3.17295356e-09,
+      "F_raw_accepted_N": [
+        0.05797317332458291,
+        -0.02399863690157798
+      ],
+      "F_strip_accepted_N": [
+        4.099531542238363,
+        -1.6970464666115856
+      ],
+      "D_absolute_accepted_m": [
+        4.2183529910603284e-05,
+        -1.7715373680426828e-05
+      ],
+      "q_norm_accepted": 44.2338393939432,
+      "v_norm_accepted": 0.13837088828291283,
+      "max_accepted_D_m": 4.5752427917608064e-05,
+      "max_rejected_trial_Courant": 0.8302579395,
+      "max_rejected_trial_meshCourant": 4.736993792e-10,
+      "accepted_Courant": 0.8302579395,
+      "accepted_meshCourant": 0.1323447279,
+      "QNColumns": 4,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 10,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 6.48730533e-05,
+      "final_Displacement_residual": 1.40921066e-08,
+      "F_raw_accepted_N": [
+        0.05783601440614027,
+        -0.023754915261199487
+      ],
+      "F_strip_accepted_N": [
+        4.089832447291347,
+        -1.6798118648991065
+      ],
+      "D_absolute_accepted_m": [
+        4.988858953127146e-05,
+        -2.094148709924067e-05
+      ],
+      "q_norm_accepted": 44.23383381210595,
+      "v_norm_accepted": 0.1473107684027396,
+      "max_accepted_D_m": 5.410561197646092e-05,
+      "max_rejected_trial_Courant": 0.8292262779,
+      "max_rejected_trial_meshCourant": 1.174256984e-09,
+      "accepted_Courant": 0.8292262779,
+      "accepted_meshCourant": 0.1354333354,
+      "QNColumns": 4,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 11,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000149829733,
+      "final_Displacement_residual": 6.88945073e-08,
+      "F_raw_accepted_N": [
+        0.05771915143559175,
+        -0.023471507430276733
+      ],
+      "F_strip_accepted_N": [
+        4.081568565802559,
+        -1.659770882569569
+      ],
+      "D_absolute_accepted_m": [
+        5.7731626740333365e-05,
+        -2.4211472352122953e-05
+      ],
+      "q_norm_accepted": 44.233827925698726,
+      "v_norm_accepted": 0.15819016488021498,
+      "max_accepted_D_m": 6.260300407762226e-05,
+      "max_rejected_trial_Courant": 0.828732155,
+      "max_rejected_trial_meshCourant": 6.167288754e-09,
+      "accepted_Courant": 0.828732155,
+      "accepted_meshCourant": 0.137769337,
+      "QNColumns": 4,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 12,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000197525459,
+      "final_Displacement_residual": 1.09469916e-07,
+      "F_raw_accepted_N": [
+        0.057585263753818866,
+        -0.0231930907118808
+      ],
+      "F_strip_accepted_N": [
+        4.072100794020049,
+        -1.6400828431972851
+      ],
+      "D_absolute_accepted_m": [
+        6.572457533024449e-05,
+        -2.752594647052499e-05
+      ],
+      "q_norm_accepted": 44.23382172230446,
+      "v_norm_accepted": 0.1651870341810373,
+      "max_accepted_D_m": 7.125585962879957e-05,
+      "max_rejected_trial_Courant": 0.8283327791,
+      "max_rejected_trial_meshCourant": 3.489005072e-08,
+      "accepted_Courant": 0.8283327791,
+      "accepted_meshCourant": 0.1402869123,
+      "QNColumns": 3,
+      "DeletedQNColumns": 2,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 13,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000172911256,
+      "final_Displacement_residual": 6.21117409e-07,
+      "F_raw_accepted_N": [
+        0.05746926631011047,
+        -0.022913403295594287
+      ],
+      "F_strip_accepted_N": [
+        4.063898117643526,
+        -1.6203049473313105
+      ],
+      "D_absolute_accepted_m": [
+        7.39196365676631e-05,
+        -3.090310066701838e-05
+      ],
+      "q_norm_accepted": 44.23381530916745,
+      "v_norm_accepted": 0.16561207712735357,
+      "max_accepted_D_m": 8.011937531665651e-05,
+      "max_rejected_trial_Courant": 0.8276608209,
+      "max_rejected_trial_meshCourant": 6.309790547e-08,
+      "accepted_Courant": 0.8276608209,
+      "accepted_meshCourant": 0.1437051726,
+      "QNColumns": 3,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 14,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.00023811871,
+      "final_Displacement_residual": 4.05017188e-07,
+      "F_raw_accepted_N": [
+        0.05735182288269147,
+        -0.02262686213039342
+      ],
+      "F_strip_accepted_N": [
+        4.055593189561754,
+        -1.6000423935063919
+      ],
+      "D_absolute_accepted_m": [
+        8.239195535445485e-05,
+        -3.4371595831929436e-05
+      ],
+      "q_norm_accepted": 44.23380868547707,
+      "v_norm_accepted": 0.16076967614666818,
+      "max_accepted_D_m": 8.92739654499787e-05,
+      "max_rejected_trial_Courant": 0.8264679547,
+      "max_rejected_trial_meshCourant": 4.025632278e-07,
+      "accepted_Courant": 0.8264679547,
+      "accepted_meshCourant": 0.1484311071,
+      "QNColumns": 3,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 15,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000412449407,
+      "final_Displacement_residual": 5.15921681e-07,
+      "F_raw_accepted_N": [
+        0.05722404303330597,
+        -0.02234394542981062
+      ],
+      "F_strip_accepted_N": [
+        4.046557328783779,
+        -1.5800361411080368
+      ],
+      "D_absolute_accepted_m": [
+        9.122025111842938e-05,
+        -3.796235180281183e-05
+      ],
+      "q_norm_accepted": 44.23380193858375,
+      "v_norm_accepted": 0.15482988426620997,
+      "max_accepted_D_m": 9.880422242247426e-05,
+      "max_rejected_trial_Courant": 0.8246484986,
+      "max_rejected_trial_meshCourant": 2.924793727e-07,
+      "accepted_Courant": 0.8246484986,
+      "accepted_meshCourant": 0.1545267575,
+      "QNColumns": 3,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 16,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.00082359181,
+      "final_Displacement_residual": 9.63019023e-07,
+      "F_raw_accepted_N": [
+        0.05709195741605475,
+        -0.022071885578077745
+      ],
+      "F_strip_accepted_N": [
+        4.037216988706729,
+        -1.560797623021212
+      ],
+      "D_absolute_accepted_m": [
+        0.00010046850008905998,
+        -4.1700934382345115e-05
+      ],
+      "q_norm_accepted": 44.23379509132761,
+      "v_norm_accepted": 0.15269706336124322,
+      "max_accepted_D_m": 0.0001087790762900021,
+      "max_rejected_trial_Courant": 0.8222522727,
+      "max_rejected_trial_meshCourant": 4.123242177e-07,
+      "accepted_Courant": 0.8222522727,
+      "accepted_meshCourant": 0.1617392999,
+      "QNColumns": 3,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 17,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.000480108436,
+      "final_Displacement_residual": 8.15117636e-07,
+      "F_raw_accepted_N": [
+        0.056975250920996444,
+        -0.02181091793845662
+      ],
+      "F_strip_accepted_N": [
+        4.028964172270463,
+        -1.5423434827908609
+      ],
+      "D_absolute_accepted_m": [
+        0.0001101718988724944,
+        -4.560154579759881e-05
+      ],
+      "q_norm_accepted": 44.233788200997935,
+      "v_norm_accepted": 0.1562037191357323,
+      "max_accepted_D_m": 0.00011923652242623329,
+      "max_rejected_trial_Courant": 0.8194532748,
+      "max_rejected_trial_meshCourant": 8.474298347e-07,
+      "accepted_Courant": 0.8194532748,
+      "accepted_meshCourant": 0.1695687443,
+      "QNColumns": 3,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 18,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.0010851007,
+      "final_Displacement_residual": 1.23991755e-06,
+      "F_raw_accepted_N": [
+        0.056842980788917356,
+        -0.021525687372505542
+      ],
+      "F_strip_accepted_N": [
+        4.019610784359156,
+        -1.522173607055749
+      ],
+      "D_absolute_accepted_m": [
+        0.00012032888938706214,
+        -4.966320850026291e-05
+      ],
+      "q_norm_accepted": 44.233781323056235,
+      "v_norm_accepted": 0.1629499036958295,
+      "max_accepted_D_m": 0.0001301747898007307,
+      "max_rejected_trial_Courant": 0.8165118163,
+      "max_rejected_trial_meshCourant": 7.862001176e-07,
+      "accepted_Courant": 0.8165118163,
+      "accepted_meshCourant": 0.1773669193,
+      "QNColumns": 3,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 19,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.00119083848,
+      "final_Displacement_residual": 1.13100969e-06,
+      "F_raw_accepted_N": [
+        0.05671308268173132,
+        -0.021272639398151022
+      ],
+      "F_strip_accepted_N": [
+        4.010425132493857,
+        -1.5042795002978222
+      ],
+      "D_absolute_accepted_m": [
+        0.0001309003412724312,
+        -5.386915477397335e-05
+      ],
+      "q_norm_accepted": 44.23377448462821,
+      "v_norm_accepted": 0.16845310714405273,
+      "max_accepted_D_m": 0.00014155135174664086,
+      "max_rejected_trial_Courant": 0.8137301891,
+      "max_rejected_trial_meshCourant": 1.305700641e-06,
+      "accepted_Courant": 0.8137301891,
+      "accepted_meshCourant": 0.1844772018,
+      "QNColumns": 3,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    },
+    {
+      "window": 20,
+      "attempts": 2,
+      "iterations": 2,
+      "converged": true,
+      "accepted": true,
+      "final_Force_residual": 0.00137842854,
+      "final_Displacement_residual": 1.26870851e-06,
+      "F_raw_accepted_N": [
+        0.05659017475912758,
+        -0.021018552348272674
+      ],
+      "F_strip_accepted_N": [
+        4.001733786538307,
+        -1.4863119160564249
+      ],
+      "D_absolute_accepted_m": [
+        0.00014181624283242432,
+        -5.818968918899272e-05
+      ],
+      "q_norm_accepted": 44.23376777835849,
+      "v_norm_accepted": 0.16977399992391673,
+      "max_accepted_D_m": 0.0001532902040543254,
+      "max_rejected_trial_Courant": 0.8113795188,
+      "max_rejected_trial_meshCourant": 1.294974797e-06,
+      "accepted_Courant": 0.8113795188,
+      "accepted_meshCourant": 0.1903530158,
+      "QNColumns": 3,
+      "DeletedQNColumns": 1,
+      "DroppedQNColumns": 0
+    }
+  ]
+}

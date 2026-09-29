@@ -1,0 +1,8 @@
+{
+  "WM_PROJECT": "OpenFOAM",
+  "WM_PROJECT_VERSION": "v2606",
+  "pimpleFoam_realpath": "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+  "pimpleFoam_sha256": "fda6a04df53aed0f0e7a28a31a7ed46454ef438d9e36c65460ebd07642d2c866",
+  "precice_or_adapter_used": false,
+  "project_root": "${V2606_PROJECT_ROOT}"
+}

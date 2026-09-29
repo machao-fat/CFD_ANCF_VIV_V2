@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "Q_reconstruction": true,
+    "accepted_100": true,
+    "ancf_core_unchanged": true,
+    "conversion_exactly_once": true,
+    "fluid_logs_normal": true,
+    "forced_acceptance_zero": true,
+    "max_iterations_below_50": true,
+    "official_adapter_unchanged": true,
+    "one_global_advance": true,
+    "rollback": true,
+    "strict_convergence": true,
+    "structure_q_v_finite": true
+  },
+  "final_mesh": "PENDING",
+  "iteration_trend": "STABLE",
+  "participant_exit_numeric_codes": "PENDING_OR_UNOBSERVABLE_AFTER_LAUNCHER_CRASH",
+  "rejected_trial_trend": "NONMONOTONIC",
+  "source_hashes": {
+    "ancf_kernel_cpp": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+    "ancf_kernel_hpp": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c",
+    "official_adapter": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9"
+  }
+}

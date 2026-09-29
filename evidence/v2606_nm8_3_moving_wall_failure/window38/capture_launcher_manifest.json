@@ -1,0 +1,9 @@
+{
+  "purpose": "diagnostic accepted-window restart and read-only input/state observation, not replacement of formal reproduction",
+  "launcher_sha256": "1663b01578b28b6ef3879289ec0d5f7bb319021d3bbd4ba59f7958cbf4f226c4",
+  "monitor_sha256": "f21bb352d1efd3774992da19dac7f60da2a383cb7c88bb5eb691f579af026d55",
+  "input_observer_library_sha256": "10ee56ef6d83b2c4bb4082d7c3f9ca9ab299ef3c67065f4ed141baf363f490f6",
+  "writeInterval": 1,
+  "purgeWrite": 2,
+  "scratch_filesystem": "D:"
+}

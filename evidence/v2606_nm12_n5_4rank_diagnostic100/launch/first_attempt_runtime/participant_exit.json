@@ -1,0 +1,13 @@
+{
+  "accepted_windows": 0,
+  "forced_acceptance": 0,
+  "participant_exits": {
+    "Structure": -15,
+    "s0594": 127,
+    "s1782": -11,
+    "s2970": -11,
+    "s4158": -11,
+    "s5346": -11
+  },
+  "stop_reason": "V2606_NM12_N5_PRECICE_HANDSHAKE_FAIL"
+}

@@ -1,0 +1,34 @@
+{
+  "final_values_in_NM13_1": false,
+  "force": [
+    "Fx_total integral",
+    "Fy_total integral",
+    "Cd_total",
+    "mean Cd",
+    "RMS Cl",
+    "local Cd/Cl"
+  ],
+  "structural": [
+    "mean inline shape",
+    "dynamic inline",
+    "cross-flow",
+    "sigma_x/D",
+    "sigma_y/D",
+    "RMS profiles",
+    "envelopes",
+    "max IL/CF",
+    "x-y trajectories",
+    "PSD",
+    "fx",
+    "fy",
+    "nx",
+    "ny"
+  ],
+  "windows": [
+    "0-10s",
+    "2-10s",
+    "5-10s",
+    "7.5-10s",
+    "sliding"
+  ]
+}

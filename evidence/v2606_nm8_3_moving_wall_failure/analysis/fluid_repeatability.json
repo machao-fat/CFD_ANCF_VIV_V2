@@ -1,0 +1,11 @@
+{
+  "natural_level1_pair_found": false,
+  "natural_level2_pair": "NOT_ESTABLISHED",
+  "diagnostic_fresh_replay": "YES",
+  "fluid_operator_repeatability": "FLUID_OPERATOR_REPEATABILITY_SUPPORTED",
+  "replay_runs": [
+    "A3",
+    "B3"
+  ],
+  "output_comparison": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_3_moving_wall_failure/same_input_replay/output_comparison.json"
+}

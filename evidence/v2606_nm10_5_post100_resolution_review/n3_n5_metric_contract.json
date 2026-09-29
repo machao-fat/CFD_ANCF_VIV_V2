@@ -1,0 +1,38 @@
+{
+  "comparison": "N3 M2 vs future N5 M2 at matched physical times on common dense grid s in [0,5.94].",
+  "displacement": {
+    "E_D_abs": "max_s ||D_N5-D_N3||",
+    "E_D_rel": "E_D_abs / max(max_s ||D_N5||, numerical_floor)",
+    "components": [
+      "E_Dx_abs",
+      "E_Dy_abs"
+    ]
+  },
+  "force_density": {
+    "common_grid": true,
+    "E_f_abs": "max_s ||f_N5-f_N3||",
+    "components": [
+      "E_fx_abs",
+      "E_fy_abs"
+    ],
+    "preserve_sample_values": true
+  },
+  "generalized_and_power": [
+    "Q vector",
+    "first six modal generalized forces where available",
+    "P=qdot^T Q",
+    "cumulative signed work",
+    "cumulative absolute work"
+  ],
+  "local_sampling": "Evaluate center and cell-boundary displacements at the locations in n5_sampling_locations.json; report center-to-left/right boundary differences per cell.",
+  "numerical_health": [
+    "iterations",
+    "Force residual",
+    "Displacement residual",
+    "accepted/rejected force magnitudes",
+    "Co",
+    "meshCo",
+    "mesh health"
+  ],
+  "interpretation_rule": "Do not define spatial winner by iteration count or by power alone; label power differences as coupled-solution differences, not quadrature error."
+}

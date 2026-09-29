@@ -1,0 +1,122 @@
+{
+  "coefficient_sha256": "0c90eb84949105597feb24e3363e413fba8272359bc534aed9f1d7f005bd8d4c",
+  "coefficient_source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/postProcessing/cylinderForceCoeffs/0/coefficient_0.dat",
+  "five_second_windows": {
+    "10-15": {
+      "Cd_mean": 1.666275325817073,
+      "Cl_fluctuation_RMS": 1.2234886804586296,
+      "St": 0.24576739330851277,
+      "dominant_lift_frequency_Hz": 2.7209961402013914,
+      "end_s": 15,
+      "first_sample_s": 10.000000000003405,
+      "fluctuation_RMS_Fy_N": 0.046090286779290245,
+      "frequency_method": "mean-subtracted Hann FFT; zero-pad to 131072; log-parabolic peak interpolation; search 0.5-10 Hz",
+      "last_sample_s": 15.000000000013957,
+      "mean_Fx_N": 0.06277059105391962,
+      "samples": 2501,
+      "start_s": 10
+    },
+    "15-20": {
+      "Cd_mean": 1.6678050964770892,
+      "Cl_fluctuation_RMS": 1.2296607108918503,
+      "St": 0.2457664574634256,
+      "dominant_lift_frequency_Hz": 2.720985779059355,
+      "end_s": 20,
+      "first_sample_s": 15.000000000013957,
+      "fluctuation_RMS_Fy_N": 0.046322794572119,
+      "frequency_method": "mean-subtracted Hann FFT; zero-pad to 131072; log-parabolic peak interpolation; search 0.5-10 Hz",
+      "last_sample_s": 20.000000000006743,
+      "mean_Fx_N": 0.06282821935040063,
+      "samples": 2501,
+      "start_s": 15
+    },
+    "20-25": {
+      "Cd_mean": 1.6677935911001598,
+      "Cl_fluctuation_RMS": 1.2305096343870303,
+      "St": 0.24576609304643318,
+      "dominant_lift_frequency_Hz": 2.720981744442653,
+      "end_s": 25,
+      "first_sample_s": 20.000000000006743,
+      "fluctuation_RMS_Fy_N": 0.04635477453891114,
+      "frequency_method": "mean-subtracted Hann FFT; zero-pad to 131072; log-parabolic peak interpolation; search 0.5-10 Hz",
+      "last_sample_s": 24.99999999999509,
+      "mean_Fx_N": 0.06282778592906357,
+      "samples": 2501,
+      "start_s": 20
+    },
+    "25-30": {
+      "Cd_mean": 1.6667856438283084,
+      "Cl_fluctuation_RMS": 1.2257458585934804,
+      "St": 0.2457669481566316,
+      "dominant_lift_frequency_Hz": 2.7209912117341357,
+      "end_s": 30,
+      "first_sample_s": 24.99999999999509,
+      "fluctuation_RMS_Fy_N": 0.04617531738820511,
+      "frequency_method": "mean-subtracted Hann FFT; zero-pad to 131072; log-parabolic peak interpolation; search 0.5-10 Hz",
+      "last_sample_s": 29.999999999983437,
+      "mean_Fx_N": 0.0627898153457661,
+      "samples": 2501,
+      "start_s": 25
+    }
+  },
+  "force_sha256": "8f8cfb240749c12c8653b42f820feeb33077547ccad6666f3b0c1aef2683409b",
+  "force_source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/postProcessing/cylinderForces/0/force_0.dat",
+  "long_windows": {
+    "10-30": {
+      "Cd_mean": 1.6671454878632337,
+      "Cl_fluctuation_RMS": 1.2274688426022953,
+      "St": 0.24576682216366,
+      "dominant_lift_frequency_Hz": 2.72098981681195,
+      "end_s": 30,
+      "first_sample_s": 10.000000000003405,
+      "fluctuation_RMS_Fy_N": 0.046240224263418554,
+      "frequency_method": "mean-subtracted Hann FFT; zero-pad to 131072; log-parabolic peak interpolation; search 0.5-10 Hz",
+      "last_sample_s": 29.999999999983437,
+      "mean_Fx_N": 0.06280337110238977,
+      "samples": 10001,
+      "start_s": 10
+    },
+    "15-30": {
+      "Cd_mean": 1.6674367445769764,
+      "Cl_fluctuation_RMS": 1.2286868149663526,
+      "St": 0.24576683791474624,
+      "dominant_lift_frequency_Hz": 2.720989991198976,
+      "end_s": 30,
+      "first_sample_s": 15.000000000013957,
+      "fluctuation_RMS_Fy_N": 0.04628610674393335,
+      "frequency_method": "mean-subtracted Hann FFT; zero-pad to 131072; log-parabolic peak interpolation; search 0.5-10 Hz",
+      "last_sample_s": 29.999999999983437,
+      "mean_Fx_N": 0.0628143430923033,
+      "samples": 7501,
+      "start_s": 15
+    },
+    "20-30": {
+      "Cd_mean": 1.667281798255909,
+      "Cl_fluctuation_RMS": 1.2282071337522644,
+      "St": 0.24576700080476602,
+      "dominant_lift_frequency_Hz": 2.720991794624195,
+      "end_s": 30,
+      "first_sample_s": 20.000000000006743,
+      "fluctuation_RMS_Fy_N": 0.046268036576982266,
+      "frequency_method": "mean-subtracted Hann FFT; zero-pad to 131072; log-parabolic peak interpolation; search 0.5-10 Hz",
+      "last_sample_s": 29.999999999983437,
+      "mean_Fx_N": 0.0628085060784545,
+      "samples": 5001,
+      "start_s": 20
+    }
+  },
+  "raw_samples": 15000,
+  "sample_interval_s": 0.002,
+  "stationarity_assessment": {
+    "Cd_mean_relative_range": 0.0006113800427411421,
+    "Cl_RMS_relative_range": 0.0038772795121157465,
+    "criterion": "Each 15-30 s 5-second relative range <1%; descriptive restart-state stationarity, not physical validation",
+    "late_windows": [
+      "15-20",
+      "20-25",
+      "25-30"
+    ],
+    "lift_frequency_relative_range": 3.479360287061545e-06,
+    "stationary": true
+  }
+}

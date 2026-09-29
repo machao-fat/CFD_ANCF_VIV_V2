@@ -1,0 +1,15 @@
+{
+  "operating_point": "OP1",
+  "D_target_m": [
+    3.858063434447522e-07,
+    -1.616586026263879e-07
+  ],
+  "source": "NM5B window 1 accepted",
+  "source_window": 1,
+  "start_before_window": "29.9999999999834372",
+  "target_F_raw_N": [
+    0.060023651134800377,
+    -0.025150803588005696
+  ],
+  "source_trace_sha256": "86c315ba5cdfaa249676360e87d30409c491ad89358e66efb5385c79e0f597e2"
+}

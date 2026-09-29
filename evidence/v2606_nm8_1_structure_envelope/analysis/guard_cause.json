@@ -1,0 +1,71 @@
+{
+  "NM8_old_guard_expression": "nonfinite(Dx,Dy) OR hypot(Dx,Dy)>0.014 m",
+  "NM8_last_accepted_D_norm_m": 0.013984040498021055,
+  "NM8_prefix_match": true,
+  "first_post_541_trial_at_or_above_0p5D": {
+    "attemptOrdinal": 1104,
+    "window": 542,
+    "coupling_iteration": 1,
+    "physical_time_s": 30.216400000000004,
+    "dt_s": 0.0004,
+    "requires_writing_checkpoint": true,
+    "requires_reading_checkpoint_after_advance": true,
+    "accepted": false,
+    "accepted_windows": 541,
+    "checkpoint_q_sha256": "d77dd06ed369cb6fe7c28a7cdccbc919d5f8e6617b60ab0832ea7276239f499d",
+    "checkpoint_v_sha256": "3157a30b302bd3aed2b76420b133500b8983e0900a64985dc07ef51876c59fb8",
+    "pre_solve_q_sha256": "d77dd06ed369cb6fe7c28a7cdccbc919d5f8e6617b60ab0832ea7276239f499d",
+    "pre_solve_v_sha256": "3157a30b302bd3aed2b76420b133500b8983e0900a64985dc07ef51876c59fb8",
+    "trial_q_sha256": "d82dfde5ef2f83c1f80c7bf7904061529ff313c5dfb3119d67c1e5c8699ef292",
+    "trial_v_sha256": "00ec2128a1863b96cff4679fba489ffaaa9aee3d0ea2ef2f4206adde2a2eb142",
+    "F_raw_N": [
+      0.10800153660668065,
+      0.09826479107393403
+    ],
+    "F_strip_N": [
+      7.637251517186702,
+      6.948724511656763
+    ],
+    "generalized_force_norm": 8.938321966005226,
+    "generalized_force_sha256": "a86736f382231c19632719a99457691266287284cad8dc2147d2557fb43e6f4f",
+    "Dx_m": 0.011477310929626552,
+    "Dy_m": 0.008061421820390501,
+    "Dz_m": -4.221230823064914e-05,
+    "D_norm_m": 0.014025519168344294,
+    "Dx_over_D": 0.40990396177237687,
+    "Dy_over_D": 0.2879079221568036,
+    "Dnorm_over_D": 0.500911398869439,
+    "q_finite": true,
+    "v_finite": true,
+    "q_norm": 44.2335000162173,
+    "v_norm": 0.39505957453675006,
+    "a_norm": 396.52919313973416,
+    "velocity_at_s_mps": [
+      0.08261145151162683,
+      0.06288824595806258,
+      -0.002289258974540528
+    ],
+    "acceleration_at_s_mps2": [
+      0.16513670268941377,
+      0.19519151567997925,
+      -3.1506069423584555
+    ],
+    "diagnostic_level": 1,
+    "newton_iterations": 3,
+    "newton_residual": 7.577326055496769e-08,
+    "kinetic_energy_J": 0.05183565834129557,
+    "external_power_W": 1.0679175295780565,
+    "strain_internal_energy_status": "NOT_AVAILABLE_PUBLIC_CORE_API",
+    "fluid_Co": 2.266636606,
+    "fluid_meshCo": 3.441553006e-07,
+    "force_residual": 0.161,
+    "displacement_residual": 0.00296,
+    "force_converged": false,
+    "displacement_converged": true,
+    "iqn_warning_count_line_order": 0,
+    "force_conversion_exact_operation": true
+  },
+  "first_post_541_nonfinite_trial": null,
+  "NM8_old_guard_likely_cause": "DISPLACEMENT",
+  "interpretation": "The trigger trial was not preserved in NM8; cause is inferred from the same-prefix replay only."
+}

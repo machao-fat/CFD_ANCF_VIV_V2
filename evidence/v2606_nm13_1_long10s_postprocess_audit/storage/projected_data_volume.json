@@ -1,0 +1,13 @@
+{
+  "accepted_coupling_force_MB_estimate": 60.0,
+  "basis": "NM12 measurements plus cadence-aware estimates; not runtime measured",
+  "conservative_total_additional_GB": 12.0,
+  "full_fields_with_purge3_MB_estimate": 20.0,
+  "monitor_evidence_MB_estimate": 3000.0,
+  "native_forceCoeffs_MB_estimate": 300.0,
+  "native_forces_MB_estimate": 250.0,
+  "preCICE_logs_MB_estimate": 500.0,
+  "q_history_MB": 119.2,
+  "qddot_included": true,
+  "yPlus_MB_estimate": 5.0
+}

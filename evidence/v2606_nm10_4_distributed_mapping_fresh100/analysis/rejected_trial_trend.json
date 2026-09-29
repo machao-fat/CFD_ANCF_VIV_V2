@@ -1,0 +1,529 @@
+{
+  "first_trial_per_window": [
+    {
+      "window": 1,
+      "max_Fraw": 0.0,
+      "attempt": 1
+    },
+    {
+      "window": 2,
+      "max_Fraw": 0.054782071900076876,
+      "attempt": 7
+    },
+    {
+      "window": 3,
+      "max_Fraw": 0.051283452104567265,
+      "attempt": 15
+    },
+    {
+      "window": 4,
+      "max_Fraw": 0.049050572346667154,
+      "attempt": 22
+    },
+    {
+      "window": 5,
+      "max_Fraw": 0.05320911931669015,
+      "attempt": 28
+    },
+    {
+      "window": 6,
+      "max_Fraw": 0.05146701735948593,
+      "attempt": 34
+    },
+    {
+      "window": 7,
+      "max_Fraw": 0.051680608648431006,
+      "attempt": 39
+    },
+    {
+      "window": 8,
+      "max_Fraw": 0.05166350655937874,
+      "attempt": 45
+    },
+    {
+      "window": 9,
+      "max_Fraw": 0.05129909590678205,
+      "attempt": 48
+    },
+    {
+      "window": 10,
+      "max_Fraw": 0.05104074709610829,
+      "attempt": 51
+    },
+    {
+      "window": 11,
+      "max_Fraw": 0.050791927672901645,
+      "attempt": 54
+    },
+    {
+      "window": 12,
+      "max_Fraw": 0.05064795044124599,
+      "attempt": 57
+    },
+    {
+      "window": 13,
+      "max_Fraw": 0.050475974881926323,
+      "attempt": 60
+    },
+    {
+      "window": 14,
+      "max_Fraw": 0.050355552350527924,
+      "attempt": 63
+    },
+    {
+      "window": 15,
+      "max_Fraw": 0.050194812294620694,
+      "attempt": 66
+    },
+    {
+      "window": 16,
+      "max_Fraw": 0.05003798976001667,
+      "attempt": 68
+    },
+    {
+      "window": 17,
+      "max_Fraw": 0.04989391946205214,
+      "attempt": 70
+    },
+    {
+      "window": 18,
+      "max_Fraw": 0.049762030608201814,
+      "attempt": 72
+    },
+    {
+      "window": 19,
+      "max_Fraw": 0.0496133349191876,
+      "attempt": 74
+    },
+    {
+      "window": 20,
+      "max_Fraw": 0.04972595863036034,
+      "attempt": 77
+    },
+    {
+      "window": 21,
+      "max_Fraw": 0.05015744324172873,
+      "attempt": 81
+    },
+    {
+      "window": 22,
+      "max_Fraw": 0.05053454940951653,
+      "attempt": 84
+    },
+    {
+      "window": 23,
+      "max_Fraw": 0.05085791148188986,
+      "attempt": 87
+    },
+    {
+      "window": 24,
+      "max_Fraw": 0.05102855356723687,
+      "attempt": 91
+    },
+    {
+      "window": 25,
+      "max_Fraw": 0.051061367233677456,
+      "attempt": 94
+    },
+    {
+      "window": 26,
+      "max_Fraw": 0.05094117259855794,
+      "attempt": 97
+    },
+    {
+      "window": 27,
+      "max_Fraw": 0.05065948153611617,
+      "attempt": 100
+    },
+    {
+      "window": 28,
+      "max_Fraw": 0.05029644519687807,
+      "attempt": 103
+    },
+    {
+      "window": 29,
+      "max_Fraw": 0.04976430859282924,
+      "attempt": 106
+    },
+    {
+      "window": 30,
+      "max_Fraw": 0.049246499617598125,
+      "attempt": 109
+    },
+    {
+      "window": 31,
+      "max_Fraw": 0.048709420537521086,
+      "attempt": 112
+    },
+    {
+      "window": 32,
+      "max_Fraw": 0.04823084993049311,
+      "attempt": 115
+    },
+    {
+      "window": 33,
+      "max_Fraw": 0.04784359104306069,
+      "attempt": 118
+    },
+    {
+      "window": 34,
+      "max_Fraw": 0.047583243549264874,
+      "attempt": 122
+    },
+    {
+      "window": 35,
+      "max_Fraw": 0.04737835884394374,
+      "attempt": 125
+    },
+    {
+      "window": 36,
+      "max_Fraw": 0.047235693219441176,
+      "attempt": 128
+    },
+    {
+      "window": 37,
+      "max_Fraw": 0.04710392872661197,
+      "attempt": 131
+    },
+    {
+      "window": 38,
+      "max_Fraw": 0.04695239816247547,
+      "attempt": 134
+    },
+    {
+      "window": 39,
+      "max_Fraw": 0.046809474038349806,
+      "attempt": 137
+    },
+    {
+      "window": 40,
+      "max_Fraw": 0.04661814929103785,
+      "attempt": 141
+    },
+    {
+      "window": 41,
+      "max_Fraw": 0.046677320704723496,
+      "attempt": 145
+    },
+    {
+      "window": 42,
+      "max_Fraw": 0.046851647526157156,
+      "attempt": 148
+    },
+    {
+      "window": 43,
+      "max_Fraw": 0.04705837810802794,
+      "attempt": 151
+    },
+    {
+      "window": 44,
+      "max_Fraw": 0.04729160222525589,
+      "attempt": 155
+    },
+    {
+      "window": 45,
+      "max_Fraw": 0.04754229607090793,
+      "attempt": 158
+    },
+    {
+      "window": 46,
+      "max_Fraw": 0.04772274716960629,
+      "attempt": 162
+    },
+    {
+      "window": 47,
+      "max_Fraw": 0.0477027079002856,
+      "attempt": 165
+    },
+    {
+      "window": 48,
+      "max_Fraw": 0.04760889739128121,
+      "attempt": 169
+    },
+    {
+      "window": 49,
+      "max_Fraw": 0.047343366109818104,
+      "attempt": 172
+    },
+    {
+      "window": 50,
+      "max_Fraw": 0.04686017770748614,
+      "attempt": 175
+    },
+    {
+      "window": 51,
+      "max_Fraw": 0.04621290419877998,
+      "attempt": 178
+    },
+    {
+      "window": 52,
+      "max_Fraw": 0.04557468662147799,
+      "attempt": 180
+    },
+    {
+      "window": 53,
+      "max_Fraw": 0.044907490703081324,
+      "attempt": 182
+    },
+    {
+      "window": 54,
+      "max_Fraw": 0.044812221676846946,
+      "attempt": 185
+    },
+    {
+      "window": 55,
+      "max_Fraw": 0.044753442591308056,
+      "attempt": 188
+    },
+    {
+      "window": 56,
+      "max_Fraw": 0.04469114892922115,
+      "attempt": 191
+    },
+    {
+      "window": 57,
+      "max_Fraw": 0.044557029930541704,
+      "attempt": 194
+    },
+    {
+      "window": 58,
+      "max_Fraw": 0.044623428522267077,
+      "attempt": 197
+    },
+    {
+      "window": 59,
+      "max_Fraw": 0.044244793742489484,
+      "attempt": 199
+    },
+    {
+      "window": 60,
+      "max_Fraw": 0.04474868048911793,
+      "attempt": 201
+    },
+    {
+      "window": 61,
+      "max_Fraw": 0.04551598772495587,
+      "attempt": 203
+    },
+    {
+      "window": 62,
+      "max_Fraw": 0.04632060834951869,
+      "attempt": 205
+    },
+    {
+      "window": 63,
+      "max_Fraw": 0.04702008065635185,
+      "attempt": 207
+    },
+    {
+      "window": 64,
+      "max_Fraw": 0.04766897319120331,
+      "attempt": 209
+    },
+    {
+      "window": 65,
+      "max_Fraw": 0.0480513032046792,
+      "attempt": 211
+    },
+    {
+      "window": 66,
+      "max_Fraw": 0.048175066662418026,
+      "attempt": 213
+    },
+    {
+      "window": 67,
+      "max_Fraw": 0.04804986241991275,
+      "attempt": 215
+    },
+    {
+      "window": 68,
+      "max_Fraw": 0.0477088631934885,
+      "attempt": 217
+    },
+    {
+      "window": 69,
+      "max_Fraw": 0.04721182110111069,
+      "attempt": 219
+    },
+    {
+      "window": 70,
+      "max_Fraw": 0.04659849493023321,
+      "attempt": 221
+    },
+    {
+      "window": 71,
+      "max_Fraw": 0.04598042189107348,
+      "attempt": 223
+    },
+    {
+      "window": 72,
+      "max_Fraw": 0.04537982000229415,
+      "attempt": 226
+    },
+    {
+      "window": 73,
+      "max_Fraw": 0.04527011883659159,
+      "attempt": 229
+    },
+    {
+      "window": 74,
+      "max_Fraw": 0.04532888732071582,
+      "attempt": 232
+    },
+    {
+      "window": 75,
+      "max_Fraw": 0.04539310778612124,
+      "attempt": 235
+    },
+    {
+      "window": 76,
+      "max_Fraw": 0.04550644932536468,
+      "attempt": 238
+    },
+    {
+      "window": 77,
+      "max_Fraw": 0.04567665719048531,
+      "attempt": 240
+    },
+    {
+      "window": 78,
+      "max_Fraw": 0.045882722909164377,
+      "attempt": 243
+    },
+    {
+      "window": 79,
+      "max_Fraw": 0.04613612469433579,
+      "attempt": 245
+    },
+    {
+      "window": 80,
+      "max_Fraw": 0.0464307688256103,
+      "attempt": 247
+    },
+    {
+      "window": 81,
+      "max_Fraw": 0.04683725633175092,
+      "attempt": 249
+    },
+    {
+      "window": 82,
+      "max_Fraw": 0.04712459017442765,
+      "attempt": 251
+    },
+    {
+      "window": 83,
+      "max_Fraw": 0.04740425730785642,
+      "attempt": 254
+    },
+    {
+      "window": 84,
+      "max_Fraw": 0.04774101014243856,
+      "attempt": 256
+    },
+    {
+      "window": 85,
+      "max_Fraw": 0.04789610563403118,
+      "attempt": 259
+    },
+    {
+      "window": 86,
+      "max_Fraw": 0.04807972430811418,
+      "attempt": 262
+    },
+    {
+      "window": 87,
+      "max_Fraw": 0.048250709002688096,
+      "attempt": 265
+    },
+    {
+      "window": 88,
+      "max_Fraw": 0.04823127937769018,
+      "attempt": 267
+    },
+    {
+      "window": 89,
+      "max_Fraw": 0.0483107130312268,
+      "attempt": 270
+    },
+    {
+      "window": 90,
+      "max_Fraw": 0.048339408404812094,
+      "attempt": 273
+    },
+    {
+      "window": 91,
+      "max_Fraw": 0.04839888478832314,
+      "attempt": 276
+    },
+    {
+      "window": 92,
+      "max_Fraw": 0.04844161422153117,
+      "attempt": 279
+    },
+    {
+      "window": 93,
+      "max_Fraw": 0.04857742917017863,
+      "attempt": 282
+    },
+    {
+      "window": 94,
+      "max_Fraw": 0.048717001060590244,
+      "attempt": 285
+    },
+    {
+      "window": 95,
+      "max_Fraw": 0.04890697341978766,
+      "attempt": 288
+    },
+    {
+      "window": 96,
+      "max_Fraw": 0.04911371371095136,
+      "attempt": 291
+    },
+    {
+      "window": 97,
+      "max_Fraw": 0.049333897428166615,
+      "attempt": 295
+    },
+    {
+      "window": 98,
+      "max_Fraw": 0.04958610652053343,
+      "attempt": 298
+    },
+    {
+      "window": 99,
+      "max_Fraw": 0.049811411997907847,
+      "attempt": 301
+    },
+    {
+      "window": 100,
+      "max_Fraw": 0.050078499299200496,
+      "attempt": 304
+    }
+  ],
+  "max_first_trial_Fraw": 0.054782071900076876,
+  "max_window": 2,
+  "trend": "NONMONOTONIC",
+  "segment_maxima": {
+    "1-20": {
+      "max_Fraw": 0.6030178142080339,
+      "max_Qtrial": 5.191086814653089
+    },
+    "21-40": {
+      "max_Fraw": 1.1325258195692074,
+      "max_Qtrial": 3.7418348066458726
+    },
+    "41-60": {
+      "max_Fraw": 1.7332323577878623,
+      "max_Qtrial": 3.455768760138442
+    },
+    "61-80": {
+      "max_Fraw": 2.2552654493202557,
+      "max_Qtrial": 2.516423840251318
+    },
+    "81-100": {
+      "max_Fraw": 2.634273522804094,
+      "max_Qtrial": 13.328571157732393
+    }
+  }
+}

@@ -1,0 +1,4538 @@
+[
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 11,
+    "global_face_index": 187226,
+    "phi_attempt3": {
+      "hex": "3b15ec1b81554599",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1666977761674649,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b15ec1b8155554d",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1666977761678669,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388f680000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4336473859948544,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 12,
+    "global_face_index": 187227,
+    "phi_attempt3": {
+      "hex": "388f86665521cc6a",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4369898723724394,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88f86665521cc6a",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 4369898723724394,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 15,
+    "global_face_index": 187230,
+    "phi_attempt3": {
+      "hex": "3b19fc91c6d54550",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 2810977826719056,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b19fc91c6d55541",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 2810977826723137,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388fe20000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4470614278537216,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 26,
+    "global_face_index": 187241,
+    "phi_attempt3": {
+      "hex": "3b25ce4026fff7b1",
+      "sign": 0,
+      "exponent": 946,
+      "mantissa": 1634149811091377,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b25ce4027000001",
+      "sign": 0,
+      "exponent": 946,
+      "mantissa": 1634149811093505,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3890a00000000000",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 175921860444160,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 29,
+    "global_face_index": 187244,
+    "phi_attempt3": {
+      "hex": "388a2df1c5af01c2",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865266194055618,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88a2df1c5af01c2",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865266194055618,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 31,
+    "global_face_index": 187246,
+    "phi_attempt3": {
+      "hex": "3b08fd95aed53b3f",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 2530619138849599,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b08fd95aed5556d",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 2530619138856301,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 36,
+    "global_face_index": 187251,
+    "phi_attempt3": {
+      "hex": "3b07c068192a90fc",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 2181878168326396,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b07c068192aab2a",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 2181878168333098,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 44,
+    "global_face_index": 187259,
+    "phi_attempt3": {
+      "hex": "3b0489cd75ffe54f",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1277415447848271,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b0489cd75ffff7d",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1277415447854973,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 47,
+    "global_face_index": 187262,
+    "phi_attempt3": {
+      "hex": "3b02cd8fea9fe580",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 788967953786240,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b02cd8fea9fffae",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 788967953792942,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 50,
+    "global_face_index": 187265,
+    "phi_attempt3": {
+      "hex": "3b010330ba7a9110",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 284982798618896,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b010330ba7aab3e",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 284982798625598,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 51,
+    "global_face_index": 187266,
+    "phi_attempt3": {
+      "hex": "388a2df1a01aebe1",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865265563593697,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88a2df1a01aebe1",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865265563593697,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 60,
+    "global_face_index": 187275,
+    "phi_attempt3": {
+      "hex": "3af52c7d22ffc9c4",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1456290853276100,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3af52c7d22fffe20",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1456290853289504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 69,
+    "global_face_index": 187284,
+    "phi_attempt3": {
+      "hex": "3ae50e0d1fff9635",
+      "sign": 0,
+      "exponent": 942,
+      "mantissa": 1422824417760821,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3ae50e0d1ffffeed",
+      "sign": 0,
+      "exponent": 942,
+      "mantissa": 1422824417787629,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 79,
+    "global_face_index": 187294,
+    "phi_attempt3": {
+      "hex": "3ab1354e5553f2ed",
+      "sign": 0,
+      "exponent": 939,
+      "mantissa": 340085531996909,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3ab1354e55554918",
+      "sign": 0,
+      "exponent": 939,
+      "mantissa": 340085532084504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "387562b000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1515882937319424,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 81,
+    "global_face_index": 187296,
+    "phi_attempt3": {
+      "hex": "387578d465373e05",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1540228510072325,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b87578d465373e05",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1540228510072325,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 83,
+    "global_face_index": 187298,
+    "phi_attempt3": {
+      "hex": "38758f172a952e41",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1564704544992833,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b8758f172a952e41",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1564704544992833,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 87,
+    "global_face_index": 187302,
+    "phi_attempt3": {
+      "hex": "3a8ae5f9fff4cd0f",
+      "sign": 0,
+      "exponent": 936,
+      "mantissa": 3067611670957327,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3a8ae5f9ffffab00",
+      "sign": 0,
+      "exponent": 936,
+      "mantissa": 3067611671669504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3875bbe200000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1613954220556288,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 90,
+    "global_face_index": 187305,
+    "phi_attempt3": {
+      "hex": "3875ddb76b989b63",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1651154737470307,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b875ddb76b989b63",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1651154737470307,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 98,
+    "global_face_index": 187313,
+    "phi_attempt3": {
+      "hex": "bab2f0f26aabed77",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 827873915825527,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bab2f0f26aaa89e8",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 827873915734504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "387638f000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1751453303570432,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 101,
+    "global_face_index": 187316,
+    "phi_attempt3": {
+      "hex": "bab8b9af600156b9",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 2455962694801081,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bab8b9af5ffff100",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 2455962694709504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38765b9000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1789523893682176,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 103,
+    "global_face_index": 187318,
+    "phi_attempt3": {
+      "hex": "babc6a006001794c",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 3494249563781452,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "babc6a0060001220",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 3494249563689504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "387672c000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1815018819551232,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 109,
+    "global_face_index": 187324,
+    "phi_attempt3": {
+      "hex": "bac3692a5aab61e7",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 960055560856039,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bac3692a5aaaac20",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 960055560809504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3876b8e000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1892122072449024,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 120,
+    "global_face_index": 187335,
+    "phi_attempt3": {
+      "hex": "bacb69e3e5560e35",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 3212652269932085,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bacb69e3e5555458",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 3212652269884504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38773ba000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2035883217780736,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 121,
+    "global_face_index": 187336,
+    "phi_attempt3": {
+      "hex": "b8774799efc834f9",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2049051315418361,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "38774799efc834f9",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2049051315418361,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 123,
+    "global_face_index": 187338,
+    "phi_attempt3": {
+      "hex": "bacda9cad55614ba",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 3845863324914874,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bacda9cad55559bc",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 3845863324867004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38775fc000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2075603075334144,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 125,
+    "global_face_index": 187340,
+    "phi_attempt3": {
+      "hex": "bacf2fbe1fff4274",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 4274618277773940,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bacf2fbe1ffffe34",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 4274618277822004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b877780000000000",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2102266232307712,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 127,
+    "global_face_index": 187342,
+    "phi_attempt3": {
+      "hex": "bad0668aaaab0ac5",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 112745754856133,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad0668aaaaaac84",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 112745754832004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3877904000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2128929389281280,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 143,
+    "global_face_index": 187358,
+    "phi_attempt3": {
+      "hex": "bae8b2e7f555b954",
+      "sign": 1,
+      "exponent": 942,
+      "mantissa": 2448509136910676,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bae8b2e7f55557fa",
+      "sign": 1,
+      "exponent": 942,
+      "mantissa": 2448509136885754,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3888568000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2346907569487872,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 148,
+    "global_face_index": 187363,
+    "phi_attempt3": {
+      "hex": "3ad988446000c864",
+      "sign": 0,
+      "exponent": 941,
+      "mantissa": 2683102040213604,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3ad98844600003b6",
+      "sign": 0,
+      "exponent": 941,
+      "mantissa": 2683102040163254,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b88895c000000000",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2416451679944704,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 150,
+    "global_face_index": 187365,
+    "phi_attempt3": {
+      "hex": "3878af4a49d3d444",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2444533414745156,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b878af4a49d3d444",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2444533414745156,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 152,
+    "global_face_index": 187367,
+    "phi_attempt3": {
+      "hex": "bae0413462aa79da",
+      "sign": 1,
+      "exponent": 942,
+      "mantissa": 71693249444314,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bae0413462aaab6c",
+      "sign": 1,
+      "exponent": 942,
+      "mantissa": 71693249457004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b878c90000000000",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2472801650868224,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 159,
+    "global_face_index": 187374,
+    "phi_attempt3": {
+      "hex": "baf0a3568c002665",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 179592111335013,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "baf0a3568c000102",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 179592111325442,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3882b18000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 758113267351552,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 163,
+    "global_face_index": 187378,
+    "phi_attempt3": {
+      "hex": "38879997670c2ffe",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2139200384937982,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b8879997670c2ffe",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2139200384937982,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 164,
+    "global_face_index": 187379,
+    "phi_attempt3": {
+      "hex": "bafa2cccdeaadb96",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 2864008187796374,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bafa2cccdeaaa98e",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 2864008187783566,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3889040000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2537672836907008,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 166,
+    "global_face_index": 187381,
+    "phi_attempt3": {
+      "hex": "388c1ba1b84351d9",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 3408081115632089,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88c1ba1b84351d9",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 3408081115632089,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 167,
+    "global_face_index": 187382,
+    "phi_attempt3": {
+      "hex": "bb015506b2aac91b",
+      "sign": 1,
+      "exponent": 944,
+      "mantissa": 374962232412443,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb015506b2aaab50",
+      "sign": 1,
+      "exponent": 944,
+      "mantissa": 374962232404816,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388dcb0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 3882375557677056,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 173,
+    "global_face_index": 187388,
+    "phi_attempt3": {
+      "hex": "bb0ddcccd7558070",
+      "sign": 1,
+      "exponent": 944,
+      "mantissa": 3901947041382512,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb0ddcccd755562c",
+      "sign": 1,
+      "exponent": 944,
+      "mantissa": 3901947041371692,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3895220000000000",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 1444758278897664,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 175,
+    "global_face_index": 187390,
+    "phi_attempt3": {
+      "hex": "3897be6f1aa96b3a",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 2179709234932538,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b897be6f1aa96b3a",
+      "sign": 1,
+      "exponent": 905,
+      "mantissa": 2179709234932538,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 179,
+    "global_face_index": 187394,
+    "phi_attempt3": {
+      "hex": "bb273f9375000f0e",
+      "sign": 1,
+      "exponent": 946,
+      "mantissa": 2040227392655118,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb273f9375000011",
+      "sign": 1,
+      "exponent": 946,
+      "mantissa": 2040227392651281,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "389dfa0000000000",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 3934052604182528,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 183,
+    "global_face_index": 187398,
+    "phi_attempt3": {
+      "hex": "38a2ec0c9ff493c6",
+      "sign": 0,
+      "exponent": 906,
+      "mantissa": 822488920789958,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b8a2ec0c9ff493c6",
+      "sign": 1,
+      "exponent": 906,
+      "mantissa": 822488920789958,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "upper",
+    "local_face_index": 188,
+    "global_face_index": 187403,
+    "phi_attempt3": {
+      "hex": "b8a9526df1f2af8b",
+      "sign": 1,
+      "exponent": 906,
+      "mantissa": 2623906954522507,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "38a9526df1f2af8b",
+      "sign": 0,
+      "exponent": 906,
+      "mantissa": 2623906954522507,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 7,
+    "global_face_index": 187411,
+    "phi_attempt3": {
+      "hex": "3b14159a6c5545f7",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1149652893517303,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b14159a6c55556e",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1149652893521262,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388eee0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4202333441359872,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 8,
+    "global_face_index": 187412,
+    "phi_attempt3": {
+      "hex": "3b14dacee47ff076",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1366482038550646,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b14dacee47ffffc",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1366482038554620,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388f0c0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4235318790193152,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 11,
+    "global_face_index": 187415,
+    "phi_attempt3": {
+      "hex": "3b171b9718d545b2",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 2000660607616434,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b171b9718d55566",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 2000660607620454,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388f680000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4336473859948544,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 15,
+    "global_face_index": 187419,
+    "phi_attempt3": {
+      "hex": "3b1b4a3a40554572",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 3177838791705970,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b1b4a3a40555563",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 3177838791710051,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388fe20000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4470614278537216,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 16,
+    "global_face_index": 187420,
+    "phi_attempt3": {
+      "hex": "3b1ccad140554537",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 3600699796833591,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b1ccad140555538",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 3600699796837688,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3890010000000000",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 1099511627776,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 20,
+    "global_face_index": 187424,
+    "phi_attempt3": {
+      "hex": "3b225f48f8554d34",
+      "sign": 0,
+      "exponent": 946,
+      "mantissa": 667716962045236,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b225f48f8555554",
+      "sign": 0,
+      "exponent": 946,
+      "mantissa": 667716962047316,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3890400000000000",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 70368744177664,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 29,
+    "global_face_index": 187433,
+    "phi_attempt3": {
+      "hex": "389a2df1ca8f01cb",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 2865266275844555,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b89a2df1ca8f01cb",
+      "sign": 1,
+      "exponent": 905,
+      "mantissa": 2865266275844555,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 30,
+    "global_face_index": 187434,
+    "phi_attempt3": {
+      "hex": "3b0684fc9d553b6e",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1835070366497646,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b0684fc9d55559c",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1835070366504348,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 34,
+    "global_face_index": 187438,
+    "phi_attempt3": {
+      "hex": "3b0444f42e553a5c",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1201715446889052,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b0444f42e55548a",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1201715446895754,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 35,
+    "global_face_index": 187439,
+    "phi_attempt3": {
+      "hex": "3b041ec337d56f95",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1159723711033237,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b041ec337d55567",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1159723711026535,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b88a2e0000000000",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 38,
+    "global_face_index": 187442,
+    "phi_attempt3": {
+      "hex": "3b0473e335001953",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1253319590811987,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b0473e334ffff25",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1253319590805285,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b88a2e0000000000",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 43,
+    "global_face_index": 187447,
+    "phi_attempt3": {
+      "hex": "3b030133b3d53b1a",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 845746502187802,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b030133b3d55548",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 845746502194504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 44,
+    "global_face_index": 187448,
+    "phi_attempt3": {
+      "hex": "3b026297ab553bb1",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 671353507494833,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b026297ab5555df",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 671353507501535,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 45,
+    "global_face_index": 187449,
+    "phi_attempt3": {
+      "hex": "3b0191355fd53bb1",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 441133403814833,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b0191355fd555df",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 441133403821535,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 46,
+    "global_face_index": 187450,
+    "phi_attempt3": {
+      "hex": "3b00da8ec2353aa1",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 240306678479521,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b00da8ec23554cf",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 240306678486223,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 49,
+    "global_face_index": 187453,
+    "phi_attempt3": {
+      "hex": "3afd62077aaa7710",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 3766958959523600,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3afd62077aaaab6c",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 3766958959537004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 51,
+    "global_face_index": 187455,
+    "phi_attempt3": {
+      "hex": "388a2df1a41dc5bd",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865265630889405,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88a2df1a41dc5bd",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865265630889405,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 55,
+    "global_face_index": 187459,
+    "phi_attempt3": {
+      "hex": "3af5e84107352231",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1662740874994225,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3af5e8410735568d",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1662740875007629,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 56,
+    "global_face_index": 187460,
+    "phi_attempt3": {
+      "hex": "3af4d1fa33d58a96",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1356772448504470,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3af4d1fa33d5563a",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1356772448491066,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b88a2e0000000000",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 58,
+    "global_face_index": 187462,
+    "phi_attempt3": {
+      "hex": "3af2748352ea7715",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 691057334056725,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3af2748352eaab71",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 691057334070129,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 63,
+    "global_face_index": 187467,
+    "phi_attempt3": {
+      "hex": "3ae9c19838aa41b0",
+      "sign": 0,
+      "exponent": 942,
+      "mantissa": 2746134320267696,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3ae9c19838aaaa68",
+      "sign": 0,
+      "exponent": 942,
+      "mantissa": 2746134320294504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 78,
+    "global_face_index": 187482,
+    "phi_attempt3": {
+      "hex": "3a879e85fff43d72",
+      "sign": 0,
+      "exponent": 936,
+      "mantissa": 2144623199010162,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3a879e85fffee940",
+      "sign": 0,
+      "exponent": 936,
+      "mantissa": 2144623199709504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3875579c00000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1503702410067968,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 82,
+    "global_face_index": 187486,
+    "phi_attempt3": {
+      "hex": "387583f2e8321e1b",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1552454184476187,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b87583f2e8321e1b",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1552454184476187,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 99,
+    "global_face_index": 187503,
+    "phi_attempt3": {
+      "hex": "3876447462d44491",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1764116525237393,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b876447462d44491",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1764116525237393,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 100,
+    "global_face_index": 187504,
+    "phi_attempt3": {
+      "hex": "38764ffc62e0e2fb",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1776795269522171,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b8764ffc62e0e2fb",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1776795269522171,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 103,
+    "global_face_index": 187507,
+    "phi_attempt3": {
+      "hex": "bac745441aab5d86",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 2046483644505478,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bac745441aaaa9f0",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 2046483644459504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "387672c000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1815018819551232,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 104,
+    "global_face_index": 187508,
+    "phi_attempt3": {
+      "hex": "bac8090875560643",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 2261731746645571,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bac8090875555250",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 2261731746599504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38767e6000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1827800642224128,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 117,
+    "global_face_index": 187521,
+    "phi_attempt3": {
+      "hex": "bad14aed6fffa7da",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 363858623440858,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad14aed70000438",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 363858623464504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b877178000000000",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1996163360227328,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 128,
+    "global_face_index": 187532,
+    "phi_attempt3": {
+      "hex": "bad58927b555b054",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 1558178522574932,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad58927b55551e2",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 1558178522550754,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38779c8000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2142398406721536,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 131,
+    "global_face_index": 187535,
+    "phi_attempt3": {
+      "hex": "bad6d78207ffa10f",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 1925803340177679,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad6d78208000014",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 1925803340202004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b877c14000000000",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2182805459042304,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 135,
+    "global_face_index": 187539,
+    "phi_attempt3": {
+      "hex": "bad8b9bbc555afcc",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 2456015934435276,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad8b9bbc5555002",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 2456015934410754,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3877f28000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2236956406710272,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 137,
+    "global_face_index": 187541,
+    "phi_attempt3": {
+      "hex": "bad9c8b50aaa48f0",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 2753954683963632,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad9c8b50aaaa91e",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 2753954683988254,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b8780b8000000000",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2264444197404672,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 139,
+    "global_face_index": 187543,
+    "phi_attempt3": {
+      "hex": "badaf305f2ab0e69",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 3081956638789225,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "badaf305f2aaadd8",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 3081956638764504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3878244000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2291657110192128,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 148,
+    "global_face_index": 187552,
+    "phi_attempt3": {
+      "hex": "b87895cd31b2a228",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2416508348310056,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "387895cd31b2a228",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2416508348310056,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 149,
+    "global_face_index": 187553,
+    "phi_attempt3": {
+      "hex": "baf181aaed556cce",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 424046102932686,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "baf181aaed55542b",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 424046102926379,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3878a30000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2431020209012736,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 150,
+    "global_face_index": 187554,
+    "phi_attempt3": {
+      "hex": "3878af4a4c4973fa",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2444533456008186,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b878af4a4c4973fa",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2444533456008186,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 159,
+    "global_face_index": 187563,
+    "phi_attempt3": {
+      "hex": "baf114a8715579e3",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 304188665199075,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "baf114a871555480",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 304188665189504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3882b18000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 758113267351552,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 163,
+    "global_face_index": 187567,
+    "phi_attempt3": {
+      "hex": "388799976b213ab7",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2139200453425847,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88799976b213ab7",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2139200453425847,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 166,
+    "global_face_index": 187570,
+    "phi_attempt3": {
+      "hex": "389c1ba1b8d78d1d",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 3408081125346589,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b89c1ba1b8d78d1d",
+      "sign": 1,
+      "exponent": 905,
+      "mantissa": 3408081125346589,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 175,
+    "global_face_index": 187579,
+    "phi_attempt3": {
+      "hex": "3897be6f17017aa4",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 2179709173594788,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b897be6f17017aa4",
+      "sign": 1,
+      "exponent": 905,
+      "mantissa": 2179709173594788,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 184,
+    "global_face_index": 187588,
+    "phi_attempt3": {
+      "hex": "bb33a8f217eaa09e",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 1030182666936478,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb33a8f217eaaaa5",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 1030182666939045,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b8a40e0000000000",
+      "sign": 1,
+      "exponent": 906,
+      "mantissa": 1141293069631488,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 185,
+    "global_face_index": 187589,
+    "phi_attempt3": {
+      "hex": "bb36db443c2ab546",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 1929935973954886,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb36db443c2aaaa5",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 1929935973952165,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38a5420000000000",
+      "sign": 0,
+      "exponent": 906,
+      "mantissa": 1479942650986496,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R1",
+    "patch": "lower",
+    "local_face_index": 186,
+    "global_face_index": 187590,
+    "phi_attempt3": {
+      "hex": "bb3ad1eca4d5609c",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 3045564075040924,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb3ad1eca4d55557",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 3045564075038039,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38a68a0000000000",
+      "sign": 0,
+      "exponent": 906,
+      "mantissa": 1840582464897024,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 11,
+    "global_face_index": 187226,
+    "phi_attempt3": {
+      "hex": "3b15ec1b81554599",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1666977761674649,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b15ec1b8155554d",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1666977761678669,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388f680000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4336473859948544,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 12,
+    "global_face_index": 187227,
+    "phi_attempt3": {
+      "hex": "388f86665521cc6a",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4369898723724394,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88f86665521cc6a",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 4369898723724394,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 15,
+    "global_face_index": 187230,
+    "phi_attempt3": {
+      "hex": "3b19fc91c6d54550",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 2810977826719056,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b19fc91c6d55541",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 2810977826723137,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388fe20000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4470614278537216,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 26,
+    "global_face_index": 187241,
+    "phi_attempt3": {
+      "hex": "3b25ce4026fff7b1",
+      "sign": 0,
+      "exponent": 946,
+      "mantissa": 1634149811091377,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b25ce4027000001",
+      "sign": 0,
+      "exponent": 946,
+      "mantissa": 1634149811093505,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3890a00000000000",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 175921860444160,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 29,
+    "global_face_index": 187244,
+    "phi_attempt3": {
+      "hex": "388a2df1c5af01c2",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865266194055618,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88a2df1c5af01c2",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865266194055618,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 31,
+    "global_face_index": 187246,
+    "phi_attempt3": {
+      "hex": "3b08fd95aed53b3f",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 2530619138849599,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b08fd95aed5556d",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 2530619138856301,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 36,
+    "global_face_index": 187251,
+    "phi_attempt3": {
+      "hex": "3b07c068192a90fc",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 2181878168326396,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b07c068192aab2a",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 2181878168333098,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 44,
+    "global_face_index": 187259,
+    "phi_attempt3": {
+      "hex": "3b0489cd75ffe54f",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1277415447848271,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b0489cd75ffff7d",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1277415447854973,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 47,
+    "global_face_index": 187262,
+    "phi_attempt3": {
+      "hex": "3b02cd8fea9fe580",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 788967953786240,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b02cd8fea9fffae",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 788967953792942,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 50,
+    "global_face_index": 187265,
+    "phi_attempt3": {
+      "hex": "3b010330ba7a9110",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 284982798618896,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b010330ba7aab3e",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 284982798625598,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 51,
+    "global_face_index": 187266,
+    "phi_attempt3": {
+      "hex": "388a2df1a01aebe1",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865265563593697,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88a2df1a01aebe1",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865265563593697,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 60,
+    "global_face_index": 187275,
+    "phi_attempt3": {
+      "hex": "3af52c7d22ffc9c4",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1456290853276100,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3af52c7d22fffe20",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1456290853289504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 69,
+    "global_face_index": 187284,
+    "phi_attempt3": {
+      "hex": "3ae50e0d1fff9635",
+      "sign": 0,
+      "exponent": 942,
+      "mantissa": 1422824417760821,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3ae50e0d1ffffeed",
+      "sign": 0,
+      "exponent": 942,
+      "mantissa": 1422824417787629,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 79,
+    "global_face_index": 187294,
+    "phi_attempt3": {
+      "hex": "3ab1354e5553f2ed",
+      "sign": 0,
+      "exponent": 939,
+      "mantissa": 340085531996909,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3ab1354e55554918",
+      "sign": 0,
+      "exponent": 939,
+      "mantissa": 340085532084504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "387562b000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1515882937319424,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 81,
+    "global_face_index": 187296,
+    "phi_attempt3": {
+      "hex": "387578d465373e05",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1540228510072325,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b87578d465373e05",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1540228510072325,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 83,
+    "global_face_index": 187298,
+    "phi_attempt3": {
+      "hex": "38758f172a952e41",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1564704544992833,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b8758f172a952e41",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1564704544992833,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 87,
+    "global_face_index": 187302,
+    "phi_attempt3": {
+      "hex": "3a8ae5f9fff4cd0f",
+      "sign": 0,
+      "exponent": 936,
+      "mantissa": 3067611670957327,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3a8ae5f9ffffab00",
+      "sign": 0,
+      "exponent": 936,
+      "mantissa": 3067611671669504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3875bbe200000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1613954220556288,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 90,
+    "global_face_index": 187305,
+    "phi_attempt3": {
+      "hex": "3875ddb76b989b63",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1651154737470307,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b875ddb76b989b63",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1651154737470307,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 98,
+    "global_face_index": 187313,
+    "phi_attempt3": {
+      "hex": "bab2f0f26aabed77",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 827873915825527,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bab2f0f26aaa89e8",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 827873915734504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "387638f000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1751453303570432,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 101,
+    "global_face_index": 187316,
+    "phi_attempt3": {
+      "hex": "bab8b9af600156b9",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 2455962694801081,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bab8b9af5ffff100",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 2455962694709504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38765b9000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1789523893682176,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 103,
+    "global_face_index": 187318,
+    "phi_attempt3": {
+      "hex": "babc6a006001794c",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 3494249563781452,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "babc6a0060001220",
+      "sign": 1,
+      "exponent": 939,
+      "mantissa": 3494249563689504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "387672c000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1815018819551232,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 109,
+    "global_face_index": 187324,
+    "phi_attempt3": {
+      "hex": "bac3692a5aab61e7",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 960055560856039,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bac3692a5aaaac20",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 960055560809504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3876b8e000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1892122072449024,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 120,
+    "global_face_index": 187335,
+    "phi_attempt3": {
+      "hex": "bacb69e3e5560e35",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 3212652269932085,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bacb69e3e5555458",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 3212652269884504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38773ba000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2035883217780736,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 121,
+    "global_face_index": 187336,
+    "phi_attempt3": {
+      "hex": "b8774799efc834f9",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2049051315418361,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "38774799efc834f9",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2049051315418361,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 123,
+    "global_face_index": 187338,
+    "phi_attempt3": {
+      "hex": "bacda9cad55614ba",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 3845863324914874,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bacda9cad55559bc",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 3845863324867004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38775fc000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2075603075334144,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 125,
+    "global_face_index": 187340,
+    "phi_attempt3": {
+      "hex": "bacf2fbe1fff4274",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 4274618277773940,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bacf2fbe1ffffe34",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 4274618277822004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b877780000000000",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2102266232307712,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 127,
+    "global_face_index": 187342,
+    "phi_attempt3": {
+      "hex": "bad0668aaaab0ac5",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 112745754856133,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad0668aaaaaac84",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 112745754832004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3877904000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2128929389281280,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 143,
+    "global_face_index": 187358,
+    "phi_attempt3": {
+      "hex": "bae8b2e7f555b954",
+      "sign": 1,
+      "exponent": 942,
+      "mantissa": 2448509136910676,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bae8b2e7f55557fa",
+      "sign": 1,
+      "exponent": 942,
+      "mantissa": 2448509136885754,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3888568000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2346907569487872,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 148,
+    "global_face_index": 187363,
+    "phi_attempt3": {
+      "hex": "3ad988446000c864",
+      "sign": 0,
+      "exponent": 941,
+      "mantissa": 2683102040213604,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3ad98844600003b6",
+      "sign": 0,
+      "exponent": 941,
+      "mantissa": 2683102040163254,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b88895c000000000",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2416451679944704,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 150,
+    "global_face_index": 187365,
+    "phi_attempt3": {
+      "hex": "3878af4a49d3d444",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2444533414745156,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b878af4a49d3d444",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2444533414745156,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 152,
+    "global_face_index": 187367,
+    "phi_attempt3": {
+      "hex": "bae0413462aa79da",
+      "sign": 1,
+      "exponent": 942,
+      "mantissa": 71693249444314,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bae0413462aaab6c",
+      "sign": 1,
+      "exponent": 942,
+      "mantissa": 71693249457004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b878c90000000000",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2472801650868224,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 159,
+    "global_face_index": 187374,
+    "phi_attempt3": {
+      "hex": "baf0a3568c002665",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 179592111335013,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "baf0a3568c000102",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 179592111325442,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3882b18000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 758113267351552,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 163,
+    "global_face_index": 187378,
+    "phi_attempt3": {
+      "hex": "38879997670c2ffe",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2139200384937982,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b8879997670c2ffe",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2139200384937982,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 164,
+    "global_face_index": 187379,
+    "phi_attempt3": {
+      "hex": "bafa2cccdeaadb96",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 2864008187796374,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bafa2cccdeaaa98e",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 2864008187783566,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3889040000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2537672836907008,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 166,
+    "global_face_index": 187381,
+    "phi_attempt3": {
+      "hex": "388c1ba1b84351d9",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 3408081115632089,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88c1ba1b84351d9",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 3408081115632089,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 167,
+    "global_face_index": 187382,
+    "phi_attempt3": {
+      "hex": "bb015506b2aac91b",
+      "sign": 1,
+      "exponent": 944,
+      "mantissa": 374962232412443,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb015506b2aaab50",
+      "sign": 1,
+      "exponent": 944,
+      "mantissa": 374962232404816,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388dcb0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 3882375557677056,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 173,
+    "global_face_index": 187388,
+    "phi_attempt3": {
+      "hex": "bb0ddcccd7558070",
+      "sign": 1,
+      "exponent": 944,
+      "mantissa": 3901947041382512,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb0ddcccd755562c",
+      "sign": 1,
+      "exponent": 944,
+      "mantissa": 3901947041371692,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3895220000000000",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 1444758278897664,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 175,
+    "global_face_index": 187390,
+    "phi_attempt3": {
+      "hex": "3897be6f1aa96b3a",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 2179709234932538,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b897be6f1aa96b3a",
+      "sign": 1,
+      "exponent": 905,
+      "mantissa": 2179709234932538,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 179,
+    "global_face_index": 187394,
+    "phi_attempt3": {
+      "hex": "bb273f9375000f0e",
+      "sign": 1,
+      "exponent": 946,
+      "mantissa": 2040227392655118,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb273f9375000011",
+      "sign": 1,
+      "exponent": 946,
+      "mantissa": 2040227392651281,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "389dfa0000000000",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 3934052604182528,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 183,
+    "global_face_index": 187398,
+    "phi_attempt3": {
+      "hex": "38a2ec0c9ff493c6",
+      "sign": 0,
+      "exponent": 906,
+      "mantissa": 822488920789958,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b8a2ec0c9ff493c6",
+      "sign": 1,
+      "exponent": 906,
+      "mantissa": 822488920789958,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "upper",
+    "local_face_index": 188,
+    "global_face_index": 187403,
+    "phi_attempt3": {
+      "hex": "b8a9526df1f2af8b",
+      "sign": 1,
+      "exponent": 906,
+      "mantissa": 2623906954522507,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "38a9526df1f2af8b",
+      "sign": 0,
+      "exponent": 906,
+      "mantissa": 2623906954522507,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 7,
+    "global_face_index": 187411,
+    "phi_attempt3": {
+      "hex": "3b14159a6c5545f7",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1149652893517303,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b14159a6c55556e",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1149652893521262,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388eee0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4202333441359872,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 8,
+    "global_face_index": 187412,
+    "phi_attempt3": {
+      "hex": "3b14dacee47ff076",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1366482038550646,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b14dacee47ffffc",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 1366482038554620,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388f0c0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4235318790193152,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 11,
+    "global_face_index": 187415,
+    "phi_attempt3": {
+      "hex": "3b171b9718d545b2",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 2000660607616434,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b171b9718d55566",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 2000660607620454,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388f680000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4336473859948544,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 15,
+    "global_face_index": 187419,
+    "phi_attempt3": {
+      "hex": "3b1b4a3a40554572",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 3177838791705970,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b1b4a3a40555563",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 3177838791710051,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388fe20000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 4470614278537216,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 16,
+    "global_face_index": 187420,
+    "phi_attempt3": {
+      "hex": "3b1ccad140554537",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 3600699796833591,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b1ccad140555538",
+      "sign": 0,
+      "exponent": 945,
+      "mantissa": 3600699796837688,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3890010000000000",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 1099511627776,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 20,
+    "global_face_index": 187424,
+    "phi_attempt3": {
+      "hex": "3b225f48f8554d34",
+      "sign": 0,
+      "exponent": 946,
+      "mantissa": 667716962045236,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b225f48f8555554",
+      "sign": 0,
+      "exponent": 946,
+      "mantissa": 667716962047316,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3890400000000000",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 70368744177664,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 29,
+    "global_face_index": 187433,
+    "phi_attempt3": {
+      "hex": "389a2df1ca8f01cb",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 2865266275844555,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b89a2df1ca8f01cb",
+      "sign": 1,
+      "exponent": 905,
+      "mantissa": 2865266275844555,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 30,
+    "global_face_index": 187434,
+    "phi_attempt3": {
+      "hex": "3b0684fc9d553b6e",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1835070366497646,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b0684fc9d55559c",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1835070366504348,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 34,
+    "global_face_index": 187438,
+    "phi_attempt3": {
+      "hex": "3b0444f42e553a5c",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1201715446889052,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b0444f42e55548a",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1201715446895754,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 35,
+    "global_face_index": 187439,
+    "phi_attempt3": {
+      "hex": "3b041ec337d56f95",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1159723711033237,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b041ec337d55567",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1159723711026535,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b88a2e0000000000",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 38,
+    "global_face_index": 187442,
+    "phi_attempt3": {
+      "hex": "3b0473e335001953",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1253319590811987,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b0473e334ffff25",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 1253319590805285,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b88a2e0000000000",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 43,
+    "global_face_index": 187447,
+    "phi_attempt3": {
+      "hex": "3b030133b3d53b1a",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 845746502187802,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b030133b3d55548",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 845746502194504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 44,
+    "global_face_index": 187448,
+    "phi_attempt3": {
+      "hex": "3b026297ab553bb1",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 671353507494833,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b026297ab5555df",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 671353507501535,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 45,
+    "global_face_index": 187449,
+    "phi_attempt3": {
+      "hex": "3b0191355fd53bb1",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 441133403814833,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b0191355fd555df",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 441133403821535,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 46,
+    "global_face_index": 187450,
+    "phi_attempt3": {
+      "hex": "3b00da8ec2353aa1",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 240306678479521,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3b00da8ec23554cf",
+      "sign": 0,
+      "exponent": 944,
+      "mantissa": 240306678486223,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 49,
+    "global_face_index": 187453,
+    "phi_attempt3": {
+      "hex": "3afd62077aaa7710",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 3766958959523600,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3afd62077aaaab6c",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 3766958959537004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 51,
+    "global_face_index": 187455,
+    "phi_attempt3": {
+      "hex": "388a2df1a41dc5bd",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865265630889405,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88a2df1a41dc5bd",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865265630889405,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 55,
+    "global_face_index": 187459,
+    "phi_attempt3": {
+      "hex": "3af5e84107352231",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1662740874994225,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3af5e8410735568d",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1662740875007629,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 56,
+    "global_face_index": 187460,
+    "phi_attempt3": {
+      "hex": "3af4d1fa33d58a96",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1356772448504470,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3af4d1fa33d5563a",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 1356772448491066,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b88a2e0000000000",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 58,
+    "global_face_index": 187462,
+    "phi_attempt3": {
+      "hex": "3af2748352ea7715",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 691057334056725,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3af2748352eaab71",
+      "sign": 0,
+      "exponent": 943,
+      "mantissa": 691057334070129,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 63,
+    "global_face_index": 187467,
+    "phi_attempt3": {
+      "hex": "3ae9c19838aa41b0",
+      "sign": 0,
+      "exponent": 942,
+      "mantissa": 2746134320267696,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3ae9c19838aaaa68",
+      "sign": 0,
+      "exponent": 942,
+      "mantissa": 2746134320294504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "388a2e0000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2865327301984256,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 78,
+    "global_face_index": 187482,
+    "phi_attempt3": {
+      "hex": "3a879e85fff43d72",
+      "sign": 0,
+      "exponent": 936,
+      "mantissa": 2144623199010162,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "3a879e85fffee940",
+      "sign": 0,
+      "exponent": 936,
+      "mantissa": 2144623199709504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3875579c00000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1503702410067968,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 82,
+    "global_face_index": 187486,
+    "phi_attempt3": {
+      "hex": "387583f2e8321e1b",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1552454184476187,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b87583f2e8321e1b",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1552454184476187,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 99,
+    "global_face_index": 187503,
+    "phi_attempt3": {
+      "hex": "3876447462d44491",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1764116525237393,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b876447462d44491",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1764116525237393,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 100,
+    "global_face_index": 187504,
+    "phi_attempt3": {
+      "hex": "38764ffc62e0e2fb",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1776795269522171,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b8764ffc62e0e2fb",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1776795269522171,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 103,
+    "global_face_index": 187507,
+    "phi_attempt3": {
+      "hex": "bac745441aab5d86",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 2046483644505478,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bac745441aaaa9f0",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 2046483644459504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "387672c000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1815018819551232,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 104,
+    "global_face_index": 187508,
+    "phi_attempt3": {
+      "hex": "bac8090875560643",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 2261731746645571,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bac8090875555250",
+      "sign": 1,
+      "exponent": 940,
+      "mantissa": 2261731746599504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38767e6000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 1827800642224128,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 117,
+    "global_face_index": 187521,
+    "phi_attempt3": {
+      "hex": "bad14aed6fffa7da",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 363858623440858,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad14aed70000438",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 363858623464504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b877178000000000",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 1996163360227328,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 128,
+    "global_face_index": 187532,
+    "phi_attempt3": {
+      "hex": "bad58927b555b054",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 1558178522574932,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad58927b55551e2",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 1558178522550754,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38779c8000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2142398406721536,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 131,
+    "global_face_index": 187535,
+    "phi_attempt3": {
+      "hex": "bad6d78207ffa10f",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 1925803340177679,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad6d78208000014",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 1925803340202004,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b877c14000000000",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2182805459042304,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 135,
+    "global_face_index": 187539,
+    "phi_attempt3": {
+      "hex": "bad8b9bbc555afcc",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 2456015934435276,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad8b9bbc5555002",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 2456015934410754,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3877f28000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2236956406710272,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 137,
+    "global_face_index": 187541,
+    "phi_attempt3": {
+      "hex": "bad9c8b50aaa48f0",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 2753954683963632,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bad9c8b50aaaa91e",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 2753954683988254,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b8780b8000000000",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2264444197404672,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 139,
+    "global_face_index": 187543,
+    "phi_attempt3": {
+      "hex": "badaf305f2ab0e69",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 3081956638789225,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "badaf305f2aaadd8",
+      "sign": 1,
+      "exponent": 941,
+      "mantissa": 3081956638764504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3878244000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2291657110192128,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 148,
+    "global_face_index": 187552,
+    "phi_attempt3": {
+      "hex": "b87895cd31b2a228",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2416508348310056,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "387895cd31b2a228",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2416508348310056,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 149,
+    "global_face_index": 187553,
+    "phi_attempt3": {
+      "hex": "baf181aaed556cce",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 424046102932686,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "baf181aaed55542b",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 424046102926379,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3878a30000000000",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2431020209012736,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 150,
+    "global_face_index": 187554,
+    "phi_attempt3": {
+      "hex": "3878af4a4c4973fa",
+      "sign": 0,
+      "exponent": 903,
+      "mantissa": 2444533456008186,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b878af4a4c4973fa",
+      "sign": 1,
+      "exponent": 903,
+      "mantissa": 2444533456008186,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 159,
+    "global_face_index": 187563,
+    "phi_attempt3": {
+      "hex": "baf114a8715579e3",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 304188665199075,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "baf114a871555480",
+      "sign": 1,
+      "exponent": 943,
+      "mantissa": 304188665189504,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "3882b18000000000",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 758113267351552,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 163,
+    "global_face_index": 187567,
+    "phi_attempt3": {
+      "hex": "388799976b213ab7",
+      "sign": 0,
+      "exponent": 904,
+      "mantissa": 2139200453425847,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b88799976b213ab7",
+      "sign": 1,
+      "exponent": 904,
+      "mantissa": 2139200453425847,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 166,
+    "global_face_index": 187570,
+    "phi_attempt3": {
+      "hex": "389c1ba1b8d78d1d",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 3408081125346589,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b89c1ba1b8d78d1d",
+      "sign": 1,
+      "exponent": 905,
+      "mantissa": 3408081125346589,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 175,
+    "global_face_index": 187579,
+    "phi_attempt3": {
+      "hex": "3897be6f17017aa4",
+      "sign": 0,
+      "exponent": 905,
+      "mantissa": 2179709173594788,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "0000000000000000",
+      "sign": 0,
+      "exponent": 0,
+      "mantissa": 0,
+      "category": "+0"
+    },
+    "delta": {
+      "hex": "b897be6f17017aa4",
+      "sign": 1,
+      "exponent": 905,
+      "mantissa": 2179709173594788,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 184,
+    "global_face_index": 187588,
+    "phi_attempt3": {
+      "hex": "bb33a8f217eaa09e",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 1030182666936478,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb33a8f217eaaaa5",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 1030182666939045,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "b8a40e0000000000",
+      "sign": 1,
+      "exponent": 906,
+      "mantissa": 1141293069631488,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 185,
+    "global_face_index": 187589,
+    "phi_attempt3": {
+      "hex": "bb36db443c2ab546",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 1929935973954886,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb36db443c2aaaa5",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 1929935973952165,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38a5420000000000",
+      "sign": 0,
+      "exponent": 906,
+      "mantissa": 1479942650986496,
+      "category": "normal"
+    }
+  },
+  {
+    "run": "R2",
+    "patch": "lower",
+    "local_face_index": 186,
+    "global_face_index": 187590,
+    "phi_attempt3": {
+      "hex": "bb3ad1eca4d5609c",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 3045564075040924,
+      "category": "normal"
+    },
+    "phi_attempt4": {
+      "hex": "bb3ad1eca4d55557",
+      "sign": 1,
+      "exponent": 947,
+      "mantissa": 3045564075038039,
+      "category": "normal"
+    },
+    "delta": {
+      "hex": "38a68a0000000000",
+      "sign": 0,
+      "exponent": 906,
+      "mantissa": 1840582464897024,
+      "category": "normal"
+    }
+  }
+]

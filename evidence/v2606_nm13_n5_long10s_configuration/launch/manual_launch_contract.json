@@ -1,0 +1,9 @@
+{
+  "check_only_command": "python3 ${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch_nm13.py --check-only",
+  "forced_acceptance": 0,
+  "fresh_command": "python3 ${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch_nm13.py",
+  "max_accepted_windows": 25000,
+  "participants_started": "NO",
+  "path": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch_nm13.py",
+  "preflight": "identity, disk, orphans, XML, CPU sets, five cases, Structure, mapping"
+}

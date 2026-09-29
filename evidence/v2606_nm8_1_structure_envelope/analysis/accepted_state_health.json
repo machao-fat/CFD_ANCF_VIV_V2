@@ -1,0 +1,9 @@
+{
+  "all_accepted_D_q_v_finite": true,
+  "accepted_force_finite": true,
+  "max_accepted_Co": 2.864280019,
+  "max_accepted_meshCo": 0.7853797705,
+  "accepted_Co_missing_count": 0,
+  "accepted_meshCo_missing_count": 0,
+  "accepted_window_count": 825
+}

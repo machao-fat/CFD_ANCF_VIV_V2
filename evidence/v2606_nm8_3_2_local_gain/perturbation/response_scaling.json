@@ -1,0 +1,8 @@
+{
+  "classification": "OTHER_NOT_DIRECTLY_SWEEP_TESTED",
+  "pairwise_secant_range_N_per_m": [
+    230323.27369764258,
+    1881076.5285726308
+  ],
+  "interpretation": "The existing four-state secants are finite but variable; no threshold-jump claim is made."
+}

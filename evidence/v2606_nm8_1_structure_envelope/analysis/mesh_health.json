@@ -1,0 +1,36 @@
+{
+  "checks": [
+    {
+      "path": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/analysis/initial_checkMesh.log",
+      "available": true,
+      "mesh_ok": true,
+      "min_volume_m3": 7.687364233e-10,
+      "max_nonorth_deg": 43.84604596,
+      "max_skewness": 0.8969795303,
+      "max_aspect_ratio": 7.659081709,
+      "milestone": "initial"
+    },
+    {
+      "path": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/analysis/window500_checkMesh.log",
+      "available": true,
+      "mesh_ok": true,
+      "min_volume_m3": 7.687364014e-10,
+      "max_nonorth_deg": 44.92470634,
+      "max_skewness": 0.9060235669,
+      "max_aspect_ratio": 6.382834643,
+      "milestone": "window500_checkMesh"
+    },
+    {
+      "path": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/analysis/window750_checkMesh.log",
+      "available": true,
+      "mesh_ok": true,
+      "min_volume_m3": 7.687363807e-10,
+      "max_nonorth_deg": 46.24898485,
+      "max_skewness": 0.9189656506,
+      "max_aspect_ratio": 6.382834797,
+      "milestone": "window750_checkMesh"
+    }
+  ],
+  "all_available_checks_mesh_ok": true,
+  "check_count": 3
+}

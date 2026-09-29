@@ -1,0 +1,14 @@
+{
+  "alignment_gate_after_window": 20,
+  "checks": [
+    "all five forces files exist and grow",
+    "all five forceCoeffs files exist and grow",
+    "times plausible",
+    "accepted Structure state grows",
+    "accepted coupling-force history grows"
+  ],
+  "checks_after_accepted_windows": 5,
+  "failure_action": "request stop at next safe committed checkpoint, never mid-write",
+  "runtime_guard_not_run": true,
+  "status": "CONFIGURED"
+}

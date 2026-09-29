@@ -1,0 +1,6 @@
+{
+  "candidate_binary_sha256": "35e6fb29f5365f2ac9e4ba75d9ed977837218221466133845ad30e760b0e517a",
+  "ancf_kernel_cpp_sha256": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+  "ancf_kernel_hpp_sha256": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c",
+  "official_adapter_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9"
+}

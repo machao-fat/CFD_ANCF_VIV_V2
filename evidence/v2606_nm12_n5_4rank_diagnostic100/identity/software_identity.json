@@ -1,0 +1,9 @@
+{
+  "OpenFOAM": "OpenFOAM.com v2606",
+  "adapter_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "dt_s": 0.0004,
+  "fluid_ranks_each": 4,
+  "official_adapter": "v1.4.0",
+  "preCICE": "3.4.1",
+  "structure_processes": 1
+}

@@ -1,0 +1,9 @@
+{
+  "total": {
+    "conditioning": 536,
+    "qr": 530,
+    "deleted_columns": 530
+  },
+  "by_100_window_segment": "NOT_DIRECTLY_OBSERVABLE_FROM_PARTICIPANT_LOG",
+  "interpretation": "monitor only; no convergence failure occurred"
+}

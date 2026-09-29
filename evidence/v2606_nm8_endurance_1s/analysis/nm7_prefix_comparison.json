@@ -1,0 +1,21 @@
+{
+  "compared_windows": 500,
+  "bitwise_equality_required": false,
+  "criteria_for_gross_anomaly": "RMS trajectory error normalized by NM7 RMS > 1, or any accepted force/displacement envelope > 10x NM7 maximum",
+  "per_window_numeric_differences": 0,
+  "earliest_numeric_difference_window": null,
+  "NM7_windows": 500,
+  "iteration_mismatch_windows": [],
+  "force_rms_difference_N": 0.0,
+  "force_rms_difference_relative_to_NM7_rms": 0.0,
+  "displacement_rms_difference_m": 0.0,
+  "displacement_rms_difference_relative_to_NM7_rms": 0.0,
+  "mean_abs_Co_difference": 0.0,
+  "mean_abs_meshCo_difference": 0.0,
+  "NM7_max_Fraw_N": 0.14646265796068514,
+  "NM8_max_Fraw_N": 0.14646265796068514,
+  "NM7_max_D_m": 0.012312815988685907,
+  "NM8_max_D_m": 0.012312815988685907,
+  "gross_trajectory_discrepancy": false,
+  "earliest_divergence_window": null
+}

@@ -1,0 +1,12 @@
+{
+  "Aref_check": "0.028*0.028=0.000784",
+  "Aref_m2": 0.000784,
+  "log": false,
+  "not_whole_region_Huera_statistics": true,
+  "role": "AUXILIARY_LOCAL_CFD_COEFFICIENT_AUDIT",
+  "status": "PASS",
+  "type": "forceCoeffs",
+  "writeControl": "timeStep",
+  "writeFields": false,
+  "writeInterval": 1
+}

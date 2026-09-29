@@ -1,0 +1,10 @@
+{
+  "dt_s": 0.0004,
+  "mesh_source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/constant/polyMesh",
+  "movingWallVelocity_expected": "3 cases x 6 ranks = 18",
+  "nCorrectors": 2,
+  "nNonOrthogonalCorrectors": 0,
+  "nOuterCorrectors": 3,
+  "pFinal_relTol": 0,
+  "p_relTol": 0.01
+}

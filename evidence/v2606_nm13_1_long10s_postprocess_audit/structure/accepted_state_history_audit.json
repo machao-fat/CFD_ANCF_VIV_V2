@@ -1,0 +1,21 @@
+{
+  "accepted_only": true,
+  "cadence_s": 0.0004,
+  "fields": [
+    "window",
+    "elapsed_s",
+    "global_time_s",
+    "q[198]",
+    "v[198]",
+    "qddot[198]"
+  ],
+  "flush": "every accepted window",
+  "integrity": "fixed-width binary plus checkpoint JSON SHA256 manifests",
+  "path_pattern": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/runtime/state_accepted_states.bin",
+  "producer": "Structure observational recorder",
+  "projected_bytes": 119200000,
+  "record_bytes": 4768,
+  "records": 25000,
+  "rejected_state_included": false,
+  "status": "READY"
+}

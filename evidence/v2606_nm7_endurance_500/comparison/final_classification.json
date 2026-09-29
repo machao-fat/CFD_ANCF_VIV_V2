@@ -1,0 +1,45 @@
+{
+  "classification": "V2606_NM7_PARALLEL_IMPLICIT_ENDURANCE_500_PASS",
+  "reason": "500 strict accepted windows, normal participant completion evidenced by logs, valid mesh and complete final restart",
+  "requested_windows": 500,
+  "accepted_windows": 500,
+  "completed_time_s": 30.19999999998297,
+  "requested_duration_s": 0.2,
+  "accepted_duration_s": 0.2,
+  "fluid_attempt_blocks": 1021,
+  "structure_attempts": 1021,
+  "precice_completed_windows": 500,
+  "no_max_iteration_forced_acceptance_in_surviving_trace": true,
+  "force_conversion_once": true,
+  "checkpoint_pre_solve_exact": true,
+  "structure_finite": true,
+  "fluid_fatal_in_surviving_log": false,
+  "participants_normal_completion_evidenced": true,
+  "participant_exit_codes_available": false,
+  "wrapper_exits_clean": false,
+  "participants_completed_by_logs": true,
+  "final_state_complete": true,
+  "sampled_frozen_release_files_unchanged": true,
+  "purgeWrite": {
+    "configured": 2,
+    "midrun_numeric_directory_guard_triggered": true,
+    "midrun_observation": {
+      "accepted_windows": 257,
+      "processor0_numeric_time_dirs": 5,
+      "expected_policy": "initial plus purgeWrite=2 latest writes"
+    },
+    "actual_full_field_retention_pass": true,
+    "observed_retained_full_field_times": [
+      "30.1599999999830644",
+      "30.1999999999829711"
+    ],
+    "metadata_only_times": [
+      "30.039599999983345",
+      "30.0795999999832517",
+      "30.1195999999831585",
+      "30.1595999999830653",
+      "30.1995999999829721"
+    ]
+  },
+  "next_phase_authorized": true
+}

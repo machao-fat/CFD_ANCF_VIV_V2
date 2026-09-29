@@ -1,0 +1,7 @@
+{
+  "purgeWrite": 2,
+  "writeInterval": 100,
+  "full_write_policy": "initial, window100 final; conservative purge",
+  "full_fields_not_written_each_window": true,
+  "observer_outputs": "lightweight JSONL/binary force records"
+}

@@ -1,0 +1,86 @@
+{
+  "fresh_from_frozen30": true,
+  "accepted_windows": 500,
+  "requested_windows": 500,
+  "forced_acceptance": 0,
+  "iteration_statistics": {
+    "min": 2,
+    "median": 2.0,
+    "mean": 2.076,
+    "p95": 2.0,
+    "p99": 3.0,
+    "max": 15,
+    "windows_ge_5": 2,
+    "windows_ge_10": 1,
+    "windows_ge_20": 0,
+    "windows_ge_40": 0,
+    "reached_50": 0,
+    "forced_acceptance": 0
+  },
+  "classification": "V2606_NM8_5_MOVING_WALL_PRESSURE_500_PASS",
+  "NM9_candidate_authorization_review": "READY",
+  "NM9_authorized": "NO",
+  "authorized_next_action": "NM9_CANDIDATE_AUTHORIZATION_REVIEW_ONLY",
+  "max_first_trial": {
+    "window": 307,
+    "first_attempt": 647,
+    "accepted_attempt": 648,
+    "Ffirst_pressure_N": [
+      4.444172795,
+      3.138487484
+    ],
+    "Ffirst_viscous_N": [
+      0.007657936591,
+      0.004751652524
+    ],
+    "Ffirst_raw_N": [
+      4.451830731591,
+      3.143239136524
+    ],
+    "Faccept_pressure_N": [
+      0.06312449891,
+      0.04535087137
+    ],
+    "Faccept_viscous_N": [
+      0.001667917919,
+      0.0005379165799
+    ],
+    "Faccept_raw_N": [
+      0.064792416829,
+      0.0458887879499
+    ],
+    "Ffirst_pressure_norm_N": 5.440659474644849,
+    "Ffirst_viscous_norm_N": 0.009012335687301726,
+    "Ffirst_raw_norm_N": 5.449655872815659,
+    "Faccept_raw_norm_N": 0.07939671364769306,
+    "R_force": 68.63830532076442,
+    "first_wall": {
+      "time": 30.1228,
+      "maxU": 0.0276418642,
+      "maxFaceSpeed": 5.761503894e-10,
+      "maxFaceMotion": 2.304601558e-13,
+      "maxNormalU": 0.0276418642
+    },
+    "first_Co": [
+      0.03150479413,
+      0.6647299879
+    ],
+    "first_meshCo": [
+      2.360838227e-09,
+      3.983939319e-08
+    ],
+    "first_Dx_m": 0.004252997107581069,
+    "first_Dy_m": 0.001495082431751854,
+    "first_Dnorm_m": 0.004508132193583721
+  },
+  "first_trial_force_trend": "OTHER",
+  "final_mesh_ok": true,
+  "restart_complete": true,
+  "restart_smoke": "PASS",
+  "participant_exits": {
+    "fluid_exit_code": 0,
+    "structure_exit_code": 0,
+    "monitor_exit_code": 0,
+    "wrapper_exit_code": 0
+  }
+}

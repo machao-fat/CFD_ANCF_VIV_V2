@@ -1,0 +1,14 @@
+{
+  "filesystem": "D:\\",
+  "available_bytes_after_NM12": 68128780288,
+  "available_bytes_after_redundant_case_cleanup": 71927160832,
+  "available_bytes_after_case_intermediate_field_cleanup": 86162460672,
+  "measured_five_case_growth_bytes_per_100_accepted_windows": 190820602,
+  "field_write_interval_windows": 20,
+  "projection_basis": "ESTIMATE_FROM_NM12_SHORT100 under unchanged writeInterval=20; not a guarantee",
+  "projected_five_case_growth_bytes_30s": 143115451500,
+  "projected_five_case_growth_bytes_60s": 286230903000,
+  "30s_exceeds_current_free_space": true,
+  "60s_exceeds_current_free_space": true,
+  "NM13_review_required": "Evaluate output retention, write policy and available disk before any long-duration N5 launch; no policy change or long run executed in NM12."
+}

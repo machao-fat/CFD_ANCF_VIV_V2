@@ -1,0 +1,18 @@
+{
+  "prefix_match": true,
+  "capture_convergence_log_byte_exact": true,
+  "original_nm8_2_c_convergence_log_byte_exact": true,
+  "window39_force_strict_failure": true,
+  "process_exit": {
+    "fluid_exit_code": 1,
+    "structure_exit_code": 23,
+    "monitor_exit_code": 0,
+    "wrapper_exit_code": 1
+  },
+  "capture_process_exit": {
+    "fluid_exit_code": 1,
+    "structure_exit_code": 23,
+    "monitor_exit_code": 0,
+    "wrapper_exit_code": 1
+  }
+}

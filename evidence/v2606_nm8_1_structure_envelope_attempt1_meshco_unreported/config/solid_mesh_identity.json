@@ -1,0 +1,16 @@
+{
+  "source": "${V2606_PROJECT_ROOT}/evidence/v2606_nm4_clean_ancf/config/coordinate_contract.json",
+  "mesh": "Solid-Mesh",
+  "dimensions": 2,
+  "vertex_count": 1,
+  "fluid_cylinder_center_xy_m": [
+    -1.2923689896027213e-18,
+    1.235990476633475e-18
+  ],
+  "fluid_cylinder_center_z_m": 0.013999999999999948,
+  "coupling_s_m": 2.97,
+  "fluid_Fx_to_ancf": "+x",
+  "fluid_Fy_to_ancf": "+y",
+  "sign_flip": false,
+  "authority": "copied from frozen NM4 coordinate_contract; unchanged by NM8.1"
+}

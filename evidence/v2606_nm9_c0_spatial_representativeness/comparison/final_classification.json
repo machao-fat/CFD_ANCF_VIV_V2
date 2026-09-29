@@ -1,0 +1,192 @@
+{
+  "NM9_B_modified": false,
+  "NM9_CFD_or_preCICE_run_executed": false,
+  "accepted_states_complete": true,
+  "authorized_next_action": "NM10_RESOLUTION_STRATEGY_REVIEW",
+  "classification": "V2606_NM9_C0_REFINEMENT_BEYOND_5_SLICE_SUPPORTED",
+  "interpolation_identity_pass": true,
+  "rationale": "On this existing three-slice trajectory, five centers still leave 0.748 mm maximum within-strip displacement variation and 0.898 final local relative variation; ten centers reduce the maximum absolute variation a further 46.0%. This is structural kinematics only, not a prediction of ten-slice CFD forces or spatial convergence.",
+  "reduction_E_D_abs_3_to_5": 0.18713022166452264,
+  "reduction_E_D_abs_5_to_10": 0.4602945207200012,
+  "three_five_ten_final_window_max": {
+    "10": {
+      "E_D_D": {
+        "s_m": 1.1880000000000002,
+        "strip": 3,
+        "value": 0.01442038063753512
+      },
+      "E_D_abs_m": {
+        "s_m": 1.1880000000000002,
+        "strip": 3,
+        "value": 0.0004037706578509834
+      },
+      "E_D_local": {
+        "s_m": 2.3760000000000003,
+        "strip": 4,
+        "value": 0.8913245968350192
+      },
+      "E_V_abs_m_s": {
+        "s_m": 0.0,
+        "strip": 1,
+        "value": 0.02467860540338423
+      },
+      "E_V_local": {
+        "s_m": 0.0,
+        "strip": 1,
+        "value": 0.7637041507913414
+      }
+    },
+    "3": {
+      "E_D_D": {
+        "s_m": 5.94,
+        "strip": 3,
+        "value": 0.032869940630238445
+      },
+      "E_D_abs_m": {
+        "s_m": 5.94,
+        "strip": 3,
+        "value": 0.0009203583376466765
+      },
+      "E_D_local": {
+        "s_m": 0.0,
+        "strip": 1,
+        "value": 0.9990876904362226
+      },
+      "E_V_abs_m_s": {
+        "s_m": 0.0,
+        "strip": 1,
+        "value": 0.03365916760114951
+      },
+      "E_V_local": {
+        "s_m": 0.0,
+        "strip": 1,
+        "value": 0.9567367685311777
+      }
+    },
+    "5": {
+      "E_D_D": {
+        "s_m": 1.1880000000000002,
+        "strip": 2,
+        "value": 0.026718981354002226
+      },
+      "E_D_abs_m": {
+        "s_m": 1.1880000000000002,
+        "strip": 2,
+        "value": 0.0007481314779120623
+      },
+      "E_D_local": {
+        "s_m": 1.1880000000000002,
+        "strip": 2,
+        "value": 0.8981131582602385
+      },
+      "E_V_abs_m_s": {
+        "s_m": 0.0,
+        "strip": 1,
+        "value": 0.03231435285223021
+      },
+      "E_V_local": {
+        "s_m": 0.0,
+        "strip": 1,
+        "value": 0.9185114109584557
+      }
+    }
+  },
+  "three_five_ten_global_max": {
+    "10": {
+      "E_D_D": {
+        "s_m": 1.1880000000000002,
+        "strip": 3,
+        "value": 0.01442038063753512,
+        "window": 100
+      },
+      "E_D_abs_m": {
+        "s_m": 1.1880000000000002,
+        "strip": 3,
+        "value": 0.0004037706578509834,
+        "window": 100
+      },
+      "E_D_local": {
+        "s_m": 2.3760000000000003,
+        "strip": 4,
+        "value": 1.9081372814780433,
+        "window": 61
+      },
+      "E_V_abs_m_s": {
+        "s_m": 0.0,
+        "strip": 1,
+        "value": 0.02467860540338423,
+        "window": 100
+      },
+      "E_V_local": {
+        "s_m": 5.346000000000001,
+        "strip": 10,
+        "value": 1.8517487342268013,
+        "window": 24
+      }
+    },
+    "3": {
+      "E_D_D": {
+        "s_m": 5.94,
+        "strip": 3,
+        "value": 0.032869940630238445,
+        "window": 100
+      },
+      "E_D_abs_m": {
+        "s_m": 5.94,
+        "strip": 3,
+        "value": 0.0009203583376466765,
+        "window": 100
+      },
+      "E_D_local": {
+        "s_m": 5.274342458729518,
+        "strip": 3,
+        "value": 1.3253461246541456,
+        "window": 1
+      },
+      "E_V_abs_m_s": {
+        "s_m": 1.9696054103927734,
+        "strip": 1,
+        "value": 0.03728627776108719,
+        "window": 63
+      },
+      "E_V_local": {
+        "s_m": 5.274342458729519,
+        "strip": 3,
+        "value": 1.325346124654147,
+        "window": 1
+      }
+    },
+    "5": {
+      "E_D_D": {
+        "s_m": 1.1880000000000002,
+        "strip": 2,
+        "value": 0.026718981354002226,
+        "window": 100
+      },
+      "E_D_abs_m": {
+        "s_m": 1.1880000000000002,
+        "strip": 2,
+        "value": 0.0007481314779120623,
+        "window": 100
+      },
+      "E_D_local": {
+        "s_m": 3.2403400471247843,
+        "strip": 3,
+        "value": 1.2476947571717423,
+        "window": 1
+      },
+      "E_V_abs_m_s": {
+        "s_m": 0.0,
+        "strip": 1,
+        "value": 0.03231435285223021,
+        "window": 100
+      },
+      "E_V_local": {
+        "s_m": 3.2403400471247865,
+        "strip": 3,
+        "value": 1.2476947571717425,
+        "window": 1
+      }
+    }
+  }
+}

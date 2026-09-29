@@ -1,0 +1,30 @@
+{
+  "production_candidate": {
+    "p_solver": "GAMG",
+    "p_smoother": "GaussSeidel",
+    "p_tolerance": "1e-8",
+    "p_relTol": "0.1"
+  },
+  "nm8_4_scratch": {
+    "p_solver": "GAMG",
+    "p_smoother": "GaussSeidel",
+    "p_tolerance": "1e-8",
+    "p_relTol": "0.01"
+  },
+  "unchanged": [
+    "pFinal relTol=0",
+    "pcorr.* relTol=0",
+    "nOuterCorrectors=3",
+    "nCorrectors=2",
+    "nNonOrthogonalCorrectors=0",
+    "checkMeshCourantNo=true (qualified diagnostic output)",
+    "dt=4e-4",
+    "movingWallVelocity",
+    "dynamicMeshDict",
+    "fvSchemes",
+    "relaxationFactors"
+  ],
+  "fvSolution_sha256": "ab2f185644ff929cba13c3590a7ef71c4c4686d81a596d52a406ec8abcc046ea",
+  "xml_sha256": "d955bfa91e5326cc811823d444b8e507534ab5aa169037d61c39d91995651610",
+  "production_case_modified": false
+}

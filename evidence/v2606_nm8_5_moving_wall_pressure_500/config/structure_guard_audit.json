@@ -1,0 +1,8 @@
+{
+  "binary": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/source/clean_structure_participant/clean_structure_nm8_1",
+  "source": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/source/clean_structure_participant/main.cpp",
+  "legacy_0p014_guard_in_active_binary": false,
+  "legacy_0p014_guard_in_audited_source": false,
+  "active_hard_guard": "0.95D envelope plus nonfinite/ANCF safety guards",
+  "pass": true
+}

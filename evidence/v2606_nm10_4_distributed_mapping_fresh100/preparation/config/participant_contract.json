@@ -1,0 +1,148 @@
+{
+  "convergence_measures": [
+    {
+      "data": "Displacement-S1",
+      "limit": "5e-3",
+      "mesh": "Solid-S1",
+      "strict": "true"
+    },
+    {
+      "data": "Force-S1",
+      "limit": "5e-3",
+      "mesh": "Solid-S1",
+      "strict": "true"
+    },
+    {
+      "data": "Displacement-S2",
+      "limit": "5e-3",
+      "mesh": "Solid-S2",
+      "strict": "true"
+    },
+    {
+      "data": "Force-S2",
+      "limit": "5e-3",
+      "mesh": "Solid-S2",
+      "strict": "true"
+    },
+    {
+      "data": "Displacement-S3",
+      "limit": "5e-3",
+      "mesh": "Solid-S3",
+      "strict": "true"
+    },
+    {
+      "data": "Force-S3",
+      "limit": "5e-3",
+      "mesh": "Solid-S3",
+      "strict": "true"
+    }
+  ],
+  "max_iterations": 50,
+  "max_time_windows": 100,
+  "ordering": [
+    {
+      "control": "yes",
+      "name": "Structure"
+    },
+    {
+      "name": "Fluid-S1"
+    },
+    {
+      "name": "Fluid-S2"
+    },
+    {
+      "name": "Fluid-S3"
+    }
+  ],
+  "participants": {
+    "Fluid-S1": {
+      "provide_mesh": [
+        "Fluid-Mesh-S1"
+      ],
+      "read_data": [
+        {
+          "mesh": "Fluid-Mesh-S1",
+          "name": "Displacement-S1"
+        }
+      ],
+      "write_data": [
+        {
+          "mesh": "Fluid-Mesh-S1",
+          "name": "Force-S1"
+        }
+      ]
+    },
+    "Fluid-S2": {
+      "provide_mesh": [
+        "Fluid-Mesh-S2"
+      ],
+      "read_data": [
+        {
+          "mesh": "Fluid-Mesh-S2",
+          "name": "Displacement-S2"
+        }
+      ],
+      "write_data": [
+        {
+          "mesh": "Fluid-Mesh-S2",
+          "name": "Force-S2"
+        }
+      ]
+    },
+    "Fluid-S3": {
+      "provide_mesh": [
+        "Fluid-Mesh-S3"
+      ],
+      "read_data": [
+        {
+          "mesh": "Fluid-Mesh-S3",
+          "name": "Displacement-S3"
+        }
+      ],
+      "write_data": [
+        {
+          "mesh": "Fluid-Mesh-S3",
+          "name": "Force-S3"
+        }
+      ]
+    },
+    "Structure": {
+      "provide_mesh": [
+        "Solid-S1",
+        "Solid-S2",
+        "Solid-S3"
+      ],
+      "read_data": [
+        {
+          "mesh": "Solid-S1",
+          "name": "Force-S1"
+        },
+        {
+          "mesh": "Solid-S2",
+          "name": "Force-S2"
+        },
+        {
+          "mesh": "Solid-S3",
+          "name": "Force-S3"
+        }
+      ],
+      "write_data": [
+        {
+          "mesh": "Solid-S1",
+          "name": "Displacement-S1"
+        },
+        {
+          "mesh": "Solid-S2",
+          "name": "Displacement-S2"
+        },
+        {
+          "mesh": "Solid-S3",
+          "name": "Displacement-S3"
+        }
+      ]
+    }
+  },
+  "sha256": "9138a60e2ecd503d19f429bf835b883f1d27d408a14228569a2b9ec2349306d3",
+  "time_window_size": "0.0004",
+  "xml": "${V2606_PROJECT_ROOT}/evidence/v2606_nm10_4_distributed_mapping_fresh100/preparation/config/precice_nm10_4_fresh100.xml"
+}

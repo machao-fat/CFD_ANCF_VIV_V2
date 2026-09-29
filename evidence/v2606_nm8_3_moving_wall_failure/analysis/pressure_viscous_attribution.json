@@ -1,0 +1,11 @@
+{
+  "classification": "PRESSURE",
+  "sum_consecutive_vector_delta_pressure": 2.4009792042883156,
+  "sum_consecutive_vector_delta_viscous": 0.003277380042600176,
+  "sum_consecutive_vector_delta_total": 2.4042565835456258,
+  "variation_uses_trial_to_trial_difference": true,
+  "late_16_attempts_sum_delta_pressure_N": 0.010484930411906094,
+  "late_16_attempts_sum_delta_viscous_N": 8.019263068481985e-06,
+  "late_16_attempts_sum_delta_total_N": 0.01049294956030458,
+  "late_variation_pressure_to_viscous_ratio": 1307.4680706154775
+}

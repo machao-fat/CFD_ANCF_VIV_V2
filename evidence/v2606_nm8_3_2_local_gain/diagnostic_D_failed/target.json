@@ -1,0 +1,14 @@
+{
+  "letter": "D",
+  "case": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_2_diag_D",
+  "source_time": "30.0151999999834018",
+  "target_time": "30.0155999999834009",
+  "raw_D_xy": [
+    0.00020765164526087532,
+    -7.234090307965125e-05
+  ],
+  "full_raw_array_sha256": "f9171dc7b4bfa68c261abaaf39df409ee6eebd49c95877485b8db37c0bf0962e",
+  "diagnostic_solver": "${LINUX_HOME}/OpenFOAM/machao-v2606/platforms/linux64GccDPInt32Opt/bin/nm832PimpleFoam",
+  "production_numerics_unchanged": true,
+  "official_adapter_unchanged": true
+}

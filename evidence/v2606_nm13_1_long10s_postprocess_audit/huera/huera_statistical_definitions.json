@@ -1,0 +1,9 @@
+{
+  "Cd_total": "integral reconstructed direct line force divided by whole-region denominator",
+  "RMS_Cl": "definition unresolved: project checkout contains no uniquely defining Huera Case-1 equation/source; do not silently choose integrated-vs-local-spatial RMS",
+  "frequency_bin_spacing_Hz": 0.1,
+  "sigma_x": "std of x(s,t)-mean x(s) on selected window and dense full-span grid",
+  "sigma_y": "std of y(s,t) on selected window and dense full-span grid",
+  "source_audit": "searched project files for Huera/Huarte/Case-1/RMS Cl definitions; no authoritative equation found",
+  "stationarity_required": true
+}

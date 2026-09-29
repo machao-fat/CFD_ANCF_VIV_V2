@@ -1,0 +1,1530 @@
+{
+  "by_variant_state": [
+    {
+      "variant": "TIGHT",
+      "state": "A",
+      "outer": 1,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.3608893316,
+      "final_residual": 9.200294727e-11,
+      "iterations": 190,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "A",
+      "outer": 1,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.236568352,
+      "final_residual": 9.608413182e-11,
+      "iterations": 184,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "A",
+      "outer": 2,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2101566071,
+      "final_residual": 9.731745475e-11,
+      "iterations": 185,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "A",
+      "outer": 2,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.1400991695,
+      "final_residual": 9.531209815e-11,
+      "iterations": 180,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "A",
+      "outer": 3,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2124207569,
+      "final_residual": 9.48343692e-11,
+      "iterations": 184,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "A",
+      "outer": 3,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.01569869297,
+      "final_residual": 9.666504864e-11,
+      "iterations": 172,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "B",
+      "outer": 1,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.3609620637,
+      "final_residual": 9.252857047e-11,
+      "iterations": 190,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "B",
+      "outer": 1,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.2365921788,
+      "final_residual": 9.661650668e-11,
+      "iterations": 184,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "B",
+      "outer": 2,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2101566919,
+      "final_residual": 9.755695181e-11,
+      "iterations": 185,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "B",
+      "outer": 2,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.1400933791,
+      "final_residual": 9.547351379e-11,
+      "iterations": 180,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "B",
+      "outer": 3,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2123947714,
+      "final_residual": 9.570007386e-11,
+      "iterations": 184,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "B",
+      "outer": 3,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.01572730602,
+      "final_residual": 9.794243999e-11,
+      "iterations": 172,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "D",
+      "outer": 1,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.3608441585,
+      "final_residual": 9.167760178e-11,
+      "iterations": 190,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "D",
+      "outer": 1,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.2365533755,
+      "final_residual": 9.575227062e-11,
+      "iterations": 184,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "D",
+      "outer": 2,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2101566681,
+      "final_residual": 9.719726804e-11,
+      "iterations": 185,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "D",
+      "outer": 2,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.1401029345,
+      "final_residual": 9.52429808e-11,
+      "iterations": 180,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "D",
+      "outer": 3,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2124369856,
+      "final_residual": 9.429453617e-11,
+      "iterations": 184,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "TIGHT",
+      "state": "D",
+      "outer": 3,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.0156806379,
+      "final_residual": 9.586686813e-11,
+      "iterations": 172,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-10",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "A",
+      "outer": 1,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.3608893316,
+      "final_residual": 9.411489376e-13,
+      "iterations": 239,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "A",
+      "outer": 1,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.236568352,
+      "final_residual": 9.723537354e-13,
+      "iterations": 233,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "A",
+      "outer": 2,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2101566071,
+      "final_residual": 9.562670691e-13,
+      "iterations": 236,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "A",
+      "outer": 2,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.1400991695,
+      "final_residual": 9.274279276e-13,
+      "iterations": 231,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "A",
+      "outer": 3,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2124207569,
+      "final_residual": 9.202253945e-13,
+      "iterations": 234,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "A",
+      "outer": 3,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.01569869297,
+      "final_residual": 9.344605742e-13,
+      "iterations": 223,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "B",
+      "outer": 1,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.3609620637,
+      "final_residual": 9.451436634e-13,
+      "iterations": 239,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "B",
+      "outer": 1,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.2365921788,
+      "final_residual": 9.762213766e-13,
+      "iterations": 233,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "B",
+      "outer": 2,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2101566919,
+      "final_residual": 9.565691848e-13,
+      "iterations": 236,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "B",
+      "outer": 2,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.140093379,
+      "final_residual": 9.270617761e-13,
+      "iterations": 231,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "B",
+      "outer": 3,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2123947714,
+      "final_residual": 9.286419786e-13,
+      "iterations": 234,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "B",
+      "outer": 3,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.01572730602,
+      "final_residual": 9.469102097e-13,
+      "iterations": 223,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "D",
+      "outer": 1,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.3608441585,
+      "final_residual": 9.390779126e-13,
+      "iterations": 239,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "D",
+      "outer": 1,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.2365533755,
+      "final_residual": 9.701967624e-13,
+      "iterations": 233,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "D",
+      "outer": 2,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2101566681,
+      "final_residual": 9.559313389e-13,
+      "iterations": 236,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "D",
+      "outer": 2,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.1401029345,
+      "final_residual": 9.280346211e-13,
+      "iterations": 231,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "D",
+      "outer": 3,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2124369856,
+      "final_residual": 9.978815407e-13,
+      "iterations": 233,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "state": "D",
+      "outer": 3,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.0156806379,
+      "final_residual": 9.266312729e-13,
+      "iterations": 223,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": null,
+        "maxIter": null,
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "A",
+      "outer": 1,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.3608893316,
+      "final_residual": 9.411489376e-13,
+      "iterations": 239,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "A",
+      "outer": 1,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.236568352,
+      "final_residual": 9.723537354e-13,
+      "iterations": 233,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "A",
+      "outer": 2,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2101566071,
+      "final_residual": 9.562670691e-13,
+      "iterations": 236,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "A",
+      "outer": 2,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.1400991695,
+      "final_residual": 9.274279276e-13,
+      "iterations": 231,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "A",
+      "outer": 3,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2124207569,
+      "final_residual": 9.202253945e-13,
+      "iterations": 234,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "A",
+      "outer": 3,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.01569869297,
+      "final_residual": 9.344605742e-13,
+      "iterations": 223,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "B",
+      "outer": 1,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.3609620637,
+      "final_residual": 9.451436634e-13,
+      "iterations": 239,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "B",
+      "outer": 1,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.2365921788,
+      "final_residual": 9.762213766e-13,
+      "iterations": 233,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "B",
+      "outer": 2,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2101566919,
+      "final_residual": 9.565691848e-13,
+      "iterations": 236,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "B",
+      "outer": 2,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.140093379,
+      "final_residual": 9.270617761e-13,
+      "iterations": 231,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "B",
+      "outer": 3,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2123947714,
+      "final_residual": 9.286419786e-13,
+      "iterations": 234,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "B",
+      "outer": 3,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.01572730602,
+      "final_residual": 9.469102097e-13,
+      "iterations": 223,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "D",
+      "outer": 1,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.3608441585,
+      "final_residual": 9.390779126e-13,
+      "iterations": 239,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "D",
+      "outer": 1,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.2365533755,
+      "final_residual": 9.701967624e-13,
+      "iterations": 233,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "D",
+      "outer": 2,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2101566681,
+      "final_residual": 9.559313389e-13,
+      "iterations": 236,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "D",
+      "outer": 2,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.1401029345,
+      "final_residual": 9.280346211e-13,
+      "iterations": 231,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "D",
+      "outer": 3,
+      "pressureCorrector": 1,
+      "finalInner": false,
+      "dictionary": "p",
+      "solver": "GAMG",
+      "initial_residual": 0.2124369856,
+      "final_residual": 9.978815407e-13,
+      "iterations": 233,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    },
+    {
+      "variant": "FORCED",
+      "state": "D",
+      "outer": 3,
+      "pressureCorrector": 2,
+      "finalInner": true,
+      "dictionary": "pFinal",
+      "solver": "GAMG",
+      "initial_residual": 0.0156806379,
+      "final_residual": 9.266312729e-13,
+      "iterations": 223,
+      "settings": {
+        "solver": "GAMG",
+        "smoother": "GaussSeidel",
+        "tolerance": "1e-12",
+        "relTol": "0",
+        "minIter": "5",
+        "maxIter": "1000",
+        "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+      }
+    }
+  ],
+  "summary": {
+    "TIGHT": {
+      "settings": {
+        "p": {
+          "solver": "GAMG",
+          "smoother": "GaussSeidel",
+          "tolerance": "1e-10",
+          "relTol": "0",
+          "minIter": null,
+          "maxIter": null,
+          "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+        },
+        "pFinal": {
+          "solver": "GAMG",
+          "smoother": "GaussSeidel",
+          "tolerance": "1e-10",
+          "relTol": "0",
+          "minIter": null,
+          "maxIter": null,
+          "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-10;\n        relTol          0;"
+        },
+        "pcorr.*": {
+          "solver": "GAMG",
+          "smoother": "GaussSeidel",
+          "tolerance": "1e-08",
+          "relTol": "0",
+          "minIter": null,
+          "maxIter": null,
+          "raw": "solver          GAMG;\n        tolerance       1e-08;\n        relTol          0;\n        smoother        GaussSeidel;"
+        },
+        "fvSolution_sha256": "20a689e4988bfa881fa6a18c0791b832a0ae5a9bddcfd0b5a320c99e891f8acb"
+      },
+      "Pair-HIGH_B-D": {
+        "pressureForce_x": [
+          -0.0405220768350851,
+          0.010408759014535108,
+          -3.235847575486345e-23
+        ],
+        "pressureForce_y": [
+          -0.041039796839966086,
+          0.010356727948707178,
+          -7.502427748645088e-24
+        ],
+        "delta_vector": [
+          0.0005177200048809838,
+          5.203106582792917e-05,
+          -2.4856048006218363e-23
+        ],
+        "delta_norm": 0.0005203280073810713,
+        "p": {
+          "count": 46826,
+          "L2_abs": 0.028354093771229952,
+          "L2_relative": 0.0049049300820839066,
+          "Linf": 0.0004515259933679551,
+          "hash_equal": false
+        },
+        "phi": {
+          "count": 92392,
+          "L2_abs": 7.75814266412919e-08,
+          "L2_relative": 1.0522084903934317e-05,
+          "Linf": 8.557115306934864e-10,
+          "hash_equal": false
+        },
+        "B_iterations": [
+          190,
+          184,
+          185,
+          180,
+          184,
+          172
+        ],
+        "D_iterations": [
+          190,
+          184,
+          185,
+          180,
+          184,
+          172
+        ]
+      },
+      "Pair-LOW_A-D": {
+        "pressureForce_x": [
+          -0.04084061067875557,
+          0.01037656903992177,
+          2.8639064266034996e-22
+        ],
+        "pressureForce_y": [
+          -0.041039796839966086,
+          0.010356727948707178,
+          -7.502427748645088e-24
+        ],
+        "delta_vector": [
+          0.0001991861612105142,
+          1.9841091214591045e-05,
+          2.9389307040899503e-22
+        ],
+        "delta_norm": 0.00020017191540864734,
+        "p": {
+          "count": 46826,
+          "L2_abs": 0.010908099720953397,
+          "L2_relative": 0.0018869750128979168,
+          "Linf": 0.00017370549871099927,
+          "hash_equal": false
+        },
+        "phi": {
+          "count": 92392,
+          "L2_abs": 2.9846491355105125e-08,
+          "L2_relative": 4.0479703676370575e-06,
+          "Linf": 3.292030869301156e-10,
+          "hash_equal": false
+        },
+        "B_iterations": [
+          190,
+          184,
+          185,
+          180,
+          184,
+          172
+        ],
+        "D_iterations": [
+          190,
+          184,
+          185,
+          180,
+          184,
+          172
+        ]
+      },
+      "first_pressure_force_separation_stage": "P1_afterLinearSolve_outer1_pc1",
+      "matrix_rhs_direct_observation": "COMPACT fvMatrix diag/source L2 recorded before solve; P0 p/phi are also recorded."
+    },
+    "VERY_TIGHT": {
+      "settings": {
+        "p": {
+          "solver": "GAMG",
+          "smoother": "GaussSeidel",
+          "tolerance": "1e-12",
+          "relTol": "0",
+          "minIter": null,
+          "maxIter": null,
+          "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+        },
+        "pFinal": {
+          "solver": "GAMG",
+          "smoother": "GaussSeidel",
+          "tolerance": "1e-12",
+          "relTol": "0",
+          "minIter": null,
+          "maxIter": null,
+          "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;"
+        },
+        "pcorr.*": {
+          "solver": "GAMG",
+          "smoother": "GaussSeidel",
+          "tolerance": "1e-08",
+          "relTol": "0",
+          "minIter": null,
+          "maxIter": null,
+          "raw": "solver          GAMG;\n        tolerance       1e-08;\n        relTol          0;\n        smoother        GaussSeidel;"
+        },
+        "fvSolution_sha256": "ed9e27daacd93968352ca8c57010a6eec0b2bebefa648bb594783b93c340685d"
+      },
+      "Pair-HIGH_B-D": {
+        "pressureForce_x": [
+          -0.04052207677237454,
+          0.01040875912010393,
+          -3.2358475534456873e-23
+        ],
+        "pressureForce_y": [
+          -0.04103979677845634,
+          0.010356728052174262,
+          -7.502426789504386e-24
+        ],
+        "delta_vector": [
+          0.0005177200060817941,
+          5.203106792966809e-05,
+          -2.4856048744952486e-23
+        ],
+        "delta_norm": 0.0005203280087860298,
+        "p": {
+          "count": 46826,
+          "L2_abs": 0.028354093846503444,
+          "L2_relative": 0.004904930096571584,
+          "Linf": 0.00045152599402278545,
+          "hash_equal": false
+        },
+        "phi": {
+          "count": 92392,
+          "L2_abs": 7.758142664286891e-08,
+          "L2_relative": 1.052208490414828e-05,
+          "Linf": 8.557115306799339e-10,
+          "hash_equal": false
+        },
+        "B_iterations": [
+          239,
+          233,
+          236,
+          231,
+          234,
+          223
+        ],
+        "D_iterations": [
+          239,
+          233,
+          236,
+          231,
+          233,
+          223
+        ]
+      },
+      "Pair-LOW_A-D": {
+        "pressureForce_x": [
+          -0.04084061061677838,
+          0.010376569144204753,
+          2.8639064283309637e-22
+        ],
+        "pressureForce_y": [
+          -0.04103979677845634,
+          0.010356728052174262,
+          -7.502426789504386e-24
+        ],
+        "delta_vector": [
+          0.00019918616167795972,
+          1.9841092030490476e-05,
+          2.938930696226008e-22
+        ],
+        "delta_norm": 0.00020017191595466307,
+        "p": {
+          "count": 46826,
+          "L2_abs": 0.010908099747992336,
+          "L2_relative": 0.0018869750181394153,
+          "Linf": 0.00017370549890632914,
+          "hash_equal": false
+        },
+        "phi": {
+          "count": 92392,
+          "L2_abs": 2.9846491355436805e-08,
+          "L2_relative": 4.047970367682072e-06,
+          "Linf": 3.292030869436681e-10,
+          "hash_equal": false
+        },
+        "B_iterations": [
+          239,
+          233,
+          236,
+          231,
+          234,
+          223
+        ],
+        "D_iterations": [
+          239,
+          233,
+          236,
+          231,
+          233,
+          223
+        ]
+      },
+      "first_pressure_force_separation_stage": "P1_afterLinearSolve_outer1_pc1",
+      "matrix_rhs_direct_observation": "COMPACT fvMatrix diag/source L2 recorded before solve; P0 p/phi are also recorded."
+    },
+    "FORCED": {
+      "settings": {
+        "p": {
+          "solver": "GAMG",
+          "smoother": "GaussSeidel",
+          "tolerance": "1e-12",
+          "relTol": "0",
+          "minIter": "5",
+          "maxIter": "1000",
+          "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+        },
+        "pFinal": {
+          "solver": "GAMG",
+          "smoother": "GaussSeidel",
+          "tolerance": "1e-12",
+          "relTol": "0",
+          "minIter": "5",
+          "maxIter": "1000",
+          "raw": "solver          GAMG;\n        smoother        GaussSeidel;\n        tolerance       1e-12;\n        relTol          0;\n\n        minIter         5;\n\n        maxIter         1000;"
+        },
+        "pcorr.*": {
+          "solver": "GAMG",
+          "smoother": "GaussSeidel",
+          "tolerance": "1e-08",
+          "relTol": "0",
+          "minIter": null,
+          "maxIter": null,
+          "raw": "solver          GAMG;\n        tolerance       1e-08;\n        relTol          0;\n        smoother        GaussSeidel;"
+        },
+        "fvSolution_sha256": "ae972aef64c83aacd2d9a756ed9d8dbf01f530c1aad8db23e0b6761d274f65ef"
+      },
+      "Pair-HIGH_B-D": {
+        "pressureForce_x": [
+          -0.04052207677237454,
+          0.01040875912010393,
+          -3.2358475534456873e-23
+        ],
+        "pressureForce_y": [
+          -0.04103979677845634,
+          0.010356728052174262,
+          -7.502426789504386e-24
+        ],
+        "delta_vector": [
+          0.0005177200060817941,
+          5.203106792966809e-05,
+          -2.4856048744952486e-23
+        ],
+        "delta_norm": 0.0005203280087860298,
+        "p": {
+          "count": 46826,
+          "L2_abs": 0.028354093846503444,
+          "L2_relative": 0.004904930096571584,
+          "Linf": 0.00045152599402278545,
+          "hash_equal": false
+        },
+        "phi": {
+          "count": 92392,
+          "L2_abs": 7.758142664286891e-08,
+          "L2_relative": 1.052208490414828e-05,
+          "Linf": 8.557115306799339e-10,
+          "hash_equal": false
+        },
+        "B_iterations": [
+          239,
+          233,
+          236,
+          231,
+          234,
+          223
+        ],
+        "D_iterations": [
+          239,
+          233,
+          236,
+          231,
+          233,
+          223
+        ]
+      },
+      "Pair-LOW_A-D": {
+        "pressureForce_x": [
+          -0.04084061061677838,
+          0.010376569144204753,
+          2.8639064283309637e-22
+        ],
+        "pressureForce_y": [
+          -0.04103979677845634,
+          0.010356728052174262,
+          -7.502426789504386e-24
+        ],
+        "delta_vector": [
+          0.00019918616167795972,
+          1.9841092030490476e-05,
+          2.938930696226008e-22
+        ],
+        "delta_norm": 0.00020017191595466307,
+        "p": {
+          "count": 46826,
+          "L2_abs": 0.010908099747992336,
+          "L2_relative": 0.0018869750181394153,
+          "Linf": 0.00017370549890632914,
+          "hash_equal": false
+        },
+        "phi": {
+          "count": 92392,
+          "L2_abs": 2.9846491355436805e-08,
+          "L2_relative": 4.047970367682072e-06,
+          "Linf": 3.292030869436681e-10,
+          "hash_equal": false
+        },
+        "B_iterations": [
+          239,
+          233,
+          236,
+          231,
+          234,
+          223
+        ],
+        "D_iterations": [
+          239,
+          233,
+          236,
+          231,
+          233,
+          223
+        ]
+      },
+      "first_pressure_force_separation_stage": "P1_afterLinearSolve_outer1_pc1",
+      "matrix_rhs_direct_observation": "COMPACT fvMatrix diag/source L2 recorded before solve; P0 p/phi are also recorded."
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "ANCF_core_modified": false,
+  "binary": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/source/structure_n5_nm13",
+  "binary_sha256": "986dc2a661f94e163481ee850d9cfe2474165f794d76dc3d20c82910f9e9e81f",
+  "committed_record": "q,v,qddot per accepted window; checkpoint every 250 accepted windows",
+  "initial_state": "P1_REF_NE32",
+  "initial_velocity": "zero",
+  "observational_changes_only": true,
+  "q0": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/source/ancf_static.raw",
+  "q0_sha256": "b298979244f67e23d02a63566e718ccb1f8897570c12b0aab98f7cbbf6577091",
+  "self_test": "PASS",
+  "source": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/source/clean_structure_n5.cpp",
+  "source_sha256": "e1a89bd814697d8f01f061f1de85ff5d85f820daf16b720821247cbd3ece2153"
+}

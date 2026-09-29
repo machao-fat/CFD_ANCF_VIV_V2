@@ -1,0 +1,17 @@
+{
+  "case": "${V2606_PROJECT_ROOT}/evidence/v2606_nm11_four_rank_fluid_requalification/r3/fluid_case",
+  "dt_s": 0.0004,
+  "mapping_mode": "LegacyPointLumped",
+  "movingWallVelocity_configured": true,
+  "nOuterCorrectors": 3,
+  "pFinal_relTol": 0.0,
+  "p_relTol": 0.01,
+  "purpose": "single-slice moving-wall rank requalification only; not N5 mapping evidence",
+  "ranks": 4,
+  "static_state": "${V2606_PROJECT_ROOT}/evidence/v2606_nm11_four_rank_fluid_requalification/r3/structure/ancf_static.raw",
+  "structure_binary": "${V2606_PROJECT_ROOT}/evidence/v2606_nm11_four_rank_fluid_requalification/r3/structure/clean_structure_nm8_1",
+  "structure_binary_sha256": "2abdfac01d8cdee4df6202549e0b4654c641a5463807663dd93605ebb3c9c282",
+  "unit_span_not_used_by_structure": true,
+  "xml": "${V2606_PROJECT_ROOT}/evidence/v2606_nm11_four_rank_fluid_requalification/r3/precice_nm11_r3.xml",
+  "xml_sha256": "056db700deb680d2136e44eb21eaf32df9f7ab4b114b44f17ce481d082bef18a"
+}

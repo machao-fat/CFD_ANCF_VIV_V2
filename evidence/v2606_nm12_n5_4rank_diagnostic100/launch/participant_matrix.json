@@ -1,0 +1,47 @@
+{
+  "fluids": [
+    "Fluid-S1",
+    "Fluid-S2",
+    "Fluid-S3",
+    "Fluid-S4",
+    "Fluid-S5"
+  ],
+  "mesh_and_data_names": [
+    {
+      "displacement": "Displacement-S1",
+      "fluid_mesh": "Fluid-Mesh-S1",
+      "force": "Force-S1",
+      "participant": "Fluid-S1",
+      "solid_mesh": "Solid-S1"
+    },
+    {
+      "displacement": "Displacement-S2",
+      "fluid_mesh": "Fluid-Mesh-S2",
+      "force": "Force-S2",
+      "participant": "Fluid-S2",
+      "solid_mesh": "Solid-S2"
+    },
+    {
+      "displacement": "Displacement-S3",
+      "fluid_mesh": "Fluid-Mesh-S3",
+      "force": "Force-S3",
+      "participant": "Fluid-S3",
+      "solid_mesh": "Solid-S3"
+    },
+    {
+      "displacement": "Displacement-S4",
+      "fluid_mesh": "Fluid-Mesh-S4",
+      "force": "Force-S4",
+      "participant": "Fluid-S4",
+      "solid_mesh": "Solid-S4"
+    },
+    {
+      "displacement": "Displacement-S5",
+      "fluid_mesh": "Fluid-Mesh-S5",
+      "force": "Force-S5",
+      "participant": "Fluid-S5",
+      "solid_mesh": "Solid-S5"
+    }
+  ],
+  "structure": "Structure"
+}

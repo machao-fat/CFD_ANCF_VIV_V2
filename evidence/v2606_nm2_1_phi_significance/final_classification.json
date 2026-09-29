@@ -1,0 +1,13 @@
+{
+  "evidence_location_case": "B_ACTUALLY_WRITTEN_TO_OLD_PROJECT",
+  "current_evidence_root_correct": true,
+  "original_evidence_preserved": true,
+  "target_directory_is_git_checkout": false,
+  "NM2_STRICT_BITWISE_GATE": "FAIL",
+  "original_NM2_classification": "V2606_NEWMESH_OFFICIAL_ADAPTER_ROLLBACK_FAIL",
+  "NM2_1_classification": "V2606_NM2_1_PHI_BOUNDARY_ROUNDOFF_ONLY",
+  "NM2_PRODUCTION_RELEVANT_ROLLBACK_GATE": "PASS_WITH_DOCUMENTED_SYMMETRY_PHI_ROUNDOFF",
+  "NM3_authorized": true,
+  "NM3_executed": false,
+  "qualification": "The symmetry phi residue participates in finite-volume boundary coefficients, but the physical symmetry normal flux is zero and the measured solved fields and raw forces remain bitwise exact. This is limited to the tested one-window serial runs."
+}

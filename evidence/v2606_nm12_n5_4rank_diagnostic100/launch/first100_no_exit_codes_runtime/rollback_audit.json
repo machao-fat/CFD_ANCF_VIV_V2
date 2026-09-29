@@ -1,0 +1,8 @@
+{
+  "all_q_v_finite": true,
+  "checked": 247,
+  "failures": 0,
+  "one_global_advance_per_attempt": true,
+  "passes": 247,
+  "rejected_attempts": 247
+}

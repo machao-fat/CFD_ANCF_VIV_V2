@@ -1,0 +1,21 @@
+{
+  "variant": "P1_relTol_0p01",
+  "letter": "A",
+  "case": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_5_P1_relTol_0p01_A",
+  "source_time": "30.0151999999834018",
+  "target_time": "30.0155999999834009",
+  "raw_D_xy": [
+    0.00020765246670545467,
+    -7.234082133878694e-05
+  ],
+  "full_raw_array_sha256": "d176f245c76e2902de9bf782ed0c1562aac4cec7b3216e44186d2c0d5bc33a50",
+  "fvSolution_sha256": "dbaf7143725e8a9d67bac40d663f6bfd3b40665c7e7f0255e0d9a2242c0c1d52",
+  "changed_only": "p.relTol",
+  "p_relTol": "0.01",
+  "pFinal_unchanged": true,
+  "pcorr_unchanged": true,
+  "nOuterCorrectors": 3,
+  "nCorrectors": 2,
+  "nNonOrthogonalCorrectors": 0,
+  "diagnostic_solver": "${LINUX_HOME}/OpenFOAM/machao-v2606/platforms/linux64GccDPInt32Opt/bin/nm835PimpleFoam"
+}

@@ -1,0 +1,19 @@
+{
+  "reference_cylinder_diameter_m": 0.028,
+  "max_abs_Dx_m": 0.011444281610340052,
+  "max_abs_Dy_m": 0.008036280674138098,
+  "max_D_norm_m": 0.013984040498021055,
+  "max_abs_Dx_over_D": 0.4087243432264304,
+  "max_abs_Dy_over_D": 0.2870100240763606,
+  "max_D_norm_over_D": 0.49943001778646623,
+  "Dx_crossed": {
+    "0.25D": true,
+    "0.5D": false,
+    "1D": false
+  },
+  "Dy_crossed": {
+    "0.25D": true,
+    "0.5D": false,
+    "1D": false
+  }
+}

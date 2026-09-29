@@ -1,0 +1,22 @@
+{
+  "Force_final": {
+    "count": 541,
+    "min": 3.68e-07,
+    "median": 0.000511,
+    "mean": 0.0012638309944547135,
+    "p95": 0.00454,
+    "p99": 0.004906000000000001,
+    "max": 0.00499
+  },
+  "Displacement_final": {
+    "count": 541,
+    "min": 4.19e-14,
+    "median": 1.41e-08,
+    "mean": 1.363492723888355e-06,
+    "p95": 2.04e-07,
+    "p99": 1.1620000000000005e-06,
+    "max": 0.000458
+  },
+  "strict_accepted_windows": 541,
+  "all_accepted_strict": true
+}

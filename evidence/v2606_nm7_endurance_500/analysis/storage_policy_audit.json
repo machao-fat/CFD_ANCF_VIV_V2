@@ -1,0 +1,22 @@
+{
+  "configured_purgeWrite": 2,
+  "initial_release_time_retained": true,
+  "production_full_field_times": [
+    "30.1599999999830644",
+    "30.1999999999829711"
+  ],
+  "metadata_only_times": [
+    "30.039599999983345",
+    "30.0795999999832517",
+    "30.1195999999831585",
+    "30.1595999999830653",
+    "30.1995999999829721"
+  ],
+  "actual_full_field_retention_pass": true,
+  "midrun_numeric_directory_guard_triggered": true,
+  "midrun_guard_was_false_positive": true,
+  "explanation": "The guard counted numeric directories containing only uniform/functionObjects metadata as complete CFD writes. The full-field U/p/phi/k/omega/nut restart directories obeyed purgeWrite=2.",
+  "wrapper_exits_clean": false,
+  "participants_normal_completion_evidenced_by_logs": true,
+  "participant_exit_codes_available": false
+}

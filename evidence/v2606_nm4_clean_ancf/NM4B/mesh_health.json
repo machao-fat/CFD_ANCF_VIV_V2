@@ -1,0 +1,15 @@
+{
+  "latest_persisted_checkMesh_OK": true,
+  "latest_persisted_min_cell_volume_m3": 7.687362824e-10,
+  "max_Courant_all_trials": 16.97727344,
+  "max_mesh_Courant_all_trials": 136.1135522,
+  "latest_persisted_max_speed_m_s": 46.05120372,
+  "max_attempt_structure_displacement_m": 0.009935691365325669,
+  "max_mesh_displacement_m": null,
+  "max_mesh_displacement_note": "No per-attempt mesh-points observer; latest checkMesh cannot certify rejected trials",
+  "anomalies": [
+    "structure displacement safety guard fired in window 3 after failed convergence in windows 1-2",
+    "Fluid socket EOF downstream of Structure safety exit",
+    "mesh Courant exceeded one during nonconverged trials"
+  ]
+}

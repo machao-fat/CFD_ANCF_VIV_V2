@@ -1,0 +1,178 @@
+{
+  "classification": "V2606_NM8_1_REACHED_MOTION_ENVELOPE_LIMIT",
+  "accepted_windows": 825,
+  "attempts": 1671,
+  "physical_duration_s": 0.3300000000000054,
+  "participant_exit_codes": {
+    "fluid_exit_code": 1,
+    "structure_exit_code": 21,
+    "monitor_exit_code": 9,
+    "wrapper_exit_code": 1
+  },
+  "monitor_stop_reason": "NM8_1_STRUCTURE_STOP reason=GUARD_DISPLACEMENT_ENVELOPE window=826",
+  "guard_event": {
+    "event": "STRUCTURE_STOP",
+    "reason": "GUARD_DISPLACEMENT_ENVELOPE",
+    "detail": "D_norm reached/exceeded 0.95D hard envelope",
+    "window": 826,
+    "coupling_iteration": 1,
+    "attemptOrdinal": 1672,
+    "physical_time_s": 30.330000000000005,
+    "physical_time_before_s": 30.330000000000005,
+    "physical_time_trial_end_s": 30.330400000000004,
+    "structure_time_s": 0.33000000000000534,
+    "dt_s": 0.0004,
+    "Dx_m": 0.01999206652539347,
+    "Dy_m": 0.017560793641987194,
+    "Dz_m": -0.00012945728633617648,
+    "D_norm_m": 0.026609475704947965,
+    "Dx_over_D": 0.7140023759069096,
+    "Dy_over_D": 0.6271712014995426,
+    "Dnorm_over_D": 0.9503384180338559,
+    "finite_Dx": true,
+    "finite_Dy": true,
+    "q_finite": true,
+    "v_finite": true,
+    "a_finite": true,
+    "q_norm": 44.23297595357246,
+    "v_norm": 0.46079534528890537,
+    "a_norm": 218.15174883727778,
+    "position_at_s_m": [
+      0.01999206652539347,
+      0.017560793641987194,
+      2.9702869296483474
+    ],
+    "velocity_at_s_mps": [
+      0.060356055582618404,
+      0.08464416350045596,
+      -0.0015333352471562773
+    ],
+    "acceleration_at_s_mps2": [
+      -0.5515496099593279,
+      -0.43203972667273544,
+      -0.3295368134423662
+    ],
+    "F_raw_N": [
+      0.13209777044335777,
+      0.15102385930123163
+    ],
+    "F_strip_N": [
+      9.341199481351728,
+      10.67954433630138
+    ],
+    "generalized_force_norm": 12.282466017061763,
+    "generalized_force_sha256": "114ca4c9df5bfc5df351e2bd2378625a2310908ab41810c0e022364186172b6c",
+    "ancf_solver_status": "CONVERGED",
+    "ancf_solver_failure_reason": "",
+    "ancf_iteration_count": 3,
+    "checkpoint_q_sha256": "47cf7e4c64dc23a915572e1aa1b259f919838afe63120b74d1ba133fac7fc1c9",
+    "checkpoint_v_sha256": "493bc80f5c5df2248d1ed13cc449e4bf252fff2da893262e19c19d2e12f30902",
+    "trial_q_sha256": "64ab25ff1107890d794932d1e321a69c6b42576206c5c056c80bfbe8e7d3c183",
+    "trial_v_sha256": "70eff16ced5f687bca8651cdce36f38304d2c4fd4dfc6e0c3ef23211a6698587",
+    "requires_writing_checkpoint": true,
+    "requires_reading_checkpoint_after_advance": null,
+    "requires_reading_checkpoint_query_completed": false,
+    "state_dumps": {
+      "checkpoint_q": true,
+      "checkpoint_v": true,
+      "trial_q": true,
+      "trial_v": true,
+      "generalized_force": true
+    },
+    "state_dump_paths": {
+      "checkpoint_q": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/runtime/guard_checkpoint_q.bin",
+      "checkpoint_v": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/runtime/guard_checkpoint_v.bin",
+      "trial_q": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/runtime/guard_trial_q.bin",
+      "trial_v": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/runtime/guard_trial_v.bin",
+      "generalized_force": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/runtime/guard_generalized_force.bin"
+    }
+  },
+  "old_guard_likely_cause": "DISPLACEMENT",
+  "prefix_match": true,
+  "first_0p5D_accepted": {
+    "window": 542,
+    "attemptOrdinal": 1105,
+    "time_s": 30.216800000000003,
+    "Dx_m": 0.011477311372604751,
+    "Dy_m": 0.008061422256098854,
+    "D_norm_m": 0.014025519781271862,
+    "F_raw_N": [
+      0.10807045607846519,
+      0.09833257939076448
+    ],
+    "F_strip_N": [
+      7.642125108405752,
+      6.953518114061202
+    ],
+    "iterations": 2,
+    "Co": 2.266636606,
+    "meshCo": 0.6730312142,
+    "accepted": true,
+    "q_finite": true,
+    "v_finite": true
+  },
+  "first_0p75D_accepted": {
+    "window": 701,
+    "attemptOrdinal": 1423,
+    "time_s": 30.280400000000004,
+    "Dx_m": 0.016548416034825434,
+    "Dy_m": 0.012945231811037699,
+    "D_norm_m": 0.02101021418032596,
+    "F_raw_N": [
+      0.13892316499871837,
+      0.12450102233731311
+    ],
+    "F_strip_N": [
+      9.823852382052229,
+      8.804000865281427
+    ],
+    "iterations": 2,
+    "Co": 2.806110215,
+    "meshCo": 0.776171322,
+    "accepted": true,
+    "q_finite": true,
+    "v_finite": true
+  },
+  "first_0p95D_trial": {
+    "window": 826,
+    "attemptOrdinal": 1672,
+    "time_s": 30.330400000000004,
+    "Dx_m": 0.01999206652539347,
+    "Dy_m": 0.017560793641987194,
+    "D_norm_m": 0.026609475704947965,
+    "F_raw_N": [
+      0.13209777044335777,
+      0.15102385930123163
+    ],
+    "F_strip_N": [
+      9.341199481351728,
+      10.67954433630138
+    ],
+    "iterations": 1,
+    "Co": null,
+    "meshCo": null,
+    "accepted": false,
+    "q_finite": true,
+    "v_finite": true
+  },
+  "max_accepted_Dx_abs_m": 0.019967887287195774,
+  "max_accepted_Dy_abs_m": 0.017526898467442733,
+  "max_accepted_D_norm_m": 0.026568942255991317,
+  "max_accepted_Fraw_norm_N": 0.20066413923653187,
+  "max_accepted_Fstrip_norm_N": 14.189821274583325,
+  "q_finite": true,
+  "v_finite": true,
+  "ancf_solver_failure": false,
+  "process_codes_clean": false,
+  "mesh_health_pass": true,
+  "checkpoint_restore_exact_pass": true,
+  "disk_policy_pass": true,
+  "final_state_complete": true,
+  "frozen_release_unchanged": true,
+  "next_phase_authorized": false,
+  "energy_diagnostics": {
+    "kinetic": "AVAILABLE",
+    "external_power": "AVAILABLE",
+    "strain_internal": "NOT_AVAILABLE"
+  }
+}

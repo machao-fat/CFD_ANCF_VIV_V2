@@ -1,0 +1,33 @@
+{
+  "phase": "V2606-NM8.3.5",
+  "input_gate": {
+    "P1_relTol_0.01_gate_pass": true,
+    "P1_HIGH_error_vs_outer30": 0.008493699280656575,
+    "P1_LOW_error_vs_outer30": 0.00955893578285475,
+    "minimal_candidate": "p.relTol=0.01"
+  },
+  "final_iteration_semantics": {
+    "30_outer_outer3_equivalent_to_true_nOuter3": false,
+    "true_nOuter3_TIGHT_vs_outer30_HIGH_relative_difference": 0.0017740072562753156,
+    "true_nOuter3_TIGHT_vs_outer30_LOW_relative_difference": 0.0017706573443742614
+  },
+  "window39_replay": {
+    "executed": true,
+    "accepted": true,
+    "accepted_iteration": 10,
+    "final_force_residual": 2.31e-05,
+    "final_displacement_residual": 1.74e-13,
+    "four_cycle_persists": "NO",
+    "force_residual_breaks_original_plateau_cycle": "YES",
+    "participant_exits": {
+      "fluid": 0,
+      "solid": 0,
+      "wrapper": 0
+    }
+  },
+  "classification": "V2606_NM8_3_5_MINIMAL_PRESSURE_SOLVER_CHANGE_RESTORES_WINDOW39_CONVERGENCE",
+  "production_qualification": "NOT_ESTABLISHED",
+  "authorized_next_action": "FRESH_CORRECTED_PRESSURE_SHORT_QUALIFICATION",
+  "NM9_authorized": "NO",
+  "production_modified": false
+}

@@ -1,0 +1,18 @@
+{
+  "source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "sampled_files_unchanged": true,
+  "files": {
+    "system/controlDict": {
+      "expected_sha256": "082443dc4a0473c4197c3d25ee4ef2b2b297931e8b6e5fef2bd3eb029af461a0",
+      "actual_sha256": "082443dc4a0473c4197c3d25ee4ef2b2b297931e8b6e5fef2bd3eb029af461a0"
+    },
+    "system/fvSolution": {
+      "expected_sha256": "3a0fbc8bab5998b89074bb6f28bac18a3a65c75b016ecd41240444bdfe958e80",
+      "actual_sha256": "3a0fbc8bab5998b89074bb6f28bac18a3a65c75b016ecd41240444bdfe958e80"
+    },
+    "processor0/29.9999999999834372/U": {
+      "expected_sha256": "51ca5b6e901d7ed48c89334c8d349bfb0d8924beb189806cbc9859906085926b",
+      "actual_sha256": "51ca5b6e901d7ed48c89334c8d349bfb0d8924beb189806cbc9859906085926b"
+    }
+  }
+}

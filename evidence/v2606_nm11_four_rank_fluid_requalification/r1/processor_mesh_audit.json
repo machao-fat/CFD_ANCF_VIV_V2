@@ -1,0 +1,13 @@
+{
+  "checkMesh": {
+    "max_aspect_ratio": 7.659081709,
+    "max_nonorthogonality": 43.84604596,
+    "max_skewness": 0.8969795303,
+    "mesh_ok": true,
+    "min_volume": 7.687364233e-10
+  },
+  "mesh_hash_combined": "ded18e192a7a4f58ab95ce2dbec51b3c258c7ece6c9654738e1a44186d72a421",
+  "mesh_topology_unchanged_basis": "same frozen30 polyMesh reconstructed/decomposed with scotch",
+  "processor_count": 4,
+  "time": "29.9999999999834372"
+}

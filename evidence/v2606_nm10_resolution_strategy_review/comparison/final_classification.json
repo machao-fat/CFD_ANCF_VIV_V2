@@ -1,0 +1,66 @@
+{
+  "MIDPOINT_HIGH_MODE_INJECTION": "UNRESOLVED",
+  "NO_CFD_EXECUTED": true,
+  "NO_PRECISE_EXECUTED": true,
+  "Qdist_integration": "PASS",
+  "Qmid_reconstruction": "PASS",
+  "RANK_COUNT_REQUALIFICATION_REQUIRED": true,
+  "authorized_next_action": "REVIEW_DISTRIBUTED_STRIP_FORCE_MAPPING",
+  "classification": "V2606_NM10_FORCE_MAPPING_REVIEW_REQUIRED",
+  "ladder_ready": false,
+  "modal_basis_compatible": false,
+  "no_change_to_NM9B_NM9C0_ANCF_adapter_coupling": true,
+  "note": "Only fixed-force mapping evaluated; no Q_dist trajectory, modal proxy, or CFD strip-count convergence claim.",
+  "point_load_localization": "CONSISTENT_WITH_POINT_LOAD_LOCALIZATION",
+  "primary_resolution_metric": "E_D_abs and E_D_abs / 0.028; E_V_abs; not E_D_local",
+  "relative_DeltaQ_stats": {
+    "max": 1.653888481626613,
+    "median": 1.6352142876301583,
+    "min": 1.6123666939789885,
+    "p95": 1.6526878900924251
+  },
+  "relative_power_difference_stats": {
+    "max": 0.8924586002375751,
+    "median": 0.5944738082877883,
+    "min": 0.3067439122298657,
+    "p95": 0.8751438578972258
+  },
+  "resource_feasibility": [
+    {
+      "Fluid_MPI_ranks": 30,
+      "Fluid_ranks_per_available_logical_CPU": 1.1538461538461537,
+      "N": 5,
+      "Structure_processes": 1,
+      "feasibility": "OVERSUBSCRIBED_AND_MEMORY_UNVERIFIED",
+      "linearized_case_disk_bytes_at_NM9B_per_slice_size": 328631275,
+      "linearized_case_file_count": 4255,
+      "minimum_launch_processes_including_mpirun": 36,
+      "qualified_6_ranks_per_slice_cpu_feasible_without_oversubscription": false,
+      "runtime_RSS_per_rank": "NOT_MEASURED"
+    },
+    {
+      "Fluid_MPI_ranks": 60,
+      "Fluid_ranks_per_available_logical_CPU": 2.3076923076923075,
+      "N": 10,
+      "Structure_processes": 1,
+      "feasibility": "OVERSUBSCRIBED_AND_MEMORY_UNVERIFIED",
+      "linearized_case_disk_bytes_at_NM9B_per_slice_size": 657262550,
+      "linearized_case_file_count": 8510,
+      "minimum_launch_processes_including_mpirun": 71,
+      "qualified_6_ranks_per_slice_cpu_feasible_without_oversubscription": false,
+      "runtime_RSS_per_rank": "NOT_MEASURED"
+    },
+    {
+      "Fluid_MPI_ranks": 120,
+      "Fluid_ranks_per_available_logical_CPU": 4.615384615384615,
+      "N": 20,
+      "Structure_processes": 1,
+      "feasibility": "OVERSUBSCRIBED_AND_MEMORY_UNVERIFIED",
+      "linearized_case_disk_bytes_at_NM9B_per_slice_size": 1314525100,
+      "linearized_case_file_count": 17020,
+      "minimum_launch_processes_including_mpirun": 141,
+      "qualified_6_ranks_per_slice_cpu_feasible_without_oversubscription": false,
+      "runtime_RSS_per_rank": "NOT_MEASURED"
+    }
+  ]
+}

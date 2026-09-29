@@ -1,0 +1,52 @@
+{
+  "basis": "ESTIMATE_FROM_NM12_SHORT100",
+  "not_guaranteed": true,
+  "projections": [
+    {
+      "days": 0.013273486111436633,
+      "hours": 0.3185636666744792,
+      "physical_s": 0.1,
+      "windows": 250
+    },
+    {
+      "days": 0.1327348611143663,
+      "hours": 3.1856366667447915,
+      "physical_s": 1,
+      "windows": 2500
+    },
+    {
+      "days": 0.6636743055718316,
+      "hours": 15.92818333372396,
+      "physical_s": 5,
+      "windows": 12500
+    },
+    {
+      "days": 1.3273486111436632,
+      "hours": 31.85636666744792,
+      "physical_s": 10,
+      "windows": 25000
+    },
+    {
+      "days": 2.6546972222873264,
+      "hours": 63.71273333489584,
+      "physical_s": 20,
+      "windows": 50000
+    },
+    {
+      "days": 3.9820458334309894,
+      "hours": 95.56910000234375,
+      "physical_s": 30,
+      "windows": 75000
+    },
+    {
+      "days": 7.964091666861979,
+      "hours": 191.1382000046875,
+      "physical_s": 60,
+      "windows": 150000
+    }
+  ],
+  "steady_direct_poll_window_range": [
+    1,
+    100
+  ]
+}

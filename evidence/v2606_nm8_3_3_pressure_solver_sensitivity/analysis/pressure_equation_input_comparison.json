@@ -1,0 +1,695 @@
+{
+  "TIGHT": {
+    "records": {
+      "A": [
+        {
+          "variant": "TIGHT",
+          "state": "A",
+          "outer": 1,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239524242,
+          "sourceL2": 8.081796387e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "A",
+          "outer": 1,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239524242,
+          "sourceL2": 8.069688908e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "A",
+          "outer": 2,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239548619,
+          "sourceL2": 7.529355724e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "A",
+          "outer": 2,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239548619,
+          "sourceL2": 7.523010481e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "A",
+          "outer": 3,
+          "pressureCorrector": 1,
+          "diagL2": 0.008479145126,
+          "sourceL2": 6.632108766e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "A",
+          "outer": 3,
+          "pressureCorrector": 2,
+          "diagL2": 0.008479145126,
+          "sourceL2": 6.729147536e-07
+        }
+      ],
+      "B": [
+        {
+          "variant": "TIGHT",
+          "state": "B",
+          "outer": 1,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239526886,
+          "sourceL2": 8.082131148e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "B",
+          "outer": 1,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239526886,
+          "sourceL2": 8.070013919e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "B",
+          "outer": 2,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239551078,
+          "sourceL2": 7.52955658e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "B",
+          "outer": 2,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239551078,
+          "sourceL2": 7.523209261e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "B",
+          "outer": 3,
+          "pressureCorrector": 1,
+          "diagL2": 0.008479150164,
+          "sourceL2": 6.632311414e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "B",
+          "outer": 3,
+          "pressureCorrector": 2,
+          "diagL2": 0.008479150164,
+          "sourceL2": 6.729358037e-07
+        }
+      ],
+      "D": [
+        {
+          "variant": "TIGHT",
+          "state": "D",
+          "outer": 1,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239522588,
+          "sourceL2": 8.081589179e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "D",
+          "outer": 1,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239522588,
+          "sourceL2": 8.069487721e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "D",
+          "outer": 2,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239547081,
+          "sourceL2": 7.529231642e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "D",
+          "outer": 2,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239547081,
+          "sourceL2": 7.522887754e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "D",
+          "outer": 3,
+          "pressureCorrector": 1,
+          "diagL2": 0.008479141975,
+          "sourceL2": 6.631984067e-07
+        },
+        {
+          "variant": "TIGHT",
+          "state": "D",
+          "outer": 3,
+          "pressureCorrector": 2,
+          "diagL2": 0.008479141975,
+          "sourceL2": 6.729017706e-07
+        }
+      ]
+    },
+    "Pair-HIGH": [
+      {
+        "outer": 1,
+        "pressureCorrector": 1,
+        "diag_delta": 4.298000000173274e-09,
+        "source_delta": 5.4196900000013156e-11
+      },
+      {
+        "outer": 1,
+        "pressureCorrector": 2,
+        "diag_delta": 4.298000000173274e-09,
+        "source_delta": 5.261979999993559e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 1,
+        "diag_delta": 3.997000000074968e-09,
+        "source_delta": 3.2493799999985245e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 2,
+        "diag_delta": 3.997000000074968e-09,
+        "source_delta": 3.2150700000042965e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 1,
+        "diag_delta": 8.189000000671798e-09,
+        "source_delta": 3.273470000004384e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 2,
+        "diag_delta": 8.189000000671798e-09,
+        "source_delta": 3.403309999996804e-11
+      }
+    ],
+    "Pair-LOW": [
+      {
+        "outer": 1,
+        "pressureCorrector": 1,
+        "diag_delta": 1.6539999994624743e-09,
+        "source_delta": 2.0720799999948046e-11
+      },
+      {
+        "outer": 1,
+        "pressureCorrector": 2,
+        "diag_delta": 1.6539999994624743e-09,
+        "source_delta": 2.0118700000019158e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 1,
+        "diag_delta": 1.5379999999259875e-09,
+        "source_delta": 1.2408199999948515e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 2,
+        "diag_delta": 1.5379999999259875e-09,
+        "source_delta": 1.2272700000039325e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 1,
+        "diag_delta": 3.1510000008533323e-09,
+        "source_delta": 1.2469900000055864e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 2,
+        "diag_delta": 3.1510000008533323e-09,
+        "source_delta": 1.2982999999979543e-11
+      }
+    ],
+    "stage_proxy": "P0 p/phi and compact fvMatrix diag/source are recorded before each p solve."
+  },
+  "VERY_TIGHT": {
+    "records": {
+      "A": [
+        {
+          "variant": "VERY_TIGHT",
+          "state": "A",
+          "outer": 1,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239524242,
+          "sourceL2": 8.081796387e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "A",
+          "outer": 1,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239524242,
+          "sourceL2": 8.069688908e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "A",
+          "outer": 2,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239548619,
+          "sourceL2": 7.529355724e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "A",
+          "outer": 2,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239548619,
+          "sourceL2": 7.523010481e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "A",
+          "outer": 3,
+          "pressureCorrector": 1,
+          "diagL2": 0.008479145126,
+          "sourceL2": 6.632108766e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "A",
+          "outer": 3,
+          "pressureCorrector": 2,
+          "diagL2": 0.008479145126,
+          "sourceL2": 6.729147536e-07
+        }
+      ],
+      "B": [
+        {
+          "variant": "VERY_TIGHT",
+          "state": "B",
+          "outer": 1,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239526886,
+          "sourceL2": 8.082131148e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "B",
+          "outer": 1,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239526886,
+          "sourceL2": 8.070013919e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "B",
+          "outer": 2,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239551078,
+          "sourceL2": 7.52955658e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "B",
+          "outer": 2,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239551078,
+          "sourceL2": 7.523209261e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "B",
+          "outer": 3,
+          "pressureCorrector": 1,
+          "diagL2": 0.008479150164,
+          "sourceL2": 6.632311414e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "B",
+          "outer": 3,
+          "pressureCorrector": 2,
+          "diagL2": 0.008479150164,
+          "sourceL2": 6.729358037e-07
+        }
+      ],
+      "D": [
+        {
+          "variant": "VERY_TIGHT",
+          "state": "D",
+          "outer": 1,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239522588,
+          "sourceL2": 8.081589179e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "D",
+          "outer": 1,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239522588,
+          "sourceL2": 8.069487721e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "D",
+          "outer": 2,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239547081,
+          "sourceL2": 7.529231642e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "D",
+          "outer": 2,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239547081,
+          "sourceL2": 7.522887754e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "D",
+          "outer": 3,
+          "pressureCorrector": 1,
+          "diagL2": 0.008479141975,
+          "sourceL2": 6.631984067e-07
+        },
+        {
+          "variant": "VERY_TIGHT",
+          "state": "D",
+          "outer": 3,
+          "pressureCorrector": 2,
+          "diagL2": 0.008479141975,
+          "sourceL2": 6.729017706e-07
+        }
+      ]
+    },
+    "Pair-HIGH": [
+      {
+        "outer": 1,
+        "pressureCorrector": 1,
+        "diag_delta": 4.298000000173274e-09,
+        "source_delta": 5.4196900000013156e-11
+      },
+      {
+        "outer": 1,
+        "pressureCorrector": 2,
+        "diag_delta": 4.298000000173274e-09,
+        "source_delta": 5.261979999993559e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 1,
+        "diag_delta": 3.997000000074968e-09,
+        "source_delta": 3.2493799999985245e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 2,
+        "diag_delta": 3.997000000074968e-09,
+        "source_delta": 3.2150700000042965e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 1,
+        "diag_delta": 8.189000000671798e-09,
+        "source_delta": 3.273470000004384e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 2,
+        "diag_delta": 8.189000000671798e-09,
+        "source_delta": 3.403309999996804e-11
+      }
+    ],
+    "Pair-LOW": [
+      {
+        "outer": 1,
+        "pressureCorrector": 1,
+        "diag_delta": 1.6539999994624743e-09,
+        "source_delta": 2.0720799999948046e-11
+      },
+      {
+        "outer": 1,
+        "pressureCorrector": 2,
+        "diag_delta": 1.6539999994624743e-09,
+        "source_delta": 2.0118700000019158e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 1,
+        "diag_delta": 1.5379999999259875e-09,
+        "source_delta": 1.2408199999948515e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 2,
+        "diag_delta": 1.5379999999259875e-09,
+        "source_delta": 1.2272700000039325e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 1,
+        "diag_delta": 3.1510000008533323e-09,
+        "source_delta": 1.2469900000055864e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 2,
+        "diag_delta": 3.1510000008533323e-09,
+        "source_delta": 1.2982999999979543e-11
+      }
+    ],
+    "stage_proxy": "P0 p/phi and compact fvMatrix diag/source are recorded before each p solve."
+  },
+  "FORCED": {
+    "records": {
+      "A": [
+        {
+          "variant": "FORCED",
+          "state": "A",
+          "outer": 1,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239524242,
+          "sourceL2": 8.081796387e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "A",
+          "outer": 1,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239524242,
+          "sourceL2": 8.069688908e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "A",
+          "outer": 2,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239548619,
+          "sourceL2": 7.529355724e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "A",
+          "outer": 2,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239548619,
+          "sourceL2": 7.523010481e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "A",
+          "outer": 3,
+          "pressureCorrector": 1,
+          "diagL2": 0.008479145126,
+          "sourceL2": 6.632108766e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "A",
+          "outer": 3,
+          "pressureCorrector": 2,
+          "diagL2": 0.008479145126,
+          "sourceL2": 6.729147536e-07
+        }
+      ],
+      "B": [
+        {
+          "variant": "FORCED",
+          "state": "B",
+          "outer": 1,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239526886,
+          "sourceL2": 8.082131148e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "B",
+          "outer": 1,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239526886,
+          "sourceL2": 8.070013919e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "B",
+          "outer": 2,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239551078,
+          "sourceL2": 7.52955658e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "B",
+          "outer": 2,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239551078,
+          "sourceL2": 7.523209261e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "B",
+          "outer": 3,
+          "pressureCorrector": 1,
+          "diagL2": 0.008479150164,
+          "sourceL2": 6.632311414e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "B",
+          "outer": 3,
+          "pressureCorrector": 2,
+          "diagL2": 0.008479150164,
+          "sourceL2": 6.729358037e-07
+        }
+      ],
+      "D": [
+        {
+          "variant": "FORCED",
+          "state": "D",
+          "outer": 1,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239522588,
+          "sourceL2": 8.081589179e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "D",
+          "outer": 1,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239522588,
+          "sourceL2": 8.069487721e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "D",
+          "outer": 2,
+          "pressureCorrector": 1,
+          "diagL2": 0.004239547081,
+          "sourceL2": 7.529231642e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "D",
+          "outer": 2,
+          "pressureCorrector": 2,
+          "diagL2": 0.004239547081,
+          "sourceL2": 7.522887754e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "D",
+          "outer": 3,
+          "pressureCorrector": 1,
+          "diagL2": 0.008479141975,
+          "sourceL2": 6.631984067e-07
+        },
+        {
+          "variant": "FORCED",
+          "state": "D",
+          "outer": 3,
+          "pressureCorrector": 2,
+          "diagL2": 0.008479141975,
+          "sourceL2": 6.729017706e-07
+        }
+      ]
+    },
+    "Pair-HIGH": [
+      {
+        "outer": 1,
+        "pressureCorrector": 1,
+        "diag_delta": 4.298000000173274e-09,
+        "source_delta": 5.4196900000013156e-11
+      },
+      {
+        "outer": 1,
+        "pressureCorrector": 2,
+        "diag_delta": 4.298000000173274e-09,
+        "source_delta": 5.261979999993559e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 1,
+        "diag_delta": 3.997000000074968e-09,
+        "source_delta": 3.2493799999985245e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 2,
+        "diag_delta": 3.997000000074968e-09,
+        "source_delta": 3.2150700000042965e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 1,
+        "diag_delta": 8.189000000671798e-09,
+        "source_delta": 3.273470000004384e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 2,
+        "diag_delta": 8.189000000671798e-09,
+        "source_delta": 3.403309999996804e-11
+      }
+    ],
+    "Pair-LOW": [
+      {
+        "outer": 1,
+        "pressureCorrector": 1,
+        "diag_delta": 1.6539999994624743e-09,
+        "source_delta": 2.0720799999948046e-11
+      },
+      {
+        "outer": 1,
+        "pressureCorrector": 2,
+        "diag_delta": 1.6539999994624743e-09,
+        "source_delta": 2.0118700000019158e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 1,
+        "diag_delta": 1.5379999999259875e-09,
+        "source_delta": 1.2408199999948515e-11
+      },
+      {
+        "outer": 2,
+        "pressureCorrector": 2,
+        "diag_delta": 1.5379999999259875e-09,
+        "source_delta": 1.2272700000039325e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 1,
+        "diag_delta": 3.1510000008533323e-09,
+        "source_delta": 1.2469900000055864e-11
+      },
+      {
+        "outer": 3,
+        "pressureCorrector": 2,
+        "diag_delta": 3.1510000008533323e-09,
+        "source_delta": 1.2982999999979543e-11
+      }
+    ],
+    "stage_proxy": "P0 p/phi and compact fvMatrix diag/source are recorded before each p solve."
+  }
+}

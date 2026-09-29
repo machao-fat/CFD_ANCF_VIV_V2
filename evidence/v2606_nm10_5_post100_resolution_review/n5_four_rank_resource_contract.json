@@ -1,0 +1,15 @@
+{
+  "N5_SLICES": 5,
+  "N5_RANKS_PER_SLICE": 4,
+  "N5_TOTAL_FLUID_RANKS": 20,
+  "STRUCTURE_PROCESSES": 1,
+  "nominal_concurrent_processes": 21,
+  "machine_baseline": {
+    "logical_cpus": 26,
+    "ram_approx_gib": 15
+  },
+  "N5_6_RANK_ROUTE": "NOT_SELECTED",
+  "RANK_COUNT_REQUALIFICATION_REQUIRED": "YES",
+  "recommended_ranks_per_slice": 4,
+  "reason": "MPI decomposition changes domain partitioning, reduction order, and solver execution path; 6-rank evidence cannot qualify the 4-rank route by assumption."
+}

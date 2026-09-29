@@ -1,0 +1,7 @@
+{
+  "max_courant_during_trials": 2.294980912,
+  "max_mesh_courant_during_trials": 2.294980912,
+  "min_cell_volume": 7.687364221e-10,
+  "mesh_ok": true,
+  "fatal_or_nonfinite": false
+}

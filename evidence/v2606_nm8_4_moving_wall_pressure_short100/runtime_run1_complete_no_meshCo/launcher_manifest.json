@@ -1,0 +1,30 @@
+{
+  "launcher": "${V2606_PROJECT_ROOT}/<stdin>",
+  "launcher_sha256": "89ce1bfeaac8bb3c3676578d19350c2319b1049843a8b4c24e3233f91b937e2b",
+  "case": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100",
+  "fluid": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid",
+  "solid": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/solid",
+  "xml": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/precice-config-nm8_4_short100.xml",
+  "structure_binary": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/source/clean_structure_participant/clean_structure_nm8_1",
+  "mpi_ranks": 6,
+  "fluid_command": [
+    "mpirun",
+    "-np",
+    "6",
+    "pimpleFoam",
+    "-parallel",
+    "-case",
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid"
+  ],
+  "structure_command": [
+    "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/source/clean_structure_participant/clean_structure_nm8_1",
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/precice-config-nm8_4_short100.xml",
+    "ancf_static.raw",
+    "attempt_trace.jsonl",
+    "state_attempt_",
+    "guard_event.json"
+  ],
+  "max_windows": 100,
+  "max_iterations": 50,
+  "p_relTol": 0.01
+}

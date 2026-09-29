@@ -1,0 +1,5 @@
+{
+  "TOP_BOTTOM_TENSION": "OPTIONAL_NOT_AVAILABLE",
+  "long_run_blocked": false,
+  "reason": "accepted q/v history retained; no validated reaction/tension postprocessor currently exposed"
+}

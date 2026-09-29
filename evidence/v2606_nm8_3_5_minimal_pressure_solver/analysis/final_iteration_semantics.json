@@ -1,0 +1,372 @@
+{
+  "true_nOuterCorrectors": 3,
+  "outer3_is_final_iter": true,
+  "30_outer_outer3_is_equivalent": false,
+  "selection_by_outer": {
+    "outer1": {
+      "ordinary_pressure": "p",
+      "final_pressure": "pFinal",
+      "U": "U",
+      "k": "k",
+      "omega": "omega"
+    },
+    "outer2": {
+      "ordinary_pressure": "p",
+      "final_pressure": "pFinal",
+      "U": "U",
+      "k": "k",
+      "omega": "omega"
+    },
+    "outer3": {
+      "ordinary_pressure": "p",
+      "final_pressure": "pFinal",
+      "U": "UFinal",
+      "k": "kFinal",
+      "omega": "omegaFinal"
+    }
+  },
+  "actual_pressure_selections": {
+    "P1_relTol_0p01": {
+      "A": [
+        {
+          "outer": 1,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.3608893316,
+          "final_residual": 0.003580855714,
+          "iterations": 10
+        },
+        {
+          "outer": 1,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.2368624352,
+          "final_residual": 9.907344851e-09,
+          "iterations": 136
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.2101549032,
+          "final_residual": 0.00179886855,
+          "iterations": 6
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.14018395,
+          "final_residual": 9.253973804e-09,
+          "iterations": 132
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.2124448259,
+          "final_residual": 0.002020865754,
+          "iterations": 9
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.01693619452,
+          "final_residual": 9.439317528e-09,
+          "iterations": 118
+        }
+      ],
+      "B": [
+        {
+          "outer": 1,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.3609620637,
+          "final_residual": 0.003413596105,
+          "iterations": 11
+        },
+        {
+          "outer": 1,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.2372357763,
+          "final_residual": 9.685937269e-09,
+          "iterations": 136
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.2101539411,
+          "final_residual": 0.001812118525,
+          "iterations": 6
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.1401925429,
+          "final_residual": 9.292645375e-09,
+          "iterations": 132
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.2124172891,
+          "final_residual": 0.002026220437,
+          "iterations": 9
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.016964995,
+          "final_residual": 9.438852188e-09,
+          "iterations": 118
+        }
+      ],
+      "D": [
+        {
+          "outer": 1,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.3608441585,
+          "final_residual": 0.003552498323,
+          "iterations": 10
+        },
+        {
+          "outer": 1,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.236842436,
+          "final_residual": 9.863691525e-09,
+          "iterations": 136
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.210154707,
+          "final_residual": 0.001790193891,
+          "iterations": 6
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.1401790765,
+          "final_residual": 9.232216851e-09,
+          "iterations": 132
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.2124605613,
+          "final_residual": 0.002016332136,
+          "iterations": 9
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.0169174156,
+          "final_residual": 9.433869955e-09,
+          "iterations": 118
+        }
+      ]
+    },
+    "P2_relTol_0": {
+      "A": [
+        {
+          "outer": 1,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.3608893316,
+          "final_residual": 9.73245298e-09,
+          "iterations": 140
+        },
+        {
+          "outer": 1,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.2365683523,
+          "final_residual": 9.323484241e-09,
+          "iterations": 135
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.2101566087,
+          "final_residual": 9.820172345e-09,
+          "iterations": 134
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.1400991706,
+          "final_residual": 9.5342501e-09,
+          "iterations": 129
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.2124207585,
+          "final_residual": 9.712899035e-09,
+          "iterations": 134
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.01569869275,
+          "final_residual": 9.736159659e-09,
+          "iterations": 121
+        }
+      ],
+      "B": [
+        {
+          "outer": 1,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.3609620637,
+          "final_residual": 9.80445497e-09,
+          "iterations": 140
+        },
+        {
+          "outer": 1,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.2365921791,
+          "final_residual": 9.392078934e-09,
+          "iterations": 135
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.2101566935,
+          "final_residual": 9.868753853e-09,
+          "iterations": 134
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.1400933801,
+          "final_residual": 9.575930326e-09,
+          "iterations": 129
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.212394773,
+          "final_residual": 9.790972088e-09,
+          "iterations": 134
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.01572730569,
+          "final_residual": 9.857102201e-09,
+          "iterations": 121
+        }
+      ],
+      "D": [
+        {
+          "outer": 1,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.3608441585,
+          "final_residual": 9.68771895e-09,
+          "iterations": 140
+        },
+        {
+          "outer": 1,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.2365533757,
+          "final_residual": 9.280610791e-09,
+          "iterations": 135
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.2101566697,
+          "final_residual": 9.792615334e-09,
+          "iterations": 134
+        },
+        {
+          "outer": 2,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.1401029355,
+          "final_residual": 9.511125854e-09,
+          "iterations": 129
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 1,
+          "final_inner": false,
+          "dictionary": "p",
+          "initial_residual": 0.2124369872,
+          "final_residual": 9.664113816e-09,
+          "iterations": 134
+        },
+        {
+          "outer": 3,
+          "pressure_corrector": 2,
+          "final_inner": true,
+          "dictionary": "pFinal",
+          "initial_residual": 0.01568063767,
+          "final_residual": 9.66067032e-09,
+          "iterations": 121
+        }
+      ]
+    }
+  },
+  "selection_rule_source": "/usr/lib/openfoam/openfoam2606/src/OpenFOAM/fields/GeometricFields/GeometricField/GeometricField.C (final select appends Final)",
+  "PIMPLE_final_path_observed": true
+}

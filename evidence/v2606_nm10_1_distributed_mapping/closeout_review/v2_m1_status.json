@@ -1,0 +1,18 @@
+{
+  "repository": "machao-fat/CFD_ANCF_VIV",
+  "tag": "ancf-coupling-baseline-v2",
+  "peeled_target": "8443209c4db39572f5099bec5d66a093eec7cdc3",
+  "validation_source": "tests/validation/ancf_spanwise_distributed_load_reconstruction_v1.py",
+  "validation_source_lines": "231-245",
+  "production_mode": "PiecewiseLinearDistributed",
+  "endpoint_policy": "NearestConstant",
+  "active_region_outside_load": "exact_zero",
+  "quadrature": "production Gauss-3 split at element/sample/active boundaries",
+  "independent_reference": "Python NumPy 32-point Gauss-Legendre with independent Hermite evaluator",
+  "piecewise_constant_distributed": "OPTIONAL_NOT_IMPLEMENTED_IN_V1",
+  "m1_status": "OFFLINE_DIAGNOSTIC_REFERENCE_ONLY",
+  "m1_required_for_historical_production_contract": false,
+  "source_url": "https://github.com/machao-fat/CFD_ANCF_VIV/tree/8443209c4db39572f5099bec5d66a093eec7cdc3/tests/validation/ancf_spanwise_distributed_load_reconstruction_v1.py",
+  "inspection_method": "read-only git checkout at peeled tag",
+  "no_runtime_executed": true
+}

@@ -1,0 +1,9 @@
+{
+  "ancf_core_sha256": {
+    "ancf_kernel.cpp": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+    "ancf_kernel.hpp": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c"
+  },
+  "official_adapter_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "structure_binary_sha256": "a97c82657fb99ba838c3966e5bd0bc2bd943af9741278662ddaf0109fc08df33",
+  "structure_source_sha256": "4e466f0333772899c4092173edbf058b5af5392f4b02e9358a286ee72f0719d4"
+}

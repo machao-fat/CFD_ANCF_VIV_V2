@@ -1,0 +1,12 @@
+{
+  "letter": "D",
+  "case": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_4_subsolve_D",
+  "output": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_3_4_pimple_subsolve/D",
+  "raw_D_xy": [
+    0.00020765164526087532,
+    -7.234090307965125e-05
+  ],
+  "full_raw_array_sha256": "f9171dc7b4bfa68c261abaaf39df409ee6eebd49c95877485b8db37c0bf0962e",
+  "fvSolution_sha256": "6a11816cc2fa14425d3bd7f0369423cabe68d02220ac58ab9f8c7bcb47b0e857",
+  "diagnostic_only": true
+}

@@ -1,0 +1,42 @@
+{
+  "pairs": [
+    {
+      "pair": "AB",
+      "max_face_wall_U_delta_m_per_s": 4.9511012184533234e-06,
+      "wall_U_delta_over_D_delta_per_s": 3749.908953837026,
+      "pressure_delta_over_wall_U_delta_N_s_per_m": 231.15794100400268
+    },
+    {
+      "pair": "AC",
+      "max_face_wall_U_delta_m_per_s": 1.8993610440710867e-06,
+      "wall_U_delta_over_D_delta_per_s": 3749.898229317572,
+      "pressure_delta_over_wall_U_delta_N_s_per_m": 501.3711665153679
+    },
+    {
+      "pair": "AD",
+      "max_face_wall_U_delta_m_per_s": 3.095530909642846e-06,
+      "wall_U_delta_over_D_delta_per_s": 3749.8790980927897,
+      "pressure_delta_over_wall_U_delta_N_s_per_m": 61.33456144583673
+    },
+    {
+      "pair": "BC",
+      "max_face_wall_U_delta_m_per_s": 3.0517403773550412e-06,
+      "wall_U_delta_over_D_delta_per_s": 3749.9153349189332,
+      "pressure_delta_over_wall_U_delta_N_s_per_m": 62.980955942646126
+    },
+    {
+      "pair": "BD",
+      "max_face_wall_U_delta_m_per_s": 8.046631269058459e-06,
+      "wall_U_delta_over_D_delta_per_s": 3749.8979686196103,
+      "pressure_delta_over_wall_U_delta_N_s_per_m": 165.8270051737697
+    },
+    {
+      "pair": "CD",
+      "max_face_wall_U_delta_m_per_s": 4.994891744872371e-06,
+      "wall_U_delta_over_D_delta_per_s": 3749.8865652845343,
+      "pressure_delta_over_wall_U_delta_N_s_per_m": 228.66307834058097
+    }
+  ],
+  "max_pairwise_wall_U_m_per_s": 8.046631269058459e-06,
+  "meaning": "finite-difference diagnostic gain, not physical derivative"
+}

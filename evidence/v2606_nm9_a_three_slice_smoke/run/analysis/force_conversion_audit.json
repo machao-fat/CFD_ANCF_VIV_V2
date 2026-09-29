@@ -1,0 +1,7 @@
+{
+  "factor": 70.71428571428571,
+  "max_absolute_Fstrip_error_N": 5.684341886080802e-14,
+  "pass": true,
+  "slices_converted_independently": true,
+  "source_of_conversion": "Structure received Force-S1/S2/S3 arrays"
+}

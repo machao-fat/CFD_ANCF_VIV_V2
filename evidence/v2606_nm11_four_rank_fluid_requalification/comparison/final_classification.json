@@ -1,0 +1,57 @@
+{
+  "phase": "V2606-NM11",
+  "classification": "V2606_NM11_FOUR_RANK_MOVING_WALL_COUPLING_FAIL",
+  "authorized_next_action": "MORE_DIAGNOSTICS_PRECICE_PRIMARY_COMMUNICATION",
+  "r1_decomposition": {
+    "status": "PASS",
+    "processor_count": 4,
+    "time": "29.9999999999834372",
+    "mesh_ok": true,
+    "required_restart_fields_complete": true
+  },
+  "r2_fixed_short": {
+    "status": "PASS",
+    "four_rank_max_Co": 0.8825037988,
+    "six_rank_max_Co": 0.8825042065,
+    "four_rank_mesh_ok": true,
+    "six_rank_mesh_ok": true,
+    "field_finiteness": true,
+    "force_xy_absolute_difference_N": 4.6039368674305674e-05,
+    "force_xy_relative_difference": 0.0007099904155465223
+  },
+  "r2_one_step_restart": {
+    "status": "PASS",
+    "exit_code": 0,
+    "fields_complete": true,
+    "mesh_ok": true,
+    "field_finiteness": true
+  },
+  "r3_single_slice_moving_wall": {
+    "status": "FAIL",
+    "accepted_windows": 0,
+    "required_accepted_windows": 20,
+    "forced_acceptance": 0,
+    "fluid_exit": 1,
+    "structure_exit": -15,
+    "movingWallVelocity_configured": true,
+    "p_relTol_0p01_configured": true,
+    "pFinal_relTol_0_configured": true,
+    "startup_mesh_ok": true,
+    "startup_fields_finite": true,
+    "rollback": "NOT_EXERCISED",
+    "one_global_advance": "NOT_EXERCISED",
+    "failure_stage": "preCICE primary communication handshake",
+    "failure_evidence": [
+      "structure.log ends at Setting up primary communication to coupling partner/s",
+      "fluid.log ends at Setting up primary communication to coupling partner/s",
+      "no accepted window or attempt record was produced",
+      "no FOAM FATAL, floating point exception, negative volume, or ANCF numerical error was observed"
+    ]
+  },
+  "four_rank_fluid_execution": "NOT_QUALIFIED",
+  "ANCF_core_unchanged": true,
+  "official_adapter_unchanged": true,
+  "N5_executed": false,
+  "N5_authorization": "NOT_AUTHORIZED",
+  "notes": "R1 and R2 establish healthy four-rank fixed/restart execution. R3 did not reach coupled runtime, so this is a moving-wall/preCICE startup qualification failure, not a demonstrated Fluid numerical failure."
+}

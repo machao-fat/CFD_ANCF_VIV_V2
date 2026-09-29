@@ -1,0 +1,14 @@
+{
+  "classification": "V2606_NM8_3_ROOT_CAUSE_UNRESOLVED",
+  "evidence_order": {
+    "rollback": "FLUID_PRE_SOLVE_NOT_OBSERVABLE",
+    "same_input": "NO_EXACT_NATURAL_PAIR",
+    "fluid_subsolve": "PER_OUTER_FORCE_NOT_OBSERVABLE",
+    "iqn": "CYCLIC_FORCE_RESIDUAL_WITH_CONDITIONING_WARNINGS, CAUSAL LINK NOT PROVEN",
+    "fluid_replay": "FLUID_OPERATOR_REPEATABILITY_SUPPORTED",
+    "pressure_variation": "PRESSURE_DOMINATED_LATE_CYCLE"
+  },
+  "authorized_next_action": "MORE_DIAGNOSTICS",
+  "NM9_authorized": false,
+  "why_unresolved": "Production Fluid pre-solve rollback state and per-outer force were not safely observed; diagnostic fixed-input replay uses fresh preCICE history."
+}

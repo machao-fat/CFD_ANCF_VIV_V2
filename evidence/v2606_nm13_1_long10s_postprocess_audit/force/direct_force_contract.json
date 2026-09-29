@@ -1,0 +1,15 @@
+{
+  "accepted_only": "derived after alignment",
+  "cadence": "every solver time step",
+  "components": [
+    "pressure Fx/Fy",
+    "viscous Fx/Fy",
+    "total Fx/Fy"
+  ],
+  "coupling_force_not_substituted": true,
+  "name": "DIRECT_OPENFOAM_FORCE",
+  "parallel_aggregation": "sum rank-local force.dat records by physical time before alignment",
+  "producer": "OpenFOAM forces function object",
+  "status": "READY",
+  "units": "N"
+}

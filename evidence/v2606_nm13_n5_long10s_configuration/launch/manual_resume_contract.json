@@ -1,0 +1,7 @@
+{
+  "auto_resume": "NO",
+  "command": "python3 ${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/resume_nm13.py --check-only",
+  "fail_closed": "YES",
+  "path": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/resume_nm13.py",
+  "runtime_restart_qualification": "NOT_CLAIMED"
+}

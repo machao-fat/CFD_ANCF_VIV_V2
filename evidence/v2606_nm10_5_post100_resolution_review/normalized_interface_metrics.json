@@ -1,0 +1,47 @@
+{
+  "source_evidence": "${V2606_PROJECT_ROOT}/evidence/v2606_nm10_4_distributed_mapping_fresh100/runtime/accepted_windows.jsonl",
+  "definition": "G_interface divided by local Dnorm at 4.95 m and by maximum center Dnorm for the same accepted window.",
+  "values": [
+    {
+      "window": 20,
+      "G_interface_m": 0.000011437234249233894,
+      "Dnorm_s495_m": 0.00002275845249153423,
+      "max_center_Dnorm_m": 0.00002283812294009542,
+      "G_over_Dnorm_s495": 0.5025488553533399,
+      "G_over_max_center_Dnorm": 0.5007957212260329
+    },
+    {
+      "window": 40,
+      "G_interface_m": 0.00004477431249662929,
+      "Dnorm_s495_m": 0.00009037300676591236,
+      "max_center_Dnorm_m": 0.00009099332451756241,
+      "G_over_Dnorm_s495": 0.4954390043987962,
+      "G_over_max_center_Dnorm": 0.49206150818225686
+    },
+    {
+      "window": 60,
+      "G_interface_m": 0.00010216144457785759,
+      "Dnorm_s495_m": 0.00020329215112673693,
+      "max_center_Dnorm_m": 0.00020440698136323446,
+      "G_over_Dnorm_s495": 0.5025351151612727,
+      "G_over_max_center_Dnorm": 0.4997943020170875
+    },
+    {
+      "window": 80,
+      "G_interface_m": 0.00018407772769112103,
+      "Dnorm_s495_m": 0.00036089080900367806,
+      "max_center_Dnorm_m": 0.0003672450033012318,
+      "G_over_Dnorm_s495": 0.5100648813953169,
+      "G_over_max_center_Dnorm": 0.5012395704132474
+    },
+    {
+      "window": 100,
+      "G_interface_m": 0.0002829825348598433,
+      "Dnorm_s495_m": 0.0005558174927877089,
+      "max_center_Dnorm_m": 0.0005644840501424104,
+      "G_over_Dnorm_s495": 0.5091285152623413,
+      "G_over_max_center_Dnorm": 0.5013118347426314
+    }
+  ],
+  "interpretation": "Normalized values are representation diagnostics only and are not error estimates."
+}

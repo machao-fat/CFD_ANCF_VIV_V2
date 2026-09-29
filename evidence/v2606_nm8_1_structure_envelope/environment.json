@@ -1,0 +1,336 @@
+{
+  "WM_PROJECT": "OpenFOAM",
+  "WM_PROJECT_VERSION": "v2606",
+  "WM_PROJECT_DIR": "/usr/lib/openfoam/openfoam2606",
+  "pimpleFoam_path": "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+  "pimpleFoam_realpath": "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+  "preCICE_version": "3.4.1",
+  "adapter_runtime": "${LINUX_HOME}/OpenFOAM/v2606-precice-adapter/lib/libpreciceAdapterFunctionObject.so",
+  "adapter_runtime_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "adapter_ldd_exit_code": 0,
+  "adapter_ldd": [
+    "\tlinux-vdso.so.1 (0x00007c1acbec8000)",
+    "\tlibfiniteVolume.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libfiniteVolume.so (0x00007c1acaa00000)",
+    "\tlibmeshTools.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libmeshTools.so (0x00007c1aca200000)",
+    "\tlibcompressibleTurbulenceModels.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libcompressibleTurbulenceModels.so (0x00007c1aca811000)",
+    "\tlibincompressibleTurbulenceModels.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libincompressibleTurbulenceModels.so (0x00007c1ac9e00000)",
+    "\tlibimmiscibleIncompressibleTwoPhaseMixture.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libimmiscibleIncompressibleTwoPhaseMixture.so (0x00007c1acbd01000)",
+    "\tlibprecice.so.3 => /lib/x86_64-linux-gnu/libprecice.so.3 (0x00007c1ac9a00000)",
+    "\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007c1ac9600000)",
+    "\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007c1acbc0b000)",
+    "\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007c1acbbeb000)",
+    "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007c1ac9200000)",
+    "\tlibOpenFOAM.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libOpenFOAM.so (0x00007c1ac8800000)",
+    "\tlibPstream.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/sys-openmpi/libPstream.so (0x00007c1acbbbf000)",
+    "\tlibturbulenceModels.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libturbulenceModels.so (0x00007c1aca072000)",
+    "\tlibincompressibleTransportModels.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libincompressibleTransportModels.so (0x00007c1ac9973000)",
+    "\tlibfileFormats.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libfileFormats.so (0x00007c1ac9876000)",
+    "\tlibsurfMesh.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libsurfMesh.so (0x00007c1ac8621000)",
+    "\tlibcompressibleTransportModels.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libcompressibleTransportModels.so (0x00007c1acbbb7000)",
+    "\tlibradiationModels.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libradiationModels.so (0x00007c1ac94cc000)",
+    "\tlibfluidThermophysicalModels.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libfluidThermophysicalModels.so (0x00007c1ac7e00000)",
+    "\tlibsolidThermo.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libsolidThermo.so (0x00007c1ac848e000)",
+    "\tlibsolidSpecie.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libsolidSpecie.so (0x00007c1acbb8a000)",
+    "\tlibspecie.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libspecie.so (0x00007c1ac7a00000)",
+    "\tlibtwoPhaseMixture.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseMixture.so (0x00007c1acbb63000)",
+    "\tlibtwoPhaseProperties.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libtwoPhaseProperties.so (0x00007c1aca03e000)",
+    "\tlibinterfaceProperties.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libinterfaceProperties.so (0x00007c1ac9456000)",
+    "\tlibboost_log_setup.so.1.74.0 => /lib/x86_64-linux-gnu/libboost_log_setup.so.1.74.0 (0x00007c1ac9162000)",
+    "\tlibboost_log.so.1.74.0 => /lib/x86_64-linux-gnu/libboost_log.so.1.74.0 (0x00007c1ac7d54000)",
+    "\tlibboost_program_options.so.1.74.0 => /lib/x86_64-linux-gnu/libboost_program_options.so.1.74.0 (0x00007c1ac9831000)",
+    "\tlibboost_thread.so.1.74.0 => /lib/x86_64-linux-gnu/libboost_thread.so.1.74.0 (0x00007c1aca01c000)",
+    "\tlibxml2.so.2 => /lib/x86_64-linux-gnu/libxml2.so.2 (0x00007c1ac781e000)",
+    "\tlibmpi_cxx.so.40 => /lib/x86_64-linux-gnu/libmpi_cxx.so.40 (0x00007c1ac943c000)",
+    "\tlibmpi.so.40 => /lib/x86_64-linux-gnu/libmpi.so.40 (0x00007c1ac76e7000)",
+    "\tlibpetsc_real.so.3.15 => /lib/x86_64-linux-gnu/libpetsc_real.so.3.15 (0x00007c1ac6200000)",
+    "\tlibpython3.10.so.1.0 => /lib/x86_64-linux-gnu/libpython3.10.so.1.0 (0x00007c1ac5c00000)",
+    "\t/lib64/ld-linux-x86-64.so.2 (0x00007c1acbeca000)",
+    "\tlibz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x00007c1ac9146000)",
+    "\tlibSLGThermo.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libSLGThermo.so (0x00007c1ac9432000)",
+    "\tlibthermophysicalProperties.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libthermophysicalProperties.so (0x00007c1ac7cc4000)",
+    "\tlibdistributed.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libdistributed.so (0x00007c1ac763a000)",
+    "\tlibreactionThermophysicalModels.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libreactionThermophysicalModels.so (0x00007c1ac5200000)",
+    "\tlibboost_regex.so.1.74.0 => /lib/x86_64-linux-gnu/libboost_regex.so.1.74.0 (0x00007c1ac5b0d000)",
+    "\tlibboost_filesystem.so.1.74.0 => /lib/x86_64-linux-gnu/libboost_filesystem.so.1.74.0 (0x00007c1ac9126000)",
+    "\tlibicuuc.so.70 => /lib/x86_64-linux-gnu/libicuuc.so.70 (0x00007c1ac5005000)",
+    "\tliblzma.so.5 => /lib/x86_64-linux-gnu/liblzma.so.5 (0x00007c1ac90fb000)",
+    "\tlibopen-pal.so.40 => /lib/x86_64-linux-gnu/libopen-pal.so.40 (0x00007c1ac7587000)",
+    "\tlibopen-rte.so.40 => /lib/x86_64-linux-gnu/libopen-rte.so.40 (0x00007c1ac4f48000)",
+    "\tlibhwloc.so.15 => /lib/x86_64-linux-gnu/libhwloc.so.15 (0x00007c1ac5ab1000)",
+    "\tlibHYPRE-2.22.1.so => /lib/x86_64-linux-gnu/libHYPRE-2.22.1.so (0x00007c1ac4a00000)",
+    "\tlibdmumps-5.4.so => /lib/x86_64-linux-gnu/libdmumps-5.4.so (0x00007c1ac4600000)",
+    "\tlibscalapack-openmpi.so.2.1 => /lib/x86_64-linux-gnu/libscalapack-openmpi.so.2.1 (0x00007c1ac4000000)",
+    "\tlibumfpack.so.5 => /lib/x86_64-linux-gnu/libumfpack.so.5 (0x00007c1ac4e9c000)",
+    "\tlibamd.so.2 => /lib/x86_64-linux-gnu/libamd.so.2 (0x00007c1ac8483000)",
+    "\tlibcholmod.so.3 => /lib/x86_64-linux-gnu/libcholmod.so.3 (0x00007c1ac491f000)",
+    "\tlibklu.so.1 => /lib/x86_64-linux-gnu/libklu.so.1 (0x00007c1ac5a82000)",
+    "\tlibsuperlu.so.5 => /lib/x86_64-linux-gnu/libsuperlu.so.5 (0x00007c1ac4e2a000)",
+    "\tlibsuperlu_dist.so.7 => /lib/x86_64-linux-gnu/libsuperlu_dist.so.7 (0x00007c1ac3e9c000)",
+    "\tlibtrilinos_ml.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_ml.so.13.2 (0x00007c1ac3a00000)",
+    "\tlibfftw3.so.3 => /lib/x86_64-linux-gnu/libfftw3.so.3 (0x00007c1ac3600000)",
+    "\tlibfftw3_mpi.so.3 => /lib/x86_64-linux-gnu/libfftw3_mpi.so.3 (0x00007c1ac8469000)",
+    "\tliblapack.so.3 => /lib/x86_64-linux-gnu/liblapack.so.3 (0x00007c1ac2e00000)",
+    "\tlibblas.so.3 => /lib/x86_64-linux-gnu/libblas.so.3 (0x00007c1ac4879000)",
+    "\tlibptscotch-6.1.so => /lib/x86_64-linux-gnu/libptscotch-6.1.so (0x00007c1ac3dc9000)",
+    "\tlibhdf5_openmpi.so.103 => /lib/x86_64-linux-gnu/libhdf5_openmpi.so.103 (0x00007c1ac2a00000)",
+    "\tlibOpenCL.so.1 => /lib/x86_64-linux-gnu/libOpenCL.so.1 (0x00007c1ac61ee000)",
+    "\tlibyaml-0.so.2 => /lib/x86_64-linux-gnu/libyaml-0.so.2 (0x00007c1ac4858000)",
+    "\tlibX11.so.6 => /lib/x86_64-linux-gnu/libX11.so.6 (0x00007c1ac38c0000)",
+    "\tlibmpi_mpifh.so.40 => /lib/x86_64-linux-gnu/libmpi_mpifh.so.40 (0x00007c1ac3d63000)",
+    "\tlibgfortran.so.5 => /lib/x86_64-linux-gnu/libgfortran.so.5 (0x00007c1ac2600000)",
+    "\tlibexpat.so.1 => /lib/x86_64-linux-gnu/libexpat.so.1 (0x00007c1ac4826000)",
+    "\tlibdecompositionMethods.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libdecompositionMethods.so (0x00007c1ac3cd7000)",
+    "\tlibicui18n.so.70 => /lib/x86_64-linux-gnu/libicui18n.so.70 (0x00007c1ac2200000)",
+    "\tlibicudata.so.70 => /lib/x86_64-linux-gnu/libicudata.so.70 (0x00007c1ac0400000)",
+    "\tlibevent_core-2.1.so.7 => /lib/x86_64-linux-gnu/libevent_core-2.1.so.7 (0x00007c1ac45cb000)",
+    "\tlibevent_pthreads-2.1.so.7 => /lib/x86_64-linux-gnu/libevent_pthreads-2.1.so.7 (0x00007c1ac982c000)",
+    "\tlibudev.so.1 => /lib/x86_64-linux-gnu/libudev.so.1 (0x00007c1ac3896000)",
+    "\tlibmumps_common-5.4.so => /lib/x86_64-linux-gnu/libmumps_common-5.4.so (0x00007c1ac383a000)",
+    "\tlibsuitesparseconfig.so.5 => /lib/x86_64-linux-gnu/libsuitesparseconfig.so.5 (0x00007c1ac942d000)",
+    "\tlibcolamd.so.2 => /lib/x86_64-linux-gnu/libcolamd.so.2 (0x00007c1ac8460000)",
+    "\tlibccolamd.so.2 => /lib/x86_64-linux-gnu/libccolamd.so.2 (0x00007c1ac61e1000)",
+    "\tlibcamd.so.2 => /lib/x86_64-linux-gnu/libcamd.so.2 (0x00007c1ac4e1e000)",
+    "\tlibmetis.so.5 => /lib/x86_64-linux-gnu/libmetis.so.5 (0x00007c1ac3596000)",
+    "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x00007c1ac354c000)",
+    "\tlibbtf.so.1 => /lib/x86_64-linux-gnu/libbtf.so.1 (0x00007c1ac7581000)",
+    "\tlibptscotchparmetis-6.1.so => /lib/x86_64-linux-gnu/libptscotchparmetis-6.1.so (0x00007c1ac61da000)",
+    "\tlibCombBLAS.so.1.16.0 => /lib/x86_64-linux-gnu/libCombBLAS.so.1.16.0 (0x00007c1ac45b2000)",
+    "\tlibtrilinos_ifpack.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_ifpack.so.13.2 (0x00007c1ac206e000)",
+    "\tlibtrilinos_amesos.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_amesos.so.13.2 (0x00007c1ac29ab000)",
+    "\tlibtrilinos_galeri-epetra.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_galeri-epetra.so.13.2 (0x00007c1ac2dba000)",
+    "\tlibtrilinos_aztecoo.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_aztecoo.so.13.2 (0x00007c1ac2927000)",
+    "\tlibtrilinos_zoltan.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_zoltan.so.13.2 (0x00007c1ac031e000)",
+    "\tlibtrilinos_epetraext.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_epetraext.so.13.2 (0x00007c1ac01b6000)",
+    "\tlibscotch-6.1.so => /lib/x86_64-linux-gnu/libscotch-6.1.so (0x00007c1ac2571000)",
+    "\tlibtrilinos_epetra.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_epetra.so.13.2 (0x00007c1ac0053000)",
+    "\tlibtrilinos_teuchosparameterlist.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_teuchosparameterlist.so.13.2 (0x00007c1abfc00000)",
+    "\tlibtrilinos_teuchoscore.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_teuchoscore.so.13.2 (0x00007c1abfff8000)",
+    "\tlibptscotcherr-6.1.so => /lib/x86_64-linux-gnu/libptscotcherr-6.1.so (0x00007c1ac4e19000)",
+    "\tlibbz2.so.1.0 => /lib/x86_64-linux-gnu/libbz2.so.1.0 (0x00007c1ac3cc4000)",
+    "\tlibcrypto.so.3 => /lib/x86_64-linux-gnu/libcrypto.so.3 (0x00007c1abf600000)",
+    "\tlibcurl.so.4 => /lib/x86_64-linux-gnu/libcurl.so.4 (0x00007c1abff51000)",
+    "\tlibsz.so.2 => /lib/x86_64-linux-gnu/libsz.so.2 (0x00007c1ac4821000)",
+    "\tlibxcb.so.1 => /lib/x86_64-linux-gnu/libxcb.so.1 (0x00007c1ac28fd000)",
+    "\tlibquadmath.so.0 => /lib/x86_64-linux-gnu/libquadmath.so.0 (0x00007c1ac2026000)",
+    "\tlibdynamicMesh.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libdynamicMesh.so (0x00007c1abf000000)",
+    "\tlibpord-5.4.so => /lib/x86_64-linux-gnu/libpord-5.4.so (0x00007c1ac3821000)",
+    "\tlibtrilinos_trilinosss.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_trilinosss.so.13.2 (0x00007c1ac2541000)",
+    "\tlibtrilinos_teuchosremainder.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_teuchosremainder.so.13.2 (0x00007c1ac4819000)",
+    "\tlibtrilinos_teuchosnumerics.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_teuchosnumerics.so.13.2 (0x00007c1ac28e0000)",
+    "\tlibtrilinos_teuchoscomm.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_teuchoscomm.so.13.2 (0x00007c1abfb29000)",
+    "\tlibtrilinos_triutils.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_triutils.so.13.2 (0x00007c1abfacb000)",
+    "\tlibscotcherr-6.1.so => /lib/x86_64-linux-gnu/libscotcherr-6.1.so (0x00007c1ac4814000)",
+    "\tlibtrilinos_teuchosparser.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_teuchosparser.so.13.2 (0x00007c1abfa6b000)",
+    "\tlibtrilinos_kokkoscore.so.13.2 => /lib/x86_64-linux-gnu/libtrilinos_kokkoscore.so.13.2 (0x00007c1abf576000)",
+    "\tlibnghttp2.so.14 => /lib/x86_64-linux-gnu/libnghttp2.so.14 (0x00007c1abff27000)",
+    "\tlibidn2.so.0 => /lib/x86_64-linux-gnu/libidn2.so.0 (0x00007c1abfa4a000)",
+    "\tlibrtmp.so.1 => /lib/x86_64-linux-gnu/librtmp.so.1 (0x00007c1abf557000)",
+    "\tlibssh.so.4 => /lib/x86_64-linux-gnu/libssh.so.4 (0x00007c1abf4e9000)",
+    "\tlibpsl.so.5 => /lib/x86_64-linux-gnu/libpsl.so.5 (0x00007c1abf4d5000)",
+    "\tlibssl.so.3 => /lib/x86_64-linux-gnu/libssl.so.3 (0x00007c1abf431000)",
+    "\tlibgssapi_krb5.so.2 => /lib/x86_64-linux-gnu/libgssapi_krb5.so.2 (0x00007c1abefac000)",
+    "\tlibldap-2.5.so.0 => /lib/x86_64-linux-gnu/libldap-2.5.so.0 (0x00007c1abef4c000)",
+    "\tliblber-2.5.so.0 => /lib/x86_64-linux-gnu/liblber-2.5.so.0 (0x00007c1ac353b000)",
+    "\tlibzstd.so.1 => /lib/x86_64-linux-gnu/libzstd.so.1 (0x00007c1abee7d000)",
+    "\tlibbrotlidec.so.1 => /lib/x86_64-linux-gnu/libbrotlidec.so.1 (0x00007c1ac2533000)",
+    "\tlibaec.so.0 => /lib/x86_64-linux-gnu/libaec.so.0 (0x00007c1ac45a9000)",
+    "\tlibXau.so.6 => /lib/x86_64-linux-gnu/libXau.so.6 (0x00007c1ac3cbe000)",
+    "\tlibXdmcp.so.6 => /lib/x86_64-linux-gnu/libXdmcp.so.6 (0x00007c1ac201e000)",
+    "\tlibextrudeModel.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libextrudeModel.so (0x00007c1abf40c000)",
+    "\tlibunistring.so.2 => /lib/x86_64-linux-gnu/libunistring.so.2 (0x00007c1abecd3000)",
+    "\tlibgnutls.so.30 => /lib/x86_64-linux-gnu/libgnutls.so.30 (0x00007c1abeae6000)",
+    "\tlibhogweed.so.6 => /lib/x86_64-linux-gnu/libhogweed.so.6 (0x00007c1abea9e000)",
+    "\tlibnettle.so.8 => /lib/x86_64-linux-gnu/libnettle.so.8 (0x00007c1abea58000)",
+    "\tlibgmp.so.10 => /lib/x86_64-linux-gnu/libgmp.so.10 (0x00007c1abe9d6000)",
+    "\tlibkrb5.so.3 => /lib/x86_64-linux-gnu/libkrb5.so.3 (0x00007c1abe90b000)",
+    "\tlibk5crypto.so.3 => /lib/x86_64-linux-gnu/libk5crypto.so.3 (0x00007c1abe8dc000)",
+    "\tlibcom_err.so.2 => /lib/x86_64-linux-gnu/libcom_err.so.2 (0x00007c1ac381b000)",
+    "\tlibkrb5support.so.0 => /lib/x86_64-linux-gnu/libkrb5support.so.0 (0x00007c1abe8ce000)",
+    "\tlibsasl2.so.2 => /lib/x86_64-linux-gnu/libsasl2.so.2 (0x00007c1abe8b3000)",
+    "\tlibbrotlicommon.so.1 => /lib/x86_64-linux-gnu/libbrotlicommon.so.1 (0x00007c1abe890000)",
+    "\tlibbsd.so.0 => /lib/x86_64-linux-gnu/libbsd.so.0 (0x00007c1abe878000)",
+    "\tlibblockMesh.so => /usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/lib/libblockMesh.so (0x00007c1abe7ed000)",
+    "\tlibp11-kit.so.0 => /lib/x86_64-linux-gnu/libp11-kit.so.0 (0x00007c1abe6b2000)",
+    "\tlibtasn1.so.6 => /lib/x86_64-linux-gnu/libtasn1.so.6 (0x00007c1abe69a000)",
+    "\tlibkeyutils.so.1 => /lib/x86_64-linux-gnu/libkeyutils.so.1 (0x00007c1abe693000)",
+    "\tlibresolv.so.2 => /lib/x86_64-linux-gnu/libresolv.so.2 (0x00007c1abe680000)",
+    "\tlibmd.so.0 => /lib/x86_64-linux-gnu/libmd.so.0 (0x00007c1abe673000)",
+    "\tlibffi.so.8 => /lib/x86_64-linux-gnu/libffi.so.8 (0x00007c1abe666000)"
+  ],
+  "OF10_contamination": false,
+  "OF_v2606_environment_pass": true,
+  "official_adapter_identity": {
+    "tag": "v1.4.0",
+    "commit": "0801887b958f3101389cb719838dc8fc864d5369"
+  },
+  "frozen_release_restart_and_mesh_sha256": {
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor0/29.9999999999834372/U": {
+      "bytes": 196508,
+      "sha256": "51ca5b6e901d7ed48c89334c8d349bfb0d8924beb189806cbc9859906085926b"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor0/29.9999999999834372/p": {
+      "bytes": 66722,
+      "sha256": "f44d8e6a34535392ddcc3f72591b3a2d5405aff1fcd1fe125fa5c23bbb965ef3"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor0/29.9999999999834372/phi": {
+      "bytes": 128890,
+      "sha256": "1e20404ad2ebf4f6751769559eaa97acdcbd4b1200ba1d146c9d5c68613a4eec"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor0/29.9999999999834372/k": {
+      "bytes": 66769,
+      "sha256": "899771862f452ca5122ae147e6f2bb4ed0e29a9738b8fe65d0d3a1b16d4a68f3"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor0/29.9999999999834372/omega": {
+      "bytes": 66833,
+      "sha256": "4561c365c70068f870bf509ac0adcda92ba7a67389810f059a51ba16f14057b9"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor0/29.9999999999834372/nut": {
+      "bytes": 66860,
+      "sha256": "ad4ebddebf393a5ba0ae596e002df006e6f5cf010a1bed88b073221ba1dda4fe"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor0/constant/polyMesh/points": {
+      "bytes": 391450,
+      "sha256": "e0c63941074825c4668a7a7007f9b74582cb1018d3b998879d1480469d2b11de"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor1/29.9999999999834372/U": {
+      "bytes": 194187,
+      "sha256": "9971be2c39aa1e9d76a3df161b4f914b32cdedf520c7137c352fa20f544c3bd9"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor1/29.9999999999834372/p": {
+      "bytes": 65930,
+      "sha256": "ba96c44400b4446a1a9c34205fbc29ea8be55dd4e1d0f5e903d755d5a2c8c4e8"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor1/29.9999999999834372/phi": {
+      "bytes": 127721,
+      "sha256": "791515a91f4701ae61302a6a243cce51f0dea987b715c257ad79ccee8f71116a"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor1/29.9999999999834372/k": {
+      "bytes": 66000,
+      "sha256": "081577ae97d09f1cad2f7ab4e8ccb9c1bf40d3a4dee338a31eabb850418a18c6"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor1/29.9999999999834372/omega": {
+      "bytes": 66067,
+      "sha256": "84c974923568b1950b3dca54d2525e6c14e15c78c21f76b8ec5ab6cc3de10b4d"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor1/29.9999999999834372/nut": {
+      "bytes": 66779,
+      "sha256": "0e96efe8ed8cbde2e338a66973a7f433be0520ff7b3a3fde89508a7e2dd30cee"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor1/constant/polyMesh/points": {
+      "bytes": 385066,
+      "sha256": "de63b88588a623d62bb574fef4caa54a7169c5a4c7d3dd00a5458f6d9db90a19"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor2/29.9999999999834372/U": {
+      "bytes": 193299,
+      "sha256": "9f51e4a2513409d333cd1dbab76573d1d4464f1303423b47852277e41ab61a2b"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor2/29.9999999999834372/p": {
+      "bytes": 65634,
+      "sha256": "13f390558564a72bca04827cbac261f6e69b93dad87d83fe04a13c8d516b5300"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor2/29.9999999999834372/phi": {
+      "bytes": 126385,
+      "sha256": "c2d119c46f735c161887973f473d0b880455b95a9a37ab5fee9426fdeca6cef7"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor2/29.9999999999834372/k": {
+      "bytes": 65704,
+      "sha256": "6fd79518aea5bf4b0f2c23b0b7fa5e15f2f2337d97861e18bd9db094ce1879d5"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor2/29.9999999999834372/omega": {
+      "bytes": 65771,
+      "sha256": "5d6d22c1269b7010d31c05625640efc6c317f295ac0bc8d17fcdaee2cc9d1ed2"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor2/29.9999999999834372/nut": {
+      "bytes": 66179,
+      "sha256": "6b6f20b63154f02d448fbe6d9264f1db28653d41aab3b2ad17c9b80ed69d2ca1"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor2/constant/polyMesh/points": {
+      "bytes": 381898,
+      "sha256": "9a3f48131fd20aa85c7d710057ba85b678255b6bb4a6d90f1f2946f04c98fb15"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor3/29.9999999999834372/U": {
+      "bytes": 200773,
+      "sha256": "6825258592bc22d9a326e573d8c9daf4e0235227ede64d046a8e819099303a68"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor3/29.9999999999834372/p": {
+      "bytes": 68308,
+      "sha256": "c9d24eed8c23db85ffc457ce7f08007badab47a36d3974d318fa18ff123d8cd7"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor3/29.9999999999834372/phi": {
+      "bytes": 129374,
+      "sha256": "d051414e0a87fe9604c9ecf6016f30d98e8bd496ad2145607c54d6a83b2bd19d"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor3/29.9999999999834372/k": {
+      "bytes": 68362,
+      "sha256": "fa693320dd695b41f3ad9e9dc6d0cbe0436248e25d7146d199ee70a76c6ec8e7"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor3/29.9999999999834372/omega": {
+      "bytes": 68429,
+      "sha256": "cd60a0cdce114c2aa941643ee77f90bd9907e029dd3e297783df699c970545ef"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor3/29.9999999999834372/nut": {
+      "bytes": 68448,
+      "sha256": "d16c0b9f448f8b99dc7769aec72ab9493e68d7f1dad3faf1311fea0be98769fc"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor3/constant/polyMesh/points": {
+      "bytes": 387418,
+      "sha256": "311dab88a6332198b9ae975af3b22ed77fcb18287e7c58dee00ac9b4a6324a8e"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor4/29.9999999999834372/U": {
+      "bytes": 195374,
+      "sha256": "1fe72a8360235550ff01d98bc383285cbddf5a9254d18e96309382d856b1bdae"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor4/29.9999999999834372/p": {
+      "bytes": 66263,
+      "sha256": "c3edceca3c2845906284d5ac25394c0ae79ace125b577bd7c56b9bd67567af34"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor4/29.9999999999834372/phi": {
+      "bytes": 127433,
+      "sha256": "f5e645267d7a5d5f6d9220b9bf220476afb8ded92f4bfe08e3b516d4dbab3813"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor4/29.9999999999834372/k": {
+      "bytes": 67179,
+      "sha256": "3b5c3610cce9b3547682f7051f98b770e20e4f89a047dfa8e54ecee9a3376196"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor4/29.9999999999834372/omega": {
+      "bytes": 67246,
+      "sha256": "80f02c10b83e827aac6929785fc7cd869a1389b364e349f966e55dde00d5f814"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor4/29.9999999999834372/nut": {
+      "bytes": 66387,
+      "sha256": "4f52167a15b77f5c8261c298b4108c22842ccfc5636decb17eb0795ae5b0d530"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor4/constant/polyMesh/points": {
+      "bytes": 384442,
+      "sha256": "0114b37729c70dc4bdb37ab962af5e60670107c19fa9a5753fb659ad77095cef"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor5/29.9999999999834372/U": {
+      "bytes": 195230,
+      "sha256": "cb2eab4c9ae6310b6d436fe8eb75635738e4d9bff6b946c850caee8809e8ccca"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor5/29.9999999999834372/p": {
+      "bytes": 66215,
+      "sha256": "d970587374cb6532d1aecbdb19ae3cd1faf46ee76023adbe68315eeaa78dc490"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor5/29.9999999999834372/phi": {
+      "bytes": 127297,
+      "sha256": "4870188590f3ccc3d37a9c564a201c7bfea5bb92b02ca10b1075938a32a07035"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor5/29.9999999999834372/k": {
+      "bytes": 67018,
+      "sha256": "39112fa89d3827846a438a9cfbb444e7a2a9f656d759cc7b4d3500ae4ef35eb5"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor5/29.9999999999834372/omega": {
+      "bytes": 67085,
+      "sha256": "d558266147e7216db7df8cdd257b61b282e539026fc5d017883948551f9f75bc"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor5/29.9999999999834372/nut": {
+      "bytes": 66339,
+      "sha256": "34f52de6fd04ff92b93565589ee8e61c786c08e77b99fbdb08f4a047d2410206"
+    },
+    "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30/processor5/constant/polyMesh/points": {
+      "bytes": 383626,
+      "sha256": "79dce771b0511289a2cea4e4fcbf111e009a79678918fc789a4e96a088d3fa9b"
+    }
+  }
+}

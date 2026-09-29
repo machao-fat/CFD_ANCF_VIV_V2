@@ -1,0 +1,7 @@
+{
+  "factor": 70.71428571428571,
+  "contract": "Fstrip = Fraw / 0.028 * 1.98",
+  "exactly_once": true,
+  "max_component_abs_error_N": 4.440892098500626e-16,
+  "accepted_window_count": 100
+}

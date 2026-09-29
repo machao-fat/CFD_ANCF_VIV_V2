@@ -1,0 +1,5 @@
+{
+  "command": "python3 ${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch_nm13.py --check-only",
+  "result": "all checks passed; no pimpleFoam, Structure, or preCICE launch",
+  "status": "PASS"
+}

@@ -1,0 +1,110 @@
+{
+  "start": {
+    "type": "movingWallVelocity",
+    "six_of_six": true
+  },
+  "samples": {
+    "1": {
+      "attemptOrdinal": 15,
+      "wall": {
+        "time": 30.0004,
+        "maxU": 0.000679826142,
+        "maxFaceSpeed": 0.0003392465191,
+        "maxFaceMotion": 1.356986076e-07,
+        "maxNormalU": 0.0006798211016
+      },
+      "Dx_m": 1.249647094798516e-07,
+      "Dy_m": -5.2895495969171426e-08,
+      "Dnorm_m": 1.3569860761705824e-07
+    },
+    "20": {
+      "attemptOrdinal": 67,
+      "wall": {
+        "time": 30.008,
+        "maxU": 0.01519802727,
+        "maxFaceSpeed": 0.01490797764,
+        "maxFaceMotion": 5.963191054e-06,
+        "maxNormalU": 0.01519743993
+      },
+      "Dx_m": 6.219995394607937e-05,
+      "Dy_m": -2.473230527140406e-05,
+      "Dnorm_m": 6.693669542883272e-05
+    },
+    "39": {
+      "attemptOrdinal": 105,
+      "wall": {
+        "time": 30.0156,
+        "maxU": 0.0232118868,
+        "maxFaceSpeed": 0.02304464312,
+        "maxFaceMotion": 9.217857247e-06,
+        "maxNormalU": 0.02320677775
+      },
+      "Dx_m": 0.00020318891255132707,
+      "Dy_m": -7.133369391222678e-05,
+      "Dnorm_m": 0.00021534676703158118
+    },
+    "50": {
+      "attemptOrdinal": 127,
+      "wall": {
+        "time": 30.02,
+        "maxU": 0.02624940842,
+        "maxFaceSpeed": 0.02611853805,
+        "maxFaceMotion": 1.044741522e-05,
+        "maxNormalU": 0.0262434207
+      },
+      "Dx_m": 0.00030851583853905556,
+      "Dy_m": -9.952262323813607e-05,
+      "Dnorm_m": 0.00032417090425523474
+    },
+    "100": {
+      "attemptOrdinal": 227,
+      "wall": {
+        "time": 30.04,
+        "maxU": 0.03358671365,
+        "maxFaceSpeed": 0.03350553257,
+        "maxFaceMotion": 1.340221303e-05,
+        "maxNormalU": 0.03355948972
+      },
+      "Dx_m": 0.000909494307301374,
+      "Dy_m": -0.0001663720341610035,
+      "Dnorm_m": 0.0009245861499960272
+    }
+  },
+  "runtime_nonzero_wall_motion": true,
+  "final_bc_audit": {
+    "pass": true,
+    "ranks": [
+      {
+        "rank": 0,
+        "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor0/30.039999999983344/U",
+        "type": "movingWallVelocity"
+      },
+      {
+        "rank": 1,
+        "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor1/30.039999999983344/U",
+        "type": "movingWallVelocity"
+      },
+      {
+        "rank": 2,
+        "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor2/30.039999999983344/U",
+        "type": "movingWallVelocity"
+      },
+      {
+        "rank": 3,
+        "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor3/30.039999999983344/U",
+        "type": "movingWallVelocity"
+      },
+      {
+        "rank": 4,
+        "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor4/30.039999999983344/U",
+        "type": "movingWallVelocity"
+      },
+      {
+        "rank": 5,
+        "path": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_4_short100/fluid/processor5/30.039999999983344/U",
+        "type": "movingWallVelocity"
+      }
+    ]
+  },
+  "wall_observer_records": 227
+}

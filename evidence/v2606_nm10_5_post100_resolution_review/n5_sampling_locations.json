@@ -1,0 +1,35 @@
+{
+  "active_region_m": [
+    0,
+    5.94
+  ],
+  "locations_m": [
+    0,
+    0.594,
+    1.188,
+    1.782,
+    2.376,
+    2.97,
+    3.564,
+    4.158,
+    4.752,
+    5.346,
+    5.94
+  ],
+  "centers_m": [
+    0.594,
+    1.782,
+    2.97,
+    4.158,
+    5.346
+  ],
+  "boundaries_m": [
+    0,
+    1.188,
+    2.376,
+    3.564,
+    4.752,
+    5.94
+  ],
+  "diagnostics": "For each cell, center-to-left-boundary and center-to-right-boundary displacement differences."
+}

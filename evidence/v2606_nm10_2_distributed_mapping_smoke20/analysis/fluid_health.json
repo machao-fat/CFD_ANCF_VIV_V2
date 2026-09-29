@@ -1,0 +1,68 @@
+{
+  "all_fields_finite": true,
+  "co_meshco": {
+    "s099": {
+      "max_Co": 0.8822924897,
+      "max_meshCo": 0.03700751768
+    },
+    "s297": {
+      "max_Co": 0.8822924897,
+      "max_meshCo": 0.03633677612
+    },
+    "s495": {
+      "max_Co": 0.8822924897,
+      "max_meshCo": 0.03669359452
+    }
+  },
+  "initial_and_final_mesh": {
+    "s099": {
+      "initial": {
+        "min_volume": 7.687364233e-10,
+        "max_nonorthogonality": 43.84604596,
+        "max_skewness": 0.8969795303,
+        "max_aspect_ratio": 7.659081709,
+        "mesh_ok": true
+      },
+      "final": {
+        "min_volume": 7.687364233e-10,
+        "max_nonorthogonality": 43.84604596,
+        "max_skewness": 0.8969795303,
+        "max_aspect_ratio": 7.659081709,
+        "mesh_ok": true
+      }
+    },
+    "s297": {
+      "initial": {
+        "min_volume": 7.687364233e-10,
+        "max_nonorthogonality": 43.84604596,
+        "max_skewness": 0.8969795303,
+        "max_aspect_ratio": 7.659081709,
+        "mesh_ok": true
+      },
+      "final": {
+        "min_volume": 7.687364233e-10,
+        "max_nonorthogonality": 43.84604596,
+        "max_skewness": 0.8969795303,
+        "max_aspect_ratio": 7.659081709,
+        "mesh_ok": true
+      }
+    },
+    "s495": {
+      "initial": {
+        "min_volume": 7.687364233e-10,
+        "max_nonorthogonality": 43.84604596,
+        "max_skewness": 0.8969795303,
+        "max_aspect_ratio": 7.659081709,
+        "mesh_ok": true
+      },
+      "final": {
+        "min_volume": 7.687364233e-10,
+        "max_nonorthogonality": 43.84604596,
+        "max_skewness": 0.8969795303,
+        "max_aspect_ratio": 7.659081709,
+        "mesh_ok": true
+      }
+    }
+  },
+  "independent_fluid_fatal": false
+}

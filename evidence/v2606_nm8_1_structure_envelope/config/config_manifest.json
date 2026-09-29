@@ -1,0 +1,62 @@
+{
+  "phase": "V2606-NM8.1 structural motion envelope qualification",
+  "project_root": "${V2606_PROJECT_ROOT}",
+  "frozen_release": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "scratch": "${LINUX_HOME}/nm8_1.zEzsm6",
+  "start_time_directory": "29.9999999999834372",
+  "end_time_s": 30.4,
+  "OpenFOAM": "OpenFOAM.com v2606",
+  "preCICE": "3.4.1",
+  "adapter_tag": "v1.4.0",
+  "adapter_commit": "0801887b958f3101389cb719838dc8fc864d5369",
+  "adapter_runtime": "${LINUX_HOME}/OpenFOAM/v2606-precice-adapter/lib/libpreciceAdapterFunctionObject.so",
+  "adapter_runtime_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "official_adapter_source_modified": false,
+  "OpenFOAM_10_runtime_contamination": false,
+  "scheme": "parallel-implicit",
+  "fluid_mpi_ranks": 6,
+  "max_windows": 1000,
+  "dt_s": 0.0004,
+  "strict_convergence": {
+    "Force": 0.005,
+    "Displacement": 0.005,
+    "max_iterations": 50
+  },
+  "IQN_ILS": {
+    "QR2_limit": 0.01,
+    "initial_relaxation": 0.5,
+    "max_used_iterations": 100,
+    "time_windows_reused": 15
+  },
+  "PIMPLE": {
+    "nOuterCorrectors": 3,
+    "nCorrectors": 2,
+    "nNonOrthogonalCorrectors": 0,
+    "checkMeshCourantNo": true
+  },
+  "diagnostic_only_settings": {
+    "PIMPLE.checkMeshCourantNo": true,
+    "numerical_equations_modified": false
+  },
+  "storage": {
+    "writeControl": "timeStep",
+    "writeInterval": 250,
+    "purgeWrite": 2,
+    "disk_guard_free_bytes": 10000000000
+  },
+  "structure": "NM5 frozen clean participant wrapper contract; P1_REF_NE32 q0, v0=0",
+  "energy_interfaces": {
+    "kinetic": "read-only State.mass quadratic form",
+    "strain_internal": "NOT_AVAILABLE_PUBLIC_CORE_API",
+    "external_power": "Force dot coupling-point velocity",
+    "external_work": "NOT_AVAILABLE"
+  },
+  "configuration_sha256": {
+    "system/controlDict": "d4f28ce30ac84f450515602abc6af1c9247d353524745a19e726ffc308e0236e",
+    "system/fvSchemes": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+    "system/fvSolution": "e84ffcb7f08ca0718ec09a761928d26ecccef46f7627b8526cb7340b46174216",
+    "system/preciceDict": "3e3b0e93d9494e18053cc22e5482add48e1ce02e04dc25ae10512096efdb2144",
+    "constant/dynamicMeshDict": "4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb",
+    "precice-config-nm8_1.xml": "eb0548dc4216f27d6edffe6e28981e756608dc449639901102a1ea410594150f"
+  }
+}

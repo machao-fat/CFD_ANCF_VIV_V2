@@ -1,0 +1,7 @@
+{
+  "scale": 70.71428571428571,
+  "max_absolute_rounding_difference_N": 4.440892098500626e-16,
+  "attempts_checked": 50,
+  "exactly_once_supported": true,
+  "source": "Structure received coupling Force; direct Fluid force is separate."
+}

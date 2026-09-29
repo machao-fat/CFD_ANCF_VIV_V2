@@ -1,0 +1,30 @@
+{
+  "source_state_file": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_3_1_four_state_response/input/four_readData_states.json",
+  "source_time": "30.0151999999834018",
+  "target_time": "30.0155999999834009",
+  "diagnostic_solver": "${LINUX_HOME}/OpenFOAM/machao-v2606/platforms/linux64GccDPInt32Opt/bin/nm835PimpleFoam",
+  "states": {
+    "A": {
+      "raw_D_xy": [
+        0.00020765246670545467,
+        -7.234082133878694e-05
+      ],
+      "full_raw_array_sha256": "d176f245c76e2902de9bf782ed0c1562aac4cec7b3216e44186d2c0d5bc33a50"
+    },
+    "B": {
+      "raw_D_xy": [
+        0.00020765378035482516,
+        -7.234068872912082e-05
+      ],
+      "full_raw_array_sha256": "6788dcd6c214e175a05b473d68d121b2a422b79626fa83fb3f9c250d42dab01a"
+    },
+    "D": {
+      "raw_D_xy": [
+        0.00020765164526087532,
+        -7.234090307965125e-05
+      ],
+      "full_raw_array_sha256": "f9171dc7b4bfa68c261abaaf39df409ee6eebd49c95877485b8db37c0bf0962e"
+    }
+  },
+  "production_untouched": true
+}

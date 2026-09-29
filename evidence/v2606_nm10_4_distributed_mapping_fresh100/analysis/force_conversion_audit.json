@@ -1,0 +1,7 @@
+{
+  "formula": "Fraw_N / 0.028_m = f_Npm",
+  "max_abs_error": 0.0,
+  "pass": true,
+  "distributed_tributary_multiplier_used": false,
+  "legacy_factor_used": false
+}

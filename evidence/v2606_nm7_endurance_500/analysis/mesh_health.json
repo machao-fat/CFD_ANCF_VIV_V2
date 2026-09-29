@@ -1,0 +1,27 @@
+{
+  "initial": {
+    "source": "NM7 scratch at initial 30 s release state",
+    "mesh_ok": true,
+    "min_volume_m3": 7.687364233e-10,
+    "max_nonorthogonality_deg": 43.84604596,
+    "max_skewness": 0.8969795303
+  },
+  "window250": {
+    "exact_window250_checkMesh": false,
+    "surrogate_window": 300,
+    "surrogate_time_s": 30.119999999983158,
+    "checkMesh_log_present": true,
+    "mesh_ok": true,
+    "min_volume_m3": 7.687364134e-10,
+    "max_nonorthogonality_deg": 44.26710101,
+    "max_skewness": 0.8989658148,
+    "note": "No full field write exists at window 250 under the 100-step policy. The nearest retained read-only mesh check was window 300; runtime mesh solver passed through window 250 without mesh fatal."
+  },
+  "window500": {
+    "checkMesh_log_present": true,
+    "mesh_ok": true,
+    "min_volume_m3": 7.687364014e-10,
+    "max_nonorthogonality_deg": 44.92470634,
+    "max_skewness": 0.9060235669
+  }
+}

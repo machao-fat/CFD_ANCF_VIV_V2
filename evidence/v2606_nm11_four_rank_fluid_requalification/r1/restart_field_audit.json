@@ -1,0 +1,36 @@
+{
+  "all_complete": true,
+  "ranks": 4,
+  "required_fields": [
+    "U",
+    "p",
+    "phi",
+    "k",
+    "omega",
+    "nut",
+    "pointDisplacement"
+  ],
+  "rows": [
+    {
+      "complete": true,
+      "missing": [],
+      "rank": 0
+    },
+    {
+      "complete": true,
+      "missing": [],
+      "rank": 1
+    },
+    {
+      "complete": true,
+      "missing": [],
+      "rank": 2
+    },
+    {
+      "complete": true,
+      "missing": [],
+      "rank": 3
+    }
+  ],
+  "time": "29.9999999999834372"
+}

@@ -1,0 +1,10 @@
+{
+  "controlDict_sha256": "082443dc4a0473c4197c3d25ee4ef2b2b297931e8b6e5fef2bd3eb029af461a0",
+  "fvSchemes_sha256": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+  "fvSolution_sha256": "3a0fbc8bab5998b89074bb6f28bac18a3a65c75b016ecd41240444bdfe958e80",
+  "release_time_s": 29.999999999983437,
+  "source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "source_fields_complete": true,
+  "source_ranks": 6,
+  "time_directory": "29.9999999999834372"
+}

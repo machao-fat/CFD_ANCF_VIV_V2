@@ -1,0 +1,35 @@
+{
+  "review_mode": "read_only_existing_artifacts",
+  "replay_log": "replay/structure_replay.log",
+  "replay_status": "M0_M2 completed normally; 100 rows each; finite output verified",
+  "shared_inputs": {
+    "q0": "YES; same frozen P1_REF_NE32 source path in existing replay executable",
+    "v0": "YES; same make_reference_state initialization",
+    "dt": "YES; same DT=4e-4 in existing replay source",
+    "prescribed_NM9B_force_history": "YES; same nm9b_force_history.csv",
+    "frozen_ANCF_integrator": "YES; same frozen ancf_kernel.cpp/.hpp hashes"
+  },
+  "M0_LegacyPointLumped": {
+    "completed_normally": true,
+    "finite": true,
+    "max_abs_Dx_m": 0.001102418895643758,
+    "max_abs_Dy_m": 0.0002059364281308132,
+    "max_dense_D_m": 0.001120840954005904,
+    "max_center_boundary_D594_minus_D495_m": 0.0010211668861745133,
+    "cumulative_signed_work": 0.010786585831582804,
+    "cumulative_absolute_work": 0.010786585831582804
+  },
+  "M2_PiecewiseLinearDistributed": {
+    "completed_normally": true,
+    "finite": true,
+    "max_abs_Dx_m": 0.0005969368548046178,
+    "max_abs_Dy_m": 0.00014299104997804988,
+    "max_dense_D_m": 0.0006138241189443882,
+    "max_center_boundary_D594_minus_D495_m": 0.0003051344028141976,
+    "cumulative_signed_work": 0.005374227500104111,
+    "cumulative_absolute_work": 0.005374227500104111
+  },
+  "existing_localization_classification": "NOT_REPORTED_IN_EXISTING_ARTIFACTS",
+  "do_not_infer_localization_causality": true,
+  "M1_trajectory": "NOT_AVAILABLE; load/power diagnostic only"
+}

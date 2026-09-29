@@ -1,0 +1,14 @@
+{
+  "fluid_pid_saved": true,
+  "structure_pid_saved": true,
+  "monitor_runs_as_child_without_owning_launcher_waits": true,
+  "launcher_waits_for_fluid_pid": true,
+  "launcher_waits_for_structure_pid": true,
+  "participant_exit_codes_persisted": "runtime/process_exit.json",
+  "wrapper_exit_code_persisted": "runtime/process_exit.json",
+  "monitor_exit_code_persisted": true,
+  "no_monitor_path_exits_wrapper_before_both_waits": true,
+  "active_run_monitor_formatting_defect": "The initial live run emitted command-not-found diagnostics from the monitor-only disk JSON printf line; it did not terminate the participant loop or alter CFD/Structure processes.",
+  "independent_live_disk_monitor": "runtime/disk_usage_trace_external.jsonl; checks the same 10 GB disk guard and full-field policy while launcher waits both participant PIDs",
+  "exit_code_capture_path_remains_active": true
+}

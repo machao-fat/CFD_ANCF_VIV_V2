@@ -1,0 +1,19 @@
+{
+  "fluid_time": "30.0151999999834018",
+  "fluid_timeIndex": 75038,
+  "structure_physical_time": 30.0152,
+  "precice_window_index": 38,
+  "accepted_structure_q_sha256": "0e8ecb4c39a9abfb246495b86e17d83a143f4ac3614292a718ea51055a8f26e7",
+  "accepted_structure_v_sha256": "764b37455b47cc1e7a02118fa2d11d80fffcf6d0b77152301218ede82d7ef144",
+  "next_window_checkpoint_q_sha256": "0e8ecb4c39a9abfb246495b86e17d83a143f4ac3614292a718ea51055a8f26e7",
+  "next_window_checkpoint_v_sha256": "764b37455b47cc1e7a02118fa2d11d80fffcf6d0b77152301218ede82d7ef144",
+  "fluid_restart_manifest": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_3_moving_wall_failure/window38/restart_manifest.json",
+  "U_oldTime": "ON_DISK_U_0_AVAILABLE_NOT_IN_MEMORY_BITWISE_AUDITED",
+  "p_oldTime": "NOT_OBSERVABLE",
+  "phi_oldTime": "ON_DISK_phi_0_AVAILABLE_NOT_IN_MEMORY_BITWISE_AUDITED",
+  "k_oldTime": "ON_DISK_k_0_AVAILABLE_NOT_IN_MEMORY_BITWISE_AUDITED",
+  "omega_oldTime": "ON_DISK_omega_0_AVAILABLE_NOT_IN_MEMORY_BITWISE_AUDITED",
+  "nut_oldTime": "NOT_OBSERVABLE",
+  "meshPhi_oldTime": "NOT_OBSERVABLE",
+  "V_V0_V00": "PARTIAL_V0_ON_DISK_ONLY"
+}

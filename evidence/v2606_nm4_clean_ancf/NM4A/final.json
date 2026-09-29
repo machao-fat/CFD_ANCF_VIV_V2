@@ -1,0 +1,10 @@
+{
+  "classification": "V2606_NM4_A_CLEAN_PARTICIPANT_PASS",
+  "failures": [],
+  "attempts": 4,
+  "rollback": true,
+  "q_v_restore_exact": true,
+  "force_conversion_once": true,
+  "absolute_displacement_max_error_m": 0.0,
+  "fluid_max_Courant": 0.8822924897
+}

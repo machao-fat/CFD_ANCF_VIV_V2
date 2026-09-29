@@ -1,0 +1,17 @@
+{
+  "frozen_release": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "frozen_release_hashes": {
+    "system_controlDict": "082443dc4a0473c4197c3d25ee4ef2b2b297931e8b6e5fef2bd3eb029af461a0",
+    "system_fvSchemes": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+    "system_fvSolution": "3a0fbc8bab5998b89074bb6f28bac18a3a65c75b016ecd41240444bdfe958e80"
+  },
+  "official_adapter_hashes": {
+    "controlDict": "8715be1dea90975d10d708c00041c6390efef1b8ee5efd5ffc41f3218f82f293",
+    "fvSchemes": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+    "fvSolution": "42efc5d385706740f9a101fecd5be535e3079aed1871dc1cf106d1df7c469ff6",
+    "preciceDict": "e40c92b88da9f9ca017399f4c80d65497b0b5eec4c5c8ef7b144a8de130abbef",
+    "dynamicMeshDict": "4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb"
+  },
+  "ancf_core_hash": "b298979244f67e23d02a63566e718ccb1f8897570c12b0aab98f7cbbf6577091",
+  "source_untouched": true
+}

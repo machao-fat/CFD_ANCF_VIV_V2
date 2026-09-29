@@ -1,0 +1,30 @@
+{
+  "source": "case/hh06_v2606_fixed30/system/fvSolution",
+  "p": {
+    "solver": "GAMG",
+    "smoother": "GaussSeidel",
+    "tolerance": 1e-8,
+    "relTol": 0.1
+  },
+  "pFinal": {
+    "inherits": "p",
+    "relTol": 0,
+    "effective_solver": "GAMG",
+    "effective_smoother": "GaussSeidel",
+    "effective_tolerance": 1e-8
+  },
+  "pcorr.*": {
+    "solver": "GAMG",
+    "smoother": "GaussSeidel",
+    "tolerance": 1e-8,
+    "relTol": 0
+  },
+  "first_amplification_pressure_solve": {
+    "outer": 1,
+    "pressure_corrector": 1,
+    "dictionary": "p",
+    "diagnostic_variant_dictionary": "p",
+    "note": "The diagnostic run replaces p/pFinal with 1e-10 relTol 0; pcorr remains production."
+  },
+  "correctPhi": "mesh.dynamic() default from v2606 createDyMControls.H; no explicit fvSolution override"
+}

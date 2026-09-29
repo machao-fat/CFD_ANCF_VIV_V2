@@ -1,0 +1,26 @@
+{
+  "common_grid": "0..5.94 m with all strip boundaries and <=0.025 m spacing",
+  "loading": [
+    "piecewise constant fx,fy from accepted Fstrip / tributary width",
+    "L2 spatial force-density difference on common refinement of strip partitions",
+    "integrated Fx,Fy",
+    "common generalized Q under explicitly declared mapping",
+    "first six validated modal generalized forces if compatible basis available"
+  ],
+  "matched_time_initial_state": "fresh frozen30; q0 P1_REF_NE32; v0=0; dt=4e-4; corrected moving wall; p.relTol=.01; same IQN",
+  "numerical_health_not_spatial_convergence": [
+    "coupling iterations",
+    "accepted Co",
+    "accepted meshCo"
+  ],
+  "requires_actual_coupled_N5_N10_N20_solutions": true,
+  "structural": [
+    "max absolute vector D difference",
+    "max absolute Dx,Dy difference",
+    "max vector D difference / 0.028",
+    "L2 spatial vector D difference",
+    "same four metrics for Vx,Vy"
+  ],
+  "target_accepted_windows": 100,
+  "window20": "intermediate health gate in same run, no restart"
+}

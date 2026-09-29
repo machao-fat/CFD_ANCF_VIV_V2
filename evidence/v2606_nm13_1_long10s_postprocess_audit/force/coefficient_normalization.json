@@ -1,0 +1,11 @@
+{
+  "D_m": 0.028,
+  "Ls_m": 5.94,
+  "U_m_s": 0.31,
+  "force_density": "F_direct/0.028",
+  "local_denominator": "0.5*rho*U^2*D",
+  "local_forceCoeffs_are_not_whole_region": true,
+  "rho_kg_m3": 1000.0,
+  "tributary_multiplier": false,
+  "whole_region_denominator": "0.5*rho*U^2*D*Ls"
+}

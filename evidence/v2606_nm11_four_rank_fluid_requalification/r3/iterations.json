@@ -1,0 +1,16 @@
+{
+  "accepted_windows": 0,
+  "sequence": [],
+  "statistics": {
+    "counts_50": 0,
+    "counts_ge10": 0,
+    "counts_ge20": 0,
+    "counts_ge40": 0,
+    "counts_ge5": 0,
+    "max": null,
+    "mean": null,
+    "median": null,
+    "min": null,
+    "p95": null
+  }
+}

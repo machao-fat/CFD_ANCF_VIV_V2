@@ -1,0 +1,9 @@
+{
+  "launcher": "scripts/run_v2606_nm8_3.sh",
+  "launcher_sha256": "56ba15dcc843ca1c1d02032f0d3cef3aca17630bfda8979c02eae73c1c122e9b",
+  "monitor": "scripts/monitor_v2606_nm8_3_prefix.py",
+  "monitor_sha256": "1cecbb2faa5be571fc47f18b19537fe5ff92dbd949360c50ff40dccc77bf7fd8",
+  "structure_binary_sha256": "2abdfac01d8cdee4df6202549e0b4654c641a5463807663dd93605ebb3c9c282",
+  "wall_observer_library_sha256": "2831d1cb92a0453e2563f005690df3862308acb5ff44c59df187a07668bf2ea3",
+  "adapter_runtime_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9"
+}

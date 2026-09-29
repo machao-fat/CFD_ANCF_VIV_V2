@@ -1,0 +1,10 @@
+{
+  "gate": "P1 HIGH and LOW errors <= 1% of NM8.3.4 outer30 reference",
+  "P1_pass": true,
+  "minimal_candidate": "0.01",
+  "coupling_replay_authorized": true,
+  "P1_errors": {
+    "HIGH": 0.008493699280656575,
+    "LOW": 0.00955893578285475
+  }
+}

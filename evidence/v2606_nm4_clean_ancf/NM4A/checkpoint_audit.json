@@ -1,0 +1,38 @@
+{
+  "pass": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "pre_solve_matches_checkpoint": true,
+      "q_sha256": "e1ba7fc759244d8e0ef884f256980c6bd815c64932b0318fd021395815b1a9f0",
+      "v_sha256": "c87499548f9efbd98c824a95a664af38f414efb1c9eede544e55e019473d6b24",
+      "physical_time_before": 0,
+      "rollback_after": true
+    },
+    {
+      "attempt": 2,
+      "pre_solve_matches_checkpoint": true,
+      "q_sha256": "e1ba7fc759244d8e0ef884f256980c6bd815c64932b0318fd021395815b1a9f0",
+      "v_sha256": "c87499548f9efbd98c824a95a664af38f414efb1c9eede544e55e019473d6b24",
+      "physical_time_before": 0,
+      "rollback_after": true
+    },
+    {
+      "attempt": 3,
+      "pre_solve_matches_checkpoint": true,
+      "q_sha256": "e1ba7fc759244d8e0ef884f256980c6bd815c64932b0318fd021395815b1a9f0",
+      "v_sha256": "c87499548f9efbd98c824a95a664af38f414efb1c9eede544e55e019473d6b24",
+      "physical_time_before": 0,
+      "rollback_after": true
+    },
+    {
+      "attempt": 4,
+      "pre_solve_matches_checkpoint": true,
+      "q_sha256": "e1ba7fc759244d8e0ef884f256980c6bd815c64932b0318fd021395815b1a9f0",
+      "v_sha256": "c87499548f9efbd98c824a95a664af38f414efb1c9eede544e55e019473d6b24",
+      "physical_time_before": 0,
+      "rollback_after": false
+    }
+  ],
+  "max_absolute_displacement_error_m": 0.0
+}

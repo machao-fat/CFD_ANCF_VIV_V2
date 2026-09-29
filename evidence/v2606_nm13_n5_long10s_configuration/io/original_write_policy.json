@@ -1,0 +1,6 @@
+{
+  "nm12_controlDict": "${V2606_PROJECT_ROOT}/evidence/v2606_nm12_n5_4rank_diagnostic100/launch/fluid_s0594/system/controlDict",
+  "purgeWrite": 2,
+  "writeControl": "timeStep",
+  "writeInterval": 20
+}

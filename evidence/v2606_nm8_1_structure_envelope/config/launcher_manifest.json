@@ -1,0 +1,28 @@
+{
+  "phase": "V2606-NM8.1",
+  "frozen_utc": "2026-09-26T15:35:22.050122+00:00",
+  "launcher_sha256": "f380f3af7fbfde8aaf69e8b7ea1a83ba099de1d17ccb2a4ca3dbd442aa4184cf",
+  "monitor_sha256": "af884dede36c9069fd7288f05d6ba931572628c60ec8245a42dbffa227767163",
+  "prepare_script_sha256": "d1615e3b1146011b17631c1cfe90c399b0630a665e93714961ca09bc1e906963",
+  "structure_binary_sha256": "2abdfac01d8cdee4df6202549e0b4654c641a5463807663dd93605ebb3c9c282",
+  "participant_source_sha256": "b8a5dc5bb0fa1516e4fc896051c2cde6f32c9b73af333685f0a98af82f2af15e",
+  "precice_config_sha256": "eb0548dc4216f27d6edffe6e28981e756608dc449639901102a1ea410594150f",
+  "guard_policy_sha256": "af74c5b8606619138dc2a25e14fc9e683465de43bc8162764f6f285b6264a1fa",
+  "adapter_runtime_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "files": {
+    "launcher": "${V2606_PROJECT_ROOT}/scripts/run_v2606_nm8_1.sh",
+    "monitor": "${V2606_PROJECT_ROOT}/scripts/monitor_v2606_nm8_1.py",
+    "analyzer": "${V2606_PROJECT_ROOT}/scripts/analyze_v2606_nm8_1.py",
+    "prepare": "${V2606_PROJECT_ROOT}/scripts/prepare_v2606_nm8_1.sh",
+    "structure_source": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/source/clean_structure_participant/main.cpp",
+    "structure_binary": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/source/clean_structure_participant/clean_structure_nm8_1",
+    "frozen_nm5_wrapper": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/source/clean_structure_participant/main_nm5_frozen.cpp",
+    "ancf_kernel_cpp": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/source/ancf_core/ancf_kernel.cpp",
+    "ancf_kernel_hpp": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/source/ancf_core/ancf_kernel.hpp",
+    "ancf_static_state": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/source/ancf_core/ancf_static.raw",
+    "precice_config": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/config/precice_nm8_1.xml",
+    "guard_policy": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/config/guard_policy.json",
+    "solid_mesh_identity": "${V2606_PROJECT_ROOT}/evidence/v2606_nm8_1_structure_envelope/config/solid_mesh_identity.json",
+    "adapter_runtime": "${LINUX_HOME}/OpenFOAM/v2606-precice-adapter/lib/libpreciceAdapterFunctionObject.so"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "allowed_changes": [
+    "self-test dispatch",
+    "self-test diagnostics",
+    "D(5.94) read-only trace"
+  ],
+  "coupling_semantics_unchanged": true,
+  "original_sha256": "42bad521687511fb632433cb249fdecfc6f8ac65c183ad2b329cbff948c0c8e8",
+  "prepared_sha256": "4aa0f4528e2429ba533f93211fc3dcb60ef9b0d9f41d80f42b1967845ae03cfb",
+  "source_diff_patch": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_a_three_slice_smoke/preparation/source/source_diff.patch",
+  "unchanged_sections": {
+    "force_assembly": true,
+    "force_read_to_ancf_advance": true,
+    "precice_registration": true,
+    "precice_write_advance_rollback": true
+  }
+}

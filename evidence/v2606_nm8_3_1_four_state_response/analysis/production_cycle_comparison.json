@@ -1,0 +1,214 @@
+{
+  "A": {
+    "pressure": {
+      "fresh_binary64": [
+        0.04340667605,
+        -0.01002461698,
+        -3.134022728e-22
+      ],
+      "production_stdout": [
+        "0.04340667605",
+        "-0.01002461698",
+        "-3.134022728e-22"
+      ],
+      "absolute_vector_delta_N": 0.0,
+      "absolute_xy_vector_delta_N": 0.0,
+      "relative_vector_delta": 0.0,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": true
+    },
+    "viscous": {
+      "fresh_binary64": [
+        0.00116108999,
+        -0.0004941556622,
+        1.170860164e-16
+      ],
+      "production_stdout": [
+        "0.00116108999",
+        "-0.0004941556622",
+        "1.170860164e-16"
+      ],
+      "absolute_vector_delta_N": 0.0,
+      "absolute_xy_vector_delta_N": 0.0,
+      "relative_vector_delta": 0.0,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": true
+    },
+    "total": {
+      "fresh_binary64": [
+        0.044567766040000005,
+        -0.010518772642199999,
+        1.170857029977272e-16
+      ],
+      "production_stdout": [
+        "0.04456776604",
+        "-0.01051877264",
+        "1.17085703e-16"
+      ],
+      "absolute_vector_delta_N": 2.1999988636499172e-12,
+      "absolute_xy_vector_delta_N": 2.1999988636499172e-12,
+      "relative_vector_delta": 4.8043037091362737e-11,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": true
+    }
+  },
+  "B": {
+    "pressure": {
+      "fresh_binary64": [
+        0.04226770985,
+        -0.01013688911,
+        2.42083475e-23
+      ],
+      "production_stdout": [
+        "0.04226770985",
+        "-0.01013688911",
+        "4.916120611e-23"
+      ],
+      "absolute_vector_delta_N": 2.495285861e-23,
+      "absolute_xy_vector_delta_N": 0.0,
+      "relative_vector_delta": 5.740741951185768e-22,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": false
+    },
+    "viscous": {
+      "fresh_binary64": [
+        0.001160327247,
+        -0.0004942351513,
+        1.112316351e-16
+      ],
+      "production_stdout": [
+        "0.001160327247",
+        "-0.0004942351513",
+        "1.073287297e-16"
+      ],
+      "absolute_vector_delta_N": 3.9029053999999894e-18,
+      "absolute_xy_vector_delta_N": 0.0,
+      "relative_vector_delta": 3.0945945300550665e-15,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": false
+    },
+    "total": {
+      "fresh_binary64": [
+        0.043428037097,
+        -0.0106311242613,
+        1.112316593083475e-16
+      ],
+      "production_stdout": [
+        "0.0434280371",
+        "-0.01063112426",
+        "1.073287789e-16"
+      ],
+      "absolute_vector_delta_N": 3.269552967699162e-12,
+      "absolute_xy_vector_delta_N": 3.2695529676968325e-12,
+      "relative_vector_delta": 7.312743293722042e-11,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": false
+    }
+  },
+  "C": {
+    "pressure": {
+      "fresh_binary64": [
+        0.04245897551,
+        -0.01011794514,
+        -4.019540094e-22
+      ],
+      "production_stdout": [
+        "0.04245897551",
+        "-0.01011794514",
+        "-4.087432016e-22"
+      ],
+      "absolute_vector_delta_N": 6.789192199999984e-24,
+      "absolute_xy_vector_delta_N": 0.0,
+      "relative_vector_delta": 1.5554460431209213e-22,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": false
+    },
+    "viscous": {
+      "fresh_binary64": [
+        0.001160593515,
+        -0.0004942084286,
+        1.209888147e-16
+      ],
+      "production_stdout": [
+        "0.001160593515",
+        "-0.0004942084286",
+        "1.209888177e-16"
+      ],
+      "absolute_vector_delta_N": 2.9999999846687343e-24,
+      "absolute_xy_vector_delta_N": 0.0,
+      "relative_vector_delta": 2.3782430520279527e-21,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": false
+    },
+    "total": {
+      "fresh_binary64": [
+        0.043619569025,
+        -0.0106121535686,
+        1.209884127459906e-16
+      ],
+      "production_stdout": [
+        "0.04361956902",
+        "-0.01061215357",
+        "1.20988409e-16"
+      ],
+      "absolute_vector_delta_N": 5.192302367783862e-12,
+      "absolute_xy_vector_delta_N": 5.192302367783862e-12,
+      "relative_vector_delta": 1.1566228863817598e-10,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": false
+    }
+  },
+  "D": {
+    "pressure": {
+      "fresh_binary64": [
+        0.04359567436,
+        -0.010006517,
+        -5.221229036e-25
+      ],
+      "production_stdout": [
+        "0.04359567436",
+        "-0.010006517",
+        "-7.417460007e-24"
+      ],
+      "absolute_vector_delta_N": 6.8953371034e-24,
+      "absolute_xy_vector_delta_N": 0.0,
+      "relative_vector_delta": 1.5415694097008008e-22,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": false
+    },
+    "viscous": {
+      "fresh_binary64": [
+        0.001161357889,
+        -0.0004941293986,
+        1.053774152e-16
+      ],
+      "production_stdout": [
+        "0.001161357889",
+        "-0.0004941293986",
+        "1.073288439e-16"
+      ],
+      "absolute_vector_delta_N": 1.9514287000000003e-18,
+      "absolute_xy_vector_delta_N": 0.0,
+      "relative_vector_delta": 1.5461664646058603e-15,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": false
+    },
+    "total": {
+      "fresh_binary64": [
+        0.044757032249,
+        -0.010500646398599999,
+        1.053774146778771e-16
+      ],
+      "production_stdout": [
+        "0.04475703225",
+        "-0.0105006464",
+        "1.073288365e-16"
+      ],
+      "absolute_vector_delta_N": 1.720465631342948e-12,
+      "absolute_xy_vector_delta_N": 1.7204656313418412e-12,
+      "relative_vector_delta": 3.742393467181145e-11,
+      "xy_within_production_printed_precision": true,
+      "z_within_production_printed_precision": false
+    }
+  }
+}

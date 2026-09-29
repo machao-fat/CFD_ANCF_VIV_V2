@@ -1,0 +1,1292 @@
+{
+  "samples": [
+    {
+      "utc": "2026-09-26T15:35:30Z",
+      "accepted_windows": 0,
+      "d_free_bytes": 96641540096,
+      "scratch_fs_free_bytes": 1009080205312,
+      "scratch_bytes": 25804400,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:35:41Z",
+      "accepted_windows": 8,
+      "d_free_bytes": 96641302528,
+      "scratch_fs_free_bytes": 1009062731776,
+      "scratch_bytes": 25855475,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:35:51Z",
+      "accepted_windows": 21,
+      "d_free_bytes": 96640475136,
+      "scratch_fs_free_bytes": 1009062436864,
+      "scratch_bytes": 25903061,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:36:02Z",
+      "accepted_windows": 30,
+      "d_free_bytes": 96640389120,
+      "scratch_fs_free_bytes": 1009062404096,
+      "scratch_bytes": 25935352,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:36:13Z",
+      "accepted_windows": 38,
+      "d_free_bytes": 96640253952,
+      "scratch_fs_free_bytes": 1009062227968,
+      "scratch_bytes": 25971222,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:36:23Z",
+      "accepted_windows": 46,
+      "d_free_bytes": 96640090112,
+      "scratch_fs_free_bytes": 1009061965824,
+      "scratch_bytes": 26008264,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:36:33Z",
+      "accepted_windows": 57,
+      "d_free_bytes": 96639995904,
+      "scratch_fs_free_bytes": 1009061572608,
+      "scratch_bytes": 26046095,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:36:47Z",
+      "accepted_windows": 68,
+      "d_free_bytes": 96639557632,
+      "scratch_fs_free_bytes": 1009061314560,
+      "scratch_bytes": 26088133,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:36:57Z",
+      "accepted_windows": 79,
+      "d_free_bytes": 96639496192,
+      "scratch_fs_free_bytes": 1009061273600,
+      "scratch_bytes": 26133594,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:37:07Z",
+      "accepted_windows": 90,
+      "d_free_bytes": 96639299584,
+      "scratch_fs_free_bytes": 1009061203968,
+      "scratch_bytes": 26179629,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:37:21Z",
+      "accepted_windows": 102,
+      "d_free_bytes": 96639156224,
+      "scratch_fs_free_bytes": 1009060917248,
+      "scratch_bytes": 26222920,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:37:31Z",
+      "accepted_windows": 113,
+      "d_free_bytes": 96638840832,
+      "scratch_fs_free_bytes": 1009060589568,
+      "scratch_bytes": 26267995,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:37:42Z",
+      "accepted_windows": 125,
+      "d_free_bytes": 96638644224,
+      "scratch_fs_free_bytes": 1009060548608,
+      "scratch_bytes": 26314174,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:37:52Z",
+      "accepted_windows": 137,
+      "d_free_bytes": 96638513152,
+      "scratch_fs_free_bytes": 1009060478976,
+      "scratch_bytes": 26365317,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:38:04Z",
+      "accepted_windows": 146,
+      "d_free_bytes": 96638431232,
+      "scratch_fs_free_bytes": 1009060446208,
+      "scratch_bytes": 26404100,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:38:14Z",
+      "accepted_windows": 158,
+      "d_free_bytes": 96638177280,
+      "scratch_fs_free_bytes": 1009060405248,
+      "scratch_bytes": 26450254,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:38:25Z",
+      "accepted_windows": 169,
+      "d_free_bytes": 96637988864,
+      "scratch_fs_free_bytes": 1009060352000,
+      "scratch_bytes": 26496332,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:38:36Z",
+      "accepted_windows": 178,
+      "d_free_bytes": 96637853696,
+      "scratch_fs_free_bytes": 1009060311040,
+      "scratch_bytes": 26533731,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:38:47Z",
+      "accepted_windows": 189,
+      "d_free_bytes": 96637714432,
+      "scratch_fs_free_bytes": 1009060249600,
+      "scratch_bytes": 26573533,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:38:57Z",
+      "accepted_windows": 200,
+      "d_free_bytes": 96637579264,
+      "scratch_fs_free_bytes": 1009060212736,
+      "scratch_bytes": 26619559,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:39:09Z",
+      "accepted_windows": 209,
+      "d_free_bytes": 96637304832,
+      "scratch_fs_free_bytes": 1009060171776,
+      "scratch_bytes": 26657054,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:39:19Z",
+      "accepted_windows": 220,
+      "d_free_bytes": 96637186048,
+      "scratch_fs_free_bytes": 1009060106240,
+      "scratch_bytes": 26702723,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:39:30Z",
+      "accepted_windows": 231,
+      "d_free_bytes": 96637054976,
+      "scratch_fs_free_bytes": 1009060065280,
+      "scratch_bytes": 26745040,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:39:44Z",
+      "accepted_windows": 242,
+      "d_free_bytes": 96636653568,
+      "scratch_fs_free_bytes": 1009060028416,
+      "scratch_bytes": 26793459,
+      "full_field_times": [],
+      "metadata_only_times": [
+        "29.9999999999834372"
+      ],
+      "production_full_field_times": []
+    },
+    {
+      "utc": "2026-09-26T15:39:52Z",
+      "accepted_windows": 251,
+      "milestone_window": 250,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "d_free_bytes": 96636538880
+    },
+    {
+      "utc": "2026-09-26T15:39:54Z",
+      "accepted_windows": 254,
+      "d_free_bytes": 96636538880,
+      "scratch_fs_free_bytes": 1009041559552,
+      "scratch_bytes": 44768498,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:40:05Z",
+      "accepted_windows": 265,
+      "d_free_bytes": 96636407808,
+      "scratch_fs_free_bytes": 1009041489920,
+      "scratch_bytes": 44814534,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:40:19Z",
+      "accepted_windows": 277,
+      "d_free_bytes": 96636321792,
+      "scratch_fs_free_bytes": 1009041453056,
+      "scratch_bytes": 44864945,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:40:30Z",
+      "accepted_windows": 289,
+      "d_free_bytes": 96636063744,
+      "scratch_fs_free_bytes": 1009041412096,
+      "scratch_bytes": 44911975,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:40:41Z",
+      "accepted_windows": 300,
+      "d_free_bytes": 96635813888,
+      "scratch_fs_free_bytes": 1009041371136,
+      "scratch_bytes": 44958287,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:40:54Z",
+      "accepted_windows": 312,
+      "d_free_bytes": 96635736064,
+      "scratch_fs_free_bytes": 1009041301504,
+      "scratch_bytes": 45008644,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:41:05Z",
+      "accepted_windows": 323,
+      "d_free_bytes": 96635551744,
+      "scratch_fs_free_bytes": 1009041264640,
+      "scratch_bytes": 45055500,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:41:16Z",
+      "accepted_windows": 336,
+      "d_free_bytes": 96635285504,
+      "scratch_fs_free_bytes": 1009041223680,
+      "scratch_bytes": 45106705,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:41:30Z",
+      "accepted_windows": 348,
+      "d_free_bytes": 96635088896,
+      "scratch_fs_free_bytes": 1009041158144,
+      "scratch_bytes": 45158362,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:41:41Z",
+      "accepted_windows": 361,
+      "d_free_bytes": 96634953728,
+      "scratch_fs_free_bytes": 1009041117184,
+      "scratch_bytes": 45205612,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:41:52Z",
+      "accepted_windows": 371,
+      "d_free_bytes": 96634671104,
+      "scratch_fs_free_bytes": 1009041072128,
+      "scratch_bytes": 45256078,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:42:06Z",
+      "accepted_windows": 382,
+      "d_free_bytes": 96634425344,
+      "scratch_fs_free_bytes": 1009041010688,
+      "scratch_bytes": 45307476,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:42:17Z",
+      "accepted_windows": 392,
+      "d_free_bytes": 96634286080,
+      "scratch_fs_free_bytes": 1009040965632,
+      "scratch_bytes": 45355524,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:42:28Z",
+      "accepted_windows": 404,
+      "d_free_bytes": 96634077184,
+      "scratch_fs_free_bytes": 1009040920576,
+      "scratch_bytes": 45405769,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:42:40Z",
+      "accepted_windows": 414,
+      "d_free_bytes": 96633819136,
+      "scratch_fs_free_bytes": 1009040855040,
+      "scratch_bytes": 45449398,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:42:51Z",
+      "accepted_windows": 427,
+      "d_free_bytes": 96633679872,
+      "scratch_fs_free_bytes": 1009040818176,
+      "scratch_bytes": 45496869,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:43:02Z",
+      "accepted_windows": 439,
+      "d_free_bytes": 96633495552,
+      "scratch_fs_free_bytes": 1009040642048,
+      "scratch_bytes": 45548650,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:43:16Z",
+      "accepted_windows": 452,
+      "d_free_bytes": 96633233408,
+      "scratch_fs_free_bytes": 1009040572416,
+      "scratch_bytes": 45599709,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:43:27Z",
+      "accepted_windows": 464,
+      "d_free_bytes": 96633167872,
+      "scratch_fs_free_bytes": 1009040535552,
+      "scratch_bytes": 45651466,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:43:38Z",
+      "accepted_windows": 477,
+      "d_free_bytes": 96632782848,
+      "scratch_fs_free_bytes": 1009040478208,
+      "scratch_bytes": 45703699,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:43:50Z",
+      "accepted_windows": 487,
+      "d_free_bytes": 96632713216,
+      "scratch_fs_free_bytes": 1009040429056,
+      "scratch_bytes": 45742975,
+      "full_field_times": [
+        "30.0999999999832042"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:44:02Z",
+      "accepted_windows": 500,
+      "d_free_bytes": 96632434688,
+      "scratch_fs_free_bytes": 1009021960192,
+      "scratch_bytes": 63724260,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:44:02Z",
+      "accepted_windows": 500,
+      "milestone_window": 500,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "d_free_bytes": 96632434688
+    },
+    {
+      "utc": "2026-09-26T15:44:13Z",
+      "accepted_windows": 512,
+      "d_free_bytes": 96632180736,
+      "scratch_fs_free_bytes": 1009021919232,
+      "scratch_bytes": 63775815,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:44:27Z",
+      "accepted_windows": 524,
+      "d_free_bytes": 96632107008,
+      "scratch_fs_free_bytes": 1009021849600,
+      "scratch_bytes": 63822071,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:44:38Z",
+      "accepted_windows": 536,
+      "d_free_bytes": 96631963648,
+      "scratch_fs_free_bytes": 1009021804544,
+      "scratch_bytes": 63872721,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:44:50Z",
+      "accepted_windows": 549,
+      "d_free_bytes": 96631705600,
+      "scratch_fs_free_bytes": 1009021767680,
+      "scratch_bytes": 63924332,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:45:02Z",
+      "accepted_windows": 558,
+      "d_free_bytes": 96631541760,
+      "scratch_fs_free_bytes": 1009021734912,
+      "scratch_bytes": 63963612,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:45:13Z",
+      "accepted_windows": 571,
+      "d_free_bytes": 96631214080,
+      "scratch_fs_free_bytes": 1009021661184,
+      "scratch_bytes": 64010856,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:45:24Z",
+      "accepted_windows": 583,
+      "d_free_bytes": 96631009280,
+      "scratch_fs_free_bytes": 1009021620224,
+      "scratch_bytes": 64061650,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:45:36Z",
+      "accepted_windows": 593,
+      "d_free_bytes": 96630931456,
+      "scratch_fs_free_bytes": 1009021583360,
+      "scratch_bytes": 64106410,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:45:48Z",
+      "accepted_windows": 606,
+      "d_free_bytes": 96630202368,
+      "scratch_fs_free_bytes": 1009021517824,
+      "scratch_bytes": 64158388,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:45:59Z",
+      "accepted_windows": 618,
+      "d_free_bytes": 96629936128,
+      "scratch_fs_free_bytes": 1009021472768,
+      "scratch_bytes": 64204440,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:46:14Z",
+      "accepted_windows": 630,
+      "d_free_bytes": 96629723136,
+      "scratch_fs_free_bytes": 1009021435904,
+      "scratch_bytes": 64255289,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:46:25Z",
+      "accepted_windows": 642,
+      "d_free_bytes": 96629428224,
+      "scratch_fs_free_bytes": 1009021374464,
+      "scratch_bytes": 64302565,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:46:37Z",
+      "accepted_windows": 655,
+      "d_free_bytes": 96629100544,
+      "scratch_fs_free_bytes": 1009021333504,
+      "scratch_bytes": 64354564,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:46:49Z",
+      "accepted_windows": 665,
+      "d_free_bytes": 96629096448,
+      "scratch_fs_free_bytes": 1009021280256,
+      "scratch_bytes": 64393801,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:47:00Z",
+      "accepted_windows": 677,
+      "d_free_bytes": 96628957184,
+      "scratch_fs_free_bytes": 1009021239296,
+      "scratch_bytes": 64445417,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:47:12Z",
+      "accepted_windows": 690,
+      "d_free_bytes": 96628760576,
+      "scratch_fs_free_bytes": 1009021177856,
+      "scratch_bytes": 64496210,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:47:24Z",
+      "accepted_windows": 699,
+      "d_free_bytes": 96628396032,
+      "scratch_fs_free_bytes": 1009021136896,
+      "scratch_bytes": 64536209,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:47:36Z",
+      "accepted_windows": 712,
+      "d_free_bytes": 96628240384,
+      "scratch_fs_free_bytes": 1009021095936,
+      "scratch_bytes": 64587491,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:47:47Z",
+      "accepted_windows": 725,
+      "d_free_bytes": 96627965952,
+      "scratch_fs_free_bytes": 1009021034496,
+      "scratch_bytes": 64639469,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:48:00Z",
+      "accepted_windows": 735,
+      "d_free_bytes": 96627716096,
+      "scratch_fs_free_bytes": 1009020997632,
+      "scratch_bytes": 64678742,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:48:11Z",
+      "accepted_windows": 748,
+      "d_free_bytes": 96627580928,
+      "scratch_fs_free_bytes": 1009020952576,
+      "scratch_bytes": 64730303,
+      "full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721"
+      ],
+      "production_full_field_times": [
+        "30.0999999999832042",
+        "30.1999999999829711"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:48:14Z",
+      "accepted_windows": 750,
+      "milestone_window": 750,
+      "full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ],
+      "production_full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721",
+        "30.299599999982739"
+      ],
+      "d_free_bytes": 96627576832
+    },
+    {
+      "utc": "2026-09-26T15:48:23Z",
+      "accepted_windows": 759,
+      "d_free_bytes": 96627421184,
+      "scratch_fs_free_bytes": 1009020809216,
+      "scratch_bytes": 64800865,
+      "full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721",
+        "30.299599999982739"
+      ],
+      "production_full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:48:35Z",
+      "accepted_windows": 770,
+      "d_free_bytes": 96627224576,
+      "scratch_fs_free_bytes": 1009020747776,
+      "scratch_bytes": 64842965,
+      "full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721",
+        "30.299599999982739"
+      ],
+      "production_full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:48:47Z",
+      "accepted_windows": 782,
+      "d_free_bytes": 96626913280,
+      "scratch_fs_free_bytes": 1009020710912,
+      "scratch_bytes": 64894514,
+      "full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721",
+        "30.299599999982739"
+      ],
+      "production_full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:48:59Z",
+      "accepted_windows": 795,
+      "d_free_bytes": 96626782208,
+      "scratch_fs_free_bytes": 1009020661760,
+      "scratch_bytes": 64941490,
+      "full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721",
+        "30.299599999982739"
+      ],
+      "production_full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:49:11Z",
+      "accepted_windows": 805,
+      "d_free_bytes": 96626651136,
+      "scratch_fs_free_bytes": 1009020624896,
+      "scratch_bytes": 64986230,
+      "full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721",
+        "30.299599999982739"
+      ],
+      "production_full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ]
+    },
+    {
+      "utc": "2026-09-26T15:49:23Z",
+      "accepted_windows": 818,
+      "d_free_bytes": 96626479104,
+      "scratch_fs_free_bytes": 1009020559360,
+      "scratch_bytes": 65038215,
+      "full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ],
+      "metadata_only_times": [
+        "29.9999999999834372",
+        "30.0995999999832051",
+        "30.1995999999829721",
+        "30.299599999982739"
+      ],
+      "production_full_field_times": [
+        "30.1999999999829711",
+        "30.2999999999827381"
+      ]
+    }
+  ],
+  "initial_d_free_bytes": 96641597440,
+  "minimum_d_free_bytes": 96626479104,
+  "final_d_free_bytes": 96626479104,
+  "maximum_scratch_bytes": 65038215,
+  "retained_full_field_times": [
+    "30.1999999999829711",
+    "30.2999999999827381"
+  ],
+  "retained_production_full_field_times": [
+    "30.1999999999829711",
+    "30.2999999999827381"
+  ],
+  "metadata_only_times": [
+    "29.9999999999834372",
+    "30.0995999999832051",
+    "30.1995999999829721",
+    "30.299599999982739"
+  ],
+  "purgeWrite_expected": 2,
+  "purgeWrite_observed": true,
+  "disk_policy_pass": true,
+  "disk_guard_minimum_bytes": 10000000000
+}

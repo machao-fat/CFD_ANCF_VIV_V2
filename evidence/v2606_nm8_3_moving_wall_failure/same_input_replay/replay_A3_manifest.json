@@ -1,0 +1,142 @@
+{
+  "case": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_replay_A3/fluid",
+  "source_accepted_restart": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_restart_capture/fluid",
+  "source_time": "30.0151999999834018",
+  "initial_field_sha256": {
+    "rank0": {
+      "U": "7b33becccabf4db1328eeb8a7f549d40437e131e4b1abbf95f58ed49c17fe55c",
+      "p": "c189a803ba6aca5145a0fcdfef21f01d018ddea6de4e4fd7b3ce6c5664aac6a8",
+      "phi": "bfe9827c78f6880eaa1cfd2c68e11bf2f523a3421e74bd5d6840074cc53aa19f",
+      "k": "849c9feac73a3291caba49f0f67d42d4ec8e7fb2d1aac51685ee3f58a46d02b0",
+      "omega": "15ff41da6564f207f1c67622d7c6032f65a7685c8327f67f51ae8b4caa596849",
+      "nut": "579782023fc519f0cf8c1d76cb29b6319211fed8dba948d84d321ba23a464588",
+      "pointDisplacement": "c027638258b194f65ff907764e94e69dc32ad5ee9f3bbe81e2c28e3873e8deb5",
+      "cellDisplacement": "0f2bba67a4e4dd663e25f9ecc045ad87e67b8e46ae45a9ecf6930e8127a58e61",
+      "polyMesh/points": "d5f4ed9202f773bf79e840039d6f277d2dab4b85bedd68d4236981aedf6eca4e"
+    },
+    "rank1": {
+      "U": "47c73f783a6d16dce2430aee4838042e6f00a7ff549b0eade8aa8d17e598dc5b",
+      "p": "2af6bbd1806937c83e8a2fa8159697980a994862e5e9ab48f10906272d19e9ac",
+      "phi": "c5b78d7e2f7cf2702717e66b4e9b2467820c7170985331f817c288e77ec311ef",
+      "k": "fc808fe5b581046621720ae8f287e47e10595fb597aee787f96f66a98012f270",
+      "omega": "7ab4ed3d1ca87f6099f29d3368958fe6408cb4037b447c5442c0b31c69d0c0bd",
+      "nut": "1102486e0af65a6da902fb1b309a6a51031fc567ec60c8f38ea48249af1e8a8b",
+      "pointDisplacement": "cdb07a33a0ec0bf01e35b178423c8f4e5465ecb49e48cddfbdf219776130c14f",
+      "cellDisplacement": "76c9559bf91c9b695ab13fec7f883c9cfca69ce075c952331cd7e4a524a4e117",
+      "polyMesh/points": "d6a74e3a8fd3a2eafd3a0158ca617d58d809d161f647df18f054c8374626c968"
+    },
+    "rank2": {
+      "U": "7cbd8b90539b74a104f55f8c204711068504b12e4fac9027d74e1755bb1f71aa",
+      "p": "8b7fa618f7327b226dbd84a92c1697905d52affed25f71a9c3e2ae447cd705d1",
+      "phi": "7fd184070457ba90aebc6f36215db47e28826850ca1548796d6ee5a17937892a",
+      "k": "e6638344ae578f1a78e4797b9ff7f3a59ed2cb89ed6d796f865e3232cb6de33d",
+      "omega": "08cd248932f0f2eeb0e776a2ea85af36dd42c1e4de35ebad0c13fd7d1b24ea88",
+      "nut": "49e3af254fe07e1474f0831b761fd5dc766ec19ee0029c243ac45b4bb33c640c",
+      "pointDisplacement": "76765c22f5d6488117db2cb3624161f68de455438edc19dc27b4c35dd78a3174",
+      "cellDisplacement": "1ae71df1e5d6c995e0ef480c79d478efc87dc65eef7f74b4a0eaecc1a73508d3",
+      "polyMesh/points": "60124c95bc1341529cc51646fa187a6a016f3e12156c459f257623c6c868f2fb"
+    },
+    "rank3": {
+      "U": "d87cab70ec0514961bccb5d8ff2dbd94a6baeca1e27277b6a87e5c9a415de9cc",
+      "p": "03be7868d5948b77e261694d059615cbd20774a821181aa37867c57478a59578",
+      "phi": "cf1516c15306ea7a9cb6bac5b1afa920c80c15e6097a04cecb0fd13bdd2ccf8f",
+      "k": "db74927036bf3ef4c7375868bf98f8a6e22cc45fb77cfd59c05edb1d15e4cdb7",
+      "omega": "2d37ecc5c641d63cb12159743e76a9381559021c1fc2b75d814c88aaf550b707",
+      "nut": "d2665dcab5a10322a69e406a6d59aae00d62dd270cf27b3a371036fb2d4577de",
+      "pointDisplacement": "6dd2b7e665e3d18ec3dd47c458635d2c8c57fdd53b08560ffa66cff0bbf3686b",
+      "cellDisplacement": "75f76686395c43e392c3a68b9c0ef308d6395fe9224ef0bb35088b23d6f9394b",
+      "polyMesh/points": "8830a79a1ab5c93020326a49e5b8399897b1761ddda339c64f89ba48f003e22e"
+    },
+    "rank4": {
+      "U": "8b774bc0c30810e38b2d257ea15cfcc95d76640035b6745a398f0d29da83c233",
+      "p": "c5c0e13e7255162a980d889d485e71c169c27b54472e59e2d1717aa338af40e2",
+      "phi": "eee95dd5bc7ed6d7b2fb2035dbe089d3eb232d07561d68c4415155d02bea1a61",
+      "k": "9ec285df6318b50f83cb1211836eb339e7cfd2ee7233d49b2e057bb50615e015",
+      "omega": "cab9035238f961e8f24950d9b87b14f0678bbcb1080d6f9dedc9215a031357ae",
+      "nut": "41114e06785c5766a2edc828289f4c3523f30b4f756281152d504abc55510d92",
+      "pointDisplacement": "841c786f8c85b039e6120afdc4f5ed675722751eef6ec05d9ffce737a8c88b48",
+      "cellDisplacement": "39f39c6770384973a79452eef0f2dd282ff776efa70e9adf11176dfbbe5c51ba",
+      "polyMesh/points": "fc3faf9165410974d0eaa9e25e4383b888509321a689670d3afc9b4fc056cdf2"
+    },
+    "rank5": {
+      "U": "e786d7452b67ae27bbbd1459a15af63f1cb57b85357e3a57fe0fab555d1c68c8",
+      "p": "d90666415b17eb05419de87e3cf276f906d8f00f3146a2741108de016de40060",
+      "phi": "ba7c71c5b59be26339496598325f4cf0791a6060d11f610757d297266dbf92f9",
+      "k": "648c739028f503932f052bb42f7f7972278ba59ece9013c9735e62e441344d58",
+      "omega": "7009ef36ee80735845c493e1050ab2c0524a3fe91f6ab0e86087533de75d95f2",
+      "nut": "a6337c6a232984f939cc2e2927ac1a1c55c49407344c5f21ff638d6fe79bf22d",
+      "pointDisplacement": "9bd71674742fadbb781cc3c45aec74cbd66aa995f6bac16d32d70f3c988733c0",
+      "cellDisplacement": "11bcc0e7a76723aa7a2d6db0066a324f3f7adc24928e52dcc0281fa1dea4926d",
+      "polyMesh/points": "07e699110295f3758d07bfd21b4c8d2eaa33cf7c55b3a3e3918ebd3c0567724d"
+    }
+  },
+  "config_sha256": "01e004315d354363866a91981ae81fb98fb8906ee1b813753e7ed5b98960740e",
+  "process_exit": {
+    "fluid_exit_code": 0,
+    "solid_exit_code": 0
+  },
+  "direct_force_by_attempt": [
+    {
+      "total": [
+        49.72208783,
+        -17.07759489
+      ],
+      "pressure": [
+        49.65383019,
+        -17.05364454
+      ],
+      "viscous": [
+        0.06825763702,
+        -0.02395035018
+      ]
+    },
+    {
+      "total": [
+        0.04475703225,
+        -0.0105006464
+      ],
+      "pressure": [
+        0.04359567436,
+        -0.010006517
+      ],
+      "viscous": [
+        0.001161357889,
+        -0.0004941293986
+      ]
+    },
+    {
+      "total": [
+        0.04475703225,
+        -0.0105006464
+      ],
+      "pressure": [
+        0.04359567436,
+        -0.010006517
+      ],
+      "viscous": [
+        0.001161357889,
+        -0.0004941293986
+      ]
+    },
+    {
+      "total": [
+        0.04475703225,
+        -0.0105006464
+      ],
+      "pressure": [
+        0.04359567436,
+        -0.010006517
+      ],
+      "viscous": [
+        0.001161357889,
+        -0.0004941293986
+      ]
+    }
+  ],
+  "artificial_first_attempt_zero_displacement": true,
+  "compared_attempts": [
+    2,
+    3,
+    4
+  ]
+}

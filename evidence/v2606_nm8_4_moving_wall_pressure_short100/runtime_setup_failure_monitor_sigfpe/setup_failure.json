@@ -1,0 +1,9 @@
+{
+  "status": "INVALID_SETUP_RUN",
+  "accepted_windows": 0,
+  "cause": "temporary monitor matched normal startup text trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE)",
+  "fluid_solver_fatal": false,
+  "production_numerics_changed": false,
+  "qualification_evidence": false,
+  "replacement": "fresh scratch rebuilt from frozen30 after removing startup-text false positive"
+}

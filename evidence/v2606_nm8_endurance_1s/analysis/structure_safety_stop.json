@@ -1,0 +1,45 @@
+{
+  "classification": "V2606_NM8_STRUCTURE_FAIL",
+  "stop_reason": "NM8_STRUCTURE_RUNTIME_ANOMALY accepted=541",
+  "accepted_windows": 541,
+  "accepted_duration_s": 0.2164,
+  "guard_source": "evidence/v2606_nm5_iqn_ils/source/clean_structure_participant/main.cpp:226-227",
+  "guard_condition": "reject if displacement is nonfinite or hypot(Dx,Dy) > 0.014 m",
+  "guard_limit_m": 0.014,
+  "last_serialized_trial": {
+    "attemptOrdinal": 1103,
+    "accepted": true,
+    "Dx_m": 0.011444281610340052,
+    "Dy_m": 0.008036280674138098,
+    "D_norm_m": 0.013984040498021055,
+    "D_norm_over_cylinder_diameter": 0.4994300177864662
+  },
+  "last_complete_restart_time_s": 30.1999999999829711,
+  "last_complete_restart_mesh_check": {
+    "mesh_ok": true,
+    "min_cell_volume_m3": 7.687364014e-10,
+    "max_nonorthogonality_deg": 44.92470634,
+    "max_skewness": 0.9060235669,
+    "max_aspect_ratio": 6.382834643,
+    "evidence": "analysis/stop_checkMesh.log"
+  },
+  "guard_triggering_trial_serialized": false,
+  "guard_branch_confirmed": false,
+  "guard_possible_causes": [
+    "Dx or Dy became nonfinite",
+    "hypot(Dx,Dy) exceeded 0.014 m"
+  ],
+  "cause_disambiguated": false,
+  "why_guard_trial_missing": "The participant checks the combined finite/displacement guard before writing attempt diagnostics; the trial that triggered the guard is not serialized. The last recorded norm is close to the threshold, but does not prove which branch triggered. ",
+  "fluid_exit_is_downstream_peer_failure": true,
+  "fluid_socket_eof_after_structure_exit": true,
+  "participant_exit_codes": {
+    "fluid": 1,
+    "structure": 2,
+    "monitor": 1,
+    "mesh_check": 0,
+    "wrapper": 1
+  },
+  "restart_release_complete": false,
+  "frozen_release_unchanged": true
+}

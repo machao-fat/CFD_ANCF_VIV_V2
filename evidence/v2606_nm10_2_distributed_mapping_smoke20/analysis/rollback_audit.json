@@ -1,0 +1,26 @@
+{
+  "rejected_attempts_checked": 60,
+  "all_qv_restore_checks_pass": true,
+  "samples": [
+    {
+      "attemptOrdinal": 1,
+      "window": 1,
+      "next_retry_restores_qv": true
+    },
+    {
+      "attemptOrdinal": 2,
+      "window": 1,
+      "next_retry_restores_qv": true
+    },
+    {
+      "attemptOrdinal": 78,
+      "window": 20,
+      "next_retry_restores_qv": true
+    },
+    {
+      "attemptOrdinal": 79,
+      "window": 20,
+      "next_retry_restores_qv": true
+    }
+  ]
+}

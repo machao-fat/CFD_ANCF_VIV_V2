@@ -1,0 +1,12 @@
+{
+  "RMS_Cl": 1.93,
+  "Re": 7622,
+  "Tt0_N": 1175,
+  "U_m_s": 0.31,
+  "fx_Hz": 3.4,
+  "fy_Hz": 1.66,
+  "mean_Cd": 1.86,
+  "nx": 4,
+  "ny": 2,
+  "status": "reference_targets_only"
+}

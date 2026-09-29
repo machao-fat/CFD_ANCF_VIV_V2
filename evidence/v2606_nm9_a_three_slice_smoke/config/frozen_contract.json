@@ -1,0 +1,21 @@
+{
+  "slice_positions_m": [0.99, 2.97, 4.95],
+  "deltaL_m": 1.98,
+  "structure_elements": 32,
+  "structure_nodes": 33,
+  "structure_dof": 198,
+  "q0": "P1_REF_NE32",
+  "dt_s": 0.0004,
+  "time_window_size_s": 0.0004,
+  "strict_force": 0.005,
+  "strict_displacement": 0.005,
+  "max_iterations": 50,
+  "nm9b_max_time_windows": 20,
+  "fluid_contract_source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_5_500/fluid",
+  "ordinary_p_relTol": 0.01,
+  "pFinal_relTol": 0,
+  "nOuterCorrectors": 3,
+  "nCorrectors": 2,
+  "nNonOrthogonalCorrectors": 0,
+  "execution": "NOT_STARTED"
+}

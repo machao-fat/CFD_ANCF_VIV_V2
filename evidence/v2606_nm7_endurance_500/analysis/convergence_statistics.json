@@ -1,0 +1,20 @@
+{
+  "force_final": {
+    "count": 500,
+    "min": 3.68e-07,
+    "median": 0.0006000000000000001,
+    "mean": 0.001350260736,
+    "p95": 0.004561499999999999,
+    "max": 0.00499
+  },
+  "displacement_final": {
+    "count": 500,
+    "min": 4.19e-14,
+    "median": 1.14e-08,
+    "mean": 1.4694936252472001e-06,
+    "p95": 2.06e-07,
+    "max": 0.000458
+  },
+  "strict_converged_accepted": 500,
+  "all_recorded_accepted_strict": true
+}

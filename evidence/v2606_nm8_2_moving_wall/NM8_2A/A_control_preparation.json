@@ -1,0 +1,16 @@
+{
+  "label": "A_control",
+  "scratch": "${LINUX_HOME}/nm8_2_A_control_xehphkso",
+  "source": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "time": "29.9999999999834372",
+  "coupled": false,
+  "edited_U": [],
+  "source_U_sha256": {
+    "processor0": "51ca5b6e901d7ed48c89334c8d349bfb0d8924beb189806cbc9859906085926b",
+    "processor1": "9971be2c39aa1e9d76a3df161b4f914b32cdedf520c7137c352fa20f544c3bd9",
+    "processor2": "9f51e4a2513409d333cd1dbab76573d1d4464f1303423b47852277e41ab61a2b",
+    "processor3": "6825258592bc22d9a326e573d8c9daf4e0235227ede64d046a8e819099303a68",
+    "processor4": "1fe72a8360235550ff01d98bc383285cbddf5a9254d18e96309382d856b1bdae",
+    "processor5": "cb2eab4c9ae6310b6d436fe8eb75635738e4d9bff6b946c850caee8809e8ccca"
+  }
+}

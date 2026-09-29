@@ -1,0 +1,15 @@
+{
+  "diameter_m": 0.028,
+  "warning_0p5D_m": 0.014,
+  "warning_0p75D_m": 0.021,
+  "hard_stop_0p95D_m": 0.0266,
+  "warning_levels_stop": false,
+  "hard_stop_condition": "D_norm >= 0.95D",
+  "nonfinite_condition": "any nonfinite Dx, Dy, q, or v; independent of displacement envelope",
+  "guard_categories": ["GUARD_NONFINITE", "GUARD_DISPLACEMENT_ENVELOPE", "ANCF_SOLVER_FAILURE", "PRECICE_FAILURE"],
+  "guard_event_flush_before_exit": true,
+  "guard_state_binary_payload": "uint64 count followed by IEEE-754 binary64 vector values",
+  "diagnostic_frequency_at_or_above_0p75D": "per attempt; all attempts are already logged",
+  "ANCF_core_modified": false,
+  "production_numerics_modified": false
+}

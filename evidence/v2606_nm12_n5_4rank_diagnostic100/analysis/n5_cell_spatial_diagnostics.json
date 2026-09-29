@@ -1,0 +1,47 @@
+{
+  "grid_includes_all_element_nodes_and_N5_boundaries": true,
+  "grid_points_per_window": 215,
+  "not_spatial_convergence": true,
+  "per_cell": {
+    "s0594": {
+      "final": {
+        "center_left_m": 0.0004937009218823007,
+        "center_right_m": 7.881256265324053e-05
+      },
+      "max_center_left_m": 0.0004937009218823007,
+      "max_center_right_m": 7.881256265324053e-05
+    },
+    "s1782": {
+      "final": {
+        "center_left_m": 2.772349621572247e-05,
+        "center_right_m": 3.939464973188591e-06
+      },
+      "max_center_left_m": 2.772349621572247e-05,
+      "max_center_right_m": 3.939464973188591e-06
+    },
+    "s2970": {
+      "final": {
+        "center_left_m": 2.9433791211783877e-07,
+        "center_right_m": 4.7290411617921296e-07
+      },
+      "max_center_left_m": 8.493904256969336e-07,
+      "max_center_right_m": 5.312625159643733e-07
+    },
+    "s4158": {
+      "final": {
+        "center_left_m": 1.7571637348512305e-06,
+        "center_right_m": 1.4273039095780126e-05
+      },
+      "max_center_left_m": 1.7571637348512305e-06,
+      "max_center_right_m": 1.4273039095780126e-05
+    },
+    "s5346": {
+      "final": {
+        "center_left_m": 4.312710194811355e-05,
+        "center_right_m": 0.0002403314638206255
+      },
+      "max_center_left_m": 4.312710194811355e-05,
+      "max_center_right_m": 0.0002403314638206255
+    }
+  }
+}

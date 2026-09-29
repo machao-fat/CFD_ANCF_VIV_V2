@@ -1,0 +1,10 @@
+{
+  "M2_MAPPING": "QUALIFIED",
+  "N3_COUPLED100": "QUALIFIED",
+  "remaining_spatial_discrepancy_material": true,
+  "G_interface_grows_with_time": true,
+  "unresolved_mapping_bug": false,
+  "ANCF_rollback_Fluid_failure_explanation": false,
+  "RESOLUTION_LADDER_ENTRY": "YES",
+  "rationale": "The corrected mapping and N3 coupled100 are qualified; G_interface grows from 1.14e-5 m at window20 to 2.83e-4 m at window100, while runtime Q, rollback, ANCF, Fluid, and mesh gates pass. A slice-resolution change is more informative than N3-500 endurance."
+}

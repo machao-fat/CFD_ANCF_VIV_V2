@@ -1,0 +1,54 @@
+{
+  "MIDPOINT_HIGH_MODE_INJECTION": "UNRESOLVED",
+  "compatible_frozen_13p12m_NE32_modal_vectors_found": false,
+  "higher_modes": "NOT_OBSERVABLE",
+  "historical_contract": "50 m / 16 elements; cannot project 198-DOF current loads",
+  "incompatible_basis_sha256": "09a0ff468192608c727c5c6ac8639653ef4e3555e1a0bf34d433637b91bea47a",
+  "incompatible_historical_basis": "${D_DRIVE_ROOT}/\u7814\u4e8c\u6587\u4ef6/\u5f00\u9898\u51c6\u5907/CFD_ANCF_VIV/ANCF_MATLAB_CPP_CROSS_VALIDATION_V1.md",
+  "modes_1_to_6": [
+    {
+      "difference": null,
+      "distributed": null,
+      "midpoint": null,
+      "mode": 1,
+      "status": "INCOMPATIBLE_OR_MISSING_BASIS"
+    },
+    {
+      "difference": null,
+      "distributed": null,
+      "midpoint": null,
+      "mode": 2,
+      "status": "INCOMPATIBLE_OR_MISSING_BASIS"
+    },
+    {
+      "difference": null,
+      "distributed": null,
+      "midpoint": null,
+      "mode": 3,
+      "status": "INCOMPATIBLE_OR_MISSING_BASIS"
+    },
+    {
+      "difference": null,
+      "distributed": null,
+      "midpoint": null,
+      "mode": 4,
+      "status": "INCOMPATIBLE_OR_MISSING_BASIS"
+    },
+    {
+      "difference": null,
+      "distributed": null,
+      "midpoint": null,
+      "mode": 5,
+      "status": "INCOMPATIBLE_OR_MISSING_BASIS"
+    },
+    {
+      "difference": null,
+      "distributed": null,
+      "midpoint": null,
+      "mode": 6,
+      "status": "INCOMPATIBLE_OR_MISSING_BASIS"
+    }
+  ],
+  "note": "No surrogate sine/50-m basis was substituted and no ANCF modal solve was run.",
+  "validated_first_six_modes_projection": "NOT_OBSERVABLE"
+}

@@ -1,0 +1,13 @@
+{
+  "project_root": "${V2606_PROJECT_ROOT}",
+  "WM_PROJECT": "OpenFOAM",
+  "WM_PROJECT_VERSION": "v2606",
+  "WM_PROJECT_DIR": "/usr/lib/openfoam/openfoam2606",
+  "pimpleFoam": "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+  "preCICE": "3.4.1",
+  "adapter_tag": "v1.4.0",
+  "adapter_commit": "0801887b958f3101389cb719838dc8fc864d5369",
+  "adapter_runtime_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "OF10_contamination": "PASS",
+  "foamVersion_command": "not installed in this OpenFOAM.com v2606 shell; WM_PROJECT_VERSION and binary path are authoritative"
+}

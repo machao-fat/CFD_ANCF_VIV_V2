@@ -1,0 +1,17 @@
+{
+  "ancf_core_hashes": {
+    "ancf_kernel.cpp": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+    "ancf_kernel.hpp": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c"
+  },
+  "binary_sha256": "d0611c8a84db6025308c0ca6299dea2321ab3768cb7caf319cabd54650f9dc1e",
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "flags": "-std=c++17 -O2 -ffp-contract=off -Wall -Wextra -Wpedantic",
+  "frozen_nm4_ancf_core_hashes_match": true,
+  "libraries": [
+    "preCICE",
+    "crypto"
+  ],
+  "preCICE_version": "3.4.1",
+  "self_test_pass": true,
+  "source_sha256": "4aa0f4528e2429ba533f93211fc3dcb60ef9b0d9f41d80f42b1967845ae03cfb"
+}

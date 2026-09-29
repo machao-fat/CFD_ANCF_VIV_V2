@@ -1,0 +1,10 @@
+{
+  "count": 500,
+  "max_F_raw_N": 0.14646265796068514,
+  "max_D_m": 0.012312815988685907,
+  "max_courant": 2.191213028,
+  "max_mesh_courant": 0.6412881305,
+  "structure_finite": true,
+  "force_conversion_once": true,
+  "checkpoint_pre_solve_exact": true
+}

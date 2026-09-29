@@ -1,0 +1,16 @@
+{
+  "binary": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_three_slice_multi/source/structure_three_slice",
+  "binary_sha256": "e9c0481da096328a470f7c1da3d2737f4158a8ace79f07013991f5efdd0b3f2f",
+  "source": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_three_slice_multi/source/structure_three_slice.cpp",
+  "source_sha256": "42bad521687511fb632433cb249fdecfc6f8ac65c183ad2b329cbff948c0c8e8",
+  "global_structure_state": true,
+  "single_ancf_advance_per_attempt": true,
+  "all_three_forces_read_before_advance": true,
+  "per_slice_force_conversion_once": true,
+  "global_checkpoint_restore": true,
+  "absolute_displacements_from_same_trial_q": true,
+  "q_594_interface_gradient": "NOT_IMPLEMENTED",
+  "self_test_entry": "BROKEN: argc guard requires 8 arguments before --self-test branch",
+  "legacy_force_read_offset_or_carried_force_found": false,
+  "execution": "NOT_STARTED"
+}

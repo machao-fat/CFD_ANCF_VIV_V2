@@ -1,0 +1,11 @@
+{
+  "structure_q_v_checkpoint_exact": true,
+  "physical_time_same_window": true,
+  "fluid_pre_solve_state": "NOT_OBSERVABLE",
+  "meshPhi_history": "NOT_OBSERVABLE",
+  "note": "Post-solve observer cannot establish pre-solve rollback identity.",
+  "integrator_history_bitwise": "NOT_DIRECTLY_OBSERVED",
+  "structure_state_source": "evidence/v2606_nm8_1_structure_envelope/source/ancf_core/ancf_kernel.hpp:134",
+  "structure_checkpoint_copy_source": "evidence/v2606_nm8_1_structure_envelope/source/clean_structure_participant/main.cpp:399,542",
+  "state_copy_includes": "q, qdot, qddot, base_load; q/qdot hashes only directly compared"
+}

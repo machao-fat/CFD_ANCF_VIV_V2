@@ -1,0 +1,31 @@
+{
+  "openfoam": "v2606",
+  "diagnostic_solver_source": "${V2606_PROJECT_ROOT}/diagnostics/nm8_3_2_pimpleFoam",
+  "diagnostic_solver_binary": "${LINUX_HOME}/OpenFOAM/machao-v2606/platforms/linux64GccDPInt32Opt/bin/nm832PimpleFoam",
+  "diagnostic_solver_binary_sha256": "9e1e57f5ea4331f9728e6c2e57888c341d79ed1c9593f62074f7e7e73b16ea5c",
+  "diagnostic_source_sha256": {
+    "pimpleFoam.C": "2ab5689afb2aae67028949834b3d859faead71ca0c1a124a451e16607381532f",
+    "nm832StageDump.H": "94cfe350c72fe6cdee6237135d052052d1ab602151de2a4de74cb7f37023608f"
+  },
+  "production_solver_modified": false,
+  "official_adapter_modified": false,
+  "official_adapter": {
+    "source_commit": "0801887b958f3101389cb719838dc8fc864d5369",
+    "tag": "v1.4.0",
+    "runtime_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9"
+  },
+  "mpi_ranks": 6,
+  "dt": 0.0004,
+  "nOuterCorrectors": 3,
+  "nCorrectors": 2,
+  "nNonOrthogonalCorrectors": 0,
+  "instrumentation": [
+    "afterMeshUpdate",
+    "afterMomentumPredictor",
+    "beforePressureSolve",
+    "afterPressureCorrector",
+    "afterTurbulence",
+    "final"
+  ],
+  "equations_or_numerics_changed": false
+}

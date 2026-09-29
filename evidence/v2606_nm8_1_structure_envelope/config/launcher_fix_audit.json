@@ -1,0 +1,19 @@
+{
+  "launcher_file": "${V2606_PROJECT_ROOT}/scripts/run_v2606_nm8_1.sh",
+  "launcher_sha256": "f380f3af7fbfde8aaf69e8b7ea1a83ba099de1d17ccb2a4ca3dbd442aa4184cf",
+  "monitor_file": "${V2606_PROJECT_ROOT}/scripts/monitor_v2606_nm8_1.py",
+  "monitor_sha256": "af884dede36c9069fd7288f05d6ba931572628c60ec8245a42dbffa227767163",
+  "fluid_pid_saved_before_monitor_start": true,
+  "structure_pid_saved_before_monitor_start": true,
+  "launcher_waits_for_fluid_structure_and_monitor": true,
+  "exit_codes_persisted": [
+    "fluid_exit_code",
+    "structure_exit_code",
+    "monitor_exit_code",
+    "wrapper_exit_code"
+  ],
+  "full_field_detector_requires_all_restart_fields_on_all_six_ranks": true,
+  "metadata_only_numeric_directories_excluded_from_purge_guard": true,
+  "launcher_monitor_binary_hashes_checked_at_launch": true,
+  "launcher_files_are_not_to_be_edited_after_start": true
+}

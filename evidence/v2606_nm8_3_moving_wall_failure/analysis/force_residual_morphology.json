@@ -1,0 +1,221 @@
+{
+  "type": "CYCLIC",
+  "sequence": [
+    {
+      "attempt": 1,
+      "residual": 0.980662904
+    },
+    {
+      "attempt": 2,
+      "residual": 4.94199146
+    },
+    {
+      "attempt": 3,
+      "residual": 0.0224834015
+    },
+    {
+      "attempt": 4,
+      "residual": 0.0191613131
+    },
+    {
+      "attempt": 5,
+      "residual": 0.0168492548
+    },
+    {
+      "attempt": 6,
+      "residual": 0.00972322139
+    },
+    {
+      "attempt": 7,
+      "residual": 0.0116780065
+    },
+    {
+      "attempt": 8,
+      "residual": 0.00835281761
+    },
+    {
+      "attempt": 9,
+      "residual": 0.00764705943
+    },
+    {
+      "attempt": 10,
+      "residual": 0.0180168343
+    },
+    {
+      "attempt": 11,
+      "residual": 0.012862343
+    },
+    {
+      "attempt": 12,
+      "residual": 0.0185911982
+    },
+    {
+      "attempt": 13,
+      "residual": 0.0108195601
+    },
+    {
+      "attempt": 14,
+      "residual": 0.0182354661
+    },
+    {
+      "attempt": 15,
+      "residual": 0.0115629962
+    },
+    {
+      "attempt": 16,
+      "residual": 0.0185842067
+    },
+    {
+      "attempt": 17,
+      "residual": 0.0113155426
+    },
+    {
+      "attempt": 18,
+      "residual": 0.0182351344
+    },
+    {
+      "attempt": 19,
+      "residual": 0.0113811164
+    },
+    {
+      "attempt": 20,
+      "residual": 0.0185842723
+    },
+    {
+      "attempt": 21,
+      "residual": 0.0113888812
+    },
+    {
+      "attempt": 22,
+      "residual": 0.0182350739
+    },
+    {
+      "attempt": 23,
+      "residual": 0.0113547024
+    },
+    {
+      "attempt": 24,
+      "residual": 0.0185842829
+    },
+    {
+      "attempt": 25,
+      "residual": 0.0113996113
+    },
+    {
+      "attempt": 26,
+      "residual": 0.0182350642
+    },
+    {
+      "attempt": 27,
+      "residual": 0.0113508479
+    },
+    {
+      "attempt": 28,
+      "residual": 0.018584284
+    },
+    {
+      "attempt": 29,
+      "residual": 0.0114011787
+    },
+    {
+      "attempt": 30,
+      "residual": 0.0182350626
+    },
+    {
+      "attempt": 31,
+      "residual": 0.011350285
+    },
+    {
+      "attempt": 32,
+      "residual": 0.0185842846
+    },
+    {
+      "attempt": 33,
+      "residual": 0.0114014077
+    },
+    {
+      "attempt": 34,
+      "residual": 0.0182350628
+    },
+    {
+      "attempt": 35,
+      "residual": 0.0113502028
+    },
+    {
+      "attempt": 36,
+      "residual": 0.0185842843
+    },
+    {
+      "attempt": 37,
+      "residual": 0.011401441
+    },
+    {
+      "attempt": 38,
+      "residual": 0.0182350627
+    },
+    {
+      "attempt": 39,
+      "residual": 0.0113501908
+    },
+    {
+      "attempt": 40,
+      "residual": 0.0185842844
+    },
+    {
+      "attempt": 41,
+      "residual": 0.0114014459
+    },
+    {
+      "attempt": 42,
+      "residual": 0.0182350626
+    },
+    {
+      "attempt": 43,
+      "residual": 0.0113501891
+    },
+    {
+      "attempt": 44,
+      "residual": 0.0185842842
+    },
+    {
+      "attempt": 45,
+      "residual": 0.0114014466
+    },
+    {
+      "attempt": 46,
+      "residual": 0.0182350627
+    },
+    {
+      "attempt": 47,
+      "residual": 0.0113501889
+    },
+    {
+      "attempt": 48,
+      "residual": 0.0185842842
+    },
+    {
+      "attempt": 49,
+      "residual": 0.0114014467
+    },
+    {
+      "attempt": 50,
+      "residual": 0.0182350625
+    }
+  ],
+  "final": 0.0182350625,
+  "last_12": [
+    0.0113501908,
+    0.0185842844,
+    0.0114014459,
+    0.0182350626,
+    0.0113501891,
+    0.0185842842,
+    0.0114014466,
+    0.0182350627,
+    0.0113501889,
+    0.0185842842,
+    0.0114014467,
+    0.0182350625
+  ],
+  "all_after_first_above_limit": true
+}

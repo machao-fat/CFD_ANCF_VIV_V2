@@ -1,0 +1,99 @@
+{
+  "baseline": {
+    "source": "NM8.3.2 frozen diagnostic evidence",
+    "Pair-HIGH_deltaFpressure_norm": 0.0013343487671308297,
+    "Pair-LOW_deltaFpressure_norm": 0.000189863028752838
+  },
+  "TIGHT": {
+    "Pair-HIGH_deltaFpressure_norm": 0.0005203280073810713,
+    "Pair-LOW_deltaFpressure_norm": 0.00020017191540864734
+  },
+  "VERY_TIGHT": {
+    "Pair-HIGH_deltaFpressure_norm": 0.0005203280087860298,
+    "Pair-LOW_deltaFpressure_norm": 0.00020017191595466307
+  },
+  "FORCED": {
+    "Pair-HIGH_deltaFpressure_norm": 0.0005203280087860298,
+    "Pair-LOW_deltaFpressure_norm": 0.00020017191595466307
+  },
+  "main_convergence_table": [
+    {
+      "variant": "TIGHT",
+      "pressure_tolerance": "1e-10",
+      "relTol": "0",
+      "minIter": null,
+      "B_iterations": [
+        190,
+        184,
+        185,
+        180,
+        184,
+        172
+      ],
+      "D_iterations": [
+        190,
+        184,
+        185,
+        180,
+        184,
+        172
+      ],
+      "Pair-HIGH_deltaFpressure_norm": 0.0005203280073810713,
+      "Pair-LOW_deltaFpressure_norm": 0.00020017191540864734,
+      "Pair-HIGH_delta_p_Linf": 0.0004515259933679551,
+      "Pair-LOW_delta_p_Linf": 0.00017370549871099927
+    },
+    {
+      "variant": "VERY_TIGHT",
+      "pressure_tolerance": "1e-12",
+      "relTol": "0",
+      "minIter": null,
+      "B_iterations": [
+        239,
+        233,
+        236,
+        231,
+        234,
+        223
+      ],
+      "D_iterations": [
+        239,
+        233,
+        236,
+        231,
+        233,
+        223
+      ],
+      "Pair-HIGH_deltaFpressure_norm": 0.0005203280087860298,
+      "Pair-LOW_deltaFpressure_norm": 0.00020017191595466307,
+      "Pair-HIGH_delta_p_Linf": 0.00045152599402278545,
+      "Pair-LOW_delta_p_Linf": 0.00017370549890632914
+    },
+    {
+      "variant": "FORCED",
+      "pressure_tolerance": "1e-12",
+      "relTol": "0",
+      "minIter": "5",
+      "B_iterations": [
+        239,
+        233,
+        236,
+        231,
+        234,
+        223
+      ],
+      "D_iterations": [
+        239,
+        233,
+        236,
+        231,
+        233,
+        223
+      ],
+      "Pair-HIGH_deltaFpressure_norm": 0.0005203280087860298,
+      "Pair-LOW_deltaFpressure_norm": 0.00020017191595466307,
+      "Pair-HIGH_delta_p_Linf": 0.00045152599402278545,
+      "Pair-LOW_delta_p_Linf": 0.00017370549890632914
+    }
+  ]
+}

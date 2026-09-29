@@ -1,0 +1,13 @@
+{
+  "checkpoint_cadence_s": 0.1,
+  "checkpoint_cadence_windows": 250,
+  "committed_only": true,
+  "five_displacements_in_manifest": true,
+  "record": "accepted_states.bin fixed-width q,v,qddot per accepted window",
+  "state_identity": [
+    "P1_REF_NE32",
+    "ANCF core hashes",
+    "mapping manifest hash"
+  ],
+  "status": "CONFIGURED_NOT_YET_RUNTIME_VERIFIED"
+}

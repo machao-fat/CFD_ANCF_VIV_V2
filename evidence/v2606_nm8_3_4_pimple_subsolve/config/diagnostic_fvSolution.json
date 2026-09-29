@@ -1,0 +1,29 @@
+{
+  "PIMPLE": {
+    "momentumPredictor": true,
+    "nCorrectors": 2,
+    "nNonOrthogonalCorrectors": 0,
+    "nOuterCorrectors": 30
+  },
+  "correctPhi": "mesh.dynamic() default from v2606 createDyMControls.H; no fvSolution override",
+  "p": {
+    "relTol": 0,
+    "smoother": "GaussSeidel",
+    "solver": "GAMG",
+    "tolerance": 1e-10
+  },
+  "pFinal": {
+    "relTol": 0,
+    "smoother": "GaussSeidel",
+    "solver": "GAMG",
+    "tolerance": 1e-10
+  },
+  "pcorr": {
+    "relTol": 0,
+    "smoother": "GaussSeidel",
+    "solver": "GAMG",
+    "source": "production unchanged",
+    "tolerance": 1e-08
+  },
+  "variant": "NM8.3.4 converged-linear diagnostic"
+}

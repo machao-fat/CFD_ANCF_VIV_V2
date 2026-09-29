@@ -1,0 +1,71 @@
+{
+  "project": "${V2606_PROJECT_ROOT}",
+  "scratch": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_3_window39_repro",
+  "source_release": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "source_time": "29.9999999999834372",
+  "reference_config": "${LINUX_HOME}/nm8_2_C_snb2on0i/fluid",
+  "write_policy_change": "diagnostic writeInterval 100 -> 38; purgeWrite remains 2",
+  "other_config_hashes": {
+    "system/fvSchemes": {
+      "NM8_2C": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+      "NM8_3": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24"
+    },
+    "system/fvSolution": {
+      "NM8_2C": "e84ffcb7f08ca0718ec09a761928d26ecccef46f7627b8526cb7340b46174216",
+      "NM8_3": "e84ffcb7f08ca0718ec09a761928d26ecccef46f7627b8526cb7340b46174216"
+    },
+    "system/preciceDict": {
+      "NM8_2C": "2544e2f2bdd090ffe9892af46416a6ccb8445dbf26e0159e898344fb55e34e56",
+      "NM8_3": "2544e2f2bdd090ffe9892af46416a6ccb8445dbf26e0159e898344fb55e34e56"
+    },
+    "constant/dynamicMeshDict": {
+      "NM8_2C": "4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb",
+      "NM8_3": "4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb"
+    },
+    "0/pointDisplacement": {
+      "NM8_2C": "d3e23746d72714f267a76d77b2c3c31bb8305a2f49523502db0c7149fa28c04c",
+      "NM8_3": "d3e23746d72714f267a76d77b2c3c31bb8305a2f49523502db0c7149fa28c04c"
+    },
+    "precice-config-nm8_2.xml": {
+      "NM8_2C": "d955bfa91e5326cc811823d444b8e507534ab5aa169037d61c39d91995651610",
+      "NM8_3": "d955bfa91e5326cc811823d444b8e507534ab5aa169037d61c39d91995651610"
+    }
+  },
+  "actual_start_U_BC": [
+    {
+      "rank": 0,
+      "type": "movingWallVelocity",
+      "U_sha256": "06dfdac2fa015e58a272fd4f27a217615704fa31528a7fe7cf4ce2e0c8784033"
+    },
+    {
+      "rank": 1,
+      "type": "movingWallVelocity",
+      "U_sha256": "6c4e8d32c7e926c31b437209eaf83c50d0d9baca4dd67bfb1d2501a5435016d7"
+    },
+    {
+      "rank": 2,
+      "type": "movingWallVelocity",
+      "U_sha256": "059b6687f18bc6b28380e9ccca7bdf27a71c8e5818133e63c654a096cde38dd6"
+    },
+    {
+      "rank": 3,
+      "type": "movingWallVelocity",
+      "U_sha256": "29aaffebfb7f0f3d60a657eb02b4fc0895a8fae4e0ccabd7f65622f39e7e7aca"
+    },
+    {
+      "rank": 4,
+      "type": "movingWallVelocity",
+      "U_sha256": "274afe27cf3086d36e97aac2b3775458e649f0b43d14fb27ea42b9b71d09e9a7"
+    },
+    {
+      "rank": 5,
+      "type": "movingWallVelocity",
+      "U_sha256": "6d3e479f4618944e74ea03b4eef66105a0d7895d202080f2ef97c039f704e8b4"
+    }
+  ],
+  "fluid_mpi_ranks": 6,
+  "dt_s": 0.0004,
+  "structure_q0": "P1_REF_NE32",
+  "structure_v0": 0,
+  "official_adapter_source_modified": false
+}

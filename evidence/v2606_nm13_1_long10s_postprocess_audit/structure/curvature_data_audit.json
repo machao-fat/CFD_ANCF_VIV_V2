@@ -1,0 +1,9 @@
+{
+  "CURVATURE_POSTPROCESS": "READY",
+  "method": "offline exact ANCF interpolation derivatives from q history",
+  "outputs": [
+    "curvature_x",
+    "curvature_y"
+  ],
+  "production_integrator_modified": false
+}

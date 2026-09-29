@@ -1,0 +1,16 @@
+{
+  "repository": "machao-fat/CFD_ANCF_VIV",
+  "tag": "ancf-coupling-baseline-v2",
+  "peeled_commit": "8443209c4db39572f5099bec5d66a093eec7cdc3",
+  "historical_sha256": {
+    "src/coupling/cpp_worker_persistent_ipc_v1/ancf_kernel.cpp": "f945dca6fac382f422f7ad0dcacf12365d74cca56e5641a43b2ba55aa38c37ec",
+    "src/coupling/cpp_worker_persistent_ipc_v1/ancf_kernel.hpp": "984748f9d37244f2ee9082bfe118737f4c6e065d81899c17bf57eeb26a9f52f3",
+    "src/coupling/arbitrary_n_live_orchestration_v1/coordinator.py": "4ff1f0713606a3c680f8fceece8483d22c2fa5b49147fc103df25d1966fbaccb"
+  },
+  "historical_runtime_not_ported": true,
+  "historical_math_contract_ported_outside_core": true,
+  "frozen_current_core_sha256": {
+    "ancf_kernel.cpp": "6dde195a8ea27f253a21d4a859bf41a620697963ab0a834bb9d982b51863ac06",
+    "ancf_kernel.hpp": "c1182ab921d5517c2a5282f8b5fe51c3ab298bec8b6015bfdcdbca733c17e22c"
+  }
+}

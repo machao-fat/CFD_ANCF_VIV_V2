@@ -1,0 +1,28 @@
+{
+  "attempts": 347,
+  "coupled_solve_wall_s": 472.641926144,
+  "direct_poll_window_range": [
+    1,
+    100
+  ],
+  "handshake_setup_wall_s": 33.881442555,
+  "overall_attempts_per_hour": 2643.0156338255224,
+  "overall_s_per_window": 4.72641926144,
+  "per_window_direct_poll_stats_s": {
+    "max": 9.624239045,
+    "mean": 4.687199879494949,
+    "median": 4.172609048,
+    "min": 2.373303117,
+    "p95": 8.127662857899995,
+    "p99": 9.53192198268
+  },
+  "steady_s_per_attempt": 1.4007074198816796,
+  "steady_s_per_window": 4.5873168001125,
+  "steady_window_range": [
+    21,
+    100
+  ],
+  "steady_windows_per_hour": 784.7724839740114,
+  "timing_limitation": "continuous launcher polling",
+  "total_wall_s": 506.523368699
+}

@@ -1,0 +1,22 @@
+{
+  "mapping_mode": "PiecewiseLinearDistributed",
+  "endpoint_policy": "NearestConstant",
+  "active_start_m": 0.0,
+  "active_end_m": 5.94,
+  "unit_span_m": 0.028,
+  "slice_length_m": 1.98,
+  "slice_length_semantics": "LegacyPointLumped compatibility only",
+  "slices": [
+    {"stable_id": "S1", "s_ref_m": 0.99},
+    {"stable_id": "S2", "s_ref_m": 2.97},
+    {"stable_id": "S3", "s_ref_m": 4.95}
+  ],
+  "validation": [
+    "unique stable_id",
+    "strictly increasing s_ref_m",
+    "finite values",
+    "active-region bounds",
+    "positive unit_span_m",
+    "N >= 2 for PiecewiseLinearDistributed"
+  ]
+}

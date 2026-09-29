@@ -1,0 +1,17 @@
+{
+  "cadence": "every attempt plus accepted-window subset",
+  "direct_force_semantics": "distinct",
+  "fields": [
+    "slice_id",
+    "s_ref_m",
+    "time",
+    "window",
+    "attemptOrdinal",
+    "Fraw_x",
+    "Fraw_y"
+  ],
+  "name": "PRECICE_COUPLING_FORCE",
+  "producer": "Structure readData / attempts and accepted windows",
+  "status": "READY",
+  "units": "N"
+}

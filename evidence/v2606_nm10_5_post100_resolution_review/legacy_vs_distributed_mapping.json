@@ -1,0 +1,15 @@
+{
+  "source_evidence": {
+    "legacy_nm9b": "${V2606_PROJECT_ROOT}/evidence/v2606_nm10_4_distributed_mapping_fresh100/analysis/nm9b_descriptive_comparison.json",
+    "distributed_nm10_4": "${V2606_PROJECT_ROOT}/evidence/v2606_nm10_4_distributed_mapping_fresh100/analysis/g_interface_history.json"
+  },
+  "window": 100,
+  "M0_LegacyPointLumped_G_interface_m": 0.0009203583376466765,
+  "M2_PiecewiseLinearDistributed_G_interface_m": 0.0002829825348598433,
+  "absolute_reduction_m": 0.0006373758027868332,
+  "relative_reduction_percent": 69.25300469560372,
+  "M2_over_M0": 0.3074699530439628,
+  "point_lumped_artifact_contribution": "SUPPORTED",
+  "remaining_axial_sampling_effect": "POSSIBLE",
+  "interpretation": "The large M0-to-M2 reduction supports a material point-lumped localization contribution. The remaining M2 discrepancy is not attributed uniquely to CFD slice under-resolution; actual N refinement is required."
+}

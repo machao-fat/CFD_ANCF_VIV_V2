@@ -1,0 +1,29 @@
+{
+  "pairs": [
+    {
+      "pair": "AB",
+      "local_secant_gain_N_per_m": 867402.0453417636
+    },
+    {
+      "pair": "AC",
+      "local_secant_gain_N_per_m": 1881076.5285726308
+    },
+    {
+      "pair": "AD",
+      "local_secant_gain_N_per_m": 230323.27369764258
+    },
+    {
+      "pair": "BC",
+      "local_secant_gain_N_per_m": 236502.0804194048
+    },
+    {
+      "pair": "BD",
+      "local_secant_gain_N_per_m": 622317.1676655714
+    },
+    {
+      "pair": "CD",
+      "local_secant_gain_N_per_m": 858037.5057830254
+    }
+  ],
+  "units": "N/m; diagnostic secant gain, not physical stiffness"
+}

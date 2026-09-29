@@ -1,0 +1,18 @@
+{
+  "pairs": [
+    {
+      "pair": "HIGH",
+      "face_count": 200,
+      "total_delta_pressure_N": 0.0013343487671308254,
+      "top10_delta_pressure_N": 0.00020187476588328943,
+      "top10_fraction_of_vector_norm": 0.15129085502688275
+    },
+    {
+      "pair": "LOW",
+      "face_count": 200,
+      "total_delta_pressure_N": 0.00018986302875283954,
+      "top10_delta_pressure_N": 2.1136545510647785e-05,
+      "top10_fraction_of_vector_norm": 0.11132523087558548
+    }
+  ]
+}

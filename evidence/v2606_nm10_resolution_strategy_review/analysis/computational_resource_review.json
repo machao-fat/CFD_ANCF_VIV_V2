@@ -1,0 +1,48 @@
+{
+  "D_free_bytes": 83893547008,
+  "NM9B_one_slice_disk_bytes": 65726255,
+  "NM9B_one_slice_file_count": 851,
+  "RANK_COUNT_REQUALIFICATION_REQUIRED": true,
+  "limits": "No new CFD benchmark or runtime RSS measurement; disk scaling excludes additional diagnostics/checkpoints.",
+  "logical_CPU_count": 26,
+  "memory_available_bytes": 15442219008,
+  "memory_total_bytes": 16602300416,
+  "rows": [
+    {
+      "Fluid_MPI_ranks": 30,
+      "Fluid_ranks_per_available_logical_CPU": 1.1538461538461537,
+      "N": 5,
+      "Structure_processes": 1,
+      "feasibility": "OVERSUBSCRIBED_AND_MEMORY_UNVERIFIED",
+      "linearized_case_disk_bytes_at_NM9B_per_slice_size": 328631275,
+      "linearized_case_file_count": 4255,
+      "minimum_launch_processes_including_mpirun": 36,
+      "qualified_6_ranks_per_slice_cpu_feasible_without_oversubscription": false,
+      "runtime_RSS_per_rank": "NOT_MEASURED"
+    },
+    {
+      "Fluid_MPI_ranks": 60,
+      "Fluid_ranks_per_available_logical_CPU": 2.3076923076923075,
+      "N": 10,
+      "Structure_processes": 1,
+      "feasibility": "OVERSUBSCRIBED_AND_MEMORY_UNVERIFIED",
+      "linearized_case_disk_bytes_at_NM9B_per_slice_size": 657262550,
+      "linearized_case_file_count": 8510,
+      "minimum_launch_processes_including_mpirun": 71,
+      "qualified_6_ranks_per_slice_cpu_feasible_without_oversubscription": false,
+      "runtime_RSS_per_rank": "NOT_MEASURED"
+    },
+    {
+      "Fluid_MPI_ranks": 120,
+      "Fluid_ranks_per_available_logical_CPU": 4.615384615384615,
+      "N": 20,
+      "Structure_processes": 1,
+      "feasibility": "OVERSUBSCRIBED_AND_MEMORY_UNVERIFIED",
+      "linearized_case_disk_bytes_at_NM9B_per_slice_size": 1314525100,
+      "linearized_case_file_count": 17020,
+      "minimum_launch_processes_including_mpirun": 141,
+      "qualified_6_ranks_per_slice_cpu_feasible_without_oversubscription": false,
+      "runtime_RSS_per_rank": "NOT_MEASURED"
+    }
+  ]
+}

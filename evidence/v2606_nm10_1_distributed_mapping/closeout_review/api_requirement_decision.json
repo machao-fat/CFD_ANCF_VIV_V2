@@ -1,0 +1,8 @@
+{
+  "ARBITRARY_GENERALIZED_FORCE_ADVANCE_API_NEEDED_FOR_M2": "NO",
+  "reason": "M2 is the historical production mode and its restored typed PiecewiseLinearDistributed path has passed the existing offline mapping, contract, conservation, virtual-work, resultant, cross-check, self-test, and M0/M2 prescribed-force replay evidence.",
+  "M1_role": "OFFLINE_DIAGNOSTIC_REFERENCE_ONLY",
+  "M1_trajectory_status": "NOT_REQUIRED_FOR_M2_ENTRY",
+  "do_not_modify_frozen_core": true,
+  "do_not_add_generalized_force_api_in_this_phase": true
+}

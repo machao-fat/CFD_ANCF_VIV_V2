@@ -1,0 +1,6 @@
+{
+  "attempts": 97,
+  "pass": true,
+  "single_global_qv_state": true,
+  "source_semantics_audit": "${V2606_PROJECT_ROOT}/evidence/v2606_nm9_a_three_slice_smoke/preparation/analysis/structure_semantics_diff.json"
+}

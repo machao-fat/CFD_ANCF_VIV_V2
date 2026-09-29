@@ -1,0 +1,327 @@
+{
+  "all_iteration_counts_equal": true,
+  "max_D_delta_m": 0.0,
+  "max_direct_force_delta_N": 0.0,
+  "rows": [
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 31,
+      "iteration_B": 31,
+      "iteration_equal": true,
+      "window": 1
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 19,
+      "iteration_B": 19,
+      "iteration_equal": true,
+      "window": 2
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 4,
+      "iteration_B": 4,
+      "iteration_equal": true,
+      "window": 3
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 3,
+      "iteration_B": 3,
+      "iteration_equal": true,
+      "window": 4
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 4,
+      "iteration_B": 4,
+      "iteration_equal": true,
+      "window": 5
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 4,
+      "iteration_B": 4,
+      "iteration_equal": true,
+      "window": 6
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 3,
+      "iteration_B": 3,
+      "iteration_equal": true,
+      "window": 7
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 3,
+      "iteration_B": 3,
+      "iteration_equal": true,
+      "window": 8
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 3,
+      "iteration_B": 3,
+      "iteration_equal": true,
+      "window": 9
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 2,
+      "iteration_B": 2,
+      "iteration_equal": true,
+      "window": 10
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 2,
+      "iteration_B": 2,
+      "iteration_equal": true,
+      "window": 11
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 2,
+      "iteration_B": 2,
+      "iteration_equal": true,
+      "window": 12
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 3,
+      "iteration_B": 3,
+      "iteration_equal": true,
+      "window": 13
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 2,
+      "iteration_B": 2,
+      "iteration_equal": true,
+      "window": 14
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 2,
+      "iteration_B": 2,
+      "iteration_equal": true,
+      "window": 15
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 2,
+      "iteration_B": 2,
+      "iteration_equal": true,
+      "window": 16
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 2,
+      "iteration_B": 2,
+      "iteration_equal": true,
+      "window": 17
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 2,
+      "iteration_B": 2,
+      "iteration_equal": true,
+      "window": 18
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 2,
+      "iteration_B": 2,
+      "iteration_equal": true,
+      "window": 19
+    },
+    {
+      "D_delta_m": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "accepted_direct_Fraw_delta_N": {
+        "s099": 0.0,
+        "s297": 0.0,
+        "s495": 0.0
+      },
+      "iteration_A": 2,
+      "iteration_B": 2,
+      "iteration_equal": true,
+      "window": 20
+    }
+  ]
+}

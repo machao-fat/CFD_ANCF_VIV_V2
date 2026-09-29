@@ -1,0 +1,64 @@
+{
+  "Force_source": "Structure preCICE received Force, not direct unaccelerated Fluid force",
+  "factor": 70.71428571428571,
+  "max_all_attempt_Q_error_N": 5.684341886080802e-14,
+  "max_conversion_error_N": 5.684341886080802e-14,
+  "pass": true,
+  "samples": [
+    {
+      "Qtotal_max_abs_error_N": 2.220446049250313e-16,
+      "attempt": 31,
+      "conversion_max_error_N": 2.220446049250313e-16,
+      "per_slice_Q_norm_N": [
+        1.3295294006416385,
+        1.2945552429092986,
+        1.6466387341074373
+      ],
+      "window": 1
+    },
+    {
+      "Qtotal_max_abs_error_N": 1.1102230246251565e-16,
+      "attempt": 2,
+      "conversion_max_error_N": 1.1102230246251565e-16,
+      "per_slice_Q_norm_N": [
+        1.9596564482126133,
+        2.237527297952941,
+        2.546040474287239
+      ],
+      "window": 20
+    },
+    {
+      "Qtotal_max_abs_error_N": 4.440892098500626e-16,
+      "attempt": 3,
+      "conversion_max_error_N": 4.440892098500626e-16,
+      "per_slice_Q_norm_N": [
+        2.3148579510988565,
+        2.8222266903402815,
+        3.286411089246567
+      ],
+      "window": 50
+    },
+    {
+      "Qtotal_max_abs_error_N": 4.440892098500626e-16,
+      "attempt": 3,
+      "conversion_max_error_N": 4.440892098500626e-16,
+      "per_slice_Q_norm_N": [
+        2.654154710003599,
+        3.0275455809581056,
+        3.6931625247920863
+      ],
+      "window": 100
+    },
+    {
+      "Qtotal_max_abs_error_N": 5.684341886080802e-14,
+      "attempt": 3,
+      "conversion_max_error_N": 5.684341886080802e-14,
+      "per_slice_Q_norm_N": [
+        194.80449806344333,
+        353.38496699963673,
+        365.07806123375656
+      ],
+      "window": 2
+    }
+  ]
+}

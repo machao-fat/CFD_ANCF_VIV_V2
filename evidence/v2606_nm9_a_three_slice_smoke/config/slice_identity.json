@@ -1,0 +1,7 @@
+{
+  "fresh_slice_cases_created": false,
+  "initial_identity_gate": "NOT_RUN",
+  "reason": "Three current corrected-moving-wall Fluid participant cases do not yet exist; NM8.5 preciceDict still names participant Fluid and mesh Fluid-Mesh.",
+  "nm8_5_preciceDict": "${V2606_PROJECT_ROOT}/case/hh06_v2606_nm8_5_500/fluid/system/preciceDict",
+  "required_participants": ["Fluid-S1", "Fluid-S2", "Fluid-S3"]
+}

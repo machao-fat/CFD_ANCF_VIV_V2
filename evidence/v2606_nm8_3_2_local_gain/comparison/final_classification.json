@@ -1,0 +1,92 @@
+{
+  "Pair-HIGH": "BD",
+  "Pair-LOW": "AD",
+  "max_input_D_delta_m": 2.1458267228589518e-09,
+  "max_wallU_delta_m_per_s": 8.013287650380368e-06,
+  "wallU_over_D_diagnostic_ratio": 3734.3591469976736,
+  "max_meshPhi_delta": 5.630545069674968e-10,
+  "meshPhi_L2_delta": 5.1860838828280126e-08,
+  "max_delta_p_kinematic": 0.002860169856838915,
+  "max_pressure_force_delta_N": 0.0013343487671308254,
+  "pressure_force_over_wallU_diagnostic_ratio": 166.51701840099145,
+  "first_amplification_stage": "afterPressureCorrector",
+  "outer_corrector_force_split": "outer 1",
+  "pressure_corrector_force_split": "outer 1, pressure corrector 1 (stage afterPressureCorrector sequence 4)",
+  "pressure_solver_iteration_difference": {
+    "Pair-HIGH": {
+      "letters": "BD",
+      "pressure_iteration_sequences": {
+        "B": [
+          [
+            3,
+            138
+          ],
+          [
+            2,
+            133
+          ],
+          [
+            3,
+            132
+          ]
+        ],
+        "D": [
+          [
+            3,
+            138
+          ],
+          [
+            2,
+            133
+          ],
+          [
+            2,
+            134
+          ]
+        ]
+      },
+      "same_pressure_iteration_counts": false
+    },
+    "Pair-LOW": {
+      "letters": "AD",
+      "pressure_iteration_sequences": {
+        "A": [
+          [
+            3,
+            138
+          ],
+          [
+            2,
+            133
+          ],
+          [
+            2,
+            134
+          ]
+        ],
+        "D": [
+          [
+            3,
+            138
+          ],
+          [
+            2,
+            133
+          ],
+          [
+            2,
+            134
+          ]
+        ]
+      },
+      "same_pressure_iteration_counts": true
+    }
+  },
+  "localized_or_distributed": "DISTRIBUTED_PRESSURE_SENSITIVITY",
+  "epsilon_scaling": "OTHER_NOT_DIRECTLY_SWEEP_TESTED; four-state secants retained without claiming a threshold jump",
+  "classification": "V2606_NM8_3_2_PRESSURE_SOLVE_GAIN_IDENTIFIED",
+  "authorized_next_action": "TEST_PRESSURE_SOLVER_NUMERICAL_SENSITIVITY",
+  "NM9_authorized": false,
+  "production_numerics_unchanged": true,
+  "diagnostic_solver_only": true
+}

@@ -1,0 +1,29 @@
+{
+  "bc_checks": 21,
+  "bc_pass": 21,
+  "all_18_pass": true,
+  "solver": [
+    {
+      "case": "s099",
+      "p_relTol_configured": true,
+      "pFinal_relTol_configured": true,
+      "GAMG_p_solve_seen": true,
+      "final_solver_residual_lines": 480
+    },
+    {
+      "case": "s297",
+      "p_relTol_configured": true,
+      "pFinal_relTol_configured": true,
+      "GAMG_p_solve_seen": true,
+      "final_solver_residual_lines": 480
+    },
+    {
+      "case": "s495",
+      "p_relTol_configured": true,
+      "pFinal_relTol_configured": true,
+      "GAMG_p_solve_seen": true,
+      "final_solver_residual_lines": 480
+    }
+  ],
+  "runtime_nonzero_displacement_observed": true
+}

@@ -1,0 +1,10 @@
+{
+  "script": "${V2606_PROJECT_ROOT}/scripts/analyze_v2606_nm8_3_5_window39_replay.py",
+  "structure_records": 10,
+  "force_records": 10,
+  "fluid_time_blocks": 10,
+  "solid_convergence_measures": 20,
+  "original_attempts": 50,
+  "original_force_records": 50,
+  "diagnostic_only": true
+}

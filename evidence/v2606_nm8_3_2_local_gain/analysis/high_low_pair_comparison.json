@@ -1,0 +1,70 @@
+{
+  "Pair-HIGH": {
+    "letters": "BD",
+    "pressure_iteration_sequences": {
+      "B": [
+        [
+          3,
+          138
+        ],
+        [
+          2,
+          133
+        ],
+        [
+          3,
+          132
+        ]
+      ],
+      "D": [
+        [
+          3,
+          138
+        ],
+        [
+          2,
+          133
+        ],
+        [
+          2,
+          134
+        ]
+      ]
+    },
+    "same_pressure_iteration_counts": false
+  },
+  "Pair-LOW": {
+    "letters": "AD",
+    "pressure_iteration_sequences": {
+      "A": [
+        [
+          3,
+          138
+        ],
+        [
+          2,
+          133
+        ],
+        [
+          2,
+          134
+        ]
+      ],
+      "D": [
+        [
+          3,
+          138
+        ],
+        [
+          2,
+          133
+        ],
+        [
+          2,
+          134
+        ]
+      ]
+    },
+    "same_pressure_iteration_counts": true
+  }
+}

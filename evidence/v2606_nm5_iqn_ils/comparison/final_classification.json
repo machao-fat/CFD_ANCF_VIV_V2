@@ -1,0 +1,9 @@
+{
+  "NM5A": "V2606_NM5_A_IQN_FIRST_WINDOW_PASS",
+  "NM5B": "V2606_NM5_B_IQN_SHORT_FSI_PASS",
+  "overall": "V2606_OFFICIAL_IQN_CLEAN_ANCF_SHORT_FSI_PASS",
+  "NM5_not_executed": true,
+  "frozen_release_unchanged": true,
+  "strict_convergence": true,
+  "fresh_from_release": true
+}

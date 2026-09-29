@@ -1,0 +1,32 @@
+{
+  "source_evidence": "${V2606_PROJECT_ROOT}/evidence/v2606_nm10_4_distributed_mapping_fresh100/analysis/g_interface_history.json",
+  "mapping": "PiecewiseLinearDistributed + NearestConstant",
+  "accepted_windows": 100,
+  "G_interface_samples_m": {
+    "20": 0.000011437234249233894,
+    "40": 0.00004477431249662929,
+    "60": 0.00010216144457785759,
+    "80": 0.00018407772769112103,
+    "100": 0.0002829825348598433
+  },
+  "G_interface_trend": "INCREASING",
+  "pairwise_maxima": {
+    "G_099_297": {
+      "max_m": 0.0000163800939159907,
+      "window_of_max": 94,
+      "final_m": 0.00001609267440429757
+    },
+    "G_297_495": {
+      "max_m": 0.00000797078645536501,
+      "window_of_max": 90,
+      "final_m": 0.000007410013592566999
+    },
+    "G_099_495": {
+      "max_m": 0.000008747945223218412,
+      "window_of_max": 98,
+      "final_m": 0.000008682692578048758
+    }
+  },
+  "interpretation": "Structural/spatial representation diagnostic only; not FEM error, CFD error, or spatial convergence proof.",
+  "spatial_adequacy": "NOT_ESTABLISHED"
+}

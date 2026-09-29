@@ -1,0 +1,10 @@
+{
+  "attempts": 347,
+  "independent_reference": "Gauss8, independently split at element and sample positions",
+  "max_abs_difference": 3.1086244689504383e-15,
+  "max_force_conversion_error_Npm": 0.0,
+  "median_abs_difference": 4.440892098500626e-16,
+  "p95_abs_difference": 6.661338147750939e-16,
+  "status": "PASS",
+  "tolerance": 1e-12
+}

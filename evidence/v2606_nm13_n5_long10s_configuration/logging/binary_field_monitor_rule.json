@@ -1,0 +1,6 @@
+{
+  "accepted_structure": "compact binary only",
+  "full_fields": "only OpenFOAM writeTime, every 250 steps, purgeWrite=3",
+  "watchdog_safe_stop_free_bytes": 5000000000,
+  "watchdog_warning_free_bytes": 10000000000
+}

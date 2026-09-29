@@ -1,0 +1,38 @@
+{
+  "NM9_authorized": "NO",
+  "authorized_next_action": "TEST_PRESSURE_ALE_DISCRETIZATION",
+  "classification": "V2606_NM8_3_4_CONVERGED_PRESSURE_GAIN_PERSISTS",
+  "force_continues_to_change_after_outer3": true,
+  "pair_high": {
+    "outer30_DeltaFp_N": 0.0005212527134771329,
+    "outer3_DeltaFp_N": 0.0006327984917204117,
+    "reference_DeltaFp_N": 0.0005216224874431656,
+    "reference_outer": 20,
+    "reference_over_outer3": 0.8243105732205714
+  },
+  "pair_low": {
+    "outer3_DeltaFp_N": 0.0002434393055445906,
+    "reference_DeltaFp_N": 0.00020066882918922313,
+    "reference_outer": 20
+  },
+  "pressure_residual_force_consistency": "PARTIAL",
+  "production_correctPhi": "mesh.dynamic() default (no explicit fvSolution override)",
+  "runs": {
+    "A": {
+      "fluid_exit": 0,
+      "outer_records": 30,
+      "solid_exit": 0
+    },
+    "B": {
+      "fluid_exit": 0,
+      "outer_records": 30,
+      "solid_exit": 0
+    },
+    "D": {
+      "fluid_exit": 0,
+      "outer_records": 30,
+      "solid_exit": 0
+    }
+  },
+  "turbulence_relevance": "YES"
+}

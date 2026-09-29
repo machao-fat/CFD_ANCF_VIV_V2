@@ -1,0 +1,62 @@
+{
+  "fresh_from_frozen30": true,
+  "start_cylinder_U_movingWallVelocity_6_of_6": true,
+  "only_numerical_delta_p_relTol_0.1_to_0.01": true,
+  "accepted_windows": 100,
+  "requested_windows": 100,
+  "forced_acceptance_count": 0,
+  "iteration_statistics": {
+    "count": 100,
+    "min": 2,
+    "median": 2.0,
+    "mean": 2.27,
+    "p95": 3.0,
+    "p99": 5.100000000000051,
+    "max": 15,
+    "windows_ge_5": 2,
+    "windows_ge_10": 1,
+    "windows_ge_20": 0,
+    "windows_ge_40": 0,
+    "reached_50": 0,
+    "forced_acceptance_count": 0
+  },
+  "force_residual": {
+    "min": 1.9e-06,
+    "max": 0.00479
+  },
+  "displacement_residual": {
+    "min": 3.9e-16,
+    "max": 2.46e-05
+  },
+  "window39": {
+    "accepted": true,
+    "iterations": 2,
+    "final_force_residual": 0.000537,
+    "final_displacement_residual": 3.87e-09
+  },
+  "persistent_four_state_cycle_near39": "NO",
+  "window39_region": "strictly accepted; no 50-attempt plateau/cycle",
+  "max_accepted": {
+    "Fraw_norm_N": 0.052219345898785005,
+    "absDx_m": 0.000909494307301374,
+    "absDy_m": 0.0001666853750524103,
+    "Dnorm_m": 0.0009245861499960272,
+    "Co_max": 0.8822924897,
+    "meshCo_max": 0.2172912025
+  },
+  "max_rejected_trial": {
+    "Co_max": 0.8822924897,
+    "meshCo_max": 0.0643772868
+  },
+  "movingWallVelocity_active_at_runtime": true,
+  "ordinary_p_relTol_0.01_runtime_verified": true,
+  "pFinal_relTol_0_runtime_verified": true,
+  "final_mesh_ok": true,
+  "final_restart_complete": true,
+  "fluid_exit": 0,
+  "structure_exit": 0,
+  "wrapper_exit": 0,
+  "classification": "V2606_NM8_4_MOVING_WALL_PRESSURE_RELTOl_0P01_SHORT100_PASS",
+  "authorized_next_action": "FRESH_CORRECTED_PRESSURE_500_WINDOW_QUALIFICATION",
+  "NM9_authorized": "NO"
+}

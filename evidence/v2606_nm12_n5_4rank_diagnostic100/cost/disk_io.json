@@ -1,0 +1,25 @@
+{
+  "evidence_bytes_after": 5655623467,
+  "field_and_case_growth_MB_per_100_windows": 190.820602,
+  "field_growth_projection": "Nonlinear at write boundaries; simple per100 estimate only",
+  "five_case_growth_bytes": 190820602,
+  "five_final_case_bytes": {
+    "s0594": 365591631,
+    "s1782": 365591587,
+    "s2970": 365591626,
+    "s4158": 365591703,
+    "s5346": 365590990
+  },
+  "launch_bytes_after": 5634054649,
+  "launch_bytes_before": 5443385919,
+  "projected_case_growth_GB": {
+    "1": 4.77051505,
+    "10": 47.7051505,
+    "30": 143.1154515,
+    "60": 286.230903
+  },
+  "run_directory_growth_bytes": 190668730,
+  "sampled_after_run": true,
+  "template_case_bytes": 327427387,
+  "write_policy": "OpenFOAM writeInterval=20, not every coupling window"
+}

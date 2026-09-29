@@ -1,0 +1,14 @@
+{
+  "command": "python3 resume_nm13.py",
+  "does_not_reset_to_P1_REF_NE32": true,
+  "fresh_and_resume_distinct": true,
+  "official_adapter_only": true,
+  "rejects": [
+    "missing processor field",
+    "time mismatch",
+    "state hash mismatch",
+    "partial five-case checkpoint"
+  ],
+  "requires": "complete synchronized committed checkpoint",
+  "status": "FAIL_CLOSED_READY"
+}

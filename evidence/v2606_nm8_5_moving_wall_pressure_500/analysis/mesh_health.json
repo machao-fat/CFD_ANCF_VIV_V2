@@ -1,0 +1,31 @@
+{
+  "initial": {
+    "mesh_ok": true,
+    "min_volume": 7.687364233e-10,
+    "max_volume": 5.394002137e-06,
+    "max_nonorthogonality": 43.84604596,
+    "max_skewness": 0.8969795303,
+    "max_aspect_ratio": 7.659081709
+  },
+  "midpoint": {
+    "mesh_ok": true,
+    "min_volume": 7.687364233e-10,
+    "max_volume": 5.394002137e-06,
+    "max_nonorthogonality": 43.84604596,
+    "max_skewness": 0.8969795303,
+    "max_aspect_ratio": 7.659081709
+  },
+  "midpoint_retained_time": "30.1195999999831585",
+  "final": {
+    "mesh_ok": true,
+    "min_volume": 7.687364134e-10,
+    "max_volume": 5.247622614e-06,
+    "max_nonorthogonality": 44.38130539,
+    "max_skewness": 0.9002270146,
+    "max_aspect_ratio": 6.870412329
+  },
+  "final_retained_time": "30.1999999999829711",
+  "initial_checkMesh_exit": 0,
+  "midpoint_checkMesh_exit": 0,
+  "final_checkMesh_exit": 0
+}

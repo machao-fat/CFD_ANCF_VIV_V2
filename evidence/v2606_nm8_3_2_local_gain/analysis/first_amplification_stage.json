@@ -1,0 +1,9 @@
+{
+  "Pair-HIGH": "BD",
+  "Pair-LOW": "AD",
+  "first_stage": "afterPressureCorrector",
+  "max_delta_p_kinematic": 0.002860169856838915,
+  "pressure_solver_branch_difference_in_high_pair": true,
+  "wall_velocity_is_time_scale_order": true,
+  "localization": "DISTRIBUTED_PRESSURE_SENSITIVITY"
+}

@@ -1,0 +1,226 @@
+{
+  "all_semantic_settings_identical": true,
+  "participant_identity_varies_by_design": true,
+  "slices": [
+    {
+      "controlDict": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch/fluid_s0594/system/controlDict",
+      "cylinderForceCoeffs": {
+        "Aref": "0.000784",
+        "lRef": "0.028",
+        "log": "no",
+        "magUInf": "0.31",
+        "rho": "rhoInf",
+        "rhoInf": "1000",
+        "type": "forceCoeffs",
+        "writeControl": "timeStep",
+        "writeFields": "no",
+        "writeInterval": "1"
+      },
+      "cylinderForces": {
+        "log": "no",
+        "rho": "rhoInf",
+        "rhoInf": "1000",
+        "type": "forces",
+        "writeControl": "timeStep",
+        "writeFields": "no",
+        "writeInterval": "1"
+      },
+      "direct_force_coeff_stream": "READY",
+      "direct_force_stream": "READY",
+      "main": {
+        "purgeWrite": "3",
+        "writeCompression": "off",
+        "writeControl": "timeStep",
+        "writeFormat": "binary",
+        "writeInterval": "250"
+      },
+      "preCICE": {
+        "participant": "Fluid-S1",
+        "preciceConfig": "\"precice_nm13_n5.xml\""
+      },
+      "slice": "s0594",
+      "yPlus": {
+        "executeControl": "writeTime",
+        "type": "yPlus",
+        "writeControl": "writeTime",
+        "writeFields": "no"
+      }
+    },
+    {
+      "controlDict": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch/fluid_s1782/system/controlDict",
+      "cylinderForceCoeffs": {
+        "Aref": "0.000784",
+        "lRef": "0.028",
+        "log": "no",
+        "magUInf": "0.31",
+        "rho": "rhoInf",
+        "rhoInf": "1000",
+        "type": "forceCoeffs",
+        "writeControl": "timeStep",
+        "writeFields": "no",
+        "writeInterval": "1"
+      },
+      "cylinderForces": {
+        "log": "no",
+        "rho": "rhoInf",
+        "rhoInf": "1000",
+        "type": "forces",
+        "writeControl": "timeStep",
+        "writeFields": "no",
+        "writeInterval": "1"
+      },
+      "direct_force_coeff_stream": "READY",
+      "direct_force_stream": "READY",
+      "main": {
+        "purgeWrite": "3",
+        "writeCompression": "off",
+        "writeControl": "timeStep",
+        "writeFormat": "binary",
+        "writeInterval": "250"
+      },
+      "preCICE": {
+        "participant": "Fluid-S2",
+        "preciceConfig": "\"precice_nm13_n5.xml\""
+      },
+      "slice": "s1782",
+      "yPlus": {
+        "executeControl": "writeTime",
+        "type": "yPlus",
+        "writeControl": "writeTime",
+        "writeFields": "no"
+      }
+    },
+    {
+      "controlDict": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch/fluid_s2970/system/controlDict",
+      "cylinderForceCoeffs": {
+        "Aref": "0.000784",
+        "lRef": "0.028",
+        "log": "no",
+        "magUInf": "0.31",
+        "rho": "rhoInf",
+        "rhoInf": "1000",
+        "type": "forceCoeffs",
+        "writeControl": "timeStep",
+        "writeFields": "no",
+        "writeInterval": "1"
+      },
+      "cylinderForces": {
+        "log": "no",
+        "rho": "rhoInf",
+        "rhoInf": "1000",
+        "type": "forces",
+        "writeControl": "timeStep",
+        "writeFields": "no",
+        "writeInterval": "1"
+      },
+      "direct_force_coeff_stream": "READY",
+      "direct_force_stream": "READY",
+      "main": {
+        "purgeWrite": "3",
+        "writeCompression": "off",
+        "writeControl": "timeStep",
+        "writeFormat": "binary",
+        "writeInterval": "250"
+      },
+      "preCICE": {
+        "participant": "Fluid-S3",
+        "preciceConfig": "\"precice_nm13_n5.xml\""
+      },
+      "slice": "s2970",
+      "yPlus": {
+        "executeControl": "writeTime",
+        "type": "yPlus",
+        "writeControl": "writeTime",
+        "writeFields": "no"
+      }
+    },
+    {
+      "controlDict": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch/fluid_s4158/system/controlDict",
+      "cylinderForceCoeffs": {
+        "Aref": "0.000784",
+        "lRef": "0.028",
+        "log": "no",
+        "magUInf": "0.31",
+        "rho": "rhoInf",
+        "rhoInf": "1000",
+        "type": "forceCoeffs",
+        "writeControl": "timeStep",
+        "writeFields": "no",
+        "writeInterval": "1"
+      },
+      "cylinderForces": {
+        "log": "no",
+        "rho": "rhoInf",
+        "rhoInf": "1000",
+        "type": "forces",
+        "writeControl": "timeStep",
+        "writeFields": "no",
+        "writeInterval": "1"
+      },
+      "direct_force_coeff_stream": "READY",
+      "direct_force_stream": "READY",
+      "main": {
+        "purgeWrite": "3",
+        "writeCompression": "off",
+        "writeControl": "timeStep",
+        "writeFormat": "binary",
+        "writeInterval": "250"
+      },
+      "preCICE": {
+        "participant": "Fluid-S4",
+        "preciceConfig": "\"precice_nm13_n5.xml\""
+      },
+      "slice": "s4158",
+      "yPlus": {
+        "executeControl": "writeTime",
+        "type": "yPlus",
+        "writeControl": "writeTime",
+        "writeFields": "no"
+      }
+    },
+    {
+      "controlDict": "${V2606_PROJECT_ROOT}/evidence/v2606_nm13_n5_long10s_configuration/launch/fluid_s5346/system/controlDict",
+      "cylinderForceCoeffs": {
+        "Aref": "0.000784",
+        "lRef": "0.028",
+        "log": "no",
+        "magUInf": "0.31",
+        "rho": "rhoInf",
+        "rhoInf": "1000",
+        "type": "forceCoeffs",
+        "writeControl": "timeStep",
+        "writeFields": "no",
+        "writeInterval": "1"
+      },
+      "cylinderForces": {
+        "log": "no",
+        "rho": "rhoInf",
+        "rhoInf": "1000",
+        "type": "forces",
+        "writeControl": "timeStep",
+        "writeFields": "no",
+        "writeInterval": "1"
+      },
+      "direct_force_coeff_stream": "READY",
+      "direct_force_stream": "READY",
+      "main": {
+        "purgeWrite": "3",
+        "writeCompression": "off",
+        "writeControl": "timeStep",
+        "writeFormat": "binary",
+        "writeInterval": "250"
+      },
+      "preCICE": {
+        "participant": "Fluid-S5",
+        "preciceConfig": "\"precice_nm13_n5.xml\""
+      },
+      "slice": "s5346",
+      "yPlus": {
+        "executeControl": "writeTime",
+        "type": "yPlus",
+        "writeControl": "writeTime",
+        "writeFields": "no"
+      }
+    }
+  ]
+}

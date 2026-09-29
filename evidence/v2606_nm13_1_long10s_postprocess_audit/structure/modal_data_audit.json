@@ -1,0 +1,6 @@
+{
+  "CURRENT_MODAL_BASIS": "NEEDS_OFFLINE_GENERATION",
+  "current_model": "13.12 m, 32 elements, 33 nodes, 198 DOF",
+  "long_run_blocked": false,
+  "old_50m_16element_basis_used": false
+}

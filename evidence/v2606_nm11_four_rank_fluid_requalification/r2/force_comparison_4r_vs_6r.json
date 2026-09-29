@@ -1,0 +1,86 @@
+{
+  "bitwise_equality_required": false,
+  "comparison_time_note": "Both runs start from the same frozen30 latest state and advance one 4e-4 s step; force outputs are compared at their final short-run times.",
+  "field_finiteness": {
+    "four_rank": true,
+    "six_rank": true
+  },
+  "four_rank": {
+    "available": true,
+    "last": {
+      "file": "${V2606_PROJECT_ROOT}/evidence/v2606_nm11_four_rank_fluid_requalification/r2/fixed_short_4r.log",
+      "pressure": [
+        0.0577975747,
+        -0.02503113184,
+        -6.642667238e-22
+      ],
+      "time_s": 30.000799999983435,
+      "total": [
+        0.0594910614,
+        -0.02582170468,
+        -5.230284597e-22
+      ],
+      "viscous": [
+        0.001693486702,
+        -0.0007905728458,
+        1.412382641e-22
+      ]
+    },
+    "rows": 15096
+  },
+  "four_rank_health": {
+    "final_time_s": 30.000799999983435,
+    "finite_text": true,
+    "max_Co": 0.8825037988,
+    "max_meshCo": null,
+    "time_count": 2
+  },
+  "four_rank_mesh": {
+    "max_aspect_ratio": 7.659081709,
+    "max_nonorthogonality": 43.84604596,
+    "max_skewness": 0.8969795303,
+    "mesh_ok": true,
+    "min_volume": 7.687364233e-10
+  },
+  "same_start_state": true,
+  "six_rank_health": {
+    "final_time_s": 30.000799999983435,
+    "finite_text": true,
+    "max_Co": 0.8825042065,
+    "max_meshCo": null,
+    "time_count": 2
+  },
+  "six_rank_mesh": {
+    "max_aspect_ratio": 7.659081709,
+    "max_nonorthogonality": 43.84604596,
+    "max_skewness": 0.8969795303,
+    "mesh_ok": true,
+    "min_volume": 7.687364233e-10
+  },
+  "six_rank_reference": {
+    "available": true,
+    "last": {
+      "file": "${V2606_PROJECT_ROOT}/evidence/v2606_nm11_four_rank_fluid_requalification/r2/fixed_short_6r_reference.log",
+      "pressure": [
+        0.05780805137,
+        -0.02498632307,
+        -6.649643337e-22
+      ],
+      "time_s": 30.000799999983435,
+      "total": [
+        0.05950154677,
+        -0.02577687522,
+        -5.235999116e-22
+      ],
+      "viscous": [
+        0.001693495398,
+        -0.0007905521519,
+        1.413644221e-22
+      ]
+    },
+    "rows": 15096
+  },
+  "comparison_source": "actual final Total force lines from fixed short continuation logs",
+  "total_force_xy_absolute_difference_N": 4.6039368674305674e-05,
+  "total_force_xy_relative_difference": 0.0007099904155465223
+}

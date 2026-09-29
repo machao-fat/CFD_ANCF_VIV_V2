@@ -1,0 +1,63 @@
+{
+  "TURBULENCE_COUPLING_RELEVANT": "YES",
+  "reason": "All three runs emit the k/omega correction only at outer 30, immediately before the common outer-30 force jump. This is synchronization evidence only, not a claim that turbulence explains the persistent B-D gain.",
+  "turbulence_traces": {
+    "A": [
+      {
+        "outer": 30,
+        "solves": [
+          {
+            "field": "omega",
+            "final_residual": 3.378781997e-08,
+            "initial_residual": 4.084070036e-06,
+            "iterations": 1
+          },
+          {
+            "field": "k",
+            "final_residual": 5.66416574e-08,
+            "initial_residual": 0.0003531442542,
+            "iterations": 2
+          }
+        ]
+      }
+    ],
+    "B": [
+      {
+        "outer": 30,
+        "solves": [
+          {
+            "field": "omega",
+            "final_residual": 3.378798178e-08,
+            "initial_residual": 4.084055569e-06,
+            "iterations": 1
+          },
+          {
+            "field": "k",
+            "final_residual": 5.664184302e-08,
+            "initial_residual": 0.0003531418277,
+            "iterations": 2
+          }
+        ]
+      }
+    ],
+    "D": [
+      {
+        "outer": 30,
+        "solves": [
+          {
+            "field": "omega",
+            "final_residual": 3.378772019e-08,
+            "initial_residual": 4.084079144e-06,
+            "iterations": 1
+          },
+          {
+            "field": "k",
+            "final_residual": 5.664154352e-08,
+            "initial_residual": 0.0003531457723,
+            "iterations": 2
+          }
+        ]
+      }
+    ]
+  }
+}

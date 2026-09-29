@@ -1,0 +1,68 @@
+{
+  "s099": {
+    "accepted_direct_fluid": {
+      "max_Fpressure": 0.05282295617714143,
+      "max_Fviscous": 0.0018581308156279178,
+      "max_Fraw": 0.05467964951021242,
+      "max_Fraw_location": [
+        1,
+        6,
+        6
+      ]
+    },
+    "rejected_direct_fluid": {
+      "max_Fpressure": 0.6006552613289609,
+      "max_Fviscous": 0.0023636982471003714,
+      "max_Fraw": 0.6030178142080339,
+      "max_Fraw_location": [
+        20,
+        1,
+        77
+      ]
+    }
+  },
+  "s297": {
+    "accepted_direct_fluid": {
+      "max_Fpressure": 0.05292524905901905,
+      "max_Fviscous": 0.0018582601385215497,
+      "max_Fraw": 0.0547820718988793,
+      "max_Fraw_location": [
+        1,
+        6,
+        6
+      ]
+    },
+    "rejected_direct_fluid": {
+      "max_Fpressure": 0.589184746515397,
+      "max_Fviscous": 0.002353311203805633,
+      "max_Fraw": 0.5915368628246693,
+      "max_Fraw_location": [
+        20,
+        1,
+        77
+      ]
+    }
+  },
+  "s495": {
+    "accepted_direct_fluid": {
+      "max_Fpressure": 0.05288092195330178,
+      "max_Fviscous": 0.0018582040950338872,
+      "max_Fraw": 0.054737688670076716,
+      "max_Fraw_location": [
+        1,
+        6,
+        6
+      ]
+    },
+    "rejected_direct_fluid": {
+      "max_Fpressure": 0.5956056165833807,
+      "max_Fviscous": 0.0023592864665270188,
+      "max_Fraw": 0.5979637382405012,
+      "max_Fraw_location": [
+        20,
+        1,
+        77
+      ]
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "OpenFOAM_version": "v2606",
+  "OpenFOAM_dir": "/usr/lib/openfoam/openfoam2606",
+  "preCICE_version": "3.4.1",
+  "adapter_tag": "v1.4.0",
+  "adapter_commit": "0801887b958f3101389cb719838dc8fc864d5369",
+  "adapter_runtime_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+  "observer_library_sha256": "2831d1cb92a0453e2563f005690df3862308acb5ff44c59df187a07668bf2ea3",
+  "structure_binary_sha256": "2abdfac01d8cdee4df6202549e0b4654c641a5463807663dd93605ebb3c9c282",
+  "frozen_release": "${V2606_PROJECT_ROOT}/case/hh06_v2606_fixed30",
+  "frozen_release_modified": false,
+  "fluid_mpi_ranks": 6,
+  "dt_s": 0.0004,
+  "PIMPLE": {
+    "nOuter": 3,
+    "nCorrectors": 2,
+    "nNonOrthogonal": 0
+  },
+  "strict_convergence": {
+    "Force": 0.005,
+    "Displacement": 0.005
+  },
+  "IQN_ILS": {
+    "QR2_limit": 0.01,
+    "initial_relaxation": 0.5,
+    "max_used_iterations": 100,
+    "time_windows_reused": 15
+  },
+  "C_storage": {
+    "writeControl": "timeStep",
+    "writeInterval": 100,
+    "purgeWrite": 2
+  },
+  "configuration_sha256": {
+    "B": {
+      "system/controlDict": "0135022b276bbb978bb48ad61cd3e40947d390d97979afa690674dfc4f147b72",
+      "system/fvSchemes": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+      "system/fvSolution": "e84ffcb7f08ca0718ec09a761928d26ecccef46f7627b8526cb7340b46174216",
+      "system/preciceDict": "2544e2f2bdd090ffe9892af46416a6ccb8445dbf26e0159e898344fb55e34e56",
+      "constant/dynamicMeshDict": "4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb",
+      "precice-config-nm8_2.xml": "7ec254efff22b14fc180f43b60fbf71e07d0a2eb7e27a02437a440c68eebb701"
+    },
+    "C": {
+      "system/controlDict": "1849aa19324c6b072b7d2a07742a735786e283b43ab3a0b24000d336e9aa710d",
+      "system/fvSchemes": "5ba57f3c63bd5f29d09206a6ccd5d4bfcc54a9d942b967aeb585e28e31568b24",
+      "system/fvSolution": "e84ffcb7f08ca0718ec09a761928d26ecccef46f7627b8526cb7340b46174216",
+      "system/preciceDict": "2544e2f2bdd090ffe9892af46416a6ccb8445dbf26e0159e898344fb55e34e56",
+      "constant/dynamicMeshDict": "4215a427ed2aa9673060e9d95a3036dcf24546c1bbec8d0268823506347abbfb",
+      "precice-config-nm8_2.xml": "d955bfa91e5326cc811823d444b8e507534ab5aa169037d61c39d91995651610"
+    }
+  }
+}

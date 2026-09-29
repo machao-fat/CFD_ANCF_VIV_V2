@@ -1,0 +1,14 @@
+{
+  "writeControl": "timeStep",
+  "writeInterval_steps": 100,
+  "purgeWrite": 2,
+  "deltaT_s": 0.0004,
+  "target_windows": 500,
+  "target_duration_s": 0.2,
+  "target_final_time_s": 30.2,
+  "disk_guard_free_bytes": 5000000000,
+  "monitor_interval_s": 15,
+  "scratch_filesystem": "WSL ext4 ${LINUX_HOME}",
+  "guarded_filesystems": ["/mnt/d", "${LINUX_HOME}"],
+  "restart_policy": "retain final write and one previous write; initial 30 s restart may also remain"
+}
