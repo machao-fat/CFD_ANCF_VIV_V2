@@ -8,7 +8,7 @@ from viv_app.utils.paths import APP_ROOT,CASES_ROOT
 def main():
     for n in (1,3,5):
         name='synthetic_legacy_n1' if n==1 else 'synthetic_distributed'
-        baseline=inspect_baseline(APP_ROOT/'workspace/baselines'/name)
+        baseline=inspect_baseline(APP_ROOT/'app/tests/fixtures'/name)
         profile=FlowProfile(kind='Step Current' if n==5 else 'Uniform')
         case_name=f'synthetic_N{n}_step' if n==5 else f'synthetic_N{n}_uniform'
         spec=SimulationSpec(case_name,str(baseline.root),str(CASES_ROOT),'0',

@@ -1,0 +1,7 @@
+..................                                                       [100%]
+============================= slowest 4 durations ==============================
+0.18s setup    tests/test_production_bridge.py::test_preflight_fails_closed_on_missing_case
+0.12s call     tests/test_production_bridge.py::test_preflight_fails_closed_on_missing_case
+0.06s call     tests/test_production_bridge.py::test_foam_environment_has_no_inherited_configuration_args
+0.03s setup    tests/test_production_bridge.py::test_foam_environment_has_no_inherited_configuration_args
+18 passed, 42 deselected in 3.45s

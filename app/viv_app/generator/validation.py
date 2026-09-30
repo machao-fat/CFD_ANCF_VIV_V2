@@ -28,6 +28,10 @@ def spec_from_mapping(raw):
 
 def validate_case(path,write_report=True):
     root=local_path(path)
+    meta_path=root/'generation_manifest.json'
+    if meta_path.is_file() and read_json(meta_path).get('contract_profile')=='v2606-n5-implicit-production-v1':
+        from .production_validation import validate_production_case
+        return validate_production_case(root,write_report)
     checks=[]
     def check(name,condition,detail):
         checks.append({'check':name,'status':'PASS' if condition else 'FAIL','detail':detail})
@@ -54,7 +58,7 @@ def validate_case(path,write_report=True):
         check('FLOW_COUNT',len(meta['U_i'])==n and meta['U_i']==velocities,'per-slice U_i')
         check('PROVENANCE_PARAMETERS',meta['positions_over_l']==list(spec.positions_over_l) and meta['mpi_ranks']==list(spec.mpi_ranks) and meta['flow_profile']==asdict(spec.flow) and meta['structure_parameters']==asdict(spec.structure) and meta['deltaT']==spec.delta_t and meta['endTime']==spec.end_time and meta['writeInterval']==spec.write_interval and meta['selected_initial_time']==spec.initial_state_time,'manifest/spec agree')
         check('GENERATION_STATUS',meta['generation_status'] in ('STATIC_VALIDATION_PENDING','PASS'),'not a failed generation')
-        check('APP_PROVENANCE',bool(meta['app']['commit']) and meta['app']['branch']=='app/mvp-case-generator-v1' and bool(meta['app']['source_hashes']) and bool(meta['baseline_key_hashes']),'app identity and selected baseline hashes')
+        check('APP_PROVENANCE',bool(meta['app']['commit']) and meta['app']['branch'] in ('app/mvp-case-generator-v1','app/production-baseline-bridge-v1') and bool(meta['app']['source_hashes']) and bool(meta['baseline_key_hashes']),'app identity and selected baseline hashes')
         xml=(root/'precice-config.xml').read_text(encoding='utf-8')
         xml_status=inspect_precice_xml(xml,manifest)
         check('XML_PARTICIPANTS',xml_status['fluid_participant_count']==n and xml_status['unique_participants'] and xml_status['structure_participant_count']==1,'parser/native inspector')

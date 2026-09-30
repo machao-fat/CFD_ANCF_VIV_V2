@@ -105,6 +105,24 @@ class FoamDict:
         return data
 
 
+def add_entry(data,block,key,value):
+    dictionary=FoamDict(data)
+    path=tuple(block)+(key,)
+    if path in dictionary.entries: return dictionary.edit({path:value})
+    if tuple(block) not in dictionary.blocks: raise ValueError('dictionary block missing')
+    # Locate the exact block using parser token offsets, not text replacement.
+    stack=[]
+    for i,(token,start,end) in enumerate(dictionary.tokens):
+        if token==b'{':
+            stack.append(dictionary.tokens[i-1][0].decode('ascii').strip('"'))
+            if tuple(stack)==tuple(block):
+                result=data[:end]+b'\n        '+key.encode()+b' '+str(value).encode('ascii')+b';'+data[end:]
+                FoamDict(result)
+                return result
+        elif token==b'}': stack.pop()
+    raise ValueError('block not found')
+
+
 def velocity_boundary(data):
     marker = b'boundaryField'
     # No numeric parsing or decoding of an opaque binary internalField.

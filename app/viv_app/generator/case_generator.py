@@ -33,6 +33,11 @@ def app_identity():
 
 def generate_case(spec,progress=lambda percent,message:None):
     from .validation import validate_case,CONTROL_MASK,PRECICE_MASK
+    from .baseline import read_json
+    descriptor=local_path(spec.baseline_path)/'app_baseline.json'
+    if descriptor.is_file() and read_json(descriptor).get('contract_profile')=='v2606-n5-implicit-production-v1':
+        from .production_generator import generate_production_case
+        return generate_production_case(spec,progress)
     progress(2,'Validating specification')
     spec.validate()
     output=local_path(spec.output_root)

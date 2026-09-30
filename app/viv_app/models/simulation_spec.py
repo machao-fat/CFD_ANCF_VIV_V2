@@ -65,6 +65,7 @@ class SimulationSpec:
     write_interval: float
     placement: str = 'custom'
     enabled: tuple[bool, ...] = ()
+    purge_write: int = 0
 
     def validate(self):
         # Safe on Windows too; refuse reserved device names/trailing dots.
@@ -94,6 +95,8 @@ class SimulationSpec:
             raise GenerationError('INVALID_INITIAL_TIME', self.initial_state_time) from exc
         if not math.isfinite(start) or start < 0 or self.end_time <= start:
             raise GenerationError('INVALID_NUMERICS', 'endTime must exceed selected initial time')
+        if isinstance(self.purge_write,bool) or not isinstance(self.purge_write,int) or self.purge_write<0:
+            raise GenerationError("INVALID_PURGE_WRITE","nonnegative integer required")
         self.flow.validate()
         root = local_path(self.output_root)
         if not within(root, CASES_ROOT):

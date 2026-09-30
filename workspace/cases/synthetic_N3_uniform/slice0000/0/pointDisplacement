@@ -1,3 +1,0 @@
-FoamFile { format ascii; class volVectorField; location "0"; object pointDisplacement; }
-internalField uniform 0;
-boundaryField { inlet { type zeroGradient; } }

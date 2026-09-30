@@ -25,3 +25,5 @@ viv_app = ["ui/*.qss"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+
+markers = ["smoke: fast offline model/XML/manifest/validation checks", "production_integration: read-only local qualified-lineage integration"]

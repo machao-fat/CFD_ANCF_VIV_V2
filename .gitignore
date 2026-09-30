@@ -51,3 +51,7 @@ Thumbs.db
 .cache/
 
 .pytest_cache/
+
+# Generated APP cases remain local
+workspace/cases/*
+!workspace/cases/.gitignore

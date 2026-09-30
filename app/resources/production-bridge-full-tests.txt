@@ -1,0 +1,11 @@
+............................................................             [100%]
+============================= slowest 8 durations ==============================
+26.18s call     tests/test_generator.py::test_n_generation_and_baseline_immutability[5]
+25.96s call     tests/test_ui.py::test_gui_baseline_generation_and_timer_stays_responsive
+23.44s call     tests/test_generator.py::test_flow_profiles[Linear Shear-expected1]
+23.26s call     tests/test_generator.py::test_flow_profiles[Step Current-expected2]
+22.50s call     tests/test_generator.py::test_flow_profiles[Uniform-expected0]
+21.32s call     tests/test_generator.py::test_uniform_native_positions
+20.27s call     tests/test_generator.py::test_n_generation_and_baseline_immutability[3]
+18.95s call     tests/test_generator.py::test_static_validation_detects_tampering[slice0000/system/controlDict-<lambda>]
+60 passed in 380.90s (0:06:20)

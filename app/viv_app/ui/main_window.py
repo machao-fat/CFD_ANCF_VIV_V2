@@ -11,6 +11,8 @@ from viv_app.generator.baseline import inspect_baseline
 from viv_app.generator.foam_dict import FoamDict
 from viv_app.generator.case_generator import generate_case
 from viv_app.generator.validation import validate_case
+from viv_app.generator.production_baseline import PROFILE,PROFILE_ROOT,POSITIONS
+from viv_app.generator.production_preflight import production_preflight
 
 
 class Worker(QObject):
@@ -36,7 +38,7 @@ class Worker(QObject):
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle('VIV Case Generator · MVP V1')
+        self.setWindowTitle('VIV Case Generator · Production Bridge V1')
         self.resize(1380,900)
         self.baseline=None
         self.generated=None
@@ -66,6 +68,9 @@ class MainWindow(QMainWindow):
         f=QFormLayout(project)
         self.case_name=QLineEdit('VIV_N5_test')
         f.addRow('Case Name',self.case_name)
+        self.profile_selector=QComboBox()
+        self.profile_selector.addItems(['Custom / offline baseline','v2606 N5 implicit production (NM12)'])
+        f.addRow('Import Profile',self.profile_selector)
         self.baseline_path=QLineEdit()
         self.baseline_path.setPlaceholderText('Select an audited baseline root (app_baseline.json)')
         self.browse=QPushButton('Browse Baseline')
@@ -103,12 +108,15 @@ class MainWindow(QMainWindow):
             box.valueChanged.connect(self.update_preview)
         structure=self.group('Structure · native ANCF',form_layout); f=QFormLayout(structure)
         self.structure_fields={}
+        self.structure_labels={}
         for key,label in [('diameter_m','D [m]'),('length_m','L [m]'),('ea_n','EA [N]'),('ei_nm2','EI [N m²]'),
             ('mass_per_length','Line mass [kg/m]'),('pretension_n','Pretension [N]'),('elements','ANCF elements')]:
             value=QLineEdit('—'); value.setReadOnly(True)
             value.setToolTip('NOT YET WIRED: requires a compatible mesh / structural equilibrium state.')
             self.structure_fields[key]=value
-            f.addRow(f'{label} · NOT YET WIRED',value)
+            self.structure_labels[key]=QLabel(f'{label} · NOT YET WIRED')
+            self.structure_labels[key].setProperty('baseLabel',label)
+            f.addRow(self.structure_labels[key],value)
         self.damping=self.number(0,0,1000)
         f.addRow('Structural damping · Rayleigh α [1/s]',self.damping)
         self.nodes=QLabel('Nodes derived from element count.')
@@ -120,6 +128,8 @@ class MainWindow(QMainWindow):
         self.write_label=QLabel('writeInterval')
         f.addRow('deltaT [s]',self.dt); f.addRow('endTime [s, fluid absolute]',self.end)
         f.addRow(self.write_label,self.write)
+        self.purge=QSpinBox(); self.purge.setRange(0,1000000); self.purge.setEnabled(False)
+        f.addRow("purgeWrite (production)",self.purge)
         note=QLabel('fvSchemes, fvSolution, PIMPLE, RBF and turbulence inherit baseline.')
         note.setWordWrap(True); f.addRow(note)
         form_layout.addStretch()
@@ -151,6 +161,8 @@ class MainWindow(QMainWindow):
         self.open_folder=QPushButton('Open Case Folder'); self.open_folder.setEnabled(False)
         for b in (self.generate,self.validate,self.open_folder): buttons.addWidget(b)
         rl.addLayout(buttons)
+        self.preflight=QPushButton("Production Preflight"); self.preflight.setEnabled(False)
+        rl.addWidget(self.preflight)
         self.splitter.addWidget(right); self.splitter.setSizes([480,900])
         self.progress=QProgressBar(); self.progress.setRange(0,100); layout.addWidget(self.progress)
         self.log=QPlainTextEdit(); self.log.setReadOnly(True); self.log.setMaximumHeight(100)
@@ -158,6 +170,8 @@ class MainWindow(QMainWindow):
         self.statusBar().showMessage('Ready · V1 generates and validates configuration only')
         self.browse.clicked.connect(self.browse_baseline)
         self.baseline_path.editingFinished.connect(self.load_baseline)
+        self.profile_selector.activated.connect(self.select_profile)
+        self.preflight.clicked.connect(self.start_preflight)
         self.generate.clicked.connect(self.start_generation)
         self.validate.clicked.connect(self.start_validation)
         self.open_folder.clicked.connect(self.open_case_folder)
@@ -180,6 +194,26 @@ class MainWindow(QMainWindow):
         box=QDoubleSpinBox(); box.setDecimals(8); box.setRange(minimum,maximum)
         box.setValue(default); box.setSingleStep(0.01); return box
 
+    def is_production(self):
+        return bool(self.baseline and self.baseline.descriptor.get('contract_profile')==PROFILE)
+
+    @Slot(int)
+    def select_profile(self,index):
+        if index==1:
+            self.baseline_path.setText(str(PROFILE_ROOT));self.load_baseline()
+
+    @Slot()
+    def start_preflight(self):
+        if self.generated and self.is_production():
+            self.run_worker('Production Preflight',lambda progress:production_preflight(self.generated,progress),self.preflight_completed)
+
+    def preflight_completed(self,result):
+        self.validation_label.setText(f"PRODUCTION PREFLIGHT\n{result['status']} · real FSI started = NO")
+        if result['status']=='FAIL':self.operation_failed(result['first_failure'])
+        else:
+            self.log.appendPlainText('production_launch_ready=true; manual decomposition and launch only')
+            for warning in result['warnings']:self.log.appendPlainText(warning)
+
     @Slot()
     def browse_baseline(self):
         path=QFileDialog.getExistingDirectory(self,'Select Baseline (read only)',str(APP_ROOT/'workspace/baselines'))
@@ -197,7 +231,20 @@ class MainWindow(QMainWindow):
         self.baseline=b
         self.initial_time.clear(); self.initial_time.addItems(b.times)
         self.initial_time.setCurrentText(b.descriptor['initial_time_default'])
-        self.baseline_note.setText(f"{b.descriptor['evidence_status']}\n{b.manifest.reconstruction_mode} / generic explicit. Structural runner: NOT YET WIRED in main.")
+        prod=self.is_production()
+        self.profile_selector.setCurrentIndex(1 if prod else 0)
+        for label in self.structure_labels.values():label.setText(label.property("baseLabel")+(" · LOCKED" if prod else " · NOT YET WIRED"))
+        if prod:
+            self.baseline_note.setText('USER_PROJECT_QUALIFIED · NM12 short100\nImplicit N5 / external immutable Structure. Physics, positions, dt and ranks locked. Manual preparation required.')
+        else:
+            self.baseline_note.setText(f"{b.descriptor['evidence_status']}\n{b.manifest.reconstruction_mode} / generic explicit. Structural runner: NOT YET WIRED in main.")
+        self.count.setRange(5,5) if prod else self.count.setRange(1,32)
+        self.count.setEnabled(not prod); self.placement.setEnabled(not prod)
+        self.placement.setCurrentIndex(0)
+        self.ranks.setEnabled(not prod); self.dt.setEnabled(not prod);self.damping.setEnabled(not prod)
+        self.initial_time.setEnabled(not prod);self.purge.setEnabled(prod)
+        self.purge.setValue(int(b.controls.scalar('purgeWrite')) if prod else 0)
+        self.generated=None;self.preflight.setEnabled(False)
         s=b.structure
         for name,field in self.structure_fields.items(): field.setText(str(getattr(s,name)))
         self.damping.setValue(s.damping_alpha)
@@ -230,7 +277,7 @@ class MainWindow(QMainWindow):
         n=self.count.value()
         if self.baseline:
             b=self.baseline
-            positions=uniform_positions(n,b.model.length_m,b.manifest.active_start_m,b.manifest.active_end_m)
+            positions=tuple(x/b.model.length_m for x in POSITIONS) if self.is_production() else uniform_positions(n,b.model.length_m,b.manifest.active_start_m,b.manifest.active_end_m)
             length=b.model.length_m
         else:
             positions=uniform_positions(n,1,0,1); length=1
@@ -241,14 +288,16 @@ class MainWindow(QMainWindow):
         self.table.setRowCount(n)
         for i in range(n):
             x=old[i] if i<len(old) else positions[i]
-            for col,text in [(0,f'slice_{i:04d}'),(1,f'{x*length:.6g}'),(2,f'{x:.15g}'),(5,'—'),(6,'baseline mesh')]:
+            for col,text in [(0,f'S{i+1}' if self.is_production() else f'slice_{i:04d}'),(1,f'{x*length:.6g}'),(2,f'{x:.15g}'),(5,'—'),(6,'baseline mesh')]:
                 item=QTableWidgetItem(text)
                 flags=Qt.ItemIsSelectable|Qt.ItemIsEnabled
-                if col==2 and self.placement.currentIndex()==1: flags|=Qt.ItemIsEditable
+                if col==2 and self.placement.currentIndex()==1 and not self.is_production(): flags|=Qt.ItemIsEditable
                 item.setFlags(flags); self.table.setItem(i,col,item)
             enabled=QCheckBox(); enabled.setChecked(True); enabled.stateChanged.connect(self.update_preview)
+            enabled.setEnabled(not self.is_production())
             self.table.setCellWidget(i,3,enabled)
             rank=QSpinBox(); rank.setRange(1,1024); rank.setValue(self.ranks.value())
+            rank.setEnabled(not self.is_production())
             rank.setFixedWidth(82)
             rank.valueChanged.connect(self.update_preview); self.table.setCellWidget(i,4,rank)
         self.table.blockSignals(False); self._updating=False; self.update_preview()
@@ -299,7 +348,7 @@ class MainWindow(QMainWindow):
             positions_over_l=self.positions(),mpi_ranks=tuple(self.table.cellWidget(i,4).value() for i in range(self.table.rowCount())),
             enabled=tuple(self.table.cellWidget(i,3).isChecked() for i in range(self.table.rowCount())),
             structure=structure,flow=self.flow_profile(),delta_t=self.dt.value(),end_time=self.end.value(),
-            write_interval=self.write.value(),placement='uniform' if self.placement.currentIndex()==0 else 'custom')
+            write_interval=self.write.value(),purge_write=self.purge.value(),placement='uniform' if self.placement.currentIndex()==0 else 'custom')
 
     @Slot()
     def start_generation(self):
@@ -312,7 +361,8 @@ class MainWindow(QMainWindow):
         self.generated=Path(path)
         self.validation_label.setText('CASE GENERATION\nPASS · offline configuration')
         self.log.appendPlainText(f'Generated: {path}')
-        self.log.appendPlainText('Structural runner remains NOT YET WIRED in main. No simulation started.')
+        self.log.appendPlainText('External Structure command recovered; run Production Preflight. No FSI started.' if self.is_production() else 'Structural runner remains NOT YET WIRED in main. No simulation started.')
+        if self.is_production():self.validation_label.setText('CASE GENERATION\nPASS · production configuration; preflight pending')
 
     @Slot()
     def start_validation(self):
@@ -320,7 +370,8 @@ class MainWindow(QMainWindow):
             self.run_worker('Validating',lambda progress:validate_case(self.generated),self.validation_completed)
 
     def validation_completed(self,result):
-        self.validation_label.setText(f"CASE GENERATION\n{result['status']} · offline configuration")
+        scope='production configuration' if self.is_production() else 'offline configuration'
+        self.validation_label.setText(f"CASE GENERATION\n{result['status']} · {scope}")
         if result['status']=='FAIL': self.operation_failed(result['first_failure'])
         else: self.log.appendPlainText('Static validation PASS')
 
@@ -334,7 +385,7 @@ class MainWindow(QMainWindow):
         self.validation_label.setText(f'CASE GENERATION\n{status}')
         self.statusBar().showMessage(status); self.log.appendPlainText(status)
         self.form_widget.setEnabled(False); self.table.setEnabled(False)
-        self.generate.setEnabled(False); self.validate.setEnabled(False)
+        self.generate.setEnabled(False); self.validate.setEnabled(False);self.preflight.setEnabled(False)
         self.thread=QThread(self)
         self.worker=Worker(action); self.worker.moveToThread(self.thread)
         self._completion=completion; self._operation_ok=False
@@ -371,6 +422,7 @@ class MainWindow(QMainWindow):
         self.thread=None; self.worker=None; self._completion=None
         self.form_widget.setEnabled(True); self.table.setEnabled(True)
         self.generate.setEnabled(True)
+        self.preflight.setEnabled(self.generated is not None and self.is_production())
         self.validate.setEnabled(self.generated is not None); self.open_folder.setEnabled(self.generated is not None)
         if self._operation_ok:
             self.progress.setValue(100); self.statusBar().showMessage('Ready · operation completed')

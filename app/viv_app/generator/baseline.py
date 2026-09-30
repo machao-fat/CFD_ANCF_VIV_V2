@@ -147,6 +147,9 @@ def inspect_baseline(path):
         blocked(f'{root}/app_baseline.json absent; cannot infer implicit coupling, structural initial state or force scaling')
     try:
         d = read_json(descriptor_path)
+        if d.get("contract_profile")=="v2606-n5-implicit-production-v1":
+            from .production_baseline import inspect_production_baseline
+            return inspect_production_baseline(root)
         if set(d) != REQUIRED_DESCRIPTOR:
             blocked(f'app_baseline.json: missing/unknown fields: {sorted(set(d)^REQUIRED_DESCRIPTOR)}')
         if d['schema'] != 'viv-app-baseline-v1' or d['contract_profile'] != PROFILE:
