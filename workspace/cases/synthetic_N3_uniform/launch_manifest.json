@@ -1,0 +1,89 @@
+{
+  "schema": "viv-app-launch-descriptors-v1",
+  "execution": "MANUAL_ONLY",
+  "production_launch_ready": false,
+  "reason": "origin/main generic structural runner not wired; review required",
+  "working_directory_rule": "relative to case root; all participants must run from their own directory",
+  "fluid": [
+    {
+      "slice_id": "slice_0000",
+      "ordinal": 0,
+      "s_ref_m": 1.666666666666667,
+      "unit_span_m": 0.028,
+      "participant": "Fluid_0000",
+      "case_id": "slice0000",
+      "working_directory": "slice0000",
+      "template_source": "baseline-provenance-only",
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "pimpleFoam",
+        "-parallel"
+      ],
+      "log_path": "logs/slice_0000.log",
+      "local_flow_config": null,
+      "prepare_command": [
+        "decomposePar",
+        "-force"
+      ],
+      "mpi_ranks": 4
+    },
+    {
+      "slice_id": "slice_0001",
+      "ordinal": 1,
+      "s_ref_m": 5.0,
+      "unit_span_m": 0.028,
+      "participant": "Fluid_0001",
+      "case_id": "slice0001",
+      "working_directory": "slice0001",
+      "template_source": "baseline-provenance-only",
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "pimpleFoam",
+        "-parallel"
+      ],
+      "log_path": "logs/slice_0001.log",
+      "local_flow_config": null,
+      "prepare_command": [
+        "decomposePar",
+        "-force"
+      ],
+      "mpi_ranks": 4
+    },
+    {
+      "slice_id": "slice_0002",
+      "ordinal": 2,
+      "s_ref_m": 8.333333333333334,
+      "unit_span_m": 0.028,
+      "participant": "Fluid_0002",
+      "case_id": "slice0002",
+      "working_directory": "slice0002",
+      "template_source": "baseline-provenance-only",
+      "command": [
+        "mpirun",
+        "-np",
+        "4",
+        "pimpleFoam",
+        "-parallel"
+      ],
+      "log_path": "logs/slice_0002.log",
+      "local_flow_config": null,
+      "prepare_command": [
+        "decomposePar",
+        "-force"
+      ],
+      "mpi_ranks": 4
+    }
+  ],
+  "structure": {
+    "participant": "Structure_0000",
+    "working_directory": "Structure_0000",
+    "config": "structure_config.json",
+    "command": null,
+    "mpi_ranks": 1,
+    "status": "NOT_YET_WIRED_IN_ORIGIN_MAIN"
+  }
+}

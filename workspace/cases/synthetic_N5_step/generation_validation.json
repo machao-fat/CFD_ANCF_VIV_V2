@@ -1,0 +1,1734 @@
+{
+  "status": "PASS",
+  "first_failure": null,
+  "checks": [
+    {
+      "check": "CASE_DIRECTORY",
+      "status": "PASS",
+      "detail": "generated case must exist under APP/workspace/cases"
+    },
+    {
+      "check": "REQUIRED_ARTIFACT",
+      "status": "PASS",
+      "detail": "simulation_spec.yaml"
+    },
+    {
+      "check": "REQUIRED_ARTIFACT",
+      "status": "PASS",
+      "detail": "generation_manifest.json"
+    },
+    {
+      "check": "REQUIRED_ARTIFACT",
+      "status": "PASS",
+      "detail": "precice-config.xml"
+    },
+    {
+      "check": "REQUIRED_ARTIFACT",
+      "status": "PASS",
+      "detail": "slice_manifest.json"
+    },
+    {
+      "check": "REQUIRED_ARTIFACT",
+      "status": "PASS",
+      "detail": "launch_manifest.json"
+    },
+    {
+      "check": "REQUIRED_ARTIFACT",
+      "status": "PASS",
+      "detail": "baseline_contract_snapshot.json"
+    },
+    {
+      "check": "CONTRACT_PROFILE",
+      "status": "PASS",
+      "detail": "audited explicit import profile"
+    },
+    {
+      "check": "SLICE_COUNT",
+      "status": "PASS",
+      "detail": "N matches spec, manifest and metadata"
+    },
+    {
+      "check": "CASE_IDENTITY",
+      "status": "PASS",
+      "detail": "case_name"
+    },
+    {
+      "check": "SLICE_POSITIONS",
+      "status": "PASS",
+      "detail": "structure positions agree"
+    },
+    {
+      "check": "FLOW_COUNT",
+      "status": "PASS",
+      "detail": "per-slice U_i"
+    },
+    {
+      "check": "PROVENANCE_PARAMETERS",
+      "status": "PASS",
+      "detail": "manifest/spec agree"
+    },
+    {
+      "check": "GENERATION_STATUS",
+      "status": "PASS",
+      "detail": "not a failed generation"
+    },
+    {
+      "check": "APP_PROVENANCE",
+      "status": "PASS",
+      "detail": "app identity and selected baseline hashes"
+    },
+    {
+      "check": "XML_PARTICIPANTS",
+      "status": "PASS",
+      "detail": "parser/native inspector"
+    },
+    {
+      "check": "XML_CONTRACT",
+      "status": "PASS",
+      "detail": "data, meshes, maps, schemes, exchange paths and timing"
+    },
+    {
+      "check": "XML_IDENTITY",
+      "status": "PASS",
+      "detail": "preCICE file hash"
+    },
+    {
+      "check": "PARTICIPANT_NAMES",
+      "status": "PASS",
+      "detail": "production naming"
+    },
+    {
+      "check": "FLUID_DIRECTORIES",
+      "status": "PASS",
+      "detail": "case dirs match participants, no old slice count"
+    },
+    {
+      "check": "STRUCTURE_CONFIGURATION",
+      "status": "PASS",
+      "detail": "kernel_model.json"
+    },
+    {
+      "check": "STRUCTURE_CONFIGURATION",
+      "status": "PASS",
+      "detail": "initial_state.json"
+    },
+    {
+      "check": "STRUCTURE_CONFIGURATION",
+      "status": "PASS",
+      "detail": "structure_config.json"
+    },
+    {
+      "check": "STRUCTURE_POSITIONS",
+      "status": "PASS",
+      "detail": "native KernelModel Ns/positions"
+    },
+    {
+      "check": "STRUCTURE_INHERITANCE",
+      "status": "PASS",
+      "detail": "only slice count/positions and Rayleigh alpha may change; SHM1/physics retained"
+    },
+    {
+      "check": "STRUCTURE_PARAMETERS",
+      "status": "PASS",
+      "detail": "native SPX1 values"
+    },
+    {
+      "check": "STRUCTURE_INITIAL_STATE",
+      "status": "PASS",
+      "detail": "native initial state dimensions"
+    },
+    {
+      "check": "INITIAL_STATE_INHERITANCE",
+      "status": "PASS",
+      "detail": "q state byte-identical"
+    },
+    {
+      "check": "MODEL_BASELINE_IDENTITY",
+      "status": "PASS",
+      "detail": "snapshot identities"
+    },
+    {
+      "check": "STRUCTURE_REFERENCES",
+      "status": "PASS",
+      "detail": "references confined to generated case"
+    },
+    {
+      "check": "LAUNCH_BOUNDARY",
+      "status": "PASS",
+      "detail": "no solver launcher; structural runner gap explicit"
+    },
+    {
+      "check": "LAUNCH_COUNT",
+      "status": "PASS",
+      "detail": "one descriptor per fluid"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0000/system"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0000/constant"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0000/0"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh/points"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh/faces"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh/owner"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh/neighbour"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh/boundary"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0000/0/U"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0000/0/p"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0000/0/pointDisplacement"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0000/0/cellDisplacement"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0000/0/phi"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0000/0/Uf"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0000/0/meshPhi"
+    },
+    {
+      "check": "CONTROL_NUMERICS",
+      "status": "PASS",
+      "detail": "explicit time selection and user numerics"
+    },
+    {
+      "check": "CONTROL_INHERITANCE",
+      "status": "PASS",
+      "detail": "other solver settings unchanged"
+    },
+    {
+      "check": "MPI_DECOMPOSITION",
+      "status": "PASS",
+      "detail": "per-slice ranks"
+    },
+    {
+      "check": "DECOMPOSITION_INHERITANCE",
+      "status": "PASS",
+      "detail": "decomposition settings unchanged"
+    },
+    {
+      "check": "ADAPTER_INTERFACE",
+      "status": "PASS",
+      "detail": "adapter participant/mesh/XML binding"
+    },
+    {
+      "check": "ADAPTER_INHERITANCE",
+      "status": "PASS",
+      "detail": "adapter FSI/scaling unchanged"
+    },
+    {
+      "check": "INLET_VELOCITY",
+      "status": "PASS",
+      "detail": "Fluid_0000 U=0.6"
+    },
+    {
+      "check": "INTERNAL_VELOCITY_INHERITANCE",
+      "status": "PASS",
+      "detail": "developed internal U preserved"
+    },
+    {
+      "check": "INHERITED_CONFIG",
+      "status": "PASS",
+      "detail": "system/fvSchemes"
+    },
+    {
+      "check": "INHERITED_CONFIG",
+      "status": "PASS",
+      "detail": "system/fvSolution"
+    },
+    {
+      "check": "MPI_LAUNCH_DESCRIPTOR",
+      "status": "PASS",
+      "detail": "manual MPI participant command"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0000/system/controlDict"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0000/system/decomposeParDict"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0000/system/fvSchemes"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0000/system/fvSolution"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0000/system/preciceDict"
+    },
+    {
+      "check": "SELECTED_INITIAL_TIME_ONLY",
+      "status": "PASS",
+      "detail": "no unselected restart/runtime times"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0001/system"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0001/constant"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0001/0"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh/points"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh/faces"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh/owner"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh/neighbour"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh/boundary"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0001/0/U"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0001/0/p"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0001/0/pointDisplacement"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0001/0/cellDisplacement"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0001/0/phi"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0001/0/Uf"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0001/0/meshPhi"
+    },
+    {
+      "check": "CONTROL_NUMERICS",
+      "status": "PASS",
+      "detail": "explicit time selection and user numerics"
+    },
+    {
+      "check": "CONTROL_INHERITANCE",
+      "status": "PASS",
+      "detail": "other solver settings unchanged"
+    },
+    {
+      "check": "MPI_DECOMPOSITION",
+      "status": "PASS",
+      "detail": "per-slice ranks"
+    },
+    {
+      "check": "DECOMPOSITION_INHERITANCE",
+      "status": "PASS",
+      "detail": "decomposition settings unchanged"
+    },
+    {
+      "check": "ADAPTER_INTERFACE",
+      "status": "PASS",
+      "detail": "adapter participant/mesh/XML binding"
+    },
+    {
+      "check": "ADAPTER_INHERITANCE",
+      "status": "PASS",
+      "detail": "adapter FSI/scaling unchanged"
+    },
+    {
+      "check": "INLET_VELOCITY",
+      "status": "PASS",
+      "detail": "Fluid_0001 U=0.6"
+    },
+    {
+      "check": "INTERNAL_VELOCITY_INHERITANCE",
+      "status": "PASS",
+      "detail": "developed internal U preserved"
+    },
+    {
+      "check": "INHERITED_CONFIG",
+      "status": "PASS",
+      "detail": "system/fvSchemes"
+    },
+    {
+      "check": "INHERITED_CONFIG",
+      "status": "PASS",
+      "detail": "system/fvSolution"
+    },
+    {
+      "check": "MPI_LAUNCH_DESCRIPTOR",
+      "status": "PASS",
+      "detail": "manual MPI participant command"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0001/system/controlDict"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0001/system/decomposeParDict"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0001/system/fvSchemes"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0001/system/fvSolution"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0001/system/preciceDict"
+    },
+    {
+      "check": "SELECTED_INITIAL_TIME_ONLY",
+      "status": "PASS",
+      "detail": "no unselected restart/runtime times"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0002/system"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0002/constant"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0002/0"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh/points"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh/faces"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh/owner"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh/neighbour"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh/boundary"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0002/0/U"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0002/0/p"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0002/0/pointDisplacement"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0002/0/cellDisplacement"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0002/0/phi"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0002/0/Uf"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0002/0/meshPhi"
+    },
+    {
+      "check": "CONTROL_NUMERICS",
+      "status": "PASS",
+      "detail": "explicit time selection and user numerics"
+    },
+    {
+      "check": "CONTROL_INHERITANCE",
+      "status": "PASS",
+      "detail": "other solver settings unchanged"
+    },
+    {
+      "check": "MPI_DECOMPOSITION",
+      "status": "PASS",
+      "detail": "per-slice ranks"
+    },
+    {
+      "check": "DECOMPOSITION_INHERITANCE",
+      "status": "PASS",
+      "detail": "decomposition settings unchanged"
+    },
+    {
+      "check": "ADAPTER_INTERFACE",
+      "status": "PASS",
+      "detail": "adapter participant/mesh/XML binding"
+    },
+    {
+      "check": "ADAPTER_INHERITANCE",
+      "status": "PASS",
+      "detail": "adapter FSI/scaling unchanged"
+    },
+    {
+      "check": "INLET_VELOCITY",
+      "status": "PASS",
+      "detail": "Fluid_0002 U=0.0"
+    },
+    {
+      "check": "INTERNAL_VELOCITY_INHERITANCE",
+      "status": "PASS",
+      "detail": "developed internal U preserved"
+    },
+    {
+      "check": "INHERITED_CONFIG",
+      "status": "PASS",
+      "detail": "system/fvSchemes"
+    },
+    {
+      "check": "INHERITED_CONFIG",
+      "status": "PASS",
+      "detail": "system/fvSolution"
+    },
+    {
+      "check": "MPI_LAUNCH_DESCRIPTOR",
+      "status": "PASS",
+      "detail": "manual MPI participant command"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0002/system/controlDict"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0002/system/decomposeParDict"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0002/system/fvSchemes"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0002/system/fvSolution"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0002/system/preciceDict"
+    },
+    {
+      "check": "SELECTED_INITIAL_TIME_ONLY",
+      "status": "PASS",
+      "detail": "no unselected restart/runtime times"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0003/system"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0003/constant"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0003/0"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh/points"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh/faces"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh/owner"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh/neighbour"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh/boundary"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0003/0/U"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0003/0/p"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0003/0/pointDisplacement"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0003/0/cellDisplacement"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0003/0/phi"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0003/0/Uf"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0003/0/meshPhi"
+    },
+    {
+      "check": "CONTROL_NUMERICS",
+      "status": "PASS",
+      "detail": "explicit time selection and user numerics"
+    },
+    {
+      "check": "CONTROL_INHERITANCE",
+      "status": "PASS",
+      "detail": "other solver settings unchanged"
+    },
+    {
+      "check": "MPI_DECOMPOSITION",
+      "status": "PASS",
+      "detail": "per-slice ranks"
+    },
+    {
+      "check": "DECOMPOSITION_INHERITANCE",
+      "status": "PASS",
+      "detail": "decomposition settings unchanged"
+    },
+    {
+      "check": "ADAPTER_INTERFACE",
+      "status": "PASS",
+      "detail": "adapter participant/mesh/XML binding"
+    },
+    {
+      "check": "ADAPTER_INHERITANCE",
+      "status": "PASS",
+      "detail": "adapter FSI/scaling unchanged"
+    },
+    {
+      "check": "INLET_VELOCITY",
+      "status": "PASS",
+      "detail": "Fluid_0003 U=0.0"
+    },
+    {
+      "check": "INTERNAL_VELOCITY_INHERITANCE",
+      "status": "PASS",
+      "detail": "developed internal U preserved"
+    },
+    {
+      "check": "INHERITED_CONFIG",
+      "status": "PASS",
+      "detail": "system/fvSchemes"
+    },
+    {
+      "check": "INHERITED_CONFIG",
+      "status": "PASS",
+      "detail": "system/fvSolution"
+    },
+    {
+      "check": "MPI_LAUNCH_DESCRIPTOR",
+      "status": "PASS",
+      "detail": "manual MPI participant command"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0003/system/controlDict"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0003/system/decomposeParDict"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0003/system/fvSchemes"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0003/system/fvSolution"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0003/system/preciceDict"
+    },
+    {
+      "check": "SELECTED_INITIAL_TIME_ONLY",
+      "status": "PASS",
+      "detail": "no unselected restart/runtime times"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0004/system"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0004/constant"
+    },
+    {
+      "check": "OPENFOAM_DIRECTORY",
+      "status": "PASS",
+      "detail": "slice0004/0"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh/points"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh/faces"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh/owner"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh/neighbour"
+    },
+    {
+      "check": "BASELINE_MESH",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh/boundary"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0004/0/U"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0004/0/p"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0004/0/pointDisplacement"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0004/0/cellDisplacement"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0004/0/phi"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0004/0/Uf"
+    },
+    {
+      "check": "INITIAL_FIELD",
+      "status": "PASS",
+      "detail": "slice0004/0/meshPhi"
+    },
+    {
+      "check": "CONTROL_NUMERICS",
+      "status": "PASS",
+      "detail": "explicit time selection and user numerics"
+    },
+    {
+      "check": "CONTROL_INHERITANCE",
+      "status": "PASS",
+      "detail": "other solver settings unchanged"
+    },
+    {
+      "check": "MPI_DECOMPOSITION",
+      "status": "PASS",
+      "detail": "per-slice ranks"
+    },
+    {
+      "check": "DECOMPOSITION_INHERITANCE",
+      "status": "PASS",
+      "detail": "decomposition settings unchanged"
+    },
+    {
+      "check": "ADAPTER_INTERFACE",
+      "status": "PASS",
+      "detail": "adapter participant/mesh/XML binding"
+    },
+    {
+      "check": "ADAPTER_INHERITANCE",
+      "status": "PASS",
+      "detail": "adapter FSI/scaling unchanged"
+    },
+    {
+      "check": "INLET_VELOCITY",
+      "status": "PASS",
+      "detail": "Fluid_0004 U=0.0"
+    },
+    {
+      "check": "INTERNAL_VELOCITY_INHERITANCE",
+      "status": "PASS",
+      "detail": "developed internal U preserved"
+    },
+    {
+      "check": "INHERITED_CONFIG",
+      "status": "PASS",
+      "detail": "system/fvSchemes"
+    },
+    {
+      "check": "INHERITED_CONFIG",
+      "status": "PASS",
+      "detail": "system/fvSolution"
+    },
+    {
+      "check": "MPI_LAUNCH_DESCRIPTOR",
+      "status": "PASS",
+      "detail": "manual MPI participant command"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0004/system/controlDict"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0004/system/decomposeParDict"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0004/system/fvSchemes"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0004/system/fvSolution"
+    },
+    {
+      "check": "NO_OLD_ABSOLUTE_PATHS",
+      "status": "PASS",
+      "detail": "slice0004/system/preciceDict"
+    },
+    {
+      "check": "SELECTED_INITIAL_TIME_ONLY",
+      "status": "PASS",
+      "detail": "no unselected restart/runtime times"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "baseline_contract_snapshot.json"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "baseline_initial_state.json"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "baseline_kernel_model.json"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "baseline_slice_manifest.json"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "generation_manifest.json"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "launch_manifest.json"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "precice-config.xml"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "simulation_spec.yaml"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice_manifest.json"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "Structure_0000"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/constant"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/system"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0/cellDisplacement"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0/meshPhi"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0/p"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0/phi"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0/pointDisplacement"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0/U"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0/Uf"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0/uniform"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0/U_0"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/0/uniform/time"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/constant/dynamicMeshDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/constant/momentumTransport"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/constant/physicalProperties"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh/boundary"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh/faces"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh/neighbour"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh/owner"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/constant/polyMesh/points"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/system/controlDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/system/decomposeParDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/system/fvSchemes"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/system/fvSolution"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0000/system/preciceDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/constant"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/system"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0/cellDisplacement"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0/meshPhi"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0/p"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0/phi"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0/pointDisplacement"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0/U"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0/Uf"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0/uniform"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0/U_0"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/0/uniform/time"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/constant/dynamicMeshDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/constant/momentumTransport"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/constant/physicalProperties"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh/boundary"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh/faces"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh/neighbour"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh/owner"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/constant/polyMesh/points"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/system/controlDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/system/decomposeParDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/system/fvSchemes"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/system/fvSolution"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0001/system/preciceDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/constant"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/system"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0/cellDisplacement"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0/meshPhi"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0/p"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0/phi"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0/pointDisplacement"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0/U"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0/Uf"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0/uniform"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0/U_0"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/0/uniform/time"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/constant/dynamicMeshDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/constant/momentumTransport"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/constant/physicalProperties"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh/boundary"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh/faces"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh/neighbour"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh/owner"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/constant/polyMesh/points"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/system/controlDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/system/decomposeParDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/system/fvSchemes"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/system/fvSolution"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0002/system/preciceDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/constant"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/system"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0/cellDisplacement"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0/meshPhi"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0/p"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0/phi"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0/pointDisplacement"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0/U"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0/Uf"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0/uniform"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0/U_0"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/0/uniform/time"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/constant/dynamicMeshDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/constant/momentumTransport"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/constant/physicalProperties"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh/boundary"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh/faces"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh/neighbour"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh/owner"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/constant/polyMesh/points"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/system/controlDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/system/decomposeParDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/system/fvSchemes"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/system/fvSolution"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0003/system/preciceDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/constant"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/system"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0/cellDisplacement"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0/meshPhi"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0/p"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0/phi"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0/pointDisplacement"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0/U"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0/Uf"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0/uniform"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0/U_0"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/0/uniform/time"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/constant/dynamicMeshDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/constant/momentumTransport"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/constant/physicalProperties"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh/boundary"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh/faces"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh/neighbour"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh/owner"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/constant/polyMesh/points"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/system/controlDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/system/decomposeParDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/system/fvSchemes"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/system/fvSolution"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "slice0004/system/preciceDict"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "Structure_0000/initial_state.json"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "Structure_0000/kernel_model.json"
+    },
+    {
+      "check": "NO_BASELINE_LINKS",
+      "status": "PASS",
+      "detail": "Structure_0000/structure_config.json"
+    }
+  ],
+  "validation_time": "2026-09-30T11:44:10.662134+00:00",
+  "scope": "OFFLINE_CONFIGURATION_ONLY",
+  "production_launch_ready": false
+}

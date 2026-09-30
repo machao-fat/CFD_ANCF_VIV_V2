@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.1.1, pluggy-1.6.0 -- /mnt/d/CFD_Work/APP/app/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /mnt/d/CFD_Work/APP/app
+configfile: pyproject.toml
+collecting ... collected 3 items
+
+app/tests/test_ui.py::test_gui_baseline_generation_and_timer_stays_responsive PASSED [ 33%]
+app/tests/test_ui.py::test_gui_custom_table_realtime_flow_and_rank_override PASSED [ 66%]
+app/tests/test_ui.py::test_gui_unknown_baseline_reports_fail PASSED      [100%]
+
+============================== 3 passed in 39.85s ==============================

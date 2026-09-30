@@ -46,3 +46,8 @@ Thumbs.db
 # Keep OpenFOAM initial fields and case setup in Git; do not ignore numeric
 # directories globally. The HH06 restart field is intentionally tracked under
 # cases/hh06_single_slice/30/.
+
+# APP local dependency/download caches
+.cache/
+
+.pytest_cache/

@@ -1,0 +1,31 @@
+schema: viv-app-copy-rules-v1
+configuration:
+  - system/**
+  - constant/**
+  - '<selected_initial_time>/**'
+  - '<descriptor.structure_initial_state>'
+runtime_excluded:
+  - processor*
+  - postProcessing
+  - logs
+  - log.*
+  - '*.log'
+  - core
+  - core.*
+  - '*.sock'
+  - socket*
+  - precice-run
+  - precice-sockets
+  - precice-profiling
+  - __pycache__
+  - '*.pyc'
+  - '*.tmp'
+policy:
+  other_time_directories: never_copy
+  symlinks: refuse
+  initial_fields: preserve_all_selected_time_files
+  time_mesh_and_old_time_files: preserve
+  scripts_and_executables: never_import
+  restart_or_checkpoint_outside_selected_time: refuse_descriptor_reference
+  baseline: read_only
+  existing_target: refuse

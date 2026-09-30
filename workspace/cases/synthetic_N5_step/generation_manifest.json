@@ -1,0 +1,119 @@
+{
+  "schema": "viv-app-generation-v1",
+  "case_name": "synthetic_N5_step",
+  "generation_time": "2026-09-30T11:44:09.565519+00:00",
+  "app": {
+    "commit": "a1c4988b23d4a61edbb4c00e6d53926add51d795",
+    "branch": "app/mvp-case-generator-v1",
+    "dirty": true,
+    "source_hashes": {
+      "app/viv_app/__init__.py": "4ec959cd7bfac664e4bfea2827924fb0aa545834cb44a801fc46210c7e726e2a",
+      "app/viv_app/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+      "app/viv_app/generator/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "app/viv_app/generator/baseline.py": "031b5f03accbe0e0dc2fd52eaf86751b0451a0fc3ed68af374bb701c063cab23",
+      "app/viv_app/generator/case_generator.py": "d4b57b62de7015ea7ed36ab958c914a4166a4ee0fe6d8c1044055503ae395da8",
+      "app/viv_app/generator/errors.py": "05ed9bf5cfd9d5f88b6bc773e8e7843743dd17a0d1f08f81ce242dac2bce98c5",
+      "app/viv_app/generator/fluid_generator.py": "69713070ed88bd70f89acd7b52c8421f9763e3c552e31323a6d31995bc6f782c",
+      "app/viv_app/generator/foam_dict.py": "dcfdf7b75e0679f6169bfe7d1d95445c42482824a1cac23bffc2d868489cb12c",
+      "app/viv_app/generator/native.py": "216dd2c26abc49bb7a3151d0e43a20cc6eb99b40b6c8077b8c6f4b933f1fe5ed",
+      "app/viv_app/generator/precice_generator.py": "9793668983c83de5e6c4c3c89e3a7e10c3c7dee94e9ea8a40a6efb2e51fe3116",
+      "app/viv_app/generator/structure_generator.py": "e1933f4b630fd7b15d3a349b89c3d6b891aee222a8114eb6757a0a313f81632d",
+      "app/viv_app/generator/validation.py": "d3516a4d23fe1c50cc1e5fc846d7715a8686424ac93ca1bc17e6afd47021bd7e",
+      "app/viv_app/main.py": "9c1bdee8791326b9f943f72b7c4bebf8f4386ac5cabf4e685ef3d819356f550d",
+      "app/viv_app/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "app/viv_app/models/simulation_spec.py": "ffb6a7e25c4cf7959479b486a8884607accd4ecabdebdde90326939e980f93fd",
+      "app/viv_app/ui/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "app/viv_app/ui/main_window.py": "923a091576a1380f007b57ad5d2720694ebc2afe8f238a5230dfe331b6c2947f",
+      "app/viv_app/ui/theme.qss": "608ea964c97859d618f3bbd758496cfae24c1fb0cc53e9c3f34cc4a927a3dba3",
+      "app/viv_app/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "app/viv_app/utils/paths.py": "feb7e74642855de9c4bc246fbeccfc2f8a378e5342e1161dcb65f85a4fee06f3"
+    }
+  },
+  "baseline_path": "/mnt/d/CFD_Work/APP/workspace/baselines/synthetic_distributed",
+  "baseline_key_hashes": {
+    "app_baseline.json": "7997b2554934da89cb996baefd9845b5ee06b069d16ce907748fe0ca94fecf2d",
+    "slice_manifest.json": "445e324ef9ab49a68205f08fdf1074fab9cb91d41183868859e57406d78796d4",
+    "kernel_model.json": "fd102d6c90dcfae490bcc407aaf14dac2ff96005d17a029dd5171a26a934d9c1",
+    "initial_state.json": "2c5b4fdd60326f124cd1c122025d16d800b28c76cf1d9a55f3c33dea28231140",
+    "fluid/precice-config.xml": "09b9b5457fadc23bfcd9d577a4e6a948d7f5d815d444f8b9594f82f58f1f4866",
+    "fluid/system/controlDict": "8bc86fa382bdfe7022a5be6f5f5a6f549b2971cfd8a44587eb64f2ac0cb966c3",
+    "fluid/system/preciceDict": "af999ffe5e23c48f22e795636b88f0ee8746b0c32c0c664636dcce0143d41dfa",
+    "fluid/system/decomposeParDict": "b9ced7091e498818242c569552c72fc74ae5ad1f8e2a67b7851aaf05d71764b8",
+    "fluid/system/fvSchemes": "1bc441f7e7a562bcc909393a1d0c52ac923d5ed8aa65824d09d23d5fa96e2b19",
+    "fluid/system/fvSolution": "ebcc9a0e06d33cf4d64940fd3de4eca05444b5207167df0b51063c263f27c598",
+    "fluid/0/U#boundaryField": "e6334aa4499749259d79b9cd9f0a2eda4bda0ac1c40fbb97da356d30a834511e"
+  },
+  "baseline_evidence_status": "SYNTHETIC_OFFLINE_ONLY",
+  "contract_profile": "arbitrary-n-live-explicit-v1",
+  "baseline_immutability": "key-config-hashes-verified; generator opens baseline read-only",
+  "copy_rules_sha256": "70c841d00cc69d9301c4cff736b45c5fcb39a77a12030c97dabd9e32e3ba4c46",
+  "selected_initial_time": "0",
+  "slice_count": 5,
+  "slice_positions_m": [
+    1.0,
+    3.0,
+    5.0,
+    7.0,
+    9.0
+  ],
+  "positions_over_l": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "flow_profile": {
+    "kind": "Step Current",
+    "u0": 0.31,
+    "u_bottom": 0.31,
+    "u_top": 0.31,
+    "transition": 0.45,
+    "u_active": 0.6,
+    "u_inactive": 0.0
+  },
+  "U_i": [
+    0.6,
+    0.6,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "structure_parameters": {
+    "diameter_m": 0.028,
+    "length_m": 10.0,
+    "ea_n": 7470000.0,
+    "ei_nm2": 29.88,
+    "mass_per_length": 1.845,
+    "pretension_n": 1175.0,
+    "damping_alpha": 0.0,
+    "elements": 4
+  },
+  "deltaT": 0.0002,
+  "endTime": 0.2,
+  "writeInterval": 0.01,
+  "mpi_ranks": [
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "precice_sha256": "ea709442deb16d5d8085fa12c9cd6c53b5551bb46f9cbff492bc29fd9ddc7573",
+  "preserved_config_hashes": {
+    "system/fvSchemes": "1bc441f7e7a562bcc909393a1d0c52ac923d5ed8aa65824d09d23d5fa96e2b19",
+    "system/fvSolution": "ebcc9a0e06d33cf4d64940fd3de4eca05444b5207167df0b51063c263f27c598"
+  },
+  "editable_config_inheritance": {
+    "controlDict": "3b29ab5da2030017b6b06f2a863ca8c4c42fbd0962163fc9021fc761c095cda5",
+    "preciceDict": "44768fbb7ad1cf36e857989a3f8ecf3739f314980cac67483d68112ec7a31347",
+    "decomposeParDict": "5452d30670ba4ea436fe3c96f3135babba04e5b45bf026b5e7bf877c7b2783d8"
+  },
+  "initial_U_prefix_identity": {
+    "size_bytes": 136,
+    "sample_sha256": "7e1d2998be331fc5c7057f50387472dffc3ab3bbc1764fd989eb54e9dcdd04ac",
+    "scope": "full-prefix-if-small-otherwise-first-and-last-4KiB"
+  },
+  "generation_status": "PASS",
+  "production_launch_ready": false
+}

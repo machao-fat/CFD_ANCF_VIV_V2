@@ -1,0 +1,37 @@
+{
+  "schema": "viv-app-baseline-v1",
+  "contract_profile": "arbitrary-n-live-explicit-v1",
+  "evidence_status": "SYNTHETIC_OFFLINE_ONLY",
+  "fluid_case": "fluid",
+  "slice_manifest": "slice_manifest.json",
+  "kernel_model": "kernel_model.json",
+  "structure_initial_state": "initial_state.json",
+  "initial_time_default": "0",
+  "flow": {
+    "field": "U",
+    "inlet_patch": "inlet",
+    "direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "preserve_internal_field": true
+  },
+  "required_initial_fields": [
+    "U",
+    "p",
+    "pointDisplacement",
+    "cellDisplacement",
+    "phi",
+    "Uf",
+    "meshPhi"
+  ],
+  "time_window_equals_delta_t": true,
+  "naming": {
+    "structure_participant": "Structure_0000",
+    "fluid_participant_pattern": "Fluid_{index:04d}",
+    "fluid_mesh_pattern": "Fluid-Mesh-{slice_id}",
+    "structure_mesh_pattern": "Structure-Mesh-{slice_id}",
+    "case_pattern": "slice{index:04d}"
+  }
+}

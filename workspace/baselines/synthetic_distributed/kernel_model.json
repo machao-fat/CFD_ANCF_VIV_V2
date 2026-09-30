@@ -1,0 +1,56 @@
+{
+  "length_m": 10.0,
+  "diameter_m": 0.028,
+  "inner_diameter_m": 0.024,
+  "elements": 4,
+  "slices": 3,
+  "top_tension_N": 1175.0,
+  "youngs_modulus_Pa": 207000000000.0,
+  "material_density": 7850.0,
+  "fluid_density": 1025.0,
+  "gravity": 9.81,
+  "beta": 0.25,
+  "gamma": 0.5,
+  "newton_tolerance": 1e-08,
+  "damping_alpha": 0.0,
+  "damping_beta": 0.0,
+  "gauss_order": 3,
+  "mass_gauss_order": 5,
+  "max_newton": 40,
+  "slice_positions_m": [
+    1.6666666666666667,
+    5.0,
+    8.333333333333334
+  ],
+  "fixed_dof": [],
+  "prescribed_values": [],
+  "boundary_contract_id": "ancf_v1_bottom_top_xy_zero",
+  "include_gravity": true,
+  "include_buoyancy": true,
+  "section_property_mode": "explicit",
+  "explicit_EA_N": 7470000.0,
+  "explicit_EI_Nm2": 29.88,
+  "explicit_mass_per_length_kg_m": 1.845,
+  "explicit_displaced_area_m2": 0.00061575216,
+  "base_load_source": "model_static",
+  "spanwise_load_reconstruction": "piecewise_linear_distributed",
+  "spanwise_active_s_min_m": 0.0,
+  "spanwise_active_s_max_m": 10.0,
+  "spanwise_endpoint_policy": "nearest_constant",
+  "hydrodynamic_regions": [
+    {
+      "s_min_m": 0.0,
+      "s_max_m": 10.0,
+      "added_mass_per_length_kg_m": [
+        0.616,
+        0.616,
+        0.0
+      ],
+      "linear_damping_per_length_Ns_m2": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

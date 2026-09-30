@@ -1,0 +1,43 @@
+{
+  "task": "VIV_APP_CASE_GENERATOR_MVP_V1",
+  "status": "OFFLINE_MVP_IMPLEMENTED_PRODUCTION_CONTRACT_BLOCKED",
+  "base_commit": "a1c4988b23d4a61edbb4c00e6d53926add51d795",
+  "branch": "app/mvp-case-generator-v1",
+  "python": "3.10.12",
+  "PySide6": "6.11.2",
+  "offline_tests": {
+    "passed": 41,
+    "failed": 0,
+    "duration_s": 384.23,
+    "log": "offline-test-results.txt"
+  },
+  "baseline_immutability": "PASS: N1/N3/N5 tiny fixtures checked all file SHA256 before/after; real runtime not scanned",
+  "GUI": {
+    "default_display_startup": "PASS",
+    "WSLg_wayland_startup": "PASS",
+    "offscreen_startup": "PASS",
+    "event_loop_during_actual_generation": "PASS: timer ticks >=10; GUI worker lifecycle completed",
+    "mpi_widget_fits_column": "PASS"
+  },
+  "examples": {
+    "synthetic_N1_uniform": {
+      "static_validation": "PASS",
+      "path": "/mnt/d/CFD_Work/APP/workspace/cases/synthetic_N1_uniform",
+      "production_launch_ready": false
+    },
+    "synthetic_N3_uniform": {
+      "static_validation": "PASS",
+      "path": "/mnt/d/CFD_Work/APP/workspace/cases/synthetic_N3_uniform",
+      "production_launch_ready": false
+    },
+    "synthetic_N5_step": {
+      "static_validation": "PASS",
+      "path": "/mnt/d/CFD_Work/APP/workspace/cases/synthetic_N5_step",
+      "production_launch_ready": false
+    }
+  },
+  "production_source_changes": [],
+  "physical_solver_processes_started": 0,
+  "production_launch_ready": false,
+  "known_blocker": "origin/main HH06 implicit/single-slice wrapper and generic explicit helper do not establish a unique multi-slice production runner"
+}
