@@ -34,7 +34,7 @@ def validate_production_case(path,write_report=True,prepared=False):
         meta=read_json(root/'generation_manifest.json');d=read_json(root/'baseline_contract_snapshot.json')
         b=inspect_production_baseline(spec.baseline_path)
         check('ENROLLED_QUALIFIED_PROFILE',d==b.descriptor and d==read_json(PROFILE_ROOT/'app_baseline.json'),'NM12 enrolled identities and actual PASS evidence')
-        check('APP_PROVENANCE',len(meta['app']['commit'])==40 and meta['app']['branch'] in ('app/mvp-case-generator-v1','app/production-baseline-bridge-v1','app/run-manager-monitor-v1','app/prepared-symlink-contract-repair-v1') and bool(meta['app']['source_hashes']),'APP commit/branch/source identities')
+        check('APP_PROVENANCE',len(meta['app']['commit'])==40 and meta['app']['branch'] in ('app/mvp-case-generator-v1','app/production-baseline-bridge-v1','app/run-manager-monitor-v1','app/prepared-symlink-contract-repair-v1','app/ui-ux-cn-v1') and bool(meta['app']['source_hashes']),'APP commit/branch/source identities')
         check('PROVENANCE',meta['contract_profile']==PROFILE and meta['case_name']==spec.case_name and meta['baseline_path']==str(b.root) and
               meta['baseline_key_hashes']==b.key_hashes(spec.initial_state_time) and
               meta['baseline_initial_sample_identities']==b.initial_identity() and meta['source_qualification']==d['qualification_classification'],
