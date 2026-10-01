@@ -1,0 +1,8 @@
+{
+  "source": "APP N5 five-window smoke attempt_02_parallel; read-only excerpt for parser grammar, no requalification",
+  "executed_APP_commit": "15810855ca6b28c0dfcd1386cbb3fe24bdfe822c",
+  "source_log_sha256": {
+    "Structure.log": "c2153fb1b3569d7e5b6dfc5494f5d62b3064d9037b624311a71c63fa4373f6f7",
+    "Fluid-S1.log": "7b050f9c87fa14c0b9583abc150c2d5c4bb26016d4f17758a065efe134c91138"
+  }
+}

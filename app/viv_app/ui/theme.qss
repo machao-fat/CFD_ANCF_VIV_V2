@@ -21,3 +21,7 @@ QLabel#error { color: #e4a5a0; }
 QScrollBar:vertical { width: 10px; background: #202833; }
 QScrollBar::handle:vertical { background: #435167; border-radius: 4px; min-height: 24px; }
 QSplitter::handle { background: #313b49; width: 3px; }
+QListWidget { background: #202833; border: 1px solid #344151; padding: 6px; }
+QListWidget::item { padding: 12px 5px; }
+QListWidget::item:selected { background: #3a4b60; }
+QLabel#metricValue { font-size: 16px; color: #cbd7e3; padding: 5px 0; }

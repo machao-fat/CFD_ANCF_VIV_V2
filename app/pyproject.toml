@@ -7,7 +7,7 @@ name = "viv-case-generator"
 version = "0.1.0"
 description = "Offline CFD–preCICE–ANCF case builder"
 requires-python = ">=3.10"
-dependencies = ["PySide6>=6.6,<7", "PyYAML>=6,<7"]
+dependencies = ["PySide6>=6.6,<7", "PyYAML>=6,<7", "psutil>=5.9,<8"]
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10"]
@@ -20,7 +20,7 @@ where = ["."]
 include = ["viv_app*"]
 
 [tool.setuptools.package-data]
-viv_app = ["ui/*.qss"]
+viv_app = ["ui/*.qss", "runner/*.json"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

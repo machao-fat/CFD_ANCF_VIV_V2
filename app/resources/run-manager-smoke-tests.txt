@@ -1,0 +1,6 @@
+..................................                                       [100%]
+============================= slowest 3 durations ==============================
+6.47s setup    tests/test_production_bridge.py::test_preflight_fails_closed_on_missing_case
+2.88s call     tests/test_run_manager.py::test_fake_five_window_success_and_persistent_monitor[normal]
+2.77s call     tests/test_run_manager.py::test_abort_only_own_created_process_tree[child]
+34 passed, 58 deselected in 14.94s

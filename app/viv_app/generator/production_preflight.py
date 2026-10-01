@@ -11,7 +11,7 @@ from .production_generator import foam_command
 from viv_app.utils.paths import local_path
 
 
-def production_preflight(path,progress=lambda percent,message:None,write_report=True):
+def production_preflight(path,progress=lambda percent,message:None,write_report=True,prepared=False):
     from .case_generator import write_json,app_identity
     root=local_path(path);checks=[];warnings=[]
     result={'status':'FAIL','production_launch_ready':False,'real_fsi_started':False,'checks':checks,
@@ -22,7 +22,7 @@ def production_preflight(path,progress=lambda percent,message:None,write_report=
         require(value,name,detail)
     try:
         progress(5,'Static production contract and selected identity checks')
-        static=validate_production_case(root,write_report)
+        static=validate_production_case(root,write_report,prepared=prepared)
         check('STATIC_VALIDATION',static['status']=='PASS',static['first_failure'] or 'all N5 contracts pass')
         d=read_json(root/'baseline_contract_snapshot.json');launch=read_json(root/'launch_manifest.json')
         check('OPENFOAM_ENVIRONMENT',Path(d['openfoam_environment']).is_file(),d['openfoam_environment'])
@@ -61,7 +61,7 @@ def production_preflight(path,progress=lambda percent,message:None,write_report=
         check('OUTPUT_WRITABLE',os.access(root,os.W_OK),'case output writable')
         free=shutil.disk_usage(root).free;result['disk_free_bytes']=free
         if free<15_000_000_000:warnings.append('LOW_DISK_FREE_SPACE: less than 15 GB; user must budget actual run duration')
-        warnings.append('MANUAL_DECOMPOSITION_REQUIRED: serial initial state only; use the five generated prepare commands before launch')
+        if not prepared:warnings.append('DECOMPOSITION_REQUIRED: use Prepare Case or the five generated prepare commands before launch')
         warnings.append('EXTERNAL_SOLVER_DEPENDENCY: immutable Structure, adapter and observer libraries are referenced, not copied')
         warnings.append('PHYSICS_QUALIFICATION: only original NM12 short100 is qualified; new flow/duration is not run or physically validated')
         result.update(status='PASS',production_launch_ready=True,app=app_identity())

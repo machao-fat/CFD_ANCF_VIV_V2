@@ -1,0 +1,6 @@
+Courant Number mean: 0.03495873793 max: 0.8822924897
+(0) 13:50:27 [impl::ParticipantImpl]:351 in setupCommunication: [0mPrimary ranks are connected
+Time = 30.0003999999834363
+time step continuity errors : sum local = 1.000610226e-14, global = 2.230584203e-15, cumulative = -1.69824089e-05
+Mesh Courant Number mean: 0 max: 0
+GAMG:  Solving for p, Initial residual = 0.5587936189, Final residual = 0.00488180271, No Iterations 6

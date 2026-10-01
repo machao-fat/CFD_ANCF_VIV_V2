@@ -1,0 +1,9 @@
+........................................................................ [ 78%]
+....................                                                     [100%]
+============================= slowest 5 durations ==============================
+8.01s call     tests/test_ui.py::test_gui_baseline_generation_and_timer_stays_responsive
+7.72s call     tests/test_generator.py::test_flow_profiles[Linear Shear-expected1]
+7.61s call     tests/test_generator.py::test_n_generation_and_baseline_immutability[5]
+7.36s call     tests/test_generator.py::test_flow_profiles[Step Current-expected2]
+7.15s call     tests/test_generator.py::test_flow_profiles[Uniform-expected0]
+92 passed in 156.22s (0:02:36)

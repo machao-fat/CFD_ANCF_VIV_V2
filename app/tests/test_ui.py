@@ -13,7 +13,7 @@ def qt_app():
     app=QApplication.instance() or QApplication([])
     yield app
     # Always let IO workers finish, even when an assertion fails. Never tear a
-    # parent window/QThread down during an active generation operation.
+    # parent window/worker down during an active generation operation.
     for window in app.topLevelWidgets():
         if isinstance(window,MainWindow):
             if window.thread is not None:
@@ -90,3 +90,16 @@ def test_gui_unknown_baseline_reports_fail(qt_app,tmp_path):
     assert 'GENERATION_BLOCKED_BY_UNKNOWN_CONTRACT' in window.error.text()
     assert 'FAIL' in window.validation_label.text()
     window.close()
+
+
+def test_gui_repeated_fast_worker_failures_cleanup(qt_app,tmp_path):
+    # Fast failure must return queued signals before releasing the worker. This
+    # reproduces the thread-lifetime race without starting any solver process.
+    window=MainWindow()
+    window.baseline_path.setText(str(tmp_path))
+    for _ in range(10):
+        window.load_baseline();await_idle(window)
+        assert window.thread is None and window.worker is None
+        assert 'GENERATION_BLOCKED_BY_UNKNOWN_CONTRACT' in window.error.text()
+        assert window.generate.isEnabled()
+    window.close();qt_app.processEvents()

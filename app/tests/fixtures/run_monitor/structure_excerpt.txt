@@ -1,0 +1,23 @@
+(0) 13:50:29 [impl::ParticipantImpl]:351 in setupCommunication: [0mPrimary ranks are connected
+(0) 13:50:30 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Displacement-S1" = inf, limit = 5.00e-03, normalization = 0.00e+00, conv = true
+(0) 13:50:30 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Force-S1" = 1.00e+00, limit = 5.00e-03, normalization = 6.51e-02, conv = false
+(0) 13:50:30 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Displacement-S2" = inf, limit = 5.00e-03, normalization = 0.00e+00, conv = true
+(0) 13:50:30 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Force-S2" = 1.00e+00, limit = 5.00e-03, normalization = 6.51e-02, conv = false
+(0) 13:50:30 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Displacement-S3" = inf, limit = 5.00e-03, normalization = 0.00e+00, conv = true
+(0) 13:50:30 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Force-S3" = 1.00e+00, limit = 5.00e-03, normalization = 6.51e-02, conv = false
+(0) 13:50:30 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Displacement-S4" = inf, limit = 5.00e-03, normalization = 0.00e+00, conv = true
+(0) 13:50:30 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Force-S4" = 1.00e+00, limit = 5.00e-03, normalization = 6.51e-02, conv = false
+(0) 13:50:30 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Displacement-S5" = inf, limit = 5.00e-03, normalization = 0.00e+00, conv = true
+(0) 13:50:30 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Force-S5" = 1.00e+00, limit = 5.00e-03, normalization = 6.51e-02, conv = false
+NM9_ATTEMPT window=1 iteration=1 accepted=0 physical_time=30
+(0) 13:50:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Displacement-S1" = 3.03e-04, limit = 5.00e-03, normalization = 3.29e-08, conv = true
+(0) 13:50:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Force-S1" = 5.54e-04, limit = 5.00e-03, normalization = 5.45e-02, conv = true
+(0) 13:50:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Displacement-S2" = 8.95e-05, limit = 5.00e-03, normalization = 3.18e-08, conv = true
+(0) 13:50:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Force-S2" = 4.05e-04, limit = 5.00e-03, normalization = 5.48e-02, conv = true
+(0) 13:50:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Displacement-S3" = 1.11e-04, limit = 5.00e-03, normalization = 3.18e-08, conv = true
+(0) 13:50:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Force-S3" = 4.01e-04, limit = 5.00e-03, normalization = 5.48e-02, conv = true
+(0) 13:50:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Displacement-S4" = 1.04e-04, limit = 5.00e-03, normalization = 3.18e-08, conv = true
+(0) 13:50:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Force-S4" = 4.03e-04, limit = 5.00e-03, normalization = 5.48e-02, conv = true
+(0) 13:50:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Displacement-S5" = 3.51e-05, limit = 5.00e-03, normalization = 3.23e-08, conv = true
+(0) 13:50:34 [cplscheme::BaseCouplingScheme]:735 in measureConvergence: [0mrelative convergence measure: relative two-norm diff of data "Force-S5" = 4.59e-04, limit = 5.00e-03, normalization = 5.47e-02, conv = true
+NM9_ATTEMPT window=1 iteration=7 accepted=1 physical_time=30.000399999999999
