@@ -55,3 +55,7 @@ Thumbs.db
 # Generated APP cases remain local
 workspace/cases/*
 !workspace/cases/.gitignore
+
+# APP smoke evidence bulk stays local; reviewed summary is in app/resources
+workspace/evidence/*
+!workspace/evidence/.gitignore

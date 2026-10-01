@@ -1,0 +1,1028 @@
+{
+  "classification": "VIV_APP_N5_GENERATED_CASE_REAL_SMOKE_PASS",
+  "app_commit": "15810855ca6b28c0dfcd1386cbb3fe24bdfe822c",
+  "generated_case": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5",
+  "static_validation": "PASS",
+  "production_preflight": "PASS",
+  "decompositions": "5/5 PASS",
+  "participants_handshake": "6/6",
+  "exit_codes": {
+    "Structure": 0,
+    "Fluid-S1": 0,
+    "Fluid-S2": 0,
+    "Fluid-S3": 0,
+    "Fluid-S4": 0,
+    "Fluid-S5": 0
+  },
+  "accepted_windows": 5,
+  "iterations_per_window": [
+    7,
+    7,
+    6,
+    5,
+    7
+  ],
+  "attempts": 32,
+  "rollback_count": 27,
+  "forced_acceptance": 0,
+  "max_Co": 0.8822924897,
+  "meshes": "5/5 healthy",
+  "mapping_identity": "PASS",
+  "Structure_lifecycle": "PASS",
+  "real_FSI_started": true,
+  "extension_started": false,
+  "branch": "app/production-baseline-bridge-v1",
+  "production_profile": "v2606-n5-implicit-production-v1",
+  "profile_sha256": "d00847f915e32862a86367bf770e4b28b77f045bfed379982476f42e6f01a3be",
+  "attempt": 2,
+  "evidence_directory": "/mnt/d/CFD_Work/APP/workspace/evidence/viv_app_n5_generated_smoke_v1/attempt_02_parallel",
+  "source_hashes": {
+    "app/viv_app/__init__.py": "4ec959cd7bfac664e4bfea2827924fb0aa545834cb44a801fc46210c7e726e2a",
+    "app/viv_app/__main__.py": "d9f84d973e46d988d0dfda176dd03650f11ea05520d71016f571dcc9486bf723",
+    "app/viv_app/generator/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/viv_app/generator/baseline.py": "6b59f70451b11060baa21fef213ddd81081a0bdda99cbab107d2812bf6d973a5",
+    "app/viv_app/generator/case_generator.py": "cb9fd8284e580cd4efa97a249d39495d922e66acdfd932a3264d748e85a1efc2",
+    "app/viv_app/generator/errors.py": "05ed9bf5cfd9d5f88b6bc773e8e7843743dd17a0d1f08f81ce242dac2bce98c5",
+    "app/viv_app/generator/fluid_generator.py": "69713070ed88bd70f89acd7b52c8421f9763e3c552e31323a6d31995bc6f782c",
+    "app/viv_app/generator/foam_dict.py": "1fc2c5f4486a137dd6a5e2c3740705c891d2915bf0c2773462c8fb1554c270f6",
+    "app/viv_app/generator/native.py": "216dd2c26abc49bb7a3151d0e43a20cc6eb99b40b6c8077b8c6f4b933f1fe5ed",
+    "app/viv_app/generator/precice_generator.py": "9793668983c83de5e6c4c3c89e3a7e10c3c7dee94e9ea8a40a6efb2e51fe3116",
+    "app/viv_app/generator/production_baseline.py": "c8d62b8b75d07965e5289732d6631b944eae177fe6d1d0e087d771e91d9264c7",
+    "app/viv_app/generator/production_generator.py": "b516aba4be0f2327d6f7b86fc71e1cd02bd9787057204a41aac8e2d26dc4dc65",
+    "app/viv_app/generator/production_preflight.py": "020db4edee97780459bf61802171bede11341fc6f28f0a47b8277f979192c4e3",
+    "app/viv_app/generator/production_validation.py": "6e181cd0b33163a7247218aed6fa7f20b591afa3b26da37468f81015f6d28c7d",
+    "app/viv_app/generator/production_xml.py": "295484504e6f4b6da65edabac7ce6601187ab3a4d07eb15ba36a7073f7a64a8b",
+    "app/viv_app/generator/structure_generator.py": "e1933f4b630fd7b15d3a349b89c3d6b891aee222a8114eb6757a0a313f81632d",
+    "app/viv_app/generator/validation.py": "afa23305e4bb1029e751282518670a71a2a061428c9303b763299461072a663f",
+    "app/viv_app/main.py": "9c1bdee8791326b9f943f72b7c4bebf8f4386ac5cabf4e685ef3d819356f550d",
+    "app/viv_app/models/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/viv_app/models/simulation_spec.py": "d388d99c2189e461e1bf077c49eaa0733dfa7ee32e09bf3169a04551d1bae573",
+    "app/viv_app/ui/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/viv_app/ui/main_window.py": "8003cb14edbd625dc8e1a2ada3f1c65e1d5e4d9d3899892e244c7e32bcdc826a",
+    "app/viv_app/ui/theme.qss": "608ea964c97859d618f3bbd758496cfae24c1fb0cc53e9c3f34cc4a927a3dba3",
+    "app/viv_app/utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app/viv_app/utils/paths.py": "feb7e74642855de9c4bc246fbeccfc2f8a378e5342e1161dcb65f85a4fee06f3"
+  },
+  "qualified_identities": {
+    "adapter_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+    "Structure_binary_sha256": "a97c82657fb99ba838c3966e5bd0bc2bd943af9741278662ddaf0109fc08df33",
+    "profile_sha256": "d00847f915e32862a86367bf770e4b28b77f045bfed379982476f42e6f01a3be"
+  },
+  "P1_selected_state_sha256": "eecbb21d25a4b68097cd9d1fd1d042dbbcb12752d911669f103ad9cbddb4e083",
+  "generated_precice_xml_sha256": "c6c29dd97fbf45fb8a922405510556c4f31a656432b17da41d410f7670ab226d",
+  "selected_initial_time_directory": "29.9999999999834372",
+  "endTime_decimal": "30.0019999999834372",
+  "configured_endTime_float": 30.001999999983436,
+  "dt_s": 0.0004,
+  "coupled_duration_s": 0.002,
+  "slice_positions_m": [
+    0.594,
+    1.782,
+    2.97,
+    4.158,
+    5.346
+  ],
+  "inlet_U_mps": [
+    0.31,
+    0.31,
+    0.31,
+    0.31,
+    0.31
+  ],
+  "ranks_per_slice": [
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "cpu_layout": {
+    "Fluid-S1": "0-3",
+    "Fluid-S2": "4-7",
+    "Fluid-S3": "8-11",
+    "Fluid-S4": "12-15",
+    "Fluid-S5": "16-19",
+    "Structure": "20"
+  },
+  "OpenFOAM": "v2606",
+  "preCICE": "3.4.1",
+  "launch_to_last_observed_exit_wall_s": 46.025902,
+  "decomposition_results": [
+    {
+      "participant": "Fluid-S1",
+      "exit_code": 0,
+      "processor_directories": [
+        "processor0",
+        "processor1",
+        "processor2",
+        "processor3"
+      ],
+      "selected_initial_time": "29.9999999999834372",
+      "initial_fields_complete": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true
+      }
+    },
+    {
+      "participant": "Fluid-S2",
+      "exit_code": 0,
+      "processor_directories": [
+        "processor0",
+        "processor1",
+        "processor2",
+        "processor3"
+      ],
+      "selected_initial_time": "29.9999999999834372",
+      "initial_fields_complete": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true
+      }
+    },
+    {
+      "participant": "Fluid-S3",
+      "exit_code": 0,
+      "processor_directories": [
+        "processor0",
+        "processor1",
+        "processor2",
+        "processor3"
+      ],
+      "selected_initial_time": "29.9999999999834372",
+      "initial_fields_complete": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true
+      }
+    },
+    {
+      "participant": "Fluid-S4",
+      "exit_code": 0,
+      "processor_directories": [
+        "processor0",
+        "processor1",
+        "processor2",
+        "processor3"
+      ],
+      "selected_initial_time": "29.9999999999834372",
+      "initial_fields_complete": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true
+      }
+    },
+    {
+      "participant": "Fluid-S5",
+      "exit_code": 0,
+      "processor_directories": [
+        "processor0",
+        "processor1",
+        "processor2",
+        "processor3"
+      ],
+      "selected_initial_time": "29.9999999999834372",
+      "initial_fields_complete": {
+        "0": true,
+        "1": true,
+        "2": true,
+        "3": true
+      }
+    }
+  ],
+  "participant_lifecycle": {
+    "Structure": {
+      "start": "2026-10-01T05:50:23.432520+00:00",
+      "pid": 127253,
+      "handshake": {
+        "observed_utc": "2026-10-01T05:50:30.557870+00:00",
+        "marker": "Primary ranks are connected"
+      },
+      "exit_code": 0,
+      "log": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/runtime/structure.log",
+      "argv": [
+        "taskset",
+        "-c",
+        "20",
+        "/mnt/d/CFD_Work/projects/CFD_ANCF_VIV_V2_of2606/evidence/v2606_nm12_n5_4rank_diagnostic100/source/structure_n5",
+        "../precice-config.xml",
+        "initial_state.raw",
+        "../runtime/attempts.jsonl",
+        "../runtime/accepted_windows.jsonl",
+        "../runtime/state_attempt_",
+        "-1.2923689896027213e-18",
+        "1.235990476633475e-18"
+      ],
+      "cwd": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/Structure",
+      "exit_observed_utc": "2026-10-01T05:51:08.353402+00:00"
+    },
+    "Fluid-S1": {
+      "start": "2026-10-01T05:50:23.438880+00:00",
+      "pid": 127254,
+      "handshake": {
+        "observed_utc": "2026-10-01T05:50:27.515693+00:00",
+        "marker": "Primary ranks are connected"
+      },
+      "exit_code": 0,
+      "log": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/runtime/fluid_s0594.log",
+      "argv": [
+        "bash",
+        "-lc",
+        "viv_foam_env=$1; shift; viv_foam_args=(\"$@\"); set --; source \"$viv_foam_env\" >/dev/null 2>&1 && exec \"${viv_foam_args[@]}\"",
+        "viv-openfoam",
+        "/usr/lib/openfoam/openfoam2606/etc/bashrc",
+        "mpirun",
+        "--mca",
+        "hwloc_base_cpu_list",
+        "0-3",
+        "--use-hwthread-cpus",
+        "--bind-to",
+        "hwthread",
+        "-np",
+        "4",
+        "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+        "-parallel",
+        "-case",
+        "."
+      ],
+      "cwd": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/fluid_s0594",
+      "exit_observed_utc": "2026-10-01T05:51:09.439238+00:00"
+    },
+    "Fluid-S2": {
+      "start": "2026-10-01T05:50:23.442193+00:00",
+      "pid": 127258,
+      "handshake": {
+        "observed_utc": "2026-10-01T05:50:28.532429+00:00",
+        "marker": "Primary ranks are connected"
+      },
+      "exit_code": 0,
+      "log": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/runtime/fluid_s1782.log",
+      "argv": [
+        "bash",
+        "-lc",
+        "viv_foam_env=$1; shift; viv_foam_args=(\"$@\"); set --; source \"$viv_foam_env\" >/dev/null 2>&1 && exec \"${viv_foam_args[@]}\"",
+        "viv-openfoam",
+        "/usr/lib/openfoam/openfoam2606/etc/bashrc",
+        "mpirun",
+        "--mca",
+        "hwloc_base_cpu_list",
+        "4-7",
+        "--use-hwthread-cpus",
+        "--bind-to",
+        "hwthread",
+        "-np",
+        "4",
+        "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+        "-parallel",
+        "-case",
+        "."
+      ],
+      "cwd": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/fluid_s1782",
+      "exit_observed_utc": "2026-10-01T05:51:09.443853+00:00"
+    },
+    "Fluid-S3": {
+      "start": "2026-10-01T05:50:23.446987+00:00",
+      "pid": 127267,
+      "handshake": {
+        "observed_utc": "2026-10-01T05:50:29.546323+00:00",
+        "marker": "Primary ranks are connected"
+      },
+      "exit_code": 0,
+      "log": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/runtime/fluid_s2970.log",
+      "argv": [
+        "bash",
+        "-lc",
+        "viv_foam_env=$1; shift; viv_foam_args=(\"$@\"); set --; source \"$viv_foam_env\" >/dev/null 2>&1 && exec \"${viv_foam_args[@]}\"",
+        "viv-openfoam",
+        "/usr/lib/openfoam/openfoam2606/etc/bashrc",
+        "mpirun",
+        "--mca",
+        "hwloc_base_cpu_list",
+        "8-11",
+        "--use-hwthread-cpus",
+        "--bind-to",
+        "hwthread",
+        "-np",
+        "4",
+        "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+        "-parallel",
+        "-case",
+        "."
+      ],
+      "cwd": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/fluid_s2970",
+      "exit_observed_utc": "2026-10-01T05:51:09.448250+00:00"
+    },
+    "Fluid-S4": {
+      "start": "2026-10-01T05:50:23.453507+00:00",
+      "pid": 127288,
+      "handshake": {
+        "observed_utc": "2026-10-01T05:50:30.567591+00:00",
+        "marker": "Primary ranks are connected"
+      },
+      "exit_code": 0,
+      "log": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/runtime/fluid_s4158.log",
+      "argv": [
+        "bash",
+        "-lc",
+        "viv_foam_env=$1; shift; viv_foam_args=(\"$@\"); set --; source \"$viv_foam_env\" >/dev/null 2>&1 && exec \"${viv_foam_args[@]}\"",
+        "viv-openfoam",
+        "/usr/lib/openfoam/openfoam2606/etc/bashrc",
+        "mpirun",
+        "--mca",
+        "hwloc_base_cpu_list",
+        "12-15",
+        "--use-hwthread-cpus",
+        "--bind-to",
+        "hwthread",
+        "-np",
+        "4",
+        "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+        "-parallel",
+        "-case",
+        "."
+      ],
+      "cwd": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/fluid_s4158",
+      "exit_observed_utc": "2026-10-01T05:51:09.452810+00:00"
+    },
+    "Fluid-S5": {
+      "start": "2026-10-01T05:50:23.460746+00:00",
+      "pid": 127317,
+      "handshake": {
+        "observed_utc": "2026-10-01T05:50:30.570397+00:00",
+        "marker": "Primary ranks are connected"
+      },
+      "exit_code": 0,
+      "log": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/runtime/fluid_s5346.log",
+      "argv": [
+        "bash",
+        "-lc",
+        "viv_foam_env=$1; shift; viv_foam_args=(\"$@\"); set --; source \"$viv_foam_env\" >/dev/null 2>&1 && exec \"${viv_foam_args[@]}\"",
+        "viv-openfoam",
+        "/usr/lib/openfoam/openfoam2606/etc/bashrc",
+        "mpirun",
+        "--mca",
+        "hwloc_base_cpu_list",
+        "16-19",
+        "--use-hwthread-cpus",
+        "--bind-to",
+        "hwthread",
+        "-np",
+        "4",
+        "/usr/lib/openfoam/openfoam2606/platforms/linux64GccDPInt32Opt/bin/pimpleFoam",
+        "-parallel",
+        "-case",
+        "."
+      ],
+      "cwd": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5/fluid_s5346",
+      "exit_observed_utc": "2026-10-01T05:51:09.458422+00:00"
+    }
+  },
+  "accepted_window_metrics": [
+    {
+      "window": 1,
+      "iterations": 7,
+      "force_max": 0.000554167168,
+      "displacement_max": 0.000303406192,
+      "measures": [
+        {
+          "kind": "Displacement",
+          "slice": 1,
+          "value": 0.000303,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 1,
+          "value": 0.000554,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 2,
+          "value": 8.95e-05,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 2,
+          "value": 0.000405,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 3,
+          "value": 0.000111,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 3,
+          "value": 0.000401,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 4,
+          "value": 0.000104,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 4,
+          "value": 0.000403,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 5,
+          "value": 3.51e-05,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 5,
+          "value": 0.000459,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 1,
+          "value": 0.8,
+          "limit": 0.005,
+          "converged": false
+        }
+      ],
+      "convergence_table_values": [
+        0.000303406192,
+        0.000554167168,
+        8.94620252e-05,
+        0.000404867578,
+        0.000111082734,
+        0.000401211569,
+        0.000103820512,
+        0.00040259496,
+        3.50957208e-05,
+        0.000458912387
+      ],
+      "physical_time_s": 30.0004
+    },
+    {
+      "window": 2,
+      "iterations": 7,
+      "force_max": 0.00134039915,
+      "displacement_max": 4.8889255e-07,
+      "measures": [
+        {
+          "kind": "Displacement",
+          "slice": 1,
+          "value": 4.89e-07,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 1,
+          "value": 0.00134,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 2,
+          "value": 4.41e-07,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 2,
+          "value": 0.00125,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 3,
+          "value": 7.3e-09,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 3,
+          "value": 0.00125,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 4,
+          "value": 5.36e-08,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 4,
+          "value": 0.00125,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 5,
+          "value": 5.99e-08,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 5,
+          "value": 0.00129,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 1,
+          "value": 0.609,
+          "limit": 0.005,
+          "converged": false
+        }
+      ],
+      "convergence_table_values": [
+        4.8889255e-07,
+        0.00134039915,
+        4.41083936e-07,
+        0.00125477932,
+        7.29806151e-09,
+        0.0012526558,
+        5.36324578e-08,
+        0.00125350666,
+        5.99496986e-08,
+        0.00128745434
+      ],
+      "physical_time_s": 30.0008
+    },
+    {
+      "window": 3,
+      "iterations": 6,
+      "force_max": 0.00488552382,
+      "displacement_max": 1.98531196e-05,
+      "measures": [
+        {
+          "kind": "Displacement",
+          "slice": 1,
+          "value": 1.99e-05,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 1,
+          "value": 0.00489,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 2,
+          "value": 3.44e-06,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 2,
+          "value": 0.00443,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 3,
+          "value": 3.12e-06,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 3,
+          "value": 0.00441,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 4,
+          "value": 2.72e-06,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 4,
+          "value": 0.00442,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 5,
+          "value": 1.13e-05,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 5,
+          "value": 0.0041,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 1,
+          "value": 0.47,
+          "limit": 0.005,
+          "converged": false
+        }
+      ],
+      "convergence_table_values": [
+        1.98531196e-05,
+        0.00488552382,
+        3.4412068e-06,
+        0.00442645502,
+        3.11707401e-06,
+        0.00441224094,
+        2.72321341e-06,
+        0.00441630824,
+        1.12908702e-05,
+        0.00409839022
+      ],
+      "physical_time_s": 30.0012
+    },
+    {
+      "window": 4,
+      "iterations": 5,
+      "force_max": 0.00447313533,
+      "displacement_max": 1.05298304e-06,
+      "measures": [
+        {
+          "kind": "Displacement",
+          "slice": 1,
+          "value": 2.69e-07,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 1,
+          "value": 0.00447,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 2,
+          "value": 5.22e-07,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 2,
+          "value": 0.00422,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 3,
+          "value": 1.63e-07,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 3,
+          "value": 0.00421,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 4,
+          "value": 4.89e-07,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 4,
+          "value": 0.00421,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 5,
+          "value": 1.05e-06,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 5,
+          "value": 0.00415,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 1,
+          "value": 0.384,
+          "limit": 0.005,
+          "converged": false
+        }
+      ],
+      "convergence_table_values": [
+        2.68994146e-07,
+        0.00447313533,
+        5.22208218e-07,
+        0.00421914691,
+        1.63425606e-07,
+        0.00420907895,
+        4.88567929e-07,
+        0.004214571,
+        1.05298304e-06,
+        0.00415197184
+      ],
+      "physical_time_s": 30.0016
+    },
+    {
+      "window": 5,
+      "iterations": 7,
+      "force_max": 0.00380319998,
+      "displacement_max": 1.34009663e-06,
+      "measures": [
+        {
+          "kind": "Displacement",
+          "slice": 1,
+          "value": 4.62e-07,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 1,
+          "value": 0.0038,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 2,
+          "value": 5.48e-07,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 2,
+          "value": 0.00363,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 3,
+          "value": 2.06e-07,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 3,
+          "value": 0.00363,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 4,
+          "value": 1.22e-07,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 4,
+          "value": 0.00363,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Displacement",
+          "slice": 5,
+          "value": 1.34e-06,
+          "limit": 0.005,
+          "converged": true
+        },
+        {
+          "kind": "Force",
+          "slice": 5,
+          "value": 0.00339,
+          "limit": 0.005,
+          "converged": true
+        }
+      ],
+      "convergence_table_values": [
+        4.62490368e-07,
+        0.00380319998,
+        5.47754295e-07,
+        0.0036345874,
+        2.06469462e-07,
+        0.00362850957,
+        1.22053143e-07,
+        0.00362751322,
+        1.34009663e-06,
+        0.00339193359
+      ],
+      "physical_time_s": 30.002
+    }
+  ],
+  "max_mesh_Co": 0.007899289252,
+  "fluid_health": [
+    {
+      "participant": "Fluid-S1",
+      "max_Co": 0.8822924897,
+      "max_mesh_Co": 0.007899289252,
+      "fatal_nonfinite_markers": []
+    },
+    {
+      "participant": "Fluid-S2",
+      "max_Co": 0.8822924897,
+      "max_mesh_Co": 0.007838090375,
+      "fatal_nonfinite_markers": []
+    },
+    {
+      "participant": "Fluid-S3",
+      "max_Co": 0.8822924897,
+      "max_mesh_Co": 0.007841533702,
+      "fatal_nonfinite_markers": []
+    },
+    {
+      "participant": "Fluid-S4",
+      "max_Co": 0.8822924897,
+      "max_mesh_Co": 0.00783978846,
+      "fatal_nonfinite_markers": []
+    },
+    {
+      "participant": "Fluid-S5",
+      "max_Co": 0.8822924897,
+      "max_mesh_Co": 0.007846189098,
+      "fatal_nonfinite_markers": []
+    }
+  ],
+  "mesh_checks": [
+    {
+      "participant": "Fluid-S1",
+      "exit_code": 0,
+      "mesh_ok": true
+    },
+    {
+      "participant": "Fluid-S2",
+      "exit_code": 0,
+      "mesh_ok": true
+    },
+    {
+      "participant": "Fluid-S3",
+      "exit_code": 0,
+      "mesh_ok": true
+    },
+    {
+      "participant": "Fluid-S4",
+      "exit_code": 0,
+      "mesh_ok": true
+    },
+    {
+      "participant": "Fluid-S5",
+      "exit_code": 0,
+      "mesh_ok": true
+    }
+  ],
+  "final_time_directories": {
+    "Fluid-S1": "30.0019999999834326",
+    "Fluid-S2": "30.0019999999834326",
+    "Fluid-S3": "30.0019999999834326",
+    "Fluid-S4": "30.0019999999834326",
+    "Fluid-S5": "30.0019999999834326"
+  },
+  "runtime_identity": {
+    "one_global_advance_per_attempt": true,
+    "five_raw_force_inputs_and_displacement_candidates_per_attempt": true,
+    "state_payload_hash_checks": 160,
+    "max_exactly_once_conversion_error_Npm": 0.0,
+    "q_v_finite": true,
+    "qddot_evidence_scope": "unchanged qualified binary restores whole State; q/v hashes independently checked",
+    "clock_note": "Structure qualified base 30.0; Fluid selected start 29.9999999999834372 differs by 1.65628e-11 s"
+  },
+  "NM12_semantic_comparison": {
+    "status": "PASS",
+    "baseline_key_files_unchanged": 73,
+    "topology": [
+      "Fluid-S1",
+      "Fluid-S2",
+      "Fluid-S3",
+      "Fluid-S4",
+      "Fluid-S5",
+      "Structure"
+    ],
+    "scheme": "multi-implicit",
+    "dt_s": 0.0004,
+    "MPI_ranks": [
+      4,
+      4,
+      4,
+      4,
+      4
+    ],
+    "mapping_contract": {
+      "active_region_m": [
+        0,
+        5.94
+      ],
+      "endpoint_policy": "NearestConstant",
+      "mapping_mode": "PiecewiseLinearDistributed",
+      "slices": [
+        {
+          "s_ref_m": 0.594,
+          "stable_id": "S1"
+        },
+        {
+          "s_ref_m": 1.782,
+          "stable_id": "S2"
+        },
+        {
+          "s_ref_m": 2.97,
+          "stable_id": "S3"
+        },
+        {
+          "s_ref_m": 4.158,
+          "stable_id": "S4"
+        },
+        {
+          "s_ref_m": 5.346,
+          "stable_id": "S5"
+        }
+      ],
+      "tributary_multiplier_in_distributed_path": false,
+      "unit_span_m": 0.028
+    },
+    "adapter_sha256": "51bf2889e5aab6867d17b78764faacecb2f467102f925332467b8b188b1cbed9",
+    "Structure_binary_sha256": "a97c82657fb99ba838c3966e5bd0bc2bd943af9741278662ddaf0109fc08df33",
+    "profile_sha256": "d00847f915e32862a86367bf770e4b28b77f045bfed379982476f42e6f01a3be",
+    "xml_semantic_comparison": "PASS; only socket path and max-time-windows whitelist changed; builder revalidated post-run",
+    "accepted_window_behavior": "5 strict, no forced acceptance",
+    "rollback_semantics": "q/v hashes + elapsed clock restored for every rejected attempt",
+    "trajectory_bitwise_comparison": "NOT_REQUIRED_NOT_ASSERTED",
+    "initial_state_identity": "qualified frozen30/P1 selected key hashes unchanged"
+  },
+  "warnings": {
+    "Fluid": "Each slice: allowSystemOperations enabled warning; timePrecision automatically increased from 12 to 18 for exact selected initial time directory. No manual change.",
+    "Structure": "7 qualified IQN-ILS least-squares column-count conditioning warnings. All 5 windows strictly converged with unchanged settings; no tuning performed.",
+    "bootstrap_relative_residual": "First zero-displacement relative convergence comparison reports inf; all accepted residuals and physical state/fields are finite."
+  },
+  "abnormalities": "No fatal runtime anomalies. Nonfatal warnings retained above.",
+  "prior_attempt": "User-interrupted at 2/5; preserved evidence, excluded from this PASS. User explicitly authorized same-case overwrite.",
+  "overwrite_authorization_identity_sha256": "8080c12c4b95cba943d358d1e0aa5e4e59c6ce14b5091e7b21aa9b0ff912af4a",
+  "preexisting_process_control_operations": 0,
+  "GUI_RUN_added": false,
+  "serial_case_started": false,
+  "arbitrary_N_started": false,
+  "evidence_key_hashes": {
+    "preflight/pre_run_static_validation.json": "3126abd272ccb5a06299c320240c1e3b05ffb1150be18409ac7d28d819d88058",
+    "preflight/pre_run_production_preflight.json": "c8c1553c6aaf6586f554689766a284949f3f5494ed92568a8cb9dd10fbd32d52",
+    "preflight/manual_command_audit.json": "8c0b275da8c556baa679e36dec1a649e81ef6569a436369c9e291ebaaa7051c4",
+    "coupling/participant_lifecycle.json": "701878191c78d03fbe77d9b37c1c56827a04a4049b7ea9e909a56d2fcc032b3a",
+    "coupling/runtime_semantics.json": "287482adb6e11abccbe79eb9158a79c6a49dcc2210f2eb8c3346781dca0ff8f2",
+    "fluid_health/mesh_health.json": "1f4dffab842aed0d729368b00eea24763315d1e06e0cd96d4db7bb062cb4cbb8",
+    "fluid_health/final_field_health.json": "a17e50501b1455a9421ce391a2280bea304261e0f6ac1e7a6e7b4e3463abc592",
+    "comparison/nm12_semantic_comparison.json": "7b78feb8c89abf5f1f5d2af8c6b1510a169820747d81a5f2fe71aa1c58f60984"
+  }
+}

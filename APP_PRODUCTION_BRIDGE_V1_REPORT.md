@@ -58,3 +58,9 @@ cd /mnt/d/CFD_Work/APP/app
 ```
 
 After delivery STOP; wait for human review. No real N5 smoke, RUN button, monitoring, restart, postprocessing or arbitrary-N phase begins.
+
+## Documentation provenance clarification (VIV_APP_N5_GENERATED_CASE_REAL_SMOKE_V1)
+
+NM13/NM13.1 readiness records themselves do not prove a completed run and remain historically unchanged; later NM14-series evidence documents postprocessing of a subsequently completed long run.
+
+Read-only corroboration: `evidence/v2606_nm14_n5_long10s_postprocessing/comparison/final_classification.json` = `V2606_NM14_N5_LONG10S_POSTPROCESS_PASS_WITH_LIMITATIONS`, numerical_long10s_health=PASS; subsequent `v2606_nm14_2_modal_cl_correction` documents corrections to this completed-run postprocessing. Their cfd_or_precice_executed=false / real_simulation_started=false flags describe the postprocessing tasks, not absence of the previously completed production run. All historical JSON is unchanged. NM12 remains the APP profile qualification authority.
