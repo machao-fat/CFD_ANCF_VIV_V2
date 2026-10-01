@@ -1,0 +1,113 @@
+{
+  "task": "VIV_APP_UI_UX_CN_V1",
+  "classification": "VIV_APP_UI_UX_CN_V1_PASS",
+  "base_sha": "471619c2eec718d9ad834752c7c6e8c613cbd843",
+  "branch": "app/ui-ux-cn-v1",
+  "implementation_head": "25f41d059b69556a52bf1321e07a5f75916b64ec",
+  "initial_worktree_clean": true,
+  "app_display_name": "VIV Studio",
+  "primary_language": "zh-CN",
+  "working_directory": "/mnt/d/CFD_Work/APP",
+  "ui_pages": [
+    "算例设置",
+    "运行监控"
+  ],
+  "results_placeholder": "DISABLED; 尚未开放",
+  "main_window_line_counts": {
+    "base": 565,
+    "current": 397
+  },
+  "human_visual_review": {
+    "initial": "CONDITIONAL_PASS",
+    "polish_conditions_met": true,
+    "final": "PASS",
+    "approval_text": "可以收尾",
+    "approval_date": "2026-10-01"
+  },
+  "source_freeze_check": "PASS",
+  "protected_refs": {
+    "app/prepared-symlink-contract-repair-v1": "471619c2eec718d9ad834752c7c6e8c613cbd843",
+    "app/run-manager-monitor-v1": "8b3b6bafd5d042ca1019d6bb23a9961fe5b01bae",
+    "app/production-baseline-bridge-v1": "f66eacd94576b39faa7f08714ebdb3c9dbd1ef0e",
+    "main": "a1c4988b23d4a61edbb4c00e6d53926add51d795"
+  },
+  "authorized_exception": {
+    "app/viv_app/generator/validation.py": "ONLY_AUTHORIZED_BRANCH_ALLOWLIST_ADDITION",
+    "app/viv_app/generator/production_validation.py": "ONLY_AUTHORIZED_BRANCH_ALLOWLIST_ADDITION"
+  },
+  "tests": {
+    "ui": {
+      "passed": 27,
+      "failed": 0
+    },
+    "smoke": {
+      "passed": 85,
+      "deselected": 60,
+      "failed": 0,
+      "duration_seconds": 212.99
+    },
+    "full": {
+      "status": "PASS",
+      "passed": 145,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "previous_tests": 118,
+      "added_tests": 27,
+      "duration_seconds": 511.6
+    }
+  },
+  "screenshots": {
+    "data_source": "EXPLICIT_OFFLINE_UI_FIXTURE",
+    "resolution": [
+      1440,
+      1080
+    ],
+    "path": "/mnt/d/CFD_Work/APP/workspace/evidence/viv_app_ui_ux_cn_v1/screenshots",
+    "files": {
+      "ui-cn-setup-production.png": {
+        "sha256": "8d285a8612aa0102e4bec9684032c69f96cb7519cb709bced7d1314561313adc",
+        "size_bytes": 181059
+      },
+      "ui-cn-run-ready.png": {
+        "sha256": "579b4bfecd2d7c613881f0a83679fbf8d05cd59168ca6d4651f98cb016bf8e35",
+        "size_bytes": 144691
+      },
+      "ui-cn-run-active-fake.png": {
+        "sha256": "f604ba4d21f3a69815bd92f27645b97742cd088207c7519c8400205d6b7ed7c1",
+        "size_bytes": 162205
+      },
+      "ui-cn-run-failed-fake.png": {
+        "sha256": "d48a7fd4316db00403a7b8349908000e2855e64b6e2de06a2c87427a214022b4",
+        "size_bytes": 146688
+      }
+    }
+  },
+  "layout_check": "PASS; 4 desktop sizes x 2 pages; no horizontal ranges",
+  "real_cfd_started": false,
+  "real_decomposepar_started": false,
+  "production_solver_changed": false,
+  "physics_numerics_changed": false,
+  "next_phase_label": "VIV_APP_GUI_N5_REAL_SMOKE_V2",
+  "next_phase_started": false,
+  "evidence_root": "/mnt/d/CFD_Work/APP/workspace/evidence/viv_app_ui_ux_cn_v1",
+  "report": "/mnt/d/CFD_Work/APP/APP_UI_UX_CN_V1_REPORT.md",
+  "limitations": [
+    "Offline UI qualification only; real repaired GUI N5 execution remains unqualified",
+    "Offscreen screenshots do not qualify all WSLg/Windows DPI combinations",
+    "Font fallback depends on existing host fonts",
+    "Technical causal errors remain verbatim",
+    "Results disabled; no restart/Safe Stop/postprocessing"
+  ],
+  "implementation_commit_parent": "471619c2eec718d9ad834752c7c6e8c613cbd843",
+  "formal_ui_closeout": true,
+  "ui_pass_head_identity": {
+    "kind": "git_commit_containing_this_closeout",
+    "ref": "refs/heads/app/ui-ux-cn-v1",
+    "resolve_command": "git rev-parse app/ui-ux-cn-v1",
+    "exact_sha_evidence": "/mnt/d/CFD_Work/APP/workspace/evidence/viv_app_ui_ux_cn_v1/final_classification.json"
+  },
+  "closeout_scope": "REPORT_AND_SUMMARY_ONLY; NO_SOURCE_CHANGES",
+  "latest_requested_followup": "VIV_APP_HH06_PARAMETRIC_FOUNDATION_V1",
+  "followup_started": false
+}
