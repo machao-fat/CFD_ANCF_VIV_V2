@@ -34,7 +34,7 @@ def validate_production_case(path,write_report=True,prepared=False):
         meta=read_json(root/'generation_manifest.json');d=read_json(root/'baseline_contract_snapshot.json')
         b=inspect_production_baseline(spec.baseline_path)
         check('ENROLLED_QUALIFIED_PROFILE',d==b.descriptor and d==read_json(PROFILE_ROOT/'app_baseline.json'),'NM12 enrolled identities and actual PASS evidence')
-        check('APP_PROVENANCE',len(meta['app']['commit'])==40 and meta['app']['branch'] in ('app/mvp-case-generator-v1','app/production-baseline-bridge-v1','app/run-manager-monitor-v1') and bool(meta['app']['source_hashes']),'APP commit/branch/source identities')
+        check('APP_PROVENANCE',len(meta['app']['commit'])==40 and meta['app']['branch'] in ('app/mvp-case-generator-v1','app/production-baseline-bridge-v1','app/run-manager-monitor-v1','app/prepared-symlink-contract-repair-v1') and bool(meta['app']['source_hashes']),'APP commit/branch/source identities')
         check('PROVENANCE',meta['contract_profile']==PROFILE and meta['case_name']==spec.case_name and meta['baseline_path']==str(b.root) and
               meta['baseline_key_hashes']==b.key_hashes(spec.initial_state_time) and
               meta['baseline_initial_sample_identities']==b.initial_identity() and meta['source_qualification']==d['qualification_classification'],
@@ -98,8 +98,16 @@ def validate_production_case(path,write_report=True,prepared=False):
                     for name in (*[f'constant/polyMesh/{n}' for n in MESH_FIELDS],*[f'{spec.initial_state_time}/{n}' for n in FIELDS]):
                         check('PREPARED_INITIAL_FIELD',(fluid/f'processor{r}'/name).is_file(),f'{label}/processor{r}/{name}')
             check('NO_RUNTIME_COPY',not any(p.name in ('postProcessing','precice-run') or p.name.startswith('log.') for p in fluid.iterdir()),label)
+        if prepared:
+            from viv_app.runner.contract import ExecutionContract,check_decomposition
+            from viv_app.runner.prepared_symlinks import qualified_uniform_symlink_identity
+            check_decomposition(ExecutionContract(root,launch,meta,d))
         for p in root.rglob('*'):
-            check('NO_SYMLINKS',not p.is_symlink(),str(p.relative_to(root)))
+            if prepared and p.is_symlink():
+                qualified_uniform_symlink_identity(root,launch['fluid'],d,p)
+                check('QUALIFIED_PREPARED_UNIFORM_LINK',True,str(p.relative_to(root)))
+            else:
+                check('NO_SYMLINKS',not p.is_symlink(),str(p.relative_to(root)))
         check('OUTPUT_DIRECTORY_WRITABLE',os.access(root,os.W_OK),'current user write access')
         result['status']='PASS'
     except Exception as exc:

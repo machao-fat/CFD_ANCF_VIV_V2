@@ -1,0 +1,211 @@
+{
+  "classification": "VIV_APP_PREPARED_SYMLINK_CONTRACT_REPAIR_PASS",
+  "time": "2026-10-01T10:25:29.148281+00:00",
+  "source_base_sha": "8b3b6bafd5d042ca1019d6bb23a9961fe5b01bae",
+  "required_parent_sha": "f66eacd94576b39faa7f08714ebdb3c9dbd1ef0e",
+  "initial_source_branch": "app/run-manager-monitor-v1",
+  "initial_worktree_clean": true,
+  "repair_branch": "app/prepared-symlink-contract-repair-v1",
+  "work_directory": "/mnt/d/CFD_Work/APP",
+  "files_changed": [
+    "app/viv_app/runner/prepared_symlinks.py",
+    "app/viv_app/runner/contract.py",
+    "app/viv_app/generator/production_validation.py",
+    "app/viv_app/generator/validation.py",
+    "app/tests/fixtures/fake_n5_decomposition.py",
+    "app/tests/test_prepared_symlinks.py",
+    "APP_PREPARED_SYMLINK_CONTRACT_REPAIR_V1_REPORT.md",
+    "app/resources/prepared-symlink-contract-repair-v1-summary.json"
+  ],
+  "first_causal_defect": {
+    "layer": "APP_PREPARED_INPUT_CONTRACT",
+    "message": "Symlink in prepared inputs",
+    "reproduced_offline_before_edit": true,
+    "production_solver_defect": false
+  },
+  "profile": {
+    "id": "v2606-n5-implicit-production-v1",
+    "sha256": "d00847f915e32862a86367bf770e4b28b77f045bfed379982476f42e6f01a3be",
+    "initial_time": "29.9999999999834372",
+    "modified": false
+  },
+  "witnesses": {
+    "production_N5_gui_smoke5_v1": {
+      "path": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_gui_smoke5_v1",
+      "approved_links": 20,
+      "prepared_identity": "PASS",
+      "prepared_static_validation": "PASS",
+      "read_only": true
+    },
+    "production_N5_app_smoke5": {
+      "path": "/mnt/d/CFD_Work/APP/workspace/cases/production_N5_app_smoke5",
+      "approved_links": 20,
+      "same_symlink_semantics": true,
+      "read_only": true,
+      "later_output_time_directories_not_scanned": true
+    }
+  },
+  "observed_uniform": {
+    "type": "directory",
+    "files": {
+      "cumulativeContErr": 1019,
+      "time": 1070,
+      "functionObjects/functionObjectProperties": 3670
+    },
+    "total_file_bytes_per_fluid": 5759
+  },
+  "allowed_contract": {
+    "fluids": 5,
+    "processors_per_fluid": 4,
+    "location": "<enrolled-fluid>/processor0..3/<enrolled-initial>/uniform",
+    "raw_target": "../../29.9999999999834372/uniform",
+    "canonical_target": "<same-fluid>/29.9999999999834372/uniform",
+    "relative_only": true,
+    "target_exists": true,
+    "ordinary_target_directory_and_ancestors": true,
+    "all_other_symlinks_rejected": true
+  },
+  "identity": {
+    "link_path": true,
+    "raw_readlink": true,
+    "canonical_target_relative_to_fluid": true,
+    "target_type": true,
+    "metadata_files_full_sha256": 3,
+    "max_metadata_bytes_per_file": 2097152,
+    "unknown_metadata_entries_rejected_immediately": true,
+    "ordinary_mesh_initial_scope": "unchanged first-and-last-4KiB",
+    "post_prepare_retarget_prevents_launch": true,
+    "post_prepare_content_drift_prevents_launch": true,
+    "unchanged_identity_equal": true
+  },
+  "decomposition_requirements": {
+    "fluids": 5,
+    "processors_each": 4,
+    "initial_fields_each": 8,
+    "mesh_files_each": 5,
+    "weakened": false
+  },
+  "test_matrix": [
+    {
+      "id": "T1",
+      "case": "Twenty valid same-Fluid uniform links; stable Prepare/Run identity",
+      "status": "PASS"
+    },
+    {
+      "id": "T2",
+      "case": "Absolute link",
+      "status": "PASS"
+    },
+    {
+      "id": "T3",
+      "case": "Relative escape to an existing external directory",
+      "status": "PASS"
+    },
+    {
+      "id": "T4",
+      "case": "Another enrolled Fluid target",
+      "status": "PASS"
+    },
+    {
+      "id": "T5",
+      "case": "Broken link",
+      "status": "PASS"
+    },
+    {
+      "id": "T6",
+      "case": "Initial U link",
+      "status": "PASS"
+    },
+    {
+      "id": "T7",
+      "case": "Wrong initial-time location",
+      "status": "PASS"
+    },
+    {
+      "id": "T8",
+      "case": "polyMesh points link",
+      "status": "PASS"
+    },
+    {
+      "id": "T9",
+      "case": "system/controlDict link",
+      "status": "PASS"
+    },
+    {
+      "id": "T10",
+      "case": "Post-Prepare link retarget / altered raw text",
+      "status": "PASS"
+    },
+    {
+      "id": "T11",
+      "case": "Post-Prepare nested uniform metadata content change",
+      "status": "PASS"
+    },
+    {
+      "id": "T12",
+      "case": "Ordinary inputs retain bounded identities and required fields/mesh",
+      "status": "PASS"
+    },
+    {
+      "id": "T13",
+      "case": "Failed real GUI case: twenty links, decomposition/identity/prepared static validation read-only",
+      "status": "PASS"
+    },
+    {
+      "id": "T14",
+      "case": "Previous successful real case: twenty original initial links read-only",
+      "status": "PASS"
+    }
+  ],
+  "tests": {
+    "fast": {
+      "passed": 58,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 60,
+      "pytest_elapsed_s": 201.82,
+      "junit_suite_time_s": 201.643,
+      "junit_path": "/mnt/d/CFD_Work/APP/workspace/evidence/viv_app_prepared_symlink_contract_repair_v1/final-smoke-junit.xml"
+    },
+    "full": {
+      "passed": 118,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "pytest_elapsed_s": 506.27,
+      "junit_suite_time_s": 505.59,
+      "junit_path": "/mnt/d/CFD_Work/APP/workspace/evidence/viv_app_prepared_symlink_contract_repair_v1/full-junit.xml"
+    },
+    "focused": {
+      "passed": 3,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0,
+      "deselected": 0,
+      "pytest_elapsed_s": 54.27,
+      "junit_suite_time_s": 54.244,
+      "junit_path": "/mnt/d/CFD_Work/APP/workspace/evidence/viv_app_prepared_symlink_contract_repair_v1/focused-junit.xml"
+    }
+  },
+  "existing_tests_preserved": 92,
+  "new_tests": 26,
+  "real_witness_selected_hashes_and_links_unchanged": true,
+  "run_manager_state_process_abort_monitor_implementation_changed": false,
+  "ui_changed": false,
+  "production_solver_changed": false,
+  "real_cfd_started": false,
+  "real_decomposepar_started": false,
+  "historical_evidence_modified": false,
+  "local_evidence_directory": "/mnt/d/CFD_Work/APP/workspace/evidence/viv_app_prepared_symlink_contract_repair_v1",
+  "authorized_next_phase": "VIV_APP_UI_UX_CN_V1",
+  "next_phase_started": false,
+  "limitations": [
+    "Exact enrolled uniform metadata topology only; unknown layouts require separate qualification.",
+    "Fresh processor inputs only: constant and enrolled initial time; no restart or completed-case reuse.",
+    "Ordinary fields/meshes retain existing bounded sampling; middle-only changes outside samples are outside that scope.",
+    "Fast suite on this host exceeded 30 seconds; no test was removed.",
+    "No repaired GUI-driven real CFD smoke performed."
+  ]
+}

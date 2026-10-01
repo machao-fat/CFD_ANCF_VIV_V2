@@ -7,6 +7,7 @@ import math
 import os
 from viv_app.generator.production_baseline import PROFILE,FIELDS,MESH_FIELDS,file_identity
 from viv_app.utils.paths import CASES_ROOT,local_path,within
+from .prepared_symlinks import (plain_path,input_tree,processor_inputs,qualified_uniform_symlink_identity)
 
 
 def read(path):return json.loads(Path(path).read_text())
@@ -77,27 +78,36 @@ def check_decomposition(contract):
         for r in range(4):
             for relative in [*[f'{initial}/{f}'for f in FIELDS],*[f'constant/polyMesh/{f}'for f in MESH_FIELDS]]:
                 p=fluid/f'processor{r}'/relative
+                plain_path(contract.root,p)
                 require(p.is_file() and not p.is_symlink(),'Missing prepared initial field / mesh: '+str(p))
+        for p in processor_inputs(contract.root,fluid,initial):
+            if p.is_symlink():
+                qualified_uniform_symlink_identity(contract.root,contract.launch['fluid'],contract.baseline,p)
+            else:
+                plain_path(contract.root,p)
         rows.append({'participant':row['participant'],'processor_count':4,'initial_time':initial,'required_initial_fields':'PASS'})
     return rows
 
 
 def prepared_identity(contract):
     """Hash small configs; bounded samples for new initial fields/mesh only."""
-    root=contract.root;small={};large={}
+    root=contract.root;small={};large={};links={}
     for n in ['launch_manifest.json','generation_manifest.json','precice-config.xml','production_xml_template.xml',
               'simulation_spec.yaml','slice_manifest.json','baseline_contract_snapshot.json','Structure/initial_state.raw',
               'Structure/structure_config.json','Structure/compiled_kernel_model.json']:
-        small[n]=digest(root/n)
+        small[n]=digest(plain_path(root,root/n))
     for row in contract.launch['fluid']:
         fluid=root/row['cwd']
-        for p in (fluid/'system').rglob('*'):
+        for p in input_tree(root,fluid/'system'):
+            plain_path(root,p)
             if p.is_file():
                 require(not p.is_symlink() and p.stat().st_size<=2*1024*1024,'Unsupported configuration file')
                 small[str(p.relative_to(root))]=digest(p)
-        for r in range(4):
-            for folder in [fluid/f'processor{r}/constant',fluid/f'processor{r}'/contract.baseline['initial_time_default']]:
-                for p in folder.rglob('*'):
-                    require(not p.is_symlink(),'Symlink in prepared inputs')
-                    if p.is_file():large[str(p.relative_to(root))]=file_identity(p)
-    return {'configuration_sha256':small,'prepared_initial_bounded_identities':large}
+        for p in processor_inputs(root,fluid,contract.baseline['initial_time_default']):
+            if p.is_symlink():
+                links[str(p.relative_to(root))]=qualified_uniform_symlink_identity(root,contract.launch['fluid'],contract.baseline,p)
+            else:
+                plain_path(root,p)
+                if p.is_file():large[str(p.relative_to(root))]=file_identity(p)
+    return {'configuration_sha256':small,'prepared_initial_bounded_identities':large,
+            'qualified_uniform_symlinks':links}
